@@ -1,0 +1,579 @@
+'\" t
+.\"     Title: arduino
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.0 <http://docbook.sf.net/>
+.\"      Date: 10/18/2015
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "ARDUINO" "1" "10/18/2015" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+arduino \- Integrated development environment for Arduino boards
+.SH "SYNOPSIS"
+.sp
+\fBarduino\fR [\fIFILE\&.ino\fR\&...]
+.sp
+\fBarduino\fR [\fB\-\-verify\fR|\fB\-\-upload\fR] [\fB\-\-board\fR \fIpackage\fR:\fIarch\fR:\fIboard\fR[:\fIparameters\fR]] [\fB\-\-port\fR \fIportname\fR] [\fB\-\-pref\fR \fIname\fR=\fIvalue\fR] [\fB\-v\fR|\fB\-\-verbose\fR] [\fB\-\-preserve\-temp\-files\fR] [\fIFILE\&.ino\fR]
+.sp
+\fBarduino\fR [\fB\-\-get\-pref\fR [\fIpreference\fR]]
+.sp
+\fBarduino\fR [\fB\-\-install\-boards\fR \fIpackage name\fR:\fIplatform architecture\fR[:\fIversion\fR]]
+.sp
+\fBarduino\fR [\fB\-\-install\-library\fR \fIlibrary name\fR[:\fIversion\fR][,\fIlibrary name\fR[:\fIversion\fR],\fIlibrary name\fR[:\fIversion\fR]]
+.SH "DESCRIPTION"
+.sp
+The \fIarduino\fR integrated development environment allows editing, compiling and uploading sketches (programs) for Arduino (and compatible) microcontroller boards\&.
+.sp
+Normally, running the arduino command starts the IDE, optionally loading any \&.ino files specified on the commandline\&.
+.sp
+Alternatively, if any of the following command line options is given, no graphical interface will be shown and instead a one\-off verify (compile) or upload will be done\&. A single \&.ino file should be given\&. If the sketch contains multiple \&.ino files, any one can be specified on the commandline, but the entire sketch will be compiled\&.
+.sp
+When running in a one\-off mode, it might be useful to set the \fBbuild\&.path\fR preference to allow keeping intermediate build results between multiple runs and only recompile the files that changed\&.
+.sp
+Note that on MacOS X, the main executable is \fIArduino\&.app/Contents/MacOS/Arduino\fR instead of \fIarduino\fR\&.
+.sp
+Note that on Windows, due to the diffence between GUI and console apps, that the \fIarduino_debug\&.exe\fR is the appropriate executable to use if you want to use the majority of these command line options\&. The \fIarduino\&.exe\fR GUI version of the launcher \fBmay\fR perform some of the functions described below, but will not output any messages to the console, meaning it is pretty useless if you want any feedback or to be able to keep log files for automated testing, etc\&.
+.sp
+ACTIONS
+.PP
+\fB\-\-verify\fR
+.RS 4
+Build the sketch\&.
+.RE
+.PP
+\fB\-\-upload\fR
+.RS 4
+Build and upload the sketch\&.
+.RE
+.PP
+\fB\-\-get\-pref\fR [\fIpreference\fR]
+.RS 4
+Prints the value of the given preference to the standard output stream\&. When the value does not exist, nothing is printed and the exit status is set (see EXIT STATUS below)\&. If no preference is given as parameter, it prints all preferences\&.
+.RE
+.PP
+\fB\-\-install\-boards\fR \fIpackage name\fR:\fIplatform architecture\fR[:\fIversion\fR]
+.RS 4
+Fetches available board support (platform) list and install the specified one, along with its related tools\&. If
+\fIversion\fR
+is omitted, the latest is installed\&. If a platform with the same version is already installed, nothing is installed and program exits with exit code 1\&. If a platform with a different version is already installed, it\(cqs replaced\&.
+.RE
+.PP
+\fB\-\-install\-library\fR \fIlibrary name\fR[:\fIversion\fR]
+.RS 4
+Fetches available libraries list and install the specified one\&. If
+\fIversion\fR
+is omitted, the latest is installed\&. If a library with the same version is already installed, nothing is installed and program exits with exit code 1\&. If a library with a different version is already installed, it\(cqs replaced\&. Multiple libraries can be specified, separated by a comma\&.
+.RE
+.SH "OPTIONS"
+.PP
+\fB\-\-board\fR \fIpackage\fR:\fIarch\fR:\fIboard\fR[:\fIparameters\fR]
+.RS 4
+Select the board to compile for\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+
+\fIpackage\fR
+is the identifier of the vendor (the first level folders inside the
+\fIhardware\fR
+directory)\&. Default arduino boards use
+\fIarduino\fR\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+
+\fIarchitecture\fR
+is the architecture of the board (second level folders inside the
+\fIhardware\fR
+directory)\&. Default arduino boards use either
+\fBarduino:avr\fR
+for all AVR\-based boards (like Uno, Mega or Leonardo) or
+\fBarduino:sam\fR
+for 32bit SAM\-based boards (like Arduino Due)\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+
+\fIboard\fR
+is the actual board to use, as defined in
+\fIboards\&.txt\fR
+contained in the architecture folder selected\&. For example,
+\fBarduino:avr:uno\fR
+for the Arduino Uno,
+\fBarduino:avr:diecimila\fR
+for the Arduino Duemilanove or Diecimila, or
+\fBarduino:avr:mega\fR
+for the Arduino Mega\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+
+\fIparameters\fR
+is a comma\-separated list of boards specific parameters that are normally shown under submenus of the "Tools" menu\&. For example
+\fBarduino:avr:nano:cpu=atmega168\fR
+to Select the mega168 variant of the Arduino Nano board\&.
+.RE
+.RE
+.PP
+.RS 4
+If this option is not passed, the value from the current preferences is used (e\&.g\&., the last board selected in the IDE)\&.
+.RE
+.PP
+\fB\-\-port\fR \fIportname\fR
+.RS 4
+Select the serial port to perform upload of the sketch\&. On linux and MacOS X, this should be the path to a device file (e\&.g\&.,
+\fB/dev/ttyACM0\fR)\&. On Windows, this should be the name of the serial port (e\&.g\&.,
+\fBCOM3\fR)\&.
+.RE
+.PP
+.RS 4
+If this option is not passed, the value from the current preferences is used (e\&.g\&., the last port selected in the IDE)\&.
+.RE
+.PP
+\fB\-\-verbose\-build\fR
+.RS 4
+Enable verbose mode during build\&. If this option is not given, verbose mode during build is
+\fBdisabled\fR
+regardless of the current preferences\&.
+.RE
+.PP
+\fB\-\-preserve\-temp\-files\fR
+.RS 4
+Keep temporary files (preprocessed sketch, object files\&...) after termination\&. If omitted, temporary files are deleted\&.
+.RE
+.PP
+.RS 4
+This option is only valid together with
+\fB\-\-verify\fR
+or
+\fB\-\-upload\fR\&.
+.RE
+.PP
+\fB\-\-verbose\-upload\fR
+.RS 4
+Enable verbose mode during upload\&. If this option is not given, verbose mode during upload is
+\fBdisabled\fR
+regardless of the current preferences\&.
+.RE
+.PP
+.RS 4
+This option is only valid together with
+\fB\-\-verify\fR
+or
+\fB\-\-upload\fR\&.
+.RE
+.PP
+\fB\-v, \-\-verbose\fR
+.RS 4
+Enable verbose mode during build and upload\&. This option has the same effect of using both
+\fB\-\-verbose\-build\fR
+and
+\fB\-\-verbose\-upload\fR\&.
+.RE
+.PP
+.RS 4
+This option is only valid together with
+\fB\-\-verify\fR
+or
+\fB\-\-upload\fR\&.
+.RE
+.PP
+\fB\-\-preferences\-file\fR \fIfilename\fR
+.RS 4
+Read and store preferences from the specified
+\fIfilename\fR
+instead of the default one\&.
+.RE
+.PP
+\fB\-\-pref\fR \fIname\fR=\fIvalue\fR
+.RS 4
+Sets the preference
+\fIname\fR
+to the given
+\fIvalue\fR\&.
+.RE
+.PP
+.RS 4
+Note that the preferences you set with this option are not validated: Invalid names will be set but never used, invalid values might lead to an error later on\&.
+.RE
+.PP
+\fB\-\-save\-prefs\fR
+.RS 4
+Save any (changed) preferences to
+\fBpreferences\&.txt\fR\&. In particular
+\fB\-\-board\fR,
+\fB\-\-port\fR,
+\fB\-\-pref\fR,
+\fB\-\-verbose\fR,
+\fB\-\-verbose\-build\fR
+and
+\fB\-\-verbose\-upload\fR
+may alter the current preferences\&.
+.RE
+.SH "PREFERENCES"
+.sp
+Arduino keeps a list of preferences, as simple name and value pairs\&. Below, a few of them are documented but a lot more are available\&.
+.PP
+\fBsketchbook\&.path\fR
+.RS 4
+The path where sketches are (usually) stored\&. This path can also contain some special subdirectories (see FILES below)\&.
+.RE
+.PP
+\fBupdate\&.check\fR
+.RS 4
+When set to true, the IDE checks for a new version on startup\&.
+.RE
+.PP
+\fBeditor\&.external\fR
+.RS 4
+When set to true, use an external editor (the IDE does not allow editing and reloads each file before verifying)\&.
+.RE
+.PP
+\fBbuild\&.path\fR
+.RS 4
+The path to use for building\&. This is where things like the preprocessed \&.cpp file, compiled \&.o files and the final \&.hex file go\&.
+.RE
+.PP
+.RS 4
+If set, this directory should already exist before running the arduino command\&.
+.RE
+.PP
+.RS 4
+If this preference is not set (which is normally the case), a new temporary build folder is created on every run and deleted again when the application is closed\&.
+.RE
+.SH "EXIT STATUS"
+.PP
+\fB0\fR
+.RS 4
+Success
+.RE
+.PP
+\fB1\fR
+.RS 4
+Build failed or upload failed
+.RE
+.PP
+\fB2\fR
+.RS 4
+Sketch not found
+.RE
+.PP
+\fB3\fR
+.RS 4
+Invalid (argument for) commandline option
+.RE
+.PP
+\fB4\fR
+.RS 4
+Preference passed to
+\fB\-\-get\-pref\fR
+does not exist
+.RE
+.SH "FILES"
+.PP
+\fB~/\&.arduino15/preferences\&.txt\fR
+.RS 4
+This file stores the preferences used for the IDE, building and uploading sketches\&.
+.RE
+.PP
+\fBMy Documents/Arduino/\fR (Windows), \fB~/Documents/Arduino/\fR (Mac OS X), \fB~/Arduino/\fR (Linux)
+.RS 4
+This directory is referred to as the "Sketchbook" and contains the user\(cqs sketches\&. The path can be changed through the
+\fBsketchbook\&.path\fR
+preference\&.
+.RE
+.PP
+.RS 4
+Apart from sketches, three special directories can be inside the sketchbook:
+.PP
+\fBlibraries\fR
+.RS 4
+Libraries can be put inside this directory, one library per subdirectory\&.
+.RE
+.PP
+\fBhardware\fR
+.RS 4
+Support for third\-party hardware can be added through this directory\&.
+.RE
+.PP
+\fBtools\fR
+.RS 4
+External code\-processing tools (that can be run through the Tools menu of the IDE) can be added here\&.
+.RE
+.RE
+.SH "EXAMPLES"
+.sp
+Start the Arduino IDE, with two files open:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino /path/to/sketch/sketch\&.ino /path/to/sketch/extra\&.ino
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Compile and upload a sketch using the last selected board and serial port
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-upload /path/to/sketch/sketch\&.ino
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Compile and upload a sketch to an Arduino Nano, with an Atmega168 CPU, connected on port \fI/dev/ttyACM0\fR:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-board arduino:avr:nano:cpu=atmega168 \-\-port /dev/ttyACM0 \-\-upload /path/to/sketch/sketch\&.ino
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Compile a sketch, put the build results in the \fIbuild\fR directory an re\-use any previous build results in that directory\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-pref build\&.path=/path/to/sketch/build \-\-verify /path/to/sketch/sketch\&.ino
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Change the selected board and build path and do nothing else\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-pref build\&.path=/path/to/sketch/build \-\-board arduino:avr:uno \-\-save\-prefs
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Install latest SAM board support
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-install\-boards "arduino:sam"
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Install AVR board support, 1\&.6\&.2
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-install\-boards "arduino:avr:1\&.6\&.2"
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Install Bridge library version 1\&.0\&.0
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-install\-library "Bridge:1\&.0\&.0"
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Install Bridge and Servo libraries
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+arduino \-\-install\-library "Bridge:1\&.0\&.0,Servo:1\&.2\&.0"
+.fi
+.if n \{\
+.RE
+.\}
+.SH "BUGS"
+.sp
+Even in command line mode the Arduino IDE requires a graphical user interface to be present\&. This should usually be the case in Windows or Mac OS X\&. On Linux however you might want to compile and upload sketches when logged in via SSH or in batch mode\&. To accomplish this, install the Xvfb dummy X server and write a small wrapper script to create an instance of this Xserver, run the Arduino IDE in it and kill the Xserver afterwards:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+#!/bin/bash
+Xvfb :1 \-nolisten tcp \-screen :1 1280x800x24 &
+xvfb="$!"
+DISPLAY=:1 arduino $@
+kill \-9 $xvfb
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Save the script as \fBarduino\-headless\fR and run it with the options described above\&. If the script does not return to a shell prompt, the options you specified were wrong and the Arduino IDE actually opened a window, stop its execution with Ctrl+C\&.
+.SH "HISTORY"
+.PP
+1\&.5\&.2
+.RS 4
+Added initial commandline support\&. This introduced
+\fB\-\-verify\fR,
+\fB\-\-upload\fR,
+\fB\-\-board\fR,
+\fB\-\-port\fR,
+\fB\-\-verbose\fR
+and
+\fB\-v\fR\&.
+.RE
+.PP
+1\&.5\&.5
+.RS 4
+Added support for board\-specific parameters to
+\fB\-\-board\fR\&.
+.RE
+.PP
+.RS 4
+Sketch filenames are now interpreted relative to the current directory instead of the location of the arduino command itself\&.
+.RE
+.PP
+1\&.5\&.6
+.RS 4
+Introduced
+\fB\-\-pref\fR,
+\fB\-\-preferences\-file\fR,
+\fB\-\-verbose\-build\fR
+and
+\fB\-\-verbose\-upload\fR\&.
+.RE
+.PP
+.RS 4
+Preferences set through \-\-pref are remembered, preferences set through
+\fB\-\-board\fR,
+\fB\-\-port\fR
+or the
+\fB\-\-verbose\fR
+options are not\&.
+.RE
+.PP
+.RS 4
+When running with
+\fB\-\-verify\fR
+or
+\fB\-\-upload\fR, the full GUI is no longer shown\&. Error messages still use a graphical popup and on Windows, the splash screen is still shown\&.
+.RE
+.PP
+1\&.5\&.8
+.RS 4
+Introduced
+\fB\-\-save\-prefs\fR\&.
+.RE
+.PP
+1\&.6\&.2
+.RS 4
+Main executable in MacOS X changed from
+\fIArduino\&.app/Contents/MacOS/JavaApplicationStub\fR
+to
+\fIArduino\&.app/Contents/MacOS/Arduino\fR\&.
+.RE
+.PP
+1\&.6\&.4
+.RS 4
+Introduced
+\fB\-\-install\-boards\fR
+and
+\fB\-\-install\-library\fR\&.
+.RE
+.PP
+.RS 4
+
+\fB\-\-pref\fR
+options are now not saved to the preferences file, just like
+\fB\-\-board\fR
+and
+\fB\-\-port\fR, unless
+\fB\-\-save\-prefs\fR
+is specified\&.
+.RE
+.PP
+.RS 4
+A path passed to
+\fB\-\-preferences\-file\fR, or set in the
+\fBbuild\&.path\fR,
+\fBpreferences\&.path\fR
+or
+\fBsettings\&.path\fR
+is now interpreted relative to the current directory instead of the location of the arduino command itself\&.
+.RE
+.SH "RESOURCES"
+.sp
+Web site: http://www\&.arduino\&.cc/
+.sp
+Help on projects and programming: http://forum\&.arduino\&.cc/
+.sp
+Report bugs: http://github\&.com/arduino/Arduino/issues
+.sp
+IDE and framework development mailing list: https://groups\&.google\&.com/a/arduino\&.cc/forum/#!forum/developers

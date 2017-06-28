@@ -1,0 +1,69 @@
+diff -Nuar --no-dereference gambas3-3.9.2/gb.qt4/src/CMenu.cpp gambas3-3.9.2-fixed/gb.qt4/src/CMenu.cpp
+--- gambas3-3.9.2/gb.qt4/src/CMenu.cpp	2016-12-17 12:38:06.000000000 +0000
++++ gambas3-3.9.2-fixed/gb.qt4/src/CMenu.cpp	2017-03-08 19:05:33.627892025 +0000
+@@ -59,7 +59,7 @@
+ 
+ #define HANDLE_PROXY(_ob) \
+ 	while (EXT(_ob) && EXT(_ob)->proxy) \
+-		_ob = (typeof _ob)(EXT(_ob)->proxy);
++		_ob = (__typeof__ _ob)(EXT(_ob)->proxy);
+ 
+ static CMENU_EXT *alloc_ext(CMENU *_object)
+ {
+diff -Nuar --no-dereference gambas3-3.9.2/gb.qt4/src/CWidget.cpp gambas3-3.9.2-fixed/gb.qt4/src/CWidget.cpp
+--- gambas3-3.9.2/gb.qt4/src/CWidget.cpp	2016-12-17 12:38:05.000000000 +0000
++++ gambas3-3.9.2-fixed/gb.qt4/src/CWidget.cpp	2017-03-08 19:06:06.778162180 +0000
+@@ -96,7 +96,7 @@
+ 
+ #define HANDLE_PROXY(_ob) \
+ 	while (EXT(_ob) && EXT(_ob)->proxy) \
+-		_ob = (typeof _ob)(EXT(_ob)->proxy);
++		_ob = (__typeof__ _ob)(EXT(_ob)->proxy);
+ 
+ static CWIDGET_EXT *alloc_ext(CWIDGET *_object)
+ {
+diff -Nuar --no-dereference gambas3-3.9.2/gb.qt5/src/Makefile.am gambas3-3.9.2-fixed/gb.qt5/src/Makefile.am
+--- gambas3-3.9.2/gb.qt5/src/Makefile.am	2016-12-17 12:38:06.000000000 +0000
++++ gambas3-3.9.2-fixed/gb.qt5/src/Makefile.am	2017-03-08 19:08:35.892373635 +0000
+@@ -8,7 +8,7 @@
+ 
+ gb_qt5_la_LIBADD = @THREAD_LIB@ @QT5_LIB@
+ gb_qt5_la_LDFLAGS = -module @LD_FLAGS@ @QT5_LDFLAGS@
+-gb_qt5_la_CXXFLAGS = @THREAD_INC@ -DGB_QT_COMPONENT $(AM_CXXFLAGS)
++gb_qt5_la_CXXFLAGS = @THREAD_INC@ -DGB_QT_COMPONENT $(AM_CXXFLAGS) -std=c++11
+ gb_qt5_la_CPPFLAGS = @QT5_INC@ -I$(top_srcdir)/share/
+ 
+ gb_qt5_la_SOURCES = \
+diff -Nuar --no-dereference gambas3-3.9.2/gb.qt5/src/ext/Makefile.am gambas3-3.9.2-fixed/gb.qt5/src/ext/Makefile.am
+--- gambas3-3.9.2/gb.qt5/src/ext/Makefile.am	2016-12-17 12:38:06.000000000 +0000
++++ gambas3-3.9.2-fixed/gb.qt5/src/ext/Makefile.am	2017-03-08 19:09:09.901702619 +0000
+@@ -6,6 +6,7 @@
+ 
+ gb_qt5_ext_la_LIBADD = @QT5EXT_LIB@
+ gb_qt5_ext_la_LDFLAGS = -module @LD_FLAGS@ @QT5EXT_LDFLAGS@
++gb_qt5_ext_la_CXXFLAGS = @THREAD_INC@ $(AM_CXXFLAGS) -std=c++11
+ gb_qt5_ext_la_CPPFLAGS = @QT5EXT_INC@ -I$(top_srcdir)/share -I$(top_srcdir)/src/share
+ 
+ gb_qt5_ext_la_SOURCES = \
+diff -Nuar --no-dereference gambas3-3.9.2/gb.qt5/src/opengl/Makefile.am gambas3-3.9.2-fixed/gb.qt5/src/opengl/Makefile.am
+--- gambas3-3.9.2/gb.qt5/src/opengl/Makefile.am	2016-12-17 12:38:06.000000000 +0000
++++ gambas3-3.9.2-fixed/gb.qt5/src/opengl/Makefile.am	2017-03-08 19:09:44.703085846 +0000
+@@ -6,6 +6,7 @@
+ 
+ gb_qt5_opengl_la_LIBADD = @QT5OPENGL_LIB@ @QT5OPENGL_LIB@
+ gb_qt5_opengl_la_LDFLAGS = -module @LD_FLAGS@ @QT5OPENGL_LDFLAGS@
++gb_qt5_opengl_la_CXXFLAGS = @THREAD_INC@ $(AM_CXXFLAGS) -std=c++11
+ gb_qt5_opengl_la_CPPFLAGS = @QT5OPENGL_INC@
+ 
+ gb_qt5_opengl_la_SOURCES = main.h main.cpp
+diff -Nuar --no-dereference gambas3-3.9.2/gb.qt5/src/webkit/Makefile.am gambas3-3.9.2-fixed/gb.qt5/src/webkit/Makefile.am
+--- gambas3-3.9.2/gb.qt5/src/webkit/Makefile.am	2016-12-17 12:38:06.000000000 +0000
++++ gambas3-3.9.2-fixed/gb.qt5/src/webkit/Makefile.am	2017-03-08 19:10:33.967459506 +0000
+@@ -6,6 +6,7 @@
+ 
+ gb_qt5_webkit_la_LIBADD = @QT5WEBKIT_LIB@
+ gb_qt5_webkit_la_LDFLAGS = -module @LD_FLAGS@ @QT5WEBKIT_LDFLAGS@
++gb_qt5_webkit_la_CXXFLAGS = @THREAD_INC@ $(AM_CXXFLAGS) -std=c++11
+ gb_qt5_webkit_la_CPPFLAGS = @QT5WEBKIT_INC@ -I$(top_srcdir)/share -I$(top_srcdir)/src/share
+ 
+ gb_qt5_webkit_la_SOURCES = \
