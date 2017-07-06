@@ -4,6 +4,8 @@
 
 dev-ada/asis:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/asis:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/aws:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/aws:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gnat_util:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gnat_util:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gnat_util:shared - Build gnat_util shared library
@@ -699,8 +701,6 @@ dev-libs/libisoburn:frontend-optional - Use dev-tcltk/bwidget which is not stric
 dev-libs/libisoburn:launch-frontend - Enable the tcl gui for xorriso
 dev-libs/libisoburn:launch-frontend-setuid - Enable the tcl gui for xorriso under setuid
 dev-libs/libisofs:verbose-debug - Enable verbose debug messages
-dev-libs/libjit:interpreter - Enable the libjit interpreter
-dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/liblogging:rfc3195 - Enables RFC 3195 protocol (aka syslog-reliable) support. If you don't know what this is, you don't need it!
 dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as a the next version of the syslog(3) API).
 dev-libs/libmail:apop - Enables the APOP authentication method
@@ -745,8 +745,8 @@ dev-libs/log4cplus:iconv - Use inconv for wchar_t <-> char conversions. See also
 dev-libs/log4cplus:working-c-locale - Use the C99 locale facilities for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
 dev-libs/log4cplus:working-locale - Use C++'s std::locale for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
 dev-libs/log4cxx:smtp - Offer SMTP support via net-libs/libesmtp
-dev-libs/m17n-lib:X - Builds the Graphical User Interface API and utilities for the package.
-dev-libs/m17n-lib:anthy - Enable support for app-i18n/anthy input method.
+dev-libs/m17n-lib:X - Build the Graphical User Interface API and utilities
+dev-libs/m17n-lib:anthy - Enable support for app-i18n/anthy input method
 dev-libs/m17n-lib:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled.
 dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
