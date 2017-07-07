@@ -1,9 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 MY_P="${P/-/_}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="Library for downloading files via HTTP using the GET method"
+DESCRIPTION="small, robust, flexible library for downloading files via HTTP using the GET method"
 HOMEPAGE="http://http-fetcher.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

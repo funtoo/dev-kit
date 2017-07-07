@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -83,20 +84,27 @@ RDEPEND="
 	sys-libs/ncurses:=[unicode]
 	!ghcmakebinary? ( virtual/libffi:= )
 "
-
-PREBUILT_BINARY_DEPENDS="
-	!prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.17 ) )
-	sys-libs/ncurses:5/5
+# gentoo binaries are built against ncurses-5
+RDEPEND+="
+	binary? (
+		|| (
+			sys-libs/ncurses:0/5
+			sys-libs/ncurses:5/5
+		)
+	)
 "
 
-RDEPEND+="binary? ( ${PREBUILT_BINARY_DEPENDS} )"
+# force dependency on >=gmp-5, even if >=gmp-4.1 would be enough. this is due to
+# that we want the binaries to use the latest versioun available, and not to be
+# built against gmp-4
 
+# similar for glibc. we have bootstrapped binaries against glibc-2.17
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-xml-dtd:4.2
 		app-text/docbook-xml-dtd:4.5
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2 )
-	!ghcbootstrap? ( ${PREBUILT_BINARY_DEPENDS} )"
+	!ghcbootstrap? ( !prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.17 ) ) )"
 
 PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.2* )"
 
@@ -236,15 +244,9 @@ ghc_setup_cflags() {
 		append-ghc-cflags link ${flag}
 	done
 
-	# hardened-gcc needs to be disabled, because our prebuilt binaries/libraries
-	# are not built with fPIC, bug #606666
+	# hardened-gcc needs to be disabled, because the mangler doesn't accept
+	# its output.
 	gcc-specs-pie && append-ghc-cflags persistent compile link -nopie
-	tc-is-gcc && version_is_at_least 6.3 $(gcc-version) && if ! use ghcbootstrap; then
-		# gcc-6.3 has support for -no-pie upstream, but spelling differs from
-		# gentoo-specific '-nopie'. We enable it in non-bootstrap to allow
-		# hardened users try '-pie' in USE=ghcbootstrap mode.
-		append-ghc-cflags compile link -no-pie
-	fi
 	gcc-specs-ssp && append-ghc-cflags persistent compile      -fno-stack-protector
 
 	# prevent from failind building unregisterised ghc:

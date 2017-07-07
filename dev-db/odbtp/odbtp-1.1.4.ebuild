@@ -1,9 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Fast, efficient TCP/IP protocol for connecting to Win32-based databases"
+DESCRIPTION="Fast, efficient TCP/IP protocol for connecting to Win32-based databases from any platform"
 HOMEPAGE="http://odbtp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/odbtp/${P}.tar.gz"
 

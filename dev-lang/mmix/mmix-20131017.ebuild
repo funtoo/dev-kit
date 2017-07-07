@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -12,7 +13,7 @@ SRC_URI="http://mmix.cs.hm.edu/src/${P}.tgz"
 RESTRICT="mirror"
 
 DEPEND="virtual/tex-base
-	doc? ( || ( dev-texlive/texlive-plaingeneric dev-texlive/texlive-genericrecommended ) )"
+	doc? ( dev-texlive/texlive-genericrecommended )"
 RDEPEND=""
 
 SLOT="0"

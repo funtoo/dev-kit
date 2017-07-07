@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -17,7 +18,7 @@ DESCRIPTION="A linkable library for Git"
 HOMEPAGE="https://libgit2.github.com/"
 
 LICENSE="GPL-2-with-linking-exception"
-SLOT="0/25"
+SLOT="0/24"
 IUSE="examples gssapi libressl ssh test threads trace"
 
 RDEPEND="

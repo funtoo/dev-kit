@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -8,7 +9,7 @@ MODULES_OPTIONAL_USE=modules
 inherit linux-mod bash-completion-r1 cmake-utils
 
 DESCRIPTION="A system exploration and troubleshooting tool"
-HOMEPAGE="https://www.sysdig.org/"
+HOMEPAGE="http://www.sysdig.org/"
 SRC_URI="https://github.com/draios/sysdig/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"

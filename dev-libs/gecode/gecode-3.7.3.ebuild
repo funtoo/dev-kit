@@ -1,9 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="4"
 
-DESCRIPTION="An environment for developing constraint-based applications"
+DESCRIPTION="Gecode is an environment for developing constraint-based systems and applications"
 SRC_URI="http://www.gecode.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.gecode.org/"
 

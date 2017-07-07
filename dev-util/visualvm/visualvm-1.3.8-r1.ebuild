@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Integrates commandline JDK tools and profiling capabilities"
+DESCRIPTION="Integrates commandline JDK tools and profiling capabilites"
 HOMEPAGE="http://visualvm.java.net/"
 SRC_URI="https://java.net/downloads/visualvm/release138/visualvm_138-src.tar.gz"
 

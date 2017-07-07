@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -7,7 +8,7 @@ inherit multilib
 
 DESCRIPTION="Lisp-flavoured Erlang"
 HOMEPAGE="http://lfe.github.io/"
-SRC_URI="https://github.com/rvirding/lfe/archive/v${PV}.zip -> ${P}.zip"
+SRC_URI="https://github.com/rvirding/lfe/archive/v${PV}.zip"
 
 LICENSE="BSD-2"
 SLOT="0"

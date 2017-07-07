@@ -10,4 +10,4 @@ RDEPEND=doc? ( media-gfx/transfig dev-texlive/texlive-metapost virtual/latex-bas
 SLOT=0
 SRC_URI=ftp://ohnopublishing.net/mirror/liblist-2.3.1.tar.bz2
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=24f1a9c0257b599a353a01f3f9a5fa86
+_md5_=abca8ea682718b024dcb62b0f678d61e

@@ -1,7 +1,8 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=5
 
 is_live() { [[ ${PV} == 9999* ]]; }
 
@@ -17,7 +18,7 @@ SLOT="0"
 IUSE="ssl"
 
 RDEPEND="
-	ssl? ( dev-libs/openssl:0= )
+	ssl? ( dev-libs/openssl:= )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

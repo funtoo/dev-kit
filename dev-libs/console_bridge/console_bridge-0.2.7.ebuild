@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -19,7 +20,7 @@ else
 	SRC_URI="https://github.com/ros/console_bridge/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
-DESCRIPTION="A ROS-independent package for logging into rosconsole/rosout"
+DESCRIPTION="A ROS-independent package for logging into rosconsole/rosout for ROS-dependent packages."
 HOMEPAGE="http://wiki.ros.org/console_bridge"
 LICENSE="BSD"
 SLOT="0"

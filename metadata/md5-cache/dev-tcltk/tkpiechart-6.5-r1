@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/tk-8.3 dev-tcltk/tcllib
 SLOT=0
 SRC_URI=http://jfontain.free.fr/tkpiechart-6.5.tar.bz2
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=49aa39484dd354e902704c697ef10045
+_md5_=03d7ba8b4e9fca16e56ce7db4c25d262

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit qt4-build-multilib
@@ -7,7 +8,7 @@ inherit qt4-build-multilib
 DESCRIPTION="Qt screen magnifier"
 
 if [[ ${QT4_BUILD_TYPE} == release ]]; then
-	KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 fi
 
 IUSE=""

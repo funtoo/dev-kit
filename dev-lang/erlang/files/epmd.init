@@ -1,6 +1,7 @@
 #!/sbin/openrc-run
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the Erlang Public License 1.1
+# $Id$
 
 depend() {
 	need net

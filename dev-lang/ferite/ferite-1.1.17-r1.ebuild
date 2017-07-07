@@ -1,5 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=4
 
@@ -20,7 +21,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/ferite-pcre.patch
+	epatch ${FILESDIR}/ferite-pcre.patch || die
 
 	# use docsdir variable, install to DESTDIR
 	sed \

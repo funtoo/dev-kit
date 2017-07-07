@@ -1,3 +1,5 @@
+# $Id$
+
 # This is a sample SqlTool configuration file, a.k.a. rc file.
 
 # This is for a hsqldb Server running with default settings on your local

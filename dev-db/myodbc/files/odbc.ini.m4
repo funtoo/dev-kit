@@ -1,3 +1,4 @@
+# $Id$
 # vim:ts=4 noexpandtab ft=dosini:
 #
 [ODBC Data Sources]

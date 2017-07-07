@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -31,20 +32,19 @@ RDEPEND="
 	virtual/libudev
 	virtual/jpeg:0
 	opengl? ( media-libs/freeglut )
-	java? ( >=virtual/jre-1.5:* )
+	java? ( >=virtual/jre-1.5 )
 "
 DEPEND="${RDEPEND}
 	dev-lang/python
 	doc? ( app-doc/doxygen )
-	java? ( >=virtual/jdk-1.5:* )"
+	java? ( >=virtual/jdk-1.5 )"
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}/jpeg.patch" \
 		"${FILESDIR}/rpath.patch" \
 		"${FILESDIR}/soname.patch" \
-		"${FILESDIR}/pthread.patch" \
-		"${FILESDIR}/c++14.patch"
+		"${FILESDIR}/pthread.patch"
 
 	rm -rf ThirdParty/LibJPEG
 	for i in ThirdParty/PSCommon/BuildSystem/Platform.* ; do

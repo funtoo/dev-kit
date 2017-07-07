@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/calibration"
@@ -19,7 +20,6 @@ IUSE=""
 RDEPEND="
 	dev-ros/actionlib[${PYTHON_USEDEP}]
 	dev-ros/cv_bridge[${PYTHON_USEDEP}]
-	media-libs/opencv:=
 	dev-ros/image_transport
 	dev-ros/message_filters
 	dev-ros/roscpp
@@ -29,4 +29,3 @@ RDEPEND="
 	dev-libs/boost:=[threads]
 "
 DEPEND="${RDEPEND}"
-PATCHES=( "${FILESDIR}/gcc6.patch" "${FILESDIR}/c11.patch" )

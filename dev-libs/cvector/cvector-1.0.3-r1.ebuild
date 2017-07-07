@@ -1,12 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 inherit base eutils toolchain-funcs versionator
 
 MY_PN=CVector
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="An ANSI C implementation of dynamic arrays (Approximation of C++ vectors)"
+DESCRIPTION="An ANSI C implementation of dynamic arrays to provide a crude approximation to the C++ vector class"
 HOMEPAGE="http://cvector.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}/${MY_P}/${MY_P}.tar.gz"
 

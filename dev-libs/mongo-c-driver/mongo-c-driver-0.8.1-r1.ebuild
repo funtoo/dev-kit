@@ -1,10 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 
-inherit base flag-o-matic multilib python-any-r1 toolchain-funcs
+inherit base multilib python-any-r1 toolchain-funcs
 
 DESCRIPTION="C Driver for MongoDB"
 HOMEPAGE="http://www.mongodb.org/ https://github.com/mongodb/mongo-c-driver"
@@ -25,9 +26,7 @@ DEPEND="${PYTHON_DEPS}
 PATCHES=( "${FILESDIR}/${PV}-api-version.diff" )
 
 python_check_deps() {
-	if use doc; then
-		has_version "dev-python/sphinx[${PYTHON_USEDEP}]"
-	fi
+	use !doc || has_version "dev-python/sphinx[${PYTHON_USEDEP}]"
 }
 
 src_unpack() {
@@ -36,7 +35,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-cflags -D_POSIX_C_SOURCE=200112L
 	tc-export CC
 	emake
 	use doc && make -C docs/source/sphinx html

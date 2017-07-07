@@ -1,10 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
+# $Id$
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+# Tests fail, again
+RESTRICT="test"
 
+PYTHON_COMPAT=( python2_7)
 inherit eutils python-single-r1 autotools
 
 DESCRIPTION="A searchable distributed Key-Value Store"
@@ -18,13 +20,8 @@ KEYWORDS="~amd64"
 
 IUSE="test +python"
 # need to add ruby and java useflags too
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) test? ( python )"
 
-# Tests fail, still
-RESTRICT="test"
-
-DEPEND="
-	dev-cpp/glog
+DEPEND="dev-cpp/glog
 	dev-cpp/sparsehash
 	dev-libs/cityhash
 	dev-libs/libpo6
@@ -34,20 +31,17 @@ DEPEND="
 	dev-libs/replicant
 	dev-libs/libmacaroons
 	dev-libs/libtreadstone
-	dev-libs/json-c
-	python? ( ${PYTHON_DEPS} )"
+	dev-libs/json-c"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	use python && python-single-r1_pkg_setup
-}
+REQUIRED_USE="test? ( python )"
 
 src_prepare() {
 	cp "${WORKDIR}/"*.m4 m4/
 	sed -i -e 's~json/json.h~json-c/json.h~' configure.ac common/datatype_document.cc daemon/index_document.cc || die "Blergh!"
 	eautoreconf
+	use python && python-single-r1_pkg_setup
 }
-
 src_configure() {
 	econf --disable-static \
 		$(use_enable python python-bindings)

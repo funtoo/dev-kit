@@ -1,9 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="4"
 
-inherit toolchain-funcs eutils multilib
+inherit toolchain-funcs eutils flag-o-matic multilib
 
 DESCRIPTION="XSLT processor for transforming XML into HTML, text, or other XML types"
 HOMEPAGE="http://xml.apache.org/xalan-c/"
@@ -61,9 +62,12 @@ src_configure() {
 	local thread="none"
 	use threads && thread="pthread"
 
+	local bitstobuild="32"
+	$(has_m64) && bitstobuild="64"
+
 	./runConfigure -p ${target} -c "$(tc-getCC)" -x "$(tc-getCXX)" \
 		-m ${mloader} -t ${transcoder} \
-		-r ${thread} > configure.vars || die "runConfigure failed"
+		-r ${thread} -b ${bitstobuild} > configure.vars || die "runConfigure failed"
 
 	eval $(grep export configure.vars)
 

@@ -1,12 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 RESTRICT="test"
 inherit cmake-utils
 
-DESCRIPTION="C++ library for collecting user-defined in-process runtime statistics"
+DESCRIPTION="C++ library for collecting user-defined in-process runtime statistics with low overhead."
 HOMEPAGE="https://github.com/shindo/handystats"
 SRC_URI="https://github.com/shindo/${PN}/archive/${PV}.zip -> ${P}.zip"
 

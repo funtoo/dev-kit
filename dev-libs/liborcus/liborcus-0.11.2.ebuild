@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
 EGIT_REPO_URI="https://gitlab.com/orcus/orcus.git"
 
-PYTHON_COMPAT=( python{3_4,3_5,3_6} )
+PYTHON_COMPAT=( python{3_4,3_5} )
 
 [[ ${PV} == 9999 ]] && GITECLASS="git-r3 autotools"
 inherit python-single-r1 ${GITECLASS}
@@ -25,7 +26,7 @@ RDEPEND="
 	dev-libs/boost:=
 	sys-libs/zlib:=
 	python? ( ${PYTHON_DEPS} )
-	spreadsheet-model? ( =dev-libs/libixion-0.11*:= )
+	spreadsheet-model? ( >=dev-libs/libixion-0.11.1:= )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/mdds-1.2.0:1

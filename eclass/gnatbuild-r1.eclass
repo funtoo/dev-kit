@@ -1,9 +1,10 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Author: Steve Arnold <nerdboy@gentoo.org>
-# No maintainer <maintainer-needed@gentoo.org>
+# Belongs to: ada project <ada@gentoo.org>
 #
 # Notes:
 #  HOMEPAGE and LICENSE are set in appropriate ebuild, as

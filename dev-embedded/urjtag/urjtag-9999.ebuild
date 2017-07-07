@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # TODO: figure out htf to make python.eclass work
 
@@ -15,7 +16,7 @@ else
 	KEYWORDS="amd64 ppc sparc x86"
 fi
 
-DESCRIPTION="Tool for communicating over JTAG with flash chips, CPUs, and many more"
+DESCRIPTION="tool for communicating over JTAG with flash chips, CPUs, and many more (fork of openwince jtag)"
 HOMEPAGE="http://urjtag.sourceforge.net/"
 
 LICENSE="GPL-2"

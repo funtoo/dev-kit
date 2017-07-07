@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_4} )
@@ -14,19 +15,19 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples perl python ruby static-libs"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND="
-	sys-libs/ncurses:0=[unicode]
+COMMON_DEPEND="
+	sys-libs/ncurses[unicode]
 	perl? ( dev-lang/perl:= )
-	ruby? ( dev-lang/ruby:* )
+	ruby? ( dev-lang/ruby )
 	python? ( ${PYTHON_DEPS} )
 "
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	perl? ( dev-lang/swig )
 	python? ( >=dev-lang/swig-1.3.40 )
 	ruby? ( dev-lang/swig )
 "
+RDEPEND="${COMMON_DEPEND}"
 
 src_prepare() {
 	sed -i \

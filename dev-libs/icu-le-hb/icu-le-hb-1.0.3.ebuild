@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -12,17 +13,17 @@ SRC_URI="https://github.com/behdad/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="icu"
 SLOT="0"
 
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	media-libs/harfbuzz:=[${MULTILIB_USEDEP}]
+	media-libs/harfbuzz:=
 "
 
 DEPEND="
 	${RDEPEND}
-	>=dev-libs/icu-58.1[${MULTILIB_USEDEP}]
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=dev-libs/icu-58.1
+	virtual/pkgconfig
 "
 
 src_prepare() {

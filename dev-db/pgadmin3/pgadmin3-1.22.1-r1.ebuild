@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -10,7 +11,7 @@ HOMEPAGE="http://www.pgadmin.org/"
 SRC_URI="mirror://postgresql/${PN}/release/v${PV}/src/${P}.tar.gz"
 
 LICENSE="POSTGRESQL"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug +databasedesigner"
 

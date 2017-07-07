@@ -1,5 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -9,7 +10,7 @@
 if [[ -z ${_ENLIGHTENMENT_ECLASS} ]]; then
 _ENLIGHTENMENT_ECLASS=1
 
-inherit epatch epunt-cxx libtool
+inherit eutils libtool
 
 # @ECLASS-VARIABLE: E_PYTHON
 # @DEFAULT_UNSET

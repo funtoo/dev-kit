@@ -1,10 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 inherit eutils autotools
 
 MY_P=ELFIO-${PV}
-DESCRIPTION="ELF reader and producer implemented as a C++ library"
+DESCRIPTION="ELF (Executable and Linkable Format) reader and producer implemented as a C++ library"
 HOMEPAGE="http://elfio.sourceforge.net/"
 SRC_URI="mirror://sourceforge/elfio/${MY_P}.tar.gz"
 

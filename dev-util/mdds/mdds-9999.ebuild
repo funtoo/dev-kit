@@ -1,12 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
 EGIT_REPO_URI="https://gitlab.com/mdds/mdds.git"
-[[ ${PV} == 9999 ]] && GITECLASS="git-r3"
+[[ ${PV} == 9999 ]] && GITECLASS="git-r3 autotools"
 
-inherit autotools toolchain-funcs ${GITECLASS}
+inherit toolchain-funcs ${GITECLASS}
 
 DESCRIPTION="A collection of multi-dimensional data structure and indexing algorithm"
 HOMEPAGE="https://gitlab.com/mdds/mdds"
@@ -27,11 +28,11 @@ DEPEND="${RDEPEND}
 	)
 "
 
-PATCHES=( "${FILESDIR}/${PN}-1.2.3-buildsystem.patch" )
+DOCS=() # buildsystem installs docs
 
 src_prepare(){
 	default
-	eautoreconf
+	[[ ${PV} == 9999 ]] && eautoreconf
 }
 
 src_configure() {

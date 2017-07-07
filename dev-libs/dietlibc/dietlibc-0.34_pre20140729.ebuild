@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -10,7 +11,7 @@ SRC_URI="https://dev.gentoo.org/~patrick/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~ia64 ~mips sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm ~ia64 ~mips ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
@@ -36,7 +37,7 @@ src_prepare() {
 	append-flags $(test-flags -fno-stack-protector)
 
 	# only use -nopie on archs that support it
-	tc-enables-pie && append-flags -nopie
+	gcc-specs-pie && append-flags -nopie
 
 	sed -i -e 's:strip::' Makefile || die
 	append-flags -Wa,--noexecstack

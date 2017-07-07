@@ -1,16 +1,15 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
-# @ECLASS: common-lisp-common.eclass
-# @AUTHOR: Matthew Kennedy <mkennedy@gentoo.org>
-# @MAINTAINER:
-# Common Lisp project <common-lisp@gentoo.org>
-# @DESCRIPTION:
+# $Id$
+#
+# Author Matthew Kennedy <mkennedy@gentoo.org>
+#
 # Sundry code common to many Common Lisp related ebuilds.
+
+# Some handy constants
 
 inherit eutils multilib
 
-# Some handy constants
 CLFASLROOT=/usr/$(get_libdir)/common-lisp/
 CLSOURCEROOT=/usr/share/common-lisp/source/
 CLSYSTEMROOT=/usr/share/common-lisp/systems/

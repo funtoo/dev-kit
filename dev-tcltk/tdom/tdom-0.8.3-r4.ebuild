@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -14,7 +15,7 @@ SRC_URI="mirror://github/tDOM/${PN}/${MY_P}.tgz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs threads"
 
 DEPEND="

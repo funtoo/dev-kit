@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
-	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 fi
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
@@ -42,14 +42,13 @@ src_prepare() {
 	use static && append-ldflags -static
 
 	export ac_cv_header_libaio_h=$(usex aio)
-	use elibc_musl && export ac_cv_header_stdc=no
 
 	# Stub out the -k test since it's known to be flaky. #545812
 	sed -i '1iexit 77' tests*/strace-k.test || die
 }
 
 src_configure() {
-	# Set up the default build settings, and then use the names strace expects.
+	# Set up the default build settings, and then use the naems strace expects.
 	tc-export_build_env BUILD_{CC,CPP}
 	local v bv
 	for v in CC CPP {C,CPP,LD}FLAGS ; do

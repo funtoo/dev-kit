@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile config configure install postinst prepare setup unpack
+DEPEND=dev-libs/libedit dev-libs/icu:= >=dev-util/btyacc-3.0-r2 doc? ( app-arch/unzip ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A relational database offering many ANSI SQL:2003 and some SQL:2008 features
+EAPI=5
+HOMEPAGE=http://www.firebirdsql.org/
+IUSE=debug doc client examples superserver xinetd
+KEYWORDS=~amd64 ~x86
+LICENSE=IDPL Interbase-1.0
+RDEPEND=dev-libs/libedit dev-libs/icu:= xinetd? ( virtual/inetd ) !sys-cluster/ganglia
+REQUIRED_USE=^^ ( client superserver xinetd )
+RESTRICT=userpriv
+SLOT=0
+SRC_URI=mirror://sourceforge/firebird/Firebird-2.5.3.26780-0.tar.bz2 doc? ( ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	readme.gentoo	df3fc8fdaf5a519e7d48c83e7592c95f	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	80aaa71614ced86f02ee1a513821dc87	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=1f3844c53c8cf8dcb8e046e3c5dd8477

@@ -1,9 +1,10 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="6"
 
-inherit ltprune
+inherit eutils
 
 DESCRIPTION="PKCS#11 helper library"
 HOMEPAGE="https://github.com/OpenSC/pkcs11-helper"
@@ -11,7 +12,7 @@ SRC_URI="https://github.com/OpenSC/${PN}/releases/download/${P}/${P}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc gnutls libressl nss static-libs"
 
 RDEPEND="

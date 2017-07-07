@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -113,8 +114,7 @@ esac
 # appropriate packages to DEPEND yourself.
 [[ ${AUTOTOOLS_AUTORECONF} ]] || : ${AUTOTOOLS_AUTO_DEPEND:=no}
 
-# eutils for eqawarn, path_exists
-inherit autotools epatch eutils libtool ltprune
+inherit autotools eutils libtool
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 

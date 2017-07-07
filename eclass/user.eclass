@@ -1,9 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
 # base-system@gentoo.org (Linux)
+# usata@gentoo.org (OS X)
+# Aaron Walker <ka0ttic@gentoo.org> (FreeBSD)
 # @BLURB: user management in ebuilds
 # @DESCRIPTION:
 # The user eclass contains a suite of functions that allow ebuilds

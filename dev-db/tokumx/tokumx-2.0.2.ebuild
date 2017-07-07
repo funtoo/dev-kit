@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 CMAKE_BUILD_TYPE=Release
@@ -17,10 +18,8 @@ LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="pax_kernel"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
-	${PYTHON_DEPS}
 	dev-libs/jemalloc
 	!dev-libs/mongo-cxx-driver
 	>=dev-libs/boost-1.50[threads(+)]

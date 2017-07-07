@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -20,7 +21,6 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gold.patch"
 	epatch_user
-	sed -i -e "s/mysqlclient_r/mysqlclient/" "${S}/configure" || die
 }
 
 src_configure() {

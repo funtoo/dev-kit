@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -11,10 +12,10 @@ SRC_URI="http://erratique.ch/software/jsonm/releases/${P}.tbz"
 
 LICENSE="ISC"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~ppc"
+KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=dev-ml/uutf-1.0.0:=
+RDEPEND="dev-ml/uutf:=
 	dev-lang/ocaml:=
 	dev-ml/uchar:="
 DEPEND="${RDEPEND}

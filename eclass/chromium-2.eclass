@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: chromium-2.eclass
 # @MAINTAINER:
@@ -32,8 +33,7 @@ chromium_suid_sandbox_check_kernel_config() {
 		# (bug #552576, bug #556286).
 		ERROR_ADVISE_SYSCALLS="CONFIG_ADVISE_SYSCALLS is required for the renderer (bug #552576)"
 		ERROR_COMPAT_VDSO="CONFIG_COMPAT_VDSO causes segfaults (bug #556286)"
-		ERROR_GRKERNSEC="CONFIG_GRKERNSEC breaks sandbox (bug #613668)"
-		CONFIG_CHECK="~PID_NS ~NET_NS ~SECCOMP_FILTER ~USER_NS ~ADVISE_SYSCALLS ~!COMPAT_VDSO ~!GRKERNSEC"
+		CONFIG_CHECK="~PID_NS ~NET_NS ~SECCOMP_FILTER ~USER_NS ~ADVISE_SYSCALLS ~!COMPAT_VDSO"
 		check_extra_config
 	fi
 }

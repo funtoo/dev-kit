@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -10,14 +11,12 @@ HOMEPAGE="http://sysprof.com/"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug gtk systemd"
 
 RDEPEND="
 	>=dev-libs/glib-2.44:2
-	gtk? (
-		sys-auth/polkit
-		>=x11-libs/gtk+-3.22.0:3 )
+	gtk? ( >=x11-libs/gtk+-3.21.5:3 )
 	systemd? (
 		sys-auth/polkit
 		>=sys-apps/systemd-222 )

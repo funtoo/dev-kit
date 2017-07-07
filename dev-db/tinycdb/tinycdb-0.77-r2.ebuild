@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI="6"
+EAPI="5"
 
-inherit toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="A very fast and simple package for creating and reading constant data bases"
+DESCRIPTION="TinyCDB is a very fast and simple package for creating and reading constant data bases"
 HOMEPAGE="http://www.corpit.ru/mjt/tinycdb.html"
 SRC_URI="http://www.corpit.ru/mjt/${PN}/${P/-/_}.tar.gz"
 
@@ -17,15 +18,11 @@ RESTRICT="test"
 
 RDEPEND="!dev-db/cdb"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-gentoo.patch
-	"${FILESDIR}"/${PN}-umask.patch
-	"${FILESDIR}"/${PN}-uclibc.patch
-)
-
 src_prepare() {
-	default
-
+	epatch "${FILESDIR}"/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-umask.diff
+	epatch "${FILESDIR}"/${P}-uclibc.diff
+	# fix multilib support
 	sed -i "/^libdir/s:/lib:/$(get_libdir):" Makefile
 }
 
@@ -44,9 +41,9 @@ src_install() {
 	use static-libs && targets+=" install-piclib"
 
 	emake \
-		prefix="${EPREFIX}"/usr \
-		mandir="${EPREFIX}"/usr/share/man \
+		prefix="/usr" \
+		mandir="/usr/share/man" \
 		DESTDIR="${D}" \
 		${targets}
-	einstalldocs
+	dodoc ChangeLog NEWS
 }

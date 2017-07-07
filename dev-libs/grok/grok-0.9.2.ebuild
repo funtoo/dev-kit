@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -11,17 +12,15 @@ SRC_URI="https://github.com/jordansissel/${PN}/archive/v${PV}.tar.gz -> ${P}.tar
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa x86"
+KEYWORDS="amd64 ~arm hppa x86"
 
 IUSE=""
 
-CDEPEND="dev-db/tokyocabinet
-		>=dev-libs/libevent-1.3:=
+DEPEND="dev-db/tokyocabinet
+		>=dev-libs/libevent-1.3
 		>=dev-libs/libpcre-7.6"
 
-RDEPEND="${CDEPEND}"
-DEPEND="${CDEPEND}
-		<dev-util/gperf-3.1"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-*.patch

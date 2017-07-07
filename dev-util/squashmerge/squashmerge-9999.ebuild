@@ -1,19 +1,31 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=5
 
-EGIT_REPO_URI="https://github.com/mgorny/${PN}.git"
-inherit autotools git-r3
+#if LIVE
+AUTOTOOLS_AUTORECONF=yes
+EGIT_REPO_URI="https://bitbucket.org/mgorny/${PN}.git"
+
+inherit git-r3
+#endif
+
+inherit autotools-utils
 
 DESCRIPTION="dev-util/squashdelta delta merge tool"
-HOMEPAGE="https://github.com/mgorny/squashmerge/"
-SRC_URI=""
+HOMEPAGE="https://bitbucket.org/mgorny/squashmerge/"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="lz4 +lzo"
+
+#if LIVE
+KEYWORDS=
+SRC_URI=
+#endif
 
 COMMON_DEPEND="
 	lz4? ( app-arch/lz4:0= )
@@ -27,16 +39,11 @@ REQUIRED_USE="|| ( lz4 lzo )"
 
 DOCS=( FORMAT )
 
-src_prepare() {
-	default
-	eautoreconf
-}
-
 src_configure() {
-	local myconf=(
+	local myeconfargs=(
 		$(use_enable lz4)
 		$(use_enable lzo)
 	)
 
-	econf "${myconf[@]}"
+	autotools-utils_src_configure
 }

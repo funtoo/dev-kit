@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install test unpack
-DEPEND=>=dev-lang/go-1.8
+DEPEND=>=dev-lang/go-1.4.2:=
 DESCRIPTION=The Snappy compression format in the Go programming language.
 EAPI=5
 HOMEPAGE=https://github.com/golang/snappy
@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0/0_pre20160213
 SRC_URI=https://github.com/golang/snappy/archive/d1d908a252c22fd7afd36190d5cffb144aa8f777.tar.gz -> go-snappy-0_pre20160213.tar.gz
-_eclasses_=golang-base	51a1f13e065f1cff4507685d9cc268c7	golang-build	b66349c110e4ddd6203bbe8bf4ae05c1	golang-vcs-snapshot	7fb5d554a7e656be19ec465fa5bb66db
-_md5_=3750be05cffaf61228b7f01f05e6429f
+_eclasses_=golang-base	08fe6e0e2b4750daff8887a7f0e1f873	golang-build	a44f10e6bd86ecccf2a07cc0d4cf6bec	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
+_md5_=55aa994cc48fd546fea65aee37428099

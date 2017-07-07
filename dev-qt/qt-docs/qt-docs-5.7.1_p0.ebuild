@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -14,7 +15,7 @@ SRC_URI="https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt5_${M
 
 LICENSE="FDL-1.3"
 SLOT="5"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/p7zip"
 

@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -11,7 +12,7 @@ SRC_URI="mirror://apache/couchdb/source/${PV}/apache-${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="libressl selinux test"
 
 RDEPEND=">=dev-libs/icu-4.3.1:=

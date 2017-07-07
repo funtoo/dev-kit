@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22 ruby23"
@@ -16,7 +17,7 @@ HOMEPAGE="https://github.com/tarcieri/http"
 
 LICENSE="MIT"
 SLOT="0.8"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64"
+KEYWORDS="~amd64 ~arm ~ppc64"
 IUSE=""
 
 ruby_add_rdepend "

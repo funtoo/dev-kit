@@ -1,12 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 inherit cmake-utils
 
 DESCRIPTION="Powerful GUI manager for the Sqlite3 database"
-HOMEPAGE="https://sourceforge.net/projects/sqliteman/"
+HOMEPAGE="http://sqliteman.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="6"
 WANT_AUTOCONF="2.1"
@@ -47,7 +48,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-17.0.0-fix-file-permissions.patch
 	"${FILESDIR}"/${PN}-17-clang.patch
 	"${FILESDIR}"/${PN}-perl-defined-array-check.patch
-	"${FILESDIR}"/${PN}-17-fix_pointer_dereference.patch
 )
 
 src_prepare() {

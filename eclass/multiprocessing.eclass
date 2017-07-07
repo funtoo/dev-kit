@@ -1,5 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: multiprocessing.eclass
 # @MAINTAINER:
@@ -95,7 +96,7 @@ get_nproc() {
 # no way to represent infinity, we return ${inf} (defaults to 999) if the user
 # has -j without a number.
 makeopts_jobs() {
-	[[ $# -eq 0 ]] && set -- "${MAKEOPTS}"
+	[[ $# -eq 0 ]] && set -- ${MAKEOPTS}
 	# This assumes the first .* will be more greedy than the second .*
 	# since POSIX doesn't specify a non-greedy match (i.e. ".*?").
 	local jobs=$(echo " $* " | sed -r -n \
@@ -116,7 +117,7 @@ makeopts_jobs() {
 # If no limit is specified or --load-average is used without a number, ${inf}
 # (defaults to 999) is returned.
 makeopts_loadavg() {
-	[[ $# -eq 0 ]] && set -- "${MAKEOPTS}"
+	[[ $# -eq 0 ]] && set -- ${MAKEOPTS}
 	# This assumes the first .* will be more greedy than the second .*
 	# since POSIX doesn't specify a non-greedy match (i.e. ".*?").
 	local lavg=$(echo " $* " | sed -r -n \
@@ -138,16 +139,11 @@ multijob_init() {
 
 	# Setup a pipe for children to write their pids to when they finish.
 	# We have to allocate two fd's because POSIX has undefined behavior
-	# when using one single fd for both read and write. #487056
-	# However, opening an fd for read or write only will block until the
-	# opposite end is opened as well. Thus we open the first fd for both
-	# read and write to not block ourselve, but use it for reading only.
-	# The second fd really is opened for write only, as Cygwin supports
-	# just one single read fd per FIFO. #583962
+	# when you open a FIFO for simultaneous read/write. #487056
 	local pipe="${T}/multijob.pipe"
 	mkfifo -m 600 "${pipe}"
+	redirect_alloc_fd mj_write_fd "${pipe}"
 	redirect_alloc_fd mj_read_fd "${pipe}"
-	redirect_alloc_fd mj_write_fd "${pipe}" '>'
 	rm -f "${pipe}"
 
 	# See how many children we can fork based on the user's settings.

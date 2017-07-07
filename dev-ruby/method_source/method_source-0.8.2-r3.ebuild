@@ -1,8 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
-USE_RUBY="ruby21 ruby22 ruby23 ruby24"
+USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC=""
@@ -16,7 +17,7 @@ IUSE=""
 SLOT="0"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 
 ruby_add_bdepend "test? ( >=dev-ruby/bacon-1.1.0 )"
 

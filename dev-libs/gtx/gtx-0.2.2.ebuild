@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -7,7 +8,7 @@ AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils
 
-DESCRIPTION="Small collection of functions intended to enhance the GLib testing framework"
+DESCRIPTION="Small collection of convenience functions intended to enhance the GLib testing framework"
 HOMEPAGE="https://launchpad.net/gtx"
 SRC_URI="https://launchpad.net/gtx/trunk/${PV}/+download/${P}.tar.gz"
 

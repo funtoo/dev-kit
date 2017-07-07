@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/urdf_tutorial"
@@ -15,9 +16,9 @@ IUSE=""
 RDEPEND="
 	dev-ros/urdf
 	dev-ros/joint_state_publisher
+	dev-ros/pr2_description
 	dev-ros/robot_state_publisher
 	dev-ros/rviz
 	dev-ros/xacro
 "
 DEPEND="${RDEPEND}"
-PATCHES=( "${FILESDIR}/notest.patch" )

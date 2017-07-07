@@ -1,10 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 DESCRIPTION="A syntax extension for importing declarations from interface files"
-HOMEPAGE="https://github.com/whitequark/ppx_import"
+HOMEPAGE="https://github.com/whitequark/ppx_impor://github.com/whitequark/ppx_import"
 SRC_URI="https://github.com/whitequark/ppx_import/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"

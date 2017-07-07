@@ -1,10 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=4
 
 DESCRIPTION="Simple ASDF2 configuration for Gentoo Common Lisp ports"
-HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Common_Lisp/Guide"
+HOMEPAGE="https://www.gentoo.org/proj/en/lisp/common-lisp/guide.xml"
 
 LICENSE="GPL-2"
 SLOT="0"
