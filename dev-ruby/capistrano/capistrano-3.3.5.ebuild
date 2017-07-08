@@ -3,9 +3,9 @@
 # $Id$
 
 EAPI=5
-USE_RUBY="ruby20 ruby21 ruby22"
+USE_RUBY="ruby20 ruby21"
 
-RUBY_FAKEGEM_RECIPE_TEST="rspec3"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
@@ -21,6 +21,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "
+	>=dev-ruby/capistrano-stats-1.1.0:1
 	>=dev-ruby/sshkit-1.3:0
 	>=dev-ruby/rake-10.0.0
 	dev-ruby/i18n:*
