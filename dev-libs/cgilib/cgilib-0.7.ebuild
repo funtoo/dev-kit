@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="4"
 
 inherit autotools autotools-utils
 
-DESCRIPTION="A simple and lightweight interface to the CGI for C and C++ programs"
+DESCRIPTION="a simple and lightweight interface to the Common Gateway Interface (CGI) for C and C++ programs"
 HOMEPAGE="http://www.infodrom.org/projects/cgilib/"
 SRC_URI="http://www.infodrom.org/projects/${PN}/download/${P}.tar.gz"
 

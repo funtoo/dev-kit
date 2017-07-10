@@ -1,9 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
-inherit eutils multilib flag-o-matic toolchain-funcs udev user
+inherit eutils multilib flag-o-matic toolchain-funcs udev
 
 # One ebuild to rule them all
 if [[ ${PV} == "9999" ]] ; then
@@ -23,12 +24,12 @@ HOMEPAGE="http://openocd.sourceforge.net"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+cmsis-dap dummy +ftdi +jlink parport +usb verbose-io"
+IUSE="cmsis-dap dummy ftdi parport +usb verbose-io"
 RESTRICT="strip" # includes non-native binaries
 
 RDEPEND=">=dev-lang/jimtcl-0.76
+	dev-embedded/libjaylink
 	cmsis-dap? ( dev-libs/hidapi )
-	jlink? ( dev-embedded/libjaylink )
 	usb? (
 		virtual/libusb:0
 		virtual/libusb:1
@@ -38,10 +39,6 @@ RDEPEND=">=dev-lang/jimtcl-0.76
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 [[ ${PV} == "9999" ]] && DEPEND+=" >=sys-apps/texinfo-5" #549946
-
-pkg_setup() {
-	enewgroup plugdev
-}
 
 src_prepare() {
 	epatch_user
@@ -62,6 +59,7 @@ src_configure() {
 		--enable-ep93xx
 		--enable-at91rm9200
 		--enable-gw16012
+		--enable-oocd_trace
 		--enable-arm-jtag-ew
 		--enable-sysfsgpio
 		--enable-bcm2835gpio
@@ -78,6 +76,7 @@ src_configure() {
 			--enable-osbdm
 			--enable-opendous
 			--enable-usbprog
+			--enable-jlink
 			--enable-rlink
 			--enable-stlink
 			--enable-vsllink
@@ -95,6 +94,7 @@ src_configure() {
 			--disable-osbdm
 			--disable-opendous
 			--disable-usbprog
+			--disable-jlink
 			--disable-rlink
 			--disable-stlink
 			--disable-vsllink
@@ -102,27 +102,17 @@ src_configure() {
 		)
 	fi
 
-	if use jlink; then
-		myconf+=(
-			--enable-jlink
-		)
-	else
-		myconf+=(
-			--disable-jlink
-		)
-	fi
-
 	if use ftdi; then
 		myconf+=(
-			--enable-usb-blaster
-			--enable-openjtag
-			--enable-presto
+			--enable-usb_blaster_libftdi
+			--enable-openjtag_ftdi
+			--enable-presto_libftdi
 		)
 	else
 		myconf+=(
-			--disable-openjtag
-			--disable-presto
-			--disable-usb-blaster
+			--disable-openjtag_ftdi
+			--disable-presto_libftdi
+			--disable-usb_blaster_libftdi
 		)
 	fi
 
@@ -139,8 +129,4 @@ src_install() {
 	default
 	env -uRESTRICT prepstrip "${ED}"/usr/bin
 	udev_dorules "${D}"/usr/share/${PN}/contrib/*.rules
-}
-
-pkg_postinst() {
-	elog "To access openocd devices as user you must be in the plugdev group"
 }

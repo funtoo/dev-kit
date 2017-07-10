@@ -1,5 +1,5 @@
---- a/Makefile
-+++ b/Makefile
+--- Makefile
++++ Makefile
 @@ -27,23 +27,23 @@
  	if test -r $*.ch; then cweave $*.w $*.ch; else cweave $*.w; fi
  

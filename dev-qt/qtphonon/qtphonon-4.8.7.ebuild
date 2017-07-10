@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit qt4-build-multilib
@@ -7,7 +8,7 @@ inherit qt4-build-multilib
 DESCRIPTION="The Phonon module for the Qt toolkit"
 
 if [[ ${QT4_BUILD_TYPE} == release ]]; then
-	KEYWORDS="amd64 arm hppa ~ia64 ppc ppc64 x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
 IUSE="dbus qt3support"

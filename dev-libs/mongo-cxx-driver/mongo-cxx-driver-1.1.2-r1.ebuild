@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -54,7 +55,7 @@ src_configure() {
 }
 
 src_compile() {
-	escons "${scons_opts[@]}"
+	escons "${scons_opts[@]}" all
 }
 
 src_install() {

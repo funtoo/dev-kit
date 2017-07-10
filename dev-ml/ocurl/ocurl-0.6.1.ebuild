@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -17,7 +18,7 @@ RDEPEND=">=net-misc/curl-7.9.8
 		>=dev-lang/ocaml-3.12:=[ocamlopt]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-KEYWORDS="amd64 ppc"
+KEYWORDS="amd64 ppc x86"
 
 src_compile()
 {

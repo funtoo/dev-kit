@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit qt4-build-multilib
@@ -7,10 +8,10 @@ inherit qt4-build-multilib
 DESCRIPTION="Demonstration module and examples for the Qt toolkit"
 
 if [[ ${QT4_BUILD_TYPE} == release ]]; then
-	KEYWORDS="amd64 arm ppc ppc64 x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
-IUSE="dbus declarative kde multimedia opengl phonon webkit xmlpatterns"
+IUSE="dbus declarative kde multimedia opengl openvg phonon webkit xmlpatterns"
 
 DEPEND="
 	~dev-qt/designer-${PV}[aqua=,debug=,${MULTILIB_USEDEP}]
@@ -25,6 +26,7 @@ DEPEND="
 	declarative? ( ~dev-qt/qtdeclarative-${PV}[aqua=,debug=,webkit?,${MULTILIB_USEDEP}] )
 	multimedia? ( ~dev-qt/qtmultimedia-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
 	opengl? ( ~dev-qt/qtopengl-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
+	openvg? ( ~dev-qt/qtopenvg-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
 	phonon? (
 		kde? ( >=media-libs/phonon-4.8.3-r1[aqua=,qt4,${MULTILIB_USEDEP}] )
 		!kde? ( || (
@@ -54,6 +56,7 @@ src_prepare() {
 		'declarative:declarative'
 		'multimedia:spectrum'
 		'opengl:boxes|glhypnotizer'
+		'openvg'
 		'phonon:mediaplayer'
 		'webkit:browser'
 		'xmlpatterns'
@@ -85,7 +88,7 @@ multilib_src_configure() {
 		$(qt_use declarative)
 		$(qt_use multimedia) -no-audio-backend
 		$(qt_use opengl)
-		-no-openvg
+		$(qt_use openvg)
 		$(qt_use phonon) -no-phonon-backend
 		$(qt_use webkit)
 		$(qt_use xmlpatterns)

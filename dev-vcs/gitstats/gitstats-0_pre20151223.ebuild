@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -24,14 +25,11 @@ HOMEPAGE="http://gitstats.sourceforge.net/"
 LICENSE="|| ( GPL-2 GPL-3 ) MIT"
 SLOT="0"
 IUSE=""
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
-	${PYTHON_DEPS}
 	sci-visualization/gnuplot[gd]
 	dev-vcs/git"
 DEPEND="
-	${PYTHON_DEPS}
 	dev-lang/perl:*
 "
 

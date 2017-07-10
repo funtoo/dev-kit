@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,7 +12,7 @@ inherit haskell-cabal
 MY_PN="JuicyPixels"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Picture loading/serialization (in png, jpeg, bitmap, gif, tga, tiff and others)"
+DESCRIPTION="Picture loading/serialization (in png, jpeg, bitmap, gif, tga, tiff and radiance)"
 HOMEPAGE="https://github.com/Twinside/Juicy.Pixels"
 SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

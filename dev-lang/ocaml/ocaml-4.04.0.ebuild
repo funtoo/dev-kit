@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -7,7 +8,7 @@ inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
 PATCHLEVEL="8"
 MY_P="${P/_/-}"
-DESCRIPTION="Type-inferring functional programming language descended from the ML family"
+DESCRIPTION="Fast modern type-inferring functional programming language descended from the ML family"
 HOMEPAGE="http://www.ocaml.org/"
 SRC_URI="https://github.com/ocaml/ocaml/archive/${PV/_/+}.tar.gz -> ${MY_P}.tar.gz
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
@@ -16,7 +17,7 @@ LICENSE="QPL-1.0 LGPL-2"
 # Everytime ocaml is updated to a new version, everything ocaml must be rebuilt,
 # so here we go with the subslot.
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="emacs flambda latex ncurses +ocamlopt X xemacs"
 
 RDEPEND="
@@ -54,9 +55,6 @@ src_configure() {
 	filter-flags -fomit-frame-pointer
 	# Bug #285993
 	filter-mfpmath sse
-
-	# -ggdb3 & co makes it behave weirdly, breaks sexplib
-	replace-flags -ggdb* -ggdb
 
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"

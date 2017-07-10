@@ -1,12 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 inherit cmake-utils
 
 DESCRIPTION="C++ string template engine based on the Django template system"
-HOMEPAGE="https://github.com/steveire/grantlee"
+HOMEPAGE="http://www.gitorious.org/grantlee/pages/Home"
 SRC_URI="http://downloads.grantlee.org/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"

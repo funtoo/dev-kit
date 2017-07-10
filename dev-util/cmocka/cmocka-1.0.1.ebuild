@@ -1,12 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 inherit cmake-multilib
 
 DESCRIPTION="A unit testing framework for C"
-HOMEPAGE="https://cmocka.org/"
+HOMEPAGE="http://cmocka.org/"
 SRC_URI="https://cmocka.org/files/1.0/${P}.tar.xz"
 
 LICENSE="Apache-2.0"

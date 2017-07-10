@@ -1,5 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -178,12 +179,12 @@ systemd_newuserunit() {
 }
 
 # @FUNCTION: systemd_install_serviced
-# @USAGE: <conf-file> [<service>]
+# @USAGE: <conf-file> [<service.d>]
 # @DESCRIPTION:
-# Install <conf-file> as the template <service>.d/00gentoo.conf.
-# If <service> is not specified
-# <conf-file> with the .conf suffix stripped is used
-# (e.g. foo.service.conf -> foo.service.d/00gentoo.conf).
+# Install the file <conf-file> as service.d/00gentoo.conf template.
+# The <service.d> argument specifies the configured service name.
+# If not specified, the configuration file name will be used with .conf
+# suffix stripped (e.g. foo.service.conf -> foo.service).
 systemd_install_serviced() {
 	debug-print-function ${FUNCNAME} "${@}"
 

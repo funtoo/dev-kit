@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,16 +12,11 @@ SRC_URI="https://github.com/ocaml/uchar/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2-with-linking-exception"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc"
+KEYWORDS="~amd64"
 IUSE="+ocamlopt"
 
 RDEPEND=">=dev-lang/ocaml-4.03:="
-DEPEND="${RDEPEND} dev-ml/ocamlbuild"
-
-# This is mostly a compat wrapper for older ocaml versions we don't support. No
-# need to test it, plus it fails when installing for the first time:
-# https://bugs.gentoo.org/show_bug.cgi?id=624144
-RESTRICT="test"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	ocaml pkg/build.ml \

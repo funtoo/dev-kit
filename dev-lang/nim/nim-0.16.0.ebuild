@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 EAPI=6
 
@@ -7,12 +8,12 @@ MY_PN=Nim
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="compiled, garbage-collected systems programming language"
-HOMEPAGE="https://nim-lang.org/"
-SRC_URI="https://nim-lang.org/download/${P}.tar.xz"
+HOMEPAGE="http://nim-lang.org/"
+SRC_URI="http://nim-lang.org/download/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc +readline test"
 
 DEPEND="

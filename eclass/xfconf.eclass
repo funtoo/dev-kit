@@ -1,5 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -139,9 +140,7 @@ xfconf_pkg_postinst() {
 	debug-print-function ${FUNCNAME} "$@"
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	if [[ -n ${GNOME2_ECLASS_ICONS} ]]; then
-		gnome2_icon_cache_update
-	fi
+	gnome2_icon_cache_update
 }
 
 # @FUNCTION: xfconf_pkg_postrm

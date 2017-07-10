@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -9,14 +10,14 @@
 # @BLURB: Eclass for Qt5 split ebuilds.
 # @DESCRIPTION:
 # This eclass contains various functions that are used when building Qt5.
-# Requires EAPI 6.
+# Requires EAPI 5 or 6.
 
 if [[ ${CATEGORY} != dev-qt ]]; then
 	die "qt5-build.eclass is only to be used for building Qt 5."
 fi
 
 case ${EAPI} in
-	6)	: ;;
+	5|6)	: ;;
 	*)	die "qt5-build.eclass: unsupported EAPI=${EAPI:-0}" ;;
 esac
 
@@ -47,7 +48,8 @@ esac
 # for tests you should proceed with setting VIRTUALX_REQUIRED=test.
 : ${VIRTUALX_REQUIRED:=manual}
 
-inherit estack flag-o-matic ltprune toolchain-funcs versionator virtualx
+[[ ${EAPI} == 5 ]] && inherit multilib
+inherit eutils flag-o-matic toolchain-funcs versionator virtualx
 
 HOMEPAGE="https://www.qt.io/"
 
@@ -85,7 +87,12 @@ case ${PV} in
 		# official stable release
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV}
-		SRC_URI="https://download.qt.io/official_releases/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
+		# bug 586646
+		if [[ ${PV} = 5.6.1 ]]; then
+			SRC_URI="https://download.qt.io/official_releases/qt/${PV%.*}/${PV}-1/submodules/${MY_P}-1.tar.xz"
+		else
+			SRC_URI="https://download.qt.io/official_releases/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
+		fi
 		S=${WORKDIR}/${MY_P}
 		;;
 esac
@@ -202,7 +209,12 @@ qt5-build_src_prepare() {
 			src/{corelib/corelib,gui/gui}.pro || die "sed failed (optimize_full)"
 	fi
 
-	default
+	if [[ ${EAPI} == 5 ]]; then
+		[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
+		epatch_user
+	else
+		default
+	fi
 }
 
 # @FUNCTION: qt5-build_src_configure
@@ -437,6 +449,9 @@ qt5_prepare_env() {
 qt5_foreach_target_subdir() {
 	[[ -z ${QT5_TARGET_SUBDIRS[@]} ]] && QT5_TARGET_SUBDIRS=("")
 
+	local die_args=()
+	[[ ${EAPI} != 5 ]] && die_args+=(-n)
+
 	local subdir=
 	for subdir in "${QT5_TARGET_SUBDIRS[@]}"; do
 		if [[ ${EBUILD_PHASE} == test ]]; then
@@ -447,12 +462,12 @@ qt5_foreach_target_subdir() {
 		local msg="Running $* ${subdir:+in ${subdir}}"
 		einfo "${msg}"
 
-		mkdir -p "${QT5_BUILD_DIR}/${subdir}" || die -n || return $?
-		pushd "${QT5_BUILD_DIR}/${subdir}" >/dev/null || die -n || return $?
+		mkdir -p "${QT5_BUILD_DIR}/${subdir}" || die "${die_args[@]}" || return $?
+		pushd "${QT5_BUILD_DIR}/${subdir}" >/dev/null || die "${die_args[@]}" || return $?
 
-		"$@" || die -n "${msg} failed" || return $?
+		"$@" || die "${die_args[@]}" "${msg} failed" || return $?
 
-		popd >/dev/null || die -n || return $?
+		popd >/dev/null || die "${die_args[@]}" || return $?
 	done
 }
 
@@ -550,7 +565,8 @@ qt5_base_configure() {
 		# prefer system libraries (only common hard deps here)
 		-system-zlib
 		-system-pcre
-		$([[ ${QT5_MINOR_VERSION} -ge 7 ]] && echo -system-doubleconversion)
+		# TODO after bug 581054
+		#$([[ ${QT5_MINOR_VERSION} -ge 7 ]] && echo -system-doubleconversion)
 
 		# disable everything to prevent automagic deps (part 1)
 		-no-mtdev

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 USE_RUBY="ruby21"
@@ -14,7 +15,7 @@ SRC_URI="mirror://rubygems/${P}.gem"
 
 LICENSE="BSD"
 SLOT="${PV}"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~x86"
 RESTRICT=test
 #IUSE="development test"
 IUSE=""

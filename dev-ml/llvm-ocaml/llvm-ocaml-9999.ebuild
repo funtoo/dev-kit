@@ -1,19 +1,18 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
 : ${CMAKE_MAKEFILE_GENERATOR:=ninja}
-# (needed due to CMAKE_BUILD_TYPE != Gentoo)
-CMAKE_MIN_VERSION=3.7.0-r1
-PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils git-r3 llvm python-any-r1
+PYTHON_COMPAT=( python2_7 )
+inherit cmake-utils git-r3 python-any-r1
 
 DESCRIPTION="OCaml bindings for LLVM"
-HOMEPAGE="https://llvm.org/"
+HOMEPAGE="http://llvm.org/"
 SRC_URI=""
-EGIT_REPO_URI="https://git.llvm.org/git/llvm.git
+EGIT_REPO_URI="http://llvm.org/git/llvm.git
 	https://github.com/llvm-mirror/llvm.git"
 
 # Keep in sync with sys-devel/llvm
@@ -37,29 +36,24 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-ml/findlib
 	test? ( dev-ml/ounit
-		$(python_gen_any_dep "~dev-python/lit-${PV}[\${PYTHON_USEDEP}]") )
+		$(python_gen_any_dep 'dev-python/lit[${PYTHON_USEDEP}]') )
 	!!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	|| ( ${ALL_LLVM_TARGETS[*]} )"
 
-# least intrusive of all
-CMAKE_BUILD_TYPE=RelWithDebInfo
-
 python_check_deps() {
 	! use test \
 		|| has_version "dev-python/lit[${PYTHON_USEDEP}]"
 }
 
-pkg_setup() {
-	llvm_pkg_setup
-	python-any-r1_pkg_setup
-}
-
 src_prepare() {
 	# Python is needed to run tests using lit
 	python_setup
+
+	# Allow custom cmake build types (like 'Gentoo')
+	eapply "${FILESDIR}"/llvm-cmake-Remove-the-CMAKE_BUILD_TYPE-assertion.patch
 
 	# User patches
 	eapply_user
@@ -97,18 +91,6 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
-
-	local llvm_libdir=$(llvm-config --libdir)
-	# an ugly hack; TODO: figure out a way to pass -L to ocaml...
-	cd "${BUILD_DIR}/${libdir}" || die
-	ln -s "${llvm_libdir}"/*.so . || die
-
-	if use test; then
-		local llvm_bindir=$(llvm-config --bindir)
-		# Force using system-installed tools.
-		sed -i -e "/llvm_tools_dir/s@\".*\"@\"${llvm_bindir}\"@" \
-			"${BUILD_DIR}"/test/lit.site.cfg || die
-	fi
 }
 
 src_compile() {
@@ -118,6 +100,9 @@ src_compile() {
 src_test() {
 	# respect TMPDIR!
 	local -x LIT_PRESERVES_TMP=1
+	# Force using system-installed tools.
+	sed -i -e "/llvm_tools_dir/s@\".*\"@\"${EPREFIX}/usr/bin\"@" \
+		"${BUILD_DIR}"/test/lit.site.cfg || die
 	cmake-utils_src_make check-llvm-bindings-ocaml
 }
 

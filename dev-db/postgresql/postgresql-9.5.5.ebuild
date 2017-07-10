@@ -1,14 +1,15 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
 inherit eutils flag-o-matic linux-info multilib pam prefix python-single-r1 \
 		systemd user versionator
 
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
 
@@ -26,7 +27,6 @@ IUSE="doc kerberos kernel_linux ldap libressl nls pam perl -pg_legacytimestamp p
 for lingua in ${LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
 done
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 wanted_languages() {
 	local enable_langs
@@ -351,22 +351,17 @@ pkg_config() {
 	einfo "The database cluster will be created in:"
 	einfo "    ${DATA_DIR}"
 	einfo
-
-	if [ -z "$PG_AUTOCONFIG" ] ; then
-		while [ "$correct" != "true" ] ; do
-			einfo "Are you ready to continue? (y/n)"
-			read answer
-			if [[ $answer =~ ^[Yy]([Ee][Ss])?$ ]] ; then
-				correct="true"
-			elif [[ $answer =~ ^[Nn]([Oo])?$ ]] ; then
-				die "Aborting initialization."
-			else
-				echo "Answer not recognized"
-			fi
-		done
-	else
-		einfo "PG_AUTOCONFIG set, not prompting"
-	fi
+	while [ "$correct" != "true" ] ; do
+		einfo "Are you ready to continue? (y/n)"
+		read answer
+		if [[ $answer =~ ^[Yy]([Ee][Ss])?$ ]] ; then
+			correct="true"
+		elif [[ $answer =~ ^[Nn]([Oo])?$ ]] ; then
+			die "Aborting initialization."
+		else
+			echo "Answer not recognized"
+		fi
+	done
 
 	if [ -n "$(ls -A ${DATA_DIR} 2> /dev/null)" ] ; then
 		eerror "The given directory, '${DATA_DIR}', is not empty."

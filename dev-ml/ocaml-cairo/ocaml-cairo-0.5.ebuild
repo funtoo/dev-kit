@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 OASIS_BUILD_DOCS=1
@@ -17,7 +18,7 @@ IUSE="gtk"
 
 DEPEND="
 	gtk? ( dev-ml/lablgtk:= )
-	x11-libs/cairo[svg(+)]
+	x11-libs/cairo
 "
 RDEPEND="${DEPEND}"
 DOCS=( README.md )

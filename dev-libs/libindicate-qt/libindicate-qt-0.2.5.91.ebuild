@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
-
-inherit virtualx cmake-utils
+EAPI=4
+inherit eutils virtualx cmake-utils
 
 _UBUNTU_REVISION=5
 
@@ -17,29 +17,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND="
-	>=dev-libs/libindicate-12.10.0
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
-"
+RDEPEND=">=dev-libs/libindicate-12.10.0
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
 	test? ( dev-qt/qttest:4 )
-"
+	virtual/pkgconfig"
 
 # bug #440042
 RESTRICT="test"
 
 src_prepare() {
-	eapply "${WORKDIR}"/debian/patches
-	eapply "${FILESDIR}"/${P}-optionaltests.patch
-	cmake-utils_src_prepare
+	EPATCH_FORCE=yes EPATCH_SUFFIX=diff epatch "${WORKDIR}"/debian/patches
+	epatch "${FILESDIR}"/${P}-optionaltests.patch
 }
 
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_EXAMPLES=OFF
-		-DBUILD_TESTS=$(usex test)
+		$(cmake-utils_use_build test TESTS)
 	)
 
 	cmake-utils_src_configure

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=dev-libs/libzeitgeist dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtdeclarative:4 || ( ( >=dev-lang/python-2.7.5-r2:2.7 gnome-extra/zeitgeist[python_targets_python2_7(-),python_single_target_python2_7(+)] ) ) dev-util/automoc >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-3.7.2
+DEPEND=dev-libs/libzeitgeist dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtdeclarative:4 || ( ( >=dev-lang/python-2.7.5-r2:2.7 gnome-extra/zeitgeist[python_targets_python2_7(-),python_single_target_python2_7(+)] ) ) dev-util/automoc >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-3.5.2
 DESCRIPTION=Qt interface to the Zeitgeist event tracking system
 EAPI=5
 HOMEPAGE=https://projects.kde.org/projects/kdesupport/libqzeitgeist
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libzeitgeist dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtdeclarative:4
 SLOT=4
 SRC_URI=mirror://kde/stable/libqzeitgeist/0.8.0/src/libqzeitgeist-0.8.0.tar.bz2
-_eclasses_=cmake-utils	026933aff3889190eeb565b642cfe252	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	fdo-mime	21ef5adf81836863efa968f2a25cff64	flag-o-matic	61cad4fb5d800b29d484b27cb033f59b	gnome2-utils	8a5e0bf2b8031478ecfeaec753ef4560	kde4-base	51fd9f83640ac82e2c195c3958677fe7	kde4-functions	388bbabf76d84194e7d234ba7c7afee2	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	284a473719153462f3e974d86c8cb81c	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-any-r1	27d7f9da7187d283b7f3eae8390b7b09	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0	virtualx	171580f737f5aaf18fcb456548588066	xdg-utils	b9389dfad0ee8f8e0b2a41b79fcf7120
-_md5_=2217bd6a6f91eec5b066445214c43c2a
+_eclasses_=cmake-utils	fa4d8052a1ccf4fbbfa76361bffebe42	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	kde4-base	958da2c50ab906e72cd6fc7c77146404	kde4-functions	1aadb525279ddf31ca3c8e6d56ebecb5	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	66b3bf714f8cfc1b6494db5269b4666e	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	virtualx	86c9305a59b3e0459e7fbef3a5f30b96	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
+_md5_=f1ec94d2464e76cf0f4841be3298f27a

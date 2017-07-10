@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -16,6 +17,12 @@ case "${EAPI:-0}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
+
+if [[ ! ${_GIT_R3} ]]; then
+
+inherit eutils
+
+fi
 
 EXPORT_FUNCTIONS src_unpack
 
@@ -147,9 +154,8 @@ fi
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # The tag name or commit identifier to check out. If unset, newest
-# commit from the branch will be used. Note that if set to a commit
-# not on HEAD branch, EGIT_BRANCH needs to be set to a branch on which
-# the commit is available.
+# commit from the branch will be used. If set, EGIT_BRANCH will
+# be ignored.
 #
 # It can be overriden via env using ${PN}_LIVE_COMMIT variable.
 
@@ -157,8 +163,7 @@ fi
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Attempt to check out the repository state for the specified timestamp.
-# The date should be in format understood by 'git rev-list'. The commits
-# on EGIT_BRANCH will be considered.
+# The date should be in format understood by 'git rev-list'.
 #
 # The eclass will select the last commit with commit date preceding
 # the specified date. When merge commits are found, only first parents
@@ -442,11 +447,10 @@ _git-r3_set_submodules() {
 			submodule."${subname}".update)
 		[[ ${upd} == none ]] && continue
 
-		# https://github.com/git/git/blob/master/refs.c#L31
-		# we are more restrictive than git itself but that should not
-		# cause any issues, #572312, #606950
-		# TODO: check escaped names for collisions
-		local enc_subname=${subname//[^a-zA-Z0-9-]/_}
+		# https://github.com/git/git/blob/master/refs.c#L39
+		# for now, we just filter /. because of #572312
+		local enc_subname=${subname//\/.//_}
+		[[ ${enc_subname} == .* ]] && enc_subname=_${enc_subname#.}
 
 		submodules+=(
 			"${enc_subname}"

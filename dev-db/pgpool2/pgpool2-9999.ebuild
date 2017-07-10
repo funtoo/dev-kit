@@ -1,45 +1,67 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=4
 
-EGIT_REPO_URI="https://git.postgresql.org/git/pgpool2.git"
+[[ ${PV} == 9999 ]] && MY_P=${PN/2/-II} || MY_P="${PN/2/-II}-${PV}"
 
-POSTGRES_COMPAT=( 9.{2..6} )
-
-inherit git-r3 postgres-multi
+ECVS_SERVER="cvs.pgfoundry.org:/cvsroot/pgpool"
+ECVS_MODULE="pgpool-II"
+[[ ${PV} == 9999 ]] && SCM_ECLASS="cvs"
+inherit base user ${SCM_ECLASS}
+unset SCM_ECLASS
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://www.pgpool.net/"
-SRC_URI=""
+[[ ${PV} == 9999 ]] || SRC_URI="http://www.pgpool.net/download.php?f=${MY_P}.tar.gz -> ${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS=""
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~x86"
 
-IUSE="doc memcached pam ssl static-libs"
+IUSE="memcached pam ssl static-libs"
 
 RDEPEND="
-	${POSTGRES_DEP}
+	dev-db/postgresql
 	memcached? ( dev-libs/libmemcached )
 	pam? ( sys-auth/pambase )
-	ssl? ( dev-libs/openssl:* )
+	ssl? ( dev-libs/openssl )
 "
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	!!dev-db/pgpool
 "
 
-pkg_setup() {
-	postgres_new_user pgpool
+AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-	postgres-multi_pkg_setup
+S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	enewgroup postgres 70
+	enewuser pgpool -1 -1 -1 postgres
+
+	# We need the postgres user as well so we can set the proper
+	# permissions on the sockets without getting into fights with
+	# PostgreSQL's initialization scripts.
+	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
 }
 
 src_prepare() {
-	eapply "${FILESDIR}/pgpool_run_paths-9999.patch"
+	epatch "${FILESDIR}/pgpool_run_paths.patch"
 
-	postgres-multi_src_prepare
+	local pg_config_manual="$(pg_config --includedir)/pg_config_manual.h"
+	local pgsql_socket_dir=$(grep DEFAULT_PGSOCKET_DIR "${pg_config_manual}" | \
+		sed 's|.*\"\(.*\)\"|\1|g')
+	local pgpool_socket_dir="$(dirname $pgsql_socket_dir)/pgpool"
+
+	sed "s|@PGSQL_SOCKETDIR@|${pgsql_socket_dir}|g" \
+		-i *.conf.sample* pool.h || die
+
+	sed "s|@PGPOOL_SOCKETDIR@|${pgpool_socket_dir}|g" \
+		-i *.conf.sample* pool.h || die
 }
 
 src_configure() {
@@ -48,48 +70,47 @@ src_configure() {
 		myconf="--with-memcached=\"${EROOT%/}/usr/include/libmemcached\""
 	use pam && myconf+=' --with-pam'
 
-	postgres-multi_foreach econf \
+	econf \
 		--disable-rpath \
 		--sysconfdir="${EROOT%/}/etc/${PN}" \
-		--with-pgsql-includedir='/usr/include/postgresql-@PG_SLOT@' \
-		--with-pgsql-libdir="/usr/$(get_libdir)/postgresql-@PG_SLOT@/$(get_libdir)" \
 		$(use_with ssl openssl) \
 		$(use_enable static-libs static) \
 		${myconf}
 }
 
 src_compile() {
-	# Even though we're only going to do an install for the best slot
-	# available, the extension bits in src/sql need some things outside
-	# of that directory built, too.
-	postgres-multi_foreach emake
-	postgres-multi_foreach emake -C src/sql
+	emake
+
+	cd sql
+	emake
 }
 
 src_install() {
-	# We only need the best stuff installed
-	postgres-multi_forbest emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 
-	# Except for the extension and .so files that each PostgreSQL slot needs
-	postgres-multi_foreach emake DESTDIR="${D}" -C src/sql install
+	cd sql
+	emake DESTDIR="${D}" install
+	cd "${S}"
+
+	# `contrib' moved to `extension' with PostgreSQL 9.1
+	local pgslot=$(postgresql-config show)
+	if [[ ${pgslot//.} > 90 ]] ; then
+		cd "${ED%/}$(pg_config --sharedir)"
+		mv contrib extension || die
+		cd "${S}"
+	fi
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
-	# Documentation!
-	dodoc NEWS TODO
-	if use doc ; then
-		postgres-multi_forbest emake DESTDIR="${D}" -C doc install
-	fi
+	# Documentation
+	dodoc NEWS TODO doc/where_to_send_queries.{pdf,odg}
+	dohtml -r doc
 
 	# Examples and extras
-	# mv some files that get installed to /usr/share/pgpool-II so that
-	# they all wind up in the same place
-	mv "${ED%/}/usr/share/${PN/2/-II}" "${ED%/}/usr/share/${PN}" || die
-	into "/usr/share/${PN}"
-	dobin src/sample/{pgpool_recovery,pgpool_recovery_pitr,pgpool_remote_start}
 	insinto "/usr/share/${PN}"
-	doins src/sample/{{pcp,pgpool,pool_hba}.conf.sample*,pgpool.pam}
+	doins doc/{pgpool_remote_start,basebackup.sh,recovery.conf.sample}
+	mv "${ED%/}/usr/share/${PN/2/-II}" "${ED%/}/usr/share/${PN}" || die
 
 	# One more thing: Evil la files!
 	find "${ED}" -name '*.la' -exec rm -f {} +

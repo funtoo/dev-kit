@@ -1,13 +1,14 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 inherit autotools-utils
 
 DESCRIPTION="dev-util/squashdelta delta merge tool"
-HOMEPAGE="https://github.com/mgorny/squashmerge/"
-SRC_URI="https://www.github.com/mgorny/${PN}/releases/download/v${PV}/${P}.tar.bz2"
+HOMEPAGE="https://bitbucket.org/mgorny/squashmerge/"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

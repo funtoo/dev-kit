@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
 EAPI="4"
@@ -43,7 +44,6 @@ src_prepare() {
 	epatch "${FILESDIR}/monotone-1.0-boost-1.53.patch"
 	epatch "${FILESDIR}/monotone-1.0-pcre3.patch"
 	epatch "${FILESDIR}/monotone-1.0-texinfo-5.1.patch"
-	epatch "${FILESDIR}/monotone-1.0-gcc6.patch"
 }
 
 src_configure() {

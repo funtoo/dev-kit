@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -10,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3 autotools
 else
 	SRC_URI="https://github.com/jonas/tig/releases/download/${P}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 fi
 
 DESCRIPTION="text mode interface for git"
@@ -25,7 +26,7 @@ DEPEND="
 	sys-libs/readline:0="
 RDEPEND="${DEPEND}
 	dev-vcs/git"
-[[ ${PV} == "9999" ]] && DEPEND+=" app-text/asciidoc app-text/xmlto"
+[[ ${PV} == "9999" ]] && DEPEND+=" app-text/asciidoc"
 
 src_prepare() {
 	default

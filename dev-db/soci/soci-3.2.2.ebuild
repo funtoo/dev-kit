@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -7,7 +8,7 @@ inherit cmake-utils
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="Makes the illusion of embedding SQL queries in the regular C++ code"
+DESCRIPTION="A db access library for C++ that makes the illusion of embedding SQL queries in the regular C++ code"
 HOMEPAGE="http://soci.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="Boost-1.0"

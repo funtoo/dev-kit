@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -7,7 +8,7 @@ DISTUTILS_IN_SOURCE_BUILD=1
 inherit distutils-r1
 
 DESCRIPTION="A Mercurial interactive history viewer"
-HOMEPAGE="https://www.logilab.org/project/hgview/ https://pypi.python.org/pypi/hgview/"
+HOMEPAGE="http://www.logilab.org/project/hgview/ https://pypi.python.org/pypi/hgview/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -25,7 +26,7 @@ RDEPEND="dev-vcs/mercurial[${PYTHON_USEDEP}]
 	qt4? (
 		dev-python/docutils[${PYTHON_USEDEP}]
 		dev-python/PyQt4[X,${PYTHON_USEDEP}]
-		dev-python/qscintilla-python[qt4(+),${PYTHON_USEDEP}]
+		dev-python/qscintilla-python[${PYTHON_USEDEP}]
 	)"
 DEPEND="${RDEPEND}
 	doc? (

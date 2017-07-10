@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: kde5-functions.eclass
 # @MAINTAINER:
@@ -35,15 +36,19 @@ case ${CATEGORY} in
 		[[ ${KDE_BUILD_TYPE} = live ]] && : ${FRAMEWORKS_MINIMAL:=9999}
 		;;
 	kde-plasma)
-		: ${QT_MINIMAL:=5.7.1}
-		if [[ ${KDE_BUILD_TYPE} = live && $(get_version_component_range 2) -ne 8 ]]; then
-			: ${FRAMEWORKS_MINIMAL:=9999}
+		if [[ $(get_version_component_range 2) -eq 8 && $(get_version_component_range 3) -lt 50 ]]; then
+			: ${FRAMEWORKS_MINIMAL:=5.26.0}	# special 5.8 LTS rule to not get overwritten below
+		elif ! [[ $(get_version_component_range 2) -le 8 && $(get_version_component_range 3) -lt 50 ]]; then
+			: ${FRAMEWORKS_MINIMAL:=5.28.0}
 		fi
+		[[ ${KDE_BUILD_TYPE} = live ]] && : ${FRAMEWORKS_MINIMAL:=9999}
 		;;
 	kde-apps)
-		if [[ ${KDE_BUILD_TYPE} = live ]]; then
-			: ${QT_MINIMAL:=5.7.1}
+		local vcr2=$((10#$(get_version_component_range 2)))
+		if ! [[ $(get_version_component_range 1) -le 16 && ${vcr2} -lt 9 ]]; then
+			: ${FRAMEWORKS_MINIMAL:=5.28.0}
 		fi
+		unset vcr2
 		;;
 esac
 
@@ -55,12 +60,12 @@ esac
 # @ECLASS-VARIABLE: FRAMEWORKS_MINIMAL
 # @DESCRIPTION:
 # Minimal Frameworks version to require for the package.
-: ${FRAMEWORKS_MINIMAL:=5.34.0}
+: ${FRAMEWORKS_MINIMAL:=5.26.0}
 
 # @ECLASS-VARIABLE: PLASMA_MINIMAL
 # @DESCRIPTION:
 # Minimal Plasma version to require for the package.
-: ${PLASMA_MINIMAL:=5.9.5}
+: ${PLASMA_MINIMAL:=5.4.1}
 
 # @ECLASS-VARIABLE: KDE_APPS_MINIMAL
 # @DESCRIPTION:
@@ -275,19 +280,14 @@ add_qt_dep() {
 	fi
 
 	local version
-	local slot=${4}
 
 	if [[ -n ${3} ]]; then
 		version=${3}
-	elif [[ -z "${version}" ]]; then
+	elif [[ -z "${version}" ]] ; then
 		version=${QT_MINIMAL}
 	fi
 
-	if [[ -z ${slot} ]]; then
-		slot="5"
-	fi
-
-	_add_category_dep dev-qt "${1}" "${2}" "${version}" "${slot}"
+	_add_category_dep dev-qt "${1}" "${2}" "${version}" "${4}"
 }
 
 # @FUNCTION: get_kde_version

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -29,7 +30,7 @@ fi
 
 LICENSE="|| ( MIT BSD )"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -40,7 +41,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	./configure.py \
-		--with-llvm-config="$(type -P llvm-config)" \
+		--with-llvm-config="${EPREFIX}/usr/bin/llvm-config" \
 		--prefix="${EPREFIX}/usr" || die
 }
 

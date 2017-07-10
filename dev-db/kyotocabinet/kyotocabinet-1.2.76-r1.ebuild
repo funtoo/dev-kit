@@ -1,9 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=5
 
-inherit autotools ltprune toolchain-funcs
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="A straightforward implementation of DBM"
 HOMEPAGE="http://fallabs.com/kyotocabinet/"
@@ -18,20 +19,13 @@ DEPEND="sys-libs/zlib[static-libs?]
 	app-arch/xz-utils[static-libs?]"
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}"/fix_configure-1.2.62.patch
-	"${FILESDIR}"/${PN}-1.2.76-configure-8-byte-atomics.patch
-	"${FILESDIR}"/${PN}-1.2.76-flags.patch
-	"${FILESDIR}"/${PN}-1.2.76-gcc6.patch
-)
-
 src_prepare() {
-	default
-
+	epatch "${FILESDIR}"/fix_configure-1.2.62.patch
+	epatch "${FILESDIR}"/${PN}-1.2.76-configure-8-byte-atomics.patch
+	epatch "${FILESDIR}"/${PN}-1.2.76-flags.patch
 	sed -i -e "/DOCDIR/d" Makefile.in || die
 	tc-export AR
 
-	mv configure.in configure.ac || die
 	eautoreconf
 }
 
@@ -39,7 +33,7 @@ src_configure() {
 	econf $(use_enable debug) \
 		$(use_enable static-libs static) \
 		$(use_enable !static-libs shared) \
-		--enable-lzma
+		--enable-lzma --docdir=/usr/share/doc/${PF}
 }
 
 src_test() {
@@ -47,7 +41,8 @@ src_test() {
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" install
+
 	prune_libtool_files
 
 	if use examples; then

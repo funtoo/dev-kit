@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,21 +12,21 @@ MY_PV=${PV/_/}
 inherit toolchain-funcs
 
 BOOTSTRAP_DIST="https://dev.gentoo.org/~williamh/dist"
-BOOTSTRAP_VERSION="bootstrap-1.8"
-BOOTSTRAP_URI="
-amd64? ( ${BOOTSTRAP_DIST}/go-linux-amd64-${BOOTSTRAP_VERSION}.tbz )
-arm? ( ${BOOTSTRAP_DIST}/go-linux-arm-${BOOTSTRAP_VERSION}.tbz )
-arm64? ( ${BOOTSTRAP_DIST}/go-linux-arm64-${BOOTSTRAP_VERSION}.tbz )
+SRC_URI="!gccgo? (
+amd64? ( ${BOOTSTRAP_DIST}/go-linux-amd64-bootstrap.tbz )
+arm? ( ${BOOTSTRAP_DIST}/go-linux-arm-bootstrap.tbz )
+arm64? ( ${BOOTSTRAP_DIST}/go-linux-arm64-bootstrap.tbz )
 ppc64? (
-	${BOOTSTRAP_DIST}/go-linux-ppc64-${BOOTSTRAP_VERSION}.tbz
-	${BOOTSTRAP_DIST}/go-linux-ppc64le-${BOOTSTRAP_VERSION}.tbz
+	${BOOTSTRAP_DIST}/go-linux-ppc64-bootstrap.tbz
+	${BOOTSTRAP_DIST}/go-linux-ppc64le-bootstrap.tbz
 )
-s390? ( ${BOOTSTRAP_DIST}/go-linux-s390x-${BOOTSTRAP_VERSION}.tbz )
-x86? ( ${BOOTSTRAP_DIST}/go-linux-386-${BOOTSTRAP_VERSION}.tbz )
-amd64-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-amd64-${BOOTSTRAP_VERSION}.tbz )
-x86-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-386-${BOOTSTRAP_VERSION}.tbz )
-x64-macos? ( ${BOOTSTRAP_DIST}/go-darwin-amd64-${BOOTSTRAP_VERSION}.tbz )
-x64-solaris? ( ${BOOTSTRAP_DIST}/go-solaris-amd64-${BOOTSTRAP_VERSION}.tbz )
+s390? ( ${BOOTSTRAP_DIST}/go-linux-s390x-bootstrap.tbz )
+x86? ( ${BOOTSTRAP_DIST}/go-linux-386-bootstrap-1.tbz )
+amd64-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-amd64-bootstrap.tbz )
+x86-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-386-bootstrap-1.tbz )
+x64-macos? ( ${BOOTSTRAP_DIST}/go-darwin-amd64-bootstrap.tbz )
+x64-solaris? ( ${BOOTSTRAP_DIST}/go-solaris-amd64-bootstrap.tbz )
+)
 "
 
 case ${PV}  in
@@ -34,7 +35,7 @@ case ${PV}  in
 	inherit git-r3
 	;;
 *)
-	SRC_URI="https://storage.googleapis.com/golang/go${MY_PV}.src.tar.gz "
+	SRC_URI+="https://storage.googleapis.com/golang/go${MY_PV}.src.tar.gz"
 	S="${WORKDIR}"/go
 	case ${PV} in
 	*_beta*|*_rc*) ;;
@@ -49,7 +50,6 @@ case ${PV}  in
 		;;
 	esac
 esac
-SRC_URI+="!gccgo? ( ${BOOTSTRAP_URI} )"
 
 DESCRIPTION="A concurrent garbage collected and typesafe programming language"
 HOMEPAGE="http://www.golang.org"
@@ -78,7 +78,7 @@ QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"
 
 # Do not strip this package. Stripping is unsupported upstream and may
 # fail.
-RESTRICT+=" strip"
+RESTRICT+="strip"
 
 DOCS=(
 AUTHORS
@@ -162,12 +162,10 @@ src_compile()
 	export GOROOT_BOOTSTRAP="${WORKDIR}"/go-$(go_os)-$(go_arch)-bootstrap
 	if use gccgo; then
 		mkdir -p "${GOROOT_BOOTSTRAP}/bin" || die
-		local go_binary=$(gcc-config --get-bin-path)/go-$(gcc-major-version)
+		local go_binary=$(gcc-config --get-bin-path)/go-5
 		[[ -x ${go_binary} ]] || go_binary=$(
-			find "${EPREFIX}"/usr/${CHOST}/gcc-bin/*/go-$(gcc-major-version) |
-				sort -V | tail -n1)
-		[[ -x ${go_binary} ]] ||
-			die "go-$(gcc-major-version): command not found"
+			find "${EPREFIX}"/usr/${CHOST}/gcc-bin/*/go-5 | sort -V | tail -n1)
+		[[ -x ${go_binary} ]] || die "go-5: command not found"
 		ln -s "${go_binary}" "${GOROOT_BOOTSTRAP}/bin/go" || die
 	fi
 	export GOROOT_FINAL="${EPREFIX}"/usr/lib/go
@@ -186,7 +184,7 @@ src_compile()
 	if [[ ${ARCH} == arm ]]; then
 		export GOARM=$(go_arm)
 	fi
-	einfo "GOROOT_BOOTSTRAP is ${GOROOT_BOOTSTRAP}"
+	elog "GOROOT_BOOTSTRAP is ${GOROOT_BOOTSTRAP}"
 
 	cd src
 	./make.bash || die "build failed"
@@ -203,17 +201,12 @@ src_test()
 
 src_install()
 {
-	local bin_path f x
-
+	einstalldocs
 	dodir /usr/lib/go
-
-	# There is a known issue which requires the source tree to be installed [1].
-	# Once this is fixed, we can consider using the doc use flag to control
-	# installing the doc and src directories.
-	# [1] https://golang.org/issue/2775
-	#
 	# deliberately use cp to retain permissions
 	cp -R api bin doc lib pkg misc src test "${ED}"/usr/lib/go
+
+	local bin_path f x
 	if go_cross_compile; then
 		bin_path="bin/$(go_tuple)"
 	else
@@ -223,5 +216,4 @@ src_install()
 		f=${x##*/}
 		dosym ../lib/go/${bin_path}/${f} /usr/bin/${f}
 	done
-	einstalldocs
 }

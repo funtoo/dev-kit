@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=4
 
@@ -37,8 +38,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-gui.patch \
-		"${FILESDIR}"/${PN}-parallel-make.patch
+		"${FILESDIR}"/${PN}-1.6.2-gui.patch \
+		"${FILESDIR}"/${PN}-1.6.3-parallel-make.patch
 
 	eautoreconf
 }
@@ -47,9 +48,9 @@ src_configure() {
 	local myconf=
 
 	if use X; then
-		myconf+=" --with-gui $(use_with gd)"
+		myconf+=" --enable-gui $(use_with gd)"
 	else
-		myconf+=" --without-gui --without-gd"
+		myconf+=" --disable-gui --without-gd"
 	fi
 
 	econf ${myconf} || die

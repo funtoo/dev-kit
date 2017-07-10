@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit qt5-build
@@ -7,7 +8,7 @@ inherit qt5-build
 DESCRIPTION="Qt5 module for integrating C++ and QML applications with HTML/JavaScript clients"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="amd64 ~arm ~arm64 ppc64 x86"
+	KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 fi
 
 IUSE="qml"

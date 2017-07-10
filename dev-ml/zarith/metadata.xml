@@ -8,7 +8,4 @@
   <use>
 	  <flag name="mpir">Use MPIR library instead of GMP.</flag>
   </use>
-  <upstream>
-	  <remote-id type="github">ocaml/Zarith</remote-id>
-  </upstream>
 </pkgmetadata>

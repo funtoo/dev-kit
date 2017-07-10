@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 ROS_REPO_URI="https://github.com/pr2/pr2_common"
@@ -19,4 +20,3 @@ DEPEND="${RDEPEND}
 	dev-ros/convex_decomposition
 	dev-ros/ivcon
 	test? ( dev-libs/urdfdom dev-cpp/gtest )"
-PATCHES=( "${FILESDIR}/tests.patch" )

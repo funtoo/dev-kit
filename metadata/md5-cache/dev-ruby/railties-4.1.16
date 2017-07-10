@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby20? ( ~dev-ruby/activesupport-4.1.16[ruby_targets_ruby20] ~dev-ruby/actionpack-4.1.16[ruby_targets_ruby20] >=dev-ruby/thor-0.18.1[ruby_targets_ruby20] >=dev-ruby/rake-0.8.7[ruby_targets_ruby20] ) ruby_targets_ruby21? ( ~dev-ruby/activesupport-4.1.16[ruby_targets_ruby21] ~dev-ruby/actionpack-4.1.16[ruby_targets_ruby21] >=dev-ruby/thor-0.18.1[ruby_targets_ruby21] >=dev-ruby/rake-0.8.7[ruby_targets_ruby21] ) ) ruby_targets_ruby20? ( test? ( ~dev-ruby/actionview-4.1.16[ruby_targets_ruby20] dev-ruby/mocha:0.13[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( ~dev-ruby/actionview-4.1.16[ruby_targets_ruby21] dev-ruby/mocha:0.13[ruby_targets_ruby21] ) ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby20? ( test? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( dev-ruby/rake[ruby_targets_ruby21] ) ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) test? ( ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) )
+DESCRIPTION=Tools for creating, working with, and running Rails applications
+EAPI=5
+HOMEPAGE=https://github.com/rails/rails
+IUSE=test elibc_FreeBSD ruby_targets_ruby20 ruby_targets_ruby21 test test
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
+LICENSE=MIT
+RDEPEND=>=app-eselect/eselect-rails-0.20 ruby_targets_ruby20? ( ~dev-ruby/activesupport-4.1.16[ruby_targets_ruby20] ~dev-ruby/actionpack-4.1.16[ruby_targets_ruby20] >=dev-ruby/thor-0.18.1[ruby_targets_ruby20] >=dev-ruby/rake-0.8.7[ruby_targets_ruby20] ) ruby_targets_ruby21? ( ~dev-ruby/activesupport-4.1.16[ruby_targets_ruby21] ~dev-ruby/actionpack-4.1.16[ruby_targets_ruby21] >=dev-ruby/thor-0.18.1[ruby_targets_ruby21] >=dev-ruby/rake-0.8.7[ruby_targets_ruby21] ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] )
+REQUIRED_USE=|| ( ruby_targets_ruby20 ruby_targets_ruby21 )
+RESTRICT=test
+SLOT=4.1
+SRC_URI=https://github.com/rails/rails/archive/v4.1.16.tar.gz -> rails-4.1.16.tgz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	java-utils-2	a50950a73b5d5db46f42638e2996a087	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	ruby-fakegem	2b249022d4895a29827658b7d630c461	ruby-ng	934780d41ab18a9ff091703f511371be	ruby-utils	382c3a262907e1219a21618dfd1a01a0	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=cb310c241c56f853348ee4f3e3fae941

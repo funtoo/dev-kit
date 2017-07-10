@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -13,7 +14,7 @@ SRC_URI="mirror://sourceforge/beecrypt/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos"
 IUSE="+threads java cxx python static-libs doc"
 REQUIRED_USE="cxx? ( threads )
 	python? ( ${PYTHON_REQUIRED_USE} )"
@@ -28,7 +29,7 @@ DEPEND="${COMMON_DEPEND}
 		virtual/latex-base
 		dev-texlive/texlive-fontsextra
 	)"
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.4 )"
 
 DOCS=( BUGS README BENCHMARKS NEWS )

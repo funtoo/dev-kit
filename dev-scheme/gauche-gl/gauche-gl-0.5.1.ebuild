@@ -1,9 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI="6"
+EAPI="5"
 
-MY_P="${P^g}"
+inherit eutils
+
+# Switch to ^g when we switch to EAPI=6.
+MY_P="G${P:1}"
 
 DESCRIPTION="OpenGL binding for Gauche"
 HOMEPAGE="http://practical-scheme.net/gauche/"
@@ -15,9 +19,8 @@ KEYWORDS="~ppc x86"
 IUSE="cg examples"
 
 RDEPEND=">=dev-scheme/gauche-0.9.2
-	media-libs/freeglut
 	virtual/opengl
-	x11-libs/libXmu
+	media-libs/freeglut
 	cg? ( media-gfx/nvidia-cg-toolkit )"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"

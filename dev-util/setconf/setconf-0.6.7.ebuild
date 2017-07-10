@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_4} )
@@ -12,6 +13,7 @@ SRC_URI="http://${PN}.roboticoverlords.org/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=${PYTHON_DEPS}
 
@@ -24,16 +26,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}" || die
-	unpack "./${PN}.1.gz"
+	cd "${S}"
+	unpack ./${PN}.1.gz
 }
 
 src_prepare() {
-	python_fix_shebang -f "${PN}.py"
+	python_fix_shebang ${PN}.py #462326
 }
 
 src_install() {
-	python_doscript "${PN}.py"
-	dosym "${PN}.py" "/usr/bin/${PN}"
-	doman "${PN}.1"
+	python_doscript ${PN}.py
+	dosym ${PN}.py /usr/bin/${PN}
+	doman ${PN}.1
 }

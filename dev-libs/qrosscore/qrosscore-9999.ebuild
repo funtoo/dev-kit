@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
-
-inherit cmake-utils git-r3
+EAPI=5
 
 EGIT_REPO_URI="git://github.com/0xd34df00d/Qross.git"
+
+inherit cmake-utils git-r3
 
 DESCRIPTION="KDE-free version of Kross (core libraries and Qt Script backend)"
 HOMEPAGE="https://github.com/0xd34df00d/Qross"
@@ -16,14 +17,11 @@ KEYWORDS=""
 IUSE="debug"
 
 RDEPEND="
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	dev-qt/designer:5
-	dev-qt/qtscript:5
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/designer:4
+	dev-qt/qtscript:4
 "
 DEPEND="${RDEPEND}"
 
 CMAKE_USE_DIR="${S}/src/qross"
-
-mycmakeargs=( -DUSE_QT5=ON )

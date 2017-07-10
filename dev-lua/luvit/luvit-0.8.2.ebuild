@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -8,8 +9,8 @@ inherit eutils toolchain-funcs multilib
 # TODO: FHS https://github.com/luvit/luvit/issues/379
 
 DESCRIPTION="Takes node.js' architecture and dependencies and fits it in the Lua language"
-HOMEPAGE="https://luvit.io/"
-SRC_URI="https://luvit.io/dist/latest/${P}.tar.gz"
+HOMEPAGE="http://luvit.io/"
+SRC_URI="http://luvit.io/dist/latest/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"

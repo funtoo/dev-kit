@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +18,6 @@ IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
-	${PYTHON_DEPS}
 	>=dev-libs/glib-2.34:2
 	>=dev-libs/gobject-introspection-0.9.6:=
 	>=dev-python/pygobject-3.3.91:3[${PYTHON_USEDEP}]
@@ -25,8 +25,7 @@ RDEPEND="
 	>=x11-libs/gtk+-3.9.4:3[introspection]
 	x11-libs/libwnck:3[introspection]
 "
-DEPEND="
-	${PYTHON_DEPS}
+DEPEND="${PYTHON_DEPS}
 	app-text/yelp-tools
 	>=dev-util/intltool-0.40.0
 "

@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -16,8 +17,8 @@
 if [[ -z ${_QMAKE_UTILS_ECLASS} ]]; then
 _QMAKE_UTILS_ECLASS=1
 
-[[ ${EAPI:-0} == [012345] ]] && inherit eutils multilib
-inherit estack toolchain-funcs
+[[ ${EAPI:-0} == [012345] ]] && inherit multilib
+inherit eutils toolchain-funcs
 
 # @FUNCTION: qt4_get_bindir
 # @DESCRIPTION:
@@ -184,7 +185,7 @@ eqmake4() {
 	# Make sure the CONFIG variable is correctly set for both release and debug builds.
 	local config_add=release
 	local config_remove=debug
-	if in_iuse debug && use debug; then
+	if use_if_iuse debug; then
 		config_add=debug
 		config_remove=release
 	fi
