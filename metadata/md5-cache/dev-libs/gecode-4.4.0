@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=gist? ( || ( ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) ( dev-qt/qtcore:5 dev-qt/qtgui:5 ) ) ) gmp? ( || ( dev-libs/gmp:0 sci-libs/mpir ) dev-libs/mpfr:0 )
 SLOT=0
 SRC_URI=http://www.gecode.org/download/gecode-4.4.0.tar.gz
-_md5_=8131ea2c624f34b7c4da491af9daa71b
+_md5_=a3f894de8e8a922ebb58d509d6cbd0fe

@@ -1,10 +1,9 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -18,7 +17,7 @@ DESCRIPTION="An extension of CSS3, adding nested rules, variables, mixins and mo
 HOMEPAGE="http://sass-lang.com/"
 LICENSE="MIT"
 
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="amd64 arm ppc ppc64 x86"
 SLOT="$(get_version_component_range 1-2)"
 IUSE=""
 

@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -15,13 +14,10 @@
 # and their incorporation into the Gentoo Linux system.
 #
 # Currently available targets are:
-#  * ruby19 - Ruby (MRI) 1.9.x
-#  * ruby20 - Ruby (MRI) 2.0.x
 #  * ruby21 - Ruby (MRI) 2.1.x
 #  * ruby22 - Ruby (MRI) 2.2.x
 #  * ruby23 - Ruby (MRI) 2.3.x
 #  * ruby24 - Ruby (MRI) 2.4.x
-#  * jruby  - JRuby
 #  * rbx    - Rubinius
 #
 # This eclass does not define the implementation of the configure,
@@ -73,7 +69,14 @@
 # (e.g. selenium's firefox driver extension). When set this argument is
 # passed to "grep -E" to remove reporting of these shared objects.
 
-inherit eutils java-utils-2 multilib toolchain-funcs ruby-utils
+local inherits=""
+case ${EAPI} in
+	2|3|4|5)
+		inherits="eutils"
+		;;
+esac
+
+inherit ${inherits} java-utils-2 multilib toolchain-funcs ruby-utils
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_install pkg_setup
 
@@ -81,7 +84,7 @@ case ${EAPI} in
 	0|1)
 		die "Unsupported EAPI=${EAPI} (too old) for ruby-ng.eclass" ;;
 	2|3) ;;
-	4|5)
+	4|5|6)
 		# S is no longer automatically assigned when it doesn't exist.
 		S="${WORKDIR}"
 		;;
@@ -103,6 +106,24 @@ ruby_implementation_depend() {
 	_ruby_implementation_depend $1
 }
 
+# @FUNCTION: _ruby_get_all_impls
+# @INTERNAL
+# @RETURN: list of valid values in USE_RUBY
+# Return a list of valid implementations in USE_RUBY, skipping the old
+# implementations that are no longer supported.
+_ruby_get_all_impls() {
+	local i
+	for i in ${USE_RUBY}; do
+		case ${i} in
+			# removed implementations
+			ruby19|ruby20|jruby)
+				;;
+			*)
+				echo ${i};;
+		esac
+	done
+}
+
 # @FUNCTION: ruby_samelib
 # @RETURN: use flag string with current ruby implementations
 # @DESCRIPTION:
@@ -112,7 +133,7 @@ ruby_implementation_depend() {
 # more complex dependencies.
 ruby_samelib() {
 	local res=
-	for _ruby_implementation in $USE_RUBY; do
+	for _ruby_implementation in $(_ruby_get_all_impls); do
 		has -${_ruby_implementation} $@ || \
 			res="${res}ruby_targets_${_ruby_implementation}?,"
 	done
@@ -153,7 +174,7 @@ ruby_implementation_command() {
 _ruby_atoms_samelib() {
 	local atoms=$(_ruby_atoms_samelib_generic "$*")
 
-	for _ruby_implementation in $USE_RUBY; do
+	for _ruby_implementation in $(_ruby_get_all_impls); do
 		echo "${atoms//RUBYTARGET/ruby_targets_${_ruby_implementation}}"
 	done
 }
@@ -237,7 +258,7 @@ ruby_add_bdepend() {
 # Gets an array of ruby use targets enabled by the user
 ruby_get_use_implementations() {
 	local i implementation
-	for implementation in ${USE_RUBY}; do
+	for implementation in $(_ruby_get_all_impls); do
 		use ruby_targets_${implementation} && i+=" ${implementation}"
 	done
 	echo $i
@@ -248,7 +269,7 @@ ruby_get_use_implementations() {
 # Gets an array of ruby use targets that the ebuild sets
 ruby_get_use_targets() {
 	local t implementation
-	for implementation in ${USE_RUBY}; do
+	for implementation in $(_ruby_get_all_impls); do
 		t+=" ruby_targets_${implementation}"
 	done
 	echo $t
@@ -263,7 +284,7 @@ ruby_get_use_targets() {
 # confuse this function with ruby_implementation_depend().
 #
 # @EXAMPLE:
-# EAPI=4
+# EAPI=6
 # RUBY_OPTIONAL=yes
 #
 # inherit ruby-ng
@@ -272,7 +293,7 @@ ruby_get_use_targets() {
 # RDEPEND="${DEPEND}"
 ruby_implementations_depend() {
 	local depend
-	for _ruby_implementation in ${USE_RUBY}; do
+	for _ruby_implementation in $(_ruby_get_all_impls); do
 		depend="${depend}${depend+ }ruby_targets_${_ruby_implementation}? ( $(ruby_implementation_depend $_ruby_implementation) )"
 	done
 	echo "${depend}"
@@ -286,7 +307,7 @@ if [[ ${RUBY_OPTIONAL} != yes ]]; then
 	RDEPEND="${RDEPEND} $(ruby_implementations_depend)"
 
 	case ${EAPI:-0} in
-		4|5)
+		4|5|6)
 			REQUIRED_USE+=" || ( $(ruby_get_use_targets) )"
 			;;
 	esac
@@ -295,7 +316,7 @@ fi
 _ruby_invoke_environment() {
 	old_S=${S}
 	case ${EAPI} in
-		4|5)
+		4|5|6)
 			if [ -z "${RUBY_S}" ]; then
 				sub_S=${P}
 			else
@@ -319,7 +340,14 @@ _ruby_invoke_environment() {
 				;;
 		esac
 		pushd "${WORKDIR}"/all &>/dev/null || die
-		sub_S=$(eval ls -d "${sub_S}" 2>/dev/null)
+		# use an array to trigger filename expansion
+		# fun fact: this expansion fails in src_unpack() but the original
+		# code did not have any checks for failed expansion, so we can't
+		# really add one now without redesigning stuff hard.
+		sub_S=( ${sub_S} )
+		if [[ ${#sub_S[@]} -gt 1 ]]; then
+			die "sub_S did expand to multiple paths: ${sub_S[*]}"
+		fi
 		popd &>/dev/null || die
 	fi
 
@@ -345,7 +373,7 @@ _ruby_invoke_environment() {
 
 _ruby_each_implementation() {
 	local invoked=no
-	for _ruby_implementation in ${USE_RUBY}; do
+	for _ruby_implementation in $(_ruby_get_all_impls); do
 		# only proceed if it's requested
 		use ruby_targets_${_ruby_implementation} || continue
 
@@ -361,7 +389,7 @@ _ruby_each_implementation() {
 
 	if [[ ${invoked} == "no" ]]; then
 		eerror "You need to select at least one compatible Ruby installation target via RUBY_TARGETS in make.conf."
-		eerror "Compatible targets for this package are: ${USE_RUBY}"
+		eerror "Compatible targets for this package are: $(_ruby_get_all_impls)"
 		eerror
 		eerror "See https://www.gentoo.org/proj/en/prog_lang/ruby/index.xml#doc_chap3 for more information."
 		eerror
@@ -399,15 +427,24 @@ ruby-ng_src_unpack() {
 }
 
 _ruby_apply_patches() {
-	for patch in "${RUBY_PATCHES[@]}"; do
-		if [ -f "${patch}" ]; then
-			epatch "${patch}"
-		elif [ -f "${FILESDIR}/${patch}" ]; then
-			epatch "${FILESDIR}/${patch}"
-		else
-			die "Cannot find patch ${patch}"
-		fi
-	done
+	case ${EAPI} in
+		2|3|4|5)
+			for patch in "${RUBY_PATCHES[@]}"; do
+				if [ -f "${patch}" ]; then
+					epatch "${patch}"
+				elif [ -f "${FILESDIR}/${patch}" ]; then
+					epatch "${FILESDIR}/${patch}"
+				else
+					die "Cannot find patch ${patch}"
+				fi
+			done
+			;;
+		6)
+			if [[ -n ${RUBY_PATCHES[@]} ]]; then
+			   eqawarn "RUBY_PATCHES is no longer supported, use PATCHES instead"
+			fi
+			;;
+	esac
 
 	# This is a special case: instead of executing just in the special
 	# "all" environment, this will actually copy the effects on _all_
@@ -431,6 +468,13 @@ ruby-ng_src_prepare() {
 	# the extra data forks, we do it here to avoid repeating it for
 	# almost every other ebuild.
 	find . -name '._*' -delete
+
+	# Handle PATCHES and user supplied patches via the default phase
+	case ${EAPI} in
+		6)
+			_ruby_invoke_environment all default
+			;;
+	esac
 
 	_ruby_invoke_environment all _ruby_apply_patches
 

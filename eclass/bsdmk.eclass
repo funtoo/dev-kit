@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: bsdmk.eclass
 # @MAINTAINER:
-# maintainer-needed@gentoo.org
+# bsd@gentoo.org
 # @BLURB: Some functions for BSDmake
 
 inherit toolchain-funcs portability flag-o-matic

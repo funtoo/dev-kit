@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/image_pipeline"
@@ -16,6 +15,7 @@ IUSE=""
 
 RDEPEND="
 	dev-ros/cv_bridge
+	media-libs/opencv:=
 	dev-ros/eigen_conversions
 	dev-ros/image_geometry
 	dev-ros/image_transport
@@ -27,3 +27,4 @@ RDEPEND="
 	dev-ros/tf2_ros
 "
 DEPEND="${RDEPEND}"
+PATCHES=( "${FILESDIR}/gcc6.patch" )

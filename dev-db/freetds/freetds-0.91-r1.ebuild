@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=4
 
@@ -25,7 +24,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	config_rpath_update
 	sed -ie 's:with_iodbc/include":with_iodbc/include/iodbc":' configure.ac || die
-	epatch ${FILESDIR}/freetds-0.91-fix_field_aliases.patch
+	epatch "${FILESDIR}"/freetds-0.91-fix_field_aliases.patch
 	eautoreconf
 }
 

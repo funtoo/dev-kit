@@ -9,5 +9,5 @@ LICENSE=LGPL-3+
 RDEPEND=>=virtual/jre-1.8
 SLOT=0
 SRC_URI=https://bintray.com/artifact/download/jfrog/artifactory/jfrog-artifactory-oss-4.8.0.zip -> artifactory-4.8.0.zip
-_eclasses_=user	80aaa71614ced86f02ee1a513821dc87
-_md5_=da310355afd3bff860608a5bb15067de
+_eclasses_=user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=62f1aba2f9a73dc8dbb256ad44e65513

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -61,7 +60,7 @@ FOX_APPS="adie calculator pathfinder shutterbug"
 # @DESCRIPTION:
 # Set this to add additional configuration options during src_configure
 
-DESCRIPTION="C++ based Toolkit for developing Graphical User Interfaces easily and effectively"
+DESCRIPTION="C++ Toolkit for developing Graphical User Interfaces easily and effectively"
 HOMEPAGE="http://www.fox-toolkit.org/"
 SRC_URI="ftp://ftp.fox-toolkit.org/pub/fox-${FOX_PV}.tar.gz"
 

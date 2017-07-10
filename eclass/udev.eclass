@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -27,6 +26,9 @@
 #	# udev_newrules contrib/98-foomatic 99-foomatic
 # }
 # @CODE
+
+if [[ -z ${_UDEV_ECLASS} ]]; then
+_UDEV_ECLASS=1
 
 inherit toolchain-funcs
 
@@ -113,3 +115,5 @@ udev_reload() {
 		eend $?
 	fi
 }
+
+fi

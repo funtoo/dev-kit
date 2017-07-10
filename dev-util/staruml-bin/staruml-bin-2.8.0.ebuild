@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -13,11 +12,11 @@ SRC_URI="
 	x86? ( http://staruml.io/download/release/v${PV}/StarUML-v${PV}-32-bit.deb )
 "
 
-LICENSE="StarUML-EULA no-source-code"
+LICENSE="StarUML-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="splitdebug"
+RESTRICT="bindist mirror splitdebug"
 
 RDEPEND="
 	dev-libs/atk

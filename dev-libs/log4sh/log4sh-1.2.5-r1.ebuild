@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 inherit eutils
 
@@ -18,7 +17,7 @@ RDEPEND="app-shells/bash"
 src_unpack() {
 	unpack ${A} && cd ${S}
 	# bug 94069
-	epatch ${FILESDIR}/${P}-fix-insecure-tmp-creation.diff
+	epatch "${FILESDIR}"/${P}-fix-insecure-tmp-creation.diff
 }
 
 src_test() {

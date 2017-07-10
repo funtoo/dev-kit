@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="3"
 
@@ -42,7 +41,7 @@ pkg_setup() {
 		-Wno-unused -Wredundant-decls -fno-strict-aliasing
 
 	# only use -nopie on archs that support it
-	gcc-specs-pie && append-flags -nopie
+	tc-enables-pie && append-flags -nopie
 }
 
 src_compile() {

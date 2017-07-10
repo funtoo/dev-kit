@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -12,7 +11,7 @@ SRC_URI="http://git.ghostscript.com/?p=mujs.git;a=snapshot;h=fd003eceda531e13fbd
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND=""
@@ -28,4 +27,8 @@ src_prepare() {
 	default
 	append-cflags -fPIC
 	tc-export CC
+}
+
+src_install() {
+	emake DESTDIR="${ED}" install
 }

@@ -10,5 +10,5 @@ RDEPEND=sys-libs/zlib X? ( media-libs/freetype:2 media-libs/fontconfig x11-libs/
 REQUIRED_USE=opengl? ( X )
 SLOT=4.0
 SRC_URI=https://github.com/sphair/ClanLib/archive/v4.0.0.tar.gz -> clanlib-4.0.0.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=51d5742a3f53117b5487b469894c152c
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=dd78f30b012720d38925ebbf48c45629

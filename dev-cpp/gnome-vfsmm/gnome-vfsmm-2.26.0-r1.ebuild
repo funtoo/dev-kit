@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -9,11 +8,11 @@ GNOME_TARBALL_SUFFIX="bz2"
 inherit flag-o-matic gnome2
 
 DESCRIPTION="C++ bindings for gnome-vfs"
-HOMEPAGE="http://www.gtkmm.org"
+HOMEPAGE="https://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="1.1"
-KEYWORDS="alpha amd64 arm ~ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 # glibmm dep is because build fails with older versions...

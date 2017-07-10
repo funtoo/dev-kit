@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 QT5_MODULE="qtconnectivity"
@@ -9,7 +8,7 @@ inherit qt5-build
 DESCRIPTION="Bluetooth support library for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm ~arm64 x86"
 fi
 
 IUSE="qml"

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit toolchain-funcs eutils multilib
@@ -11,7 +10,7 @@ SRC_URI="http://www.sonic.net/~philf/download/HawkNL${PV/./}src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa x86"
 IUSE="doc"
 
 RDEPEND=""

@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="5"
 
@@ -34,6 +33,10 @@ DEPEND="${RDEPEND}
 "
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}/ocaml405.patch"
+}
 
 ocamlnet_use_with() {
 	if use $1; then

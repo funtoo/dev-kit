@@ -1,6 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="5"
 
@@ -18,30 +16,30 @@ KEYWORDS="~amd64 ~x86"
 IUSE="clang flex mysql pch sftp webview"
 
 DEPEND="
-	dev-db/sqlite:*
+     dev-db/sqlite:*
 
-	net-libs/libssh
+     net-libs/libssh
 
-	x11-libs/wxGTK:3.0
+     x11-libs/wxGTK:3.0
 
-	mysql? ( virtual/mysql )
+     mysql? ( virtual/mysql )
 "
 
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/codelite_dont_strip.patch"
+     epatch "${FILESDIR}/codelite_dont_strip.patch"
 }
 
 src_configure() {
-	local mycmakeargs=(
-		$(cmake-utils_use_enable clang CLANG)
-		$(cmake-utils_use_with flex FLEX)
-		$(cmake-utils_use_with mysql MYSQL)
-		$(cmake-utils_use_with pch PCH)
-		$(cmake-utils_use_enable sftp SFTP)
-		$(cmake-utils_use_with webview WEBVIEW)
-	)
+     local mycmakeargs=(
+          $(cmake-utils_use_enable clang CLANG)
+          $(cmake-utils_use_with flex FLEX)
+          $(cmake-utils_use_with mysql MYSQL)
+          $(cmake-utils_use_with pch PCH)
+          $(cmake-utils_use_enable sftp SFTP)
+          $(cmake-utils_use_with webview WEBVIEW)
+     )
 
-	cmake-utils_src_configure
+     cmake-utils_src_configure
 }

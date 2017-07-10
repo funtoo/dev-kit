@@ -8,5 +8,5 @@ KEYWORDS=amd64 arm arm64 hppa x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://libestr.adiscon.com/files/download/libestr-0.1.10.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=9f10f3adf03f91ede946f07d80cb1bca
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=510ff86c7b57a90bc65841be08ed8997

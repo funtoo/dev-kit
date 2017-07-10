@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -24,8 +23,6 @@ DEPEND="!dev-lisp/cl-${PN}
 		doc? ( virtual/texi2dvi )"
 RDEPEND=""
 PDEPEND="~dev-lisp/uiop-${PV}"
-
-#S="${WORKDIR}"
 
 install_docs() {
 	(cd doc ; dodoc *.{html,css,ico,png} "${PN}.pdf" ; dodoc -r asdf ; doinfo "${PN}.info")

@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/laser_assembler"
@@ -26,5 +25,5 @@ RDEPEND="
 	dev-ros/filters
 "
 DEPEND="${RDEPEND}
-	test? ( dev-ros/rostest[${PYTHON_USEDEP}] )
+	test? ( dev-ros/rostest[${PYTHON_USEDEP}] dev-cpp/gtest )
 "

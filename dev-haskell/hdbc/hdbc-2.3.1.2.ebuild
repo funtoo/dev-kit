@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -38,7 +37,7 @@ DEPENDV="$(get_version_component_range 1-2)"
 PDEPEND="mysql? ( dev-haskell/hdbc-mysql )
 		odbc? ( =dev-haskell/hdbc-odbc-${DEPENDV}* )
 		postgres? ( =dev-haskell/hdbc-postgresql-${DEPENDV}* )
-		sqlite? ( >=dev-haskell/hdbc-sqlite-${DEPENDV} )"
+		sqlite? ( >=dev-haskell/hdbc-sqlite3-${DEPENDV} )"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22"
@@ -21,8 +20,8 @@ IUSE="doc"
 
 # Since 2.13.3 rmagick now supports HDRI enabled, but with it enabled
 # tests fail with segmentation faults.
-RDEPEND+=" >=media-gfx/imagemagick-6.4.9:=[-hdri]"
-DEPEND+=" >=media-gfx/imagemagick-6.4.9:=[-hdri]"
+RDEPEND+=" >=media-gfx/imagemagick-6.4.9:=[-hdri] =media-gfx/imagemagick-6*"
+DEPEND+=" >=media-gfx/imagemagick-6.4.9:=[-hdri] =media-gfx/imagemagick-6*"
 
 all_ruby_prepare() {
 	# Avoid unused dependency on rake-compiler. This also avoids an

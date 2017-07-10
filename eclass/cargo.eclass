@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: cargo.eclass
 # @MAINTAINER:
@@ -30,12 +29,13 @@ ECARGO_VENDOR="${ECARGO_HOME}/gentoo"
 # @DESCRIPTION:
 # Generates the URIs to put in SRC_URI to help fetch dependencies.
 cargo_crate_uris() {
-	for crate in $*; do
+	local crate
+	for crate in "$@"; do
 		local name version url
 		name="${crate%-*}"
 		version="${crate##*-}"
 		url="https://crates.io/api/v1/crates/${name}/${version}/download -> ${crate}.crate"
-		echo $url
+		echo "${url}"
 	done
 }
 
@@ -94,7 +94,7 @@ cargo_src_unpack() {
 cargo_gen_config() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	cat <<- EOF > ${ECARGO_HOME}/config
+	cat <<- EOF > "${ECARGO_HOME}/config"
 	[source.gentoo]
 	directory = "${ECARGO_VENDOR}"
 
@@ -125,6 +125,8 @@ cargo_src_install() {
 	cargo install --root="${D}/usr" $(usex debug --debug "") \
 		|| die "cargo install failed"
 	rm -f "${D}/usr/.crates.toml"
+
+	[ -d "${S}/man" ] && doman "${S}/man" || return 0
 }
 
 fi

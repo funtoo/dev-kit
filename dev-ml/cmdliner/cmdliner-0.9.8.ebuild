@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -12,7 +11,7 @@ SRC_URI="http://erratique.ch/software/${PN}/releases/${P}.tbz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm ~ppc"
 IUSE="doc +ocamlopt"
 
 RDEPEND=">=dev-lang/ocaml-4:=[ocamlopt?]"

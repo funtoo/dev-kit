@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -14,7 +13,7 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 -ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="bidi debug devil doc freeimage expat irrlicht lua ogre opengl pcre python static-libs tinyxml truetype xerces-c +xml zip"
 REQUIRED_USE="|| ( expat tinyxml xerces-c xml )
 	${PYTHON_REQUIRED_USE}" # bug 362223
@@ -24,6 +23,7 @@ REQUIRED_USE="|| ( expat tinyxml xerces-c xml )
 # directfb broken
 #	directfb? ( dev-libs/DirectFB )
 RDEPEND="
+	dev-libs/boost:=
 	virtual/libiconv
 	bidi? ( dev-libs/fribidi )
 	devil? ( media-libs/devil )
@@ -34,7 +34,7 @@ RDEPEND="
 		dev-lang/lua:0
 		dev-lua/toluapp
 	)
-	ogre? ( >=dev-games/ogre-1.7 )
+	ogre? ( >=dev-games/ogre-1.7:= )
 	opengl? (
 		virtual/opengl
 		virtual/glu

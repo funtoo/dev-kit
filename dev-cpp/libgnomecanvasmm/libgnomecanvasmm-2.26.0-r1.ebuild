@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +8,7 @@ GNOME_TARBALL_SUFFIX="bz2"
 inherit flag-o-matic gnome2
 
 DESCRIPTION="C++ bindings for libgnomecanvas"
-HOMEPAGE="http://www.gtkmm.org"
+HOMEPAGE="https://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="2.6"

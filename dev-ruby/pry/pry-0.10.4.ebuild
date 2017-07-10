@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -20,7 +19,7 @@ IUSE=""
 SLOT="ruby19"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
 
 ruby_add_rdepend "
 	>=dev-ruby/coderay-1.1.0 =dev-ruby/coderay-1.1*

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -85,6 +84,8 @@ src_prepare() {
 #		-e "/ALL_LDFLAGS/s|:=|:= ${RAWLDFLAGS} |g" \
 	find common/inc/GL -delete || die
 	find . -type f -name "*\.a" -delete || die
+
+	eapply_user
 }
 
 src_compile() {
