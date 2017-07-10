@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: distutils-r1.eclass
 # @MAINTAINER:
@@ -44,10 +43,10 @@
 # https://wiki.gentoo.org/wiki/Project:Python/distutils-r1
 
 case "${EAPI:-0}" in
-	0|1|2|3)
+	0|1|2|3|4)
 		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
-	4|5|6)
+	5|6)
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
@@ -192,6 +191,12 @@ fi
 # (allowing any implementation). If multiple values are specified,
 # implementations matching any of the patterns will be accepted.
 #
+# The patterns can be either fnmatch-style patterns (matched via bash
+# == operator against PYTHON_COMPAT values) or '-2' / '-3' to indicate
+# appropriately all enabled Python 2/3 implementations (alike
+# python_is_python3). Remember to escape or quote the fnmatch patterns
+# to prevent accidental shell filename expansion.
+#
 # If the restriction needs to apply conditionally to a USE flag,
 # the variable should be set conditionally as well (e.g. in an early
 # phase function or other convenient location).
@@ -288,8 +293,6 @@ distutils_install_for_testing() {
 	PYTHONPATH=${libdir}:${PYTHONPATH}
 
 	local add_args=(
-		egg_info
-			--egg-base="${libdir}"
 		install
 			--home="${TEST_DIR}"
 			--install-lib="${libdir}"
@@ -393,9 +396,6 @@ _distutils-r1_create_setup_cfg() {
 
 		# make the ebuild writer lives easier
 		build-scripts = %(build-base)s/scripts
-
-		[egg_info]
-		egg-base = ${BUILD_DIR}
 
 		# this is needed by distutils_install_for_testing since
 		# setuptools like to create .egg files for install --home.
@@ -672,23 +672,20 @@ distutils-r1_run_phase() {
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
-	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		local best_impl patterns=( "${DISTUTILS_ALL_SUBPHASE_IMPLS[@]-*}" )
-		_distutils_try_impl() {
-			local pattern
-			for pattern in "${patterns[@]}"; do
-				if [[ ${EPYTHON} == ${pattern} ]]; then
-					best_impl=${MULTIBUILD_VARIANT}
-				fi
-			done
-		}
-		python_foreach_impl _distutils_try_impl
-		unset -f _distutils_try_impl
+	if [[ ${DISTUTILS_SINGLE_IMPL} ]]; then
+		# reuse the dedicated code branch
+		_distutils-r1_run_foreach_impl "${@}"
+	else
+		local -x EPYTHON PYTHON
+		local -x PATH=${PATH} PKG_CONFIG_PATH=${PKG_CONFIG_PATH}
+		python_setup "${DISTUTILS_ALL_SUBPHASE_IMPLS[@]}"
 
-		local PYTHON_COMPAT=( "${best_impl}" )
+		local MULTIBUILD_VARIANTS=( "${EPYTHON/./_}" )
+		# store for restoring after distutils-r1_run_phase.
+		local _DISTUTILS_INITIAL_CWD=${PWD}
+		multibuild_foreach_variant \
+			distutils-r1_run_phase "${@}"
 	fi
-
-	_distutils-r1_run_foreach_impl "${@}"
 }
 
 # @FUNCTION: _distutils-r1_run_foreach_impl
@@ -698,15 +695,6 @@ _distutils-r1_run_common_phase() {
 # are enabled, once otherwise.
 _distutils-r1_run_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} ]]; then
-		[[ ${EAPI} == [45] ]] || die "DISTUTILS_NO_PARALLEL_BUILD is banned in EAPI ${EAPI}"
-
-		eqawarn "DISTUTILS_NO_PARALLEL_BUILD is no longer meaningful. Now all builds"
-		eqawarn "are non-parallel. Please remove it from the ebuild."
-
-		unset DISTUTILS_NO_PARALLEL_BUILD # avoid repeated warnings
-	fi
 
 	# store for restoring after distutils-r1_run_phase.
 	local _DISTUTILS_INITIAL_CWD=${PWD}
@@ -776,10 +764,14 @@ distutils-r1_src_compile() {
 	fi
 }
 
-_clean_egg_info() {
-	# Work around for setuptools test behavior (bug 534058).
-	# https://bitbucket.org/pypa/setuptools/issue/292
-	rm -rf "${BUILD_DIR}"/lib/*.egg-info
+# @FUNCTION: _distutils-r1_clean_egg_info
+# @INTERNAL
+# @DESCRIPTION:
+# Clean up potential stray egg-info files left by setuptools test phase.
+# Those files ended up being unversioned, and caused issues:
+# https://bugs.gentoo.org/534058
+_distutils-r1_clean_egg_info() {
+	rm -rf "${BUILD_DIR}"/lib/*.egg-info || die
 }
 
 distutils-r1_src_test() {
@@ -787,11 +779,38 @@ distutils-r1_src_test() {
 
 	if declare -f python_test >/dev/null; then
 		_distutils-r1_run_foreach_impl python_test
-		_distutils-r1_run_foreach_impl _clean_egg_info
+		_distutils-r1_run_foreach_impl _distutils-r1_clean_egg_info
 	fi
 
 	if declare -f python_test_all >/dev/null; then
 		_distutils-r1_run_common_phase python_test_all
+	fi
+}
+
+# @FUNCTION: _distutils-r1_check_namespace_pth
+# @INTERNAL
+# @DESCRIPTION:
+# Check if any *-nspkg.pth files were installed (by setuptools)
+# and warn about the policy non-conformance if they were.
+_distutils-r1_check_namespace_pth() {
+	local f pth=()
+
+	while IFS= read -r -d '' f; do
+		pth+=( "${f}" )
+	done < <(find "${ED}" -name '*-nspkg.pth' -print0)
+
+	if [[ ${pth[@]} ]]; then
+		ewarn "The following *-nspkg.pth files were found installed:"
+		ewarn
+		for f in "${pth[@]}"; do
+			ewarn "  ${f#${ED%/}}"
+		done
+		ewarn
+		ewarn "The presence of those files may break namespaces in Python 3.5+. Please"
+		ewarn "read our documentation on reliable handling of namespaces and update"
+		ewarn "the ebuild accordingly:"
+		ewarn
+		ewarn "  https://wiki.gentoo.org/wiki/Project:Python/Namespace_packages"
 	fi
 }
 
@@ -818,6 +837,8 @@ distutils-r1_src_install() {
 
 		"${cmd}" "QA: python_install_all() didn't call distutils-r1_python_install_all"
 	fi
+
+	_distutils-r1_check_namespace_pth
 }
 
 # -- distutils.eclass functions --

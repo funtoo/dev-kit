@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -17,7 +16,7 @@ SRC_URI="
 
 SLOT="0/${PV}"
 LICENSE="NVIDIA-CUDA"
-KEYWORDS="-* amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debugger doc eclipse profiler"
 
 DEPEND=""

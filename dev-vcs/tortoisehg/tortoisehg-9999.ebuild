@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -15,8 +14,6 @@ else
 	inherit mercurial
 	EHG_REPO_URI="https://bitbucket.org/tortoisehg/thg"
 	EHG_REVISION="stable"
-	KEYWORDS=""
-	SRC_URI=""
 	HG_DEPEND="dev-vcs/mercurial"
 fi
 
@@ -31,7 +28,7 @@ RDEPEND="${HG_DEPEND}
 	dev-python/iniparse[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/PyQt4[svg,${PYTHON_USEDEP}]
-	dev-python/qscintilla-python[${PYTHON_USEDEP}]"
+	dev-python/qscintilla-python[qt4(+),${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"
 

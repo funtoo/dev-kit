@@ -1,9 +1,10 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: l10n.eclass
 # @MAINTAINER:
+# Ulrich Müller <ulm@gentoo.org>
+# @AUTHOR:
 # Ben de Groot <yngwin@gentoo.org>
 # @BLURB: convenience functions to handle localizations
 # @DESCRIPTION:

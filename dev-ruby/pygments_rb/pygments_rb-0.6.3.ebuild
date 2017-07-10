@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -29,7 +28,9 @@ REQUIRED_USE+=" ${PYTHON_REQUIRED_USE}"
 
 RUBY_S="${MY_P}"
 
-RDEPEND+=" dev-python/pygments[${PYTHON_USEDEP}]
+RDEPEND+="
+	${PYTHON_DEPS}
+	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]"
 DEPEND+=" test? ( ${RDEPEND} )"
 

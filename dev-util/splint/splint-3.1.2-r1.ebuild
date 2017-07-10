@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit autotools
@@ -11,7 +10,7 @@ SRC_URI="http://www.splint.org/downloads/${P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 sparc x86"
 
 DEPEND="
 	sys-devel/flex

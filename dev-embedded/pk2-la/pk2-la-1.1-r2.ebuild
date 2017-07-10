@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,8 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND=""
+DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	dev-python/pygtk[${PYTHON_USEDEP}]
 	dev-python/pyusb:0[${PYTHON_USEDEP}]

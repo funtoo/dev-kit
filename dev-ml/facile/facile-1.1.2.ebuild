@@ -1,19 +1,18 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="A constraint programming library on integer and integer set finite domains written in OCaml"
+DESCRIPTION="An OCaml constraint programming library on integer & integer set finite domains"
 HOMEPAGE="http://www.recherche.enac.fr/log/facile/"
 SRC_URI="http://www.recherche.enac.fr/log/facile/distrib/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="+ocamlopt"
 
 RDEPEND=">=dev-lang/ocaml-4:=[ocamlopt?]"

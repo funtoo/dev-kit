@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
 inherit autotools-utils
 
 DESCRIPTION="Efficient (partially uncompressed) SquashFS binary delta tool"
-HOMEPAGE="https://bitbucket.org/mgorny/squashdelta/"
-SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
+HOMEPAGE="https://github.com/mgorny/squashdelta/"
+SRC_URI="https://www.github.com/mgorny/${PN}/releases/download/v${PV}/${P}.tar.bz2"
 
 # uses public-domain murmurhash3
 LICENSE="BSD public-domain"

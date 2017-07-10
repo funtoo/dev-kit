@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install test unpack
-DEPEND=>=dev-lang/go-1.4.2:=
+DEPEND=>=dev-lang/go-1.8
 DESCRIPTION=A simple gitlab api client written in Go
 EAPI=5
 HOMEPAGE=https://github.com/plouc/go-gitlab-client
@@ -8,5 +8,5 @@ LICENSE=MIT
 RESTRICT=test
 SLOT=0/0_pre20160305
 SRC_URI=https://github.com/plouc/go-gitlab-client/archive/a526ef09e9e03f673a43ecd4a687abf6c25343ca.tar.gz -> go-gitlab-client-0_pre20160305.tar.gz
-_eclasses_=golang-base	08fe6e0e2b4750daff8887a7f0e1f873	golang-build	a44f10e6bd86ecccf2a07cc0d4cf6bec	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=fd70f69baff1971c28b33024bcdc0236
+_eclasses_=golang-base	51a1f13e065f1cff4507685d9cc268c7	golang-build	b66349c110e4ddd6203bbe8bf4ae05c1	golang-vcs-snapshot	7fb5d554a7e656be19ec465fa5bb66db
+_md5_=c9734932bbcf73c1444c5212d0cc61b6

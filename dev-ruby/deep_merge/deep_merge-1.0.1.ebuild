@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,9 +15,9 @@ HOMEPAGE="http://trac.misuse.org/science/wiki/DeepMerge"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 hppa ~x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 each_ruby_test() {
-	${RUBY} -S testrb test/test_*.rb || die
+	${RUBY} -I lib:test:. -e 'Dir["test/test_*.rb"].each{|f| require f}' || die
 }

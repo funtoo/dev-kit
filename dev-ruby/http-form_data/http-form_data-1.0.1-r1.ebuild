@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22 ruby23"
@@ -17,7 +16,7 @@ HOMEPAGE="https://github.com/httprb/form_data.rb"
 
 LICENSE="MIT"
 SLOT="1.0"
-KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 all_ruby_prepare() {

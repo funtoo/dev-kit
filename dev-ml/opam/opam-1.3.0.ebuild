@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -9,8 +8,8 @@ inherit eutils
 DESCRIPTION="A source-based package manager for OCaml"
 HOMEPAGE="http://opam.ocaml.org/"
 LICENSE="LGPL-3-with-linking-exception"
-SLOT="0"
-KEYWORDS="~amd64"
+SLOT="0/${PV}"
+KEYWORDS="~amd64 ~arm ~ppc"
 IUSE=""
 
 if [[ ${PV} != 9999 ]]; then
@@ -34,6 +33,10 @@ DEPEND="dev-lang/ocaml:=
 RDEPEND="${DEPEND}
 	dev-ml/findlib
 "
+
+src_prepare() {
+	epatch "${FILESDIR}/cmdl.patch"
+}
 
 src_compile() {
 	emake -j1

@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22"
@@ -16,11 +15,11 @@ HOMEPAGE="https://github.com/gemhome/rmagick"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-macos"
+KEYWORDS="amd64 ~hppa ppc ppc64 x86 ~x86-macos"
 IUSE="doc"
 
-RDEPEND+=" >=media-gfx/imagemagick-6.4.9:="
-DEPEND+=" >=media-gfx/imagemagick-6.4.9:=[jpeg]"
+RDEPEND+=" >=media-gfx/imagemagick-6.4.9:= =media-gfx/imagemagick-6*"
+DEPEND+=" >=media-gfx/imagemagick-6.4.9:=[jpeg] =media-gfx/imagemagick-6*"
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:3 )"
 

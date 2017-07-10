@@ -1,10 +1,9 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
-inherit eutils cmake-utils git-r3
+inherit eutils cmake-utils toolchain-funcs git-r3
 
 DESCRIPTION="Development library for simulation games"
 HOMEPAGE="http://www.simgear.org/"
@@ -15,7 +14,7 @@ EGIT_BRANCH="next"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="+dns debug subversion test"
+IUSE="+dns debug gdal openmp subversion test"
 
 COMMON_DEPEND="
 	dev-libs/expat
@@ -25,6 +24,7 @@ COMMON_DEPEND="
 	sys-libs/zlib
 	virtual/opengl
 	dns? ( net-libs/udns )
+	gdal? ( sci-libs/gdal )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.44
@@ -33,13 +33,22 @@ RDEPEND="${COMMON_DEPEND}
 	subversion? ( dev-vcs/subversion )
 "
 
+PATCHES=( "${FILESDIR}/simgear-2017.2.1-gdal-underlinking.patch" )
+
 DOCS=(AUTHORS ChangeLog NEWS README Thanks)
+
+pkg_pretend() {
+	use openmp && tc-check-openmp
+}
 
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_DNS=$(usex dns)
+		-DENABLE_GDAL=$(usex gdal)
+		-DENABLE_OPENMP=$(usex openmp)
 		-DENABLE_PKGUTIL=ON
 		-DENABLE_RTI=OFF
+		-DENABLE_SIMD=ON
 		-DENABLE_SOUND=ON
 		-DENABLE_TESTS=$(usex test)
 		-DSIMGEAR_HEADLESS=OFF

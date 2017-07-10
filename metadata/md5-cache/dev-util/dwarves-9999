@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=>=dev-libs/elfutils-0.131 sys-libs/zlib sys-devel/make >=dev-util/cmake-3.5.2 dev-vcs/git
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] >=dev-libs/elfutils-0.131 sys-libs/zlib sys-devel/make >=dev-util/cmake-3.7.2 dev-vcs/git
 DESCRIPTION=pahole (Poke-a-Hole) and other DWARF2 utilities
 EAPI=5
 HOMEPAGE=https://git.kernel.org/cgit/devel/pahole/pahole.git/
 IUSE=debug python_targets_python2_7
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/elfutils-0.131 sys-libs/zlib
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] >=dev-libs/elfutils-0.131 sys-libs/zlib
+REQUIRED_USE=python_targets_python2_7
 SLOT=0
-_eclasses_=cmake-utils	fa4d8052a1ccf4fbbfa76361bffebe42	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	git-2	7af5d170bfc02983b4bcd3167dc5edd4	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	66b3bf714f8cfc1b6494db5269b4666e	python-single-r1	19a74c6b5c191723a997dc7e0cc6bb09	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=4d2015cf10d1ad30a30de5b082bd01db
+_eclasses_=cmake-utils	026933aff3889190eeb565b642cfe252	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	flag-o-matic	61cad4fb5d800b29d484b27cb033f59b	git-2	195a672bfaf52d868442171c9469bbb6	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	284a473719153462f3e974d86c8cb81c	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-single-r1	317a2557b4d7319a7418225f65accf77	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=924985786de12b23981c0a13bec7e078

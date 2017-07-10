@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/sed app-shells/bash app-text/wdiff sys-apps/diffutils a2ps? ( app-text/a2ps ) mercurial? ( dev-vcs/mercurial )
 SLOT=0
 SRC_URI=https://github.com/junghans/cwdiff/archive/v0.3.0.tar.gz -> cwdiff-0.3.0.tar.gz
-_md5_=30ae566199c714bc21ea83dd210e9057
+_md5_=83ca36aff906a916f853743832fa5735

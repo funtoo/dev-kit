@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,7 +15,7 @@ SRC_URI="mirror://sourceforge//project/${PN}/${PN}/${PV}/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 IUSE="examples"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 
 RDEPEND="
 	dev-lang/tcl:0=
@@ -33,7 +32,7 @@ PATCHES=( "${FILESDIR}"/${P}-XSS-vuln.patch )
 src_prepare() {
 	has_version ">=dev-lang/tcl-8.6" && \
 		PATCHES+=( "${FILESDIR}"/${P}-test.patch )
-	epatch ${PATCHES[@]}
+	epatch "${PATCHES[@]}"
 
 	sed \
 		-e '/testsNeedTcl/s:8.5:8.6:g' \

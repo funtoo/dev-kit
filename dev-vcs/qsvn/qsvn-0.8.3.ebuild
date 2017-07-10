@@ -1,8 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=4
+EAPI=6
 
 inherit cmake-utils
 
@@ -17,7 +16,6 @@ IUSE=""
 
 DEPEND="dev-libs/apr
 	dev-libs/apr-util
-	dev-vcs/subversion
 	dev-qt/qtcore:4[qt3support]
 	dev-qt/qtgui:4[qt3support]
 	dev-qt/qtsql:4[sqlite]
@@ -29,6 +27,7 @@ S=${WORKDIR}/${P}/src
 PATCHES=(
 	"${FILESDIR}/${P}-static-lib.patch"
 	"${FILESDIR}/${P}-tests.patch"
+	"${FILESDIR}/${P}-gcc6.patch"
 )
 
 DOCS=( ../ChangeLog ../README )

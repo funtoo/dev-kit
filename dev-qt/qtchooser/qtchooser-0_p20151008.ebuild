@@ -1,13 +1,12 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
 inherit qmake-utils toolchain-funcs
 
 DESCRIPTION="Qt4/Qt5 version chooser"
-HOMEPAGE="https://code.qt.io/cgit/qt/qtchooser.git/"
+HOMEPAGE="https://code.qt.io/cgit/qtsdk/qtchooser.git/"
 SRC_URI="https://dev.gentoo.org/~pesa/distfiles/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
