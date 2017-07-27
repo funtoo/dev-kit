@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-MY_EXTRAS_VER="20170719-0113Z"
+MY_EXTRAS_VER="20170727-0052Z"
 # The wsrep API version must match between upstream WSREP and sys-cluster/galera major number
 WSREP_REVISION="25"
 SUBSLOT="18"
@@ -106,6 +106,20 @@ pkg_preinst() {
 		elog "Please run: revdep-rebuild --library ${libpath}"
 		ewarn "Failure to run revdep-rebuild may cause issues with other programs or libraries"
 	fi
+}
+
+pkg_postinst() {
+	mysql-multilib-r1_pkg_postinst
+
+	# Note about configuration change
+	einfo
+	elog "This version of mariadb reorganizes the configuration from a single my.cnf"
+	elog "to several files in /etc/mysql/${PN}.d."
+	elog "Please backup any changes you made to /etc/mysql/my.cnf"
+	elog "and add them as a new file under /etc/mysql/${PN}.d with a .cnf extension."
+	elog "You may have as many files as needed and they are read alphabetically."
+	elog "Be sure the options have the appropitate section headers, i.e. [mysqld]."
+	einfo
 }
 
 src_prepare() {
