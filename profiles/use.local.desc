@@ -1201,6 +1201,7 @@ dev-util/perf:perl - Add support for Perl as a scripting language for perf tools
 dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
 dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
+dev-util/radare2:system-capstone - Use dev-libs/capstone instead of bundled copy.
 dev-util/scanmem:gui - Enable the GameConqueror GUI
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots.
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
