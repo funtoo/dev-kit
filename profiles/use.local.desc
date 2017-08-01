@@ -670,7 +670,10 @@ dev-libs/gf2x:custom-tune - Extra long compile time for tuning hardware specific
 dev-libs/gf2x:fft - Build an FFT API for multiplication of 2 polynomials over GF(2)
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/intel-common:compiler - Install the libraries needed for the icc and ifort compilers
+dev-libs/jemalloc:hugepages - Enable transparent huge page support
+dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
+dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/leveldb:snappy - support the snappy compression library
