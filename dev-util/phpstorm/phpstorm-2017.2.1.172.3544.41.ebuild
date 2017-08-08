@@ -6,7 +6,7 @@ EAPI=5
 inherit eutils versionator
 
 SLOT="$(get_major_version)"
-MY_PV="$(get_version_component_range 1-2)"
+MY_PV="$(get_version_component_range 1-3)"
 MY_BV="$(get_version_component_range 4-6)"
 MY_PN="PhpStorm"
 
