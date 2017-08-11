@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -17,11 +17,12 @@ HOMEPAGE="http://capistranorb.com/"
 
 LICENSE="MIT"
 SLOT="3"
-KEYWORDS="~amd64"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 ruby_add_rdepend "
-	>=dev-ruby/sshkit-1.3:0
+	>=dev-ruby/airbrussh-1.0.0
+	>=dev-ruby/sshkit-1.9:0
 	>=dev-ruby/rake-10.0.0
 	dev-ruby/i18n:*
 	!!<dev-ruby/capistrano-2.15.5-r2"
