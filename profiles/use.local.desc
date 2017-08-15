@@ -166,9 +166,6 @@ dev-db/postgresql:pg_legacytimestamp - Use double precision floating-point numbe
 dev-db/postgresql:server - Disable to build and install the clients and libraries only.
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
-dev-db/recutils:curl - Enable support for remote descriptors using libcurl
-dev-db/recutils:mdb - Build the mdb2rec utility
-dev-db/recutils:uuid - Enable support for uuid types
 dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/redis:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
