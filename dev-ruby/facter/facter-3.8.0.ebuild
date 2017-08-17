@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 USE_RUBY="ruby21 ruby22 ruby23 ruby24"
 
 inherit cmake-utils eutils multilib ruby-ng
@@ -14,7 +14,7 @@ S="${S}/all/${P}"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="debug test"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
 BDEPEND="
 	>=sys-devel/gcc-4.8:*
@@ -43,7 +43,7 @@ src_prepare() {
 	# make the require work
 	sed -i 's/\${LIBFACTER_INSTALL_DESTINATION}\///g' lib/facter.rb.in || die
 	# patches
-	epatch_user
+	default
 }
 
 src_configure() {
