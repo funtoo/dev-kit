@@ -71,6 +71,7 @@ dev-db/mariadb:libressl - Enable SSL connections and crypto functions using dev-
 dev-db/mariadb:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mariadb:minimal - Install client programs only, no server
 dev-db/mariadb:mroonga - Add support for the Mroonga engine for interfacing with the Groonga text search
+dev-db/mariadb:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-db/mariadb:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
 dev-db/mariadb:oqgraph - Add support for the Open Query GRAPH engine
 dev-db/mariadb:pam - Enable the optional PAM authentication plugin for the server
@@ -1237,8 +1238,6 @@ dev-vcs/fossil:th1-hooks - Enable TH1 hooks for commands and web pages
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:benchmark - Enable benchmarking
 dev-vcs/git-annex:concurrentoutput - Use concurrent-output library (experimental)
-dev-vcs/git-annex:cryptonite - Use the cryptonite library, instead of the older cryptohash
-dev-vcs/git-annex:ekg - Enable use of EKG to monitor git-annex as it runs.
 dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
 dev-vcs/git-annex:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/git-annex:pairing - Enable pairing of git annex repositories
