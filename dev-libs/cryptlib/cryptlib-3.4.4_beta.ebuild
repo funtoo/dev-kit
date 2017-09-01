@@ -9,15 +9,16 @@ DISTUTILS_OPTIONAL=1
 inherit distutils-r1 flag-o-matic multilib toolchain-funcs versionator
 
 MY_PV="${PV//.}"
+MY_PV="${MY_PV//_}"
 
 DESCRIPTION="Powerful security toolkit for adding encryption to software"
 HOMEPAGE="http://www.cs.auckland.ac.nz/~pgut001/cryptlib/"
 DOC_PREFIX="${PN}-$(get_version_component_range 1-2 ${PV}).0"
-SRC_URI="ftp://ftp.franken.de/pub/crypt/cryptlib/cl${MY_PV}.zip
-	doc? ( mirror://gentoo/${DOC_PREFIX}-manual.pdf.bz2 )"
+SRC_URI="http://www.cypherpunks.to/~peter/cl${MY_PV}.zip
+	doc? ( http://www.cypherpunks.to/~peter/manual.pdf -> ${P}-manual.pdf )"
 
 LICENSE="Sleepycat"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 SLOT="0"
 IUSE="doc ldap odbc python static-libs test"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -33,16 +34,18 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${P}-build.patch"
-	"${FILESDIR}/${P}-zlib.patch"
 )
 
+#
 # test access the network
+# upstream provides no way to disable these
+# tests
+#
 RESTRICT="test"
 
 src_unpack() {
 	# we need the -a option, so we can not use 'unpack'
 	unzip -qoa "${DISTDIR}/cl${MY_PV}.zip" || die
-	use doc && unpack "${DOC_PREFIX}-manual.pdf.bz2"
 }
 
 wrap_python() {
@@ -52,19 +55,48 @@ wrap_python() {
 	fi
 }
 
+pkg_setup() {
+	#
+	# Disable upstream detection
+	# Non standard and hardcoded methods
+	#
+	export DISABLE_AUTODETECT=1
+
+	#
+	# Add our own CFLAGS/CPPFLAGS
+	#
+	export EXTRA_CFLAGS="${CPPFLAGS} ${CFLAGS}"
+
+	#
+	# Disable internal zlib dependnecies
+	# For some reason this applied also when
+	# System zlib is being used
+	#
+	COMMON_MAKE_OPTS="ZLIBOBJS= CC=$(tc-getCC) AR=$(tc-getAR) STRIP=true"
+}
+
 src_prepare() {
 	default
 
-	rm -fr zlib || die
+	#
+	# Make sure we do not use the embedded zlib
+	#
+	rm -fr zlib || die "remove zlib"
 
-	# we want our own CFLAGS ;-)
-	sed -i -e "s:-m.*=pentium::g" -e "s:-fomit-frame-pointer::g" -e "s:-O2::g" \
+	#
+	# Upstream package should not set optimization flags
+	# Or at least allow simple method to disable behavior
+	#
+	sed -i -e "s:-fomit-frame-pointer::g" -e "s:-O2::g" \
 		-e "s:-O3::g" -e "s:-O4::g"	makefile || die "sed makefile failed"
 	sed -i -e "s/-march=[[:alnum:]\.=-]*//g" -e "s/-mcpu=[[:alnum:]\.=-]*//g" \
 		-e "s:-O2::g" -e "s:-O3::g" tools/ccopts.sh || die "sed tools/ccopts.sh failed"
 
-	# change 'make' to '$(MAKE)'
-	sed -i -e "s:@\?make:\$(MAKE):g" makefile || die "sed makefile failed"
+	#
+	# Not sure  why MAKE = make is required
+	# make sets this to correct value
+	#
+	sed -i -e "/^MAKE/d" makefile || die "sed makefile make failed"
 
 	wrap_python ${FUNCNAME}
 }
@@ -72,17 +104,20 @@ src_prepare() {
 src_compile() {
 	use ldap && append-cppflags -DHAS_LDAP
 	use odbc && append-cppflags -DHAS_ODBC
-	append-cppflags -DHAS_ZLIB
 
-	export DISABLE_AUTODETECT=1
-	emake EXTRA_CFLAGS="${CPPFLAGS} ${CFLAGS}" shared
-	use static-libs && emake EXTRA_CFLAGS="${CPPFLAGS} ${CFLAGS}" default
-	use test && emake EXTRA_CFLAGS="${CPPFLAGS} ${CFLAGS}" stestlib
+	emake ${COMMON_MAKE_OPTS}  shared
+	use static-libs && emake ${COMMON_MAKE_OPTS} default
+	use test && emake ${COMMON_MAKE_OPTS} stestlib
 
+	#
+	# Symlink the libraries.
 	#
 	# Without this:
 	# 1. python will link against the static lib
 	# 2. tests will not work find soname.
+	#
+	# Upstream should have created the symlinks when
+	# building and not when installing.
 	#
 	local libname="libcl.so.$(get_version_component_range 1-3 ${PV})"
 	local solibname="libcl.so.$(get_version_component_range 1-2 ${PV})"
@@ -99,16 +134,12 @@ src_test() {
 }
 
 src_install() {
+	emake install ${COMMON_MAKE_OPTS} DESTDIR="${D}" PREFIX=/usr PATH_LIB="/usr/$(get_libdir)"
 	einstalldocs
 
-	doheader cryptlib.h
-
-	dolib.so libcl.so*
-	use static-libs && dolib.a libcl.a
+	wrap_python ${FUNCNAME}
 
 	if use doc; then
-		newdoc "${DOC_PREFIX}-manual.pdf" "manual.pdf"
+		newdoc "${DISTDIR}/${P}-manual.pdf" "manual.pdf"
 	fi
-
-	wrap_python ${FUNCNAME}
 }
