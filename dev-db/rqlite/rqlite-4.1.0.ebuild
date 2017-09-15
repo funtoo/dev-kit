@@ -5,20 +5,22 @@ EAPI=6
 
 EGO_PN="github.com/rqlite/rqlite"
 EGO_VENDOR=(
-	"github.com/Bowery/prompt 0f1139e9a1c74b57ccce6bdb3cd2f7cd04dd3449"
-	"github.com/armon/go-metrics f036747b9d0e8590f175a5d654a2194a7d9df4b5"
-	"github.com/boltdb/bolt e9cf4fae01b5a8ff89d0ec6b32f0d9c9f79aefdd"
+	"github.com/Bowery/prompt 753711fea478fa77bb2c83f6ec244b814d4a8bad"
+	"github.com/armon/go-metrics 0a12dc6f6b9da6da644031a1b9b5a85478c5ee27"
+	"github.com/boltdb/bolt fa5367d20c994db73282594be0146ab221657943"
+	"github.com/hashicorp/go-immutable-radix 8aac2701530899b64bdea735a1de8da899815220"
 	"github.com/hashicorp/go-msgpack fa3f63826f7c23912c15263591e65d54d080b458"
-	"github.com/hashicorp/raft 37d2320db05ca622195063977ff5d4fbe0cd8ed8"
+	"github.com/hashicorp/golang-lru 0a025b7e63adc15a622f29b0b2c4c3848243bbf6"
+	"github.com/hashicorp/raft 3b4d64b29e422f04808b905005eb5a38bf9150e8"
 	"github.com/hashicorp/raft-boltdb df631556b57507bd5d0ed4f87468fd93ab025bef"
-	"github.com/labstack/gommon 1121fd3e243c202482226a7afe4dcd07ffc4139a"
-	"github.com/mattn/go-colorable ded68f7a9561c023e790de24279db7ebf473ea80"
+	"github.com/labstack/gommon 779b8a8b9850a97acba6a3fe20feb628c39e17c1"
+	"github.com/mattn/go-colorable ad5389df28cdac544c99bd7b9161a0b5b6ca9d1b"
 	"github.com/mattn/go-isatty fc9e8d8ef48496124e79ae0df75490096eccf6fe"
-	"github.com/mattn/go-sqlite3 83772a7051f5e30d8e59746a9e43dfa706b72f3b"
+	"github.com/mattn/go-sqlite3 05548ff55570cdb9ac72ff4a25a3b5e77a6fb7e5"
 	"github.com/mkideal/cli a9c1104566927924fdb041d198f05617492913f9"
 	"github.com/mkideal/pkg 3e188c9e7ecc83d0fe7040a9161ce3c67885470d"
-	"golang.org/x/net 59a0b19b5533c7977ddeb86b017bf507ed407b12 github.com/golang/net"
-	"golang.org/x/sys b90f89a1e7a9c1f6b918820b3daa7f08488c8594 github.com/golang/sys"
+	"golang.org/x/net 859d1a86bb617c0c20d154590c3c5d3fcb670b07 github.com/golang/net"
+	"golang.org/x/sys 062cd7e4e68206d8bab9b18396626e855c992658 github.com/golang/sys"
 )
 
 inherit golang-vcs-snapshot
