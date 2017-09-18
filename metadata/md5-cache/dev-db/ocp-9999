@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/maxsatula/ocp
 LICENSE=GPL-2
 RDEPEND=dev-db/oracle-instantclient-basic dev-libs/popt sys-libs/zlib
 SLOT=0
-_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	git-r3	4f7ddb4119309845d6687213171ab445	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	git-r3	52a888802d25387c2c74cb845d1219bc	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=c5ffb09d63e6401b9033e8059c16ef2d
