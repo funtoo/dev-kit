@@ -4,11 +4,11 @@ dev-db/metakit python_single_target_python2_7
 dev-db/mysql-workbench python_single_target_python2_7
 dev-db/pgadmin4 python_single_target_python3_4 python_targets_python3_4
 =dev-db/postgresql-9.4.10 python_single_target_python2_7
-=dev-db/postgresql-9.3.17 python_single_target_python2_7
-=dev-db/postgresql-9.2.19 python_single_target_python2_7
-=dev-db/postgresql-9.4.12 python_single_target_python2_7
 =dev-db/postgresql-9.3.15 python_single_target_python2_7
+=dev-db/postgresql-9.3.17 python_single_target_python2_7
+=dev-db/postgresql-9.4.12 python_single_target_python2_7
 =dev-db/postgresql-9.2.21 python_single_target_python2_7
+=dev-db/postgresql-9.2.19 python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
 dev-games/tiled python_single_target_python2_7
 dev-games/vamos python_single_target_python3_4 python_targets_python3_4
@@ -68,10 +68,10 @@ dev-vcs/bzr-xmloutput python_single_target_python2_7
 dev-vcs/cvs2svn python_single_target_python2_7
 dev-vcs/git-bz python_single_target_python2_7
 dev-vcs/git-bzr-ng python_single_target_python2_7
-=dev-vcs/git-cola-2.2.1 python_single_target_python2_7
 =dev-vcs/git-cola-2.3 python_single_target_python2_7
-=dev-vcs/git-cola-2.4 python_single_target_python2_7
+=dev-vcs/git-cola-2.2.1 python_single_target_python2_7
 =dev-vcs/git-cola-2.11 python_single_target_python2_7
+=dev-vcs/git-cola-2.4 python_single_target_python2_7
 dev-vcs/git-deps python_single_target_python2_7
 dev-vcs/hgsvn python_single_target_python2_7
 dev-vcs/mercurial-server python_single_target_python2_7
