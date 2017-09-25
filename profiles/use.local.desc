@@ -530,6 +530,7 @@ dev-lang/gnat-gpl:nossp - Disable SSP support (NOT FOR GENERAL USE)
 dev-lang/gnat-gpl:objc - Build support for the Objective C code language
 dev-lang/gnat-gpl:objc++ - Build support for the Objective C++ language
 dev-lang/gnat-gpl:objc-gc - Build support for the Objective C code language Garbage Collector
+dev-lang/gnat-gpl:pgo - Build GCC using Profile Guided Optimization (PGO)
 dev-lang/gnat-gpl:regression-test - Run the testsuite and install the results (requires FEATURES=test)
 dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
@@ -538,12 +539,7 @@ dev-lang/go:gccgo - Enable bootstrapping using gccgo
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
-dev-lang/logtalk:gnupl - Support GNU Prolog back-end compiler
-dev-lang/logtalk:qupl - Support Qu-Prolog back-end compiler
-dev-lang/logtalk:swipl - Support SWI-Prolog back-end compiler
-dev-lang/logtalk:xsbpl - Support XSB back-end compiler
 dev-lang/logtalk:xslt - Support for generating html documentation using xslt
-dev-lang/logtalk:yappl - Support YAP back-end compiler
 dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
 dev-lang/mercury:erlang - Support Mercury Erlang grade

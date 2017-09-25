@@ -12,16 +12,15 @@ LICENSE="Apache-2.0"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc fop xslt"
+IUSE="fop xslt"
 
 DEPEND=""
-RDEPEND="
+RDEPEND="${DEPEND}
 	xslt? ( dev-libs/libxslt )
-	fop? ( dev-java/fop )
-	${DEPEND}"
+	fop? ( dev-java/fop )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-user-docs.patch
+	epatch "${FILESDIR}"/${P}-portage.patch
 }
 
 src_install() {
@@ -29,8 +28,8 @@ src_install() {
 	# Install logtalk base
 	mv scripts/logtalk_user_setup.sh integration/
 	mkdir -p "${D}/usr/share/${P}"
-	cp -r adapters coding contributions core examples integration \
-		library paths scratch tests tools VERSION.txt \
+	cp -r adapters coding contributions core docs examples integration \
+		library manuals paths scratch tests tools VERSION.txt \
 		loader-sample.lgt settings-sample.lgt tester-sample.lgt \
 		tests-sample.lgt \
 		"${D}/usr/share/${P}" \
@@ -44,12 +43,6 @@ src_install() {
 	dodoc ACKNOWLEDGMENTS.md BIBLIOGRAPHY.bib CUSTOMIZE.md \
 		INSTALL.md LICENSE.txt QUICK_START.md README.md \
 		RELEASE_NOTES.md UPGRADING.md VERSION.txt
-	if use doc ; then
-		dohtml -r docs/* \
-			|| die "Failed to install html core documentation"
-		dohtml -r manuals/* \
-			|| die "Failed to install html manual"
-	fi
 
 	rm -f man/man1/logtalk_backend_select.1
 	rm -f man/man1/logtalk_version_select.1
@@ -66,6 +59,8 @@ src_install() {
 		/usr/bin/eclipselgt
 	dosym /usr/share/${P}/integration/gplgt.sh \
 		/usr/bin/gplgt
+	dosym /usr/share/${P}/integration/jiplgt.sh \
+		/usr/bin/jiplgt
 	dosym /usr/share/${P}/integration/lplgt.sh \
 		/usr/bin/lplgt
 	dosym /usr/share/${P}/integration/qplgt.sh \
@@ -108,6 +103,7 @@ pkg_postinst() {
 	ewarn "CxProlog: /usr/bin/cxlgt"
 	ewarn "ECLiPSe: /usr/bin/eclipselgt"
 	ewarn "GNU Prolog: /usr/bin/gplgt"
+	ewarn "JIProlog: /usr/bin/jiplgt"
 	ewarn "Lean Prolog: /usr/bin/lplgt"
 	ewarn "Qu-Prolog: /usr/bin/qplgt"
 	ewarn "Quintus Prolog: /usr/bin/quintuslgt"
