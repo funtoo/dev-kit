@@ -1,11 +1,11 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=2
+EAPI=5
 
 inherit eutils multilib
 
-PATCHSET_VER="1"
+PATCHSET_VER="0"
 MY_P=mercury-srcdist-${PV}
 
 DESCRIPTION="Additional libraries and tools that are not part of the Mercury standard library"
@@ -15,7 +15,7 @@ SRC_URI="http://dl.mercurylang.org/release/${MY_P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="X cairo examples glut iodbc ncurses odbc opengl ssl tcl tk xml"
 
@@ -24,7 +24,7 @@ RDEPEND="~dev-lang/mercury-${PV}
 	glut? ( media-libs/freeglut )
 	odbc? ( dev-db/unixODBC )
 	iodbc? ( !odbc? ( dev-db/libiodbc ) )
-	ncurses? ( sys-libs/ncurses )
+	ncurses? ( sys-libs/ncurses:= )
 	opengl? (
 		virtual/opengl
 		virtual/glu
@@ -41,87 +41,87 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}/extras
 
+mercury_pkgs()
+{
+	echo   "base64
+		cgi
+		complex_numbers
+		dynamic_linking
+		error
+		fixed
+		lex
+		moose
+		posix
+		solver_types/library
+		$(use ncurses && echo curs curses)
+		$(use glut && echo graphics/mercury_glut)
+		$(use opengl && echo graphics/mercury_opengl)
+		$(use tcl && use tk && echo graphics/mercury_tcltk)
+		$(use odbc && echo odbc || use iodbc && echo odbc)
+		$(has_version dev-lang/mercury[-minimal] && echo references)
+		$(usev xml)"
+}
+
 src_prepare() {
 	cd "${WORKDIR}"
 
 	EPATCH_FORCE=yes
 	EPATCH_SUFFIX=patch
-	epatch "${WORKDIR}"/${PV}
-
-	if use odbc; then
-		epatch "${WORKDIR}"/${PV}-odbc/${P}-odbc.patch
-	elif use iodbc; then
-		epatch "${WORKDIR}"/${PV}-odbc/${P}-iodbc.patch
+	if [[ -d "${WORKDIR}"/${PV} ]] ; then
+		epatch "${WORKDIR}"/${PV}
 	fi
 
 	cd "${S}"
-	sed -i	-e "s:references:references solver_types/library:" \
-		-e "s:windows_installer_generator::" \
-		Mmakefile || die "sed default packages failed"
-
-	if use cairo; then
-		sed -i -e "s:lex[ \t]*\\\\:graphics/mercury_cairo lex \\\\:" Mmakefile \
-			|| die "sed cairo failed"
+	if use odbc; then
+		cp odbc/Mmakefile.odbc odbc/Mmakefile
+	elif use iodbc; then
+		cp odbc/Mmakefile.iodbc odbc/Mmakefile
 	fi
-
-	if use glut; then
-		sed -i -e "s:lex[ \t]*\\\\:graphics/mercury_glut lex \\\\:" Mmakefile \
-			|| die "sed glut failed"
-	fi
-
-	if use opengl; then
-		sed -i -e "s:lex[ \t]*\\\\:graphics/mercury_opengl lex \\\\:" Mmakefile \
-			|| die "sed opengl failed"
-	fi
-
-	if use tcl && use tk; then
-		sed -i -e "s:lex[ \t]*\\\\:graphics/mercury_tcltk lex \\\\:" Mmakefile \
-			|| die "sed tcltk failed"
-	fi
-
-	if use odbc || use iodbc; then
-		sed -i -e "s:moose:moose odbc:" Mmakefile \
-			|| die "sed odbc failed"
-	fi
-
-	if use ncurses; then
-		sed -i -e "s:complex_numbers:complex_numbers curs curses:" Mmakefile \
-			|| die "sed ncurses failed"
-	fi
-
-	if ! use xml; then
-		sed -i -e "s:xml::" Mmakefile \
-			|| die "sed xml failed"
-	fi
-
-	sed -i -e "s:@libdir@:$(get_libdir):" \
-		dynamic_linking/Mmakefile \
-		|| die "sed libdir failed"
-
-	# disable broken packages
-	sed -i -e "s:references::" Mmakefile \
-		|| die "sed broken packages failed"
 }
 
 src_compile() {
+	local MERCURY_PKGS="$(mercury_pkgs)"
+
 	# Mercury dependency generation must be run single-threaded
-	mmake \
-		-j1 depend || die "mmake depend failed"
+	mmake -j1 \
+		SUBDIRS="${MERCURY_PKGS}" \
+		depend || die "mmake depend failed"
 
 	# Compiling Mercury submodules is not thread-safe
 	mmake -j1 \
+		SUBDIRS="${MERCURY_PKGS}" \
 		EXTRA_MLFLAGS=--no-strip \
+		EXTRA_CFLAGS="${CFLAGS}" \
 		EXTRA_LDFLAGS="${LDFLAGS}" \
 		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
 		|| die "mmake failed"
+
+	if use cairo; then
+		cd "${S}"/graphics/mercury_cairo
+		mmc --make libmercury_cairo \
+			|| die "mmc --make libmercury_cairo failed"
+	fi
 }
 
 src_install() {
+	local MERCURY_PKGS="$(mercury_pkgs)"
+
 	# Compiling Mercury submodules is not thread-safe
 	mmake -j1 \
+		SUBDIRS="${MERCURY_PKGS}" \
+		EXTRA_MLFLAGS=--no-strip \
+		EXTRA_CFLAGS="${CFLAGS}" \
+		EXTRA_LDFLAGS="${LDFLAGS}" \
 		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
 		INSTALL_PREFIX="${D}"/usr \
 		install || die "mmake install failed"
+
+	if use cairo; then
+		cd "${S}"/graphics/mercury_cairo
+		INSTALL_PREFIX="${D}"/usr \
+		mmc --make libmercury_cairo.install \
+			|| die "mmc --make libmercury_cairo.install failed"
+	fi
 
 	find "${D}"/usr/$(get_libdir)/mercury -type l | xargs rm
 

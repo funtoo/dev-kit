@@ -1,11 +1,11 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=2
+EAPI=5
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib xdg-utils
 
-PATCHSET_VER="1"
+PATCHSET_VER="0"
 MY_P=${PN}-srcdist-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
@@ -15,15 +15,15 @@ SRC_URI="http://dl.mercurylang.org/release/${MY_P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="debug emacs erlang examples java minimal readline threads"
 
 DEPEND="!dev-libs/mpatrol
 	!dev-util/mono-debugger
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:= )
 	erlang? ( dev-lang/erlang )
-	java? ( >=virtual/jdk-1.5 )"
+	java? ( >=virtual/jdk-1.6:= )"
 
 RDEPEND="${DEPEND}
 	emacs? ( virtual/emacs )"
@@ -36,7 +36,9 @@ src_prepare() {
 	cd "${WORKDIR}" || die
 	EPATCH_FORCE=yes
 	EPATCH_SUFFIX=patch
-	epatch "${WORKDIR}"/${PV}
+	if [[ -d "${WORKDIR}"/${PV} ]] ; then
+		epatch "${WORKDIR}"/${PV}
+	fi
 
 	sed -i -e "s/@libdir@/$(get_libdir)/" \
 		"${S}"/scripts/Mmake.vars.in \
@@ -71,15 +73,17 @@ src_compile() {
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		MMAKEFLAGS="EXTRA_MLFLAGS=--no-strip \
-			    EXTRA_LDFLAGS='${LDFLAGS}' \
-			    EXTRA_LD_LIBFLAGS='${LDFLAGS}'" \
+			    EXTRA_CFLAGS='${CFLAGS}' \
+			    EXTRA_LDFLAGS='${LDFLAGS}'" \
 		|| die "emake failed"
 
 	# We can now patch .m Mercury compiler files since we
 	# have just built mercury_compiler.
 	EPATCH_FORCE=yes
 	EPATCH_SUFFIX=patch
-	epatch "${WORKDIR}"/${PV}-mmc
+	if [[ -d "${WORKDIR}"/${PV}-mmc ]] ; then
+		epatch "${WORKDIR}"/${PV}-mmc
+	fi
 
 	sed -i -e "s/@libdir@/$(get_libdir)/" \
 		"${S}"/compiler/file_util.m \
@@ -90,8 +94,8 @@ src_compile() {
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		MMAKEFLAGS="EXTRA_MLFLAGS=--no-strip \
-			    EXTRA_LDFLAGS='${LDFLAGS}' \
-			    EXTRA_LD_LIBFLAGS='${LDFLAGS}'" \
+			    EXTRA_CFLAGS='${CFLAGS}' \
+			    EXTRA_LDFLAGS='${LDFLAGS}'" \
 		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
 		compiler || die "emake compiler failed"
 
@@ -101,8 +105,8 @@ src_compile() {
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		MMAKEFLAGS="EXTRA_MLFLAGS=--no-strip \
-			    EXTRA_LDFLAGS='${LDFLAGS}' \
-			    EXTRA_LD_LIBFLAGS='${LDFLAGS}'" \
+			    EXTRA_CFLAGS='${CFLAGS}' \
+			    EXTRA_LDFLAGS='${LDFLAGS}'" \
 		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
 		default_grade || die "emake default_grade failed"
 }
@@ -142,8 +146,9 @@ src_test() {
 src_install() {
 	emake \
 		PARALLEL=${MAKEOPTS} \
-		MMAKEFLAGS="EXTRA_LDFLAGS='${LDFLAGS}' \
-			    EXTRA_LD_LIBFLAGS='${LDFLAGS}'" \
+		MMAKEFLAGS="EXTRA_MLFLAGS=--no-strip \
+			    EXTRA_CFLAGS='${CFLAGS}' \
+			    EXTRA_LDFLAGS='${LDFLAGS}'" \
 		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
 		INSTALL_PREFIX="${D}"/usr \
 		INSTALL_MAN_DIR="${D}"/usr/share/man \
