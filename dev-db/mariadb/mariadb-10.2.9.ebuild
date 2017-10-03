@@ -568,22 +568,6 @@ multilib_src_install_all() {
 		fi
 		eprefixify "${TMPDIR}/my.cnf.ok"
 		newins "${TMPDIR}/my.cnf.ok" 50-distro-server.cnf
-		einfo "Creating initial directories"
-		# Empty directories ...
-		diropts "-m0750"
-		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-			dodir "${MY_DATADIR#${EPREFIX}}"
-			keepdir "${MY_DATADIR#${EPREFIX}}"
-			nonfatal fowners -R mysql:mysql "${MY_DATADIR}"
-		fi
-
-		diropts "-m0755"
-		local folder
-		for folder in "${MY_LOGDIR#${EPREFIX}}" ; do
-			dodir "${folder}"
-			keepdir "${folder}"
-			nonfatal fowners -R mysql:mysql "${folder}"
-		done
 
 		einfo "Including support files and sample configurations"
 		docinto "support-files"
@@ -929,8 +913,6 @@ pkg_config() {
 		egrep -sq -- "${optexp}" "${helpfile}" && options="${options} ${optfull}"
 	done
 
-	use prefix || options="${options} --user=mysql"
-
 	einfo "Creating the mysql database and setting proper permissions on it ..."
 
 	# Now that /var/run is a tmpfs mount point, we need to ensure it exists before using it
@@ -962,6 +944,8 @@ pkg_config() {
 	popd &>/dev/null || die
 	[[ -f "${ROOT}/${MY_DATADIR}/mysql/user.frm" ]] \
 	|| die "MySQL databases not installed"
+
+	use prefix || options="${options} --user=mysql"
 
 	local socket="${EROOT}/var/run/mysqld/mysqld${RANDOM}.sock"
 	local pidfile="${EROOT}/var/run/mysqld/mysqld${RANDOM}.pid"
