@@ -12,7 +12,6 @@ dev-libs
 dev-lisp
 dev-lua
 dev-ml
-dev-qt
 dev-ros
 dev-ruby
 dev-scheme

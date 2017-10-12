@@ -679,8 +679,6 @@ dev-libs/jemalloc:hugepages - Enable transparent huge page support
 dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
-dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
-dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/leveldb:snappy - support the snappy compression library
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
@@ -910,154 +908,6 @@ dev-ml/tyxml:camlp4 - Enables the camlp4 syntax extension (deprecated)
 dev-ml/tyxml:ppx - Enables the ppx syntax extension (preferred)
 dev-ml/uutf:utftrip - Builds and install the utftrip executable: Among other things, reads unicode on stdin and rewrites it on stdout.
 dev-ml/zarith:mpir - Use MPIR library instead of GMP.
-dev-qt/assistant:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/designer:declarative - Build the qdeclarativeview plugin
-dev-qt/designer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/designer:phonon - Build the phononwidgets plugin
-dev-qt/designer:qt3support - Build the qt3supportwidgets plugin
-dev-qt/designer:webkit - Build the qwebview plugin
-dev-qt/linguist:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/linguist-tools:qml - Enable QML support in lupdate
-dev-qt/pixeltool:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qdbusviewer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qdoc:qml - Enable QML/JS parsing support
-dev-qt/qt-creator:android - Build plugin for Android devices
-dev-qt/qt-creator:autotools - Enable autotools project manager plugin
-dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
-dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
-dev-qt/qt-creator:clangcodemodel - Build clang-based code model and refactoring plugins
-dev-qt/qt-creator:clangstaticanalyzer - Build clang-based static analyzer plugin
-dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
-dev-qt/qt-creator:cmake - Enable cmake project manager plugin
-dev-qt/qt-creator:designer - Build widget designer plugin
-dev-qt/qt-creator:glsl - Enable GLSL source code editor
-dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
-dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
-dev-qt/qt-creator:modeling - Enable graphical model editor
-dev-qt/qt-creator:nim - Enable Nim source code editor
-dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
-dev-qt/qt-creator:python - Enable Python source code editor
-dev-qt/qt-creator:qbs - Enable QBS project manager plugin
-dev-qt/qt-creator:qnx - Build plugin for QNX devices
-dev-qt/qt-creator:scxml - Enable graphical SCXML editor
-dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
-dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
-dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
-dev-qt/qt-creator:winrt - Build plugin for WinRT devices
-dev-qt/qt-meta:qt3support - Enable the Qt3Support library for Qt4
-dev-qt/qt-mobility:bluetooth - Enable Bluetooth support in QtConnectivity and QtSystemInfo modules
-dev-qt/qt-mobility:connectivity - Build the QtConnectivity module
-dev-qt/qt-mobility:contacts - Build the QtContacts module
-dev-qt/qt-mobility:feedback - Build the QtFeedback module
-dev-qt/qt-mobility:gallery - Build the QtGallery module
-dev-qt/qt-mobility:location - Build the QtLocation module
-dev-qt/qt-mobility:messaging - Build the QtMessaging module
-dev-qt/qt-mobility:multimedia - Build the QtMultimediaKit module
-dev-qt/qt-mobility:networkmanager - Enable NetworkManager support in QtBearer and QtSystemInfo modules
-dev-qt/qt-mobility:organizer - Build the QtOrganizer module
-dev-qt/qt-mobility:publishsubscribe - Build the QtPublishSubscribe module
-dev-qt/qt-mobility:pulseaudio - Enable PulseAudio support in QtMultimediaKit module
-dev-qt/qt-mobility:qml - Build QML bindings
-dev-qt/qt-mobility:sensors - Build the QtSensors module
-dev-qt/qt-mobility:serviceframework - Build the QtServiceFramework module
-dev-qt/qt-mobility:systeminfo - Build the QtSystemInfo module
-dev-qt/qt-mobility:tools - Build various useful tools (e.g.: qcrmlgen, servicexmlgen, vsexplorer, ...)
-dev-qt/qt-mobility:versit - Build the QtVersit module
-dev-qt/qt3d:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qt3d:qml - Build QML/QtQuick bindings
-dev-qt/qt3support:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtbearer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
-dev-qt/qtcore:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-dev-qt/qtcore:systemd - Enable native journald logging support
-dev-qt/qtdatavis3d:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtdeclarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtdeclarative:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
-dev-qt/qtdeclarative:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-dev-qt/qtdeclarative:webkit - Build the WebView QML component
-dev-qt/qtdeclarative:widgets - Enable QtWidgets support
-dev-qt/qtdeclarative:xml - Build the XmlListModel import for QtQuick (requires QtXmlPatterns)
-dev-qt/qtdemo:dbus - Build QtDBus examples and demos
-dev-qt/qtdemo:declarative - Build QtDeclarative examples and demos
-dev-qt/qtdemo:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtdemo:multimedia - Build QtMultimedia examples and demos
-dev-qt/qtdemo:opengl - Build QtOpenGL examples and demos
-dev-qt/qtdemo:phonon - Build Phonon examples and demos
-dev-qt/qtdemo:webkit - Build QtWebKit examples and demos
-dev-qt/qtdemo:xmlpatterns - Build QtXmlPatterns examples and demos
-dev-qt/qtdiag:network - Report network information
-dev-qt/qtdiag:widgets - Report widget style information
-dev-qt/qtgui:egl - Enable EGL integration
-dev-qt/qtgui:eglfs - Build the EGL Full Screen/Single Surface platform plugin
-dev-qt/qtgui:evdev - Enable support for input devices via evdev
-dev-qt/qtgui:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtgui:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtgui:glib - Enable integration with the dev-libs/glib event loop
-dev-qt/qtgui:gtkstyle - Build a widgets style that mimics the active GTK+ theme
-dev-qt/qtgui:ibus - Build the IBus input method plugin
-dev-qt/qtgui:libinput - Enable support for input devices via dev-libs/libinput
-dev-qt/qtgui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-dev-qt/qtgui:trace - Build the 'trace' graphicssystem engine which allows to record all drawing operations into a trace buffer. The trace can be replayed later with the qttracereplay tool.
-dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
-dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
-dev-qt/qtgui:xcb - Build the XCB platform plugin and enable X11 integration
-dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.io/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
-dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtmultimedia:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer using SLOT 1.0
-dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
-dev-qt/qtnetwork:bindist - Disable EC support via dev-libs/openssl
-dev-qt/qtnetwork:connman - Enable net-misc/connman-based bearer plugin
-dev-qt/qtnetwork:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
-dev-qt/qtnetwork:networkmanager - Enable net-misc/networkmanager-based bearer plugin
-dev-qt/qtopengl:egl - Use EGL instead of GLX to manage OpenGL contexts
-dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtopengl:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
-dev-qt/qtpositioning:qml - Build QML bindings
-dev-qt/qtprintsupport:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
-dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
-dev-qt/qtscript:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
-dev-qt/qtsensors:qml - Build QML bindings
-dev-qt/qtsql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtsql:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qttest:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtvirtualkeyboard:handwriting - Adds handwriting recognition integration support
-dev-qt/qtwayland:libinput - Enable support for input devices via dev-libs/libinput
-dev-qt/qtwayland:qml - Build QML/QtQuick bindings
-dev-qt/qtwayland:wayland-compositor - Build Qt compositor for wayland
-dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtwebengine:geolocation - Enable physical position determination via dev-qt/qtpositioning
-dev-qt/qtwebengine:pax_kernel - Enable building under a PaX enabled kernel
-dev-qt/qtwebengine:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
-dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
-dev-qt/qtwebengine:widgets - Enable QtWidgets support
-dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtwebkit:geolocation - Enable physical position determination via dev-qt/qtpositioning
-dev-qt/qtwebkit:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer using SLOT 1.0
-dev-qt/qtwebkit:gstreamer010 - Enable HTML5 audio/video support via media-libs/gstreamer using SLOT 0.10
-dev-qt/qtwebkit:multimedia - Enable HTML5 audio/video support via dev-qt/qtmultimedia
-dev-qt/qtwebkit:orientation - Enable device orientation detection via dev-qt/qtsensors
-dev-qt/qtwebkit:printsupport - Enable printing via dev-qt/qtprintsupport
-dev-qt/qtwebkit:qml - Build QML/QtQuick bindings
-dev-qt/qtwebkit:webchannel - Enable integration with dev-qt/qtwebchannel
-dev-qt/qtwebkit:webp - Add support for WebP image format
-dev-qt/qtwebsockets:qml - Build QML bindings
-dev-qt/qtwidgets:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtwidgets:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
 dev-ros/rosbag:lz4 - Add support for lz4 compressed bags.
 dev-ros/rosconsole:glog - Use dev-cpp/glog as log backend.
 dev-ros/rosconsole:log4cxx - Use dev-libs/log4cxx as log backend.
@@ -1178,16 +1028,8 @@ dev-util/intel-ocl-sdk:system-clang - Use system clang (sys-devel/clang) instead
 dev-util/intel-ocl-sdk:system-qt - Use system Qt (sys-devel-qtcore, sys-devel/qtgui) instead of bundled one
 dev-util/intel-ocl-sdk:system-tbb - Use sytem Thread Building Blocks (dev-cpp/tbb) instead of bundled one
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
-dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
-dev-util/kdevelop:ninja - Enable support for Ninja build system
-dev-util/kdevelop:okteta - Enable hex editor plugin
-dev-util/kdevelop:qmake - Enable support for QMake build system
-dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
-dev-util/kdevplatform:reviewboard - Enable reviewboard support
-dev-util/kdevplatform:welcomepage - Enable welcome page, requires dev-qt/qtdeclarative
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
-dev-util/massif-visualizer:callgraph - Enable detailed snapshot analysis using media-gfx/kgraphviewer
 dev-util/mdds:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-util/mingw64-runtime:idl - Install idl files.
 dev-util/mingw64-runtime:libraries - Build extra libraries.
@@ -1256,7 +1098,6 @@ dev-vcs/gitolite:contrib - Install user-contributed files
 dev-vcs/gitolite:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
 dev-vcs/gitolite-gentoo:contrib - Install user-contributed files
 dev-vcs/gitolite-gentoo:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
-dev-vcs/kdesvn:man - Build and install man pages
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
