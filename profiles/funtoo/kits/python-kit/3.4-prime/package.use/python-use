@@ -20,8 +20,8 @@ dev-util/bakefile python_single_target_python2_7
 dev-util/catalyst python_single_target_python2_7
 dev-util/coccinelle python_single_target_python2_7
 dev-util/confix python_single_target_python2_7
-=dev-util/d-feet-0.3.11 python_single_target_python2_7
 =dev-util/d-feet-0.3.10 python_single_target_python2_7
+=dev-util/d-feet-0.3.11 python_single_target_python2_7
 dev-util/diffuse python_single_target_python2_7
 dev-util/dput-ng python_single_target_python2_7
 dev-util/dwarves python_single_target_python2_7
@@ -41,7 +41,6 @@ dev-util/rr python_single_target_python2_7
 dev-util/systemtap python_single_target_python2_7
 dev-util/tailor python_single_target_python2_7
 dev-util/trace-cmd python_single_target_python2_7
-dev-util/universalindentgui python_single_target_python2_7
 dev-util/wxglade python_single_target_python2_7
 dev-util/xesam-tools python_single_target_python2_7
 dev-vcs/bzr-explorer python_single_target_python2_7
