@@ -1,3 +1,6 @@
+=dev-util/d-feet-0.3.10 python_single_target_python2_7
+=dev-util/d-feet-0.3.11 python_single_target_python2_7
+=dev-util/meld-3.16.4 python_single_target_python2_7
 dev-ada/gnatcoll python_single_target_python2_7
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
@@ -20,8 +23,6 @@ dev-util/bakefile python_single_target_python2_7
 dev-util/catalyst python_single_target_python2_7
 dev-util/coccinelle python_single_target_python2_7
 dev-util/confix python_single_target_python2_7
-=dev-util/d-feet-0.3.11 python_single_target_python2_7
-=dev-util/d-feet-0.3.10 python_single_target_python2_7
 dev-util/diffuse python_single_target_python2_7
 dev-util/dput-ng python_single_target_python2_7
 dev-util/dwarves python_single_target_python2_7
@@ -31,7 +32,6 @@ dev-util/gquilt python_single_target_python2_7
 dev-util/gyp python_single_target_python2_7
 dev-util/imediff2 python_single_target_python2_7
 dev-util/lldb python_single_target_python2_7
-=dev-util/meld-3.16.4 python_single_target_python2_7
 dev-util/mpatch python_single_target_python2_7
 dev-util/osc python_single_target_python2_7
 dev-util/perf python_single_target_python2_7
