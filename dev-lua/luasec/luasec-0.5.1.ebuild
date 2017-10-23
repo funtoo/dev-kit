@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/brunoos/luasec/archive/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE="libressl"
 
 RDEPEND="
@@ -24,8 +24,11 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${P}
 
 src_prepare() {
+	sed -i -e "s#^LUAPATH.*#LUAPATH=$(pkg-config --variable INSTALL_LMOD lua)#"\
+		-e "s#^LUACPATH.*#LUACPATH=$(pkg-config --variable INSTALL_CMOD lua)#" Makefile || die
 	sed -i -e "s/-O2//" src/Makefile || die
 	lua src/options.lua -g /usr/include/openssl/ssl.h > src/options.h || die
+	epatch "${FILESDIR}/${PN}-0.5.1-compdefine.patch"
 }
 
 src_compile() {
@@ -33,11 +36,4 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC)" \
 		linux
-}
-
-src_install() {
-	emake \
-		LUAPATH="${D}/$(pkg-config --variable INSTALL_LMOD lua)" \
-		LUACPATH="${D}/$(pkg-config --variable INSTALL_CMOD lua)" \
-		install
 }

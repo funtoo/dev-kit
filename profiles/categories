@@ -6,15 +6,10 @@ dev-embedded
 dev-erlang
 dev-games
 dev-go
-dev-haskell
 dev-lang
 dev-libs
-dev-lisp
 dev-lua
-dev-ml
 dev-ros
-dev-ruby
-dev-scheme
 dev-tcltk
 dev-util
 dev-vcs

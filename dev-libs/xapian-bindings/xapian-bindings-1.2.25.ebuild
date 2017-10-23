@@ -1,20 +1,20 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads"
 
-USE_PHP="php5-5 php5-6"
+USE_PHP="php5-6"
 
 PHP_EXT_NAME="xapian"
 PHP_EXT_INI="yes"
 PHP_EXT_OPTIONAL_USE="php"
 
 #mono violates sandbox, we disable it until we figure this out
-#inherit java-pkg-opt-2 mono-env php-ext-source-r2 python
-inherit java-pkg-opt-2 php-ext-source-r2 python-r1 toolchain-funcs
+#inherit java-pkg-opt-2 mono-env php-ext-source-r3 python
+inherit java-pkg-opt-2 php-ext-source-r3 python-r1 toolchain-funcs
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
@@ -22,7 +22,7 @@ SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 #IUSE="java lua mono perl php python ruby tcl"
 #REQUIRED_USE="|| ( java lua mono perl php python ruby tcl )"
 IUSE="java lua perl php python ruby tcl"
@@ -179,7 +179,7 @@ src_install () {
 				install
 		done
 
-		php-ext-source-r2_createinifiles
+		php-ext-source-r3_createinifiles
 	fi
 
 	if use python; then

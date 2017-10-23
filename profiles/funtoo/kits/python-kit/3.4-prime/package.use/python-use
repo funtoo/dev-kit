@@ -17,7 +17,6 @@ dev-libs/libmacaroons python_single_target_python2_7
 dev-libs/libnatspec python_single_target_python2_7
 dev-libs/qrosspython python_single_target_python2_7
 dev-libs/redland-bindings python_single_target_python2_7
-dev-ruby/pygments_rb python_single_target_python2_7
 dev-util/apitrace python_single_target_python2_7
 dev-util/bakefile python_single_target_python2_7
 dev-util/catalyst python_single_target_python2_7

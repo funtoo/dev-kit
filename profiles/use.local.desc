@@ -281,225 +281,6 @@ dev-games/physfs:zip - Enable ZIP archive support
 dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
 dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
 dev-games/simgear:subversion - Enable terrasync scenery downloader
-dev-haskell/abstract-deque:usecas - Enable the reference implementation to use hardware compare-and-swap.
-dev-haskell/aeson-pretty:lib-only - don't build 'aeson-pretty' executable.
-dev-haskell/ansi-terminal:example - Build the example application.
-dev-haskell/ansi-wl-pprint:example - Build the example application.
-dev-haskell/authenticate:network-uri - Get Network.URI from the network-uri package
-dev-haskell/bifunctors:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/biosff:fclip - Build the fclip executable.
-dev-haskell/biosff:flower - Build the flower executable.
-dev-haskell/biosff:frecover - Build the frecover executable.
-dev-haskell/blaze-builder-enumerator:newbuilder - use bytestring-builder instead of blaze-builder-0.3
-dev-haskell/bytedump:executable - build executable file
-dev-haskell/bytes:test-doctests - Enable the doctest suite when using the enable-tests option for cabal.
-dev-haskell/c2hs:regression - run regression tests
-dev-haskell/cabal-install:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/cabal-install:noprefs - Ignore 'preferred-versions' file from hackage's tarball.
-dev-haskell/certificate:executable - Build the executable
-dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev-lang/ghc-7.
-dev-haskell/cgi:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/chell:color-output - use colors in program output
-dev-haskell/citeproc-hs:bibutils - use Chris Putnam's app-text/bibutils
-dev-haskell/citeproc-hs:embed_data_files - Embed locale files into the library (needed for windows packaging)
-dev-haskell/citeproc-hs:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
-dev-haskell/citeproc-hs:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
-dev-haskell/citeproc-hs:small_base - Choose the new smaller, split-up base package.
-dev-haskell/citeproc-hs:unicode_collation - Use Haskell bindings to the dev-libs/icu
-dev-haskell/cmark:system-cmark - use app-text/cmark instead of bundled copy
-dev-haskell/cmdargs:quotation - Build quote module
-dev-haskell/cmdargs:testprog - Build the test program
-dev-haskell/comonad:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/comonad:contravariant - You can disable the use of the `contravariant` package using `-f-contravariant`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Contravariant`
-dev-haskell/comonad:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
-dev-haskell/comonad:test-doctests - Run the doctests test suite
-dev-haskell/conduit:nohandles - experimental code to use raw system calls in place of handles. Not recommended for general use
-dev-haskell/configfile:buildtests - Build the executable to run unit tests.
-dev-haskell/contravariant:safe - Get Safe guarantees rather than merely Trustworthy, but with worse constant factors.
-dev-haskell/contravariant:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/contravariant:statevar - You can disable the use of the `StateVar` package using `-f-StateVar`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/contravariant:tagged - You can disable the use of the `tagged` package on older versons of GHC using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/cpu:executable - build 'cpuid' tool
-dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
-dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
-dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
-dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
-dev-haskell/cryptonite:support_aesni - allow compilation with AESNI on system and architecture that supports it
-dev-haskell/cryptonite:support_blake2_sse - Use SSE optimized version of BLAKE2
-dev-haskell/cryptonite:support_deepseq - add deepseq instances for cryptographic types
-dev-haskell/cryptonite:support_pclmuldq - Allow compilation with pclmuldq on architecture that supports it
-dev-haskell/cryptonite:support_rdrand - allow compilation with AESNI on system and architecture that supports it
-dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
-dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
-dev-haskell/entropy:halvm - Build for the HaLVM.
-dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
-dev-haskell/glib:closure_signals - Use the the GClosure-based signals implementation.
-dev-haskell/gtk:deprecated - Include definitions in this library that are considered obsolete.
-dev-haskell/gtk:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
-dev-haskell/gtk:gio - Depend on GIO package, thereby enabling certain features.
-dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signals implementation.
-dev-haskell/gtk3:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
-dev-haskell/gtk3:gio - Depend on GIO package, thereby enabling certain features.
-dev-haskell/hackage-security:use-network-uri - Get Network.URI from the network-uri package.
-dev-haskell/happstack-server:network-uri - Get Network.URI from the network-uri package
-dev-haskell/happstack-server:template_haskell - Description: Template Haskell is available on this system
-dev-haskell/hashed-storage:diff - Provide the Storage.Hashed.Diff module.
-dev-haskell/hashed-storage:hpc - Compile with the profiling ghc flag -fhpc.
-dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
-dev-haskell/hashtables:portable - if on, use only pure Haskell code and no GHC extensions.
-dev-haskell/hashtables:unsafe-tricks - turn on unsafe GHC tricks
-dev-haskell/haskeline:legacy-encoding - Use legacy iconv encoding for POSIX. This is only intended for testing.
-dev-haskell/haskeline:libiconv - Explicitly link against the libiconv library.
-dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
-dev-haskell/hdbc-odbc:buildstresstest - Build stress test
-dev-haskell/hdbc-sqlite3:buildtests - Build the executable to run unit tests
-dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
-dev-haskell/hexpat:bundled-expat - Use bundled expat instead of dev-libs/expat
-dev-haskell/highlighting-kate:executable - Build the Highlight executable.
-dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
-dev-haskell/hit:executable - Build the executable
-dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour.
-dev-haskell/hps:build-exec - Build the `hps-fractals' executable
-dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/hslogger:buildtests - Build the executable to run unit tests.
-dev-haskell/hslua:apicheck - Compile Lua with -DLUA_USE_APICHECK..
-dev-haskell/hslua:system-lua - Use the system-wide lua instead of the bundled copy.
-dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
-dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
-dev-haskell/http:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/http-api-data:use-text-show - Use text-show library for efficient ToHttpApiData implementations
-dev-haskell/http-client:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/http-streams:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/httpd-shed:buildexamples - Build example executables.
-dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/hxt:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/icalendar:network-uri - use network-uri package
-dev-haskell/json:generic - Add support for generic encoder (dev-haskell/syb)
-dev-haskell/json:mapdict - Encode Haskell maps as JSON dicts
-dev-haskell/json:parsec - Add support for parsing with Parsec
-dev-haskell/json:pretty - Add support for using pretty printing combinators
-dev-haskell/language-dot:executable - Build the `ppdot' executable
-dev-haskell/lens:benchmark-uniplate - Enable benchmarking against Neil Mitchell's uniplate library for comparative performance analysis. Defaults to being turned off to avoid the extra dependency.
-dev-haskell/lens:dump-splices - Build and run the doctests test-suite.
-dev-haskell/lens:inlining - Generate inline pragmas when using template-haskell. This defaults to enabled, but you can to shut it off to benchmark the relative performance impact, or as last ditch effort to address compile errors resulting from the myriad versions of template-haskell that all purport to be 2.8.
-dev-haskell/lens:j - Attempt a parallel build with GHC 7.8.
-dev-haskell/lens:lib-werror - Turn on ghc-options: -Werror
-dev-haskell/lens:old-inline-pragmas - Some 7.6.1-rc1 users report their TH still uses old style inline pragmas. This lets them turn on inlining.
-dev-haskell/lens:safe - Disallow unsafeCoerce
-dev-haskell/lens:test-doctests - Build and run the doctests test-suite.
-dev-haskell/lens:test-hlint - You can disable the hlint test suite with -f-test-hlint
-dev-haskell/lens:test-hunit - You can disable the hunit test suite with -f-test-hunit
-dev-haskell/lens:test-properties - Build the properties test if we're building tests
-dev-haskell/lens:test-templates - Build the test templates if we're building tests
-dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
-dev-haskell/lifted-async:monad-control-1 - Use moand-control == 1.*
-dev-haskell/linear:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
-dev-haskell/monad-logger:template_haskell - Enable Template Haskell support.
-dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
-dev-haskell/nats:hashable - You can disable the use of the `hashable` package using USE=-hashable. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If set we will not supply an instance of `Hashable`.
-dev-haskell/network-data:small_base - Build the split-up base package.
-dev-haskell/pandoc-citeproc:bibutils - use Chris Putnam's app-text/bibutils
-dev-haskell/pandoc-citeproc:embed_data_files - Embed locale files into the library (needed for windows packaging)
-dev-haskell/pandoc-citeproc:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
-dev-haskell/pandoc-citeproc:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
-dev-haskell/pandoc-citeproc:small_base - Choose the new smaller, split-up base package.
-dev-haskell/pandoc-citeproc:test_citeproc - Build the test-citeproc program
-dev-haskell/pandoc-citeproc:unicode_collation - Use Haskell bindings to the dev-libs/icu
-dev-haskell/persistent:nooverlap - Use OverlappingInstances only for String. Only developers should use this.
-dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable.
-dev-haskell/pointed:comonad - optional instances
-dev-haskell/pointed:containers - optional instances
-dev-haskell/pointed:kan-extensions - optional instances
-dev-haskell/pointed:semigroupoids - optional instances
-dev-haskell/pointed:semigroups - optional instances
-dev-haskell/pointed:stm - optional instances
-dev-haskell/pointed:tagged - optional instances
-dev-haskell/pointed:transformers - optional instances
-dev-haskell/pointed:unordered-containers - optional instances
-dev-haskell/publicsuffixlist:create - export Network.PublicSuffixList.Create module
-dev-haskell/publicsuffixlist:runtimelist - read suffix list from dist at startup instead of embedding list into library
-dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
-dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/reflection:template-haskell - Enable template haskell.
-dev-haskell/rfc5051:mkunicodedata - build codes generator itself
-dev-haskell/sandi:with-conduit - Build with conduit
-dev-haskell/scientific:bytestring-builder - Provide the Data.ByteString.Builder.Scientific module (requires bytestring >= 0.10).
-dev-haskell/semigroupoid-extras:profunctors - You can disable the use of the `profunctors` package using `-f-profunctors`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
-dev-haskell/semigroupoids:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroupoids:contravariant - You can disable the use of the `contravariant` package using `-f-contravariant`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Contravariant`
-dev-haskell/semigroupoids:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
-dev-haskell/semigroupoids:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroups:binary - provide instances for binary package
-dev-haskell/semigroups:bytestring - You can disable the use of the `bytestring` package using USE=-bytestring. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroups:containers - You can disable the use of the `containers` package using USE=-containers. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroups:deepseq - You can disable the use of the `deepseq` package using `-f-deepseq`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroups:hashable - You can disable the use of the `hashable` package using USE=-hashable. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If set we will not supply an instance of `Hashable`.
-dev-haskell/semigroups:text - You can disable the use of the `text` package using USE=-text. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroups:transformers - provide instances for transformers package.
-dev-haskell/semigroups:unordered-containers - You can disable the use of the `unordered-containers` package using USE=-unordered-containers. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
-dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
-dev-haskell/shakespeare:test_coffee - Render tests through coffeescript render function.
-dev-haskell/shakespeare:test_export - Test export.
-dev-haskell/shakespeare:test_roy - Render tests through roy render function.
-dev-haskell/shakespeare-js:test_coffee - Test coffee.
-dev-haskell/shakespeare-js:test_export - Test export.
-dev-haskell/shakespeare-js:test_roy - Test roy.
-dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
-dev-haskell/shuffle:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
-dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
-dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian').
-dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
-dev-haskell/skylighting:executable - Build the skylighting executable.
-dev-haskell/snap-core:portable - No non-haskell unportable code.
-dev-haskell/snap-server:build-pong - Build a server that just returns "PONG"
-dev-haskell/snap-server:openssl - enable https support using dev-haskell/hsopenssl
-dev-haskell/snap-server:portable - no non-haskell unportable code.
-dev-haskell/tagsoup:download - Build with Download module.
-dev-haskell/tagsoup:testprog - Build the test program.
-dev-haskell/tasty:colors - Enable colorful output
-dev-haskell/tasty-quickcheck:old-quickcheck - Use Quick-Check < 2.7.
-dev-haskell/texmath:executable - Compile test executable.
-dev-haskell/texmath:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/text:developer - operate in developer mode
-dev-haskell/thyme:bug-for-bug - bug-for-bug compatibility with time
-dev-haskell/thyme:lens - use the full lens package
-dev-haskell/thyme:show-internal - instance Show of internal representation
-dev-haskell/tls:compat - Accept SSLv2 compatible handshake.
-dev-haskell/tls:network - Use the base network library.
-dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
-dev-haskell/transformers-compat:three - Use transformers-0.3
-dev-haskell/unix-compat:old-time - build against old-time package
-dev-haskell/uuagc:bootstrap_external - Use an external uuagc executable for bootstrapping.
-dev-haskell/uuagc:with-loag - Use dev-haskell/minisat external SAT-solver to schedule all Linear Ordered AGs.
-dev-haskell/vector:boundschecks - Enable bounds checking
-dev-haskell/vector:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty
-dev-haskell/vector:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty
-dev-haskell/vector-algorithms:bench - Build a benchmarking program.
-dev-haskell/vector-algorithms:boundschecks - Enable bounds checking.
-dev-haskell/vector-algorithms:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty.
-dev-haskell/vector-algorithms:properties - Enable quickcheck tests.
-dev-haskell/vector-algorithms:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty.
-dev-haskell/void:safe - dissable effective but unsafe coersions
-dev-haskell/wai-app-static:print - print debug info.
-dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD).
-dev-haskell/warp:warp-debug - Add additional debuging information
-dev-haskell/x11:screensaver - whether to build XScreenSaver.
-dev-haskell/x509-store:executable - Build the executable
-dev-haskell/xss-sanitize:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/yaml:no-examples - don't build the examples
-dev-haskell/yaml:no-exe - don't install the yaml2json executable
-dev-haskell/yaml:no-unicode - Don't enable unicode output. Instead, unicode characters will be escaped.
-dev-haskell/yaml:system-libyaml - Use system libyaml instead on generic one
-dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
-dev-haskell/yesod-form:network-uri - Get Network.URI from the network-uri package
-dev-haskell/zip-archive:executable - Build the Zip executable.
-dev-haskell/zlib:non-blocking-ffi - Execute FFI calls in the context of haskell thread.
 dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
 dev-lang/crystal:blocking-stdio-hack - Keep STDIO file descriptors in blocking mode.
 dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
@@ -520,9 +301,6 @@ dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geos
 dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
 dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
 dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
-dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
-dev-lang/ghc:ghcbootstrap - Bootstrap from an existing GHC installation.
-dev-lang/ghc:ghcmakebinary - Build with less runtime depends (bundle libffi for building bootstrap binaries).
 dev-lang/gnat-gpl:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
 dev-lang/gnat-gpl:cilk - Support the Cilk Plus language (C/C++ based languages for parallel programming)
 dev-lang/gnat-gpl:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
@@ -549,7 +327,6 @@ dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
 dev-lang/mercury:erlang - Support Mercury Erlang grade
 dev-lang/mercury:trail - Support Mercury trail grades
-dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
 dev-lang/moarvm:asan - Enable clang's Address Sanitizer functionality. Expect longer compile time.
 dev-lang/moarvm:clang - Use clang compiler instead of GCC
 dev-lang/moarvm:jit - Enable Just-In-Time-Compiler. Has no effect except on AMD64 and Darwin.
@@ -559,22 +336,13 @@ dev-lang/mono:pax_kernel - Enable if the user plans to run the package under a p
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
 dev-lang/nqp:clang - Toggle usage of the clang compiler in conjunction with MoarVM
 dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
-dev-lang/ocaml:flambda - Enables the Flambda optimizer: A new intermediate representation (introduced in ocaml 4.03) in the depths of the compiler designed to allow for better inlining.
-dev-lang/ocaml:spacetime - Enables the Spacetime memory profiler. See https://caml.inria.fr/pub/docs/manual-ocaml/spacetime.html for more information.
 dev-lang/orc:pax_kernel - Apply patch needed for pax enabled kernels.
-dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native.
 dev-lang/qu-prolog:pedro - Pedro subscription/notification communications system
 dev-lang/rakudo:clang - Use Clang to compile the MoarVM backend
 dev-lang/rakudo:moar - Use the MoarVM as backend
-dev-lang/rubinius:llvm - Build with llvm. Currently the package only builds against old versions of llvm.
-dev-lang/ruby:jemalloc - Use dev-libs/jemalloc for memory allocation.
-dev-lang/ruby:rdoc - Install dev-ruby/rdoc after installing Ruby.
-dev-lang/ruby:readline - Use the sys-libs/readline library to provide the readline extension, used for instance by the irb tool. This flag is meaningful only if the libedit USE flag is disabled. If neither libedit nor readline USE flags are enabled, the readline extension will not be built (and irb will lose line editing functionality).
-dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
 dev-lang/rust:clang - Use sys-devel/clang for building
 dev-lang/rust:libcxx - Use sys-libs/libcxx as standard library when building with sys-devel/clang
 dev-lang/rust:system-llvm - Use system sys-devel/llvm in place of the bundled one
-dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/spidermonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
 dev-lang/spidermonkey:system-icu - Use the system-wide dev-libs/icu instead of bundled -- note, only takes effect when icu flag is enabled
@@ -847,21 +615,6 @@ dev-libs/xmlsec:openssl - Install xmlsec-openssl library
 dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
 dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
-dev-lisp/abcl:clisp - Build Armed Bear Common Lisp using GNU CLISP
-dev-lisp/abcl:cmucl - Build Armed Bear Common Lisp using CMU Common Lisp
-dev-lisp/abcl:jad - Enable support for disassembling compiled code using JAD
-dev-lisp/clisp:hyperspec - Use local hyperspec instead of online version
-dev-lisp/clisp:new-clx - Build CLISP with support for the NEW-CLX module which is a C binding to the Xorg libraries
-dev-lisp/clisp:pari - Build CLISP with support for the PARI Computer Algebra System
-dev-lisp/clisp:svm - Build CLISP with support for the Support Vector Machine module
-dev-lisp/clx:doc - Builds documentation
-dev-lisp/cmucl:source - Include source code for CMUCL in installation
-dev-lisp/ecls:gengc - Use generational garbage collection (experimental)
-dev-lisp/ecls:libatomic - Use dev-libs/libatomic_ops library
-dev-lisp/ecls:precisegc - Use type information during garbage collection (experimental)
-dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL1 image)
-dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
-dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lua/lpeg:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-lua/lua-openssl:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-lua/luacheck:luajit - Use dev-lang/luajit instead of dev-lang/lua
@@ -874,96 +627,9 @@ dev-lua/luvit:bundled-libs - Use bundled versions of some libraries.
 dev-lua/messagepack:luajit - Use the lua just-in-time compiler dev-lang/luajit instead of dev-lang/lua
 dev-lua/mpack:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-lua/say:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-ml/cairo-ocaml:pango - Enable support for x11-libs/pango
-dev-ml/csv:lwt - Enables the Lwt-based library for asynchronous operations.
-dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
-dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
-dev-ml/dose3:zip - Adds support for handling zip files.
-dev-ml/eliom:ppx - Enable PPX syntax extension support.
-dev-ml/js_of_ocaml:camlp4 - Build with camlp4 syntax extensions.
-dev-ml/js_of_ocaml:deriving - Enable dev-ml/deriving support for improving the type safety.
-dev-ml/js_of_ocaml:lwt - Enable dev-ml/lwt support.
-dev-ml/js_of_ocaml:ppx - Enables the ppx syntax extension
-dev-ml/js_of_ocaml:react - Enable functionnal reactive programming support.
-dev-ml/lablgtk:glade - Enable libglade bindings compilation.
-dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
-dev-ml/lablgtk:sourceview - Enable GtkSourceView support
-dev-ml/logs:cli - Enables the Logs_cli library that provides command line support for controlling Logs.
-dev-ml/logs:fmt - Enables the Logs_fmt reporter.
-dev-ml/logs:lwt - Enables the Logs_lwt library that provides Lwt logging functions.
-dev-ml/lwt:camlp4 - Enable camlp4 syntax extension
-dev-ml/lwt:libev - Enable the dev-libs/libev-based backend.
-dev-ml/lwt:ppx - Enables the ppx syntax extension
-dev-ml/ocaml-cohttp:async - Enables support for the dev-ml/async asynchronous execution library.
-dev-ml/ocaml-cohttp:lwt - Enables support for the dev-ml/lwt cooperative light-weight thread library.
-dev-ml/ocaml-cstruct:async - Support for asynchronous execution
-dev-ml/ocaml-cstruct:lwt - Enable threads via lwt
-dev-ml/ocaml-cstruct:ppx - Enable the ppx syntax extension
-dev-ml/ocaml-websocket:async - Enables support for the dev-ml/async asynchronous execution library.
-dev-ml/ocaml-websocket:lwt - Enables support for the dev-ml/lwt cooperative light-weight thread library.
-dev-ml/ocamlnet:httpd - Enables net-httpd web server component
-dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using object channels
-dev-ml/onanomsg:lwt - Enables lwt support.
-dev-ml/pgocaml:camlp4 - Enable PG'Ocaml syntax extension.
-dev-ml/tyxml:camlp4 - Enables the camlp4 syntax extension (deprecated)
-dev-ml/tyxml:ppx - Enables the ppx syntax extension (preferred)
-dev-ml/uutf:utftrip - Builds and install the utftrip executable: Among other things, reads unicode on stdin and rewrites it on stdout.
-dev-ml/zarith:mpir - Use MPIR library instead of GMP.
 dev-ros/rosbag:lz4 - Add support for lz4 compressed bags.
 dev-ros/rosconsole:glog - Use dev-cpp/glog as log backend.
 dev-ros/rosconsole:log4cxx - Use dev-libs/log4cxx as log backend.
-dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
-dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_png.
-dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.
-dev-ruby/barby:qrcode - Add support for QRCode 2D codes using dev-ruby/rqrcode.
-dev-ruby/barby:rmagick - Add support for writing images (among others PNG, GIF and JPEG) using dev-ruby/rmagick. Not available on JRuby.
-dev-ruby/facter:dmi - Use sys-apps/dmidecode to determine hardware system properties
-dev-ruby/facter:pciutils - Use sys-apps/pciutils to determine hardware system properties
-dev-ruby/facter:virt - Use app-emulation/virt-what for virtual machine detection
-dev-ruby/faraday_middleware:mashify - Include FaradayMiddleware::Mashify
-dev-ruby/faraday_middleware:oauth - Include FaradayMiddleware::OAuth
-dev-ruby/faraday_middleware:parsexml - Include FaradayMiddleware::ParseXml
-dev-ruby/faraday_middleware:rashify - Include FaradayMiddleware::Rashify
-dev-ruby/maruku:highlight - Enable source code highlighting via dev-ruby/syntax
-dev-ruby/net-ssh:sodium - Use dev-libs/libsodium via dev-ruby/rbnacl for Ed25519 support.
-dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
-dev-ruby/rrdtool-bindings:graph - Enable support for graphing functions
-dev-ruby/rspec-core:highlight - Enable source code highlighting via dev-ruby/coderay
-dev-ruby/ruby-sdl:image - Enable media-libs/sdl-image support
-dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
-dev-ruby/ruby-sdl:sge - Enable sdl-sge support
-dev-ruby/rubygems:server - Install support for the rubygems server
-dev-scheme/gauche-gl:cg - Enable NVidia Cg binding
-dev-scheme/gauche-gtk:glgd - Enable GL graph draw
-dev-scheme/kawa:awt - Assume AWT is available
-dev-scheme/kawa:echo2 - Enable support for the Echo2 web toolkit with dev-java/echo2
-dev-scheme/kawa:frontend - Build "kawa" front-end program using sys-libs/readline
-dev-scheme/kawa:jemacs - Build JEmacs
-dev-scheme/kawa:krl - Build BRL emulation and KRL
-dev-scheme/kawa:sax - Assume SAX2 is available with dev-java/sax
-dev-scheme/kawa:servlets - Build support for generating servlets with dev-java/servletapi
-dev-scheme/kawa:swing - Assume Swing is available
-dev-scheme/kawa:swt - Assume SWT is available with dev-java/swt
-dev-scheme/kawa:xqtests - Support XQuery Test Suite
-dev-scheme/racket:backtrace - Support GC backtrace dumps
-dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
-dev-scheme/racket:places - Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
-dev-scheme/racket:plot - Enable plot libraries
-dev-scheme/racket:threads - Enable support for green threads
-dev-scheme/scm:arrays - Support for arrays, uniform-arrays and uniform-vectors.
-dev-scheme/scm:bignums - Support for large precision integers.
-dev-scheme/scm:cautious - SCM will always check the number of arguments to interpreted closures.
-dev-scheme/scm:dynamic-linking - Be able to load compiled files while running.
-dev-scheme/scm:engineering-notation - Floats to display in engineering notation (exponents always multiples of 3) instead of scientific notation.
-dev-scheme/scm:gsubr - generalized c arguments: for arbitrary (more then 11) arguments to C functions.
-dev-scheme/scm:inexact - Support for floating point numbers.
-dev-scheme/scm:ioext - Commonly available I/O extensions: line I/O, file positioning, file delete and rename, and directory functions.
-dev-scheme/scm:libscm - Build and install libscm.a and related headers
-dev-scheme/scm:macro - C level support for hygienic and referentially transparent macros (syntax-rules macros).
-dev-scheme/scm:regex - String regular expression matching.
-dev-scheme/scm:unix - Support for: nice, acct, lstat, readlink, symlink, mknod and sync.
-dev-scheme/slib:gambit - Support for gambit scheme implementation
-dev-scheme/slib:scm - Support for scm scheme implementation
 dev-tcltk/expect-lite:debug - pull in packages needed for runtime interactive debugger
 dev-tcltk/tktreectrl:shellicon - shellicon extension
 dev-util/android-ndk:legacy-toolchains - Install legacy toolchains
