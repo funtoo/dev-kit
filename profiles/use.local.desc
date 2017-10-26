@@ -2,41 +2,6 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-dev-ada/asis:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/asis:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/aunit:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/aunit:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/aws:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/aws:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/gnat_util:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/gnat_util:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/gnat_util:shared - Build gnat_util shared library
-dev-ada/gnat_util:static - Build gnat_util static library
-dev-ada/gnat_util:static-pic - Build gnat_util static library with pic code
-dev-ada/gnatcoll:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/gnatcoll:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/gnatcoll:postgresql - Adds support for postgresql
-dev-ada/gnatcoll:projects - Adds support for projects
-dev-ada/gnatcoll:pygobject - Adds support for pygobject
-dev-ada/gnatcoll:shared - Build shared library
-dev-ada/gnatcoll:static - Build static library
-dev-ada/gnatcoll:tools - Build associated tools
-dev-ada/gnatmem:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/gnatmem:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/gprbuild:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/gprbuild:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/gprbuild:shared - Build shared library
-dev-ada/gprbuild:static - Build static library
-dev-ada/gprbuild:static-pic - Build static library with pic code
-dev-ada/gtkada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/gtkada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/gtkada:shared - Build gtkada as shared library
-dev-ada/gtkada:static - Build gtkada as static library
-dev-ada/xmlada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
-dev-ada/xmlada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
-dev-ada/xmlada:shared - Build shared library
-dev-ada/xmlada:static - Build static library
-dev-ada/xmlada:static-pic - Build static library with pic code
 dev-cpp/eigen:c++11 - Build using the C++11 standard
 dev-cpp/eigen:cpu_flags_x86_f16c - Take advantage of CPU feature f16c
 dev-cpp/eigen:cuda - Build with cuda support
@@ -281,76 +246,6 @@ dev-games/physfs:zip - Enable ZIP archive support
 dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
 dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
 dev-games/simgear:subversion - Enable terrasync scenery downloader
-dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
-dev-lang/crystal:blocking-stdio-hack - Keep STDIO file descriptors in blocking mode.
-dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
-dev-lang/crystal:xml - Use the dev-libs/libxml2 library to enable Crystal xml module
-dev-lang/crystal:yaml - Use the dev-libs/libyaml library to enable Crystal yaml module
-dev-lang/ekopath:mpich - Include pre-built MPICH libraries
-dev-lang/ekopath:openmpi - Include pre-built OpenMPI 1.x libraries
-dev-lang/ekopath:openmpi2 - Include pre-built OpenMPI 2.x libraries
-dev-lang/erlang:compat-ethread - Enable compatibility with pre-pentium 4 CPUs in the ethread library.
-dev-lang/erlang:dirty-schedulers - Enable dirty schedulers
-dev-lang/erlang:halfword - Enable halfword emulator
-dev-lang/erlang:hipe - HIgh Performance Erlang extension
-dev-lang/erlang:kpoll - Enable kernel polling support
-dev-lang/fpc:ide - Build and install the Free Pascal Compiler IDE
-dev-lang/gdl:eigen - Build matrix manipulation with dev-cpp/eigen
-dev-lang/gdl:grib - Add support for the meteorological GRIB format with sci-libs/grib_api
-dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geosciences/gshhs-data
-dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
-dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
-dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
-dev-lang/gnat-gpl:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
-dev-lang/gnat-gpl:cilk - Support the Cilk Plus language (C/C++ based languages for parallel programming)
-dev-lang/gnat-gpl:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
-dev-lang/gnat-gpl:go - Build the GCC Go language frontend.
-dev-lang/gnat-gpl:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
-dev-lang/gnat-gpl:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
-dev-lang/gnat-gpl:mpx - Enable support for Intel Memory Protection Extensions (MPX)
-dev-lang/gnat-gpl:nopie - Disable PIE support (NOT FOR GENERAL USE)
-dev-lang/gnat-gpl:nossp - Disable SSP support (NOT FOR GENERAL USE)
-dev-lang/gnat-gpl:objc - Build support for the Objective C code language
-dev-lang/gnat-gpl:objc++ - Build support for the Objective C++ language
-dev-lang/gnat-gpl:objc-gc - Build support for the Objective C code language Garbage Collector
-dev-lang/gnat-gpl:pgo - Build GCC using Profile Guided Optimization (PGO)
-dev-lang/gnat-gpl:regression-test - Run the testsuite and install the results (requires FEATURES=test)
-dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
-dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
-dev-lang/gnat-gpl:vtv - Build support for virtual table verification (a C++ hardening feature)
-dev-lang/go:gccgo - Enable bootstrapping using gccgo
-dev-lang/icon:iplsrc - install the icon programming library source
-dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
-dev-lang/logtalk:fop - Support for generating pdf documentation using fop
-dev-lang/logtalk:xslt - Support for generating html documentation using xslt
-dev-lang/lua:deprecated - make deprecated data structures/routines available
-dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
-dev-lang/mercury:erlang - Support Mercury Erlang grade
-dev-lang/mercury:trail - Support Mercury trail grades
-dev-lang/moarvm:asan - Enable clang's Address Sanitizer functionality. Expect longer compile time.
-dev-lang/moarvm:clang - Use clang compiler instead of GCC
-dev-lang/moarvm:jit - Enable Just-In-Time-Compiler. Has no effect except on AMD64 and Darwin.
-dev-lang/moarvm:optimize - Enable optimization via CFLAGS
-dev-lang/moarvm:ubsan - Enable clang's Undefined Behavior Sanitizer functionality. Expect longer compile time.
-dev-lang/mono:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
-dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
-dev-lang/nqp:clang - Toggle usage of the clang compiler in conjunction with MoarVM
-dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
-dev-lang/orc:pax_kernel - Apply patch needed for pax enabled kernels.
-dev-lang/qu-prolog:pedro - Pedro subscription/notification communications system
-dev-lang/rakudo:clang - Use Clang to compile the MoarVM backend
-dev-lang/rakudo:moar - Use the MoarVM as backend
-dev-lang/rust:clang - Use sys-devel/clang for building
-dev-lang/rust:libcxx - Use sys-libs/libcxx as standard library when building with sys-devel/clang
-dev-lang/rust:system-llvm - Use system sys-devel/llvm in place of the bundled one
-dev-lang/spidermonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
-dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
-dev-lang/spidermonkey:system-icu - Use the system-wide dev-libs/icu instead of bundled -- note, only takes effect when icu flag is enabled
-dev-lang/spidermonkey:threadsafe - Build a threadsafe version of spidermonkey
-dev-lang/swi-prolog:archive - Use libarchive for extension packs
-dev-lang/swi-prolog:uuid - Use ossp-uuid for UUID pack
-dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
-dev-lang/yap:R - Enable support for connecting R to Prolog
 dev-libs/DirectFB:bmp - build BMP image provider
 dev-libs/DirectFB:divine - enable DiVine
 dev-libs/DirectFB:drmkms - build with DRM/KMS support
@@ -615,23 +510,9 @@ dev-libs/xmlsec:openssl - Install xmlsec-openssl library
 dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
 dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
-dev-lua/lpeg:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/lua-openssl:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/luacheck:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/luafilesystem:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/luaossl:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
-dev-lua/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
-dev-lua/luassert:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/luvit:bundled-libs - Use bundled versions of some libraries.
-dev-lua/messagepack:luajit - Use the lua just-in-time compiler dev-lang/luajit instead of dev-lang/lua
-dev-lua/mpack:luajit - Use dev-lang/luajit instead of dev-lang/lua
-dev-lua/say:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-ros/rosbag:lz4 - Add support for lz4 compressed bags.
 dev-ros/rosconsole:glog - Use dev-cpp/glog as log backend.
 dev-ros/rosconsole:log4cxx - Use dev-libs/log4cxx as log backend.
-dev-tcltk/expect-lite:debug - pull in packages needed for runtime interactive debugger
-dev-tcltk/tktreectrl:shellicon - shellicon extension
 dev-util/android-ndk:legacy-toolchains - Install legacy toolchains
 dev-util/android-ndk:target-32 - Support for 32-bit targets
 dev-util/android-ndk:target-64 - Support for 64-bit targets
