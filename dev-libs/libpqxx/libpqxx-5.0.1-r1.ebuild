@@ -1,44 +1,49 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="4"
+EAPI="6"
 
 PYTHON_COMPAT=( python2_7 )
 inherit python-any-r1
 
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 DESCRIPTION="Standard front end for writing C++ programs that use PostgreSQL"
-SRC_URI="http://pqxx.org/download/software/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/jtv/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="http://pqxx.org/development/libpqxx/"
 LICENSE="BSD"
 SLOT="0"
 IUSE="doc static-libs"
 
-RDEPEND="dev-db/postgresql"
+RDEPEND="dev-db/postgresql:="
 DEPEND="${PYTHON_DEPS}
 		${RDEPEND}
+		doc? (
+			 app-doc/doxygen
+			 app-text/xmlto
+		)
 "
 
 src_prepare() {
 	sed -e 's/python/python2/' \
 		-i tools/{splitconfig,template2mak.py} \
 		|| die "Couldn't fix Python shebangs"
+	eapply "${FILESDIR}"/${PN}-configure.patch
+	eapply_user
 }
 
 src_configure() {
-	if use static-libs ; then
-		econf --enable-static
-	else
-		econf --enable-shared
-	fi
+	local myconf
+	use static-libs && myconf="--enable-static" || myconf="--enable-shared"
+
+	econf ${myconf} $(use_enable doc documentation)
 }
 
 src_install () {
 	emake DESTDIR="${D}" install
 
 	dodoc AUTHORS ChangeLog NEWS README*
-	use doc && dohtml -r doc/html/*
+	use doc && dodoc -r doc/html
 }
 
 src_test() {
