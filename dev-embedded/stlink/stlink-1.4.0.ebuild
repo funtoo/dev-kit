@@ -25,10 +25,13 @@ RDEPEND="virtual/libusb:1
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+PATCHES=( "${FILESDIR}"/${P}.patch )
+
 src_configure() {
 	local mycmakeargs=(
 		-DSTLINK_UDEV_RULES_DIR="$(get_udevdir)"/rules.d
 		-DSTLINK_MODPROBED_DIR="${EPREFIX}/etc/modprobe.d"
+		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
 	)
 
 	cmake-utils_src_configure
