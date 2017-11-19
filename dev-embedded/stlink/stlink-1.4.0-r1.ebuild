@@ -1,4 +1,3 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -25,11 +24,21 @@ RDEPEND="virtual/libusb:1
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+src_prepare() {
+	eapply "${FILESDIR}"/${P}-libdir.patch
+	default
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DSTLINK_UDEV_RULES_DIR="$(get_udevdir)"/rules.d
 		-DSTLINK_MODPROBED_DIR="${EPREFIX}/etc/modprobe.d"
+		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
 	)
 
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
 }
