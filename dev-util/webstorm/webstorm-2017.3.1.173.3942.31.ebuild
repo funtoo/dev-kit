@@ -6,15 +6,15 @@ EAPI=5
 inherit eutils versionator
 
 SLOT="$(get_major_version)"
-MY_PV="$(get_version_component_range 1-2)"
+MY_PV="$(get_version_component_range 1-3)"
 MY_BV="$(get_version_component_range 4-6)"
-MY_PN="PhpStorm"
+MY_PN="WebStorm"
 
-DESCRIPTION="Lightning-smart PHP IDE"
-HOMEPAGE="http://www.jetbrains.com/phpstorm"
-SRC_URI="http://download.jetbrains.com/webide/${MY_PN}-${MY_PV}.tar.gz"
+DESCRIPTION="JavaScript IDE for complex client-side development and server-side development with Node.js"
+HOMEPAGE="http://www.jetbrains.com/webstorm"
+SRC_URI="http://download.jetbrains.com/${PN}/${MY_PN}-${MY_PV}.tar.gz"
 
-LICENSE="PhpStorm PhpStorm_Academic PhpStorm_Classroom PhpStorm_OpenSource PhpStorm_personal"
+LICENSE="WebStorm WebStorm_Academic WebStorm_Classroom WebStorm_OpenSource WebStorm_personal"
 IUSE="-custom-jdk"
 KEYWORDS="~amd64 ~x86"
 
@@ -39,7 +39,7 @@ src_install() {
 
 	if use custom-jdk; then
 		if [[ -d jre64 ]]; then
-			fperms 755 -R ${dir}/jre/bin
+			fperms 755 -R ${dir}/jre64/bin
 		fi
 	fi
 
