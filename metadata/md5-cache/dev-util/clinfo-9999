@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=virtual/opencl >=dev-vcs/git-1.8.2.1
+DESCRIPTION=A tool to display info about the system's OpenCL capabilities
+EAPI=6
+HOMEPAGE=https://github.com/Oblomov/clinfo
+LICENSE=CC0-1.0
+RDEPEND=virtual/opencl
+SLOT=0
+_eclasses_=git-r3	fec09a83ae965b041b47f5ff7c8ba29a
+_md5_=4e23161e660c08cc5a83bdf1a81c77ee

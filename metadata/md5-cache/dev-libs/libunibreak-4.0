@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=man? ( app-doc/doxygen )
+DESCRIPTION=Line and word breaking library
+EAPI=6
+HOMEPAGE=http://vimgadgets.sourceforge.net/libunibreak/
+IUSE=doc +man static-libs
+KEYWORDS=~amd64 ~arm ~ppc ~x86
+LICENSE=ZLIB
+RDEPEND=!dev-libs/liblinebreak
+SLOT=0
+SRC_URI=https://github.com/adah1972/libunibreak/releases/download/libunibreak_4_0/libunibreak-4.0.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=2a1021f04ca3f9e344eff788f709e342

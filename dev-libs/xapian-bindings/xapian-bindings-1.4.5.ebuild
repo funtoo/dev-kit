@@ -1,3 +1,4 @@
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -14,7 +15,7 @@ PHP_EXT_OPTIONAL_USE="php"
 USE_RUBY="ruby22 ruby23 ruby24"
 RUBY_OPTIONAL="yes"
 
-inherit libtool java-pkg-opt-2 mono-env multibuild php-ext-source-r3 python-r1 ruby-ng toolchain-funcs
+inherit java-pkg-opt-2 mono-env multibuild php-ext-source-r3 python-r1 ruby-ng toolchain-funcs
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
@@ -22,7 +23,7 @@ SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~*"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="java lua mono perl php python ruby tcl"
 REQUIRED_USE="|| ( java lua mono perl php python ruby tcl )
 	python? ( ${PYTHON_REQUIRED_USE} )
@@ -45,6 +46,12 @@ RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.6 )"
 
 S="${WORKDIR}/${P}"
+
+has_basic_bindings() {
+	# Update this list if new bindings are added that are not built
+	# multiple times for multiple versions like php, python and ruby are
+	return $(use mono || use java || use lua || use perl || use tcl)
+}
 
 php_copy_sources() {
 	local MULTIBUILD_VARIANTS=($(php_get_slots))
@@ -105,35 +112,37 @@ src_prepare() {
 }
 
 src_configure() {
-	local conf=(
-		--disable-documentation
-		$(use_with mono csharp)
-		$(use_with java)
-		$(use_with lua)
-		$(use_with perl)
-		$(use_with tcl)
-		--without-php
-		--without-php7
-		--without-python
-		--without-python3
-		--without-ruby
-	)
+	if has_basic_bindings ; then
+		local conf=(
+			--disable-documentation
+			$(use_with mono csharp)
+			$(use_with java)
+			$(use_with lua)
+			$(use_with perl)
+			$(use_with tcl)
+			--without-php
+			--without-php7
+			--without-python
+			--without-python3
+			--without-ruby
+		)
 
-	if use java; then
-		local -x CXXFLAGS="${CXXFLAGS} $(java-pkg_get-jni-cflags)"
+		if use java; then
+			local -x CXXFLAGS="${CXXFLAGS} $(java-pkg_get-jni-cflags)"
+		fi
+
+		if use perl; then
+			local -x PERL_ARCH="$(perl -MConfig -e 'print $Config{installvendorarch}')"
+			local -x PERL_LIB="$(perl -MConfig -e 'print $Config{installvendorlib}')"
+		fi
+
+		if use lua; then
+			local -x LUA_INC="$("$(tc-getPKG_CONFIG)" --variable=INSTALL_INC lua)"
+			local -x LUA_LIB="$("$(tc-getPKG_CONFIG)" --variable=INSTALL_CMOD lua)"
+		fi
+
+		econf "${conf[@]}"
 	fi
-
-	if use perl; then
-		local -x PERL_ARCH="$(perl -MConfig -e 'print $Config{installvendorarch}')"
-		local -x PERL_LIB="$(perl -MConfig -e 'print $Config{installvendorlib}')"
-	fi
-
-	if use lua; then
-		local -x LUA_INC="$("$(tc-getPKG_CONFIG)" --variable=INSTALL_INC lua)"
-		local -x LUA_LIB="$("$(tc-getPKG_CONFIG)" --variable=INSTALL_CMOD lua)"
-	fi
-
-	econf "${conf[@]}"
 
 	php_configure() {
 		local myconf=(
@@ -165,6 +174,9 @@ src_configure() {
 	}
 
 	if use php; then
+		addpredict /usr/share/snmp/mibs/.index
+		addpredict /var/lib/net-snmp/mib_indexes
+
 		php_foreach_impl run_in_build_dir php_configure
 	fi
 
@@ -221,7 +233,9 @@ src_configure() {
 }
 
 src_compile() {
-	default
+	if has_basic_bindings ; then
+		default
+	fi
 
 	if use php; then
 		php_foreach_impl run_in_build_dir emake
@@ -238,7 +252,9 @@ src_compile() {
 }
 
 src_test() {
-	default
+	if has_basic_bindings ; then
+		default
+	fi
 
 	if use php; then
 		php_foreach_impl run_in_build_dir emake check
@@ -254,10 +270,12 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	if has_basic_bindings ; then
+		emake DESTDIR="${D}" install
+	fi
 
 	if use java; then
-		java-pkg_dojar java/built/xapian.jar
+		java-pkg_dojar java/built/xapian_jni.jar
 		# TODO: make the build system not install this...
 		java-pkg_doso java/.libs/libxapian_jni.so
 		rm -rf "${D}var" || die "could not remove java cruft!"

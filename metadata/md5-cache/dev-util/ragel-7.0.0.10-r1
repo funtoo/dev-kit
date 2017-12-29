@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare test
+DEPEND=~dev-util/colm-0.13.0.5 >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Compiles finite state machines from regular languages into executable code
+EAPI=6
+HOMEPAGE=https://www.colm.net/open-source/ragel/
+IUSE=vim-syntax
+KEYWORDS=~amd64 ~arm ~arm64 ~ia64 ~x86
+LICENSE=GPL-2
+RDEPEND=~dev-util/colm-0.13.0.5
+SLOT=0
+SRC_URI=https://www.colm.net/files/ragel/ragel-7.0.0.10.tar.gz
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=48fcb4b3b25d43f54b79d4ac07297671
