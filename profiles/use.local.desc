@@ -367,6 +367,9 @@ dev-libs/libdivecomputer:tools - Install tools that can be used to test the libr
 dev-libs/libdynd:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/libdynd:mkl - Enable a plugin for Intel Math Kernel Library sci-libs/mkl
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
+dev-libs/libgit2:gssapi - Enable GSSAPI support for SPNEGO auth
+dev-libs/libgit2:ssh - Enable SSH transport support
+dev-libs/libgit2:trace - Enable tracing support
 dev-libs/libgpuarray:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/libgpuarray:opencl - Enable OpenCL support
 dev-libs/libisoburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
