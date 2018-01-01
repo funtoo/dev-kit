@@ -161,19 +161,12 @@ dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most user
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-embedded/libftdi:tools - build ftdi_eeprom helper tool
-dev-embedded/openocd:blaster - Enable support for Altera USE-Blaster
 dev-embedded/openocd:cmsis-dap - Support for CMSIS-DAP compliant adapters
 dev-embedded/openocd:dummy - Build the dummy port driver
-dev-embedded/openocd:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/openocd:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-embedded/openocd:jlink - Build the SEGGER J-Link driver
-dev-embedded/openocd:minidriver - Build the dummy minidriver
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
-dev-embedded/openocd:presto - Enable support for AXIS PRESTO devices
-dev-embedded/openocd:segger - Enable support for the Segger J-Link JTAG
-dev-embedded/openocd:stlink - Enable building support for the ST-Link JTAG Programmer
 dev-embedded/openocd:verbose-io - Verbose IO and comm JTAG and USB messages
-dev-embedded/openocd:versaloon - Enable building support for the Versallon-lInk JTAG
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector dev-libs/boehm-gc
 dev-embedded/sdcc:device-lib - Enable built of devices libraries
 dev-embedded/sdcc:ds390 - Add support for Dallas DS390
