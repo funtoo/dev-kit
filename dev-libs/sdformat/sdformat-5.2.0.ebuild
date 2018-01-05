@@ -1,4 +1,3 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -22,8 +21,8 @@ RDEPEND="
 	sci-libs/ignition-math:3=
 "
 DEPEND="${RDEPEND}
-	dev-lang/ruby:*
 	virtual/pkgconfig
+	virtual/rubygems
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
 PATCHES=( "${FILESDIR}/urdfdom1.patch" )
