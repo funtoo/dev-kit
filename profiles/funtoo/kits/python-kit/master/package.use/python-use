@@ -55,7 +55,6 @@ dev-util/tailor python_single_target_python2_7
 dev-util/trace-cmd python_single_target_python2_7
 dev-util/wxglade python_single_target_python2_7
 dev-util/xesam-tools python_single_target_python2_7
-dev-vcs/bzr-explorer python_single_target_python2_7
 dev-vcs/bzr-git python_single_target_python2_7
 dev-vcs/bzr-gtk python_single_target_python2_7
 dev-vcs/bzr-xmloutput python_single_target_python2_7
