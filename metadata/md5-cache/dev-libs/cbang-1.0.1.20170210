@@ -8,5 +8,5 @@ KEYWORDS=~*
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/boost ChakraCore? ( net-libs/ChakraCore )
 SLOT=0
-_eclasses_=git-r3	fec09a83ae965b041b47f5ff7c8ba29a	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	6f5991c7101863d0b29df63990ad852e	scons-utils	fcace052aef60e6b0eb3023c26aa585a	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=git-r3	fec09a83ae965b041b47f5ff7c8ba29a	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	scons-utils	fcace052aef60e6b0eb3023c26aa585a	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=b2939543c5bced1f8302d18b043954ac
