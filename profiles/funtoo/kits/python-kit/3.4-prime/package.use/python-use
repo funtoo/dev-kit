@@ -48,6 +48,5 @@ dev-vcs/git-bzr-ng python_single_target_python2_7
 dev-vcs/git-deps python_single_target_python2_7
 dev-vcs/hgsvn python_single_target_python2_7
 dev-vcs/mercurial-server python_single_target_python2_7
-dev-vcs/qct python_single_target_python2_7
 dev-vcs/rapidsvn python_single_target_python2_7
 dev-vcs/svnmailer python_single_target_python2_7
