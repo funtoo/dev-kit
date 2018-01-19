@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -8,7 +8,7 @@ inherit multilib-minimal versionator
 
 MAJOR="$(get_version_component_range 1-2 $PV)"
 MY_PN="mysql-connector-odbc"
-MY_P="${MY_PN}-${PV/_p/r}-linux-debian8-x86"
+MY_P="${MY_PN}-${PV/_p/r}-linux-debian9-x86"
 
 DESCRIPTION="ODBC driver for MySQL"
 HOMEPAGE="http://www.mysql.com/products/myodbc/"
@@ -66,6 +66,7 @@ multilib_src_install_all() {
 			-e "s,__PN__,${DRIVER_NAME},g" \
 			-e "s,__PF__,${MAJOR},g" \
 			-e "s,libmyodbc3.so,libmyodbc${SLOT:0:1}a.so,g" \
+			-e "s,lib/libmyodbc,$(get_libdir)/${DRIVER_NAME}/libmyodbc,g" \
 			>"${D}/usr/share/${DRIVER_NAME}/${i}" \
 			<"${FILESDIR}"/${i}.m4 \
 			|| die "Failed to build $i"
