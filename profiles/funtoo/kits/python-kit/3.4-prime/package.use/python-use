@@ -1,3 +1,69 @@
+=app-admin/ego-2.3.3 python_single_target_cat: python_targets_cat:
+=app-admin/ego-2.3.3-r1 python_single_target_cat: python_targets_cat:
+=app-admin/ego-9999 python_single_target_cat: python_targets_cat:
+=app-admin/syslog-ng-3.12.1 python_single_target_cat: python_targets_cat:
+=app-admin/syslog-ng-3.13.2 python_single_target_cat: python_targets_cat:
+=app-admin/syslog-ng-3.7.3 python_single_target_cat: python_targets_cat:
+=app-eselect/eselect-repository-2 python_single_target_cat: python_targets_cat:
+=app-eselect/eselect-repository-9999 python_single_target_cat: python_targets_cat:
+=app-misc/polychromatic-0.3.11.1 python_single_target_cat: python_targets_cat:
+=app-misc/polychromatic-9999 python_single_target_cat: python_targets_cat:
+=dev-util/boost-build-1.62.0-r1 python_single_target_cat: python_targets_cat:
+=dev-util/boost-build-1.63.0 python_single_target_cat: python_targets_cat:
+=dev-util/boost-build-1.65.0 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-2.13.6 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-2.14.3 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-2.15.1 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-2.16.0_rc1 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-9999 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-9999-r1 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-9999-r2 python_single_target_cat: python_targets_cat:
+=dev-vcs/git-9999-r3 python_single_target_cat: python_targets_cat:
+=sys-apps/pcsc-lite-1.8.20 python_single_target_cat: python_targets_cat:
+=sys-apps/pcsc-lite-1.8.21 python_single_target_cat: python_targets_cat:
+=sys-apps/pcsc-lite-1.8.22 python_single_target_cat: python_targets_cat:
+=sys-apps/usbutils-008-r1 python_single_target_cat: python_targets_cat:
+=sys-apps/usbutils-009 python_single_target_cat: python_targets_cat:
+=sys-apps/util-linux-2.30.2 python_single_target_cat: python_targets_cat:
+=sys-apps/util-linux-2.31-r1 python_single_target_cat: python_targets_cat:
+=sys-apps/util-linux-2.31.1 python_single_target_cat: python_targets_cat:
+=sys-apps/util-linux-9999 python_single_target_cat: python_targets_cat:
+=sys-boot/boot-update-1.8.2 python_single_target_cat: python_targets_cat:
+=sys-boot/boot-update-1.9.0 python_single_target_cat: python_targets_cat:
+=sys-devel/clang-4.0.1 python_single_target_cat: python_targets_cat:
+=sys-devel/clang-5.0.0 python_single_target_cat: python_targets_cat:
+=sys-devel/clang-5.0.1 python_single_target_cat: python_targets_cat:
+=sys-devel/clang-6.0.9999 python_single_target_cat: python_targets_cat:
+=sys-devel/clang-9999 python_single_target_cat: python_targets_cat:
+=sys-devel/llvm-3.7.1-r3 python_single_target_cat: python_targets_cat:
+=sys-devel/llvm-3.9.1-r1 python_single_target_cat: python_targets_cat:
+=sys-libs/ldb-1.1.26 python_single_target_cat: python_targets_cat:
+=sys-libs/ldb-1.1.29-r1 python_single_target_cat: python_targets_cat:
+=sys-libs/ldb-1.1.31 python_single_target_cat: python_targets_cat:
+=sys-libs/ldb-1.2.2 python_single_target_cat: python_targets_cat:
+=sys-libs/ldb-1.3.0 python_single_target_cat: python_targets_cat:
+=sys-libs/libblockdev-2.14-r1 python_single_target_cat: python_targets_cat:
+=sys-libs/libblockdev-2.15-r1 python_single_target_cat: python_targets_cat:
+=sys-libs/libieee1284-0.2.11-r4 python_single_target_cat: python_targets_cat:
+=sys-libs/libieee1284-0.2.11-r5 python_single_target_cat: python_targets_cat:
+=sys-libs/libieee1284-0.2.11-r6 python_single_target_cat: python_targets_cat:
+=sys-libs/libsmbios-2.3.0-r1 python_single_target_cat: python_targets_cat:
+=sys-libs/libsmbios-2.3.2 python_single_target_cat: python_targets_cat:
+=sys-libs/libsmbios-2.3.3 python_single_target_cat: python_targets_cat:
+=sys-libs/openipmi-2.0.22 python_single_target_cat: python_targets_cat:
+=sys-libs/openipmi-2.0.24 python_single_target_cat: python_targets_cat:
+=sys-libs/talloc-2.1.10 python_single_target_cat: python_targets_cat:
+=sys-libs/talloc-2.1.5 python_single_target_cat: python_targets_cat:
+=sys-libs/talloc-2.1.9 python_single_target_cat: python_targets_cat:
+=sys-libs/tdb-1.3.13 python_single_target_cat: python_targets_cat:
+=sys-libs/tdb-1.3.14 python_single_target_cat: python_targets_cat:
+=sys-libs/tdb-1.3.15 python_single_target_cat: python_targets_cat:
+=sys-libs/tdb-1.3.8 python_single_target_cat: python_targets_cat:
+=sys-libs/tevent-0.9.28 python_single_target_cat: python_targets_cat:
+=sys-libs/tevent-0.9.31-r1 python_single_target_cat: python_targets_cat:
+=sys-libs/tevent-0.9.32 python_single_target_cat: python_targets_cat:
+=sys-libs/tevent-0.9.33 python_single_target_cat: python_targets_cat:
+=sys-libs/tevent-0.9.34 python_single_target_cat: python_targets_cat:
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
@@ -27,6 +93,7 @@ dev-util/geany-plugins python_single_target_python2_7
 dev-util/gquilt python_single_target_python2_7
 dev-util/gyp python_single_target_python2_7
 dev-util/imediff2 python_single_target_python2_7
+dev-util/itstool python_single_target_cat: python_targets_cat:
 dev-util/lldb python_single_target_python2_7
 dev-util/mpatch python_single_target_python2_7
 dev-util/osc python_single_target_python2_7
@@ -50,3 +117,10 @@ dev-vcs/hgsvn python_single_target_python2_7
 dev-vcs/mercurial-server python_single_target_python2_7
 dev-vcs/rapidsvn python_single_target_python2_7
 dev-vcs/svnmailer python_single_target_python2_7
+net-wireless/bluez python_single_target_cat: python_targets_cat:
+sys-boot/udk python_single_target_cat: python_targets_cat:
+sys-fs/cryptsetup python_single_target_cat: python_targets_cat:
+sys-fs/ecryptfs-utils python_single_target_cat: python_targets_cat:
+sys-fs/ocfs2-tools python_single_target_cat: python_targets_cat:
+sys-fs/traydevice python_single_target_cat: python_targets_cat:
+sys-libs/ntdb python_single_target_cat: python_targets_cat:
