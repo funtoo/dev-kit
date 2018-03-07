@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils autotools
+inherit autotools multilib-minimal
 
 DESCRIPTION="A portable fork of NaCl, a higher-level cryptographic library"
 HOMEPAGE="https://github.com/jedisct1/libsodium"
@@ -21,11 +21,14 @@ src_prepare() {
 	eautoreconf
 }
 
-src_configure() {
+multilib_src_configure() {
+	local ECONF_SOURCE="${S}"
 	local myconf
 
-	# --disable-pie needed on x86, bug #512734
-	use x86 && myconf="${myconf} --disable-pie"
+	# --disable-pie is needed on x86, see bug #512734
+	if [[ "${MULTILIB_ABI_FLAG}" == "abi_x86_32" ]]; then
+		myconf="${myconf} --disable-pie"
+	fi
 
 	econf \
 		$(use_enable asm) \
@@ -37,7 +40,7 @@ src_configure() {
 		${myconf}
 }
 
-src_install() {
-	default
-	prune_libtool_files
+multilib_src_install_all() {
+	einstalldocs
+	find "${D}" -name "*.la" -delete || die
 }
