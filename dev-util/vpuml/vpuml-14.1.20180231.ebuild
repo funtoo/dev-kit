@@ -21,20 +21,19 @@ else
 		http://%s.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
 fi
 
-URIS=`printf "${SRC_URI_FORMAT} " eu{1..5} usa{5..6} uk{1..3}`
+URIS=`printf "${SRC_URI_FORMAT} " eu{1..6} usa{1..6} uk{1..4}`
 
 DESCRIPTION="Visual Paradigm for UML"
 HOMEPAGE="http://www.visual-paradigm.com"
 
-SRC_URI="amd64? ( `for URI in $URIS; do printf "${URI}/%s " "${MY_PN}_${MY_PV}_Linux64_InstallFree.tar.gz"; done` )"
-#		x86? ( `for URI in $URIS; do printf "${URI}/%s " "${MY_PN}_${MY_PV}_Linux32_InstallFree.tar.gz"; done` )"
+SRC_URI="amd64? ( `for URI in $URIS; do printf "${URI}/%s " "${MY_PN}_${MY_PV}_Linux64_InstallFree.tar.gz"; done` )
+		x86? ( `for URI in $URIS; do printf "${URI}/%s " "${MY_PN}_${MY_PV}_Linux32_InstallFree.tar.gz"; done` )"
 
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="as-is" # actually, proprietary
 SLOT="0/$(get_version_component_range 1-2)"
-#KEYWORDS="~amd64 ~x86"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="mirror"
