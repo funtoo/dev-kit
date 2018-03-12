@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -17,7 +16,7 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux
 IUSE=""
 
 RDEPEND="${PYTHON_DEPS}
-	>=dev-libs/glib-2.50:2[dbus]
+	>=dev-libs/glib:2[dbus]
 	>=dev-python/pygobject-3.12:3[cairo,${PYTHON_USEDEP}]
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/gtk+-3.14:3[introspection]
