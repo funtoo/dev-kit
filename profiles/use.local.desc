@@ -696,3 +696,5 @@ dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
 dev-vcs/subversion:http - Enable http support using net-libs/serf
 dev-vcs/subversion:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
+virtual/mysql:embedded - Build embedded server (libmysqld)
+virtual/mysql:server - Build server (mysqld)
