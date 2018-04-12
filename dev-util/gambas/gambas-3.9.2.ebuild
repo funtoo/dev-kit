@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="+curl +net +qt5 +x11
 	bzip2 cairo crypt dbus examples gmp gnome gsl gstreamer gtk2 gtk3 httpd image-imlib image-io jit libxml mime
-	mysql ncurses odbc openal opengl openssl pcre pdf pop3 postgres qt5 sdl sdl-sound sdl2 sqlite v4l xml zlib"
+	mysql ncurses odbc openal opengl openssl pcre -pdf pop3 postgres qt5 sdl sdl-sound sdl2 sqlite v4l xml zlib"
 
 # gambas3 have the only one gui. it is based on qt5.
 # these use flags (modules/plugins) require this qt5 gui to be present at the system to work properly:
