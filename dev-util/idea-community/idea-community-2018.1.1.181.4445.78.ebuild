@@ -7,7 +7,12 @@ inherit eutils versionator
 
 SLOT="0"
 
-MY_PV="$(get_version_component_range 1-3)"
+if [ $(get_version_component_range 3) -eq 0 ]; then
+	MY_PV="$(get_version_component_range 1-2)"
+else
+	MY_PV="$(get_version_component_range 1-3)"
+fi
+
 MY_BV="$(get_version_component_range 4-6)"
 MY_PN="idea"
 

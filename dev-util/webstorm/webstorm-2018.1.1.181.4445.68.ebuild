@@ -6,7 +6,12 @@ EAPI=5
 inherit eutils versionator
 
 SLOT="$(get_major_version)"
-MY_PV="$(get_version_component_range 1-2)"
+
+if [ $(get_version_component_range 3) -eq 0 ]; then
+	MY_PV="$(get_version_component_range 1-2)"
+else
+	MY_PV="$(get_version_component_range 1-3)"
+fi
 MY_BV="$(get_version_component_range 4-6)"
 MY_PN="WebStorm"
 
