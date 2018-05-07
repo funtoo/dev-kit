@@ -1,8 +1,8 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-MY_EXTRAS_VER="20170316-1355Z"
+MY_EXTRAS_VER="20180308-1938Z"
 # The wsrep API version must match between upstream WSREP and sys-cluster/galera major number
 WSREP_REVISION="25"
 SUBSLOT="18"
@@ -15,27 +15,28 @@ inherit toolchain-funcs java-pkg-opt-2 mysql-multilib-r1
 HOMEPAGE="http://mariadb.org/"
 DESCRIPTION="An enhanced, drop-in replacement for MySQL"
 
-IUSE="+backup bindist cracklib galera kerberos innodb-lz4 innodb-lzo innodb-snappy jdbc mroonga odbc oqgraph pam sphinx sst-rsync sst-xtrabackup tokudb systemd xml"
+IUSE="+backup bindist cracklib galera kerberos innodb-lz4 innodb-lzo innodb-snappy jdbc mroonga numa odbc oqgraph pam sphinx sst-rsync sst-mariabackup sst-xtrabackup tokudb systemd xml"
 RESTRICT="!bindist? ( bindist )"
 
 REQUIRED_USE="jdbc? ( extraengine server !static ) server? ( tokudb? ( jemalloc !tcmalloc ) ) static? ( !pam )"
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
-KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 MY_PATCH_DIR="${WORKDIR}/mysql-extras-${MY_EXTRAS_VER}"
 
 PATCHES=(
-	"${MY_PATCH_DIR}"/20006_all_cmake_elib-mariadb-10.1.16.patch
+	"${MY_PATCH_DIR}"/20006_all_cmake_elib-mariadb-10.1.27.patch
 	"${MY_PATCH_DIR}"/20009_all_mariadb_myodbc_symbol_fix-5.5.38.patch
 	"${MY_PATCH_DIR}"/20015_all_mariadb-pkgconfig-location.patch
 	"${MY_PATCH_DIR}"/20018_all_mariadb-10.1.16-without-clientlibs-tools.patch
+	"${MY_PATCH_DIR}"/20025_all_mariadb-10.1.26-gssapi-detect.patch
+	"${MY_PATCH_DIR}"/20029_all_mariadb-10.1.31-enable-numa.patch
 )
 
 COMMON_DEPEND="
 	mroonga? ( app-text/groonga-normalizer-mysql )
 	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
-	systemd? ( sys-apps/systemd:= )
 	!bindist? (
 		sys-libs/binutils-libs:0=
 		>=sys-libs/readline-4.1:0=
@@ -51,11 +52,13 @@ COMMON_DEPEND="
 		innodb-lz4? ( app-arch/lz4 )
 		innodb-lzo? ( dev-libs/lzo )
 		innodb-snappy? ( app-arch/snappy )
+		numa? ( sys-process/numactl )
 		oqgraph? ( >=dev-libs/boost-1.40.0:0= dev-libs/judy:0= )
 		pam? ( virtual/pam:0= )
+		systemd? ( sys-apps/systemd:= )
 		tokudb? ( app-arch/snappy )
 	)
-	>=dev-libs/libpcre-8.35:3=
+	>=dev-libs/libpcre-8.41-r1:3=
 "
 DEPEND="|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 )
 	server? ( extraengine? ( jdbc? ( >=virtual/jdk-1.6 ) ) )
@@ -65,6 +68,7 @@ RDEPEND="${RDEPEND} ${COMMON_DEPEND}
 		sys-apps/iproute2
 		=sys-cluster/galera-${WSREP_REVISION}*
 		sst-rsync? ( sys-process/lsof )
+		sst-mariabackup? ( net-misc/socat[ssl] )
 		sst-xtrabackup? ( net-misc/socat[ssl] )
 	)
 	perl? ( !dev-db/mytop
@@ -129,6 +133,8 @@ src_configure(){
 			-DCONNECT_WITH_LIBXML2=$(usex xml)
 			-DCONNECT_WITH_ODBC=$(usex odbc)
 			-DCONNECT_WITH_JDBC=$(usex jdbc)
+			# Build failure and autodep wrt bug 639144
+			-DCONNECT_WITH_MONGO=OFF
 			-DWITH_WSREP=$(usex galera)
 			-DWITH_INNODB_LZ4=$(usex innodb-lz4 ON OFF)
 			-DWITH_INNODB_LZO=$(usex innodb-lzo ON OFF)
@@ -137,13 +143,14 @@ src_configure(){
 			-DPLUGIN_AUTH_GSSAPI=$(usex kerberos YES NO)
 			-DWITH_MARIABACKUP=$(usex backup ON OFF)
 			-DWITH_LIBARCHIVE=$(usex backup ON OFF)
+			-DWITH_NUMA=$(usex numa ON OFF)
 		)
 	fi
 	mysql-multilib-r1_src_configure
 }
 
 # Official test instructions:
-# USE='embedded extraengine perl server openssl static-libs' \
+# USE='extraengine perl server openssl static-libs' \
 # FEATURES='test userpriv -usersandbox' \
 # ebuild mariadb-X.X.XX.ebuild \
 # digest clean package
@@ -154,6 +161,13 @@ multilib_src_test() {
 		return 0;
 	fi
 
+	_disable_test() {
+		local rawtestname reason
+		rawtestname="${1}" ; shift
+		reason="${@}"
+		ewarn "test '${rawtestname}' disabled: '${reason}'"
+		echo ${rawtestname} : ${reason} >> "${T}/disabled.def"
+	}
 	local TESTDIR="${BUILD_DIR}/mysql-test"
 	local retstatus_unit
 	local retstatus_tests
@@ -191,6 +205,7 @@ multilib_src_test() {
 	# Run mysql tests
 	pushd "${TESTDIR}" || die
 
+	touch "${T}/disabled.def"
 	# These are failing in MariaDB 10.0 for now and are believed to be
 	# false positives:
 	#
@@ -200,16 +215,16 @@ multilib_src_test() {
 
 	local t
 	for t in plugins.cracklib_password_check plugins.two_password_validations ; do
-		mysql-multilib-r1_disable_test  "$t" "False positive due to varying policies"
+		_disable_test  "$t" "False positive due to varying policies"
 	done
 
 	for t in main.mysql_client_test main.mysql_client_test_nonblock \
 		main.mysql_client_test_comp ; do
-			mysql-multilib-r1_disable_test  "$t" "False positives in Gentoo"
+			_disable_test  "$t" "False positives in Gentoo"
 	done
 
 	# run mysql-test tests
-	perl mysql-test-run.pl --force --vardir="${T}/var-tests" --reorder
+	perl mysql-test-run.pl --force --vardir="${T}/var-tests" --reorder --skip-test-list="${T}/disabled.def"
 	retstatus_tests=$?
 
 	popd || die
