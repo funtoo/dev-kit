@@ -13,10 +13,8 @@ SRC_URI="https://archive.mozilla.org/pub/nspr/releases/v${PV}/src/${P}.tar.gz"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug"
-
-RDEPEND=""
 
 MULTILIB_CHOST_TOOLS=(
 	/usr/bin/nspr-config
@@ -42,6 +40,7 @@ src_prepare() {
 		einfo "Renaming configure.in to configure.ac"
 		mv "${S}"/nspr/configure.{in,ac} || die
 	fi
+
 	# We must run eautoconf to regenerate configure
 	eautoconf
 
@@ -62,7 +61,11 @@ multilib_src_configure() {
 		&& export CROSS_COMPILE=1 \
 		|| unset CROSS_COMPILE
 
-	local myconf=()
+	local myconf=(
+		--libdir="${EPREFIX}/usr/$(get_libdir)"
+		$(use_enable debug)
+		$(use_enable !debug optimize)
+	)
 
 	# The configure has some fancy --enable-{{n,x}32,64bit} switches
 	# that trigger some code conditional to platform & arch. This really
@@ -91,11 +94,7 @@ multilib_src_configure() {
 	# Ancient autoconf needs help finding the right tools.
 	LC_ALL="C" ECONF_SOURCE="${S}/nspr" \
 	ac_cv_path_AR="${AR}" \
-	econf \
-		--libdir="${EPREFIX}/usr/$(get_libdir)" \
-		$(use_enable debug) \
-		$(use_enable !debug optimize) \
-		"${myconf[@]}"
+	econf "${myconf[@]}"
 }
 
 multilib_src_install() {
@@ -104,16 +103,16 @@ multilib_src_install() {
 	emake DESTDIR="${D}" install
 
 	einfo "removing static libraries as upstream has requested!"
-	rm -f "${ED}"/usr/$(get_libdir)/*.a || die "failed to remove static libraries."
+	rm "${ED%/}"/usr/$(get_libdir)/*.a || die "failed to remove static libraries."
 
 	# install nspr-config
 	dobin config/nspr-config
 
 	# Remove stupid files in /usr/bin
-	rm "${ED}"/usr/bin/prerr.properties || die
+	rm "${ED%/}"/usr/bin/prerr.properties || die
 
 	# This is used only to generate prerr.c and prerr.h at build time.
 	# No other projects use it, and we don't want to depend on perl.
 	# Talked to upstream and they agreed w/punting.
-	rm "${ED}"/usr/bin/compile-et.pl || die
+	rm "${ED%/}"/usr/bin/compile-et.pl || die
 }
