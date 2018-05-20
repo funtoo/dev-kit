@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 inherit eutils flag-o-matic linux-info multilib pam prefix python-single-r1 \
 		systemd user versionator
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
 
@@ -113,7 +113,7 @@ src_prepare() {
 	# hardened and non-hardened environments. (Bug #528786)
 	sed 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-9.4.10-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-9.5.5-no-server.patch"
 
 	if use pam ; then
 		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -155,6 +155,7 @@ src_configure() {
 		--mandir="${PO}/usr/share/postgresql-${SLOT}/man" \
 		--sysconfdir="${PO}/etc/postgresql-${SLOT}" \
 		--with-system-tzdata="${PO}/usr/share/zoneinfo" \
+		$(use_enable !alpha spinlocks) \
 		$(use_enable !pg_legacytimestamp integer-datetimes) \
 		$(use_enable threads thread-safety) \
 		$(use_with kerberos gssapi) \
@@ -308,6 +309,11 @@ pkg_preinst() {
 pkg_postinst() {
 	use server && use systemd && systemd_tmpfiles_create ${PN}-${SLOT}.conf
 	postgresql-config update
+
+	if use alpha && use server ; then
+		ewarn "PostgreSQL 9.5+ no longer has native spinlock support on Alpha platforms."
+		ewarn "As a result, performance will be extremely degraded."
+	fi
 
 	elog "If you need a global psqlrc-file, you can place it in:"
 	elog "    ${EROOT%/}/etc/postgresql-${SLOT}/"

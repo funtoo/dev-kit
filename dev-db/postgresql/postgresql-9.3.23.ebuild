@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 inherit eutils flag-o-matic linux-info multilib pam prefix python-single-r1 \
 		systemd user versionator
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
 
@@ -49,32 +49,10 @@ ssl? (
 	libressl? ( dev-libs/libressl:= )
 )
 tcl? ( >=dev-lang/tcl-8:0= )
+uuid? ( dev-libs/ossp-uuid )
 xml? ( dev-libs/libxml2 dev-libs/libxslt )
 zlib? ( sys-libs/zlib )
 "
-
-# uuid flags -- depend on sys-apps/util-linux for Linux libcs, or if no
-# supported libc in use depend on dev-libs/ossp-uuid. For BSD systems,
-# the libc includes UUID functions.
-UTIL_LINUX_LIBC=( elibc_{glibc,uclibc,musl} )
-BSD_LIBC=( elibc_{Free,Net,Open}BSD )
-
-nest_usedep() {
-	local front back
-	while [[ ${#} -gt 1 ]]; do
-		front+="${1}? ( "
-		back+=" )"
-		shift
-	done
-	echo "${front}${1}${back}"
-}
-
-IUSE+=" ${UTIL_LINUX_LIBC[@]} ${BSD_LIBC[@]}"
-CDEPEND+="
-uuid? (
-	${UTIL_LINUX_LIBC[@]/%/? ( sys-apps/util-linux )}
-	$(nest_usedep ${UTIL_LINUX_LIBC[@]/#/!} ${BSD_LIBC[@]/#/!} dev-libs/ossp-uuid)
-)"
 
 DEPEND="${CDEPEND}
 !!<sys-apps/sandbox-2.0
@@ -113,7 +91,7 @@ src_prepare() {
 	# hardened and non-hardened environments. (Bug #528786)
 	sed 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-9.4.10-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-${SLOT}-no-server.patch"
 
 	if use pam ; then
 		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -136,17 +114,6 @@ src_configure() {
 
 	local PO="${EPREFIX%/}"
 
-	local i uuid_config=""
-	if use uuid; then
-		for i in ${UTIL_LINUX_LIBC[@]}; do
-			use ${i} && uuid_config="--with-uuid=e2fs"
-		done
-		for i in ${BSD_LIBC[@]}; do
-			use ${i} && uuid_config="--with-uuid=bsd"
-		done
-		[[ -z $uuid_config ]] && uuid_config="--with-uuid=ossp"
-	fi
-
 	econf \
 		--prefix="${PO}/usr/$(get_libdir)/postgresql-${SLOT}" \
 		--datadir="${PO}/usr/share/postgresql-${SLOT}" \
@@ -158,6 +125,7 @@ src_configure() {
 		$(use_enable !pg_legacytimestamp integer-datetimes) \
 		$(use_enable threads thread-safety) \
 		$(use_with kerberos gssapi) \
+		$(use_with kerberos krb5) \
 		$(use_with ldap) \
 		$(use_with pam) \
 		$(use_with perl) \
@@ -165,7 +133,7 @@ src_configure() {
 		$(use_with readline) \
 		$(use_with ssl openssl) \
 		$(use_with tcl) \
-		${uuid_config} \
+		$(use_with uuid ossp-uuid) \
 		$(use_with xml libxml) \
 		$(use_with xml libxslt) \
 		$(use_with zlib) \
