@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI="6"
 
 inherit autotools
 
@@ -12,9 +12,9 @@ SRC_URI="http://download.rsyslog.com/${PN}/${P}.tar.gz"
 LICENSE="GPL-3+ doc? ( FDL-1.3 )"
 
 # subslot = soname version
-SLOT="0/0.2.0"
+SLOT="0/0.4.0"
 
-KEYWORDS="amd64 arm arm64 hppa ~sparc x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~sparc ~x86"
 IUSE="debug doc +ssl static-libs"
 
 RDEPEND="
@@ -25,6 +25,8 @@ DEPEND="
 	ssl? ( >=net-libs/gnutls-3.3.17.1:0= )
 	virtual/pkgconfig
 "
+
+PATCHES=( "${FILESDIR}"/${P}-fix-valgrind-usage.patch )
 
 src_prepare() {
 	sed -i \
@@ -44,6 +46,10 @@ src_configure() {
 	)
 
 	econf "${myeconfargs[@]}"
+}
+
+src_test() {
+	emake -j1 check
 }
 
 src_install() {
