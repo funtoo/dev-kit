@@ -296,6 +296,7 @@ dev-libs/efl:unwind - Enable debug support via sys-libs/libunwind
 dev-libs/efl:valgrind - Enable usage of dev-util/valgrind in debug
 dev-libs/efl:webp - Enable WebP image loader
 dev-libs/efl:xim - Enable X Input Method
+dev-libs/ell:glib - Enable dev-libs/glib support
 dev-libs/fcgi:html - Install HTML documentation
 dev-libs/fstrm:utils - Build fstrm utility programs
 dev-libs/gecode:gist - Enable Gist, the Gecode Interactive Search Tool
