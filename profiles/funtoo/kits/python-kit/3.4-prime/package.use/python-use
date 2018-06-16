@@ -2,16 +2,19 @@ dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
 dev-db/mysql-workbench python_single_target_python2_7
+dev-embedded/platformio python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
 dev-games/tiled python_single_target_python2_7
 dev-libs/beecrypt python_single_target_python2_7
 dev-libs/btparser python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7
 dev-libs/libappindicator python_single_target_python2_7
+dev-libs/libcharon python_single_target_python3_5 python_targets_python3_5
 dev-libs/libdbusmenu python_single_target_python2_7
 dev-libs/libhid python_single_target_python2_7
 dev-libs/libmacaroons python_single_target_python2_7
 dev-libs/libnatspec python_single_target_python2_7
+dev-libs/libsavitar python_single_target_python3_5 python_targets_python3_5
 dev-libs/qrosspython python_single_target_python2_7
 dev-libs/redland-bindings python_single_target_python2_7
 dev-util/apitrace python_single_target_python2_7
