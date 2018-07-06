@@ -1,0 +1,1 @@
+xapian-bindings now has corrected build system for many language bindings, which where broken in ebuild for long time. Reported numerous times, FL-2546, FL-3280, FL-4366, FL-3227, FL-3544, FL-3107. This is also fixed in gentoo. dev-kit branch update will merge gentoo fixed ebuilds.
