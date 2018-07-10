@@ -10,5 +10,5 @@ RDEPEND=python? ( python_targets_python3_4? ( dev-lang/python:3.4 ) python_targe
 REQUIRED_USE=python? ( || ( python_targets_python3_4 python_targets_python3_5 python_targets_python3_6 ) )
 SLOT=0/3
 SRC_URI=https://github.com/abrt/satyr/archive/0.26/satyr-0.26.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	97f470f374f2e94ccab04a2fb21d811e	python-r1	e9350ec46bb5c9f3504b4fbe8b8d8987	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	python-r1	ff5bed0d9bac3da43fe84e2179943e8e	python-utils-r1	f724cd24574e2ef185586e338b9318c4	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=bceb4292aea17cb8591b473e308a0c42
