@@ -22,12 +22,12 @@ HOMEPAGE="https://github.com/KhronosGroup/Vulkan-Tools"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="X wayland"
+IUSE="+cube +vulkaninfo X wayland"
 
 # Old packaging will cause file collisions
 RDEPEND="!<=media-libs/vulkan-loader-1.1.70.0-r999"
 DEPEND="${PYTHON_DEPS}
-	dev-util/glslang:=[${MULTILIB_USEDEP}]
+	cube? ( dev-util/glslang:=[${MULTILIB_USEDEP}] )
 	dev-util/vulkan-headers
 	media-libs/vulkan-loader:=[${MULTILIB_USEDEP},wayland?,X?]
 	wayland? ( dev-libs/wayland:=[${MULTILIB_USEDEP}] )
@@ -36,9 +36,15 @@ DEPEND="${PYTHON_DEPS}
 		x11-libs/libXrandr:=[${MULTILIB_USEDEP}]
 	   )"
 
+# Vulkaninfo does not support wayland
+REQUIRED_USE="|| ( X wayland )
+			  vulkaninfo? ( X )"
+
 multilib_src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=True
+		-DBUILD_CUBE=$(usex cube)
+		-DBUILD_VULKANINFO=$(usex vulkaninfo)
 		-DBUILD_WSI_MIR_SUPPORT=False
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
 		-DBUILD_WSI_XCB_SUPPORT=$(usex X)
@@ -46,5 +52,38 @@ multilib_src_configure() {
 		-DGLSLANG_INSTALL_DIR="/usr"
 		-DVULKAN_HEADERS_INSTALL_DIR="/usr"
 	)
+
+	# Upstream only supports one window system at a time
+	# If X is set at all, even if wayland is set, use X
+	#
+	# If -cube and/or -vulkaninfo is set, the flags we set
+	# are ignored, so we don't need to consider that
+	if use X; then
+		mycmakeargs+=(
+			-DCUBE_WSI_SELECTION="XCB"
+			-DVULKANINFO_WSI_SELECTION="XCB"
+		)
+	fi
+
+	if ! use X && use wayland; then
+		mycmakeargs+=(
+			-DCUBE_WSI_SELECTION="WAYLAND"
+		)
+	fi
+
 	cmake-utils_src_configure
+}
+
+multilib_src_install() {
+	default
+
+	if use cube; then
+		mv "${ED%/}"/usr/bin/cube "${ED%/}"/usr/bin/vulkancube || die
+		mv "${ED%/}"/usr/bin/cubepp "${ED%/}"/usr/bin/vulkancubecpp || die
+	fi
+}
+
+pkg_postinst() {
+	einfo "The cube and cubepp demos have been renamed to"
+	einfo "vulkancube and vulkancubecpp to prevent collisions"
 }

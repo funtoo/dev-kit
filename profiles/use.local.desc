@@ -631,6 +631,8 @@ dev-util/sysdig:modules - Build kernel modules needed for tracing local events. 
 dev-util/sysprof:systemd - Build the sysprofd daemon service, required to run the UI without root permissions. Relies on sys-apps/systemd running as the init system.
 dev-util/systemtap:libvirt - Support probing of libvirt domains.
 dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
+dev-util/vulkan-tools:cube - Build the cube/cubepp demos
+dev-util/vulkan-tools:vulkaninfo - Build the vulkaninfo utility
 dev-vcs/bzr:sftp - Enable sftp support
 dev-vcs/bzr-gtk:gpg - Support signing with GnuPG.
 dev-vcs/bzr-gtk:nautilus - Integrate with Nautilus file manager
