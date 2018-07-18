@@ -8,5 +8,5 @@ LICENSE=|| ( MIT BSD )
 RDEPEND=>=sys-devel/clang-4 >=sys-devel/llvm-4
 SLOT=0
 SRC_URI=https://github.com/llvm-mirror/libclc/archive/2ec7d80d5e1c96fb85c694cc6ac0a78faf01a614.tar.gz -> libclc-0.2.0_pre20170118.tar.gz
-_eclasses_=llvm	29163301967745f2b2b2bd4e7275d556	multilib	97f470f374f2e94ccab04a2fb21d811e	python-any-r1	3b48a54b2b31a6bc928e459fec3adb54	python-utils-r1	f724cd24574e2ef185586e338b9318c4	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	vcs-snapshot	80ddf8e42aad3fa1cdc08166f446f632
+_eclasses_=llvm	29163301967745f2b2b2bd4e7275d556	multilib	97f470f374f2e94ccab04a2fb21d811e	python-any-r1	3b48a54b2b31a6bc928e459fec3adb54	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	vcs-snapshot	80ddf8e42aad3fa1cdc08166f446f632
 _md5_=c52d5fe42b98e36498ccc64b876cb741

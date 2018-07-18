@@ -10,5 +10,5 @@ RDEPEND=dev-python/pyinotify[python_targets_python2_7(-)?,-python_single_target_
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://pypi/h/hgview/hgview-1.9.0.tar.gz
-_eclasses_=distutils-r1	15d091cc1fb5519adb3c1b5a7cea37dc	multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	ff5bed0d9bac3da43fe84e2179943e8e	python-utils-r1	f724cd24574e2ef185586e338b9318c4	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_eclasses_=distutils-r1	15d091cc1fb5519adb3c1b5a7cea37dc	multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	ff5bed0d9bac3da43fe84e2179943e8e	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
 _md5_=6b5acd6d7fa1271fefd0249e0c10d463
