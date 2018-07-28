@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils
+inherit bash-completion-r1 eutils
 
 DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
@@ -16,20 +16,16 @@ else
 	KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 fi
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.9.9-nogit.patch
-)
-
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ssl libressl +system-capstone zsh-completion"
+IUSE="ssl libressl"
 
 RDEPEND="
+	dev-libs/capstone:0=
 	ssl? (
 		!libressl? ( dev-libs/openssl:0= )
 		libressl? ( dev-libs/libressl:0= )
 	)
-	system-capstone? ( dev-libs/capstone:0= )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -37,17 +33,18 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-		$(use_with ssl openssl) \
-		$(use_with system-capstone syscapstone)
+		--with-syscapstone \
+		$(use_with ssl openssl)
 }
 
 src_install() {
 	default
 
-	if use zsh-completion; then
-		insinto /usr/share/zsh/site-functions
-		doins doc/zsh/_*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins doc/zsh/_*
+
+	newbashcomp doc/bash_autocompletion.sh "${PN}"
+	bashcomp_alias "${PN}" rafind2 r2 rabin2 rasm2 radiff2
 
 	# a workaround for unstable $(INSTALL) call, bug #574866
 	local d

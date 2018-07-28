@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils bash-completion-r1
+inherit bash-completion-r1 eutils
 
 DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
@@ -18,23 +18,25 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ssl libressl +system-capstone"
+IUSE="ssl libressl"
 
 RDEPEND="
+	dev-libs/capstone:0=
 	ssl? (
 		!libressl? ( dev-libs/openssl:0= )
 		libressl? ( dev-libs/libressl:0= )
 	)
-	system-capstone? ( dev-libs/capstone:0= )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
+PATCHES=( "${FILESDIR}/${PN}-fix-syscapstone-2.6.patch" )
+
 src_configure() {
 	econf \
-		$(use_with ssl openssl) \
-		$(use_with system-capstone syscapstone)
+		--with-syscapstone \
+		$(use_with ssl openssl)
 }
 
 src_install() {
