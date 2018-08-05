@@ -119,7 +119,7 @@ RDEPEND="selinux? ( sec-policy/selinux-mysql )
 	!dev-db/mysql !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster
 	server? ( !prefix? ( dev-db/mysql-init-scripts ) )
 	${COMMON_DEPEND}
-	>virtual/mysql-5.6-r11[server=][static=]
+	>virtual/mysql-5.6-r11[server=,static=]
 	server? ( galera? (
 		sys-apps/iproute2
 		=sys-cluster/galera-25*
