@@ -40,27 +40,21 @@ DEPEND="${PYTHON_DEPS}
 REQUIRED_USE="|| ( X wayland )
 			  vulkaninfo? ( X )"
 
-MULTILIB_CHOST_TOOLS=(
-	/usr/bin/vulkancube
-	/usr/bin/vulkancubecpp
-	/usr/bin/vulkaninfo
-)
-
 pkg_setup() {
-	   MULTILIB_CHOST_TOOLS=()
+	MULTILIB_CHOST_TOOLS=()
 
-	   if use vulkaninfo; then
-			   MULTILIB_CHOST_TOOLS+=( /usr/bin/vulkaninfo )
-	   fi
+	if use vulkaninfo; then
+		MULTILIB_CHOST_TOOLS+=( /usr/bin/vulkaninfo )
+	fi
 
-	   if use cube; then
-			   MULTILIB_CHOST_TOOLS+=(
-					   /usr/bin/vulkancube
-					   /usr/bin/vulkancubecpp
-			   )
-	   fi
+	if use cube; then
+		MULTILIB_CHOST_TOOLS+=(
+			/usr/bin/vulkancube
+			/usr/bin/vulkancubecpp
+		)
+	fi
 
-	   python-any-r1_pkg_setup
+	python-any-r1_pkg_setup
 }
 
 multilib_src_configure() {
