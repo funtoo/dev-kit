@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-
 IUSE="setup"
 
 RDEPEND="
-	dev-lang/php[crypt,ctype,filter,json,session,unicode]
+	dev-lang/php[ctype,filter,json,session,unicode]
 	|| (
 		dev-lang/php[mysqli]
 		dev-lang/php[mysql]
