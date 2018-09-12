@@ -1,3 +1,5 @@
+=dev-db/pgadmin4-2.0-r1 python_single_target_python3_4 python_targets_python3_4
+=dev-db/pgadmin4-2.1 python_single_target_python3_4 python_targets_python3_4
 =dev-libs/libarcus-1.0.0_pre20160307 python_single_target_python3_4 python_targets_python3_4
 =dev-libs/libarcus-2.3.1 python_single_target_python3_4 python_targets_python3_4
 =dev-util/eric-17.09 python_single_target_python2_7
@@ -13,7 +15,6 @@ dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
 dev-db/mysql-workbench python_single_target_python2_7
-dev-db/pgadmin4 python_single_target_python3_4 python_targets_python3_4
 dev-embedded/platformio python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
 dev-games/tiled python_single_target_python2_7
