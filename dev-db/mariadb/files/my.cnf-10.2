@@ -1,3 +1,28 @@
 # @GENTOO_PORTAGE_EPREFIX@/etc/mysql/my.cnf: The global mysql configuration file.
 
+[mysqld]
+character-set-server = utf8
+user = mysql
+port = 3306
+socket = /var/run/mysqld/mysqld.sock
+pid-file = /var/run/mysqld/mariadb.pid
+log-error = /var/log/mysql/mysqld.err
+basedir = /usr
+datadir = /var/lib/mysql
+skip-external-locking
+lc_messages_dir = /usr/share/mariadb
+#Set this to your desired error message language
+lc_messages = en_US
+
+# security:
+# using "localhost" in connects uses sockets by default
+# skip-networking
+bind-address = 127.0.0.1
+
+log-bin
+server-id                   = 1
+
+# point the following paths to different dedicated disks
+tmpdir                      = /tmp/
+
 !includedir @GENTOO_PORTAGE_EPREFIX@/etc/mysql/mariadb.d
