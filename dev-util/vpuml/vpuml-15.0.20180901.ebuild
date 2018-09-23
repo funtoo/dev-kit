@@ -21,7 +21,7 @@ else
 		http://%s.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
 fi
 
-URIS=`printf "${SRC_URI_FORMAT} " eu{1..5} usa{1..6} uk{1..3}`
+URIS=`printf "${SRC_URI_FORMAT} " eu{1..6} usa{1..6} uk{1..6}`
 
 DESCRIPTION="Visual Paradigm for UML"
 HOMEPAGE="http://www.visual-paradigm.com"
