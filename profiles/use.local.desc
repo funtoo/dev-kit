@@ -2,3 +2,786 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+dev-cpp/eigen:c++11 - Build using the C++11 standard
+dev-cpp/eigen:cuda - Build with cuda support
+dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
+dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
+dev-cpp/libcmis:man - Build and install man pages.
+dev-cpp/libjson-rpc-cpp:http-client - Build support for HTTP client using net-misc/curl
+dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-libs/libmicrohttpd
+dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
+dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
+dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
+dev-cpp/sourcetrail:examples - Install example projects.
+dev-cpp/websocketpp:boost - Use dev-libs/boost instead of C++11
+dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
+dev-db/aerospike-server-community:tools - Install extra tools
+dev-db/clickhouse:client - Build CLI client.
+dev-db/clickhouse:kafka - Enables support for kafka consumer.
+dev-db/clickhouse:mongodb - Enabled support for MongoDB-based dictionaries
+dev-db/clickhouse:server - Build server.
+dev-db/clickhouse:tools - Build various tools, like benchmark, copier, etc.
+dev-db/clickhouse:zookeeper - Enable support for clustering (based on Zookeeper).
+dev-db/cppdb:mysql_internal - Don't build a separate mysql loadable module but rather build it into the cppdb library itself
+dev-db/cppdb:odbc_internal - Don't build a separate postgresql loadable module but rather build it into the cppdb library itself
+dev-db/cppdb:postgres_internal - Don't build a separate odbc loadable module but rather build it into the cppdb library itself
+dev-db/cppdb:sqlite_internal - Don't build a separate sqlite3 loadable module but rather build it into the cppdb library itself
+dev-db/etcd:server - Installs etcd daemon
+dev-db/firebird:server - Install the server components of Firebird, not just the client
+dev-db/firebird:xinetd - Install ClassicServer
+dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
+dev-db/mariadb-connector-c:mysqlcompat - Enable mysqlclient library symbolic links
+dev-db/mariadb-galera:client-libs - Build the client libraries from the server package instead of the C Connector packages
+dev-db/mariadb-galera:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/mariadb-galera:jdbc - Enable the CONNECT engine to access foreign databases via JDBC
+dev-db/mariadb-galera:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/mariadb-galera:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/mariadb-galera:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
+dev-db/mariadb-galera:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
+dev-db/mariadb-galera:oqgraph - Add support for the Open Query GRAPH engine
+dev-db/mariadb-galera:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mariadb-galera:server - Build the server program
+dev-db/mariadb-galera:sphinx - Add suport for the sphinx full-text search engine
+dev-db/mariadb-galera:sst-rsync - Add tools needed to support the rsync SST method
+dev-db/mariadb-galera:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
+dev-db/mariadb-galera:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/mariadb-galera:test - Install upstream testsuites for end use.
+dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
+dev-db/mariadb-galera:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
+dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
+dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
+dev-db/mysql-connector-c++:gcov - Build coverage support
+dev-db/mysql-connector-c++:legacy - Build the legacy 1.x API as well as the DevX API
+dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC
+dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications
+dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications
+dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus
+dev-db/oracle-instantclient:tools - Workload Replay Client
+dev-db/percona-server:client-libs - Build the libmysqlclient libraries
+dev-db/percona-server:embedded - Build embedded server (libmysqld)
+dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/percona-server:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
+dev-db/percona-server:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
+dev-db/percona-server:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
+dev-db/percona-server:profiling - Add support for statement profiling (requires USE=community).
+dev-db/percona-server:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
+dev-db/percona-server:server - Build the server program
+dev-db/percona-server:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/percona-server:test-suite - Install upstream testsuites for end use.
+dev-db/percona-server:tokudb - Add support for TokuDB storage engine
+dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
+dev-db/percona-server:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
+dev-db/pgadmin3:databasedesigner - Enable the Database Designer component
+dev-db/pgbouncer:c-ares - Use c-ares as the DNS backend instead of evdns (libevent).
+dev-db/pgbouncer:udns - Use udns as the DNS backend instead of evdns (libevent). Supports IPv4 only.
+dev-db/pgpool2:memcached - Use memcached for query caching.
+dev-db/pgrouting:drivingdistance - Enable to calculate driving distance
+dev-db/pgrouting:html - Install HTML formatted documentation
+dev-db/postgis:address-standardizer - Normalize US and CA postal addresses
+dev-db/postgis:gtk - Build graphical interface for shp2pgsql (shp2pgsql-gui)
+dev-db/postgis:mapbox - Add capability to transform geometry into Mapbox Vector Tile
+dev-db/postgis:topology - Build topology spatial types and functions
+dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
+dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
+dev-db/rethinkdb:jemalloc - Use dev-libs/jemalloc for allocations (default).
+dev-db/rethinkdb:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
+dev-db/soci:boost - Enable boost support
+dev-db/soci:empty - Build the sample backend called Empty
+dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
+dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
+dev-db/spatialite:xls - Add the dev-libs/freexl library for xls import support
+dev-db/sqlitestudio:cli - Build CLI interface
+dev-db/tokumx:pax_kernel - Apply patch needed for hardened kernels
+dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
+dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
+dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-embedded/libftdi:tools - build ftdi_eeprom helper tool
+dev-embedded/openocd:cmsis-dap - Support for CMSIS-DAP compliant adapters
+dev-embedded/openocd:dummy - Build the dummy port driver
+dev-embedded/openocd:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-embedded/openocd:jlink - Build the SEGGER J-Link driver
+dev-embedded/openocd:parport - Enable support for parport JTAG devices
+dev-embedded/openocd:verbose-io - Verbose IO and comm JTAG and USB messages
+dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector dev-libs/boehm-gc
+dev-embedded/sdcc:device-lib - Enable built of devices libraries
+dev-embedded/sdcc:ds390 - Add support for Dallas DS390
+dev-embedded/sdcc:ds400 - Add support for Dallas DS400
+dev-embedded/sdcc:gbz80 - Add support for Gameboy gbz80
+dev-embedded/sdcc:hc08 - Add support for Freescale/Motorola HC08 based
+dev-embedded/sdcc:mcs51 - Add support for Intel mcs51
+dev-embedded/sdcc:non-free - Enable non-free runtime library parts
+dev-embedded/sdcc:packihx - Enable Intel HEX files pack utility
+dev-embedded/sdcc:pic14 - Add support for Microchip 14 bits PICs
+dev-embedded/sdcc:pic16 - Add support for Microchip 16 bits PICs
+dev-embedded/sdcc:r2k - Add support for Rabbit 2000
+dev-embedded/sdcc:r3ka - Add support for Rabbit 3000A
+dev-embedded/sdcc:s08 - Add support for Freescale/Motorola S08
+dev-embedded/sdcc:sdbinutils - Enable SDCC library archive utilities sdar, sdranlib, sdnm
+dev-embedded/sdcc:sdcdb - Enable SDCC source level debugger
+dev-embedded/sdcc:sdcpp - Enable SDCC preprocessor based on GCC cpp
+dev-embedded/sdcc:stm8 - Add support for STMicroelectronics STM8
+dev-embedded/sdcc:tlcs90 - Add support for TLCS-90
+dev-embedded/sdcc:ucsim - Enable software simulator for microcontrollers
+dev-embedded/sdcc:z180 - Add support for Zilog Z180
+dev-embedded/sdcc:z80 - Add support for Zilog Z80
+dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
+dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-games/aseprite:bundled-libs - Use the upstream provided bundled version of allegro 4.4.2
+dev-games/aseprite:gtk3 - Enable support for the experimental native GTK File Dialog
+dev-games/aseprite:webp - Enable webp image format support
+dev-games/cegui:devil - Build the DevIL based ImageCodec module
+dev-games/cegui:freeimage - Build the FreeImage based ImageCodec module
+dev-games/cegui:irrlicht - Enable the Irrlicht renderer
+dev-games/cegui:ogre - Enable the OGRE renderer
+dev-games/cegui:tinyxml - Enable the Tiny XML parser module
+dev-games/cegui:xerces-c - Enable the Xerces-C++ XML parser module
+dev-games/cegui:zip - Enable the Minizip resource provider
+dev-games/guichan:allegro - Build the Allegro frontend
+dev-games/mygui:l10n_ru - Install some additional russian docs if 'doc' useflag enabled
+dev-games/mygui:ogre - Use the ogre render subsystem. (cannot combine with opengl)
+dev-games/mygui:opengl - Use the opengl render subsystem. (cannot combine with ogre)
+dev-games/mygui:plugins - Build MyGUI plugins
+dev-games/mygui:samples - Install MyGUI demos (needs ogre USE flag)
+dev-games/mygui:tools - Build the tools for development
+dev-games/ode:double-precision - more precise calculations at the expense of speed
+dev-games/ode:gyroscopic - enable gyroscopic term (may cause instability)
+dev-games/ogre:boost - Enable boost support
+dev-games/ogre:cache - Enable GL state cache support
+dev-games/ogre:cg - NVIDIA toolkit plugin
+dev-games/ogre:double-precision - More precise calculations at the expense of speed
+dev-games/ogre:egl - Use egl instead of glx
+dev-games/ogre:experimental - Build experimental BETA components 'Bites' and 'HLMS'
+dev-games/ogre:freeimage - Support images via media-libs/freeimage
+dev-games/ogre:gl3plus - Build OpenGL 3+ RenderSystem (EXPERIMENTAL)
+dev-games/ogre:gles2 - Build OpenGL ES 2.x RenderSystem
+dev-games/ogre:gles3 - Enable OpenGL ES 3.x Features
+dev-games/ogre:ois - Pull in Object-oriented Input System library dev-games/ois for samples
+dev-games/ogre:poco - When USE=threads, use poco for threading
+dev-games/ogre:resman-pedantic - Resource Manager PEDANTIC : require an explicit resource group. Case sensitive lookup. Some demos might not work with this setting. (default: case-insensitive + sensitive lookup in all groups)
+dev-games/ogre:resman-strict - Resource Manager STRICT : search in default group if not specified otherwise. Case sensitive lookup. Some demos might not work with this setting. (default: case-insensitive + sensitive lookup in all groups)
+dev-games/ogre:tbb - When USE=threads, use tbb for threading
+dev-games/ogre:tools - Build and install helper tools
+dev-games/ogre:zip - Support zip archives
+dev-games/openscenegraph:asio - Enable support for dev-cpp/asio library
+dev-games/openscenegraph:fox - Build examples using x11-libs/fox library
+dev-games/openscenegraph:gdal - Enable support for sci-libs/gdal library
+dev-games/openscenegraph:las - Enable support for geospatial data LAS LiDAR format using sci-geosciences/liblas
+dev-games/openscenegraph:openinventor - Build OpenInventor plugin
+dev-games/openscenegraph:osgapps - Build osg applications
+dev-games/openscenegraph:sdl2 - Use media-libs/libsdl2 additionally to media-libs/libsdl
+dev-games/openscenegraph:xrandr - Enable support for the X xrandr extension
+dev-games/physfs:7zip - Enable 7zip/lzma archive support
+dev-games/physfs:grp - Enable Build Engine GRP archive support
+dev-games/physfs:hog - Enable Descent I/II HOG archive support
+dev-games/physfs:iso - Enable ISO9660 file support
+dev-games/physfs:mvl - Enable Descent I/II MVL archive support
+dev-games/physfs:qpak - Enable Quake I/II QPAK archive support
+dev-games/physfs:slb - Enable Independence War SLB archive support
+dev-games/physfs:vdf - Enable Gothic/Gothic II VDF archive support
+dev-games/physfs:wad - Enable Doom WAD archive support
+dev-games/physfs:zip - Enable ZIP archive support
+dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
+dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
+dev-games/simgear:subversion - Enable terrasync scenery downloader
+dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
+dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
+dev-libs/actor-framework:benchmarks - Due to the number of out-of-tree deps, these only get installed as docs
+dev-libs/actor-framework:boost - Make use of Boost's ASIO functionality
+dev-libs/actor-framework:cash - Build the C Actor Shell for introspection and debugging
+dev-libs/actor-framework:debug - Raises log-level to DEBUG, enables runtime checks and address sanitizer
+dev-libs/actor-framework:doc - Compiles and installs the documentation as PDF and HTML
+dev-libs/actor-framework:examples - Installs the provided example source files
+dev-libs/actor-framework:mem_management - Enables built-in memory management
+dev-libs/actor-framework:nexus - Nexus is the central component for CAF's runtime inspection
+dev-libs/actor-framework:opencl - Compiles against the provided opencl implementation
+dev-libs/actor-framework:riac - Runtime inspection and configuration
+dev-libs/actor-framework:static - Provides a static build
+dev-libs/actor-framework:test - Builds the provided unit tests
+dev-libs/antlr-c:debugger - Compiles debug info into the library
+dev-libs/appstream:apt - Enables Debians APT support
+dev-libs/apr:older-kernels-compatibility - Enable binary compatibility with older kernels
+dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/apr-util:libressl - Use dev-libs/libressl instead of dev-libs/openssl for 'openssl' USE flag
+dev-libs/apr-util:nss - Install apr_crypto_nss module
+dev-libs/apr-util:openssl - Install apr_crypto_openssl module
+dev-libs/atcore:gui - Build test GUI
+dev-libs/aws-sdk-cpp:aws_targets_AWSMigrationHub - SDK Support for AWS AWSMigrationHub
+dev-libs/aws-sdk-cpp:aws_targets_access-management - SDK Support for AWS access-management
+dev-libs/aws-sdk-cpp:aws_targets_acm - SDK Support for AWS acm
+dev-libs/aws-sdk-cpp:aws_targets_acm-pca - SDK Support for AWS acm-pca
+dev-libs/aws-sdk-cpp:aws_targets_alexaforbusiness - SDK Support for AWS alexaforbusiness
+dev-libs/aws-sdk-cpp:aws_targets_apigateway - SDK Support for AWS apigateway
+dev-libs/aws-sdk-cpp:aws_targets_application-autoscaling - SDK Support for AWS application-autoscaling
+dev-libs/aws-sdk-cpp:aws_targets_appstream - SDK Support for AWS appstream
+dev-libs/aws-sdk-cpp:aws_targets_appsync - SDK Support for AWS appsync
+dev-libs/aws-sdk-cpp:aws_targets_athena - SDK Support for AWS athena
+dev-libs/aws-sdk-cpp:aws_targets_autoscaling - SDK Support for AWS autoscaling
+dev-libs/aws-sdk-cpp:aws_targets_autoscaling-plans - SDK Support for AWS autoscaling-plans
+dev-libs/aws-sdk-cpp:aws_targets_batch - SDK Support for AWS batch
+dev-libs/aws-sdk-cpp:aws_targets_budgets - SDK Support for AWS budgets
+dev-libs/aws-sdk-cpp:aws_targets_ce - SDK Support for AWS ce
+dev-libs/aws-sdk-cpp:aws_targets_cloud9 - SDK Support for AWS cloud9
+dev-libs/aws-sdk-cpp:aws_targets_clouddirectory - SDK Support for AWS clouddirectory
+dev-libs/aws-sdk-cpp:aws_targets_cloudformation - SDK Support for AWS cloudformation
+dev-libs/aws-sdk-cpp:aws_targets_cloudfront - SDK Support for AWS cloudfront
+dev-libs/aws-sdk-cpp:aws_targets_cloudhsm - SDK Support for AWS cloudhsm
+dev-libs/aws-sdk-cpp:aws_targets_cloudhsmv2 - SDK Support for AWS cloudhsmv2
+dev-libs/aws-sdk-cpp:aws_targets_cloudsearch - SDK Support for AWS cloudsearch
+dev-libs/aws-sdk-cpp:aws_targets_cloudsearchdomain - SDK Support for AWS cloudsearchdomain
+dev-libs/aws-sdk-cpp:aws_targets_cloudtrail - SDK Support for AWS cloudtrail
+dev-libs/aws-sdk-cpp:aws_targets_codebuild - SDK Support for AWS codebuild
+dev-libs/aws-sdk-cpp:aws_targets_codecommit - SDK Support for AWS codecommit
+dev-libs/aws-sdk-cpp:aws_targets_codedeploy - SDK Support for AWS codedeploy
+dev-libs/aws-sdk-cpp:aws_targets_codepipeline - SDK Support for AWS codepipeline
+dev-libs/aws-sdk-cpp:aws_targets_codestar - SDK Support for AWS codestar
+dev-libs/aws-sdk-cpp:aws_targets_cognito-identity - SDK Support for AWS cognito-identity
+dev-libs/aws-sdk-cpp:aws_targets_cognito-idp - SDK Support for AWS cognito-idp
+dev-libs/aws-sdk-cpp:aws_targets_cognito-sync - SDK Support for AWS cognito-sync
+dev-libs/aws-sdk-cpp:aws_targets_comprehend - SDK Support for AWS comprehend
+dev-libs/aws-sdk-cpp:aws_targets_config - SDK Support for AWS config
+dev-libs/aws-sdk-cpp:aws_targets_connect - SDK Support for AWS connect
+dev-libs/aws-sdk-cpp:aws_targets_core - SDK Support for AWS core
+dev-libs/aws-sdk-cpp:aws_targets_cur - SDK Support for AWS cur
+dev-libs/aws-sdk-cpp:aws_targets_datapipeline - SDK Support for AWS datapipeline
+dev-libs/aws-sdk-cpp:aws_targets_dax - SDK Support for AWS dax
+dev-libs/aws-sdk-cpp:aws_targets_devicefarm - SDK Support for AWS devicefarm
+dev-libs/aws-sdk-cpp:aws_targets_directconnect - SDK Support for AWS directconnect
+dev-libs/aws-sdk-cpp:aws_targets_discovery - SDK Support for AWS discovery
+dev-libs/aws-sdk-cpp:aws_targets_dms - SDK Support for AWS dms
+dev-libs/aws-sdk-cpp:aws_targets_ds - SDK Support for AWS ds
+dev-libs/aws-sdk-cpp:aws_targets_dynamodb - SDK Support for AWS dynamodb
+dev-libs/aws-sdk-cpp:aws_targets_dynamodbstreams - SDK Support for AWS dynamodbstreams
+dev-libs/aws-sdk-cpp:aws_targets_ec2 - SDK Support for AWS ec2
+dev-libs/aws-sdk-cpp:aws_targets_ecr - SDK Support for AWS ecr
+dev-libs/aws-sdk-cpp:aws_targets_ecs - SDK Support for AWS ecs
+dev-libs/aws-sdk-cpp:aws_targets_eks - SDK Support for AWS eks
+dev-libs/aws-sdk-cpp:aws_targets_elasticache - SDK Support for AWS elasticache
+dev-libs/aws-sdk-cpp:aws_targets_elasticbeanstalk - SDK Support for AWS elasticbeanstalk
+dev-libs/aws-sdk-cpp:aws_targets_elasticfilesystem - SDK Support for AWS elasticfilesystem
+dev-libs/aws-sdk-cpp:aws_targets_elasticloadbalancing - SDK Support for AWS elasticloadbalancing
+dev-libs/aws-sdk-cpp:aws_targets_elasticloadbalancingv2 - SDK Support for AWS elasticloadbalancingv2
+dev-libs/aws-sdk-cpp:aws_targets_elasticmapreduce - SDK Support for AWS elasticmapreduce
+dev-libs/aws-sdk-cpp:aws_targets_elastictranscoder - SDK Support for AWS elastictranscoder
+dev-libs/aws-sdk-cpp:aws_targets_email - SDK Support for AWS email
+dev-libs/aws-sdk-cpp:aws_targets_es - SDK Support for AWS es
+dev-libs/aws-sdk-cpp:aws_targets_events - SDK Support for AWS events
+dev-libs/aws-sdk-cpp:aws_targets_firehose - SDK Support for AWS firehose
+dev-libs/aws-sdk-cpp:aws_targets_fms - SDK Support for AWS fms
+dev-libs/aws-sdk-cpp:aws_targets_gamelift - SDK Support for AWS gamelift
+dev-libs/aws-sdk-cpp:aws_targets_glacier - SDK Support for AWS glacier
+dev-libs/aws-sdk-cpp:aws_targets_glue - SDK Support for AWS glue
+dev-libs/aws-sdk-cpp:aws_targets_greengrass - SDK Support for AWS greengrass
+dev-libs/aws-sdk-cpp:aws_targets_guardduty - SDK Support for AWS guardduty
+dev-libs/aws-sdk-cpp:aws_targets_health - SDK Support for AWS health
+dev-libs/aws-sdk-cpp:aws_targets_iam - SDK Support for AWS iam
+dev-libs/aws-sdk-cpp:aws_targets_identity-management - SDK Support for AWS identity-management
+dev-libs/aws-sdk-cpp:aws_targets_importexport - SDK Support for AWS importexport
+dev-libs/aws-sdk-cpp:aws_targets_inspector - SDK Support for AWS inspector
+dev-libs/aws-sdk-cpp:aws_targets_iot - SDK Support for AWS iot
+dev-libs/aws-sdk-cpp:aws_targets_iot-data - SDK Support for AWS iot-data
+dev-libs/aws-sdk-cpp:aws_targets_iot-jobs-data - SDK Support for AWS iot-jobs-data
+dev-libs/aws-sdk-cpp:aws_targets_iot1click-devices - SDK Support for AWS iot1click-devices
+dev-libs/aws-sdk-cpp:aws_targets_iot1click-projects - SDK Support for AWS iot1click-projects
+dev-libs/aws-sdk-cpp:aws_targets_iotanalytics - SDK Support for AWS iotanalytics
+dev-libs/aws-sdk-cpp:aws_targets_kinesis - SDK Support for AWS kinesis
+dev-libs/aws-sdk-cpp:aws_targets_kinesis-video-archived-media - SDK Support for AWS kinesis-video-archived-media
+dev-libs/aws-sdk-cpp:aws_targets_kinesis-video-media - SDK Support for AWS kinesis-video-media
+dev-libs/aws-sdk-cpp:aws_targets_kinesisanalytics - SDK Support for AWS kinesisanalytics
+dev-libs/aws-sdk-cpp:aws_targets_kinesisvideo - SDK Support for AWS kinesisvideo
+dev-libs/aws-sdk-cpp:aws_targets_kms - SDK Support for AWS kms
+dev-libs/aws-sdk-cpp:aws_targets_lambda - SDK Support for AWS lambda
+dev-libs/aws-sdk-cpp:aws_targets_lex - SDK Support for AWS lex
+dev-libs/aws-sdk-cpp:aws_targets_lex-models - SDK Support for AWS lex-models
+dev-libs/aws-sdk-cpp:aws_targets_lightsail - SDK Support for AWS lightsail
+dev-libs/aws-sdk-cpp:aws_targets_logs - SDK Support for AWS logs
+dev-libs/aws-sdk-cpp:aws_targets_machinelearning - SDK Support for AWS machinelearning
+dev-libs/aws-sdk-cpp:aws_targets_macie - SDK Support for AWS macie
+dev-libs/aws-sdk-cpp:aws_targets_marketplace-entitlement - SDK Support for AWS marketplace-entitlement
+dev-libs/aws-sdk-cpp:aws_targets_marketplacecommerceanalytics - SDK Support for AWS marketplacecommerceanalytics
+dev-libs/aws-sdk-cpp:aws_targets_mediaconvert - SDK Support for AWS mediaconvert
+dev-libs/aws-sdk-cpp:aws_targets_medialive - SDK Support for AWS medialive
+dev-libs/aws-sdk-cpp:aws_targets_mediapackage - SDK Support for AWS mediapackage
+dev-libs/aws-sdk-cpp:aws_targets_mediastore - SDK Support for AWS mediastore
+dev-libs/aws-sdk-cpp:aws_targets_mediastore-data - SDK Support for AWS mediastore-data
+dev-libs/aws-sdk-cpp:aws_targets_mediatailor - SDK Support for AWS mediatailor
+dev-libs/aws-sdk-cpp:aws_targets_meteringmarketplace - SDK Support for AWS meteringmarketplace
+dev-libs/aws-sdk-cpp:aws_targets_mobile - SDK Support for AWS mobile
+dev-libs/aws-sdk-cpp:aws_targets_mobileanalytics - SDK Support for AWS mobileanalytics
+dev-libs/aws-sdk-cpp:aws_targets_monitoring - SDK Support for AWS monitoring
+dev-libs/aws-sdk-cpp:aws_targets_mq - SDK Support for AWS mq
+dev-libs/aws-sdk-cpp:aws_targets_mturk-requester - SDK Support for AWS mturk-requester
+dev-libs/aws-sdk-cpp:aws_targets_neptune - SDK Support for AWS neptune
+dev-libs/aws-sdk-cpp:aws_targets_opsworks - SDK Support for AWS opsworks
+dev-libs/aws-sdk-cpp:aws_targets_opsworkscm - SDK Support for AWS opsworkscm
+dev-libs/aws-sdk-cpp:aws_targets_organizations - SDK Support for AWS organizations
+dev-libs/aws-sdk-cpp:aws_targets_pi - SDK Support for AWS pi
+dev-libs/aws-sdk-cpp:aws_targets_pinpoint - SDK Support for AWS pinpoint
+dev-libs/aws-sdk-cpp:aws_targets_polly - SDK Support for AWS polly
+dev-libs/aws-sdk-cpp:aws_targets_pricing - SDK Support for AWS pricing
+dev-libs/aws-sdk-cpp:aws_targets_queues - SDK Support for AWS queues
+dev-libs/aws-sdk-cpp:aws_targets_rds - SDK Support for AWS rds
+dev-libs/aws-sdk-cpp:aws_targets_redshift - SDK Support for AWS redshift
+dev-libs/aws-sdk-cpp:aws_targets_rekognition - SDK Support for AWS rekognition
+dev-libs/aws-sdk-cpp:aws_targets_resource-groups - SDK Support for AWS resource-groups
+dev-libs/aws-sdk-cpp:aws_targets_resourcegroupstaggingapi - SDK Support for AWS resourcegroupstaggingapi
+dev-libs/aws-sdk-cpp:aws_targets_route53 - SDK Support for AWS route53
+dev-libs/aws-sdk-cpp:aws_targets_route53domains - SDK Support for AWS route53domains
+dev-libs/aws-sdk-cpp:aws_targets_s3 - SDK Support for AWS s3
+dev-libs/aws-sdk-cpp:aws_targets_s3-encryption - SDK Support for AWS s3-encryption
+dev-libs/aws-sdk-cpp:aws_targets_sagemaker - SDK Support for AWS sagemaker
+dev-libs/aws-sdk-cpp:aws_targets_sagemaker-runtime - SDK Support for AWS sagemaker-runtime
+dev-libs/aws-sdk-cpp:aws_targets_sdb - SDK Support for AWS sdb
+dev-libs/aws-sdk-cpp:aws_targets_secretsmanager - SDK Support for AWS secretsmanager
+dev-libs/aws-sdk-cpp:aws_targets_serverlessrepo - SDK Support for AWS serverlessrepo
+dev-libs/aws-sdk-cpp:aws_targets_servicecatalog - SDK Support for AWS servicecatalog
+dev-libs/aws-sdk-cpp:aws_targets_servicediscovery - SDK Support for AWS servicediscovery
+dev-libs/aws-sdk-cpp:aws_targets_shield - SDK Support for AWS shield
+dev-libs/aws-sdk-cpp:aws_targets_sms - SDK Support for AWS sms
+dev-libs/aws-sdk-cpp:aws_targets_snowball - SDK Support for AWS snowball
+dev-libs/aws-sdk-cpp:aws_targets_sns - SDK Support for AWS sns
+dev-libs/aws-sdk-cpp:aws_targets_sqs - SDK Support for AWS sqs
+dev-libs/aws-sdk-cpp:aws_targets_ssm - SDK Support for AWS ssm
+dev-libs/aws-sdk-cpp:aws_targets_states - SDK Support for AWS states
+dev-libs/aws-sdk-cpp:aws_targets_storagegateway - SDK Support for AWS storagegateway
+dev-libs/aws-sdk-cpp:aws_targets_sts - SDK Support for AWS sts
+dev-libs/aws-sdk-cpp:aws_targets_support - SDK Support for AWS support
+dev-libs/aws-sdk-cpp:aws_targets_swf - SDK Support for AWS swf
+dev-libs/aws-sdk-cpp:aws_targets_text-to-speech - SDK Support for AWS text-to-speech
+dev-libs/aws-sdk-cpp:aws_targets_transcribe - SDK Support for AWS transcribe
+dev-libs/aws-sdk-cpp:aws_targets_transfer - SDK Support for AWS transfer
+dev-libs/aws-sdk-cpp:aws_targets_translate - SDK Support for AWS translate
+dev-libs/aws-sdk-cpp:aws_targets_waf - SDK Support for AWS waf
+dev-libs/aws-sdk-cpp:aws_targets_waf-regional - SDK Support for AWS waf-regional
+dev-libs/aws-sdk-cpp:aws_targets_workdocs - SDK Support for AWS workdocs
+dev-libs/aws-sdk-cpp:aws_targets_workmail - SDK Support for AWS workmail
+dev-libs/aws-sdk-cpp:aws_targets_workspaces - SDK Support for AWS workspaces
+dev-libs/aws-sdk-cpp:aws_targets_xray - SDK Support for AWS xray
+dev-libs/beignet:ocl-icd - Enable compatibility with the dev-libs/ocl-icd OpenCL ICD loader
+dev-libs/beignet:ocl20 - Enable experimental OpenCL 2.0 support on Skylake and newer architectures
+dev-libs/bitset:jemalloc - Use dev-libs/jemalloc for allocations
+dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
+dev-libs/blitz:boost - Enable usage of boost::serialization
+dev-libs/botan:boost - use dev-libs/boost
+dev-libs/c-blosc:lz4 - Enable lz4 compression
+dev-libs/c-blosc:snappy - Enable snappy compression
+dev-libs/c-blosc:zstd - Enable zstd compression
+dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
+dev-libs/cyberjack:fox - Enable installation of x11-libs/fox based fxcyberjack program
+dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
+dev-libs/cyrus-sasl:ldapdb - Enable ldapdb plugin
+dev-libs/cyrus-sasl:openldap - Add ldap support for saslauthd
+dev-libs/cyrus-sasl:sample - Enable sample client and server
+dev-libs/cyrus-sasl:srp - Enable SRP authentication
+dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/dbus-c++:ecore - Use Ecore integration
+dev-libs/dbus-c++:glib - Use glib integration
+dev-libs/eekboard:libcanberra - Enable support for media-libs/libcanberra
+dev-libs/eekboard:xtest - Enable support for x11-libs/libXtst
+dev-libs/efl:bmp - Enable WBMP image loader
+dev-libs/efl:dds - Enable DDS image loader
+dev-libs/efl:drm - Enable DRM engine
+dev-libs/efl:eet - Enable Eet image loader
+dev-libs/efl:egl - Enable EGL rendering
+dev-libs/efl:fribidi - Enable bidirectional text support
+dev-libs/efl:gles - Enable the OpenGL ES GL implementation
+dev-libs/efl:glib - Enable dev-libs/glib support
+dev-libs/efl:harfbuzz - Enable complex text shaping and layout support
+dev-libs/efl:hyphen - Enable text hyphenation support
+dev-libs/efl:ibus - Enable Intelligent Input Bus
+dev-libs/efl:ico - Enable Ico image loader
+dev-libs/efl:ivi - Enable ivi-shell support
+dev-libs/efl:libuv - Enable dev-libs/libuv support
+dev-libs/efl:luajit - USE dev-lang/luajit instead of dev-lang/lua
+dev-libs/efl:oldlua - USE dev-lang/lua instead of dev-lang/luajit
+dev-libs/efl:physics - Enable Bullet physics effects and support
+dev-libs/efl:pixman - Enable PixMan for software rendering
+dev-libs/efl:ppm - Enable PMAPS image loader
+dev-libs/efl:psd - Enable PSD image loader
+dev-libs/efl:scim - Enable Smart Common Input Method
+dev-libs/efl:system-lz4 - Use system liblz4 instead of bundled one
+dev-libs/efl:tga - Enable Tga image loader
+dev-libs/efl:tslib - Enable x11-libs/tslib for touchscreen events
+dev-libs/efl:unwind - Enable debug support via sys-libs/libunwind
+dev-libs/efl:valgrind - Enable usage of dev-util/valgrind in debug
+dev-libs/efl:vlc - Enable media-video/vlc support
+dev-libs/efl:webp - Enable WebP image loader
+dev-libs/efl:xcf - Enable XCF image loader
+dev-libs/efl:xim - Enable X Input Method
+dev-libs/efl:xpresent - Enable x11-libs/libXpresent support
+dev-libs/ell:glib - Enable dev-libs/glib support
+dev-libs/fcgi:html - Install HTML documentation
+dev-libs/fstrm:utils - Build fstrm utility programs
+dev-libs/gecode:gist - Enable Gist, the Gecode Interactive Search Tool
+dev-libs/gecode:gmp - Enable trigonometric and transcendental float constraints
+dev-libs/gf2x:bindist - Disable automatic fine-tuning to local processor features like pclmul or sse2.
+dev-libs/gf2x:custom-tune - Extra long compile time for tuning hardware specific low-level routines
+dev-libs/gf2x:fft - Build an FFT API for multiplication of 2 polynomials over GF(2)
+dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
+dev-libs/hidapi:fox - Build a x11-libs/fox GUI
+dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
+dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
+dev-libs/jemalloc:hugepages - Enable transparent huge page support
+dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
+dev-libs/jemalloc:stats - Enable statistics calculation/reporting
+dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
+dev-libs/leveldb:snappy - support the snappy compression library
+dev-libs/libbase58:tools - Build command line base58 tool
+dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
+dev-libs/libcec:cubox - Enable support for enable support for the TDA995x
+dev-libs/libcec:exynos - Enable support for Exynos chipsets
+dev-libs/libcec:raspberry-pi - Enable support for the Raspberry Pi
+dev-libs/libcec:xrandr - Enable detection of active HDMI using xrandr extensions
+dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
+dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
+dev-libs/libclsync:extra-debug - Enable extra debugging. This will hurt performance badly. Be ready for tons of output.
+dev-libs/libclsync:extra-hardened - Enable extra security checks. This may hurt performance.
+dev-libs/libdbusmenu:gtk - Enable support for GTK+2
+dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
+dev-libs/libdivecomputer:tools - Install tools that can be used to test the library.
+dev-libs/libdynd:cuda - Enable NVIDIA CUDA toolkit support
+dev-libs/libdynd:mkl - Enable a plugin for Intel Math Kernel Library sci-libs/mkl
+dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
+dev-libs/libgit2:curl - Use net-misc/curl for HTTP support (otherwise, limited built-in implementation will be used)
+dev-libs/libgit2:gssapi - Enable GSSAPI support for SPNEGO auth
+dev-libs/libgit2:ssh - Enable SSH transport support
+dev-libs/libgit2:trace - Enable tracing support
+dev-libs/libgpiod:tools - Build some useful gpio tools that use libgpiod.
+dev-libs/libgpuarray:cuda - Enable NVIDIA CUDA toolkit support
+dev-libs/libgpuarray:opencl - Enable OpenCL support
+dev-libs/libisoburn:external-filters - Allow the use of external processes as file content filters (Note: this is a potential security risk)
+dev-libs/libisoburn:external-filters-setuid - Also allow the use of external setuid processes as file content filters (Note: this is a potential security risk)
+dev-libs/libisoburn:frontend-optional - Use dev-tcltk/bwidget which is not strictly required for the frontend
+dev-libs/libisoburn:launch-frontend - Enable the tcl gui for xorriso
+dev-libs/libisoburn:launch-frontend-setuid - Enable the tcl gui for xorriso under setuid
+dev-libs/libisofs:verbose-debug - Enable verbose debug messages
+dev-libs/liblogging:rfc3195 - Enables RFC 3195 protocol (aka syslog-reliable) support. If you don't know what this is, you don't need it!
+dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as a the next version of the syslog(3) API).
+dev-libs/libmail:apop - Enables the APOP authentication method
+dev-libs/libmateweather:gtk3 - Build with GTK+3 instead of GTK+2
+dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
+dev-libs/libmemcached:libevent - Use the libevent event loop interface.
+dev-libs/libmemcached:sasl - Use sasl auth for communications.
+dev-libs/libmspack:utils - Enables building cabrip, chmextract, msexpand and oabextract
+dev-libs/libnfc:pcsc-lite - Enable NFC drivers that require pcsc-lite
+dev-libs/liborcus:spreadsheet-model - Enable the spreadsheet model implementation
+dev-libs/liborcus:tools - Build various low-level parsers
+dev-libs/libowfat:diet - Compile against dev-libs/dietlibc
+dev-libs/libp11:doc - Generate and install API documentation for the package.
+dev-libs/librdkafka:lz4 - Enable support for Kafka's LZ4 compression based on KIP-57 (uses app-arch/lz4)
+dev-libs/librelp:gnutls - Use GnuTLS
+dev-libs/librelp:libressl - Use LibreSSL
+dev-libs/librelp:openssl - Use OpenSSL
+dev-libs/libressl:asm - Enables assembly
+dev-libs/libsecp256k1:asm - Enable x86_64 assembly optimisation
+dev-libs/libsecp256k1:ecdh - Enable ECDH shared secret computation
+dev-libs/libsecp256k1:endomorphism - Enable endomorphism
+dev-libs/libsecp256k1:experimental - Allow experimental USE flags
+dev-libs/libsecp256k1:recovery - Enable ECDSA pubkey recovery module
+dev-libs/libsecp256k1:schnorr - Enable Schnorr signature module
+dev-libs/libsecp256k1:test_openssl - Enable OpenSSL comparison tests
+dev-libs/libslz:tools - Install additional tools (zenc, zdec)
+dev-libs/libsodium:asm - Enables assembly implementations
+dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/libsolv:rpm - Enable support for RPM files
+dev-libs/libspt:libtirpc - Build against net-libs/libtirpc for RPC support
+dev-libs/libsqlora8:orathreads - Use Oracle threads
+dev-libs/libtermkey:demos - Install demos, which pulls in dev-libs/glib
+dev-libs/libucl:regex - Enable regex checking for schema
+dev-libs/libucl:signatures - Enable signatures check
+dev-libs/libucl:urlfetch - Enable URLs fetch
+dev-libs/libucl:utils - Install the chargen and objdump utilities
+dev-libs/libunibreak:doc - Install html API documentation.
+dev-libs/libunibreak:man - Generate man pages with doxygen.
+dev-libs/libzia:ftdi - Enable support for FTDI USB chips
+dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
+dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
+dev-libs/log4cplus:iconv - Use inconv for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
+dev-libs/log4cplus:working-c-locale - Use the C99 locale facilities for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
+dev-libs/log4cplus:working-locale - Use C++'s std::locale for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
+dev-libs/log4cxx:smtp - Offer SMTP support via net-libs/libesmtp
+dev-libs/m17n-lib:X - Build the Graphical User Interface API and utilities
+dev-libs/m17n-lib:anthy - Enable support for app-i18n/anthy input method
+dev-libs/m17n-lib:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
+dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled
+dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
+dev-libs/m17n-lib:libxml2 - Use dev-libs/libxml2 to parse XML
+dev-libs/nss:cacert - Include root/class3 certs from CAcert (http://www.cacert.org/)
+dev-libs/nss:nss-pem - Add support for libnsspem
+dev-libs/nss:utils - Install utilities included with the library
+dev-libs/onigmo:combination-explosion-check - enable combination explosion check
+dev-libs/onigmo:crnl-as-line-terminator - enable CR+NL as line terminator
+dev-libs/oniguruma:combination-explosion-check - enable combination explosion check
+dev-libs/oniguruma:crnl-as-line-terminator - enable CR+NL as line terminator
+dev-libs/opencryptoki:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
+dev-libs/openct:debug - Add debug output to the driver library for pcsc-lite.
+dev-libs/openct:pcsc-lite - Build a driver library for sys-apps/pcsc-lite, providing PC/SC API access to devices supported by OpenCT.
+dev-libs/openct:udev - Install rules for sys-fs/udev to auto-start openct.
+dev-libs/openobex:irda - Enable IrDA support
+dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware
+dev-libs/opensc:notify - Enable notifications
+dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware
+dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware
+dev-libs/opensc:secure-messaging - Enable secure messaging
+dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
+dev-libs/poco:7z - Add Support for the 7z archive format
+dev-libs/poco:apache - Enable support to write Apache modules using POCO
+dev-libs/poco:cppparser - Build and install a minimal C++ parser
+dev-libs/poco:crypto - Encryption and digital signing classes
+dev-libs/poco:data - Database abstraction layer to easily send/retrieve data to/from various databases
+dev-libs/poco:file2pagecompiler - Utility to convert ordinary files to Page Compiler source files
+dev-libs/poco:json - Add JSON support
+dev-libs/poco:mongodb - Add dev-db/mongodb support
+dev-libs/poco:net - Classes to write network clients & servers
+dev-libs/poco:pagecompiler - Simple compiler translating HTML pages containing embedded C++ code into HTTPRequestHandler classes
+dev-libs/poco:pocodoc - POCO documentation generator
+dev-libs/poco:util - Several utility classes (like logger, timer, config file parser)
+dev-libs/poco:zip - Add support for the zip & gz archive formats
+dev-libs/ppl:lpsol - Build the ppl_lpsol linear programming problem solver
+dev-libs/serdisplib:tools - Build optional tools.
+dev-libs/softhsm:migration-tool - Build db migration tool
+dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
+dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
+dev-libs/starpu:opencl - Enable OpenCL support
+dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library.
+dev-libs/sway:swaybar - Build 'swaybar': sway's status bar component.
+dev-libs/sway:swaybg - Build 'swaybg': allows to set a desktop background image.
+dev-libs/sway:swaygrab - Build 'swaygrab': allows taking screenshots or screencasts.
+dev-libs/sway:swaylock - Build 'swaylock': sway's screen locker.
+dev-libs/sway:swaymsg - Build 'swaymsg': tool for communicating with a running sway instance.
+dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification.
+dev-libs/sway:wallpapers - Install sway's default wallpaper image.
+dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
+dev-libs/tntnet:server - Enable tntnet server daemon
+dev-libs/tvision:gpm - Support text mode mouse through sys-libs/gpm
+dev-libs/ucommon:socks - Build with socks proxy support
+dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
+dev-libs/ustr:ustr-import - Install ustr-import developer program and source code for bundling.
+dev-libs/weston:colord - Allow setting color managment
+dev-libs/weston:drm - Enable drm compositor support
+dev-libs/weston:editor - Install wayland-editor example application
+dev-libs/weston:fbdev - Enable fbdev compositor support
+dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL
+dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes
+dev-libs/weston:ivi - Enable the IVI shell
+dev-libs/weston:launch - Install weston-launch utility
+dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support
+dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi
+dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
+dev-libs/weston:unwind - Enable libunwind usage for backtraces
+dev-libs/weston:wayland-compositor - Enable Wayland compositor support
+dev-libs/weston:webp - Add support for the WebP image format
+dev-libs/weston:xwayland - Enable ability support native X11 applications
+dev-libs/wlc:X - Enable X11 backend.
+dev-libs/wlc:systemd - Enable support for systemd-logind.
+dev-libs/wlc:xwayland - Enable XWayland application support.
+dev-libs/xapian:brass - Enabled brass backend db support
+dev-libs/xapian:chert - Enabled chert backend db support
+dev-libs/xapian:glass - Enabled glass backend db support
+dev-libs/xapian:inmemory - Enabled inmemory backend db support
+dev-libs/xerces-c:iconv - Use iconv (virtual/libiconv) as message loader and transcoder (in general it would be possible to use iconv only as message loader and something else like icu or the native method as transcoder and vice-versa, but this is a less common case and hard to handle)
+dev-libs/xerces-c:threads - Enable threading support through pthread (or other libraries on AIX, IRIX, HPUX, Solars). Highly recommended
+dev-libs/xml-security-c:nss - Use dev-libs/nss for certain crypto operations (configureable at runtime)
+dev-libs/xml-security-c:xalan - Enable support for XSLT and XPath parsing by dev-libs/xalan-c
+dev-libs/xmlrpc-c:abyss - Build the Abyss mini web-server.
+dev-libs/xmlrpc-c:libxml2 - Use dev-libs/libxml2 to parse XML instead of the internal expat library.
+dev-libs/xmlrpc-c:threads - Controls whether to build the Abyss web-server with pthreads or fork 'threading'.
+dev-libs/xmlrpc-c:tools - Build the xmlrpc* tools.
+dev-libs/xmlsec:gcrypt - Install xmlsec-gcrypt library
+dev-libs/xmlsec:gnutls - Install xmlsec-gnutls library
+dev-libs/xmlsec:nss - Install xmlsec-nss library
+dev-libs/xmlsec:openssl - Install xmlsec-openssl library
+dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
+dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
+dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
+dev-ros/rosbag:lz4 - Add support for lz4 compressed bags.
+dev-ros/rosconsole:glog - Use dev-cpp/glog as log backend.
+dev-ros/rosconsole:log4cxx - Use dev-libs/log4cxx as log backend.
+dev-util/android-ndk:legacy-toolchains - Install legacy toolchains
+dev-util/android-ndk:target-32 - Support for 32-bit targets
+dev-util/android-ndk:target-64 - Support for 64-bit targets
+dev-util/apitrace:cli - Enable command line interface
+dev-util/apitrace:egl - Enable EGL support
+dev-util/apitrace:system-snappy - Link dynamic against app-arch/snappy
+dev-util/bazel:tools - Install extra bazel tools to build from sources
+dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
+dev-util/buildbot:docker - Add support for worker docker command steps
+dev-util/buildbot:irc - Add support for status delivery through an ircbot.
+dev-util/buildbot:mail - Add support for watching a maildir for commits.
+dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
+dev-util/bustle:interactivetests - Build interactive test programs
+dev-util/bustle:threaded - Build with support for multithreaded execution.
+dev-util/catalyst:ccache - Enables ccache support
+dev-util/catalyst:system-bootloader - Pulls in the depends needed to setup livecd bootloader from the host system rather than using a cdtar
+dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
+dev-util/cccc:mfc - Add patch for MFC dialect options
+dev-util/clion:custom-jdk - Install and use IntelliJ's custom JRE.
+dev-util/coccigrep:vim - Install the coccigrep vim plugin
+dev-util/codeblocks:contrib - Build additional contrib components
+dev-util/codeblocks:fortran - Build FortranProject plugin which enables to use Code::Blocks IDE for Fortran language
+dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
+dev-util/cutter:jupyter - Add support for jupyter notebook
+dev-util/cutter:webengine - Use dev-qt/qtwebengine for in-app jupyter browser
+dev-util/cwdiff:a2ps - install app-text/a2ps for postscript output
+dev-util/cwdiff:mercurial - install hg wdiff alias for dev-vcs/mercurial
+dev-util/dialog:minimal - Disable library, install command-line program only
+dev-util/diffoscope:R - Use dev-lang/R
+dev-util/diffoscope:binutils - Use sys-devel/binutils
+dev-util/diffoscope:colord - Use x11-misc/colord
+dev-util/diffoscope:cpio - Use app-arch/cpio
+dev-util/diffoscope:diff - Use sys-apps/diffutils
+dev-util/diffoscope:docx - Use app-text/docx2txt
+dev-util/diffoscope:dtc - Use sys-apps/dtc
+dev-util/diffoscope:e2fsprogs - Use sys-fs/e2fsprogs
+dev-util/diffoscope:file - Use sys-apps/file
+dev-util/diffoscope:find - Use sys-apps/findutils
+dev-util/diffoscope:gettext - Use sys-devel/gettext
+dev-util/diffoscope:gpg - Use app-crypt/gnupg
+dev-util/diffoscope:haskell - Use dev-lang/ghc
+dev-util/diffoscope:hex - Use app-editors/vim-core
+dev-util/diffoscope:iso - Use virtual/cdrtools
+dev-util/diffoscope:llvm - Use sys-devel/llvm
+dev-util/diffoscope:opendocument - Use app-text/odt2txt
+dev-util/diffoscope:pascal - Use dev-lang/fpc
+dev-util/diffoscope:rpm - Use app-arch/rpm
+dev-util/diffoscope:squashfs - Use sys-fs/squashfs-tools
+dev-util/diffoscope:ssh - Use net-misc/openssh
+dev-util/diffoscope:tar - Use app-arch/tar
+dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
+dev-util/diffoscope:xz - Use app-arch/xz-utils
+dev-util/diffoscope:zip - Use app-arch/unzip
+dev-util/edb-debugger:graphviz - Add support for the Graphviz library
+dev-util/edb-debugger:legacy-mem-write - Probe if writes to /proc/PID/mem are broken.
+dev-util/edb-debugger:pax_kernel - Enable building under a PaX enabled kernel
+dev-util/electron:gconf - Use gnome-base/gconf
+dev-util/electron:gtk3 - Use GTK+3 instead of GTK+2
+dev-util/electron:lto - Build with link time optimization enabled
+dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
+dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+dev-util/electron:system-ffmpeg - Use system ffmpeg instead of the bundled one
+dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc
+dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
+dev-util/fatrace:powertop - Add powetop integration
+dev-util/geany:gtk3 - Use GTK+3 instead of GTK+2
+dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
+dev-util/geany-plugins:autoclose - Enable the autoclose plugin.
+dev-util/geany-plugins:automark - Enable the automark plugin
+dev-util/geany-plugins:commander - Enable the commander plugin which provides a command panel for rapid access to any action.
+dev-util/geany-plugins:ctags - Enable ctags plugin
+dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with sys-devel/gdb
+dev-util/geany-plugins:defineformat - Enable the defineformat plugin.
+dev-util/geany-plugins:enchant - Enable spell checking using enchant
+dev-util/geany-plugins:gpg - Enable geanypg plugin which integrates GPG using app-crypt/gpgme
+dev-util/geany-plugins:gtk3 - Use GTK+3 instead of GTK+2
+dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support in GeanyVC
+dev-util/geany-plugins:multiterm - Enable the multiterm plugin
+dev-util/geany-plugins:overview - Enable overview plugin
+dev-util/geany-plugins:pretty-printer - Enable pretty-printer plugin
+dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB front-end
+dev-util/geany-plugins:soup - Enable updatechecker and geniuspaste plugins which require net-libs/libsoup
+dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
+dev-util/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
+dev-util/gnome-builder:devhelp - Provide API docs browsing and integration via dev-util/devhelp
+dev-util/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
+dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
+dev-util/gnome-builder:vala - Provide an autoindenter, autocompletion, diagnostics, and symbol resolver for Vala
+dev-util/gnome-builder:webkit - Enable net-libs/webkit-gtk using plugins support and the HTML/Markdown previewer plugin
+dev-util/google-perftools:debug - Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc.
+dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
+dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
+dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
+dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
+dev-util/intel-ocl-sdk:android - Install android related files
+dev-util/intel-ocl-sdk:system-boost - Use system boost (dev-libs/boost) instead of bundled one
+dev-util/intel-ocl-sdk:system-clang - Use system clang (sys-devel/clang) instead of bundled one
+dev-util/intel-ocl-sdk:system-tbb - Use system Thread Building Blocks (dev-cpp/tbb) instead of bundled one
+dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
+dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
+dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
+dev-util/mdds:valgrind - Add support for memory debugging using dev-util/valgrind
+dev-util/mingw64-runtime:idl - Install idl files.
+dev-util/mingw64-runtime:libraries - Build extra libraries.
+dev-util/mingw64-runtime:tools - Build extra tools.
+dev-util/molecule:plugins - Add plugins provided by dev-util/molecule-plugins
+dev-util/nvidia-cuda-sdk:cuda - Build CUDA binaries
+dev-util/nvidia-cuda-sdk:opencl - Build OpenCL binaries
+dev-util/nvidia-cuda-toolkit:debugger - Installs the CUDA debugger
+dev-util/nvidia-cuda-toolkit:eclipse - Install plugins for eclipse
+dev-util/nvidia-cuda-toolkit:profiler - Installs the NVIDIA CUDA visual profiler
+dev-util/ostree:grub - Enable grub configuration generator
+dev-util/ostree:soup - Use libsoup for networking
+dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils.
+dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
+dev-util/perf:numa - Enable NUMA support
+dev-util/perf:perl - Add support for Perl as a scripting language for perf tools.
+dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
+dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
+dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
+dev-util/radare2:system-capstone - Use dev-libs/capstone instead of bundled copy.
+dev-util/scanmem:gui - Enable the GameConqueror GUI
+dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots.
+dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
+dev-util/schroot:lvm - Enable support for chroots using LVM snapshots.
+dev-util/squashdelta:lz4 - Enable support for LZ4 compression using app-arch/lz4
+dev-util/squashmerge:lz4 - Enable support for LZ4 compression using app-arch/lz4
+dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
+dev-util/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
+dev-util/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
+dev-util/suse-build:symlink - Provide compatibility symlinks with original openSUSE package (might clash with other packages)
+dev-util/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
+dev-util/sysprof:systemd - Build the sysprofd daemon service, required to run the UI without root permissions. Relies on sys-apps/systemd running as the init system.
+dev-util/systemtap:libvirt - Support probing of libvirt domains.
+dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
+dev-util/vulkan-tools:cube - Build the cube/cubepp demos
+dev-util/vulkan-tools:vulkaninfo - Build the vulkaninfo utility
+dev-vcs/bzr:sftp - Enable sftp support
+dev-vcs/cssc:valgrind - Enable usage of dev-util/valgrind in tests
+dev-vcs/cvs:server - Enable server support
+dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
+dev-vcs/cvsync:gcrypt - Use dev-libs/libgcrypt for hash functions.
+dev-vcs/cvsync:mhash - Use app-crypt/mhash for hash functions.
+dev-vcs/cvsync:openssl - Use dev-libs/openssl for hash functions.
+dev-vcs/darcs:diff - Use 'lcs' for diff building.
+dev-vcs/darcs:http - Use the pure Haskell HTTP package for HTTP support.
+dev-vcs/darcs:network-uri - Get Network.URI from the network-uri package.
+dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
+dev-vcs/darcs:threaded - Use threading and SMP support.
+dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
+dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
+dev-vcs/fossil:legacy-mv-rm - Enable legacy behavior for mv/rm (skip checkout files).
+dev-vcs/fossil:miniz - Use the bundled miniz for compression instead of zlib. Incompatible with ssl.
+dev-vcs/fossil:system-sqlite - Use the system SQLite instead of the bundled one
+dev-vcs/fossil:tcl-private-stubs - Enable Tcl integration via private stubs mechanism
+dev-vcs/fossil:tcl-stubs - Enable Tcl integration via stubs library mechanism
+dev-vcs/fossil:th1-docs - Enable TH1 for embedded documentation pages
+dev-vcs/fossil:th1-hooks - Enable TH1 hooks for commands and web pages
+dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
+dev-vcs/git-annex:benchmark - Enable benchmarking
+dev-vcs/git-annex:concurrentoutput - Use concurrent-output library (experimental)
+dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
+dev-vcs/git-annex:network-uri - Get Network.URI from the network-uri package.
+dev-vcs/git-annex:pairing - Enable pairing of git annex repositories
+dev-vcs/git-annex:s3 - Enable Amazon S3 remote
+dev-vcs/git-annex:torrentparser - Use haskell torrent library to parse torrent files
+dev-vcs/git-annex:webapp - Enable git-annex webapp
+dev-vcs/git-annex:webdav - Enable webdav remote
+dev-vcs/gitolite:contrib - Install user-contributed files
+dev-vcs/gitolite:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
+dev-vcs/gitolite-gentoo:contrib - Install user-contributed files
+dev-vcs/gitolite-gentoo:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
+dev-vcs/mercurial:bugzilla - Support bugzilla integration.
+dev-vcs/mercurial:gpg - Support signing with GnuPG.
+dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
+dev-vcs/rabbitvcs:caja - Enable extension for mate-base/caja
+dev-vcs/rabbitvcs:cli - Eanble console based frontend
+dev-vcs/rabbitvcs:diff - Use for diff command dev-util/meld
+dev-vcs/rabbitvcs:gedit - Enable plugin for app-editors/gedit
+dev-vcs/rabbitvcs:nautilus - Enable extension for gnome-base/nautilus
+dev-vcs/rabbitvcs:thunar - Enable extension for xfce-base/thunar
+dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
+dev-vcs/subversion:dso - Enable runtime module search
+dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
+dev-vcs/subversion:http - Enable http support using net-libs/serf
+dev-vcs/subversion:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet

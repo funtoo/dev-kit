@@ -1,0 +1,105 @@
+diff -Nuar 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b/CMake/FindLLVM.cmake 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b-fixed/CMake/FindLLVM.cmake
+--- 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b/CMake/FindLLVM.cmake	2018-02-05 12:04:24.000000000 +0200
++++ 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b-fixed/CMake/FindLLVM.cmake	2018-05-15 18:40:16.405583412 +0300
+@@ -8,12 +8,12 @@
+ # LLVM_FOUND       - True if llvm found.
+ if (LLVM_INSTALL_DIR)
+   find_program(LLVM_CONFIG_EXECUTABLE
+-               NAMES llvm-config-37 llvm-config-3.7 llvm-config-36 llvm-config-3.6 llvm-config-38 llvm-config-3.8 llvm-config-39 llvm-config-3.9 llvm-config llvm-config-35 llvm-config-3.5 llvm-config-34 llvm-config-3.4
++	  		   NAMES $ENV{CHOST}-llvm-config
+                DOC "llvm-config executable"
+                PATHS ${LLVM_INSTALL_DIR} NO_DEFAULT_PATH)
+ else (LLVM_INSTALL_DIR)
+   find_program(LLVM_CONFIG_EXECUTABLE
+-               NAMES llvm-config-37 llvm-config-3.7 llvm-config-36 llvm-config-3.6 llvm-config-38 llvm-config-3.8 llvm-config-39 llvm-config-3.9 llvm-config llvm-config-35 llvm-config-3.5 llvm-config-34 llvm-config-3.4
++               NAMES $ENV{CHOST}-llvm-config
+                DOC "llvm-config executable")
+ endif (LLVM_INSTALL_DIR)
+ 
+diff -Nuar 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b/CMakeLists.txt 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b-fixed/CMakeLists.txt
+--- 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b/CMakeLists.txt	2018-02-05 12:04:24.000000000 +0200
++++ 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b-fixed/CMakeLists.txt	2018-05-15 18:46:24.277592155 +0300
+@@ -33,15 +33,9 @@
+ 
+ SET(CMAKE_VERBOSE_MAKEFILE "false")
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake/")
+-INCLUDE (GNUInstallDirs OPTIONAL)
+-# support old CMake without GNUInstallDirs
+-if (NOT CMAKE_INSTALL_FULL_LIBDIR)
+-  set (CMAKE_INSTALL_FULL_LIBDIR "${CMAKE_INSTALL_PREFIX}/lib")
+-  set (CMAKE_INSTALL_FULL_DATADIR "${CMAKE_INSTALL_PREFIX}/share")
+-  set (BEIGNET_LIBRARY_ARCHITECTURE "")
+-else (NOT CMAKE_INSTALL_FULL_LIBDIR)
+-  set (BEIGNET_LIBRARY_ARCHITECTURE "${CMAKE_LIBRARY_ARCHITECTURE}")
+-endif (NOT CMAKE_INSTALL_FULL_LIBDIR)
++
++set (CMAKE_INSTALL_FULL_LIBDIR "${CMAKE_INSTALL_PREFIX}/lib")
++set (BEIGNET_LIBRARY_ARCHITECTURE "")
+ 
+ if (NOT LIB_INSTALL_DIR)
+   set (LIB_INSTALL_DIR "${CMAKE_INSTALL_FULL_LIBDIR}")
+@@ -50,17 +44,7 @@
+   set (BEIGNET_INSTALL_DIR "${LIB_INSTALL_DIR}/beignet/")
+ endif (NOT BEIGNET_INSTALL_DIR)
+ 
+-# allow co-installation of 32- and 64-bit versions:
+-# https://wiki.debian.org/Multiarch
+-if (BEIGNET_INSTALL_DIR STREQUAL "${CMAKE_INSTALL_PREFIX}/lib/beignet/")
+-  set (ICD_FILE_NAME "intel-beignet.icd")
+-else (BEIGNET_INSTALL_DIR STREQUAL "${CMAKE_INSTALL_PREFIX}/lib/beignet/")
+-  if (BEIGNET_LIBRARY_ARCHITECTURE STREQUAL "")
+-    set (ICD_FILE_NAME "intel-beignet.icd")
+-  else (BEIGNET_LIBRARY_ARCHITECTURE STREQUAL "")
+-    set (ICD_FILE_NAME "intel-beignet-${BEIGNET_LIBRARY_ARCHITECTURE}.icd")
+-  endif (BEIGNET_LIBRARY_ARCHITECTURE STREQUAL "")
+-endif (BEIGNET_INSTALL_DIR STREQUAL "${CMAKE_INSTALL_PREFIX}/lib/beignet/")
++set (ICD_FILE_NAME "intel-beignet.icd")
+ 
+ # Force Release with debug info
+ if (NOT CMAKE_BUILD_TYPE)
+@@ -80,8 +64,7 @@
+ elseif (COMPILER STREQUAL "ICC")
+   set (CMAKE_C_CXX_FLAGS "${CMAKE_C_CXX_FLAGS}  -wd2928 -Wall -fPIC -fstrict-aliasing -fp-model fast -msse4.1 -Wl,-E")
+ endif ()
+-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CMAKE_C_CXX_FLAGS} -std=c++0x -Wno-invalid-offsetof")
+-set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CMAKE_C_CXX_FLAGS}")
++set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wno-invalid-offsetof")
+ set (CMAKE_CXX_FLAGS_DEBUG          "-O0 -g -DGBE_DEBUG=1")
+ set (CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -DGBE_DEBUG=1")
+ set (CMAKE_CXX_FLAGS_MINSIZEREL     "-Os -DNDEBUG -DGBE_DEBUG=0")
+@@ -214,14 +197,6 @@
+   Find_Package(OCLIcd)
+   IF(OCLIcd_FOUND)
+     MESSAGE(STATUS "Looking for OCL ICD header file - found")
+-    configure_file (
+-      "intel-beignet.icd.in"
+-      "${ICD_FILE_NAME}"
+-      )
+-    IF(NOT OCL_ICD_INSTALL_PREFIX)
+-      set(OCL_ICD_INSTALL_PREFIX "/etc/OpenCL/vendors")
+-    ENDIF(NOT OCL_ICD_INSTALL_PREFIX)
+-    install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${ICD_FILE_NAME} DESTINATION ${OCL_ICD_INSTALL_PREFIX})
+   ELSE(OCLIcd_FOUND)
+     MESSAGE(STATUS "Looking for OCL ICD header file - not found")
+     MESSAGE(FATAL_ERROR "OCL ICD loader miss. If you really want to disable OCL ICD support, please run cmake with option -DOCLICD_COMPAT=0.")
+diff -Nuar 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b/backend/src/CMakeLists.txt 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b-fixed/backend/src/CMakeLists.txt
+--- 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b/backend/src/CMakeLists.txt	2018-02-05 12:04:24.000000000 +0200
++++ 7e181af2ea4d37f67406f2563c0e13fa1fdbb14b-fixed/backend/src/CMakeLists.txt	2018-05-15 18:48:18.121594861 +0300
+@@ -172,7 +172,7 @@
+ 
+ add_library(gbeinterp SHARED gbe_bin_interpreter.cpp)
+ 
+-if (LLVM_VERSION_NODOT VERSION_EQUAL 34)
++if (NOT (LLVM_VERSION_NODOT LESS 34))
+   find_library(TERMINFO NAMES tinfo ncurses)
+   if (${TERMINFO} STREQUAL TERMINFO-NOTFOUND)
+     message(FATAL_ERROR "no libtinfo or libncurses is found in system")
+@@ -180,7 +180,7 @@
+     target_link_libraries(gbe ${TERMINFO})
+     message(STATUS "use ${TERMINFO} as terminal control library")
+   endif (${TERMINFO} STREQUAL TERMINFO-NOTFOUND)
+-endif(LLVM_VERSION_NODOT VERSION_EQUAL 34)
++endif(NOT (LLVM_VERSION_NODOT LESS 34))
+ 
+ link_directories (${LLVM_LIBRARY_DIR} ${DRM_LIBDIR})
+ 

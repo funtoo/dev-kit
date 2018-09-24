@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=doc? ( app-doc/doxygen )
+DESCRIPTION=Simple library for creating daemon processes in C
+EAPI=6
+HOMEPAGE=http://0pointer.de/lennart/projects/libdaemon/
+IUSE=doc examples static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd
+LICENSE=LGPL-2.1
+SLOT=0/5
+SRC_URI=http://0pointer.de/lennart/projects/libdaemon/libdaemon-0.14.tar.gz
+_eclasses_=multibuild	40fe59465edacd730c644ec2bc197809	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	b42436dc1260f475af229754c165cb6b	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=02adef96e170c4fd5bc98636e053959d

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-ros/rgbd_launch dev-ros/depth_image_proc dev-ros/image_proc dev-ros/nodelet dev-ros/openni2_camera dev-ros/tf sys-devel/make >=dev-util/cmake-3.9.6 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-util/catkin[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/empy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Launch files to start the openni2_camera drivers using rgbd_launch
+EAPI=5
+HOMEPAGE=https://wiki.ros.org/openni2_launch https://github.com/ros-drivers/openni2_camera
+IUSE=python_targets_python2_7 test
+KEYWORDS=~amd64 ~arm
+LICENSE=BSD
+RDEPEND=dev-ros/rgbd_launch dev-ros/depth_image_proc dev-ros/image_proc dev-ros/nodelet dev-ros/openni2_camera dev-ros/tf python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/ros-drivers/openni2_camera/archive/0.4.0.tar.gz -> openni2_camera-0.4.0.tar.gz
+_eclasses_=cmake-utils	f0bc1c175684130a76ab6c17f575d820	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	55aaa148741116aa54ad0d80e361818e	ltprune	2770eed66a9b8ef944714cd0e968182e	multibuild	40fe59465edacd730c644ec2bc197809	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-r1	ce1cd23cfdc1848e8e32743efe34f299	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	ros-catkin	0d420151b2dd779013f9b4443109f8a4	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	89bb9f083a2590d9b447fd0b78a96186
+_md5_=3b9fe557c39ac443487a60251f8603bc

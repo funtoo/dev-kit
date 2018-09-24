@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure setup
+DEPEND=virtual/libgudev:= virtual/libudev:= >=dev-libs/glib-2.32:2 test? ( || ( dev-lang/python:3.6 dev-lang/python:3.5 dev-lang/python:3.4 >=dev-lang/python-2.7.5-r2:2.7 ) ) app-arch/xz-utils virtual/pkgconfig
+DESCRIPTION=Mock hardware devices for creating unit tests
+EAPI=6
+HOMEPAGE=https://github.com/martinpitt/umockdev/
+IUSE=static-libs test
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1+
+RDEPEND=virtual/libgudev:= virtual/libudev:= >=dev-libs/glib-2.32:2
+RESTRICT=test
+SLOT=0
+SRC_URI=https://launchpad.net/umockdev/trunk/0.9.4/+download/umockdev-0.9.4.tar.xz
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=0c10dc493acb6cefa3bdf9ea4a02f9d0

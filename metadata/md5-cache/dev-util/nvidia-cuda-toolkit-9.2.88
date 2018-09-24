@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare pretend setup unpack
+DESCRIPTION=NVIDIA CUDA Toolkit (compiler and friends)
+EAPI=6
+HOMEPAGE=https://developer.nvidia.com/cuda-zone
+IUSE=debugger doc eclipse profiler
+KEYWORDS=-* ~amd64 ~amd64-linux
+LICENSE=NVIDIA-CUDA
+RDEPEND=<sys-devel/gcc-8[cxx] >=x11-drivers/nvidia-drivers-396.24[X,uvm] debugger? ( sys-libs/libtermcap-compat sys-libs/ncurses:5/5[tinfo] ) eclipse? ( >=virtual/jre-1.6 ) profiler? ( >=virtual/jre-1.6 )
+SLOT=0/9.2.88
+SRC_URI=https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_396.26_linux -> cuda_9.2.88_396.26_linux.run
+_eclasses_=check-reqs	21aa24510a44d259c03425a957336b3b	cuda	e73256026102c4924bbba2ae5bf87978	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	55aaa148741116aa54ad0d80e361818e	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	unpacker	ee2f5086cd7e7b747b061f58db14d89e	versionator	2352c3fc97241f6a02042773c8287748
+_md5_=dc97ac8fcc42be993bb3b418c9f4a306

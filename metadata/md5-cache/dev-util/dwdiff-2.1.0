@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-libs/icu:= nls? ( sys-devel/gettext )
+DESCRIPTION=diff-like program operating at word level instead of line level
+EAPI=5
+HOMEPAGE=https://os.ghalkes.nl/dwdiff.html
+IUSE=nls
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/icu:= sys-apps/diffutils
+SLOT=0
+SRC_URI=https://os.ghalkes.nl/dist/dwdiff-2.1.0.tar.bz2
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=58d764380ac294dea9ba8f9c3876c618

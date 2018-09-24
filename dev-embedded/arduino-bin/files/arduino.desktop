@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Arduino
+Comment=Open-source electronics prototyping platform
+Comment[sk]=Otvorená elektronická prototypová platforma
+TryExec=arduino
+Exec=arduino
+Icon=arduino
+Terminal=false
+Categories=Development;IDE;Electronics;
+StartupNotify=true
