@@ -370,12 +370,6 @@ dev-libs/c-blosc:snappy - Enable snappy compression
 dev-libs/c-blosc:zstd - Enable zstd compression
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
 dev-libs/cyberjack:fox - Enable installation of x11-libs/fox based fxcyberjack program
-dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
-dev-libs/cyrus-sasl:ldapdb - Enable ldapdb plugin
-dev-libs/cyrus-sasl:openldap - Add ldap support for saslauthd
-dev-libs/cyrus-sasl:sample - Enable sample client and server
-dev-libs/cyrus-sasl:srp - Enable SRP authentication
-dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/dbus-c++:glib - Use glib integration
 dev-libs/eekboard:libcanberra - Enable support for media-libs/libcanberra
