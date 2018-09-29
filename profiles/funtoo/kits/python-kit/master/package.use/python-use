@@ -1,4 +1,5 @@
 =app-admin/abrt-2.0.12-r2 python_single_target_python2_7
+=dev-games/tiled-1.1.6 python_single_target_python2_7
 =dev-libs/libcec-3.1.0-r1 python_single_target_python2_7
 =dev-libs/libcec-4.0.2 python_single_target_python2_7
 =dev-libs/libcec-4.0.2-r1 python_single_target_python2_7
@@ -9,7 +10,6 @@ dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
 dev-embedded/platformio python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
-dev-games/tiled python_single_target_python2_7
 dev-libs/beecrypt python_single_target_python2_7
 dev-libs/btparser python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7

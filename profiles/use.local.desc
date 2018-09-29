@@ -58,13 +58,10 @@ dev-db/oracle-instantclient:sdk - Header files and an example makefile for devel
 dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus
 dev-db/oracle-instantclient:tools - Workload Replay Client
 dev-db/percona-server:client-libs - Build the libmysqlclient libraries
-dev-db/percona-server:embedded - Build embedded server (libmysqld)
-dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/percona-server:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/percona-server:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/percona-server:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
 dev-db/percona-server:profiling - Add support for statement profiling (requires USE=community).
 dev-db/percona-server:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
 dev-db/percona-server:server - Build the server program
@@ -389,7 +386,6 @@ dev-libs/efl:ico - Enable Ico image loader
 dev-libs/efl:ivi - Enable ivi-shell support
 dev-libs/efl:libuv - Enable dev-libs/libuv support
 dev-libs/efl:luajit - USE dev-lang/luajit instead of dev-lang/lua
-dev-libs/efl:oldlua - USE dev-lang/lua instead of dev-lang/luajit
 dev-libs/efl:physics - Enable Bullet physics effects and support
 dev-libs/efl:pixman - Enable PixMan for software rendering
 dev-libs/efl:ppm - Enable PMAPS image loader
@@ -512,7 +508,6 @@ dev-libs/oniguruma:crnl-as-line-terminator - enable CR+NL as line terminator
 dev-libs/opencryptoki:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
 dev-libs/openct:debug - Add debug output to the driver library for pcsc-lite.
 dev-libs/openct:pcsc-lite - Build a driver library for sys-apps/pcsc-lite, providing PC/SC API access to devices supported by OpenCT.
-dev-libs/openct:udev - Install rules for sys-fs/udev to auto-start openct.
 dev-libs/openobex:irda - Enable IrDA support
 dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware
 dev-libs/opensc:notify - Enable notifications
@@ -539,6 +534,8 @@ dev-libs/softhsm:migration-tool - Build db migration tool
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
+dev-libs/starpu:spinlock-check - Enable spinlock check
+dev-libs/starpu:valgrind - Enable dev-util/valgrind support
 dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library.
 dev-libs/sway:swaybar - Build 'swaybar': sway's status bar component.
 dev-libs/sway:swaybg - Build 'swaybg': allows to set a desktop background image.

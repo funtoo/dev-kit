@@ -1,11 +1,12 @@
 =app-admin/abrt-2.0.12-r2 python_single_target_python2_7
+=dev-games/tiled-1.1.6 python_single_target_python2_7
+=dev-games/tiled-1.2.0 python_single_target_python3_6 python_targets_python3_6
 =dev-libs/volume_key-0.3.11 python_single_target_python3_5 python_targets_python3_5
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
 dev-embedded/platformio python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
-dev-games/tiled python_single_target_python2_7
 dev-libs/beecrypt python_single_target_python2_7
 dev-libs/btparser python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7
