@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=sys-apps/pcsc-lite virtual/libusb:1 fox? ( >=x11-libs/fox-1.6 ) xml? ( dev-libs/libxml2 ) udev? ( virtual/udev )
 SLOT=0
 SRC_URI=http://support.reiner-sct.de/downloads/LINUX/V3.99.5_SP03/pcsc-cyberjack_3.99.5final.SP03.tar.gz
-_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	linux-info	915cae3d7d636732918d18827fb1c226	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	udev	7752f306eec7b286d00bdb47b763e7ac
+_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	linux-info	953c3b1c472dcadbf62098a9301327f2	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	udev	7752f306eec7b286d00bdb47b763e7ac
 _md5_=e0909e29be7a32f464ab6a7a3687401c
