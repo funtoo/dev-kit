@@ -1,0 +1,14 @@
+BDEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/ruby dev-ruby/rubygems >=app-portage/elt-patches-20170317
+DESCRIPTION=Alternative to vendor specific OpenCL ICD loaders
+EAPI=7
+HOMEPAGE=https://github.com/OCL-dev/ocl-icd
+IUSE=abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=app-eselect/eselect-opencl
+SLOT=0
+SRC_URI=https://github.com/OCL-dev/ocl-icd/archive/v2.2.12.tar.gz -> ocl-icd-2.2.12.tar.gz
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	55aaa148741116aa54ad0d80e361818e	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multibuild	40fe59465edacd730c644ec2bc197809	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	b42436dc1260f475af229754c165cb6b	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=c9ee556e6ad1cce53b87c619260c90d7
