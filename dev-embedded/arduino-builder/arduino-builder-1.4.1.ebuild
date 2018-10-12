@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -14,8 +13,11 @@ EGO_VENDOR=(
 	"github.com/golang/protobuf aa810b61a9c79d51363740d207bb46cf8e620ed5"
 	"github.com/jstemmer/go-junit-report 833f8ea2b99d36d5f018698333834f3df200a0c2"
 	"github.com/stretchr/testify 1661650f989674e3e5bcdcb805536e5d31481526"
-	"google.golang.org/grpc 8dea3dc473e90c8179e519d91302d0597c0ca1d1 github.com/grpc/grpc-go"
+	"golang.org/x/net 146acd28ed5894421fb5aac80ca93bc1b1f46f87 github.com/golang/net"
+	"golang.org/x/text 905a57155faa8230500121607930ebb9dd8e139c github.com/golang/text"
+	"google.golang.org/grpc 55cdff2adc9957504772d844d1c64ba9ffc0f067 github.com/grpc/grpc-go"
 	"google.golang.org/genproto af9cb2a35e7f169ec875002c1829c9b315cddc04 github.com/google/go-genproto"
+	"golang.org/x/sys 4497e2df6f9e69048a54498c7affbbec3294ad47 github.com/golang/sys"
 )
 
 inherit golang-build golang-vcs-snapshot
