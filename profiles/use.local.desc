@@ -221,6 +221,9 @@ dev-games/physfs:zip - Enable ZIP archive support
 dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
 dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
 dev-games/simgear:subversion - Enable terrasync scenery downloader
+dev-lang/rust:clang - Use sys-devel/clang for building
+dev-lang/rust:libcxx - Use sys-libs/libcxx as standard library when building with sys-devel/clang
+dev-lang/rust:system-llvm - Use system sys-devel/llvm in place of the bundled one
 dev-libs/DirectFB:bmp - build BMP image provider
 dev-libs/DirectFB:divine - enable DiVine
 dev-libs/DirectFB:drmkms - build with DRM/KMS support
