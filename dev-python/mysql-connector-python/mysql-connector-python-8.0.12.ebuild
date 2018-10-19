@@ -9,7 +9,7 @@ DESCRIPTION="Python client library for MariaDB/MySQL"
 HOMEPAGE="https://dev.mysql.com/downloads/connector/python/"
 SRC_URI="https://dev.mysql.com/get/Downloads/Connector-Python/${P}.tar.gz"
 
-KEYWORDS=""
+KEYWORDS="*"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="examples"
