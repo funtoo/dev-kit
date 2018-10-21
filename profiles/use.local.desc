@@ -516,6 +516,9 @@ dev-libs/liborcus:tools - Build various low-level parsers
 dev-libs/libowfat:diet - Compile against dev-libs/dietlibc
 dev-libs/libp11:doc - Generate and install API documentation for the package.
 dev-libs/librdkafka:lz4 - Enable support for Kafka's LZ4 compression based on KIP-57 (uses app-arch/lz4)
+dev-libs/librelp:gnutls - Use GnuTLS
+dev-libs/librelp:libressl - Use LibreSSL
+dev-libs/librelp:openssl - Use OpenSSL
 dev-libs/libressl:asm - Enables assembly
 dev-libs/libsecp256k1:asm - Enable x86_64 assembly optimisation
 dev-libs/libsecp256k1:ecdh - Enable ECDH shared secret computation
