@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,7 +7,6 @@ VCS_INHERIT=""
 if [[ "${PV}" == 9999 ]] ; then
 	VCS_INHERIT="git-r3"
 	EGIT_REPO_URI="https://github.com/MariaDB/mariadb-connector-c.git"
-	KEYWORDS=""
 else
 	MY_PN=${PN#mariadb-}
 	MY_PV=${PV/_b/-b}
@@ -55,7 +54,9 @@ RDEPEND="${DEPEND}
 	!>=dev-db/mariadb-10.2.0[client-libs(+)]
 	"
 PATCHES=(
-	"${FILESDIR%/}/gentoo-layout-3.0.patch" )
+	"${FILESDIR}"/gentoo-layout-3.0.patch
+	"${FILESDIR}"/${PN}-3.0.6-provide-pkconfig-file.patch
+)
 
 src_configure() {
 	# bug 508724 mariadb cannot use ld.gold

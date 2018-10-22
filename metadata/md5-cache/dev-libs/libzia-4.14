@@ -10,4 +10,4 @@ RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 media-libs/libsdl media-libs/libpng:0 ft
 SLOT=0
 SRC_URI=http://tucnak.nagano.cz/libzia-4.14.tar.gz
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=594741180ad1b5d11717b21e352ce876
+_md5_=0667ed682a2efd9adcfb508881b03226
