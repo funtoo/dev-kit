@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm preinst pretend setup
-DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources virtual/libelf )
 DESCRIPTION=LTTng Kernel Tracer Modules
 EAPI=5
 HOMEPAGE=http://lttng.org
-IUSE=kernel_linux
+IUSE=kernel_linux kernel_linux
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=kernel_linux? ( virtual/modutils )
 SLOT=0/2.8
 SRC_URI=http://lttng.org/files/lttng-modules/lttng-modules-2.8.0.tar.bz2
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	linux-info	ca370deef9d44125d829f2eb6ebc83e0	linux-mod	4ca1d93453cfd2b09fa75434f7857d66	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	linux-info	953c3b1c472dcadbf62098a9301327f2	linux-mod	41e466560e45df55e9f2ff16d0ae7a7b	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=91e4f225dda39079dc4bdf8741eced76
