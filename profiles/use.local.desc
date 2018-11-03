@@ -563,6 +563,11 @@ dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/wlc:X - Enable X11 backend.
 dev-libs/wlc:systemd - Enable support for systemd-logind.
 dev-libs/wlc:xwayland - Enable XWayland application support.
+dev-libs/wlroots:X - Enable support for X11 applications (XWayland)
+dev-libs/wlroots:elogind - Enable support for rootless session via elogind
+dev-libs/wlroots:icccm - Use xcb-icccm (from x11-libs/xcb-util-wm) util library for improved Xwayland introspection
+dev-libs/wlroots:rootston - Build the rootston example compositor
+dev-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:glass - Enabled glass backend db support
