@@ -38,6 +38,7 @@ dev-util/mpatch python_single_target_python2_7
 dev-util/osc python_single_target_python2_7
 dev-util/perf python_single_target_python2_7
 dev-util/qmtest python_single_target_python2_7
+dev-util/redo python_single_target_python2_7
 dev-util/rpmdevtools python_single_target_python2_7
 dev-util/rr python_single_target_python2_7
 dev-util/systemtap python_single_target_python2_7
