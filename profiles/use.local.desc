@@ -540,6 +540,7 @@ dev-libs/libucl:urlfetch - Enable URLs fetch
 dev-libs/libucl:utils - Install the chargen and objdump utilities
 dev-libs/libunibreak:doc - Install html API documentation.
 dev-libs/libunibreak:man - Generate man pages with doxygen.
+dev-libs/libxmlb:stemmer - Enable language stemming support
 dev-libs/libzia:ftdi - Enable support for FTDI USB chips
 dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
 dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
