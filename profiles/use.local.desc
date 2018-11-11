@@ -365,7 +365,8 @@ dev-libs/c-blosc:lz4 - Enable lz4 compression
 dev-libs/c-blosc:snappy - Enable snappy compression
 dev-libs/c-blosc:zstd - Enable zstd compression
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/cyberjack:fox - Enable installation of x11-libs/fox based fxcyberjack program
+dev-libs/cyberjack:tools - Build and install optional management tools.
+dev-libs/cyberjack:usb - Enable support for usb based chipcard reader.
 dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/dbus-c++:glib - Use glib integration
 dev-libs/eekboard:libcanberra - Enable support for media-libs/libcanberra
@@ -482,6 +483,7 @@ dev-libs/libucl:urlfetch - Enable URLs fetch
 dev-libs/libucl:utils - Install the chargen and objdump utilities
 dev-libs/libunibreak:doc - Install html API documentation.
 dev-libs/libunibreak:man - Generate man pages with doxygen.
+dev-libs/libxmlb:stemmer - Enable language stemming support
 dev-libs/libzia:ftdi - Enable support for FTDI USB chips
 dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
 dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
@@ -533,14 +535,18 @@ dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/starpu:spinlock-check - Enable spinlock check
 dev-libs/starpu:valgrind - Enable dev-util/valgrind support
-dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library.
-dev-libs/sway:swaybar - Build 'swaybar': sway's status bar component.
-dev-libs/sway:swaybg - Build 'swaybg': allows to set a desktop background image.
-dev-libs/sway:swaygrab - Build 'swaygrab': allows taking screenshots or screencasts.
-dev-libs/sway:swaylock - Build 'swaylock': sway's screen locker.
-dev-libs/sway:swaymsg - Build 'swaymsg': tool for communicating with a running sway instance.
-dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification.
-dev-libs/sway:wallpapers - Install sway's default wallpaper image.
+dev-libs/sway:X - Enable support for X11 applications (XWayland)
+dev-libs/sway:elogind - Enable support for rootless session via elogind
+dev-libs/sway:filecaps - Use Linux capability SYS_CAP_ADMIN rather than set*id for sway binary
+dev-libs/sway:fish-completion - Enable fish completion support
+dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
+dev-libs/sway:swaybar - Install 'swaybar': sway's status bar component
+dev-libs/sway:swaybg - Install 'swaybg': allows to set a desktop background image
+dev-libs/sway:swaygrab - Install 'swaygrab': allows taking screenshots or screencasts
+dev-libs/sway:swaylock - Install 'swaylock': sway's screen locker
+dev-libs/sway:swaymsg - Install 'swaymsg': tool for communicating with a running sway instance
+dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification
+dev-libs/sway:wallpapers - Install sway's default wallpaper image
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/tvision:gpm - Support text mode mouse through sys-libs/gpm
