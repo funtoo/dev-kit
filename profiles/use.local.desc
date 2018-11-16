@@ -691,6 +691,7 @@ dev-util/google-perftools:debug - Build a set of libraries with debug support (s
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
+dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/intel-ocl-sdk:android - Install android related files
 dev-util/intel-ocl-sdk:system-boost - Use system boost (dev-libs/boost) instead of bundled one
