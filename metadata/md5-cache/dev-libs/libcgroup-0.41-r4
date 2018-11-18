@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup test
-DEPEND=pam? ( virtual/pam ) sys-devel/bison sys-devel/flex elibc_musl? ( sys-libs/fts-standalone ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=pam? ( virtual/pam ) sys-devel/bison sys-devel/flex elibc_musl? ( sys-libs/fts-standalone ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=app-portage/elt-patches-20170317
 DESCRIPTION=Tools and libraries to configure and manage kernel control groups
 EAPI=6
 HOMEPAGE=http://libcg.sourceforge.net/
@@ -10,5 +10,5 @@ RDEPEND=pam? ( virtual/pam )
 REQUIRED_USE=daemon? ( tools )
 SLOT=0
 SRC_URI=mirror://sourceforge/project/libcg/libcgroup/v0.41/libcgroup-0.41.tar.bz2
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	libtool	e32ea84bf82cf8987965b574672dba93	linux-info	953c3b1c472dcadbf62098a9301327f2	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	pam	3e788d86170dfcd5b06824d898315e18	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	libtool	e32ea84bf82cf8987965b574672dba93	linux-info	953c3b1c472dcadbf62098a9301327f2	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	pam	3e788d86170dfcd5b06824d898315e18	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=046864c73454513267825380821b1541

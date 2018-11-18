@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=sys-devel/flex
+DEPEND=sys-devel/flex >=app-portage/elt-patches-20170317
 DESCRIPTION=C language utilities
 EAPI=4
 HOMEPAGE=http://www.sigala.it/sandro/software.php#cutils
@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=BSD-2
 SLOT=0
 SRC_URI=http://www.sigala.it/sandro/files/cutils-1.6.tar.gz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=524c68d8168f3c99a52aaec9b66ea73e

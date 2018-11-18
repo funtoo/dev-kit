@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=>=sys-devel/binutils-2.14.90.0.6-r1 app-arch/unzip >=sys-devel/bison-1.875
+DEPEND=>=sys-devel/binutils-2.14.90.0.6-r1 app-arch/unzip >=sys-devel/bison-1.875 >=app-portage/elt-patches-20170317
 DESCRIPTION=Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calculators
 EAPI=0
 HOMEPAGE=http://tigcc.ticalc.org/
@@ -10,5 +10,5 @@ RDEPEND=>=sys-devel/binutils-2.14.90.0.6-r1
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/tigcc-0.96_beta8.tar.bz2 ftp://gcc.gnu.org/pub/gcc/snapshots/4.1-20060728/gcc-4.1-20060728.tar.bz2 mirror://kernel/linux/devel/binutils/binutils-2.16.1.tar.bz2 http://members.chello.at/gerhard.kofler/kevin/ti89prog/libfargo.zip http://members.chello.at/gerhard.kofler/kevin/ti89prog/flashosa.zip
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=42fbc524de00411b8443dee71b142870

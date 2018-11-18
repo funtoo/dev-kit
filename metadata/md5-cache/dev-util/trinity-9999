@@ -6,5 +6,5 @@ HOMEPAGE=http://codemonkey.org.uk/projects/trinity/ https://github.com/kernelsla
 IUSE=examples
 LICENSE=GPL-2
 SLOT=0
-_eclasses_=git-r3	18aed4252aebae08e3db185e684ee37c	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=git-r3	18aed4252aebae08e3db185e684ee37c	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=cd7efeea84f6cdfcabc40c8fd61e139c

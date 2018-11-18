@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=dev-libs/glib:2 net-libs/libpcap sys-apps/dbus x11-libs/cairo x11-libs/pango gnome-base/libglade:2.0 test? ( dev-haskell/hunit dev-haskell/quickcheck dev-haskell/test-framework dev-haskell/test-framework-hunit ) >=dev-haskell/cabal-1.8 dev-haskell/cairo:0 >=dev-haskell/dbus-0.10 dev-haskell/glib:0 >=dev-haskell/gtk-0.12.3:2 dev-haskell/mtl dev-haskell/pango:0 dev-haskell/parsec dev-haskell/pcap dev-haskell/text >=dev-lang/ghc-6.10.4
+DEPEND=dev-libs/glib:2 net-libs/libpcap sys-apps/dbus x11-libs/cairo x11-libs/pango gnome-base/libglade:2.0 test? ( dev-haskell/hunit dev-haskell/quickcheck dev-haskell/test-framework dev-haskell/test-framework-hunit ) >=dev-haskell/cabal-1.8 dev-haskell/cairo:0 >=dev-haskell/dbus-0.10 dev-haskell/glib:0 >=dev-haskell/gtk-0.12.3:2 dev-haskell/mtl dev-haskell/pango:0 dev-haskell/parsec dev-haskell/pcap dev-haskell/text >=dev-lang/ghc-6.10.4 >=app-portage/elt-patches-20170317
 DESCRIPTION=Draw pretty sequence diagrams of D-Bus traffic
 EAPI=5
 HOMEPAGE=http://willthompson.co.uk/bustle/
@@ -9,5 +9,5 @@ LICENSE=LGPL-2 GPL-2
 RDEPEND=dev-libs/glib:2 net-libs/libpcap sys-apps/dbus x11-libs/cairo x11-libs/pango gnome-base/libglade:2.0
 SLOT=0
 SRC_URI=http://willthompson.co.uk/bustle/releases/0.4.2/bustle-0.4.2.tar.gz https://dev.gentoo.org/~slyfox/bustle-0.4.0-tests.tar.gz
-_eclasses_=base	5762a63b406bb5064ee0c6060a8f07e3	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ghc-package	f9cf05643e20f03876bb4807f008c80f	haskell-cabal	e6ab1e3d1e128fe0f1dbf9fc6cd20f33	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=base	5762a63b406bb5064ee0c6060a8f07e3	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ghc-package	f9cf05643e20f03876bb4807f008c80f	haskell-cabal	e6ab1e3d1e128fe0f1dbf9fc6cd20f33	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=1d4b246ba8606bf682503b7617902d63

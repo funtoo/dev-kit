@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://sourceforge/nmeap/nmeap-0.3.tar.gz
-_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=229712dca4d6e7c109e43d24ba417d21

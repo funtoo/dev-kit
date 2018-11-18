@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=sys-apps/pcsc-lite usb? ( virtual/libusb:1 ) virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DEPEND=sys-apps/pcsc-lite usb? ( virtual/libusb:1 ) virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=app-portage/elt-patches-20170317 virtual/pkgconfig
 DESCRIPTION=REINER SCT cyberJack pinpad/e-com USB user space driver library
 EAPI=5
 HOMEPAGE=http://www.reiner-sct.de/
@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=sys-apps/pcsc-lite usb? ( virtual/libusb:1 ) udev? ( virtual/udev )
 SLOT=0
 SRC_URI=http://support.reiner-sct.de/downloads/LINUX/V3.99.5_SP10/pcsc-cyberjack-3.99.5final.SP10.tar.bz2
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	libtool	e32ea84bf82cf8987965b574672dba93	linux-info	953c3b1c472dcadbf62098a9301327f2	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	udev	574b4c7244556c7ee81b2b45f80c6674	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	libtool	e32ea84bf82cf8987965b574672dba93	linux-info	953c3b1c472dcadbf62098a9301327f2	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7	udev	574b4c7244556c7ee81b2b45f80c6674	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=09d17465522890d801e5357782316a9b

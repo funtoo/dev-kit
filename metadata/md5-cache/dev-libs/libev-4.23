@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=app-portage/elt-patches-20170317
 DESCRIPTION=A high-performance event loop/event model with lots of feature
 EAPI=5
 HOMEPAGE=http://software.schmorp.de/pkg/libev.html
@@ -9,5 +9,5 @@ LICENSE=|| ( BSD GPL-2 )
 RDEPEND=elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 )
 SLOT=0
 SRC_URI=http://dist.schmorp.de/libev/libev-4.23.tar.gz http://dist.schmorp.de/libev/Attic/libev-4.23.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	d22583becf660d6476780c3ebb0925e4	multilib-minimal	2b16dd98c05c0a78efd8b3259ebb7622	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	d22583becf660d6476780c3ebb0925e4	multilib-minimal	2b16dd98c05c0a78efd8b3259ebb7622	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=c8df5f5371b06c6a7ca6b8dda74255c9

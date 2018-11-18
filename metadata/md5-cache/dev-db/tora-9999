@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=dev-libs/ferrisloki dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtsql:5[mysql?,postgres?] dev-qt/qtwidgets:5 >=x11-libs/qscintilla-2.10.1:=[qt5(+)] oracle? ( =dev-db/oracle-instantclient-basic-11* ) postgres? ( dev-db/postgresql:* ) dev-qt/linguist:5 virtual/pkgconfig doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-3.7.2 >=dev-vcs/git-1.8.2.1
+DEPEND=dev-libs/ferrisloki dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtsql:5[mysql?,postgres?] dev-qt/qtwidgets:5 >=x11-libs/qscintilla-2.10.1:=[qt5(+)] oracle? ( =dev-db/oracle-instantclient-basic-11* ) postgres? ( dev-db/postgresql:* ) dev-qt/linguist:5 virtual/pkgconfig doc? ( app-doc/doxygen ) >=app-portage/elt-patches-20170317 sys-devel/make >=dev-util/cmake-3.7.2 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=SQL IDE for Oracle, MySQL and PostgreSQL dbs
 EAPI=6
 HOMEPAGE=https://github.com/tora-tool/tora/wiki
@@ -7,5 +7,5 @@ IUSE=doc mysql oracle pch postgres
 LICENSE=GPL-2
 RDEPEND=dev-libs/ferrisloki dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtsql:5[mysql?,postgres?] dev-qt/qtwidgets:5 >=x11-libs/qscintilla-2.10.1:=[qt5(+)] oracle? ( =dev-db/oracle-instantclient-basic-11* ) postgres? ( dev-db/postgresql:* )
 SLOT=0
-_eclasses_=cmake-utils	1878df07fb7968266bdbcfcd576fea4b	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	git-r3	18aed4252aebae08e3db185e684ee37c	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	2e13cdcb950cddcb1f52c92c9712a675	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_eclasses_=cmake-utils	1878df07fb7968266bdbcfcd576fea4b	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	git-r3	18aed4252aebae08e3db185e684ee37c	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	2e13cdcb950cddcb1f52c92c9712a675	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
 _md5_=600d11002dae22e49b3abe88d0462f9f
