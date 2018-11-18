@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=icu? ( dev-libs/icu:0= ) curl? ( net-misc/curl ) virtual/libiconv doc? ( app-doc/doxygen ) test? ( dev-lang/perl ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=icu? ( dev-libs/icu:0= ) curl? ( net-misc/curl ) virtual/libiconv doc? ( app-doc/doxygen ) test? ( dev-lang/perl ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A validating XML parser written in a portable subset of C++
 EAPI=6
 HOMEPAGE=https://xerces.apache.org/xerces-c/
@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=icu? ( dev-libs/icu:0= ) curl? ( net-misc/curl ) virtual/libiconv
 SLOT=0
 SRC_URI=mirror://apache/xerces/c/3/sources/xerces-c-3.1.4.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	prefix	e51c7882b7b721e54e684f7eb143cbfe	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	b2f01ad412baf81650c23fcf0975fa33	prefix	e51c7882b7b721e54e684f7eb143cbfe	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
 _md5_=35dc416244886d87a23ac18f36f24184
