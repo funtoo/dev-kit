@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,8 +10,8 @@ HOMEPAGE="http://www.grinninglizard.com/tinyxml2/ https://github.com/leethomason
 SRC_URI="https://github.com/leethomason/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ZLIB"
-SLOT="0/5"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~sparc ~x86"
+SLOT="0/6"
+KEYWORDS="amd64 arm ~arm64 hppa ~ppc64 sparc x86"
 IUSE="static-libs test"
 
 multilib_src_configure() {
