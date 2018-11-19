@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A library for Microsoft compression formats
+EAPI=7
+HOMEPAGE=https://www.cabextract.org.uk/libmspack/
+IUSE=debug doc static-libs utils abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
+KEYWORDS=amd64 ~arm hppa ia64 ~ppc ppc64 ~sparc x86
+LICENSE=LGPL-2.1
+RDEPEND=utils? ( !app-arch/mscompress )
+SLOT=0
+SRC_URI=https://www.cabextract.org.uk/libmspack/libmspack-0.7.1alpha.tar.gz
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	d22583becf660d6476780c3ebb0925e4	multilib-minimal	2b16dd98c05c0a78efd8b3259ebb7622	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=866eb0bf75f270590a08cef87b2af14a
