@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libnl:3 sys-libs/binutils-libs:= sys-libs/readline:=
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~bircoph/distfiles/dropwatch-1.4_p20150706.tar.xz
-_eclasses_=eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	linux-info	953c3b1c472dcadbf62098a9301327f2	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
+_eclasses_=eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	linux-info	953c3b1c472dcadbf62098a9301327f2	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=214846a1889f7a7012fc43bd47accbdd
