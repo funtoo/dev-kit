@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=app-portage/elt-patches-20170317
+DESCRIPTION=JavaScript IDE for complex client-side development and server-side development with Node.js
+EAPI=5
+HOMEPAGE=http://www.jetbrains.com/webstorm
+IUSE=-custom-jdk
+KEYWORDS=~amd64 ~x86
+LICENSE=WebStorm WebStorm_Academic WebStorm_Classroom WebStorm_OpenSource WebStorm_personal
+RDEPEND=!custom-jdk? ( >=virtual/jdk-1.7 )
+REQUIRED_USE=!amd64? ( !custom-jdk )
+SLOT=2017
+SRC_URI=http://download.jetbrains.com/webstorm/WebStorm-2017.3.6.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=c332c354129ae3eab718c63aa93b362d
