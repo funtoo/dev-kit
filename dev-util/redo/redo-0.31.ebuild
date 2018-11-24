@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
-inherit multilib python-single-r1
+inherit multilib multiprocessing python-single-r1
 
 DESCRIPTION="Smaller, easier, more powerful, and more reliable than make"
 HOMEPAGE="https://github.com/apenwarr/redo"
@@ -19,12 +19,20 @@ BDEPEND="
 "
 S=${WORKDIR}/${PN}-${P}
 
+src_compile() {
+	./redo -j$(makeopts_jobs) || die
+}
+
+src_test() {
+	./redo -j$(makeopts_jobs) test || die
+}
+
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		DOCDIR="${D}/usr/share/doc/${PF}" \
-		LIBDIR="${D}/usr/$(get_libdir)/${PN}" \
-		install
+	DESTDIR="${D}" \
+	DOCDIR="${D}/usr/share/doc/${PF}" \
+	LIBDIR="${D}/usr/$(get_libdir)/${PN}" \
+	./redo -j$(makeopts_jobs) \
+		install || die
 
 	python_fix_shebang "${D}"
 
