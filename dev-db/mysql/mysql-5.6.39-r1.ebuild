@@ -190,3 +190,8 @@ multilib_src_test() {
 		einfo "Skipping server tests due to minimal build."
 	fi
 }
+
+src_install() {
+	# Do not use mysql-multilib-r1_src_install() which sets obsolete MULTILIB_CHOST_TOOLS=( /usr/bin/mysql_config )
+	multilib-minimal_src_install
+}
