@@ -1,0 +1,38 @@
+diff -Nuar gambas3-3.9.2/app/Makefile.am gambas3-3.9.2-fixed/app/Makefile.am
+--- gambas3-3.9.2/app/Makefile.am	2016-12-17 12:37:35.000000000 +0000
++++ gambas3-3.9.2-fixed/app/Makefile.am	2017-03-08 20:04:21.158109703 +0000
+@@ -29,16 +29,6 @@
+ 	@echo "Installing the scripter..."
+ 	@$(LN_S) -f gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION) || true
+ 	@$(LN_S) -f gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbw$(GAMBAS_VERSION) || true
+-	@if test x"$(XDG_UTILS)" != x; then \
+-		$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons; \
+-		cp -f $(srcdir)/mime/application-x-gambas*.png $(DESTDIR)$(gbdatadir)/icons; \
+-		echo "Registering Gambas script mimetype"; \
+-		xdg-icon-resource install --context mimetypes --size 256 $(DESTDIR)$(gbdatadir)/icons/application-x-gambasscript.png application-x-gambasscript; \
+-		xdg-mime install $(srcdir)/mime/application-x-gambasscript.xml; \
+-		echo "Registering Gambas server page mimetype"; \
+-		xdg-icon-resource install --context mimetypes --size 256 $(DESTDIR)$(gbdatadir)/icons/application-x-gambasserverpage.png application-x-gambasserverpage; \
+-		xdg-mime install $(srcdir)/mime/application-x-gambasserverpage.xml; \
+-	fi
+ 
+ 	@echo "Installing the Gambas appdata file"
+ 	@$(INSTALL) -d $(DESTDIR)$(datarootdir)/appdata
+diff -Nuar gambas3-3.9.2/main/Makefile.am gambas3-3.9.2-fixed/main/Makefile.am
+--- gambas3-3.9.2/main/Makefile.am	2016-12-17 12:38:05.000000000 +0000
++++ gambas3-3.9.2-fixed/main/Makefile.am	2017-03-08 20:05:46.720991347 +0000
+@@ -28,14 +28,6 @@
+ 	@echo "Making runtime symbolic link"
+ 	@$(LN_S) -f gbx$(GAMBAS_VERSION) $(DESTDIR)$(bindir)/gbr$(GAMBAS_VERSION) || true
+ 	
+-	@if test x"$(XDG_UTILS)" != x; then \
+-		echo "Registering Gambas executable mimetype"; \
+-		$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons; \
+-		cp -f $(srcdir)/mime/application-x-gambas3.png $(DESTDIR)$(gbdatadir)/icons; \
+-		xdg-icon-resource install --context mimetypes --size 256 $(DESTDIR)$(gbdatadir)/icons/application-x-gambas3.png application-x-gambas3; \
+-		xdg-mime install $(srcdir)/mime/application-x-gambas3.xml; \
+-	fi
+-
+ 	@echo "Creating the information files for gb component..."
+ 	@$(INSTALL) -d $(DESTDIR)$(gbdatadir)/info
+ 	@$(DESTDIR)$(bindir)/gbi$(GAMBAS_VERSION) -r $(DESTDIR)$(prefix) gb

@@ -1,0 +1,12 @@
+diff -Nuar gambas3-3.9.2/main/lib/gui.qt/main.c gambas3-3.9.2-fixed/main/lib/gui.qt/main.c
+--- gambas3-3.9.2/main/lib/gui.qt/main.c	2016-12-17 12:38:04.000000000 +0000
++++ gambas3-3.9.2-fixed/main/lib/gui.qt/main.c	2017-03-08 07:09:58.634081576 +0000
+@@ -58,7 +58,7 @@
+ 	
+ 	if (use == USE_NOTHING)
+ 	{
+-		use = USE_GB_QT4;
++		use = USE_GB_QT5;
+ 		
+ 		env = getenv("KDE_FULL_SESSION");
+ 		

@@ -1,0 +1,39 @@
+--- pebble-sdk-4.5-linux64.orig/bin/pebble	2015-12-15 05:02:22.000000000 +0100
++++ pebble-sdk-4.5-linux64/bin/pebble	2017-07-27 17:19:52.965313522 +0200
+@@ -1,23 +1,18 @@
+ #!/bin/bash
+ 
+-realpath() {
+-	python -c "import os,sys;print(os.path.realpath(sys.argv[1]))" "$1"
+-}
+-
+-SCRIPT=`realpath $0`
+-BIN_PATH=`dirname $SCRIPT`
+-PEBBLE_PATH=`realpath $BIN_PATH/../`
++PEBBLE_PATH="/opt/pebble-sdk"
++BIN_PATH="${PEBBLE_PATH}/bin"
+ 
+ export PEBBLE_TOOLCHAIN_PATH="$PEBBLE_PATH/arm-cs-tools/bin"
+ export PATH="$BIN_PATH:$PATH"
+-export PYTHONHOME="$PEBBLE_PATH/.env/"
++export PYTHONHOME="${HOME}/.pebble/.env/"
+ if [ ! -e "$PYTHONHOME" ]; then
+ 	echo 'You must set up a virtualenv before you can use the pebble tool.'
+-	echo "Try these commands from $PEBBLE_PATH:"
++	echo "Try these commands from ${HOME}:"
+ 	echo
+-	echo 'virtualenv --no-site-packages .env'
+-	echo 'source .env/bin/activate'
+-	echo 'pip install -r requirements.txt'
++	echo "virtualenv --no-site-packages ${HOME}/.pebble/.env"
++	echo "source ${HOME}/.pebble/.env/bin/activate"
++	echo "pip install -r ${PEBBLE_PATH}/requirements.txt"
+ 	echo 'deactivate'
+ 	echo
+ 	echo "If you don't have 'virtualenv', try \`sudo pip install virtualenv\`.'"
+@@ -28,4 +23,4 @@
+ 
+ export PHONESIM_PATH="$PYTHONHOME/bin/pypkjs"
+ 
+-"$PEBBLE_PATH/.env/bin/python" "$PEBBLE_PATH/pebble-tool/pebble.py" "$@"
++"${PYTHONHOME}/bin/python" "${PEBBLE_PATH}/pebble-tool/pebble.py" "$@"

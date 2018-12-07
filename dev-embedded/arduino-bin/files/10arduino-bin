@@ -1,0 +1,3 @@
+SEARCH_DIRS_MASK="/opt/arduino
+/opt/arduino/hardware/tools/avr/bin
+"
