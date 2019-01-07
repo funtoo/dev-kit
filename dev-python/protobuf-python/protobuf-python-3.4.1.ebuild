@@ -12,7 +12,7 @@ HOMEPAGE="https://developers.google.com/protocol-buffers/ https://github.com/goo
 SRC_URI="https://github.com/google/protobuf/archive/v${PV}.tar.gz -> protobuf-${PV}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0/15"
+SLOT="0/14"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
