@@ -2,8 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-# pypy fails tests; pypy3 fails even running tests
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
+PYTHON_COMPAT=(python2_7 python3_{4,5,6})
 
 inherit distutils-r1
 
@@ -20,11 +19,16 @@ DEPEND="${PYTHON_DEPS}
 	~dev-libs/protobuf-${PV}
 	dev-python/namespace-google[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/six[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]"
+RDEPEND="${DEPEND}
 	!<dev-libs/protobuf-3[python(-)]"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/protobuf-${PV}/python"
+
+python_prepare_all() {
+	eapply -p2 "${FILESDIR}/${P}-google.protobuf.pyext._message.MessageMeta.patch"
+	distutils-r1_python_prepare_all
+}
 
 python_configure_all() {
 	mydistutilsargs=(--cpp_implementation)
