@@ -71,7 +71,8 @@ src_install() {
 	fperms 755 "${dir}/bin/pebble" "${dir}/bin/qemu-pebble"
 
 	into "/opt/"
-	dobin "${dir}/bin/pebble"
+	#dobin "${dir}/bin/pebble"
+	dosym  "${dir}/bin/pebble" /opt/bin/pebble || die
 }
 
 pkg_postinst() {
