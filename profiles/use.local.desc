@@ -2,8 +2,6 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-dev-cpp/eigen:c++11 - Build using the C++11 standard
-dev-cpp/eigen:cuda - Build with cuda support
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
 dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
 dev-cpp/libcmis:man - Build and install man pages.

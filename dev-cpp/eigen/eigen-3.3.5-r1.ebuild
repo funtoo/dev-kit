@@ -34,8 +34,8 @@ DEPEND="
 		sci-libs/superlu
 		virtual/opengl
 		virtual/pkgconfig
-		cuda? ( dev-util/nvidia-cuda-toolkit )
 	)
+	cuda? ( dev-util/nvidia-cuda-toolkit )
 "
 # Missing:
 # METIS-5
