@@ -1,9 +1,6 @@
-=app-admin/abrt-2.0.12-r2 python_single_target_python2_7
-=dev-libs/libcec-3.1.0-r1 python_single_target_python2_7
-=dev-libs/libcec-4.0.2 python_single_target_python2_7
-=dev-libs/libcec-4.0.2-r1 python_single_target_python2_7
-=dev-util/scanmem-0.15.3 python_single_target_python2_7
 =dev-util/setconf-0.6.6 python_single_target_python2_7
+=dev-util/systemtap-2.4-r1 python_single_target_python2_7
+=dev-util/systemtap-3.1-r1 python_single_target_python2_7
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
@@ -38,7 +35,6 @@ dev-util/qmtest python_single_target_python2_7
 dev-util/redo python_single_target_python2_7
 dev-util/rpmdevtools python_single_target_python2_7
 dev-util/rr python_single_target_python2_7
-dev-util/systemtap python_single_target_python2_7
 dev-util/tailor python_single_target_python2_7
 dev-util/trace-cmd python_single_target_python2_7
 dev-util/wxglade python_single_target_python2_7

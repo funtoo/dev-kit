@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+introspection static-libs test"
 
 RDEPEND="
-	virtual/libgudev:=[${MULTILIB_USEDEP}]
 	virtual/libudev:=[${MULTILIB_USEDEP}]
 	>=dev-libs/glib-2.32:2[${MULTILIB_USEDEP}]
 "

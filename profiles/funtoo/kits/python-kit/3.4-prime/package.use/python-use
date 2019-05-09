@@ -1,4 +1,11 @@
-=app-admin/abrt-2.0.12-r2 python_single_target_python2_7
+=dev-libs/libixion-0.14.1 python_single_target_python3_5 python_targets_python3_5
+=dev-libs/libixion-9999 python_single_target_python3_5 python_targets_python3_5
+=dev-libs/liborcus-0.14.1 python_single_target_python3_5 python_targets_python3_5
+=dev-libs/liborcus-9999 python_single_target_python3_5 python_targets_python3_5
+=dev-util/bcc-0.9.0-r1 python_single_target_python2_7
+=dev-util/systemtap-2.4-r1 python_single_target_python2_7
+=dev-util/systemtap-3.1-r1 python_single_target_python2_7
+=dev-vcs/git-cola-3.2 python_single_target_python2_7
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
@@ -32,7 +39,6 @@ dev-util/geany-plugins python_single_target_python2_7
 dev-util/gquilt python_single_target_python2_7
 dev-util/gyp python_single_target_python2_7
 dev-util/imediff2 python_single_target_python2_7
-dev-util/meld python_single_target_python3_5 python_targets_python3_5
 dev-util/mpatch python_single_target_python2_7
 dev-util/osc python_single_target_python2_7
 dev-util/perf python_single_target_python2_7
@@ -40,7 +46,6 @@ dev-util/qmtest python_single_target_python2_7
 dev-util/redo python_single_target_python2_7
 dev-util/rpmdevtools python_single_target_python2_7
 dev-util/rr python_single_target_python2_7
-dev-util/systemtap python_single_target_python2_7
 dev-util/tailor python_single_target_python2_7
 dev-util/trace-cmd python_single_target_python2_7
 dev-util/wxglade python_single_target_python2_7

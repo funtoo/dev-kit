@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -12,7 +12,7 @@ SRC_URI="https://download.netsurf-browser.org/libs/releases/${MY_P}-src.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-util/netsurf-buildsystem"
@@ -20,7 +20,7 @@ DEPEND="dev-util/netsurf-buildsystem"
 S="${WORKDIR}/${MY_P}"
 
 _emake() {
-	source /usr/share/netsurf-buildsystem/gentoo-helpers.sh
+	source "${EPREFIX}"/usr/share/netsurf-buildsystem/gentoo-helpers.sh
 	netsurf_define_makeconf
 	emake "${NETSURF_MAKECONF[@]}" COMPONENT_TYPE=lib-shared $@
 }
@@ -30,5 +30,5 @@ src_compile() {
 }
 
 src_install() {
-	_emake DESTDIR="${ED}" install
+	_emake DESTDIR="${D}" install
 }

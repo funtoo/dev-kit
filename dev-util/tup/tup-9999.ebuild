@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit toolchain-funcs
+inherit linux-info toolchain-funcs
 
 DESCRIPTION="A file-based build system"
 HOMEPAGE="http://gittup.org/tup"
@@ -26,9 +26,14 @@ fi
 
 DEPEND="
 	dev-db/sqlite:=
+	dev-libs/libpcre:=
 	sys-fs/fuse:=
 "
 RDEPEND="${DEPEND}"
+
+CONFIG_CHECK="~FUSE_FS ~NAMESPACES"
+WARNING_FUSE_FS="CONFIG_FUSE_FS is required for tup to work"
+WARNING_NAMESPACES="CONFIG_NAMESPACES is required for tup to work as intended (workaround: set TUP_NO_NAMESPACING env var when running tup)"
 
 src_prepare() {
 	# Use our toolchain
@@ -65,6 +70,7 @@ src_install() {
 }
 
 src_test() {
+	[[ -e /dev/fuse ]] || die "/dev/fuse is required for tests to work"
 	# tup uses fuse when tracking dependencies.
 	addwrite /dev/fuse
 
@@ -73,23 +79,19 @@ src_test() {
 	export TUP_NO_NAMESPACING=1
 
 	# Skip tests which require namespacing or root privileges.
+	pushd test || die
+	rm -v ./*full-deps*.sh
 	SKIPPED_TESTS=(
-	t4062-full-deps.sh
-	t4063-full-deps2.sh
-	t4064-full-deps3.sh
-	t4065-full-deps-proc.sh
-	t4067-full-deps5.sh
 	t4069-gcc-coverage.sh
 	t4072-proc-self.sh
 	t4074-getpwd.sh
 	t4131-proc-self-exe.sh
 	t4132-proc-meminfo.sh
 	t4171-dev-null.sh
+	t4200-ccache.sh
 	t5083-symlink-fullpath.sh
 	t5084-symlink-fullpath2.sh
-	t7048-full-deps.sh
 	)
-	pushd test || die
 	rm ${SKIPPED_TESTS[@]} || die
 	./test.sh || die
 	popd || die
