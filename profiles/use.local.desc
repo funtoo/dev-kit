@@ -4,7 +4,8 @@
 
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
 dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
-dev-cpp/libcmis:man - Build and install man pages.
+dev-cpp/libcmis:man - Build and install man pages
+dev-cpp/libcmis:tools - Build client tool for testing and viewing features
 dev-cpp/libjson-rpc-cpp:http-client - Build support for HTTP client using net-misc/curl
 dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-libs/libmicrohttpd
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
@@ -359,11 +360,9 @@ dev-libs/aws-sdk-cpp:aws_targets_xray - SDK Support for AWS xray
 dev-libs/beignet:ocl-icd - Enable compatibility with the dev-libs/ocl-icd OpenCL ICD loader
 dev-libs/beignet:ocl20 - Enable experimental OpenCL 2.0 support on Skylake and newer architectures
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
-dev-libs/blitz:boost - Enable usage of boost::serialization
 dev-libs/botan:boost - use dev-libs/boost
 dev-libs/c-blosc:lz4 - Enable lz4 compression
 dev-libs/c-blosc:snappy - Enable snappy compression
-dev-libs/c-blosc:zstd - Enable zstd compression
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
 dev-libs/cyberjack:tools - Build and install optional management tools.
 dev-libs/cyberjack:usb - Enable support for usb based chipcard reader.
@@ -411,12 +410,14 @@ dev-libs/granite:demo - Build the Granite demo application (to present all avail
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
+dev-libs/intel-neo:vaapi - Support the sharing of surfaces with Video Acceleration API (OpenCL Extension #36)
 dev-libs/jemalloc:hugepages - Enable transparent huge page support
 dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/leveldb:snappy - support the snappy compression library
 dev-libs/libbase58:tools - Build command line base58 tool
+dev-libs/libbytesize:tools - Build bscalc python CLI tool
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
 dev-libs/libcec:cubox - Enable support for enable support for the TDA995x
 dev-libs/libcec:exynos - Enable support for Exynos chipsets
@@ -451,7 +452,6 @@ dev-libs/libmail:apop - Enables the APOP authentication method
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
 dev-libs/libmemcached:sasl - Use sasl auth for communications.
-dev-libs/libmspack:utils - Enables building cabrip, chmextract, msexpand and oabextract
 dev-libs/libnfc:pcsc-lite - Enable NFC drivers that require pcsc-lite
 dev-libs/liborcus:spreadsheet-model - Enable the spreadsheet model implementation
 dev-libs/liborcus:tools - Build various low-level parsers
@@ -483,6 +483,7 @@ dev-libs/libunibreak:doc - Install html API documentation.
 dev-libs/libunibreak:man - Generate man pages with doxygen.
 dev-libs/libxmlb:stemmer - Enable language stemming support
 dev-libs/libzia:ftdi - Enable support for FTDI USB chips
+dev-libs/libzip:mbedtls - Use net-libs/mbedtls as TLS provider
 dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
 dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
 dev-libs/log4cplus:iconv - Use inconv for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
@@ -542,9 +543,11 @@ dev-libs/ucommon:socks - Build with socks proxy support
 dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
 dev-libs/ustr:ustr-import - Install ustr-import developer program and source code for bundling.
 dev-libs/weston:colord - Allow setting color managment
+dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
 dev-libs/weston:fbdev - Enable fbdev compositor support
+dev-libs/weston:fullscreen - Enable fullscreen/kiosk shell
 dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL
 dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes
 dev-libs/weston:ivi - Enable the IVI shell
@@ -597,6 +600,7 @@ dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
 dev-util/bustle:interactivetests - Build interactive test programs
 dev-util/bustle:threaded - Build with support for multithreaded execution.
 dev-util/catalyst:ccache - Enables ccache support
+dev-util/catalyst:iso - Pulls in the depends for building iso images
 dev-util/catalyst:system-bootloader - Pulls in the depends needed to setup livecd bootloader from the host system rather than using a cdtar
 dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
 dev-util/cccc:mfc - Add patch for MFC dialect options
@@ -636,6 +640,7 @@ dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
 dev-util/diffoscope:xz - Use app-arch/xz-utils
 dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:graphviz - Add support for the Graphviz library
+dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) build capability
 dev-util/edb-debugger:legacy-mem-write - Probe if writes to /proc/PID/mem are broken.
 dev-util/edb-debugger:pax_kernel - Enable building under a PaX enabled kernel
 dev-util/edi:clang - Provide integration with sys-devel/clang for autocompletion and inline errors
@@ -645,6 +650,7 @@ dev-util/electron:lto - Build with link time optimization enabled
 dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
 dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 dev-util/electron:system-ffmpeg - Use system ffmpeg instead of the bundled one
+dev-util/electron:system-ssl - Use system OpenSSL instead of the bundled one
 dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
 dev-util/fatrace:powertop - Add powetop integration
@@ -757,6 +763,7 @@ dev-vcs/gitolite:tools - Install tools to e.g. convert a Gitosis config to gitol
 dev-vcs/gitolite-gentoo:contrib - Install user-contributed files
 dev-vcs/gitolite-gentoo:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
+dev-vcs/mercurial:chg - Support Mercurial command server client
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
 dev-vcs/rabbitvcs:caja - Enable extension for mate-base/caja

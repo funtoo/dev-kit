@@ -1,22 +1,37 @@
+=dev-libs/libixion-0.13.0 python_single_target_python3_5 python_targets_python3_5
 =dev-libs/libixion-0.14.1 python_single_target_python3_5 python_targets_python3_5
 =dev-libs/libixion-9999 python_single_target_python3_5 python_targets_python3_5
+=dev-libs/liborcus-0.13.4 python_single_target_python3_5 python_targets_python3_5
 =dev-libs/liborcus-0.14.1 python_single_target_python3_5 python_targets_python3_5
 =dev-libs/liborcus-9999 python_single_target_python3_5 python_targets_python3_5
+=dev-util/bcc-0.6.0 python_single_target_python2_7
+=dev-util/bcc-0.7.0 python_single_target_python2_7
 =dev-util/bcc-0.9.0-r1 python_single_target_python2_7
+=dev-util/meld-3.18.2 python_single_target_python3_5 python_targets_python3_5
+=dev-util/meld-3.20.0 python_single_target_python3_5 python_targets_python3_5
+=dev-util/meld-3.20.1 python_single_target_python3_5 python_targets_python3_5
+=dev-util/setconf-0.6.6 python_single_target_python2_7
+=dev-util/setconf-0.6.7 python_single_target_python2_7
 =dev-util/systemtap-2.4-r1 python_single_target_python2_7
 =dev-util/systemtap-3.1-r1 python_single_target_python2_7
-=dev-vcs/git-cola-3.2 python_single_target_python2_7
+=dev-util/systemtap-4.0-r1 python_single_target_python3_5 python_targets_python3_5
+app-admin/abrt python_single_target_python3_5 python_targets_python3_5
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
+dev-embedded/libftdi python_single_target_python2_7
 dev-embedded/platformio python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
+dev-games/freecell-solver python_single_target_python3_6 python_targets_python3_6
 dev-games/tiled python_single_target_python3_6 python_targets_python3_6
+dev-games/vamos python_single_target_python3_5 python_targets_python3_5
 dev-libs/beecrypt python_single_target_python2_7
+dev-libs/boost-numpy python_single_target_python2_7
 dev-libs/btparser python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7
 dev-libs/libappindicator python_single_target_python2_7
 dev-libs/libarcus python_single_target_python3_5 python_targets_python3_5
+dev-libs/libcec python_single_target_python2_7
 dev-libs/libcharon python_single_target_python3_5 python_targets_python3_5
 dev-libs/libdbusmenu python_single_target_python2_7
 dev-libs/libhid python_single_target_python2_7
@@ -31,14 +46,19 @@ dev-util/bakefile python_single_target_python2_7
 dev-util/catalyst python_single_target_python2_7
 dev-util/coccinelle python_single_target_python2_7
 dev-util/confix python_single_target_python2_7
+dev-util/cutter python_single_target_python3_6 python_targets_python3_6
+dev-util/d-feet python_single_target_python2_7
+dev-util/dbus-test-runner python_single_target_python3_5 python_targets_python3_5
 dev-util/diffuse python_single_target_python2_7
 dev-util/dput-ng python_single_target_python2_7
 dev-util/dwarves python_single_target_python2_7
+dev-util/eric python_single_target_python2_7
 dev-util/flawfinder python_single_target_python2_7
 dev-util/geany-plugins python_single_target_python2_7
 dev-util/gquilt python_single_target_python2_7
 dev-util/gyp python_single_target_python2_7
 dev-util/imediff2 python_single_target_python2_7
+dev-util/include-what-you-use python_single_target_python2_7
 dev-util/mpatch python_single_target_python2_7
 dev-util/osc python_single_target_python2_7
 dev-util/perf python_single_target_python2_7
@@ -46,6 +66,7 @@ dev-util/qmtest python_single_target_python2_7
 dev-util/redo python_single_target_python2_7
 dev-util/rpmdevtools python_single_target_python2_7
 dev-util/rr python_single_target_python2_7
+dev-util/scanmem python_single_target_python2_7
 dev-util/tailor python_single_target_python2_7
 dev-util/trace-cmd python_single_target_python2_7
 dev-util/wxglade python_single_target_python2_7
@@ -53,7 +74,7 @@ dev-util/xesam-tools python_single_target_python2_7
 dev-vcs/bzr-xmloutput python_single_target_python2_7
 dev-vcs/cvs2svn python_single_target_python2_7
 dev-vcs/git-bz python_single_target_python2_7
-dev-vcs/git-bzr-ng python_single_target_python2_7
+dev-vcs/git-cola python_single_target_python2_7
 dev-vcs/git-deps python_single_target_python2_7
 dev-vcs/hgsvn python_single_target_python2_7
 dev-vcs/mercurial-server python_single_target_python2_7

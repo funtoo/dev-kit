@@ -1,18 +1,18 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 if [[ ${PV} = 9999* ]]; then
-	EGIT_REPO_URI="https://anongit.freedesktop.org/git/wayland/weston.git"
+	EGIT_REPO_URI="https://gitlab.freedesktop.org/wayland/weston.git"
 	GIT_ECLASS="git-r3"
 	EXPERIMENTAL="true"
 fi
 
-inherit meson readme.gentoo-r1 toolchain-funcs $GIT_ECLASS
+inherit meson readme.gentoo-r1 toolchain-funcs xdg-utils $GIT_ECLASS
 
 DESCRIPTION="Wayland reference compositor"
-HOMEPAGE="https://wayland.freedesktop.org/"
+HOMEPAGE="https://wayland.freedesktop.org/ https://gitlab.freedesktop.org/wayland/weston"
 
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
@@ -25,13 +25,15 @@ fi
 LICENSE="MIT CC-BY-SA-3.0"
 SLOT="0"
 
-IUSE="colord +drm editor examples fbdev +gles2 headless ivi jpeg +launch lcms rdp remoting +resize-optimization screen-sharing static-libs +suid systemd test wayland-compositor webp +X xwayland"
+IUSE="colord +desktop +drm editor examples fbdev fullscreen +gles2 headless ivi jpeg +launch lcms rdp remoting +resize-optimization screen-sharing static-libs +suid systemd test wayland-compositor webp +X xwayland"
 
 REQUIRED_USE="
+	colord? ( lcms )
 	drm? ( gles2 )
 	screen-sharing? ( rdp )
-	test? ( headless xwayland )
+	test? ( desktop headless xwayland )
 	wayland-compositor? ( gles2 )
+	|| ( drm fbdev headless rdp wayland-compositor X )
 "
 
 RDEPEND="
@@ -61,7 +63,7 @@ RDEPEND="
 	gles2? (
 		media-libs/mesa[gles2,wayland]
 	)
-	rdp? ( >=net-misc/freerdp-1.1.0:= )
+	rdp? ( >=net-misc/freerdp-2.0.0_rc2:= )
 	remoting? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
@@ -83,7 +85,8 @@ RDEPEND="
 		x11-libs/libXcursor
 	)
 "
-DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}"
+BDEPEND="
 	virtual/pkgconfig
 "
 
@@ -94,14 +97,17 @@ src_configure() {
 		$(meson_use headless backend-headless)
 		$(meson_use rdp backend-rdp)
 		$(meson_use screen-sharing screenshare)
+		$(meson_use wayland-compositor backend-wayland)
 		$(meson_use X backend-x11)
 		$(meson_use fbdev backend-fbdev)
+		-Dbackend-default=auto
 		$(meson_use gles2 renderer-gl)
 		$(meson_use launch weston-launch)
 		$(meson_use xwayland)
 		$(meson_use systemd)
 		$(meson_use remoting)
-		$(meson_use wayland-compositor shell-desktop)
+		$(meson_use desktop shell-desktop)
+		$(meson_use fullscreen shell-fullscreen)
 		$(meson_use ivi shell-ivi)
 		$(meson_use lcms color-management-lcms)
 		$(meson_use colord color-management-colord)
@@ -111,7 +117,7 @@ src_configure() {
 		-Dtools=debug,info,terminal
 		-Dsimple-dmabuf-drm=auto
 		$(meson_use examples demo-clients)
-		$(usex examples -Dsimple-clients=damage,img,egl,shm,touch "")
+		$(usex examples -Dsimple-clients=damage,dmabuf-v4l,im,shm,touch$(usex gles2 ,dmabuf-egl,egl "") "")
 		$(meson_use resize-optimization resize-pool)
 		-Dtest-junit-xml=false
 		"${myconf[@]}"
@@ -120,10 +126,7 @@ src_configure() {
 }
 
 src_test() {
-	export XDG_RUNTIME_DIR="${T}/runtime-dir"
-	mkdir "${XDG_RUNTIME_DIR}" || die
-	chmod 0700 "${XDG_RUNTIME_DIR}" || die
-	cd "${BUILD_DIR}" || die
+	xdg_environment_reset
 	meson_src_test
 }
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
 inherit gnome2 python-single-r1 virtualx
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/DFeet"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE="test +X"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

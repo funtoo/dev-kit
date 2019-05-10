@@ -5,7 +5,7 @@ EAPI=6
 
 inherit user systemd golang-vcs-snapshot
 
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 EGO_PN="github.com/etcd-io/etcd"
 GIT_COMMIT="d57e8b8"
 MY_PV="${PV/_rc/-rc.}"
@@ -39,6 +39,7 @@ pkg_setup() {
 }
 
 src_compile() {
+	export -n GOCACHE XDG_CACHE_HOME #651934
 	export GOPATH=${S}
 	pushd src/${EGO_PN} || die
 	GO_BUILD_FLAGS=-v ./build || die
