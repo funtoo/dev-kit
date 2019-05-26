@@ -7,9 +7,6 @@
 =dev-util/bcc-0.6.0 python_single_target_python2_7
 =dev-util/bcc-0.7.0 python_single_target_python2_7
 =dev-util/bcc-0.9.0-r1 python_single_target_python2_7
-=dev-util/meld-3.18.2 python_single_target_python3_5 python_targets_python3_5
-=dev-util/meld-3.20.0 python_single_target_python3_5 python_targets_python3_5
-=dev-util/meld-3.20.1 python_single_target_python3_5 python_targets_python3_5
 =dev-util/setconf-0.6.6 python_single_target_python2_7
 =dev-util/setconf-0.6.7 python_single_target_python2_7
 =dev-util/systemtap-2.4-r1 python_single_target_python2_7
@@ -59,6 +56,7 @@ dev-util/gquilt python_single_target_python2_7
 dev-util/gyp python_single_target_python2_7
 dev-util/imediff2 python_single_target_python2_7
 dev-util/include-what-you-use python_single_target_python2_7
+dev-util/meld python_single_target_python3_5 python_targets_python3_5
 dev-util/mpatch python_single_target_python2_7
 dev-util/osc python_single_target_python2_7
 dev-util/perf python_single_target_python2_7

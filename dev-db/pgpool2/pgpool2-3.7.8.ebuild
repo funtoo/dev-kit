@@ -10,12 +10,12 @@ inherit autotools postgres-multi
 MY_P="${PN/2/-II}-${PV}"
 
 DESCRIPTION="Connection pool server for PostgreSQL"
-HOMEPAGE="http://www.pgpool.net/"
-SRC_URI="http://www.pgpool.net/download.php?f=${MY_P}.tar.gz -> ${MY_P}.tar.gz"
+HOMEPAGE="https://www.pgpool.net/"
+SRC_URI="https://www.pgpool.net/download.php?f=${MY_P}.tar.gz -> ${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="doc libressl memcached pam ssl static-libs"
 

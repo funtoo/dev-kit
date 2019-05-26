@@ -184,8 +184,6 @@ dev-games/physfs:wad - Enable Doom WAD archive support
 dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
 dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
 dev-games/simgear:subversion - Enable terrasync scenery downloader
-dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
-dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
 dev-libs/actor-framework:benchmarks - Due to the number of out-of-tree deps, these only get installed as docs
 dev-libs/actor-framework:boost - Make use of Boost's ASIO functionality
 dev-libs/actor-framework:cash - Build the C Actor Shell for introspection and debugging
@@ -381,11 +379,9 @@ dev-libs/efl:harfbuzz - Enable complex text shaping and layout support
 dev-libs/efl:hyphen - Enable text hyphenation support
 dev-libs/efl:ibus - Enable Intelligent Input Bus
 dev-libs/efl:ico - Enable Ico image loader
-dev-libs/efl:ivi - Enable ivi-shell support
 dev-libs/efl:libuv - Enable dev-libs/libuv support
 dev-libs/efl:luajit - USE dev-lang/luajit instead of dev-lang/lua
 dev-libs/efl:physics - Enable Bullet physics effects and support
-dev-libs/efl:pixman - Enable PixMan for software rendering
 dev-libs/efl:ppm - Enable PMAPS image loader
 dev-libs/efl:psd - Enable PSD image loader
 dev-libs/efl:scim - Enable Smart Common Input Method
@@ -579,8 +575,6 @@ dev-libs/xmlsec:gcrypt - Install xmlsec-gcrypt library
 dev-libs/xmlsec:gnutls - Install xmlsec-gnutls library
 dev-libs/xmlsec:nss - Install xmlsec-nss library
 dev-libs/xmlsec:openssl - Install xmlsec-openssl library
-dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
-dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
 dev-ros/rosbag:lz4 - Add support for lz4 compressed bags.
 dev-ros/rosconsole:glog - Use dev-cpp/glog as log backend.
@@ -588,6 +582,7 @@ dev-ros/rosconsole:log4cxx - Use dev-libs/log4cxx as log backend.
 dev-util/android-ndk:legacy-toolchains - Install legacy toolchains
 dev-util/android-ndk:target-32 - Support for 32-bit targets
 dev-util/android-ndk:target-64 - Support for 64-bit targets
+dev-util/android-studio:custom-jdk - Install and use Android Studio's custom JRE.
 dev-util/apitrace:cli - Enable command line interface
 dev-util/apitrace:egl - Enable EGL support
 dev-util/apitrace:system-snappy - Link dynamic against app-arch/snappy
@@ -602,8 +597,6 @@ dev-util/bustle:threaded - Build with support for multithreaded execution.
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/catalyst:iso - Pulls in the depends for building iso images
 dev-util/catalyst:system-bootloader - Pulls in the depends needed to setup livecd bootloader from the host system rather than using a cdtar
-dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
-dev-util/cccc:mfc - Add patch for MFC dialect options
 dev-util/clion:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/coccigrep:vim - Install the coccigrep vim plugin
 dev-util/codeblocks:contrib - Build additional contrib components
