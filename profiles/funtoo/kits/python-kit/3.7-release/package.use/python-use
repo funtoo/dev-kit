@@ -1,3 +1,5 @@
+=dev-util/dwarves-1.12 python_single_target_python2_7
+=dev-util/dwarves-1.13 python_single_target_python2_7
 =dev-util/setconf-0.6.6 python_single_target_python2_7
 =dev-util/systemtap-2.4-r1 python_single_target_python2_7
 =dev-util/systemtap-3.1-r1 python_single_target_python2_7
@@ -6,7 +8,6 @@ dev-db/metakit python_single_target_python2_7
 dev-db/mongodb python_single_target_python2_7
 dev-embedded/platformio python_single_target_python2_7
 dev-games/cegui python_single_target_python2_7
-dev-libs/beecrypt python_single_target_python2_7
 dev-libs/btparser python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7
 dev-libs/libappindicator python_single_target_python2_7
@@ -23,7 +24,6 @@ dev-util/coccinelle python_single_target_python2_7
 dev-util/confix python_single_target_python2_7
 dev-util/diffuse python_single_target_python2_7
 dev-util/dput-ng python_single_target_python2_7
-dev-util/dwarves python_single_target_python2_7
 dev-util/flawfinder python_single_target_python2_7
 dev-util/geany-plugins python_single_target_python2_7
 dev-util/gquilt python_single_target_python2_7

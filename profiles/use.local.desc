@@ -29,22 +29,6 @@ dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
 dev-db/firebird:xinetd - Install ClassicServer
 dev-db/mariadb-connector-c:mysqlcompat - Enable mysqlclient library symbolic links
-dev-db/mariadb-galera:client-libs - Build the client libraries from the server package instead of the C Connector packages
-dev-db/mariadb-galera:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
-dev-db/mariadb-galera:jdbc - Enable the CONNECT engine to access foreign databases via JDBC
-dev-db/mariadb-galera:latin1 - Use LATIN1 encoding instead of UTF8
-dev-db/mariadb-galera:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
-dev-db/mariadb-galera:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/mariadb-galera:oqgraph - Add support for the Open Query GRAPH engine
-dev-db/mariadb-galera:profiling - Add support for statement profiling (requires USE=community).
-dev-db/mariadb-galera:server - Build the server program
-dev-db/mariadb-galera:sphinx - Add suport for the sphinx full-text search engine
-dev-db/mariadb-galera:sst-rsync - Add tools needed to support the rsync SST method
-dev-db/mariadb-galera:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
-dev-db/mariadb-galera:systemtap - Build support for profiling and tracing using dev-util/systemtap
-dev-db/mariadb-galera:test - Install upstream testsuites for end use.
-dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
-dev-db/mariadb-galera:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mongodb:lto - Adds support for link time optimization
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
@@ -70,7 +54,6 @@ dev-db/percona-server:systemtap - Build support for profiling and tracing using 
 dev-db/percona-server:tokudb - Add support for TokuDB storage engine
 dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
 dev-db/percona-server:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
-dev-db/pgadmin3:databasedesigner - Enable the Database Designer component
 dev-db/pgbouncer:c-ares - Use c-ares as the DNS backend instead of evdns (libevent).
 dev-db/pgbouncer:udns - Use udns as the DNS backend instead of evdns (libevent). Supports IPv4 only.
 dev-db/pgpool2:memcached - Use memcached for query caching.
@@ -82,7 +65,6 @@ dev-db/postgis:mapbox - Add capability to transform geometry into Mapbox Vector 
 dev-db/postgis:topology - Build topology spatial types and functions
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
-dev-db/rethinkdb:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/soci:boost - Enable boost support
 dev-db/soci:empty - Build the sample backend called Empty
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
@@ -508,6 +490,12 @@ dev-libs/opensc:notify - Enable notifications
 dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware
 dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware
 dev-libs/opensc:secure-messaging - Enable secure messaging
+dev-libs/openssl-compat:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
+dev-libs/openssl-compat:bindist - Disable/Restrict EC algorithms (as they seem to be patented) -- note: changes the ABI
+dev-libs/openssl-compat:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
+dev-libs/openssl-compat:sslv2 - Support for the old/insecure SSLv2 protocol -- note: not required for TLS/https
+dev-libs/openssl-compat:sslv3 - Support for the old/insecure SSLv3 protocol -- note: not required for TLS/https
+dev-libs/openssl-compat:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/poco:7z - Add Support for the 7z archive format
 dev-libs/poco:apache - Enable support to write Apache modules using POCO
@@ -555,9 +543,6 @@ dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
 dev-libs/weston:unwind - Enable libunwind usage for backtraces
 dev-libs/weston:wayland-compositor - Enable Wayland compositor support
 dev-libs/weston:xwayland - Enable ability support native X11 applications
-dev-libs/wlc:X - Enable X11 backend.
-dev-libs/wlc:systemd - Enable support for systemd-logind.
-dev-libs/wlc:xwayland - Enable XWayland application support.
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:glass - Enabled glass backend db support
@@ -597,6 +582,8 @@ dev-util/bustle:threaded - Build with support for multithreaded execution.
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/catalyst:iso - Pulls in the depends for building iso images
 dev-util/catalyst:system-bootloader - Pulls in the depends needed to setup livecd bootloader from the host system rather than using a cdtar
+dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
+dev-util/cccc:mfc - Add patch for MFC dialect options
 dev-util/clion:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/coccigrep:vim - Install the coccigrep vim plugin
 dev-util/codeblocks:contrib - Build additional contrib components
