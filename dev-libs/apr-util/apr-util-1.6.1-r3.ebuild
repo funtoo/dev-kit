@@ -15,14 +15,14 @@ SRC_URI="mirror://apache/apr/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="*"
 IUSE="berkdb doc gdbm ldap libressl mysql nss odbc openssl postgres sqlite static-libs"
 #RESTRICT="test"
 
 RDEPEND="
 	dev-libs/expat
 	>=dev-libs/apr-${APR_PV}:1=
-	berkdb? ( >=sys-libs/db-4:= )
+	berkdb? ( >=sys-libs/db-6:= )
 	gdbm? ( sys-libs/gdbm:= )
 	ldap? ( =net-nds/openldap-2* )
 	mysql? ( || (
@@ -78,25 +78,10 @@ src_configure() {
 		$(use_with openssl)
 		$(use_with postgres pgsql)
 		$(use_with sqlite sqlite3)
-	)
+		$(use_with berkdb berkeley-db)
+)
 
 	tc-is-static-only && myconf+=( --disable-util-dso )
-
-	if use berkdb; then
-		local db_version
-		db_version="$(db_findver sys-libs/db)" || die "Unable to find Berkeley DB version"
-		db_version="$(db_ver_to_slot "${db_version}")"
-		db_version="${db_version/\./}"
-		myconf+=(
-			--with-dbm=db${db_version}
-			# We use $T for the libdir because otherwise it'd simply be the normal
-			# system libdir.  That's pointless as the compiler will search it for
-			# us already.  This makes cross-compiling and such easier.
-			--with-berkeley-db="${SYSROOT}$(db_includedir 2>/dev/null):${T}"
-		)
-	else
-		myconf+=( --without-berkeley-db )
-	fi
 
 	if use nss || use openssl ; then
 		myconf+=( --with-crypto ) # 518708
