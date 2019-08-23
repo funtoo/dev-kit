@@ -1,8 +1,8 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} )
 
 inherit multilib python-r1 toolchain-funcs
 
@@ -22,17 +22,21 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND="python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}
-	bzip2? ( >=app-arch/bzip2-1.0.5 )
-	zlib? ( >=sys-libs/zlib-1.2.3 )
-	boost? ( >=dev-libs/boost-1.48 )
-	lzma? ( app-arch/xz-utils )
-	sqlite? ( dev-db/sqlite:3 )
+	bzip2? ( >=app-arch/bzip2-1.0.5:= )
+	zlib? ( >=sys-libs/zlib-1.2.3:= )
+	boost? ( >=dev-libs/boost-1.48:= )
+	lzma? ( app-arch/xz-utils:= )
+	sqlite? ( dev-db/sqlite:3= )
 	ssl? (
 		!libressl? ( dev-libs/openssl:0=[bindist=] )
 		libressl? ( dev-libs/libressl:0= )
 	)"
 BDEPEND="dev-lang/python:*
 	doc? ( dev-python/sphinx )"
+
+PATCHES=(
+	"${FILESDIR}/${P}-build.patch"
+)
 
 src_configure() {
 	local disable_modules=()
