@@ -5,7 +5,7 @@ EAPI=7
 
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
 
-NSPR_VER="4.16"
+NSPR_VER="4.22"
 RTM_NAME="NSS_${PV//./_}_RTM"
 # Rev of https://git.fedorahosted.org/cgit/nss-pem.git
 PEM_GIT_REV="429b0222759d8ad8e6dcd29e62875ae3efd69116"
@@ -19,7 +19,7 @@ SRC_URI="https://archive.mozilla.org/pub/security/nss/releases/${RTM_NAME}/src/$
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="cacert +nss-pem utils"
 CDEPEND=">=dev-db/sqlite-3.8.2[${MULTILIB_USEDEP}]
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]"
@@ -43,8 +43,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.32-gentoo-fixups.patch"
 	"${FILESDIR}/${PN}-3.21-gentoo-fixup-warnings.patch"
 	"${FILESDIR}/${PN}-3.23-hppa-byte_order.patch"
-	# fix for bugs ported forward from 3.36.7
-	"${FILESDIR}/${PN}-3.36.7-fix-cms.patch"
 )
 
 src_unpack() {
@@ -182,6 +180,8 @@ multilib_src_compile() {
 	export NSDISTMODE=copy
 	export NSS_ENABLE_ECC=1
 	export FREEBL_NO_DEPEND=1
+	export FREEBL_LOWHASH=1
+	export NSS_SEED_ONLY_DEV_URANDOM=1
 	export ASFLAGS=""
 
 	local d
