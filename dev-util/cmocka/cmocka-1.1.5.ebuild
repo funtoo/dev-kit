@@ -1,23 +1,25 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 inherit cmake-multilib
 
-DESCRIPTION="Unit testing framework for C"
+DESCRIPTION="A unit testing framework for C"
 HOMEPAGE="https://cmocka.org/"
 SRC_URI="https://cmocka.org/files/1.1/${P}.tar.xz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
+
 
 BDEPEND="
 	doc? ( app-doc/doxygen[dot] )
 "
 
+DOCS=( AUTHORS ChangeLog )
 multilib_src_configure() {
 	local mycmakeargs=(
 		-DWITH_EXAMPLES=$(usex examples)
