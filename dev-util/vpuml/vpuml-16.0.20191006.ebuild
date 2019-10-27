@@ -45,29 +45,24 @@ RDEPEND=">=virtual/jre-1.5
 INSTDIR="/opt/${MY_PN}"
 
 src_compile() {
-	#rm bin/VP-UML_Update || die
-	rm -r Application/uninstaller Application/samples || die
 	rm Application/bin/Visual_Paradigm_Update || die
+	rm -r Application/bin/vp_windows || die
+	rm -r Application/uninstaller || die
+
 	sed -i -e '2i INSTALL4J_JAVA_HOME_OVERRIDE=$JAVA_HOME' \
 		Application/bin/Visual_Paradigm_* || die
 }
 
 src_install() {
 	insinto "${INSTDIR}"
-	doins -r Application .install4j
-	#doins -r bin bundled integration lib ormlib resources \
-	#	scripts sde shapes updatesynchronizer UserLanguage
-
-	rm "${D}${INSTDIR}"/.install4j/firstrun
+	doins -r .install4j Application
 
 	chmod +x "${D}${INSTDIR}"/Application/bin/*
-	#dodoc -r Samples
 
 	make_desktop_entry "${INSTDIR}"/Application/bin/"${MY_PN}" "Visual Paradigm for UML" "${INSTDIR}"/Application/resources/vpuml.png
-	#make_desktop_entry "pkexec ${INSTDIR}/bin/VP-UML_Product_Edition_Manager" "VP UML Product Edition Manager" "${INSTDIR}"/resources/vpuml.png
 
 	dodir /etc/env.d
-	cat - > "${D}"/etc/env.d/99visualparadigm <<EOF
+	cat - > "${D}"/etc/env.d/99vpuml <<EOF
 CONFIG_PROTECT="${INSTDIR}/Application/resources/product_edition.properties"
 EOF
 }
