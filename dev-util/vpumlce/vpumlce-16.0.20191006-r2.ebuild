@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit versionator eutils
 
@@ -42,31 +42,27 @@ RDEPEND=">=virtual/jre-1.5
 	x11-misc/xdg-utils
 	sys-auth/polkit"
 
-INSTDIR="/opt/Visual-Paradigm/${MY_PN}"
+INSTDIR="/opt/${MY_PN}"
 
 src_compile() {
-	rm bin/VP-UML_Update || die
+	rm Application/bin/Visual_Paradigm_Update || die
+	rm -r Application/bin/vp_windows || die
+	rm -r Application/uninstaller || die
 
 	sed -i -e '2i INSTALL4J_JAVA_HOME_OVERRIDE=$JAVA_HOME' \
-		bin/Visual_Paradigm_* bin/VP-UML* || die
+		Application/bin/Visual_Paradigm_* || die
 }
 
 src_install() {
 	insinto "${INSTDIR}"
-	doins -r bin bundled integration lib ormlib \
-		resources scripts sde shapes updatesynchronizer \
-		UserLanguage .install4j
+	doins -r .install4j Application
 
-	rm "${D}${INSTDIR}"/.install4j/firstrun
+	chmod +x "${D}${INSTDIR}"/Application/bin/*
 
-	chmod +x "${D}${INSTDIR}"/bin/*
-	#dodoc -r Samples
-
-	make_desktop_entry "${INSTDIR}"/bin/${MY_P} "Visual Paradigm for UML" "${INSTDIR}"/resources/vpuml.png
-	make_desktop_entry "pkexec ${INSTDIR}/bin/VP-UML_Product_Edition_Manager" "VP UML Product Edition Manager" "${INSTDIR}"/resources/vpuml.png
+	make_desktop_entry "${INSTDIR}"/Application/bin/Visual_Paradigm "Visual Paradigm for UML CE" "${INSTDIR}"/Application/resources/vpuml.png
 
 	dodir /etc/env.d
-	cat - > "${D}"/etc/env.d/99visualparadigm <<EOF
+	cat - > "${D}"/etc/env.d/99vpumlce <<EOF
 CONFIG_PROTECT="${INSTDIR}/resources/product_edition.properties"
 EOF
 }
