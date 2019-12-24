@@ -5,9 +5,10 @@ EAPI=6
 HOMEPAGE=https://jonas.github.io/tig/
 IUSE=test unicode
 LICENSE=GPL-2
+PROPERTIES=live
 RDEPEND=sys-libs/ncurses:0=[unicode?] sys-libs/readline:0= dev-vcs/git
 REQUIRED_USE=test? ( unicode )
 RESTRICT=test
 SLOT=0
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	bash-completion-r1	47a7402d95930413ce25ba8d857339bb	git-r3	0d4635eeb5a96cd5315597a47eba25c9	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	bash-completion-r1	47a7402d95930413ce25ba8d857339bb	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=c2b2664aea7f68768327f9ea72977ffe
