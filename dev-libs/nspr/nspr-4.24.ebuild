@@ -13,7 +13,7 @@ SRC_URI="https://archive.mozilla.org/pub/nspr/releases/v${PV}/src/${P}.tar.gz"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="*"
 IUSE="debug elibc_musl"
 
 MULTILIB_CHOST_TOOLS=(

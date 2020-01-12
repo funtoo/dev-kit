@@ -19,7 +19,7 @@ SRC_URI="https://archive.mozilla.org/pub/security/nss/releases/${RTM_NAME}/src/$
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="*"
 IUSE="cacert +nss-pem utils"
 BDEPEND="
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
