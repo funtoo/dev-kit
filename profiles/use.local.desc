@@ -555,14 +555,6 @@ dev-libs/xmlsec:gnutls - Install xmlsec-gnutls library
 dev-libs/xmlsec:nss - Install xmlsec-nss library
 dev-libs/xmlsec:openssl - Install xmlsec-openssl library
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
-dev-qt/qtwebkit:geolocation - Enable physical position determination via dev-qt/qtpositioning
-dev-qt/qtwebkit:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer using SLOT 1.0
-dev-qt/qtwebkit:hyphen - Enable hyphenation support via dev-libs/hyphen
-dev-qt/qtwebkit:multimedia - Enable HTML5 audio/video support via dev-qt/qtmultimedia
-dev-qt/qtwebkit:orientation - Enable device orientation detection via dev-qt/qtsensors
-dev-qt/qtwebkit:printsupport - Enable printing via dev-qt/qtprintsupport
-dev-qt/qtwebkit:qml - Build QML/QtQuick bindings
 dev-ros/rosbag:lz4 - Add support for lz4 compressed bags.
 dev-ros/rosconsole:glog - Use dev-cpp/glog as log backend.
 dev-ros/rosconsole:log4cxx - Use dev-libs/log4cxx as log backend.
