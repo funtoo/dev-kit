@@ -185,7 +185,6 @@ dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/apr-util:libressl - Use dev-libs/libressl instead of dev-libs/openssl for 'openssl' USE flag
 dev-libs/apr-util:nss - Install apr_crypto_nss module
 dev-libs/apr-util:openssl - Install apr_crypto_openssl module
-dev-libs/atcore:gui - Build test GUI
 dev-libs/aws-sdk-cpp:aws_targets_AWSMigrationHub - SDK Support for AWS AWSMigrationHub
 dev-libs/aws-sdk-cpp:aws_targets_access-management - SDK Support for AWS access-management
 dev-libs/aws-sdk-cpp:aws_targets_acm - SDK Support for AWS acm
