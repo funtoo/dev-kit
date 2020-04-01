@@ -120,7 +120,6 @@ dev-libs/hyperscan python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7
 dev-libs/keystone python_single_target_python2_7
 dev-libs/libappindicator python_single_target_python2_7
-dev-libs/libarcus python_single_target_python3_5 python_targets_python3_5
 dev-libs/libcec python_single_target_python2_7
 dev-libs/libcharon python_single_target_python3_5 python_targets_python3_5
 dev-libs/libcxml python_single_target_python2_7
