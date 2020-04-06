@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install setup test
-DEPEND=virtual/libudev:=[-mgorny(-)] >=dev-libs/glib-2.32:2[-mgorny(-)] introspection? ( >=dev-libs/gobject-introspection-1.32:= ) test? ( || ( dev-lang/python:3.6 dev-lang/python:3.5 >=dev-lang/python-2.7.5-r2:2.7 ) virtual/libgudev:=[-mgorny(-)] ) app-arch/xz-utils >=dev-util/gtk-doc-am-1.14 virtual/pkgconfig[-mgorny(-)]
+DEPEND=virtual/libudev:=[-mgorny(-)] >=dev-libs/glib-2.32:2[-mgorny(-)] introspection? ( >=dev-libs/gobject-introspection-1.32:= ) test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.7 ) virtual/libgudev:=[-mgorny(-)] ) app-arch/xz-utils >=dev-util/gtk-doc-am-1.14 virtual/pkgconfig[-mgorny(-)]
 DESCRIPTION=Mock hardware devices for creating unit tests
 EAPI=6
 HOMEPAGE=https://github.com/martinpitt/umockdev/
@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1+
 RDEPEND=virtual/libudev:=[-mgorny(-)] >=dev-libs/glib-2.32:2[-mgorny(-)] introspection? ( >=dev-libs/gobject-introspection-1.32:= )
 SLOT=0
 SRC_URI=https://github.com/martinpitt/umockdev/releases/download/0.12.1/umockdev-0.12.1.tar.xz
-_eclasses_=multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	0ccf24dbef2b7722ad46689d6feebe37	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	14441f0119be627922cac018d9e04c7a	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=819b85e2e8088f2b2af327d42ce60265

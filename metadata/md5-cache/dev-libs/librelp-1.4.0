@@ -1,6 +1,6 @@
 BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install prepare setup test
-DEPEND=ssl? ( gnutls? ( >=net-libs/gnutls-3.3.17.1:0= ) openssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) ) ) test? ( || ( dev-lang/python:3.7 dev-lang/python:3.6 dev-lang/python:3.5 >=dev-lang/python-2.7.5-r2:2.7 ) ) virtual/pkgconfig
+DEPEND=ssl? ( gnutls? ( >=net-libs/gnutls-3.3.17.1:0= ) openssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) ) ) test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.7 ) ) virtual/pkgconfig
 DESCRIPTION=An easy to use library for the RELP protocol
 EAPI=7
 HOMEPAGE=http://www.librelp.com/
@@ -12,5 +12,5 @@ REQUIRED_USE=ssl? ( ^^ ( gnutls openssl ) )
 RESTRICT=!test? ( test )
 SLOT=0/0.5.0
 SRC_URI=http://download.rsyslog.com/librelp/librelp-1.4.0.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	0ccf24dbef2b7722ad46689d6feebe37	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	14441f0119be627922cac018d9e04c7a	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=ae0894d16482c34ca96e24aede4894e9
