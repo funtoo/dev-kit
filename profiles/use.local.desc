@@ -375,7 +375,6 @@ dev-libs/efl:vlc - Enable media-video/vlc support
 dev-libs/efl:xcf - Enable XCF image loader
 dev-libs/efl:xim - Enable X Input Method
 dev-libs/efl:xpresent - Enable x11-libs/libXpresent support
-dev-libs/ell:glib - Enable dev-libs/glib support
 dev-libs/fcgi:html - Install HTML documentation
 dev-libs/fstrm:utils - Build fstrm utility programs
 dev-libs/gecode:gist - Enable Gist, the Gecode Interactive Search Tool
