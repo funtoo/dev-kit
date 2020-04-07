@@ -126,6 +126,7 @@ dev-libs/libcxml python_single_target_python2_7
 dev-libs/libdbusmenu python_single_target_python2_7
 dev-libs/libdnet python_single_target_python2_7
 dev-libs/libgamin python_single_target_python2_7
+dev-libs/libgit2 python_single_target_python3+ python_targets_python3+
 dev-libs/libhid python_single_target_python2_7
 dev-libs/libmacaroons python_single_target_python2_7
 dev-libs/libnatspec python_single_target_python2_7

@@ -11,4 +11,4 @@ RDEPEND=!libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) sy
 SLOT=0/99
 SRC_URI=https://github.com/libgit2/libgit2/archive/v0.99.0.tar.gz -> libgit2-0.99.0.tar.gz
 _eclasses_=cmake	7b250250bd1c3cc90800ed668fb87825	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	14441f0119be627922cac018d9e04c7a	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=d5032d98ca7d9aef06f2e06aa5071780
+_md5_=de8e260dd2bf370e0b1caf8079f7d5f1
