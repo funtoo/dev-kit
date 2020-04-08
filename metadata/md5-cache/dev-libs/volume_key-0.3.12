@@ -10,5 +10,5 @@ RDEPEND=app-crypt/gpgme dev-libs/glib:2 dev-libs/nspr dev-libs/nss sys-apps/util
 REQUIRED_USE=python_targets_python3_7
 SLOT=0
 SRC_URI=http://releases.pagure.org/volume_key/volume_key-0.3.12.tar.xz
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	14441f0119be627922cac018d9e04c7a	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=5c0eb163d5ad032a55dffec4d5369022

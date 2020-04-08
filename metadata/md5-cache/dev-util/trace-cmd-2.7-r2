@@ -10,5 +10,5 @@ RDEPEND=audit? ( sys-process/audit ) python? ( python_targets_python2_7? ( >=dev
 REQUIRED_USE=python? ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://git.kernel.org/pub/scm/linux/kernel/git/rostedt/trace-cmd.git/snapshot/trace-cmd-v2.7.tar.gz
-_eclasses_=linux-info	953c3b1c472dcadbf62098a9301327f2	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	14441f0119be627922cac018d9e04c7a	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=linux-info	953c3b1c472dcadbf62098a9301327f2	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=9af4a5698898e8feb7ffad589946db18

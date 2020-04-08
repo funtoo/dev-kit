@@ -10,5 +10,5 @@ RDEPEND=python? ( python_targets_python3_7? ( dev-lang/python:3.7 ) >=dev-lang/p
 REQUIRED_USE=python? ( || ( python_targets_python3_7 ) )
 SLOT=0/3
 SRC_URI=https://github.com/abrt/satyr/archive/0.27/satyr-0.27.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-r1	6ae4f9eb4881e5c5489344ee122e05d0	python-utils-r1	14441f0119be627922cac018d9e04c7a	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-r1	6ae4f9eb4881e5c5489344ee122e05d0	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=5270a650e490ea72b2f62582c1250d25
