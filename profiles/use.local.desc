@@ -429,8 +429,6 @@ dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
 dev-libs/libmemcached:sasl - Use sasl auth for communications.
 dev-libs/libnfc:pcsc-lite - Enable NFC drivers that require pcsc-lite
-dev-libs/liborcus:spreadsheet-model - Enable the spreadsheet model implementation
-dev-libs/liborcus:tools - Build various low-level parsers
 dev-libs/libowfat:diet - Compile against dev-libs/dietlibc
 dev-libs/libp11:doc - Generate and install API documentation for the package.
 dev-libs/librdkafka:lz4 - Enable support for Kafka's LZ4 compression based on KIP-57 (uses app-arch/lz4)
@@ -657,7 +655,6 @@ dev-util/intel-ocl-sdk:system-tbb - Use system Thread Building Blocks (dev-cpp/t
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
-dev-util/mdds:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-util/mingw64-runtime:idl - Install idl files.
 dev-util/mingw64-runtime:libraries - Build extra libraries: mangle, pseh, winpthreads.
 dev-util/mingw64-runtime:tools - Build extra tools: gendef, genidl.

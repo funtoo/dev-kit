@@ -1,14 +1,14 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl] >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-DEFINED_PHASES=configure install prepare setup unpack
+DEFINED_PHASES=configure install prepare setup
 DEPEND=dev-libs/boost:= sys-libs/zlib python? ( python_targets_python3_7? ( dev-lang/python:3.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_python2_7(-),-python_single_target_pypy(-),-python_single_target_jython2_7(-),python_single_target_python3_7(+)] ) spreadsheet-model? ( >=dev-libs/libixion-0.14.0:= ) >=dev-util/mdds-1.4.1:1
 DESCRIPTION=Standalone file import filter library for spreadsheet documents
 EAPI=7
 HOMEPAGE=https://gitlab.com/orcus/orcus/blob/master/README.md
 IUSE=python +spreadsheet-model static-libs tools python_targets_python3_7
+KEYWORDS=*
 LICENSE=MIT
-PROPERTIES=live
 RDEPEND=dev-libs/boost:= sys-libs/zlib python? ( python_targets_python3_7? ( dev-lang/python:3.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_python2_7(-),-python_single_target_pypy(-),-python_single_target_jython2_7(-),python_single_target_python3_7(+)] ) spreadsheet-model? ( >=dev-libs/libixion-0.14.0:= )
 REQUIRED_USE=python? ( python_targets_python3_7 )
-SLOT=0/0.14
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
-_md5_=2bcdfe10d70bc71136bb23c1d5a2e5d8
+SLOT=0/0.15
+SRC_URI=https://kohei.us/files/orcus/src/liborcus-0.15.0.tar.xz
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_md5_=c0c9f0d651a8d24317557a5d4023335b
