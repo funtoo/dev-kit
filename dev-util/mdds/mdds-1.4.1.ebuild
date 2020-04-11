@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +9,7 @@ HOMEPAGE="https://gitlab.com/mdds/mdds"
 SRC_URI="https://kohei.us/files/${PN}/src/${P}.tar.bz2"
 KEYWORDS="*"
 LICENSE="MIT"
-SLOT="1/${PV%.*}"
+SLOT="${PV%.*}/${PV}"
 IUSE="doc valgrind"
 
 BDEPEND="

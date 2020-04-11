@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,9 +7,9 @@ inherit autotools toolchain-funcs
 DESCRIPTION="A collection of multi-dimensional data structure and indexing algorithm"
 HOMEPAGE="https://gitlab.com/mdds/mdds"
 SRC_URI="https://kohei.us/files/${PN}/src/${P}.tar.bz2"
-KEYWORDS="*"
+KEYWORDS=""
 LICENSE="MIT"
-SLOT="1/${PV%.*}"
+SLOT="${PV%.*}/${PV}"
 IUSE="doc valgrind"
 
 BDEPEND="

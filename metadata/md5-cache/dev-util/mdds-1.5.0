@@ -5,10 +5,9 @@ DESCRIPTION=A collection of multi-dimensional data structure and indexing algori
 EAPI=7
 HOMEPAGE=https://gitlab.com/mdds/mdds
 IUSE=doc valgrind
-KEYWORDS=*
 LICENSE=MIT
 RDEPEND=dev-libs/boost:=
-SLOT=1/1.5
+SLOT=1.5/1.5.0
 SRC_URI=https://kohei.us/files/mdds/src/mdds-1.5.0.tar.bz2
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
-_md5_=d1cd9d6d62924fc049e21aa989c8d724
+_md5_=b69a98646898d70dd314bff529759b87
