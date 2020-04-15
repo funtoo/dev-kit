@@ -252,7 +252,6 @@ dev-vcs/hg-git python_single_target_python2_7
 dev-vcs/hgsubversion python_single_target_python2_7
 dev-vcs/hgsvn python_single_target_python2_7
 dev-vcs/hgview python_single_target_python2_7
-dev-vcs/mercurial python_single_target_python2_7
 dev-vcs/mercurial-server python_single_target_python2_7
 dev-vcs/rabbitvcs python_single_target_python2_7
 dev-vcs/rapidsvn python_single_target_python2_7
