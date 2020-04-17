@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit gnome2-utils readme.gentoo-r1 xdg
+inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
 HOMEPAGE="http://www.jetbrains.com/pycharm/"
@@ -11,7 +10,7 @@ SRC_URI="http://download.jetbrains.com/python/${P}.tar.gz"
 
 LICENSE="Apache-2.0 BSD CDDL MIT-with-advertising"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 
 RDEPEND=">=virtual/jre-1.8
 	dev-libs/libdbusmenu
@@ -32,24 +31,25 @@ src_prepare() {
 }
 
 src_install() {
-	insinto /opt/${PN}
-	doins -r *
+	local dir="/opt/${PN}"
+	local dst="${D}${dir}"
 
-	fperms a+x /opt/${PN}/bin/{pycharm.sh,fsnotifier{,64},inspect.sh}
+	insinto "${dir}"
+	mv "${S}"/* "${dst}"
 
-	dosym ../../opt/${PN}/bin/pycharm.sh /usr/bin/${PN}
-	newicon bin/${MY_PN}.png ${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN}
+	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
+	newicon "${dir}/bin/${MY_PN}.png" "${PN}.png"
+	make_desktop_entry ${PN} ${PN} ${PN} "Development;IDE;"
 
 	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	gnome2_icon_cache_update
+	gnome3_icon_cache_update
 }
 
 pkg_postrm() {
 	xdg_pkg_postrm
-	gnome2_icon_cache_update
+	gnome3_icon_cache_update
 }
