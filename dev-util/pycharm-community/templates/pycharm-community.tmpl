@@ -38,7 +38,7 @@ src_install() {
 	mv "${S}"/* "${dst}"
 
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
-	newicon "${dir}/bin/${MY_PN}.png" "${PN}.png"
+	newicon "${dst}/bin/${MY_PN}.png" "${PN}.png"
 	make_desktop_entry ${PN} ${PN} ${PN} "Development;IDE;"
 
 	readme.gentoo_create_doc
