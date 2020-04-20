@@ -7,7 +7,7 @@ inherit user systemd
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="https://jenkins.io/"
 LICENSE="MIT"
-SRC_URI="http://mirrors.jenkins-ci.org/war/2.232/jenkins.war -> jenkins-bin-2.232.war"
+SRC_URI="http://mirrors.jenkins-ci.org/war/2.233/jenkins.war -> jenkins-bin-2.233.war"
 RESTRICT="mirror"
 SLOT="0"
 KEYWORDS="*"
