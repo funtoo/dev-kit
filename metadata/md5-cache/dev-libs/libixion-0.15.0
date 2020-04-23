@@ -10,5 +10,5 @@ RDEPEND=dev-libs/boost:= dev-libs/spdlog:= dev-util/mdds:1.5 python? ( python_ta
 REQUIRED_USE=python? ( python_targets_python3_7 )
 SLOT=0/0.15
 SRC_URI=https://kohei.us/files/ixion/src/libixion-0.15.0.tar.xz
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	a1c04fa94c9a4cb3199d61f7f4499228	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=4727b2845b2d6acda838897b3272b540

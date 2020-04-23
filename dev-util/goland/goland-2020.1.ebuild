@@ -6,7 +6,7 @@ inherit eutils desktop gnome3-utils xdg
 
 SLOT=0
 
-SRC_URI="https://download.jetbrains.com/go/goland-2020.1.tar.gz -> goland-2020.1.tar.gz"
+SRC_URI="https://download.jetbrains.com/go/goland-2020.1.1.tar.gz -> goland-2020.1.tar.gz"
 DESCRIPTION="Golang IDE by JetBrains"
 HOMEPAGE="https://www.jetbrains.com/go"
 

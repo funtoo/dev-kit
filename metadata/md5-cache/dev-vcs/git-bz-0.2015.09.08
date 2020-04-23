@@ -9,5 +9,5 @@ RDEPEND=dev-vcs/git python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[s
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~mgorny/dist/git-bz-0.2015.09.08.tar.bz2
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	6eaf2ebfc1433cdf9317ada205aaecf6	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	a1c04fa94c9a4cb3199d61f7f4499228	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=c905331c42b7b5b61e16992f2c466505
