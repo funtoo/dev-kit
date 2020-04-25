@@ -2,14 +2,14 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python2+ )
+PYTHON_COMPAT=( python3+ )
 PYTHON_REQ_USE="threads(+)"
 
 inherit bash-completion-r1 elisp-common eutils distutils-r1 flag-o-matic
 
 DESCRIPTION="Scalable distributed SCM"
 HOMEPAGE="https://www.mercurial-scm.org/"
-SRC_URI="https://www.mercurial-scm.org/release/${P}.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/79/54/ccc37f1f55b91d48ed1de38ffbb81e32697dc69accea017c8faad21360bf/mercurial-5.3.2.tar.gz -> mercurial-5.3.2.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -33,14 +33,10 @@ SITEFILE="70${PN}-gentoo.el"
 RESTRICT="test"
 
 python_prepare_all() {
-	# fix up logic that won't work in Gentoo Prefix (also won't outside in
-	# certain cases), bug #362891
-	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
 	# Use absolute import for zstd
 	sed -i -e 's/from \.* import zstd/import zstd/' \
 		mercurial/utils/compression.py \
-		mercurial/wireprotoframing.py || die
-
+		mercurial/wireprotoframing.py
 	distutils-r1_python_prepare_all
 }
 
