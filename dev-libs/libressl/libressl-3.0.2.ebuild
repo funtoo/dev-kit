@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit multilib-minimal libtool
+inherit libtool
 
 DESCRIPTION="Free version of the SSL/TLS protocol forked from OpenSSL"
 HOMEPAGE="https://www.libressl.org/"
@@ -13,12 +12,12 @@ LICENSE="ISC openssl"
 # Reflects ABI of libcrypto.so and libssl.so.  Since these can differ,
 # we'll try to use the max of either.  However, if either change between
 # versions, we have to change the subslot to trigger rebuild of consumers.
-SLOT="0/46"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 s390 sparc x86 ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+SLOT="0/47"
+KEYWORDS=""
 IUSE="+asm static-libs test"
 REQUIRED_USE="test? ( static-libs )"
 
-RDEPEND="!dev-libs/openssl:0"
+RDEPEND=""
 DEPEND="${RDEPEND}"
 PDEPEND="app-misc/ca-certificates"
 
@@ -34,23 +33,33 @@ src_prepare() {
 		-e '/^[ \t]*USER_CFLAGS=/s#-O2"#"#' \
 		configure || die "fixing CFLAGS failed"
 
-	eapply "${FILESDIR}"/${P}-solaris10.patch
+	if ! use test ; then
+	sed -i \
+		-e '/^[ \t]*SUBDIRS =/s#tests##' \
+		Makefile.in || die "Removing tests failed"
+	fi
+
+	# eapply "${FILESDIR}"/${P}-non-glibc.patch
 	eapply_user
-
-	elibtoolize  # for Solaris
 }
 
-multilib_src_configure() {
-	ECONF_SOURCE="${S}" econf \
-		$(use_enable asm) \
-		$(use_enable static-libs static)
+src_configure() {
+	econf \
+		--prefix=/usr \
+		--with-openssldir=/etc/libressl \
+		--libdir=/usr/lib/libressl \
+		--includedir=/usr/include/libressl \
+		--program-prefix "libressl-"
 }
 
-multilib_src_test() {
-	emake check
-}
+src_install() {
+	default
 
-multilib_src_install_all() {
-	einstalldocs
-	find "${D}" -name '*.la' -exec rm -f {} + || die
+	# Remove symlink man pages, that actually points to OpenSSL
+	# ones since the prefix is not accounted for
+	for manlink in $(find -L "${D}"usr/share/man/man3/ -type l) ;
+	do
+		einfo "Removing ${manlink}..." ;
+		rm "${manlink}" || die "Failed to remove ${manlink}";
+	done
 }
