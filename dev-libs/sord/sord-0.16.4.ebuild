@@ -1,25 +1,25 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+PYTHON_COMPAT=( python2+ )
 PYTHON_REQ_USE='threads(+)'
 inherit python-any-r1 waf-utils multilib-build multilib-minimal
 
-DESCRIPTION="Library for RDF syntax which supports reading and writing Turtle and NTriples"
-HOMEPAGE="http://drobilla.net/software/serd/"
+DESCRIPTION="Library for storing RDF data in memory"
+HOMEPAGE="http://drobilla.net/software/sord/"
 SRC_URI="http://download.drobilla.net/${P}.tar.bz2"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ppc ppc64 x86"
+KEYWORDS="*"
 IUSE="doc static-libs test"
 
-RDEPEND=""
+RDEPEND=">=dev-libs/serd-0.28.0-r1"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	virtual/pkgconfig"
 
 DOCS=( "AUTHORS" "NEWS" "README.md" )
 
