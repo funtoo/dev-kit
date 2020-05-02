@@ -12,8 +12,7 @@ LICENSE="Apache-2.0 BSD CDDL MIT-with-advertising"
 SLOT="0"
 KEYWORDS="*"
 
-RDEPEND=">=virtual/jre-1.8
-	dev-libs/libdbusmenu
+RDEPEND="dev-libs/libdbusmenu
 	dev-python/pip"
 
 RESTRICT="mirror strip"

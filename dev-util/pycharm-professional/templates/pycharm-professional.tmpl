@@ -12,8 +12,7 @@ LICENSE="PyCharm_Academic PyCharm_Classroom PyCharm PyCharm_OpenSource PyCharm_P
 SLOT="0"
 KEYWORDS="*"
 
-RDEPEND=">=virtual/jre-1.8
-	dev-libs/libdbusmenu
+RDEPEND="dev-libs/libdbusmenu
 	dev-python/pip"
 
 RESTRICT="mirror strip"
