@@ -1,31 +1,25 @@
 #!/usr/bin/env python3
 
 import json
-import re
-from datetime import timedelta
-
-RELEASE = re.compile(r'>([0-9.]+)/<')
 
 async def generate(hub, **pkginfo):
-	text_data = await hub.pkgtools.fetch.get_page("http://mirrors.jenkins-ci.org/war/")
-	text_list = text_data.split("\n")
-	text_list.reverse()
-	version = None
 
-	for text in text_list:
-		found = RELEASE.search(text)
-		if found:
-			version = found.groups()[0]
-			break
+	github_user = 'jenkinsci'
+	github_repo = 'jenkins'
+	json_data = await hub.pkgtools.fetch.get_page(f'https://api.github.com/repos/{github_user}/{github_repo}/releases/latest')
+	json_list = json.loads(json_data)
+	version = json_list['tag_name'].split('-', 1)[1]
 
-	if version:
-		final_name = f"jenkins-bin-{version}.war"
-		url = f"http://mirrors.jenkins-ci.org/war/{version}/jenkins.war"
-		ebuild = hub.pkgtools.ebuild.BreezyBuild(
-			**pkginfo,
-			version=version,
-			artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)]
-		)
-		ebuild.push()
+	if version == '':
+		raise hub.pkgtools.ebuild.BreezyError('Failed to find latest version of jenkins :(')
+
+	final_name = f"jenkins-bin-{version}.war"
+	url = f"http://mirrors.jenkins-ci.org/war/{version}/jenkins.war"
+	ebuild = hub.pkgtools.ebuild.BreezyBuild(
+		**pkginfo,
+		version=version,
+		artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)]
+	)
+	ebuild.push()
 
 # vim: ts=4 sw=4 noet
