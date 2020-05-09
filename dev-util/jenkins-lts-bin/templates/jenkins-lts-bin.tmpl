@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit user systemd
+inherit user
 
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="https://jenkins.io/"
@@ -38,8 +38,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.init2 jenkins
 	newconfd "${FILESDIR}"/${PN}.confd jenkins
-
-	systemd_newunit "${FILESDIR}"/${PN}.service2 jenkins.service
 
 	fowners jenkins:jenkins /var/log/jenkins ${JENKINS_DIR} ${JENKINS_DIR}/home ${JENKINS_DIR}/backup
 }
