@@ -69,7 +69,7 @@ src_install() {
 pkg_postinst() {
 	xdg_pkg_postinst
 	if use sysctl; then
-		sysctl -a
+		( /etc/init.d/sysctl restart >/dev/null 2>&1 )
 		einfo "An /etc/sysctl.d file was installed to optimally configure the IDE, with this"
 		einfo "setting:"
 	else
