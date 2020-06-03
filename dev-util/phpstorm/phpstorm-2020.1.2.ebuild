@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
-HOMEPAGE="https://www.jetbrains.com/python"
-SRC_URI="https://download.jetbrains.com/python/pycharm-community-2020.1.1.tar.gz -> pycharm-community-2020.1.1.tar.gz"
+DESCRIPTION="a PHP IDE by JetBrains"
+HOMEPAGE="https://www.jetbrains.com/phpstorm"
+SRC_URI="https://download.jetbrains.com/webide/PhpStorm-2020.1.2.tar.gz -> phpstorm-2020.1.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -27,12 +27,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/pycharm-${PV}"
+S="${WORKDIR}/PhpStorm-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "pycharm-${PV}" || die
+		mv $(ls "${WORKDIR}") "PhpStorm-${PV}" || die
 	fi
 }
 
@@ -53,7 +53,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "PyCharm Community Edition" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "PhpStorm" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
