@@ -622,24 +622,6 @@ dev-util/electron:system-ssl - Use system OpenSSL instead of the bundled one
 dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
 dev-util/fatrace:powertop - Add powetop integration
-dev-util/geany:gtk3 - Use GTK+3 instead of GTK+2
-dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
-dev-util/geany-plugins:autoclose - Enable the autoclose plugin.
-dev-util/geany-plugins:automark - Enable the automark plugin
-dev-util/geany-plugins:commander - Enable the commander plugin which provides a command panel for rapid access to any action.
-dev-util/geany-plugins:ctags - Enable ctags plugin
-dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with sys-devel/gdb
-dev-util/geany-plugins:defineformat - Enable the defineformat plugin.
-dev-util/geany-plugins:enchant - Enable spell checking using enchant
-dev-util/geany-plugins:gpg - Enable geanypg plugin which integrates GPG using app-crypt/gpgme
-dev-util/geany-plugins:gtk3 - Use GTK+3 instead of GTK+2
-dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support in GeanyVC
-dev-util/geany-plugins:markdown - Enable the markdown plugin
-dev-util/geany-plugins:multiterm - Enable the multiterm plugin
-dev-util/geany-plugins:overview - Enable overview plugin
-dev-util/geany-plugins:pretty-printer - Enable pretty-printer plugin
-dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB front-end
-dev-util/geany-plugins:soup - Enable updatechecker and geniuspaste plugins which require net-libs/libsoup
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/google-perftools:debug - Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc.
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
