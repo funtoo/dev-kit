@@ -11,7 +11,7 @@ SRC_URI="https://dev.gentoo.org/~floppym/dist/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm64 ~ppc64 ~x86"
+KEYWORDS="*"
 IUSE="vim-syntax"
 
 BDEPEND="
