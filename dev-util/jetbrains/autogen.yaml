@@ -2,6 +2,13 @@ jetbrains_rule:
   defaults:
     cat: dev-util
   packages:
+    - clion:
+        fullname: CLion
+        description: Cross-platform IDE for C and C++
+        license: JetBrains
+        homepage: https://www.jetbrains.com/clion
+        jid: CL
+        srcdir: CLion
     - goland:
         fullname: GoLand
         description: Golang IDE by JetBrains

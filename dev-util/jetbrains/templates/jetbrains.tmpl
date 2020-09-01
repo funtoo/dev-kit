@@ -47,10 +47,10 @@ src_install() {
 
 	make_wrapper "${PN}" "${dir}/bin/$bundled_script_name" || die
 
-	local svgfile="$(find ${dst}/bin -iname '*.svg')"
+	local svgfile="$(find ${dst}/bin -maxdepth 1 -iname '*.svg')"
 	newicon $svgfile "${PN}.svg" || die
 
-	local pngfile="$(find ${dst}/bin -iname '*.png')"
+	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
 	make_desktop_entry ${PN} "{{fullname}}" ${PN} "Development;IDE;" || die
