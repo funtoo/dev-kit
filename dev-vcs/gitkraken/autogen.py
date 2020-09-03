@@ -4,7 +4,8 @@ import json
 import re
 from datetime import timedelta
 
-RELEASE = re.compile(r'Latest release: ([0-9.]+)')
+RELEASE = re.compile(r"Latest release: ([0-9.]+)")
+
 
 async def generate(hub, **pkginfo):
 	text_data = await hub.pkgtools.fetch.get_page("https://www.gitkraken.com/download")
@@ -18,13 +19,12 @@ async def generate(hub, **pkginfo):
 			break
 
 	if release:
-		url = f'https://release.gitkraken.com/linux/GitKraken-v{release}.tar.gz'
-		final_name = f'gitkraken-amd64-{release}.tar.gz'
+		url = f"https://release.gitkraken.com/linux/GitKraken-v{release}.tar.gz"
+		final_name = f"gitkraken-amd64-{release}.tar.gz"
 		ebuild = hub.pkgtools.ebuild.BreezyBuild(
-			**pkginfo,
-			version=release,
-			artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)]
+			**pkginfo, version=release, artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)]
 		)
 		ebuild.push()
+
 
 # vim: ts=4 sw=4 noet
