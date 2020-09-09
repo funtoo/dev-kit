@@ -7,6 +7,6 @@ LICENSE=MIT
 RDEPEND=media-fonts/dejavu media-libs/freetype !dev-util/jenkins-bin:lts >=virtual/jre-1.8.0
 RESTRICT=mirror
 SLOT=0
-SRC_URI=http://mirrors.jenkins-ci.org/war/2.254/jenkins.war -> jenkins-bin-2.254.war
+SRC_URI=http://mirrors.jenkins-ci.org/war/2.256/jenkins.war -> jenkins-bin-2.256.war
 _eclasses_=user	e68863263b1e8611dacf381bec5c8b2b
-_md5_=0325bef4fe59eec8a02d58a718e22e77
+_md5_=c5cb37172ca542d8707279e160da0af0
