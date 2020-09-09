@@ -47,7 +47,6 @@ dev-libs/eekboard python_single_target_python2_7
 dev-libs/hyperscan python_single_target_python2_7
 dev-libs/keybinder python_single_target_python2_7
 dev-libs/libappindicator python_single_target_python2_7
-dev-libs/libdbusmenu python_single_target_python2_7
 dev-libs/libdnet python_single_target_python2_7
 dev-libs/libgamin python_single_target_python2_7
 dev-libs/libhid python_single_target_python2_7
