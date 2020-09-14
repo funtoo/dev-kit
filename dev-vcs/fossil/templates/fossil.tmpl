@@ -1,0 +1,43 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=6
+
+inherit toolchain-funcs
+
+DESCRIPTION="Simple, high-reliability, source control management, and more"
+HOMEPAGE="http://www.fossil-scm.org/"
+SRC_URI="{{ artifacts[0].src_uri }}"
+
+LICENSE="BSD-2"
+SLOT="0"
+KEYWORDS="amd64 arm ppc ppc64 x86"
+IUSE="{{ iuses|join(" \\\n") }}"
+
+REQUIRED_USE="openssl? ( !miniz )"
+
+DEPEND="
+	sys-libs/zlib
+	|| ( sys-libs/readline:0 dev-libs/libedit )
+	!internal-sqlite? ( >=dev-db/sqlite-3.33.0:3 )
+	openssl? ( dev-libs/openssl:0 )
+	{%- for option in options %}
+	{%- if option.use.startswith(('th1-', 'tcl')) %}
+	{{ option.use }}? ( dev-lang/tcl:0= )
+	{%- endif %}
+	{%- endfor %}
+"
+RDEPEND="${DEPEND}"
+
+# Tests can't be run from the build directory
+RESTRICT="test"
+
+src_configure() {
+	local myconf="{{ codes|join(' \\\n') }}"
+	tc-export CC
+	echo "./configure ${myconf}"
+	./configure ${myconf} || die
+}
+
+src_install() {
+	dobin fossil
+}

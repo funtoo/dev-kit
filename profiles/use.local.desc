@@ -676,15 +676,23 @@ dev-vcs/darcs:http - Use the pure Haskell HTTP package for HTTP support.
 dev-vcs/darcs:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
-dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
-dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
-dev-vcs/fossil:legacy-mv-rm - Enable legacy behavior for mv/rm (skip checkout files).
-dev-vcs/fossil:miniz - Use the bundled miniz for compression instead of zlib. Incompatible with ssl.
-dev-vcs/fossil:system-sqlite - Use the system SQLite instead of the bundled one
+dev-vcs/fossil:debug - Build with fossil debugging enabled
+dev-vcs/fossil:exec-rel-paths - Enable relative paths for external diff/gdiff
+dev-vcs/fossil:fusefs - Disable the Fuse Filesystem
+dev-vcs/fossil:internal-sqlite - Don't use the internal SQLite, use the system one
+dev-vcs/fossil:json - Build with fossil JSON API enabled
+dev-vcs/fossil:miniz - Use miniz from the source tree
+dev-vcs/fossil:mman - Enable use of POSIX memory APIs from "sys/mman.h"
+dev-vcs/fossil:no-opt - Build without optimization
+dev-vcs/fossil:openssl - Look for OpenSSL in the given path, automatically, in the source tree, or none
+dev-vcs/fossil:see - Enable the SQLite Encryption Extension (SEE)
+dev-vcs/fossil:static - Link a static executable
+dev-vcs/fossil:tcl - Enable Tcl integration, with Tcl in the specified path
 dev-vcs/fossil:tcl-private-stubs - Enable Tcl integration via private stubs mechanism
 dev-vcs/fossil:tcl-stubs - Enable Tcl integration via stubs library mechanism
 dev-vcs/fossil:th1-docs - Enable TH1 for embedded documentation pages
 dev-vcs/fossil:th1-hooks - Enable TH1 hooks for commands and web pages
+dev-vcs/fossil:zlib - Look for zlib in the given path, automatically, or in the source tree
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:benchmark - Enable benchmarking
 dev-vcs/git-annex:concurrentoutput - Use concurrent-output library (experimental)

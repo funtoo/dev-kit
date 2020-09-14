@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>senyai@gmail.com</email>
+		<name>Arseniy Terekhin</name>
+	</maintainer>
+	<use>
+	{%- for option in options %}
+		<flag name="{{ option.use }}">{{ option.description }}</flag>
+	{%- endfor %}
+	</use>
+</pkgmetadata>
