@@ -3,12 +3,12 @@ DEPEND=python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.
 DESCRIPTION=Provides a generic and flexible way to access and interact with USB HID devices
 EAPI=5
 HOMEPAGE=http://libhid.alioth.debian.org/
-IUSE=doc python static-libs python_targets_python2_7
+IUSE=doc python static-libs python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) ) virtual/libusb:0
 REQUIRED_USE=python? ( ^^ ( python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://beta.magicaltux.net/libhid-0.2.16.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
 _md5_=d534b038904e58eb63f7376a10c4cf3e

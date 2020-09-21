@@ -3,11 +3,11 @@ DEFINED_PHASES=compile configure install prepare setup test unpack
 DESCRIPTION=GYP (Generate Your Projects) meta-build system
 EAPI=7
 HOMEPAGE=https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp
-IUSE=python_targets_python2_7
+IUSE=python_single_target_python2_7 python_targets_python2_7
 LICENSE=BSD
 PROPERTIES=live
 RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
 REQUIRED_USE=^^ ( python_single_target_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
-_eclasses_=distutils-r1	eb92d1a6d9057e2422cc9610f79f919c	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=distutils-r1	eb92d1a6d9057e2422cc9610f79f919c	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=a81bf2c6267ca55b0103c2123e8d17e6

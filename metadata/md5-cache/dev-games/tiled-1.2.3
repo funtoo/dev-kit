@@ -4,12 +4,12 @@ DEPEND=>=dev-qt/qtcore-5.9:5 >=dev-qt/qtgui-5.9:5 >=dev-qt/qtnetwork-5.9:5 >=dev
 DESCRIPTION=A general purpose tile map editor
 EAPI=7
 HOMEPAGE=https://www.mapeditor.org/
-IUSE=examples python python_targets_python3_7
+IUSE=examples python python_single_target_python3_7 python_targets_python3_7
 KEYWORDS=amd64
 LICENSE=BSD BSD-2 GPL-2+
 RDEPEND=>=dev-qt/qtcore-5.9:5 >=dev-qt/qtgui-5.9:5 >=dev-qt/qtnetwork-5.9:5 >=dev-qt/qtwidgets-5.9:5 sys-libs/zlib python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) )
 REQUIRED_USE=python? ( ^^ ( python_single_target_python3_7 ) )
 SLOT=0
 SRC_URI=https://github.com/bjorn/tiled/archive/v1.2.3/tiled-1.2.3.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=53aee38810ccb0a970b22175493624a7
