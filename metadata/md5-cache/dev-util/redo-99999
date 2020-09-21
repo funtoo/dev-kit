@@ -1,4 +1,4 @@
-BDEPEND=dev-python/beautifulsoup[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_pypy(-),-python_single_target_jython2_7(-),python_single_target_python2_7(+)] dev-python/markdown[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_pypy(-),-python_single_target_jython2_7(-),python_single_target_python2_7(+)] >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-python/beautifulsoup[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] dev-python/markdown[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install setup test unpack
 DESCRIPTION=Smaller, easier, more powerful, and more reliable than make
 EAPI=7
@@ -7,5 +7,5 @@ IUSE=python_targets_python2_7
 LICENSE=LGPL-2
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	8914c9c220fed51dbc06d700c5ce75bc	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=43aacd7b440f62fbd4f4c7db43c8c5cb

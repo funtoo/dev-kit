@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=utils? ( dev-libs/libevent[-mgorny(-)] )
 SLOT=0
 SRC_URI=https://github.com/farsightsec/fstrm/archive/v0.3.0.tar.gz -> fstrm-0.3.0.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=097dd40a01e87c2e47cbfaed658bd30d

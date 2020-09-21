@@ -1,4 +1,4 @@
-BDEPEND=app-text/asciidoc python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+BDEPEND=app-text/asciidoc python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/setuptools-42.0.2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=Semi-official Mercurial bridge from Git project
 EAPI=7
@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( python_targets_python2_7 )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/mnauw/git-remote-hg/archive/v1.0.1.tar.gz -> git-remote-hg-1.0.1.tar.gz
-_eclasses_=distutils-r1	1a001b95d3bfb24277ebc93f461847da	multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	6ae4f9eb4881e5c5489344ee122e05d0	python-utils-r1	8914c9c220fed51dbc06d700c5ce75bc	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=distutils-r1	eb92d1a6d9057e2422cc9610f79f919c	multibuild	b2c915190b051f55a23b9354b9849847	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=39bd20a664e7f74dfe6f642bc6da80eb

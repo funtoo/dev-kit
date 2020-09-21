@@ -2,12 +2,12 @@ DEFINED_PHASES=configure install postinst setup
 DESCRIPTION=Bugzilla subcommand for git
 EAPI=6
 HOMEPAGE=http://www.fishsoup.net/software/git-bz/
-IUSE=python_targets_python2_7 python_targets_pypy python_single_target_python2_7 python_single_target_pypy
+IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-vcs/git python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite] ) python_single_target_pypy? ( >=virtual/pypy-5:0=[sqlite] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_jython2_7(-),python_single_target_python2_7(+)?,python_single_target_pypy(+)?]
-REQUIRED_USE=^^ ( python_single_target_python2_7 python_single_target_pypy ) python_single_target_python2_7? ( python_targets_python2_7 ) python_single_target_pypy? ( python_targets_pypy )
+RDEPEND=dev-vcs/git python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite] >=dev-lang/python-exec-2:=[python_targets_python2_7] )
+REQUIRED_USE=^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~mgorny/dist/git-bz-0.2015.09.08.tar.bz2
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	8914c9c220fed51dbc06d700c5ce75bc	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=c905331c42b7b5b61e16992f2c466505

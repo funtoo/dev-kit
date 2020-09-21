@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=dev-libs/boost:= sys-libs/zlib python? ( python_targets_python3_7? ( dev-lang/python:3.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_python2_7(-),-python_single_target_pypy(-),-python_single_target_jython2_7(-),python_single_target_python3_7(+)] ) spreadsheet-model? ( >=dev-libs/libixion-0.14.0:= ) dev-util/mdds:1.5
+DEPEND=dev-libs/boost:= sys-libs/zlib python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) ) spreadsheet-model? ( >=dev-libs/libixion-0.14.0:= ) dev-util/mdds:1.5
 DESCRIPTION=Standalone file import filter library for spreadsheet documents
 EAPI=7
 HOMEPAGE=https://gitlab.com/orcus/orcus/blob/master/README.md
-IUSE=python +spreadsheet-model static-libs tools python_targets_python3_7
+IUSE=python +spreadsheet-model static-libs tools python_targets_python3_7 python_targets_python3_9 python_targets_python3_8
 KEYWORDS=*
 LICENSE=MIT
-RDEPEND=dev-libs/boost:= sys-libs/zlib python? ( python_targets_python3_7? ( dev-lang/python:3.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_6(-),-python_single_target_python3_5(-),-python_single_target_python2_7(-),-python_single_target_pypy(-),-python_single_target_jython2_7(-),python_single_target_python3_7(+)] ) spreadsheet-model? ( >=dev-libs/libixion-0.14.0:= )
-REQUIRED_USE=python? ( python_targets_python3_7 )
+RDEPEND=dev-libs/boost:= sys-libs/zlib python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) ) spreadsheet-model? ( >=dev-libs/libixion-0.14.0:= )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 ) )
 SLOT=0/0.15
 SRC_URI=https://kohei.us/files/orcus/src/liborcus-0.15.0.tar.xz
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	d93acbd6ef50348b41ff4ead9a020a16	python-utils-r1	8914c9c220fed51dbc06d700c5ce75bc	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=b016ad56e8f44b53bf9b336fca6a610e
