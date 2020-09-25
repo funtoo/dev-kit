@@ -54,7 +54,9 @@ dev-libs/libmacaroons python_single_target_python2_7
 dev-libs/libnatspec python_single_target_python2_7
 dev-libs/libpqxx python_single_target_python2_7
 dev-libs/mongo-c-driver python_single_target_python2_7
+dev-libs/qrosspython python_single_target_python2_7
 dev-libs/redland-bindings python_single_target_python2_7
+dev-libs/tut python_single_target_python2_7
 dev-libs/zziplib python_single_target_python2_7
 dev-ros/actionlib python_single_target_python2_7
 dev-ros/actionlib_msgs python_single_target_python2_7
