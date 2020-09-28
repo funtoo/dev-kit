@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit autotools toolchain-funcs multilib-minimal
+inherit autotools toolchain-funcs
 
 MIN_PV="$(ver_cut 2)"
 
@@ -15,10 +14,6 @@ LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="*"
 IUSE="debug elibc_musl"
-
-MULTILIB_CHOST_TOOLS=(
-	/usr/bin/nspr-config
-)
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.23-prtime.patch
@@ -56,7 +51,7 @@ src_prepare() {
 		"${S}"/nspr/config/rules.mk || die
 }
 
-multilib_src_configure() {
+src_configure() {
 	# We use the standard BUILD_xxx but nspr uses HOST_xxx
 	tc-export_build_env BUILD_CC
 	export HOST_CC=${BUILD_CC} HOST_CFLAGS=${BUILD_CFLAGS} HOST_LDFLAGS=${BUILD_LDFLAGS}
@@ -101,7 +96,7 @@ multilib_src_configure() {
 	econf "${myconf[@]}"
 }
 
-multilib_src_install() {
+src_install() {
 	# Their build system is royally confusing, as usual
 	MINOR_VERSION=${MIN_PV} # Used for .so version
 	emake DESTDIR="${D}" install
