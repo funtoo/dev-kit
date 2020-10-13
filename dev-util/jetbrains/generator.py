@@ -8,10 +8,9 @@ GLOBAL_DEFAULTS = {"cat": "dev-util"}
 async def generate(hub, **pkginfo):
 	jid = pkginfo["jid"]  # jetbrains id
 	name = pkginfo["name"]
-	json_data = await hub.pkgtools.fetch.get_page(
-		f"https://data.services.jetbrains.com/products/releases?code={jid}&latest=true&type=release"
+	data = await hub.pkgtools.fetch.get_page(
+		f"https://data.services.jetbrains.com/products/releases?code={jid}&latest=true&type=release", is_json=True
 	)
-	data = json.loads(json_data)
 	rel = data[jid][0]
 	version = rel["version"]
 	url = rel["downloads"]["linux"]["link"]
