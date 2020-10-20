@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -20,60 +19,68 @@ SRC_URI="https://fastdl.mongodb.org/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0 SSPL-1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="*"
 IUSE="debug kerberos libressl lto mms-agent ssl test +tools"
 
 RDEPEND=">=app-arch/snappy-1.1.3
-	>=dev-cpp/yaml-cpp-0.5.3:=
-	>=dev-libs/boost-1.60:=[threads(+)]
-	>=dev-libs/libpcre-8.41[cxx]
-	dev-libs/snowball-stemmer
-	net-libs/libpcap
-	>=sys-libs/zlib-1.2.8:=
-	kerberos? ( dev-libs/cyrus-sasl[kerberos] )
-	mms-agent? ( app-admin/mms-agent )
-	ssl? (
-		!libressl? ( >=dev-libs/openssl-1.0.1g:0= )
-		libressl? ( dev-libs/libressl:0= )
-	)"
+        >=dev-cpp/yaml-cpp-0.5.3:=
+        >=dev-libs/boost-1.60:=[threads(+)]
+        >=dev-libs/libpcre-8.41[cxx]
+        dev-libs/snowball-stemmer
+        net-libs/libpcap
+        >=sys-libs/zlib-1.2.11:=
+        kerberos? ( dev-libs/cyrus-sasl[kerberos] )
+        mms-agent? ( app-admin/mms-agent )
+        ssl? (
+                !libressl? ( >=dev-libs/openssl-1.0.1g:0= )
+                libressl? ( dev-libs/libressl:0= )
+        )"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
-	dev-python/cheetah[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	virtual/python-typing[${PYTHON_USEDEP}]
-	sys-libs/ncurses:0=
-	sys-libs/readline:0=
-	debug? ( dev-util/valgrind )
-	test? (
-		dev-python/pymongo[${PYTHON_USEDEP}]
-	)"
+        ${PYTHON_DEPS}
+        dev-python/cheetah[${PYTHON_USEDEP}]
+        dev-python/pyyaml[${PYTHON_USEDEP}]
+        virtual/python-typing[${PYTHON_USEDEP}]
+        sys-libs/ncurses:0=
+        sys-libs/readline:0=
+        debug? ( dev-util/valgrind )
+        test? (
+                dev-python/pymongo[${PYTHON_USEDEP}]
+        )"
 PDEPEND="tools? ( >=app-admin/mongo-tools-${PV} )"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-3.4.7-no-boost-check.patch"
 	"${FILESDIR}/${PN}-3.6.1-fix-scons.patch"
-	"${FILESDIR}/${PN}-3.6.1-no-compass.patch"
+	"${FILESDIR}/${PN}-4.0.0-no-compass.patch"
+	"${FILESDIR}/${PN}-4.0.12-boost-1.71-cxxabi-include.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_pretend() {
 	if [[ -n ${REPLACING_VERSIONS} ]]; then
-		if ver_test "$REPLACING_VERSIONS" -lt 3.4; then
-			ewarn "To upgrade from a version earlier than the 3.4-series, you must"
+		if ver_test "$REPLACING_VERSIONS" -lt 3.6; then
+			ewarn "To upgrade from a version earlier than the 3.6-series, you must"
 			ewarn "successively upgrade major releases until you have upgraded"
-			ewarn "to 3.4-series. Then upgrade to 3.6 series."
+			ewarn "to 3.6-series. Then upgrade to 4.0 series."
 		else
-			ewarn "Be sure to set featureCompatibilityVersion to 3.4 before upgrading."
+			ewarn "Be sure to set featureCompatibilityVersion to 3.6 before upgrading."
 		fi
 	fi
 }
 
 pkg_setup() {
-	enewgroup mongodb
-	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
+        enewgroup mongodb
+        enewuser mongodb -1 -1 /var/lib/${PN} mongodb
+	if use test; then
+		has_version "dev-python/pymongo[${PYTHON_USEDEP}]" ||
+			return 1
+	fi
 
-	python-single-r1_pkg_setup
+        python-single-r1_pkg_setup
+	has_version ">=dev-util/scons-2.5.0[${PYTHON_USEDEP}]" &&
+	has_version "dev-python/cheetah[${PYTHON_USEDEP}]" &&
+	has_version "dev-python/pyyaml[${PYTHON_USEDEP}]" &&
+	has_version "dev-python/typing[${PYTHON_USEDEP}]"
 }
 
 src_prepare() {
@@ -162,3 +169,4 @@ pkg_postinst() {
 	ewarn "  https://docs.mongodb.com/manual/release-notes/$(ver_cut 1-2)/"
 	ewarn "  https://docs.mongodb.com/manual/release-notes/$(ver_cut 1-2)/#upgrade-procedures"
 }
+
