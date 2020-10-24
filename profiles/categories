@@ -1,4 +1,5 @@
 app-admin
+app-misc
 dev-cpp
 dev-db
 dev-embedded
@@ -8,4 +9,5 @@ dev-python
 dev-ros
 dev-util
 dev-vcs
+sys-apps
 virtual
