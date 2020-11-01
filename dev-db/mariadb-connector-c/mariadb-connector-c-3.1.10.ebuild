@@ -1,19 +1,13 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 VCS_INHERIT=""
-if [[ "${PV}" == 9999 ]] ; then
-	VCS_INHERIT="git-r3"
-	EGIT_REPO_URI="https://github.com/MariaDB/mariadb-connector-c.git"
-else
-	MY_PN=${PN#mariadb-}
-	MY_PV=${PV/_b/-b}
-	SRC_URI="https://downloads.mariadb.org/f/${MY_PN}-${PV%_beta}/${PN}-${MY_PV}-src.tar.gz?serve -> ${P}-src.tar.gz"
-	S="${WORKDIR%/}/${PN}-${MY_PV}-src"
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
-fi
+MY_PN=${PN#mariadb-}
+MY_PV=${PV/_b/-b}
+SRC_URI="https://downloads.mariadb.org/f/${MY_PN}-${PV%_beta}/${PN}-${MY_PV}-src.tar.gz?serve -> ${P}-src.tar.gz"
+S="${WORKDIR%/}/${PN}-${MY_PV}-src"
+KEYWORDS="*"
 
 inherit cmake-utils multilib-minimal toolchain-funcs ${VCS_INHERIT}
 
@@ -33,8 +27,6 @@ IUSE="+curl gnutls kerberos libressl +ssl static-libs test"
 DEPEND="sys-libs/zlib:=[${MULTILIB_USEDEP}]
 	virtual/libiconv:=[${MULTILIB_USEDEP}]
 	curl? ( net-misc/curl:0=[${MULTILIB_USEDEP}] )
-	kerberos? ( || ( app-crypt/mit-krb5[${MULTILIB_USEDEP}]
-			app-crypt/heimdal[${MULTILIB_USEDEP}] ) )
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-3.3.24:0=[${MULTILIB_USEDEP}] )
 		!gnutls? (
@@ -46,7 +38,7 @@ DEPEND="sys-libs/zlib:=[${MULTILIB_USEDEP}]
 RDEPEND="${DEPEND}"
 PATCHES=(
 	"${FILESDIR}"/gentoo-layout-3.0.patch
-	"${FILESDIR}"/${PN}-3.0.8-fix-pkconfig-file.patch
+	"${FILESDIR}"/${PN}-3.1.3-fix-pkconfig-file.patch
 )
 
 src_configure() {
@@ -60,7 +52,6 @@ multilib_src_configure() {
 		-DWITH_EXTERNAL_ZLIB=ON
 		-DWITH_SSL:STRING=$(usex ssl $(usex gnutls GNUTLS OPENSSL) OFF)
 		-DWITH_CURL=$(usex curl ON OFF)
-		-DCLIENT_PLUGIN_AUTH_GSSAPI_CLIENT:STRING=$(usex kerberos DYNAMIC OFF)
 		-DMARIADB_UNIX_ADDR="${EPREFIX%/}/var/run/mysqld/mysqld.sock"
 		-DINSTALL_LIBDIR="$(get_libdir)"
 		-DINSTALL_PCDIR="$(get_libdir)/pkgconfig"

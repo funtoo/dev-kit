@@ -1,6 +1,6 @@
 --- a/mariadb_config/libmariadb.pc.in
 +++ b/mariadb_config/libmariadb.pc.in
-@@ -7,13 +7,12 @@
+@@ -7,14 +7,13 @@
  #
  
  prefix=@CMAKE_INSTALL_PREFIX@
@@ -14,8 +14,8 @@
 +URL: https://mariadb.com/kb/en/library/mariadb-connector-c/
  Description: MariaDB Connector/C dynamic library
 -Cflags: -I${includedir}
--Libs: -L${libdir} -lmariadb @extra_dynamic_LDFLAGS@
--
--
 +Cflags: -I${includedir}/mariadb
-+Libs: -L${libdir} -lmariadb
+ Libs: -L${libdir} -lmariadb
+ Libs.private: @extra_dynamic_LDFLAGS@
+-
+-
