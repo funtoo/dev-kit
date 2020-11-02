@@ -1,20 +1,14 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit bash-completion-r1
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/jonas/tig.git"
-	inherit git-r3 autotools
-else
-	SRC_URI="https://github.com/jonas/tig/releases/download/${P}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-fi
+HOMEPAGE="https://jonas.github.io/tig/"
+SRC_URI="https://github.com/jonas/tig/releases/download/tig-2.5.1/tig-2.5.1.tar.gz -> tig-2.5.1.tar.gz"
+KEYWORDS="*"
 
 DESCRIPTION="text mode interface for git"
-HOMEPAGE="https://jonas.github.io/tig/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,14 +20,12 @@ DEPEND="
 	sys-libs/readline:0="
 RDEPEND="${DEPEND}
 	dev-vcs/git"
-[[ ${PV} == "9999" ]] && DEPEND+=" app-text/asciidoc app-text/xmlto"
 
 # encoding/env issues
 RESTRICT="test"
 
 src_prepare() {
 	default
-	[[ ${PV} == "9999" ]] && eautoreconf
 }
 
 src_configure() {
@@ -42,7 +34,6 @@ src_configure() {
 
 src_compile() {
 	emake V=1
-	[[ ${PV} == "9999" ]] && emake V=1 doc-man doc-html
 }
 
 src_test() {
