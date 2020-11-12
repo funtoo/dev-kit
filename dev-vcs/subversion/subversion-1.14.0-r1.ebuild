@@ -10,9 +10,14 @@ GENTOO_DEPEND_ON_PERL="no"
 
 inherit autotools bash-completion-r1 db-use depend.apache flag-o-matic java-pkg-opt-2 libtool perl-module python-any-r1 ruby-single toolchain-funcs xdg-utils
 
+MY_P="${P/_/-}"
+
 DESCRIPTION="Advanced version control system"
 HOMEPAGE="https://subversion.apache.org/"
-SRC_URI="mirror://apache/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://apache/${PN}/${MY_P}.tar.bz2
+	https://dev.gentoo.org/~polynomial-c/${PN}-1.10.0_rc1-patches-1.tar.xz"
+S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="Apache-2.0 BSD MIT BSD-2 FSFAP unicode"
 SLOT="0"
@@ -104,14 +109,6 @@ pkg_setup() {
 
 	depend.apache_pkg_setup
 
-	if use apache2 ; then
-		enewgroup apache 81
-		enewuser apache 81 -1 /var/www apache
-	else
-		enewgroup svnusers
-		enewuser svn -1 -1 -1 svnusers
-	fi
-
 	java-pkg-opt-2_pkg_setup
 
 	# https://issues.apache.org/jira/browse/SVN-4813#comment-16813739
@@ -141,7 +138,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	eapply "${FILESDIR}/patches"
+	# https://bugs.gentoo.org/721300
+	rm "${WORKDIR}"/patches/subversion-1.10.0_rc1-utf8proc_include.patch || die
+
+	eapply "${WORKDIR}/patches"
 	eapply_user
 
 	chmod +x build/transform_libtool_scripts.sh || die
