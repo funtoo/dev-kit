@@ -28,7 +28,6 @@ cc-1.0.60
 cfg-if-0.1.10
 chrono-0.4.19
 clap-2.33.3
-clircle-0.1.3
 console-0.13.0
 constant_time_eq-0.1.5
 content_inspector-0.2.4
@@ -57,9 +56,9 @@ fnv-1.0.7
 fuchsia-cprng-0.1.1
 generic-array-0.12.3
 getrandom-0.1.15
-git2-0.13.11
+git2-0.13.12
 glob-0.3.0
-globset-0.4.5
+globset-0.4.6
 hashbrown-0.9.1
 hermit-abi-0.1.16
 idna-0.2.0
@@ -68,8 +67,8 @@ itoa-0.4.6
 jobserver-0.1.21
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.80
-libgit2-sys-0.12.13+1.0.1
+libc-0.2.78
+libgit2-sys-0.12.14+1.1.0
 libz-sys-1.1.2
 line-wrap-0.1.1
 linked-hash-map-0.5.3
@@ -78,7 +77,6 @@ maplit-1.0.2
 matches-0.1.8
 memchr-2.3.3
 miniz_oxide-0.4.2
-nix-0.19.0
 normalize-line-endings-0.3.0
 num-integer-0.1.43
 num-traits-0.2.12
@@ -116,7 +114,7 @@ semver-parser-0.10.0
 serde-1.0.117
 serde_derive-1.0.117
 serde_json-1.0.58
-serde_yaml-0.8.13
+serde_yaml-0.8.14
 sha-1-0.8.2
 shell-words-1.0.0
 std_prelude-0.2.12
@@ -156,7 +154,7 @@ inherit cargo
 
 DESCRIPTION="A cat(1) clone with wings"
 HOMEPAGE="https://github.com/sharkdp/bat"
-SRC_URI="https://api.github.com/repos/sharkdp/bat/tarball/v0.17.0 -> bat-0.17.0.tar.gz
+SRC_URI="https://api.github.com/repos/sharkdp/bat/tarball/v0.17.1 -> bat-0.17.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
