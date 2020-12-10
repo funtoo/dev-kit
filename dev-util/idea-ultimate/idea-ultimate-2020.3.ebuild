@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="*"
 IUSE="+system-java +sysctl"
 
+DEPEND="dev-util/patchelf"
 RDEPEND="
 	system-java? ( virtual/jre )
 	dev-libs/libdbusmenu
@@ -37,6 +38,8 @@ post_src_unpack() {
 }
 
 src_install() {
+	patchelf --set-rpath '$ORIGIN' jbr/lib/jcef_helper jbr/lib/libjcef.so
+
 	local dir="/opt/${PN}"
 	local dst="${D}${dir}"
 
