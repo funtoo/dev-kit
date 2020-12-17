@@ -37,7 +37,7 @@ src_install() {
 
 	newbashcomp "${T}"/shell_completions/fd.bash fd
 	insinto /usr/share/zsh/site-functions
-	doins "${T}"/shell_completions/_fd
+	doins "${S}"/contrib/completion/_fd
 	insinto /usr/share/fish/vendor_completions.d
 	doins "${T}"/shell_completions/fd.fish
 	dodoc README.md
