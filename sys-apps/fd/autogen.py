@@ -42,7 +42,10 @@ async def generate(hub, **pkginfo):
 		crates=artifacts["crates"],
 		github_user=github_user,
 		github_repo=github_repo,
-		artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name), *artifacts["crates_artifacts"],],
+		artifacts=[
+			hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name),
+			*artifacts["crates_artifacts"],
+		],
 	)
 	ebuild.push()
 

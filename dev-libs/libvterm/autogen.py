@@ -6,9 +6,7 @@ from bs4 import BeautifulSoup
 
 async def generate(hub, **pkginfo):
 	name = pkginfo["name"]
-	homepage_data = await hub.pkgtools.fetch.get_page(
-		"http://www.leonerd.org.uk/code/libvterm/"
-	)
+	homepage_data = await hub.pkgtools.fetch.get_page("http://www.leonerd.org.uk/code/libvterm/")
 	homepage_soup = BeautifulSoup(homepage_data, "html.parser")
 	name_pattern = re.compile(f"({name}-(.*)\\.tar\\.gz)")
 	for link in homepage_soup.find_all("a", href=True):
@@ -23,10 +21,6 @@ async def generate(hub, **pkginfo):
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
 		**pkginfo,
 		version=version,
-		artifacts=[
-			hub.pkgtools.ebuild.Artifact(
-				url=f"http://www.leonerd.org.uk/code/libvterm/{filename}"
-			)
-		],
+		artifacts=[hub.pkgtools.ebuild.Artifact(url=f"http://www.leonerd.org.uk/code/libvterm/{filename}")],
 	)
 	ebuild.push()
