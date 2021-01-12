@@ -1,25 +1,26 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+
+inherit flag-o-matic
 
 MY_PN="lib${PN}"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A complete Spatial DBMS in a nutshell built upon sqlite"
 HOMEPAGE="https://www.gaia-gis.it/gaia-sins/"
-SRC_URI="https://www.gaia-gis.it/gaia-sins/${MY_PN}-sources/${MY_P}.tar.gz"
+SRC_URI=http://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-5.0.0.tar.gz
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 x86"
+KEYWORDS="*"
 IUSE="+geos iconv +proj test +xls +xml"
 
 RDEPEND="
 	>=dev-db/sqlite-3.7.5:3[extensions(+)]
 	sys-libs/zlib
 	geos? ( >=sci-libs/geos-3.4 )
-	proj? ( sci-libs/proj )
+	proj? ( sci-libs/proj:= )
 	xls? ( dev-libs/freexl )
 	xml? ( dev-libs/libxml2 )
 "
