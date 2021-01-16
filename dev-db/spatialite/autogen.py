@@ -2,6 +2,7 @@
 
 import re
 
+
 async def generate(hub, **pkginfo):
 	spatialite_sources = "http://www.gaia-gis.it/gaia-sins/libspatialite-sources"
 	html_data = await hub.pkgtools.fetch.get_page(spatialite_sources)
