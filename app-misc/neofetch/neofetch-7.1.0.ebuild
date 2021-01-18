@@ -1,15 +1,9 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-if [[ ${PV} != *9999* ]]; then
-	SRC_URI="https://github.com/dylanaraps/${PN}/archive/${PV}/${P}.tar.gz"
-	KEYWORDS="amd64 ~mips x86 ~amd64-fbsd"
-else
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/dylanaraps/neofetch.git"
-fi
+SRC_URI="https://github.com/dylanaraps/neofetch/archive/7.1.0/neofetch-7.1.0.tar.gz"
+KEYWORDS="*"
 
 DESCRIPTION="Simple information system script"
 HOMEPAGE="https://github.com/dylanaraps/neofetch"
