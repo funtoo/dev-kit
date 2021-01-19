@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 aho-corasick-0.7.15
 ansi_term-0.11.0
-anyhow-1.0.37
+anyhow-1.0.38
 arrayref-0.3.6
 arrayvec-0.5.2
 atty-0.2.14
@@ -29,15 +29,15 @@ env_logger-0.8.2
 fuchsia-cprng-0.1.1
 getrandom-0.1.16
 glob-0.3.0
-goblin-0.3.0
+goblin-0.3.1
 heck-0.3.2
-hermit-abi-0.1.17
+hermit-abi-0.1.18
 hexplay-0.2.1
-humantime-2.0.1
+humantime-2.1.0
 itoa-0.4.7
 lazy_static-1.4.0
 libc-0.2.82
-log-0.4.11
+log-0.4.13
 memchr-2.3.4
 memrange-0.1.3
 metagoblin-0.4.0
@@ -63,7 +63,7 @@ rustc-serialize-0.3.24
 ryu-1.0.5
 scroll-0.10.2
 scroll_derive-0.10.4
-serde-1.0.118
+serde-1.0.119
 strsim-0.8.0
 structopt-0.3.21
 structopt-derive-0.4.14
@@ -93,7 +93,7 @@ inherit cargo
 
 DESCRIPTION="Binary file analysis tool"
 HOMEPAGE="https://github.com/m4b/bingrep"
-SRC_URI="https://api.github.com/repos/m4b/bingrep/tarball/v0.8.4 -> bingrep-0.8.4.tar.gz
+SRC_URI="https://api.github.com/repos/m4b/bingrep/tarball/v0.8.5 -> bingrep-0.8.5.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
