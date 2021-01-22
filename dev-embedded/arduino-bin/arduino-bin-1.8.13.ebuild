@@ -15,9 +15,11 @@ ARD_PF="${ARD_PN}-${PVR}"
 
 DESCRIPTION="AVR development board IDE and built-in libraries"
 HOMEPAGE="http://arduino.cc/en/Main/Software"
-SRC_URI="${SRC_URI}
-	amd64? ( http://www.arduino.cc/download.php?f=/arduino-${PV}-linux64.tar.xz -> ${PN}_amd64-${PV}.tar.xz )
-	x86?   ( http://www.arduino.cc/download.php?f=/arduino-${PV}-linux32.tar.xz -> ${PN}_i386-${PV}.tar.xz )"
+SRC_URI="
+	amd64? ( http://www.arduino.cc/download.php?f=/arduino-1.8.13-linux64.tar.xz -> arduino-bin_amd64-1.8.13.tar.xz )
+
+	x86? ( http://www.arduino.cc/download.php?f=/arduino-1.8.13-linux32.tar.xz -> arduino-bin_i386-1.8.13.tar.xz )
+"
 
 RESTRICT="strip mirror test"
 
@@ -25,7 +27,7 @@ QA_PREBUILT="opt/arduino/*"
 
 DEPEND="app-arch/xz-utils"
 RDEPEND="${DEPEND}
-	sys-libs/ncurses:5/5[tinfo]
+	sys-libs/ncurses[tinfo]
 	virtual/libusb:0
 	virtual/libusb:1
 	virtual/udev
