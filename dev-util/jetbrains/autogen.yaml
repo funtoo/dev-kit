@@ -24,7 +24,7 @@ jetbrains_rule:
         jid: IIC
         srcdir: idea-IC
     - idea-ultimate:
-        fullname: IntellJ IDEA Ultimate
+        fullname: IntelliJ IDEA Ultimate
         description: a Java IDE by JetBrains (Ultimate Edition)
         license: JetBrains
         homepage: https://www.jetbrains.com/idea
