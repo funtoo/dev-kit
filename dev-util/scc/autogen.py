@@ -5,20 +5,12 @@ from packaging import version
 
 
 def get_release(release_data):
-	releases = list(
-		filter(lambda x: x["prerelease"] is False and x["draft"] is False, release_data)
-	)
-	return (
-		None
-		if not releases
-		else sorted(releases, key=lambda x: version.parse(x["tag_name"])).pop()
-	)
+	releases = list(filter(lambda x: x["prerelease"] is False and x["draft"] is False, release_data))
+	return None if not releases else sorted(releases, key=lambda x: version.parse(x["tag_name"])).pop()
 
 
 async def get_gosum_artifacts(hub, github_user, github_repo, version):
-	gosum_raw = await hub.pkgtools.fetch.get_page(
-		f"https://github.com/{github_user}/{github_repo}/raw/{version}/go.sum"
-	)
+	gosum_raw = await hub.pkgtools.fetch.get_page(f"https://github.com/{github_user}/{github_repo}/raw/{version}/go.sum")
 	gosum_lines = gosum_raw.split("\n")
 	gosum = ""
 	gosum_artifacts = []
@@ -35,9 +27,7 @@ async def get_gosum_artifacts(hub, github_user, github_repo, version):
 		module_uri = module_path + "/@v/" + module_ver[0] + "." + module_ext
 		module_file = re.sub("/", "%2F", module_uri)
 		gosum_artifacts.append(
-			hub.pkgtools.ebuild.Artifact(
-				url="https://proxy.golang.org/" + module_uri, final_name=module_file
-			)
+			hub.pkgtools.ebuild.Artifact(url="https://proxy.golang.org/" + module_uri, final_name=module_file)
 		)
 	return dict(gosum=gosum, gosum_artifacts=gosum_artifacts)
 
@@ -45,9 +35,7 @@ async def get_gosum_artifacts(hub, github_user, github_repo, version):
 async def generate(hub, **pkginfo):
 	user = "boyter"
 	repo = pkginfo["name"]
-	json_dict = await hub.pkgtools.fetch.get_page(
-		f"https://api.github.com/repos/{user}/{repo}/releases", is_json=True
-	)
+	json_dict = await hub.pkgtools.fetch.get_page(f"https://api.github.com/repos/{user}/{repo}/releases", is_json=True)
 	latest_release = get_release(json_dict)
 	if latest_release is None:
 		raise hub.pkgtools.ebuild.BreezyError(f"Can't find a suitable release of {repo}")
@@ -58,9 +46,7 @@ async def generate(hub, **pkginfo):
 		version=version.lstrip("v"),
 		gosum=artifacts["gosum"],
 		artifacts=[
-			hub.pkgtools.ebuild.Artifact(
-				url=f"https://github.com/{user}/{repo}/archive/{version}.tar.gz"
-			),
+			hub.pkgtools.ebuild.Artifact(url=f"https://github.com/{user}/{repo}/archive/{version}.tar.gz"),
 			*artifacts["gosum_artifacts"],
 		],
 	)
