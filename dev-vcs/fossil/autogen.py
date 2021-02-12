@@ -56,7 +56,7 @@ async def generate(hub, **pkginfo):
 	with auto_def_path.open() as f:
 		auto_def_data = f.read()
 	options = list(get_options_from_autodef(auto_def_data))
-
+	artifact.cleanup()
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
 		**pkginfo,
 		version=version,
