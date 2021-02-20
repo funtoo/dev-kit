@@ -27,13 +27,11 @@ async def generate_ebuild(hub, rss_url, war_url, **pkginfo):
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(**pkginfo, version=version, artifacts=[src_artifact])
 	ebuild.push()
 
+
 async def generate(hub, **pkginfo):
 
 	await generate_ebuild(
-		hub,
-		rss_url="https://www.jenkins.io/changelog/rss.xml",
-		war_url="https://get.jenkins.io/war/",
-		**pkginfo
+		hub, rss_url="https://www.jenkins.io/changelog/rss.xml", war_url="https://get.jenkins.io/war/", **pkginfo
 	)
 
 	pkginfo["name"] = "jenkins-lts-bin"
@@ -41,7 +39,8 @@ async def generate(hub, **pkginfo):
 		hub,
 		rss_url="https://www.jenkins.io/changelog-stable/rss.xml",
 		war_url="https://get.jenkins.io/war-stable/",
-		**pkginfo
+		**pkginfo,
 	)
+
 
 # vim: ts=4 sw=4 noet
