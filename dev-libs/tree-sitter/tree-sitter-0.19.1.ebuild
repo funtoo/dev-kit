@@ -5,7 +5,7 @@ EAPI=7
 DESCRIPTION="Tree-sitter is a parser generator tool and an incremental parsing library."
 HOMEPAGE="https://github.com/tree-sitter/tree-sitter"
 
-SRC_URI="https://github.com/tree-sitter/tree-sitter/archive/v0.19.0.tar.gz"
+SRC_URI="https://github.com/tree-sitter/tree-sitter/archive/v0.19.1.tar.gz"
 KEYWORDS="*"
 
 LICENSE="MIT"
