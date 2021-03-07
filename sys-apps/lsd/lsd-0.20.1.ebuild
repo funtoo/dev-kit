@@ -17,8 +17,9 @@ bitflags-1.2.1
 blake2b_simd-0.5.10
 bstr-0.2.13
 cfg-if-0.1.10
+cfg-if-1.0.0
 chrono-0.4.15
-chrono-humanize-0.0.11
+chrono-humanize-0.1.1
 clap-2.33.3
 constant_time_eq-0.1.5
 crossbeam-utils-0.7.2
@@ -36,15 +37,19 @@ globwalk-0.7.3
 hermit-abi-0.1.16
 human-sort-0.2.2
 ignore-0.4.16
+instant-0.1.9
 lazy_static-1.4.0
 libc-0.2.77
 linked-hash-map-0.5.3
+lock_api-0.4.2
 log-0.4.11
 lscolors-0.7.1
 memchr-2.3.3
 normalize-line-endings-0.3.0
 num-integer-0.1.43
 num-traits-0.2.12
+parking_lot-0.11.1
+parking_lot_core-0.8.2
 ppv-lite86-0.2.9
 predicates-1.0.5
 predicates-core-1.0.0
@@ -62,9 +67,13 @@ regex-syntax-0.6.18
 remove_dir_all-0.5.3
 rust-argon2-0.8.2
 same-file-1.0.6
+scopeguard-1.1.0
 serde-1.0.117
 serde_derive-1.0.117
 serde_yaml-0.8.13
+serial_test-0.5.1
+serial_test_derive-0.5.1
+smallvec-1.6.1
 strsim-0.8.0
 syn-1.0.48
 tempfile-3.1.0
@@ -97,7 +106,7 @@ inherit cargo
 
 DESCRIPTION="A modern ls with a lot of pretty colors and awesome icons"
 HOMEPAGE="https://github.com/Peltoche/lsd"
-SRC_URI="https://api.github.com/repos/Peltoche/lsd/tarball/0.19.0 -> lsd-0.19.0.tar.gz
+SRC_URI="https://api.github.com/repos/Peltoche/lsd/tarball/0.20.1 -> lsd-0.20.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
