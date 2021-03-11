@@ -12,10 +12,10 @@ async def generate(hub, **pkginfo):
 	latest_release = get_release(release_data)
 	if latest_release is None:
 		raise hub.pkgtools.ebuild.BreezyError(f"Can't find a suitable release of {name}")
-	version = latest_release["tag_name"]
+	version = latest_release["tag_name"].lstrip("v")
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
 		**pkginfo,
-		version=version.lstrip("v"),
-		artifacts=[hub.pkgtools.ebuild.Artifact(url=f"https://github.com/{name}/{name}/archive/{version}.tar.gz",final_name=f"{name}-{version}.tar.gz")],
+		version=version,
+		artifacts=[hub.pkgtools.ebuild.Artifact(url=f"https://github.com/{name}/{name}/archive/v{version}.tar.gz",final_name=f"{name}-{version}.tar.gz")],
 	)
 	ebuild.push()
