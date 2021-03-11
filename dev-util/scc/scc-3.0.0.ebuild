@@ -45,7 +45,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/boyter/scc/archive/v3.0.0.tar.gz
+SRC_URI="https://github.com/boyter/scc/archive/v3.0.0.tar.gz -> scc-v3.0.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="A tool similar to cloc, sloccount and tokei"
