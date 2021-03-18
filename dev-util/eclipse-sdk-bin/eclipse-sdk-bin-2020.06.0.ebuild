@@ -16,7 +16,7 @@ fi
 
 DESCRIPTION="Eclipse SDK"
 HOMEPAGE="http://www.eclipse.org"
-SRC_URI="http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64.tar.gz -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${PV}.tar.gz"
+SRC_URI="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${PV}.tar.gz"
 
 LICENSE="EPL-1.0"
 SLOT="$(get_version_component_range 1-2)"
