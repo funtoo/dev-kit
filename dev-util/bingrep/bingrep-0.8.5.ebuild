@@ -93,7 +93,7 @@ inherit cargo
 
 DESCRIPTION="Binary file analysis tool"
 HOMEPAGE="https://github.com/m4b/bingrep"
-SRC_URI="https://api.github.com/repos/m4b/bingrep/tarball/v0.8.5 -> bingrep-0.8.5.tar.gz
+SRC_URI="https://api.github.com/repos/m4b/bingrep/tarball/refs/tags/v0.8.5 -> bingrep-0.8.5.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
