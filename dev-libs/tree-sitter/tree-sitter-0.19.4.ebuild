@@ -15,6 +15,11 @@ PATCHES=(
 	"${FILESDIR}/${PN}-no-static-libs.patch"
 )
 
+src_unpack() {
+	unpack "${A}"
+	mv "${WORKDIR}"/tree-sitter-tree-sitter-* "${S}" || die
+}
+
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" LIBDIR="${EPREFIX}/usr/lib64" install
 }
