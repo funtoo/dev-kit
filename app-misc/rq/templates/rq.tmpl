@@ -1,0 +1,32 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+CRATES="
+{{crates}}"
+
+inherit cargo
+
+DESCRIPTION="A tool for doing record analysis and transformation"
+HOMEPAGE="https://github.com/dflemstr/rq"
+SRC_URI="{{artifacts[0].src_uri}}
+	$(cargo_crate_uris ${CRATES})"
+LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 BSD BSD-2 CC0-1.0 GPL-2-with-linking-exception ISC LGPL-2+ MIT PCRE unicode Unlicense ZLIB"
+SLOT="0"
+KEYWORDS="*"
+IUSE=""
+
+DEPEND="${RUST_DEPEND}"
+RDEPEND="!dev-python/rq"
+
+src_unpack() {
+	cargo_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
+
+src_install() {
+	cargo_src_install
+	dodoc -r {doc,{README,CONTRIBUTING}.md}
+}
+
