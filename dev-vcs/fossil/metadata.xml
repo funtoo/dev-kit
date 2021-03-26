@@ -17,6 +17,7 @@
 		<flag name="tcl-private-stubs">Enable Tcl integration via private stubs mechanism</flag>
 		<flag name="mman">Enable use of POSIX memory APIs from "sys/mman.h"</flag>
 		<flag name="see">Enable the SQLite Encryption Extension (SEE)</flag>
+		<flag name="print-minimum-sqlite-version">print the minimum SQLite version number required, and exit</flag>
 		<flag name="internal-sqlite">Don't use the internal SQLite, use the system one</flag>
 		<flag name="static">Link a static executable</flag>
 		<flag name="fusefs">Disable the Fuse Filesystem</flag>

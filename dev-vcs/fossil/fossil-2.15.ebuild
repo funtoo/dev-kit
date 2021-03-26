@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Simple, high-reliability, source control management, and more"
 HOMEPAGE="http://www.fossil-scm.org/"
-SRC_URI="http://www.fossil-scm.org/index.html/uv/fossil-src-2.14.tar.gz"
+SRC_URI="http://www.fossil-scm.org/index.html/uv/fossil-src-2.15.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -22,6 +22,7 @@ IUSE="+openssl \
 -tcl-private-stubs \
 -mman \
 -see \
+-print-minimum-sqlite-version \
 +internal-sqlite \
 -static \
 +fusefs \
@@ -59,6 +60,7 @@ $(usex zlib "--with-zlib=1" "") \
 --with-tcl-private-stubs=$(usex tcl-private-stubs 1 0) \
 --with-mman=$(usex mman 1 0) \
 --with-see=$(usex see 1 0) \
+--print-minimum-sqlite-version=$(usex print-minimum-sqlite-version 1 0) \
 --internal-sqlite=$(usex internal-sqlite 1 0) \
 --static=$(usex static 1 0) \
 --fusefs=$(usex fusefs 1 0) \

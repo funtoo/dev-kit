@@ -7,7 +7,7 @@ inherit go-module
 DESCRIPTION="Command line extension and specification for managing large files with git"
 HOMEPAGE="https://git-lfs.github.com/"
 
-SRC_URI="https://github.com/git-lfs/git-lfs/archive/v2.13.2.tar.gz -> git-lfs-2.13.2.tar.gz"
+SRC_URI="https://github.com/git-lfs/git-lfs/archive/v2.13.3.tar.gz -> git-lfs-2.13.3.tar.gz"
 KEYWORDS="*"
 
 LICENSE="Apache-2.0 BSD BSD-2 BSD-4 ISC MIT"
