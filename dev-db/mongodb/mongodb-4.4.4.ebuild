@@ -1,79 +1,94 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python3+ )
 
-SCONS_MIN_VERSION="2.5.0"
+SCONS_MIN_VERSION="3.3.1"
 CHECKREQS_DISK_BUILD="2400M"
 CHECKREQS_DISK_USR="512M"
 CHECKREQS_MEMORY="1024M"
 
-inherit check-reqs flag-o-matic multiprocessing pax-utils python-single-r1 scons-utils systemd toolchain-funcs user
-
-MY_P=${PN}-src-r${PV/_rc/-rc}
+inherit check-reqs flag-o-matic multiprocessing pax-utils python-any-r1 scons-utils toolchain-funcs user
 
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="https://www.mongodb.com"
-SRC_URI="https://fastdl.mongodb.org/src/${MY_P}.tar.gz"
+SRC_URI="https://api.github.com/repos/mongodb/mongo/tarball/refs/tags/r4.4.4 -> mongodb-4.4.4.tar.gz"
 
 LICENSE="Apache-2.0 SSPL-1"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="debug kerberos libressl lto mms-agent ssl test +tools"
+KEYWORDS="*"
+IUSE="debug kerberos libressl lto ssl test +tools"
+RESTRICT="!test? ( test )"
 
-RDEPEND=">=app-arch/snappy-1.1.3
-	>=dev-cpp/yaml-cpp-0.5.3:=
-	>=dev-libs/boost-1.60:=[threads(+)]
-	>=dev-libs/libpcre-8.41[cxx]
+RDEPEND="
+	>=app-arch/snappy-1.1.3
+	>=dev-cpp/yaml-cpp-0.6.2:=
+	>=dev-libs/boost-1.70:=[threads(+),nls]
+	>=dev-libs/libpcre-8.42[cxx]
+	app-arch/zstd
 	dev-libs/snowball-stemmer
 	net-libs/libpcap
-	>=sys-libs/zlib-1.2.8:=
+	>=sys-libs/zlib-1.2.11:=
 	kerberos? ( dev-libs/cyrus-sasl[kerberos] )
-	mms-agent? ( app-admin/mms-agent )
 	ssl? (
 		!libressl? ( >=dev-libs/openssl-1.0.1g:0= )
 		libressl? ( dev-libs/libressl:0= )
 	)"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	dev-python/cheetah[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	virtual/python-typing[${PYTHON_USEDEP}]
+	$(python_gen_any_dep '
+		test? ( dev-python/pymongo[${PYTHON_USEDEP}] dev-python/requests[${PYTHON_USEDEP}] )
+		>=dev-util/scons-3.1.1[${PYTHON_USEDEP}]
+		dev-python/cheetah3[${PYTHON_USEDEP}]
+		dev-python/psutil[${PYTHON_USEDEP}]
+		dev-python/pyyaml[${PYTHON_USEDEP}]
+	')
 	sys-libs/ncurses:0=
 	sys-libs/readline:0=
-	debug? ( dev-util/valgrind )
-	test? (
-		dev-python/pymongo[${PYTHON_USEDEP}]
-	)"
-PDEPEND="tools? ( >=app-admin/mongo-tools-${PV} )"
+	debug? ( dev-util/valgrind )"
+PDEPEND="tools? ( >=app-admin/mongo-tools-100 )"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-3.4.7-no-boost-check.patch"
-	"${FILESDIR}/${PN}-3.6.1-fix-scons.patch"
-	"${FILESDIR}/${PN}-3.6.1-no-compass.patch"
+	"${FILESDIR}/${PN}-4.4.1-fix-scons.patch"
+	"${FILESDIR}/${PN}-4.4.1-no-compass.patch"
+	"${FILESDIR}/${PN}-4.4.1-boost.patch"
 )
 
-S="${WORKDIR}/${MY_P}"
-
-pkg_pretend() {
-	if [[ -n ${REPLACING_VERSIONS} ]]; then
-		if ver_test "$REPLACING_VERSIONS" -lt 3.4; then
-			ewarn "To upgrade from a version earlier than the 3.4-series, you must"
-			ewarn "successively upgrade major releases until you have upgraded"
-			ewarn "to 3.4-series. Then upgrade to 3.6 series."
-		else
-			ewarn "Be sure to set featureCompatibilityVersion to 3.4 before upgrading."
-		fi
-	fi
+src_unpack() {
+	unpack ${A}
+	mv "${WORKDIR}"/mongodb-mongo-* "${S}" || die
 }
 
 pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	python-single-r1_pkg_setup
+	python-any-r1_pkg_setup
+}
+
+python_check_deps() {
+	if use test; then
+		has_version "dev-python/pymongo[${PYTHON_USEDEP}]" || return 1
+		has_version "dev-python/requests[${PYTHON_USEDEP}]" || return 1
+	fi
+
+	has_version ">=dev-util/scons-2.5.0[${PYTHON_USEDEP}]" &&
+	has_version "dev-python/cheetah3[${PYTHON_USEDEP}]" &&
+	has_version "dev-python/psutil[${PYTHON_USEDEP}]" &&
+	has_version "dev-python/pyyaml[${PYTHON_USEDEP}]"
+}
+
+pkg_pretend() {
+	if [[ -n ${REPLACING_VERSIONS} ]]; then
+		if ver_test "$REPLACING_VERSIONS" -lt 4.2; then
+			ewarn "To upgrade from a version earlier than the 4.2-series, you must"
+			ewarn "successively upgrade major releases until you have upgraded"
+			ewarn "to 4.2-series. Then upgrade to 4.4 series."
+		else
+			ewarn "Be sure to set featureCompatibilityVersion to 4.2 before upgrading."
+		fi
+	fi
 }
 
 src_prepare() {
@@ -93,6 +108,7 @@ src_configure() {
 	scons_opts=(
 		CC="$(tc-getCC)"
 		CXX="$(tc-getCXX)"
+		MONGO_VERSION="${PV}"
 
 		--disable-warnings-as-errors
 		--use-system-boost
@@ -101,8 +117,10 @@ src_configure() {
 		--use-system-stemmer
 		--use-system-yaml
 		--use-system-zlib
+		--use-system-zstd
 	)
 
+	use arm64 && scons_opts+=( --use-hardware-crc32=off ) # Bug 701300
 	use debug && scons_opts+=( --dbg=on )
 	use kerberos && scons_opts+=( --use-sasl-client )
 	use lto && scons_opts+=( --lto=on )
@@ -119,16 +137,17 @@ src_configure() {
 }
 
 src_compile() {
-	escons "${scons_opts[@]}" core tools
+	PREFIX="${ED}"/usr escons "${scons_opts[@]}" --nostrip install-core
 }
 
 # FEATURES="test -usersandbox" emerge dev-db/mongodb
 src_test() {
-	"${EPYTHON}" ./buildscripts/resmoke.py --dbpathPrefix=test --suites core --jobs=$(makeopts_jobs) || die "Tests failed"
+	ewarn "Tests may hang with FEATURES=usersandbox"
+	"${EPYTHON}" ./buildscripts/resmoke.py run --dbpathPrefix=test --suites core --jobs=$(makeopts_jobs) || die "Tests failed with ${EPYTHON}"
 }
 
 src_install() {
-	escons "${scons_opts[@]}" --nostrip install --prefix="${ED}"/usr
+	dobin build/install/bin/{mongo,mongod,mongos}
 
 	doman debian/mongo*.1
 	dodoc README docs/building.md
@@ -141,8 +160,6 @@ src_install() {
 	insinto /etc
 	newins "${FILESDIR}/${PN}.conf-r3" ${PN}.conf
 	newins "${FILESDIR}/mongos.conf-r2" mongos.conf
-
-	systemd_dounit "${FILESDIR}/${PN}.service"
 
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}/${PN}.logrotate" ${PN}

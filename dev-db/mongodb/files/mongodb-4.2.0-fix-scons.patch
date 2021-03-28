@@ -1,30 +1,25 @@
---- a/SConstruct	2016-12-27 11:10:06.801949538 +0100
-+++ b/SConstruct	2016-12-27 11:12:40.426407713 +0100
-@@ -1557,7 +1557,6 @@
+--- a/SConstruct	2019-08-21 09:25:00.980260318 +0200
++++ b/SConstruct	2019-08-21 09:27:53.653601283 +0200
+@@ -1858,7 +1858,6 @@
      # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
      env.Append( CCFLAGS=["-fno-omit-frame-pointer",
                           "-fno-strict-aliasing",
--                         "-ggdb",
+-                         "-ggdb" if not env.TargetOSIs('emscripten') else "-g",
                           "-pthread",
                           "-Wall",
                           "-Wsign-compare",
-@@ -1568,8 +1567,9 @@
-         if not has_option("disable-warnings-as-errors"):
+@@ -1870,6 +1869,8 @@
              env.Append( CCFLAGS=["-Werror"] )
  
--    env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
-     env.Append( LINKFLAGS=["-pthread"] )
+     env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
 +    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
 +    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
+     if env.ToolchainIs('clang'):
+         env.Append( CXXFLAGS=['-Werror=unused-result'] )
  
-     # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
-     # startup.
-@@ -1579,10 +1579,10 @@
-         env.Append( LINKFLAGS=["-Wl,-z,now"] )
-         env.Append( LINKFLAGS=["-rdynamic"] )
+@@ -1890,8 +1891,8 @@
  
--    env.Append( LIBS=[] )
-+    env.Append( LIBS=['pcre', 'pcrecpp', 'snappy', 'yaml-cpp'] )
+     env.Append( LIBS=[] )
  
 -    #make scons colorgcc friendly
 -    for key in ('HOME', 'TERM'):
