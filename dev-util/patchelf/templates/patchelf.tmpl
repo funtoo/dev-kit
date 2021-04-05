@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,9 +6,9 @@ inherit autotools
 
 DESCRIPTION="Small utility to modify the dynamic linker and RPATH of ELF executables"
 HOMEPAGE="https://nixos.org/patchelf.html"
-SRC_URI="https://nixos.org/releases/${PN}/${P}/${P}.tar.bz2"
+SRC_URI="{{artifacts[0].src_uri}}"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="*"
 LICENSE="GPL-3"
 
 src_prepare() {
