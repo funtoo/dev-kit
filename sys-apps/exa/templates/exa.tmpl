@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="*"
 IUSE="+git"
 
+BDEPEND="|| ( app-text/pandoc-bin app-text/pandoc )"
+
 DEPEND="
 	git? (
 		dev-libs/libgit2:=
@@ -38,18 +40,21 @@ src_unpack() {
 
 src_compile() {
 	cargo_src_compile $(usex git "" --no-default-features)
+	find ${S}/man -iname "*.md" -type f -exec sh -c 'pandoc --standalone -f markdown -t man "${0}" -o "${0%.md} "' {} \; || die
+	rm -f ${S}/man/*.md || die
+	mv ${S}/man ${S}/man.tmp || die
 }
 
 src_install() {
 	cargo_src_install $(usex git "" --no-default-features)
 
-	newbashcomp contrib/completions.bash exa
+	newbashcomp completions/completions.bash exa
 
 	insinto /usr/share/zsh/site-functions
-	newins contrib/completions.zsh _exa
+	newins completions/completions.zsh _exa
 
 	insinto /usr/share/fish/vendor_completions.d
-	newins contrib/completions.fish exa.fish
+	newins completions/completions.fish exa.fish
 
-	doman contrib/man/*
+	doman man.tmp/*
 }
