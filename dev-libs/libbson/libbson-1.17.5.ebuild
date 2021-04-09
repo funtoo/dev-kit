@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Library routines related to building,parsing and iterating BSON documents"
 HOMEPAGE="https://github.com/mongodb/mongo-c-driver/tree/master/src/libbson"
-SRC_URI="https://github.com/mongodb/mongo-c-driver/releases/download/${PV}/mongo-c-driver-${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-c-driver/releases/download/1.17.5/mongo-c-driver-1.17.5.tar.gz -> libbson-1.17.5.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -15,11 +15,14 @@ IUSE="examples static-libs"
 
 DEPEND="dev-python/sphinx"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-1.14.0-no-docs.patch"
-)
-
 S="${WORKDIR}/mongo-c-driver-${PV}"
+
+src_prepare() {
+	cmake_src_prepare
+
+	# remove doc files
+	sed -i '/^\s*install\s*(FILES COPYING NEWS/,/^\s*)/ {d}' CMakeLists.txt || die
+}
 
 src_configure() {
 	local mycmakeargs=(

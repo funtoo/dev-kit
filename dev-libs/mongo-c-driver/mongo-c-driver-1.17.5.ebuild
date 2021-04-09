@@ -36,11 +36,6 @@ DEPEND="${RDEPEND}
 		dev-libs/libbson[static-libs]
 	)"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-1.14.0-no-docs.patch"
-	"${FILESDIR}/${PN}-1.16.2-enable-tests.patch" # enable tests with system libbson
-)
-
 src_prepare() {
 	cmake_src_prepare
 
@@ -49,6 +44,15 @@ src_prepare() {
 		mkdir -p src/libbson/tests/bson || die
 		cp src/libbson/src/bson/bson-*.h src/libbson/tests/bson/ || die
 	fi
+
+	# remove doc files
+	sed -i '/^\s*install\s*(FILES COPYING NEWS/,/^\s*)/{d}' CMakeLists.txt || die
+
+	# enable tests
+	sed -i '/message ("--   disabling test-libmongoc since using system libbson")/{d}' CMakeLists.txt || die
+	sed -i '/SET (ENABLE_TESTS OFF)/{d}' CMakeLists.txt || die
+	sed -i 's/message (FATAL_ERROR "System libbson built without static library target")/message (STATUS "System libbson built without static library target")/' CMakeLists.txt || die
+	sed -i 's#<bson/bson-private.h>#"bson/bson-private.h"#' src/libbson/tests/test-bson.c || die
 }
 
 src_configure() {
