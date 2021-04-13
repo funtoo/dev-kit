@@ -12,4 +12,4 @@ RDEPEND=>=app-arch/snappy-1.1.3 >=dev-cpp/yaml-cpp-0.5.3:= >=dev-libs/boost-1.60
 SLOT=0
 SRC_URI=https://api.github.com/repos/mongodb/mongo/tarball/refs/tags/r4.0.23 -> mongodb-4.0.23.tar.gz
 _eclasses_=check-reqs	2c6f909675083dce8430b648bf737cb0	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	pax-utils	db85a3c508cf82c45f24b2723791cc93	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	scons-utils	741000d14c0b59263aac3f3cf6e39909	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	e68863263b1e8611dacf381bec5c8b2b
-_md5_=f28531d6f5f0674587fb75dad04cd3a8
+_md5_=6ca603e992b45963f837e55708baf10e
