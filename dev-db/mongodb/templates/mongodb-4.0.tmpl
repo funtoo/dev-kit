@@ -80,14 +80,14 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-        enewgroup mongodb
-        enewuser mongodb -1 -1 /var/lib/${PN} mongodb
+	enewgroup mongodb
+	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 	if use test; then
 		has_version "dev-python/pymongo[${PYTHON_USEDEP}]" ||
 			return 1
 	fi
 
-        python-single-r1_pkg_setup
+	python-single-r1_pkg_setup
 	has_version ">=dev-util/scons-2.5.0[${PYTHON_USEDEP}]" &&
 	has_version "dev-python/cheetah[${PYTHON_USEDEP}]" &&
 	has_version "dev-python/pyyaml[${PYTHON_USEDEP}]" &&
@@ -111,7 +111,7 @@ src_configure() {
 	scons_opts=(
 		CC="$(tc-getCC)"
 		CXX="$(tc-getCXX)"
-
+		MONGO_VERSION="${PV}"
 		--disable-warnings-as-errors
 		--use-system-boost
 		--use-system-pcre
