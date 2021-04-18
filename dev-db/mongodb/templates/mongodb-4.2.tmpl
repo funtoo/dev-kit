@@ -4,7 +4,7 @@ EAPI=7
 
 PYTHON_COMPAT=( {{python_compat}} )
 
-SCONS_MIN_VERSION="2.5.0"
+SCONS_MIN_VERSION="3.1.1"
 CHECKREQS_DISK_BUILD="2400M"
 CHECKREQS_DISK_USR="512M"
 CHECKREQS_MEMORY="1024M"
@@ -107,7 +107,7 @@ src_configure() {
 	scons_opts=(
 		CC="$(tc-getCC)"
 		CXX="$(tc-getCXX)"
-
+		MONGO_VERSION="${PV}"
 		--disable-warnings-as-errors
 		--use-system-boost
 		--use-system-pcre
