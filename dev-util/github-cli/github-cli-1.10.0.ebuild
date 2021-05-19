@@ -255,8 +255,8 @@ EGO_SUM=(
 	"github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72/go.mod"
 	"github.com/spf13/afero v1.1.2/go.mod"
 	"github.com/spf13/cast v1.3.0/go.mod"
-	"github.com/spf13/cobra v1.1.1"
-	"github.com/spf13/cobra v1.1.1/go.mod"
+	"github.com/spf13/cobra v1.1.3"
+	"github.com/spf13/cobra v1.1.3/go.mod"
 	"github.com/spf13/jwalterweatherman v1.0.0/go.mod"
 	"github.com/spf13/pflag v1.0.3/go.mod"
 	"github.com/spf13/pflag v1.0.5"
@@ -364,6 +364,8 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210330210617-4fbd30eecc44"
 	"golang.org/x/sys v0.0.0-20210330210617-4fbd30eecc44/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
+	"golang.org/x/term v0.0.0-20210422114643-f5beecf764ed"
+	"golang.org/x/term v0.0.0-20210422114643-f5beecf764ed/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.1-0.20180807135948-17ff2d5776d2/go.mod"
 	"golang.org/x/text v0.3.2/go.mod"
@@ -424,7 +426,7 @@ EGO_SUM=(
 	"gopkg.in/yaml.v2 v2.0.0-20170812160011-eb3733d160e7/go.mod"
 	"gopkg.in/yaml.v2 v2.2.1/go.mod"
 	"gopkg.in/yaml.v2 v2.2.4/go.mod"
-	"gopkg.in/yaml.v2 v2.2.8/go.mod"
+	"gopkg.in/yaml.v2 v2.4.0/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b"
 	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b/go.mod"
@@ -439,7 +441,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.9.2 -> cli-v1.9.2.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.10.0 -> cli-v1.10.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -454,7 +456,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v1.9.2"
+	export GH_VERSION="v1.10.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
