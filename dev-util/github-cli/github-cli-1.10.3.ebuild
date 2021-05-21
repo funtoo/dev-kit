@@ -234,8 +234,9 @@ EGO_SUM=(
 	"github.com/prometheus/procfs v0.0.0-20181005140218-185b4288413d/go.mod"
 	"github.com/prometheus/procfs v0.0.0-20190507164030-5867b95ac084/go.mod"
 	"github.com/prometheus/tsdb v0.7.1/go.mod"
-	"github.com/rivo/uniseg v0.1.0"
 	"github.com/rivo/uniseg v0.1.0/go.mod"
+	"github.com/rivo/uniseg v0.2.0"
+	"github.com/rivo/uniseg v0.2.0/go.mod"
 	"github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af/go.mod"
 	"github.com/rogpeppe/go-internal v1.3.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.0.1"
@@ -441,7 +442,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.10.2 -> cli-v1.10.2.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.10.3 -> cli-v1.10.3.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -456,7 +457,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v1.10.2"
+	export GH_VERSION="v1.10.3"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
