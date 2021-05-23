@@ -9,6 +9,13 @@ jetbrains_rule:
         homepage: https://www.jetbrains.com/clion
         jid: CL
         srcdir: CLion
+    - datagrip:
+        fullname: DataGrip
+        description: Cross-Platform IDE for Databases & SQL
+        license: JetBrains
+        homepage: https://www.jetbrains.com/datagrip
+        jid: DG
+        srcdir: DataGrip
     - goland:
         fullname: GoLand
         description: Golang IDE by JetBrains
