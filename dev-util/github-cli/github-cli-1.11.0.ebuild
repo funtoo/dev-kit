@@ -69,6 +69,8 @@ EGO_SUM=(
 	"github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.0"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.0/go.mod"
+	"github.com/creack/pty v1.1.13"
+	"github.com/creack/pty v1.1.13/go.mod"
 	"github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964"
 	"github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964/go.mod"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
@@ -442,7 +444,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.10.3 -> cli-v1.10.3.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.11.0 -> cli-v1.11.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -457,7 +459,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v1.10.3"
+	export GH_VERSION="v1.11.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
