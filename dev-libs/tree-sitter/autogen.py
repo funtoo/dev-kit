@@ -9,7 +9,9 @@ def get_release(release_data):
 async def generate(hub, **pkginfo):
 	github_user = pkginfo["name"]
 	github_repo = pkginfo["name"]
-	release_data = await hub.pkgtools.fetch.get_page(f"https://api.github.com/repos/{github_user}/{github_repo}/releases", is_json=True)
+	release_data = await hub.pkgtools.fetch.get_page(
+		f"https://api.github.com/repos/{github_user}/{github_repo}/releases", is_json=True
+	)
 	latest_release = get_release(release_data)
 	if latest_release is None:
 		raise hub.pkgtools.ebuild.BreezyError(f"Can't find a suitable release of {github_repo}")
@@ -20,6 +22,6 @@ async def generate(hub, **pkginfo):
 		version=version,
 		github_user=github_user,
 		github_repo=github_repo,
-		artifacts=[hub.pkgtools.ebuild.Artifact(url=url,final_name=f"{github_repo}-{version}.tar.gz")],
+		artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=f"{github_repo}-{version}.tar.gz")],
 	)
 	ebuild.push()

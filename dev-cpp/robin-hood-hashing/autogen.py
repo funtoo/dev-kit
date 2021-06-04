@@ -6,9 +6,7 @@ import json
 async def generate(hub, **pkginfo):
 	user = "martinus"
 	repo = pkginfo["name"]
-	json_list = await hub.pkgtools.fetch.get_page(
-		f"https://api.github.com/repos/{user}/{repo}/releases", is_json=True
-	)
+	json_list = await hub.pkgtools.fetch.get_page(f"https://api.github.com/repos/{user}/{repo}/releases", is_json=True)
 	for release in json_list:
 		if release["prerelease"] or release["draft"]:
 			continue

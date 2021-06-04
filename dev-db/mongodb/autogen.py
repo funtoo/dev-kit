@@ -2,6 +2,7 @@
 
 import re
 
+
 async def generate(hub, **pkginfo):
 	github_user = "mongodb"
 	github_repo = "mongo"
@@ -16,7 +17,7 @@ async def generate(hub, **pkginfo):
 	urls = []
 	minor = None
 	for tag in json_list:
-		v=re.match(r'r(\d+.(\d+).\d+\b)(?!-)',tag["name"])
+		v = re.match(r"r(\d+.(\d+).\d+\b)(?!-)", tag["name"])
 		if v:
 			if int(v[2]) % 2 == 0:
 				if minor:
@@ -31,7 +32,7 @@ async def generate(hub, **pkginfo):
 	for version in versions:
 		shortver = ".".join(version.split(".")[0:2])
 		final_name = f'{pkginfo["name"]}-{version}.tar.gz'
-		url=urls[versions.index(version)]
+		url = urls[versions.index(version)]
 		ebuild = hub.pkgtools.ebuild.BreezyBuild(
 			**pkginfo,
 			python_compat=python_compat,
