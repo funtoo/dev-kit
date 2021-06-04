@@ -5,7 +5,8 @@ This file documents the licensing information for dev-kit 1.4-release.
 
 The contents of this kit are free software; you can redistribute and/or modify
 it under the the terms of GNU General Public License version 2 as published by
-the Free Software Foundation. See :download:`the full license <LICENSE.txt>`.
+the Free Software Foundation. See `the full license`_ (also available at
+``LICENSE.txt`` in this root of this repository).
 
 This program is distributed in the hope that it will be useful, but WITHOUT
 ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -27,6 +28,7 @@ in `kit-fixups`_ as well as `metatools`_ itself.
 
 .. _kit-fixups: https://code.funtoo.org/bitbucket/projects/CORE/repos/kit-fixups/browse
 .. _metatools: https://code.funtoo.org/bitbucket/projects/CORE/repos/funtoo-metatools/browse
+.. _the full license: https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
 Copyright
 =========
