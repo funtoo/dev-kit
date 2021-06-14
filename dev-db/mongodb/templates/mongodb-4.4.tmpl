@@ -18,7 +18,7 @@ SRC_URI="{{artifacts[0].src_uri}}"
 LICENSE="Apache-2.0 SSPL-1"
 SLOT="0"
 KEYWORDS="*"
-IUSE="debug kerberos libressl lto ssl test +tools"
+IUSE="debug kerberos libressl lto ssl test +shell +tools"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
@@ -53,6 +53,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.1-fix-scons.patch"
 	"${FILESDIR}/${PN}-4.4.5-no-compass.patch"
 	"${FILESDIR}/${PN}-4.4.1-boost.patch"
+	"${FILESDIR}/${PN}-4.4.6-riscv.patch"
+	"${FILESDIR}/${PN}-4.4.6-fix-includes.patch"
 )
 
 src_unpack() {
@@ -125,6 +127,9 @@ src_configure() {
 	use kerberos && scons_opts+=( --use-sasl-client )
 	use lto && scons_opts+=( --lto=on )
 	use ssl && scons_opts+=( --ssl )
+	if ! use shell; then
+		scons_opts+=( --js-engine=none )
+	fi
 
 	# respect mongoDB upstream's basic recommendations
 	# see bug #536688 and #526114
@@ -147,7 +152,10 @@ src_test() {
 }
 
 src_install() {
-	dobin build/install/bin/{mongo,mongod,mongos}
+	dobin build/install/bin/{mongod,mongos}
+	if use shell; then
+		dobin build/install/bin/mongo
+	fi
 
 	doman debian/mongo*.1
 	dodoc README docs/building.md
