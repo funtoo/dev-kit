@@ -2,20 +2,18 @@
 
 EAPI=7
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit flag-o-matic toolchain-funcs
 
-NSPR_VER="4.28"
-RTM_NAME="NSS_${PV//./_}_RTM"
+NSPR_VER="{{nspr_ver}}"
 
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
-HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
-SRC_URI="https://archive.mozilla.org/pub/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz
-	cacert? ( https://dev.gentoo.org/~axs/distfiles/${PN}-cacert-class1-class3.patch )"
+HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
+SRC_URI="{{artifacts[0].src_uri}}"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="*"
-IUSE="cacert utils"
+IUSE="cacert +utils"
 # pkg-config called by nss-config -> virtual/pkgconfig in RDEPEND
 RDEPEND="
 	>=dev-libs/nspr-${NSPR_VER}
@@ -32,19 +30,22 @@ S="${WORKDIR}/${P}/${PN}"
 PATCHES=(
 	# Custom changes for gentoo
 	"${FILESDIR}/${PN}-3.53-gentoo-fixups.patch"
-	"${FILESDIR}/${PN}-3.21-gentoo-fixup-warnings.patch"
-	"${FILESDIR}/${PN}-3.23-hppa-byte_order.patch"
-	"${FILESDIR}/${PN}-3.53-fix-building-on-ppc.patch"
 )
 
 src_prepare() {
-	if use cacert ; then #521462
-		PATCHES+=(
-			"${DISTDIR}/${PN}-cacert-class1-class3.patch"
-		)
-	fi
-
 	default
+
+	# Gentoo fixup warnings
+	sed -e '/gdwarf/!b;n;n;a\OPTIMIZER += -fno-strict-aliasing' \
+		-i coreconf/Linux.mk || die
+	# hppa byte_order fix
+	sed -e '/hppa/s/^/#ifndef BYTE_ORDER\n/' \
+		-e '/hppa/,/endif/!b;/endif/a\#endif /* !BYTE_ORDER */' \
+		-i lib/dbm/include/mcom_db.h || die
+
+	if use cacert ; then
+		eapply -p2 "${FILESDIR}/${PN}-cacert-class1-class3-r2.patch"
+	fi
 
 	pushd coreconf >/dev/null || die
 	# hack nspr paths
@@ -83,11 +84,12 @@ nssarch() {
 	# Most of the arches are the same as $ARCH
 	local t=${1:-${CHOST}}
 	case ${t} in
-		aarch64*)echo "aarch64";;
-		hppa*)   echo "parisc";;
-		i?86*)   echo "i686";;
-		x86_64*) echo "x86_64";;
-		*)       tc-arch ${t};;
+		*86*-pc-solaris2*) echo "i86pc"   ;;
+		aarch64*)          echo "aarch64" ;;
+		hppa*)             echo "parisc"  ;;
+		i?86*)             echo "i686"    ;;
+		x86_64*)           echo "x86_64"  ;;
+		*)                 tc-arch ${t}   ;;
 	esac
 }
 
@@ -333,5 +335,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-		cleanup_chk "${EROOT}"/usr/$(get_libdir)
+	cleanup_chk "${EROOT}"/usr/$(get_libdir)
 }

@@ -7,8 +7,8 @@ inherit autotools toolchain-funcs
 MIN_PV="$(ver_cut 2)"
 
 DESCRIPTION="Netscape Portable Runtime"
-HOMEPAGE="http://www.mozilla.org/projects/nspr/"
-SRC_URI="https://archive.mozilla.org/pub/nspr/releases/v${PV}/src/${P}.tar.gz"
+HOMEPAGE="https://www.mozilla.org/projects/nspr/"
+SRC_URI="https://ftp.mozilla.org/pub/nspr/releases/v4.31/src/nspr-4.31.tar.gz"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
@@ -17,8 +17,6 @@ IUSE="debug elibc_musl"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.23-prtime.patch
-	"${FILESDIR}"/${PN}-4.7.1-solaris.patch
-	"${FILESDIR}"/${PN}-4.10.6-solaris.patch
 	"${FILESDIR}"/${PN}-4.8.4-darwin-install_name.patch
 	"${FILESDIR}"/${PN}-4.8.9-link-flags.patch
 	# We do not need to pass -L$libdir via nspr-config --libs
@@ -66,7 +64,7 @@ src_configure() {
 		$(use_enable !debug optimize)
 	)
 
-	# The configure has some fancy --enable-{{n,x}32,64bit} switches
+	# The configure has some fancy --enable-{n32,x32,64bit} switches
 	# that trigger some code conditional to platform & arch. This really
 	# matters for the few common arches (x86, ppc) but we pass a little
 	# more of them to be future-proof.

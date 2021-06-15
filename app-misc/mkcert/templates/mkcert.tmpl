@@ -1,0 +1,39 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit go-module
+
+EGO_SUM=(
+{{gosum}})
+
+go-module_set_globals
+
+DESCRIPTION="A zero-config tool to make locally trusted development certificates"
+HOMEPAGE="https://github.com/FiloSottile/mkcert"
+SRC_URI="{{artifacts[0].src_uri}}
+		${EGO_SUM_SRC_URI}"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="*"
+IUSE=""
+
+RDEPEND="
+	dev-libs/nss[utils]
+"
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
+
+src_compile() {
+	go build -tags release -ldflags "-X main.Version=${PV}"  -o ${PN} || die
+}
+
+src_install() {
+	dobin mkcert
+	dodoc README.md
+}
