@@ -4,11 +4,11 @@ DEPEND=icu? ( dev-libs/icu:0=[-mgorny(-)] )
 DESCRIPTION=An efficient, principled regular expression library
 EAPI=7
 HOMEPAGE=https://github.com/google/re2
-IUSE=icu abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_riscv_lp64d abi_riscv_lp64 abi_s390_32 abi_s390_64
+IUSE=icu abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS=amd64 arm arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc x86
 LICENSE=BSD
 RDEPEND=icu? ( dev-libs/icu:0=[-mgorny(-)] )
 SLOT=0/gentoo-2017-03-01
 SRC_URI=https://github.com/google/re2/archive/2018-10-01.tar.gz -> re2-2018-10-01.tar.gz
-_eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=e9781ce5a6a20a98b5e8b7ff10046258
