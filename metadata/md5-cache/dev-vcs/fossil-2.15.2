@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install
+DEPEND=sys-libs/zlib || ( sys-libs/readline:0 dev-libs/libedit ) !internal-sqlite? ( >=dev-db/sqlite-3.33.0:3 ) openssl? ( dev-libs/openssl:0 ) th1-docs? ( dev-lang/tcl:0= ) th1-hooks? ( dev-lang/tcl:0= ) tcl? ( dev-lang/tcl:0= ) tcl-stubs? ( dev-lang/tcl:0= ) tcl-private-stubs? ( dev-lang/tcl:0= )
+DESCRIPTION=Simple, high-reliability, source control management, and more
+EAPI=6
+HOMEPAGE=http://www.fossil-scm.org/
+IUSE=+openssl -miniz +zlib -exec-rel-paths -th1-docs -th1-hooks +tcl -tcl-stubs -tcl-private-stubs -mman -see -print-minimum-sqlite-version +internal-sqlite -static +fusefs -debug -no-opt -json
+KEYWORDS=amd64 arm ppc ppc64 x86
+LICENSE=BSD-2
+RDEPEND=sys-libs/zlib || ( sys-libs/readline:0 dev-libs/libedit ) !internal-sqlite? ( >=dev-db/sqlite-3.33.0:3 ) openssl? ( dev-libs/openssl:0 ) th1-docs? ( dev-lang/tcl:0= ) th1-hooks? ( dev-lang/tcl:0= ) tcl? ( dev-lang/tcl:0= ) tcl-stubs? ( dev-lang/tcl:0= ) tcl-private-stubs? ( dev-lang/tcl:0= )
+REQUIRED_USE=openssl? ( !miniz )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.fossil-scm.org/home/tarball/7cfd58d771e77123dcccfce67da9da633fdba912b6e7019a84912146aa8f06ba/fossil-2.15.2.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=56ebd431f302124362bd2c59c490a057
