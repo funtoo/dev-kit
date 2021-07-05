@@ -25,23 +25,21 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-2021.3.0-cmake-hwloc.patch"
+)
+
 src_unpack() {
 	default
 	rm -rf "${S}"
 	mv "${WORKDIR}"/{{github_user}}-{{github_repo}}-* "${S}" || die
 }
 
-src_prepare() {
-	for file in $(grep -rl mallinfo ${S}) ; do
-		grep -q mallinfo2 "${file}" || sed -i 's/mallinfo/mallinfo2/g' "${file}"
-	done
-	cmake_src_prepare
-}
-
 src_configure() {
 	local mycmakeargs=(
 		-DTBB_TEST=$(usex tests ON OFF)
 		-DTBB_VALGRIND_MEMCHECK=$(usex valgrind ON OFF)
+		-DTBBBIND_BUILD=$(usex hwloc ON OFF)
 	)
 	if use hwloc ; then
 		has_version =sys-apps/hwloc-1.11* && HWLOC_VERSION='1_11'
