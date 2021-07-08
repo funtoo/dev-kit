@@ -35,5 +35,6 @@ Copyright
 
 | Copyright 2008-2021 Funtoo Solutions, Inc.
 | Copyright 1999-2021 Gentoo Foundation, Gentoo Authors, and
+| Copyright 2017-2021 Sony Interactive Entertainment, Inc.
 | many independent contributors/authors as documented in the source code commit history.
 | Copyright 2013-2021 Federico Moro (https://github.com/fmoro) and GitHub repository contributors.
