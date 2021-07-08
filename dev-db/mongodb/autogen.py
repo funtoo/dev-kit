@@ -17,17 +17,24 @@ async def generate(hub, **pkginfo):
 	urls = []
 	minor = None
 	for tag in json_list:
-		v = re.match(r"r(\d+.(\d+).\d+\b)(?!-)", tag["name"])
-		if v:
-			if int(v[2]) % 2 == 0:
-				if minor:
-					continue
-				else:
-					minor = v[2]
-				versions.append(v[1])
-				urls.append(tag["tarball_url"])
-			else:
-				minor = None
+		v = re.match(r"r((\d+).(\d+).\d+\b)(?!-)", tag["name"])
+		if v is None:
+			continue
+
+		# skipping odd (not stable) minor versions
+		if int(v[3]) % 2 != 0:
+			minor = None
+			continue
+
+		if minor is not None:
+			continue
+
+		major, minor = v[2], v[3]
+		if f"{major}.{minor}" not in ["3.6", "4.0", "4.2", "4.4"]:
+			continue
+
+		versions.append(v[1])
+		urls.append(tag["tarball_url"])
 
 	for version in versions:
 		shortver = ".".join(version.split(".")[0:2])
