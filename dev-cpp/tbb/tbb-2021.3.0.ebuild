@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2021.3.0-cmake-hwloc.patch"
+	"${FILESDIR}/${PN}-2021.3.0-riscv.patch"
 )
 
 src_unpack() {
