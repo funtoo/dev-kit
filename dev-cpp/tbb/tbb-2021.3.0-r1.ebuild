@@ -24,10 +24,9 @@ DEPEND="
 	valgrind? ( dev-util/valgrind )
 "
 RDEPEND="${DEPEND}"
-
 PATCHES=(
-	"${FILESDIR}/${PN}-2021.3.0-cmake-hwloc.patch"
-	"${FILESDIR}/${PN}-2021.3.0-riscv.patch"
+	"${FILESDIR}/tbb-2021.3.0-cmake-hwloc.patch"
+	"${FILESDIR}/tbb-2021.3.0-fix-getSmallObjectIndex-macros.patch"
 )
 
 src_unpack() {

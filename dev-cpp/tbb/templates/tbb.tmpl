@@ -25,10 +25,13 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+{%- if patches|length %}
 PATCHES=(
-	"${FILESDIR}/${PN}-2021.3.0-cmake-hwloc.patch"
-	"${FILESDIR}/${PN}-2021.3.0-riscv.patch"
+{%- for patch in patches %}
+	"${FILESDIR}/{{patch['name']}}"
+{%- endfor %}
 )
+{%- endif %}
 
 src_unpack() {
 	default
