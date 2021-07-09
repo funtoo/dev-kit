@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 PATCHES=(
 	"${FILESDIR}/tbb-2021.3.0-cmake-hwloc.patch"
 	"${FILESDIR}/tbb-2021.3.0-fix-getSmallObjectIndex-macros.patch"
+	"${FILESDIR}/tbb-2021.3.0-riscv.patch"
 )
 
 src_unpack() {

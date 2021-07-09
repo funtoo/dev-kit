@@ -17,6 +17,13 @@ patches = [
 		"issue"    :  "FL-8621",
 		"desc"	   :  "Fixes arm-32bit builds.",
 		"apply"    :  lambda v: v == "2021.3.0"
+	},
+	{
+		# This patch is not yet in upstream tbb, so we will need to continue to apply it.
+		"name"	   :  "tbb-2021.3.0-riscv.patch",
+		"issue"    :  "FL-8615",
+		"desc"	   :  "TODO",
+		"apply"    :   lambda v: True
 	}
 ]
 

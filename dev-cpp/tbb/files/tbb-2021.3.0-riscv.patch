@@ -1,6 +1,6 @@
-diff -ru tbb.a/src/tbb/tools_api/ittnotify_config.h tbb.b/src/tbb/tools_api/ittnotify_config.h
---- tbb.a/src/tbb/tools_api/ittnotify_config.h	2021-06-30 10:19:55.000000000 +0200
-+++ tbb.b/src/tbb/tools_api/ittnotify_config.h	2021-07-08 00:16:45.860824932 +0200
+diff -ru a/src/tbb/tools_api/ittnotify_config.h b/src/tbb/tools_api/ittnotify_config.h
+--- a/src/tbb/tools_api/ittnotify_config.h	2021-06-30 10:19:55.000000000 +0200
++++ b/src/tbb/tools_api/ittnotify_config.h	2021-07-08 00:16:45.860824932 +0200
 @@ -159,6 +159,10 @@
  #  define ITT_ARCH_ARM64  6
  #endif /* ITT_ARCH_ARM64 */
@@ -23,24 +23,3 @@ diff -ru tbb.a/src/tbb/tools_api/ittnotify_config.h tbb.b/src/tbb/tools_api/ittn
  #  endif
  #endif
  
-diff -ru tbb.a/src/tbbmalloc/frontend.cpp tbb.b/src/tbbmalloc/frontend.cpp
---- tbb.a/src/tbbmalloc/frontend.cpp	2021-06-30 10:19:55.000000000 +0200
-+++ tbb.b/src/tbbmalloc/frontend.cpp	2021-07-08 00:21:22.956931196 +0200
-@@ -808,7 +808,7 @@
- {
-     return (size-1)>>3;
- }
--#elif __TBB_x86_64 || __aarch64__
-+#elif __TBB_x86_64 || __aarch64__ || (__riscv && (__riscv_xlen == 64))
- unsigned int getSmallObjectIndex(unsigned int size)
- {
-     // For 64-bit malloc, 16 byte alignment is needed except for bin 0.
-@@ -816,7 +816,7 @@
-     if (result) result |= 1; // 0,1,3,5,7; bins 2,4,6 are not aligned to 16 bytes
-     return result;
- }
--#endif // __TBB_x86_32 ||  __aarch32__
-+#endif // __TBB_x86_32 ||  __aarch32__ || (__riscv && (__riscv_xlen == 64))
- 
- /*
-  * Depending on indexRequest, for a given size return either the index into the bin
