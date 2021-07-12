@@ -43,9 +43,9 @@ def get_options_from_autodef(auto_def_data):
 async def generate(hub, **pkginfo):
 	uv_files = await hub.pkgtools.fetch.get_page("https://fossil-scm.org/home/uv/download.js")
 	for item in uv_files.split('"'):
-		match = re.match(r"[a-z0-9]*/fossil-([\d\.]+).tar.gz", item)
+		match = re.match(r"[a-z0-9]*/fossil-(src-)?([\d]+\.[\d\.]+).tar.gz", item)
 		if match:
-			version = match.group(1)
+			version = match.group(2)
 			filename = match.group(0)
 			break
 	url = f"http://www.fossil-scm.org/home/tarball/{filename}"
