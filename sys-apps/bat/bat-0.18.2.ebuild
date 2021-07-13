@@ -5,10 +5,10 @@ EAPI=7
 CRATES="
 adler-1.0.2
 aho-corasick-0.7.18
-ansi_colours-1.0.2
+ansi_colours-1.0.4
 ansi_term-0.11.0
 ansi_term-0.12.1
-assert_cmd-1.0.3
+assert_cmd-1.0.5
 atty-0.2.14
 autocfg-1.0.1
 base64-0.13.0
@@ -51,7 +51,8 @@ git-version-0.3.4
 git-version-macro-0.3.4
 git2-0.13.19
 glob-0.3.0
-globset-0.4.6
+globset-0.4.8
+grep-cli-0.1.6
 hashbrown-0.9.1
 hermit-abi-0.1.18
 idna-0.2.3
@@ -61,7 +62,7 @@ itoa-0.4.7
 jobserver-0.1.22
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.94
+libc-0.2.95
 libgit2-sys-0.12.20+1.1.0
 libz-sys-1.1.3
 line-wrap-0.1.1
@@ -70,8 +71,9 @@ lock_api-0.4.4
 log-0.4.14
 matches-0.1.8
 memchr-2.4.0
+memoffset-0.6.4
 miniz_oxide-0.4.4
-nix-0.20.0
+nix-0.21.0
 normalize-line-endings-0.3.0
 num-integer-0.1.44
 num-traits-0.2.14
@@ -123,6 +125,7 @@ syntect-4.5.0
 sys-info-0.9.0
 tempfile-3.2.0
 term_size-0.3.2
+termcolor-1.1.2
 terminal_size-0.1.16
 textwrap-0.11.0
 tinyvec-1.2.0
@@ -153,7 +156,7 @@ inherit cargo
 
 DESCRIPTION="A cat(1) clone with wings"
 HOMEPAGE="https://github.com/sharkdp/bat"
-SRC_URI="https://api.github.com/repos/sharkdp/bat/tarball/v0.18.1 -> bat-0.18.1.tar.gz
+SRC_URI="https://api.github.com/repos/sharkdp/bat/tarball/v0.18.2 -> bat-0.18.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
