@@ -48,6 +48,8 @@ RDEPEND="${DEPEND}"
 # Tests can't be run from the build directory
 RESTRICT="test"
 
+S="${WORKDIR}"/fossil-src-2.16
+
 src_configure() {
 	local myconf="--with-openssl=$(usex openssl 1 none) \
 --with-miniz=$(usex miniz 1 0) \

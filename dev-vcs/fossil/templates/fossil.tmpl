@@ -31,6 +31,8 @@ RDEPEND="${DEPEND}"
 # Tests can't be run from the build directory
 RESTRICT="test"
 
+S="${WORKDIR}"/{{artifacts[0].final_name.replace(".tar.gz","")}}
+
 src_configure() {
 	local myconf="{{ codes|join(' \\\n') }}"
 	tc-export CC

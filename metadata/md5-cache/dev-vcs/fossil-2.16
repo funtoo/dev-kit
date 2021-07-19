@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.fossil-scm.org/home/tarball/7aedd5675883d4412cf20917d340b6985e3ecb842e88a39f135df034b2d5f4d3/fossil-src-2.16.tar.gz
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=52276dcc6aa90707f128fd9700562166
+_md5_=f9771033f25f81ca5c0922b2b62bd1db
