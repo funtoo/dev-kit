@@ -4,10 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-
 DESCRIPTION="The smartest JavaScript IDE"
 HOMEPAGE="http://www.jetbrains.com/webstorm"
-SRC_URI="https://download.jetbrains.com/webstorm/WebStorm-${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.jetbrains.com/webstorm/WebStorm-2021.2.tar.gz -> webstorm-2021.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -29,10 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
+S="${WORKDIR}/webstorm-${PV}"
+
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "${P}" || die
+		mv $(ls "${WORKDIR}") "webstorm-${PV}" || die
 	fi
 }
 
@@ -87,4 +88,3 @@ pkg_postinst() {
 	fi
 
 }
-

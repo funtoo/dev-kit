@@ -58,4 +58,10 @@ jetbrains_rule:
         homepage: https://www.jetbrains.com/python
         jid: PCP
         srcdir: pycharm
-
+    - webstorm:
+        fullname: WebStorm
+        description: The smartest JavaScript IDE
+        license: JetBrains
+        homepage: http://www.jetbrains.com/webstorm
+        jid: WS
+        srcdir: webstorm
