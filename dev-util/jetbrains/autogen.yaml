@@ -58,6 +58,13 @@ jetbrains_rule:
         homepage: https://www.jetbrains.com/python
         jid: PCP
         srcdir: pycharm
+    - rubymine:
+        fullname: RubyMine
+        description: The Most Intelligent Ruby and Rails IDE
+        license: JetBrains
+        homepage: https://www.jetbrains.com/ruby
+        jid: RM
+        srcdir: rubymine
     - webstorm:
         fullname: WebStorm
         description: The smartest JavaScript IDE
