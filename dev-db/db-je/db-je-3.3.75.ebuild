@@ -1,12 +1,14 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
+EAPI=0
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A high performance, transactional storage engine written entirely in Java"
-HOMEPAGE="http://www.oracle.com/database/berkeley-db/je/index.html"
+HOMEPAGE="https://www.oracle.com/database/berkeley-db/java-edition.html"
 SRC_URI="http://download.oracle.com/berkeley-db/${P/db-/}.tar.gz"
 
 LICENSE="Sleepycat BSD"

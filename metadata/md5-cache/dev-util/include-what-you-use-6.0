@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sys-devel/llvm:6 sys-devel/clang:6 python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) sys-devel/make >=dev-util/cmake-3.9.6 !!sys-devel/llvm:0
+DESCRIPTION=Find unused include directives in C/C++ programs
+EAPI=6
+HOMEPAGE=https://include-what-you-use.org/
+IUSE=python_single_target_python3_7 python_single_target_python2_7 python_targets_python3_7 python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-devel/llvm:6 sys-devel/clang:6 python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
+REQUIRED_USE=^^ ( python_single_target_python3_7 python_single_target_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/include-what-you-use/include-what-you-use/archive/clang_6.0.tar.gz -> include-what-you-use-6.0.src.tar.gz
+_eclasses_=cmake-utils	77cd39e6009811bf97a59d91ffd5b54f	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	llvm	21d8c0949a2693d7109cc6a25fabfcaf	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=ec03f613f84399ce77669e403f972240

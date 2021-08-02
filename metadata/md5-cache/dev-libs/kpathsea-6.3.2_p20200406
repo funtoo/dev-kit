@@ -1,0 +1,12 @@
+BDEPEND=>=app-portage/elt-patches-20170815
+DEFINED_PHASES=configure install postinst postrm prepare
+DESCRIPTION=Path searching library for TeX-related files
+EAPI=7
+HOMEPAGE=http://tug.org/texlive/
+IUSE=doc source static-libs
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0/6.3.2
+SRC_URI=mirror://gentoo/texlive-20200406-source.tar.xz mirror://gentoo/kpathsea-texmf.d-10.tar.xz mirror://gentoo/tl-kpathsea-2020.tar.xz doc? ( mirror://gentoo/tl-kpathsea.doc-2020.tar.xz )
+_eclasses_=libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	prefix	e51c7882b7b721e54e684f7eb143cbfe	texlive-common	9e2ec6f6212b1eed3c02777654057d2b	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=9abc022a91f28bd6743fccaf65064ddd

@@ -1,10 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install prepare unpack
-DEPEND=dev-vcs/git dev-vcs/git
+DEPEND=dev-vcs/git
 DESCRIPTION=A silly git launcher, basically. Inspired by sl
-EAPI=4
+EAPI=7
 HOMEPAGE=http://r-wos.org/hacks/gti
 LICENSE=MIT
+PROPERTIES=live
 RDEPEND=dev-vcs/git
 SLOT=0
-_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6
-_md5_=c6ad73433fa2ea39191ea8fad3dc7765
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b
+_md5_=0b18d499cf1d7ecdd669bf7802d143e1

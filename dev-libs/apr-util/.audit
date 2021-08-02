@@ -1,0 +1,1 @@
+This apr-util contains a funtoo fix for building against sys-libs/db-6+. Actually involves removing a lot of complication from the ebuild.

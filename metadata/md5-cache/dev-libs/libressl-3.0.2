@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=app-portage/elt-patches-20170815
+DESCRIPTION=Free version of the SSL/TLS protocol forked from OpenSSL
+EAPI=6
+HOMEPAGE=https://www.libressl.org/
+IUSE=+asm static-libs test
+LICENSE=ISC openssl
+PDEPEND=app-misc/ca-certificates
+REQUIRED_USE=test? ( static-libs )
+SLOT=0/47
+SRC_URI=https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz
+_eclasses_=libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=cee7bfc67091b4a359841cf3dca2be7b

@@ -1,10 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-simulation/gazebo_ros_pkgs"
 KEYWORDS="~amd64"
-PYTHON_COMPAT=( python{2_7,3_4,3_5} )
+PYTHON_COMPAT=( python{2_7,3_5} )
 CATKIN_HAS_MESSAGES=yes
 ROS_SUBDIR=${PN}
 
@@ -47,8 +47,6 @@ RDEPEND="
 	dev-games/ogre
 	sci-libs/pcl
 	dev-libs/boost:=
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
 	dev-ros/roslib[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"

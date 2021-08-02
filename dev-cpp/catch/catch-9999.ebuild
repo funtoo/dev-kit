@@ -1,34 +1,44 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-EGIT_REPO_URI="https://github.com/philsquared/Catch.git"
-EGIT_BRANCH=catch2
-inherit cmake-utils git-r3
+PYTHON_COMPAT=( python2_7 python3_{5,6,7} )
+
+inherit cmake-utils python-any-r1
+
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/catchorg/Catch2.git"
+else
+	MY_P=${PN^}2-${PV}
+	SRC_URI="https://github.com/catchorg/Catch2/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+
+	S=${WORKDIR}/${MY_P}
+fi
 
 DESCRIPTION="Modern C++ header-only framework for unit-tests"
-HOMEPAGE="https://github.com/philsquared/Catch"
-SRC_URI=""
+HOMEPAGE="https://github.com/catchorg/Catch2"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
+IUSE="test"
+RESTRICT="!test? ( test )"
 
-# CMake is only used to build & run tests, so override phases
-src_configure() { :; }
-src_compile() { :; }
+BDEPEND="test? ( ${PYTHON_DEPS} )"
 
-src_test() {
-	cmake-utils_src_configure
-	cmake-utils_src_compile
-	cmake-utils_src_test
+pkg_setup() {
+	use test && python-any-r1_pkg_setup
 }
 
-src_install() {
-	# same location as used in fedora
-	insinto /usr/include/catch
-	doins -r include/.
-	dodoc -r docs/.
+src_configure() {
+	local mycmakeargs=(
+		-DCATCH_ENABLE_WERROR=OFF
+		-DBUILD_TESTING=$(usex test)
+	)
+	use test &&
+		mycmakeargs+=(-DPYTHON_EXECUTABLE="${PYTHON}")
+
+	cmake-utils_src_configure
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,7 +13,7 @@ SRC_URI="http://coccinelle.lip6.fr/distrib/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc emacs ocaml +ocamlopt pcre python test vim-syntax"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -42,6 +42,7 @@ DEPEND="${CDEPEND}
 
 DOCS=( authors.txt bugs.txt changes.txt credits.txt readme.txt )
 
+RESTRICT=strip
 S=${WORKDIR}/${MY_P}
 
 SITEFILE=50coccinelle-gentoo.el
@@ -111,8 +112,6 @@ src_install() {
 	fi
 
 	use python && python_optimize
-
-	export STRIP_MASK='*/coccinelle/spatch'
 }
 
 pkg_postinst() {

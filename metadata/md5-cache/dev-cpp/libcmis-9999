@@ -1,12 +1,14 @@
-DEFINED_PHASES=configure install postinst postrm prepare unpack
-DEPEND=dev-libs/boost:= dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X dev-libs/libxslt ) test? ( dev-util/cppcheck dev-util/cppunit ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+BDEPEND=virtual/pkgconfig man? ( app-text/docbook2X dev-libs/libxslt ) test? ( dev-util/cppcheck dev-util/cppunit ) >=dev-vcs/git-1.8.2.1[curl] >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=dev-libs/boost:= dev-libs/libxml2 net-misc/curl
 DESCRIPTION=C++ client library for the CMIS interface
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/tdf/libcmis
-IUSE=man static-libs test
+IUSE=man static-libs test tools
 LICENSE=|| ( GPL-2 LGPL-2 MPL-1.1 )
-RDEPEND=dev-libs/boost:= dev-libs/libxml2 net-misc/curl !<dev-cpp/libcmis-0.5.0
+PROPERTIES=live
+RDEPEND=dev-libs/boost:= dev-libs/libxml2 net-misc/curl
 RESTRICT=test
 SLOT=0.5
-_eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	autotools	dc412f38566b91012efd58b9c203e6c3	git-r3	52a888802d25387c2c74cb845d1219bc	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=77c417fe112d4921ab1ddf4b9bda58e6
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=817cfc41996113943e2a87657054a383

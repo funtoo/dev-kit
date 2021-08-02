@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -6,12 +6,12 @@ EAPI="6"
 inherit autotools
 
 DESCRIPTION="Multilingual Library for Unix/Linux"
-HOMEPAGE="https://savannah.nongnu.org/projects/m17n"
+HOMEPAGE="https://savannah.nongnu.org/projects/m17n https://git.savannah.nongnu.org/cgit/m17n/m17n-lib.git"
 SRC_URI="mirror://nongnu/m17n/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="X anthy athena bidi fontconfig gd libotf libxml2 spell xft"
 
 RDEPEND="~dev-db/m17n-db-${PV}
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-configure.patch
-	"${FILESDIR}"/${PN}-gui.patch
+	"${FILESDIR}"/${PN}-freetype.patch
 	"${FILESDIR}"/${PN}-ispell.patch
 	"${FILESDIR}"/${PN}-parallel-make.patch
 )

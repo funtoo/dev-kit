@@ -1,0 +1,16 @@
+BDEPEND=dev-util/cmake virtual/pkgconfig dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare pretend setup test
+DEPEND=>=dev-libs/libbpf-0.3[static-libs(-)] >=sys-kernel/linux-headers-4.14 >=dev-libs/elfutils-0.166:= <=sys-devel/clang-12:= <=sys-devel/llvm-12:=[llvm_targets_BPF(+)] lua? ( lua_single_target_luajit? ( dev-lang/luajit:= ) ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] test? ( || ( net-misc/iputils[arping] net-analyzer/arping ) net-analyzer/netperf net-misc/iperf:* ) !!sys-devel/llvm:0
+DESCRIPTION=Tools for BPF-based Linux IO analysis, networking, monitoring, and more
+EAPI=7
+HOMEPAGE=https://iovisor.github.io/bcc/
+IUSE=+lua test kernel_linux +lua_single_target_luajit python_targets_python3_7 python_targets_python3_9 python_targets_python3_8
+KEYWORDS=*
+LICENSE=Apache-2.0
+RDEPEND=>=dev-libs/libbpf-0.3[static-libs(-)] >=sys-kernel/linux-headers-4.14 >=dev-libs/elfutils-0.166:= <=sys-devel/clang-12:= <=sys-devel/llvm-12:=[llvm_targets_BPF(+)] lua? ( lua_single_target_luajit? ( dev-lang/luajit:= ) ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)]
+REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_9 python_targets_python3_8 ) lua? ( ^^ ( lua_single_target_luajit ) )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/iovisor/bcc/archive/v0.18.0.tar.gz -> bcc-0.18.0.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	llvm	21d8c0949a2693d7109cc6a25fabfcaf	lua-single	d51249bd993b9dda6dde2d2276b8dc90	lua-utils	661d14f97b7d04273143565853fdfbfe	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=5e670b5fcead65c77d66c01e27aae159

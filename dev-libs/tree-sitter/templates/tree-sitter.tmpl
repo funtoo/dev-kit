@@ -1,0 +1,25 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+DESCRIPTION="Tree-sitter is a parser generator tool and an incremental parsing library."
+HOMEPAGE="https://github.com/tree-sitter/tree-sitter"
+
+SRC_URI="{{artifacts[0].src_uri}}"
+KEYWORDS="*"
+
+LICENSE="MIT"
+SLOT="0"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-no-static-libs.patch"
+)
+
+src_unpack() {
+	unpack "${A}"
+	mv "${WORKDIR}"/{{github_user}}-{{github_repo}}-* "${S}" || die
+}
+
+src_install() {
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" LIBDIR="${EPREFIX}/usr/lib64" install
+}

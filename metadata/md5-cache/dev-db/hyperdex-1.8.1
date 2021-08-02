@@ -1,15 +1,15 @@
 DEFINED_PHASES=configure install prepare setup test
-DEPEND=dev-cpp/glog dev-cpp/sparsehash dev-libs/cityhash >=dev-libs/hyperleveldb-1.2 >=dev-libs/libpo6-0.8 >=dev-libs/libe-0.11 >=dev-libs/busybee-0.7 dev-libs/popt >=dev-libs/replicant-0.8 >=dev-libs/libmacaroons-0.3 >=dev-libs/libtreadstone-0.2 dev-libs/json-c python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-cpp/glog dev-cpp/sparsehash dev-libs/cityhash >=dev-libs/hyperleveldb-1.2 >=dev-libs/libpo6-0.8 >=dev-libs/libe-0.11 >=dev-libs/busybee-0.7 dev-libs/popt >=dev-libs/replicant-0.8 >=dev-libs/libmacaroons-0.3 >=dev-libs/libtreadstone-0.2 dev-libs/json-c:= python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A searchable distributed Key-Value Store
 EAPI=5
 HOMEPAGE=http://hyperdex.org
-IUSE=test +python python_targets_python2_7
+IUSE=test +python python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=~amd64
 LICENSE=BSD
-RDEPEND=dev-cpp/glog dev-cpp/sparsehash dev-libs/cityhash >=dev-libs/hyperleveldb-1.2 >=dev-libs/libpo6-0.8 >=dev-libs/libe-0.11 >=dev-libs/busybee-0.7 dev-libs/popt >=dev-libs/replicant-0.8 >=dev-libs/libmacaroons-0.3 >=dev-libs/libtreadstone-0.2 dev-libs/json-c python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] )
-REQUIRED_USE=python? ( python_targets_python2_7 ) test? ( python )
+RDEPEND=dev-cpp/glog dev-cpp/sparsehash dev-libs/cityhash >=dev-libs/hyperleveldb-1.2 >=dev-libs/libpo6-0.8 >=dev-libs/libe-0.11 >=dev-libs/busybee-0.7 dev-libs/popt >=dev-libs/replicant-0.8 >=dev-libs/libmacaroons-0.3 >=dev-libs/libtreadstone-0.2 dev-libs/json-c:= python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python2_7 ) ) test? ( python )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://hyperdex.org/src/hyperdex-1.8.1.tar.gz http://dev.gentooexperimental.org/~patrick/autotools-java.tar
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	python-single-r1	317a2557b4d7319a7418225f65accf77	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=5f8c156a77b1c5b29ece05f86cb89680
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=c4ecd66cf1d524ed8d3dbc32364c7af2

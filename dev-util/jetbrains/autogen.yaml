@@ -1,0 +1,74 @@
+jetbrains_rule:
+  defaults:
+    cat: dev-util
+  packages:
+    - clion:
+        fullname: CLion
+        description: Cross-platform IDE for C and C++
+        license: JetBrains
+        homepage: https://www.jetbrains.com/clion
+        jid: CL
+        srcdir: CLion
+    - datagrip:
+        fullname: DataGrip
+        description: Cross-Platform IDE for Databases & SQL
+        license: JetBrains
+        homepage: https://www.jetbrains.com/datagrip
+        jid: DG
+        srcdir: DataGrip
+    - goland:
+        fullname: GoLand
+        description: Golang IDE by JetBrains
+        license: JetBrains
+        homepage: https://www.jetbrains.com/go
+        jid: GO
+        srcdir: GoLand
+    - idea-community:
+        fullname: IntelliJ IDEA Community Edition
+        description: a Java IDE by JetBrains (Community Edition)
+        license: JetBrains
+        homepage: https://www.jetbrains.com/idea
+        jid: IIC
+        srcdir: idea-IC
+    - idea-ultimate:
+        fullname: IntelliJ IDEA Ultimate
+        description: a Java IDE by JetBrains (Ultimate Edition)
+        license: JetBrains
+        homepage: https://www.jetbrains.com/idea
+        jid: IIU
+        srcdir: idea-IU
+    - phpstorm:
+        fullname: PhpStorm
+        description: a PHP IDE by JetBrains
+        license: JetBrains
+        homepage: https://www.jetbrains.com/phpstorm
+        jid: PS
+        srcdir: PhpStorm
+    - pycharm-community:
+        fullname: PyCharm Community Edition
+        description: Intelligent Python IDE with unique code assistance and analysis
+        license: JetBrains
+        homepage: https://www.jetbrains.com/python
+        jid: PCC
+        srcdir: pycharm
+    - pycharm-professional:
+        fullname: PyCharm Professional
+        description: Intelligent Python IDE with unique code assistance and analysis
+        license: JetBrains
+        homepage: https://www.jetbrains.com/python
+        jid: PCP
+        srcdir: pycharm
+    - rubymine:
+        fullname: RubyMine
+        description: The Most Intelligent Ruby and Rails IDE
+        license: JetBrains
+        homepage: https://www.jetbrains.com/ruby
+        jid: RM
+        srcdir: rubymine
+    - webstorm:
+        fullname: WebStorm
+        description: The smartest JavaScript IDE
+        license: JetBrains
+        homepage: http://www.jetbrains.com/webstorm
+        jid: WS
+        srcdir: webstorm

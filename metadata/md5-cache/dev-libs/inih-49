@@ -1,0 +1,11 @@
+BDEPEND=>=dev-util/meson-0.48.2 >=dev-util/ninja-1.7.2
+DEFINED_PHASES=compile configure install test
+DESCRIPTION=Simple .INI file parser for C/C++
+EAPI=7
+HOMEPAGE=https://github.com/benhoyt/inih
+KEYWORDS=*
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://github.com/benhoyt/inih/archive/r49.tar.gz -> inih-49.tar.gz
+_eclasses_=meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=2eb949f52200279918e2ea2fa752c02f

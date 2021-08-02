@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare setup
+DEPEND=python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python2_7(-)?,-python_single_target_python3_7(-),-python_single_target_python2_7(-)] dev-libs/gmp:0= dev-libs/mpfr:= >=dev-libs/libpcre-8.32 sys-devel/gettext doc? ( dev-util/gtk-doc ) test? ( dev-python/pocketlint dev-python/polib ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Tiny library providing a C "class" for working with arbitrary big sizes in bytes
+EAPI=6
+HOMEPAGE=https://github.com/rhinstaller/libbytesize
+IUSE=doc test python_targets_python3_7 python_targets_python2_7
+KEYWORDS=alpha amd64 arm arm64 ia64 ~mips ppc ppc64 sparc x86
+LICENSE=LGPL-2+
+RDEPEND=python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python2_7(-)?,-python_single_target_python3_7(-),-python_single_target_python2_7(-)] dev-libs/gmp:0= dev-libs/mpfr:= >=dev-libs/libpcre-8.32
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/rhinstaller/libbytesize/archive/1.2.tar.gz -> libbytesize-1.2.tar.gz
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=f3f4dda1c1f8f631a82753f020919db4

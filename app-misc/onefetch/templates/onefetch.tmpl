@@ -1,0 +1,23 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+CRATES="
+{{crates}}"
+
+inherit cargo
+
+DESCRIPTION="Onefetch is a command-line Git information tool"
+HOMEPAGE="https://github.com/o2sh/onefetch"
+SRC_URI="{{artifacts[0].src_uri}}
+	$(cargo_crate_uris ${CRATES})"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="*"
+
+src_unpack() {
+	cargo_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}

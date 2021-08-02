@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -8,16 +8,20 @@ PYTHON_COMPAT=( python2_7 )
 inherit linux-info autotools eutils python-single-r1
 
 DESCRIPTION="A linux trace/probe tool"
-HOMEPAGE="http://www.sourceware.org/systemtap/"
-SRC_URI="http://www.sourceware.org/${PN}/ftp/releases/${P}.tar.gz"
+HOMEPAGE="https://www.sourceware.org/systemtap/"
+SRC_URI="https://www.sourceware.org/${PN}/ftp/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ~arm64 ia64 ~mips ppc ppc64 s390 ~sparc x86"
 IUSE="libvirt sqlite"
 
 RDEPEND=">=dev-libs/elfutils-0.142
-	sys-libs/libcap
+	dev-libs/json-c:=
+	dev-libs/nspr
+	dev-libs/nss
+	sys-libs/ncurses:0=
+	sys-libs/readline:0=
 	${PYTHON_DEPS}
 	libvirt? ( >=app-emulation/libvirt-1.0.2 )
 	sqlite? ( dev-db/sqlite:3 )"
@@ -33,6 +37,10 @@ ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - 
 
 DOCS="AUTHORS HACKING NEWS README"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.1-ia64.patch
+)
+
 pkg_setup() {
 	linux-info_pkg_setup
 	python-single-r1_pkg_setup
@@ -47,7 +55,6 @@ src_prepare() {
 		Makefile.am \
 		staprun/Makefile.am \
 		stapdyn/Makefile.am \
-		buildrun.cxx \
 		testsuite/systemtap.unprivileged/unprivileged_probes.exp \
 		testsuite/systemtap.unprivileged/unprivileged_myproc.exp \
 		testsuite/systemtap.base/stmt_rel_user.exp \

@@ -1,0 +1,60 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+CRATES="
+{{crates}}"
+
+inherit bash-completion-r1 cargo
+
+DESCRIPTION="A modern replacement for 'ls' written in Rust"
+HOMEPAGE="https://the.exa.website/ https://github.com/{{github_user}}/{{github_repo}}"
+SRC_URI="{{artifacts[0].src_uri}}
+	$(cargo_crate_uris ${CRATES})"
+
+LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
+SLOT="0"
+KEYWORDS="*"
+IUSE="+git"
+
+BDEPEND="|| ( app-text/pandoc-bin app-text/pandoc )"
+
+DEPEND="
+	git? (
+		dev-libs/libgit2:=
+		net-libs/http-parser:=
+	)
+"
+
+RDEPEND="${DEPEND}"
+
+RESTRICT="test"
+
+QA_FLAGS_IGNORED="/usr/bin/{{github_repo}}"
+
+src_unpack() {
+	cargo_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
+
+src_compile() {
+	cargo_src_compile $(usex git "" --no-default-features)
+	find ${S}/man -iname "*.md" -type f -exec sh -c 'pandoc --standalone -f markdown -t man "${0}" -o "${0%.md} "' {} \; || die
+	rm -f ${S}/man/*.md || die
+	mv ${S}/man ${S}/man.tmp || die
+}
+
+src_install() {
+	cargo_src_install $(usex git "" --no-default-features)
+
+	newbashcomp completions/completions.bash exa
+
+	insinto /usr/share/zsh/site-functions
+	newins completions/completions.zsh _exa
+
+	insinto /usr/share/fish/vendor_completions.d
+	newins completions/completions.fish exa.fish
+
+	doman man.tmp/*
+}

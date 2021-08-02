@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-    <maintainer type="person">
-        <email>rafaelmartins@gentoo.org</email>
-        <name>Rafael G. Martins</name>
-    </maintainer>
-    <maintainer type="person">
-        <email>titanofold@gentoo.org</email>
-        <name>Aaron W. Swenson</name>
-        <description>Co-Maintainer</description>
-    </maintainer>
-    <use>
-        <flag name="fusefs">Enable the Fuse Filesystem</flag>
-        <flag name="json">Enable the JSON API of Fossil's wiki</flag>
-        <flag name="legacy-mv-rm">
-	        Enable legacy behavior for mv/rm (skip checkout files)
-        </flag>
-        <flag name="miniz">
-	        Use the bundled miniz for compression instead of zlib
-        </flag>
-        <flag name="sqlite">
-            Use the system SQLite instead of the bundled one
-        </flag>
-        <flag name="system-sqlite">
-            Use the system SQLite instead of the bundled one
-        </flag>
-        <flag name="th1-docs">
-	        Enable TH1 for embedded documentation pages
-        </flag>
-        <flag name="th1-hooks">
-	        Enable TH1 hooks for commands and web pages
-        </flag>
-    </use>
+	<maintainer type="person">
+		<email>senyai@gmail.com</email>
+		<name>Arseniy Terekhin</name>
+	</maintainer>
+	<use>
+		<flag name="openssl">Look for OpenSSL in the given path, automatically, in the source tree, or none</flag>
+		<flag name="miniz">Use miniz from the source tree</flag>
+		<flag name="zlib">Look for zlib in the given path, automatically, or in the source tree</flag>
+		<flag name="exec-rel-paths">Enable relative paths for external diff/gdiff</flag>
+		<flag name="th1-docs">Enable TH1 for embedded documentation pages</flag>
+		<flag name="th1-hooks">Enable TH1 hooks for commands and web pages</flag>
+		<flag name="tcl">Enable Tcl integration, with Tcl in the specified path</flag>
+		<flag name="tcl-stubs">Enable Tcl integration via stubs library mechanism</flag>
+		<flag name="tcl-private-stubs">Enable Tcl integration via private stubs mechanism</flag>
+		<flag name="mman">Enable use of POSIX memory APIs from "sys/mman.h"</flag>
+		<flag name="see">Enable the SQLite Encryption Extension (SEE)</flag>
+		<flag name="print-minimum-sqlite-version">print the minimum SQLite version number required, and exit</flag>
+		<flag name="internal-sqlite">Don't use the internal SQLite, use the system one</flag>
+		<flag name="static">Link a static executable</flag>
+		<flag name="fusefs">Disable the Fuse Filesystem</flag>
+		<flag name="debug">Build with fossil debugging enabled</flag>
+		<flag name="no-opt">Build without optimization</flag>
+		<flag name="json">Build with fossil JSON API enabled</flag>
+	</use>
 </pkgmetadata>

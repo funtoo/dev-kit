@@ -1,0 +1,25 @@
+diff -ru a/src/tbb/tools_api/ittnotify_config.h b/src/tbb/tools_api/ittnotify_config.h
+--- a/src/tbb/tools_api/ittnotify_config.h	2021-06-30 10:19:55.000000000 +0200
++++ b/src/tbb/tools_api/ittnotify_config.h	2021-07-08 00:16:45.860824932 +0200
+@@ -159,6 +159,10 @@
+ #  define ITT_ARCH_ARM64  6
+ #endif /* ITT_ARCH_ARM64 */
+ 
++#ifndef ITT_ARCH_RISCV64
++#  define ITT_ARCH_RISCV64  15 // Leave some room so the patch doesn't have to be updated soon.
++#endif /* ITT_ARCH_RISCV64 */
++
+ #ifndef ITT_ARCH
+ #  if defined _M_IX86 || defined __i386__
+ #    define ITT_ARCH ITT_ARCH_IA32
+@@ -172,6 +176,10 @@
+ #    define ITT_ARCH ITT_ARCH_ARM64
+ #  elif defined __powerpc64__
+ #    define ITT_ARCH ITT_ARCH_PPC64
++#  elif defined __riscv || defined __riscv__
++#    if defined __riscv_xlen && __riscv_xlen == 64
++#      define ITT_ARCH ITT_ARCH_RISCV64
++#    endif
+ #  endif
+ #endif
+ 

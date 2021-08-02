@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=dev-db/sqlite:= dev-libs/libpcre:= sys-fs/fuse:=
+DESCRIPTION=A file-based build system
+EAPI=7
+HOMEPAGE=http://gittup.org/tup
+IUSE=kernel_linux
+LICENSE=GPL-2 MIT public-domain BSD BSD-2
+PROPERTIES=live
+RDEPEND=dev-db/sqlite:= dev-libs/libpcre:= sys-fs/fuse:=
+SLOT=0
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=819a832b3716c8d7d16d87d3525a5c33

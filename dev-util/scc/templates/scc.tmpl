@@ -1,0 +1,34 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit go-module
+
+EGO_SUM=(
+{{gosum}})
+
+go-module_set_globals
+
+SRC_URI="{{artifacts[0].src_uri}}
+	${EGO_SUM_SRC_URI}"
+
+DESCRIPTION="A tool similar to cloc, sloccount and tokei"
+HOMEPAGE="https://github.com/boyter/scc"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="*"
+IUSE=""
+
+src_unpack() {
+	go-module_src_unpack
+}
+
+src_compile() {
+	go build -mod=mod . || die "compile failed"
+}
+
+src_install() {
+	dobin ${PN}
+	dodoc README.md
+}

@@ -1,14 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install prepare setup
-DEPEND=tpm? ( app-crypt/trousers ) >=dev-libs/openssl-1.1.0:0= >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=tpm? ( app-crypt/trousers ) !libressl? ( >=dev-libs/openssl-1.1.0:0= ) libressl? ( >=dev-libs/libressl-2.7.0:0= )
 DESCRIPTION=PKCS#11 provider cryptographic hardware
-EAPI=6
+EAPI=7
 HOMEPAGE=https://sourceforge.net/projects/opencryptoki
 IUSE=debug libressl +tpm
-KEYWORDS=~amd64 ~arm ~x86
+KEYWORDS=~amd64 ~arm ~s390 ~x86
 LICENSE=CPL-0.5
-RDEPEND=tpm? ( app-crypt/trousers ) >=dev-libs/openssl-1.1.0:0=
+RDEPEND=tpm? ( app-crypt/trousers ) !libressl? ( >=dev-libs/openssl-1.1.0:0= ) libressl? ( >=dev-libs/libressl-2.7.0:0= )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/opencryptoki/3.6.1/opencryptoki-3.6.1.tgz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	flag-o-matic	2274fcc1e7ef6affaff5bcd636275417	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	e4b567c44272a719fabf53f0f885d3f7
-_md5_=df7d306ee182f8badb7ccb69d31664d6
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	e68863263b1e8611dacf381bec5c8b2b
+_md5_=7ad5b9101b2b529ade3447731657719e

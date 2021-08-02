@@ -2,12 +2,12 @@ DEFINED_PHASES=compile configure install pretend setup
 DEPEND=app-arch/p7zip
 DESCRIPTION=Open Handset Alliance's Android NDK (Native Dev Kit)
 EAPI=6
-HOMEPAGE=http://developer.android.com/sdk/ndk/
+HOMEPAGE=https://developer.android.com/ndk/
 KEYWORDS=~amd64
 LICENSE=android
 RDEPEND=>=dev-util/android-sdk-update-manager-10 >=sys-devel/make-3.81 || ( sys-libs/ncurses:0/5[tinfo] sys-libs/ncurses:5/5[tinfo] )
 RESTRICT=mirror strip installsources test
 SLOT=0
 SRC_URI=https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip
-_eclasses_=check-reqs	bd050ce908e4637604ee604ed4b78e8f	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=76ae632f4ee0611c2ec4b7d6ec455a53
+_eclasses_=check-reqs	2c6f909675083dce8430b648bf737cb0
+_md5_=fca6448cb89826d406f9d6cda495cbf0

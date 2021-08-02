@@ -1,0 +1,15 @@
+BDEPEND=dev-qt/linguist-tools:5
+DEFINED_PHASES=configure install postinst postrm setup
+DEPEND=>=dev-qt/qtcore-5.9:5 >=dev-qt/qtgui-5.9:5 >=dev-qt/qtnetwork-5.9:5 >=dev-qt/qtwidgets-5.9:5 sys-libs/zlib python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) )
+DESCRIPTION=A general purpose tile map editor
+EAPI=7
+HOMEPAGE=https://www.mapeditor.org/
+IUSE=examples python python_single_target_python3_7 python_targets_python3_7
+KEYWORDS=~amd64
+LICENSE=BSD BSD-2 GPL-2+
+RDEPEND=>=dev-qt/qtcore-5.9:5 >=dev-qt/qtgui-5.9:5 >=dev-qt/qtnetwork-5.9:5 >=dev-qt/qtwidgets-5.9:5 sys-libs/zlib python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python3_7 ) )
+SLOT=0
+SRC_URI=https://github.com/bjorn/tiled/archive/v1.2.4/tiled-1.2.4.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	multilib	d410501a125f99ffb560b0c523cd3d1e	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=2bb674138baaa75f317ce73ef9c0e937

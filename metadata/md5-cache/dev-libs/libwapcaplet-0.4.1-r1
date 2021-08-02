@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install test
+DEPEND=>=dev-util/netsurf-buildsystem-1.7-r1 test? ( >=dev-libs/check-0.9.11 )
+DESCRIPTION=string internment library, written in C
+EAPI=7
+HOMEPAGE=http://www.netsurf-browser.org/projects/libwapcaplet/
+IUSE=test
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~m68k-mint
+LICENSE=MIT
+SLOT=0/0.4.1
+SRC_URI=https://download.netsurf-browser.org/libs/releases/libwapcaplet-0.4.1-src.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=225f3da5740e001bd9aa6fea2bca1f3d

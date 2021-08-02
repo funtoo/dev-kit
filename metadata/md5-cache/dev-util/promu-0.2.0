@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare test unpack
+DEPEND=>=dev-lang/go-1.11 >=dev-lang/go-1.10
+DESCRIPTION=Prometheus Utility Tool
+EAPI=6
+HOMEPAGE=https://github.com/prometheus/promu
+KEYWORDS=amd64
+LICENSE=Apache-2.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/prometheus/promu/archive/v0.2.0.tar.gz -> promu-0.2.0.tar.gz
+_eclasses_=golang-base	e62ea82a4485a73fb191120f7aad958e	golang-build	2ecd6011551701f98dd49a0341318936	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=bce5be305ad05224e7f9a18b3675cd98

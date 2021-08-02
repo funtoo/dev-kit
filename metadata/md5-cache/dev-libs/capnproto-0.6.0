@@ -1,12 +1,12 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=test? ( dev-cpp/gtest ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=test? ( dev-cpp/gtest ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=RPC/Serialization system with capabilities support
 EAPI=5
-HOMEPAGE=http://capnproto.org
+HOMEPAGE=https://capnproto.org
 IUSE=static-libs test
-KEYWORDS=~amd64 ~arm ~arm64
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=MIT
 SLOT=0/060
 SRC_URI=https://github.com/sandstorm-io/capnproto/archive/v0.6.0.tar.gz -> capnproto-0.6.0.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=19182a7badeba09069b3c6f7797ec7a8
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=bcf1726401f41e3315aab485050d08f0
