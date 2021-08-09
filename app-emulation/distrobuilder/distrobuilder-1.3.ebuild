@@ -6,7 +6,7 @@ inherit go-module linux-info
 
 DESCRIPTION="System container image builder for LXC and LXD"
 HOMEPAGE="https://linuxcontainers.org/distrobuilder/introduction/"
-SRC_URI="https://linuxcontainers.org/downloads/distrobuilder/distrobuilder-1.2.tar.gz"
+SRC_URI="https://linuxcontainers.org/downloads/distrobuilder/distrobuilder-1.3.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
