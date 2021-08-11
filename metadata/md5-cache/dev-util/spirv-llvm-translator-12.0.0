@@ -1,15 +1,15 @@
 BDEPEND=dev-util/ninja >=dev-util/cmake-3.9.6
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=sys-devel/clang:11= !!sys-devel/llvm:0
+DEPEND=sys-devel/clang:12= !!sys-devel/llvm:0
 DESCRIPTION=Bi-directional translator between SPIR-V and LLVM IR
 EAPI=7
 HOMEPAGE=https://github.com/KhronosGroup/SPIRV-LLVM-Translator
 IUSE=tools
 KEYWORDS=*
 LICENSE=UoI-NCSA
-RDEPEND=sys-devel/clang:11=
+RDEPEND=sys-devel/clang:12=
 RESTRICT=test
-SLOT=11
-SRC_URI=https://api.github.com/repos/KhronosGroup/SPIRV-LLVM-Translator/tarball/v11.0.0 -> spirv-llvm-translator-11.0.0.tar.gz
+SLOT=12
+SRC_URI=https://api.github.com/repos/KhronosGroup/SPIRV-LLVM-Translator/tarball/v12.0.0 -> spirv-llvm-translator-12.0.0.tar.gz
 _eclasses_=cmake-utils	77cd39e6009811bf97a59d91ffd5b54f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	llvm	21d8c0949a2693d7109cc6a25fabfcaf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=d9e3ae3e308040b99b4c6e9699df0974
+_md5_=a59396963272ecea988567bbf1632a22
