@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=X? ( x11-libs/libX11 )
+DESCRIPTION=libspnav is a replacement for the magellan library with a cleaner API
+EAPI=7
+HOMEPAGE=http://spacenav.sourceforge.net/
+IUSE=static-libs X
+KEYWORDS=*
+LICENSE=BSD
+RDEPEND=app-misc/spacenavd[X?] X? ( x11-libs/libX11 )
+SLOT=0
+SRC_URI=https://api.github.com/repos/FreeSpacenav/libspnav/tarball/libspnav-0.2.3 -> libspnav-0.2.3.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=5132d7e343b1dd0ee04f92637cf25544

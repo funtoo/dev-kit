@@ -1,0 +1,14 @@
+BDEPEND=doc? ( app-doc/doxygen[dot] dev-texlive/texlive-bibtexextra dev-texlive/texlive-fontsextra dev-texlive/texlive-fontutils dev-texlive/texlive-latex dev-texlive/texlive-latexextra ) dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=cuda? ( dev-util/nvidia-cuda-toolkit )
+DESCRIPTION=C++ template library for linear algebra
+EAPI=7
+HOMEPAGE=http://eigen.tuxfamily.org/index.php?title=Main_Page
+IUSE=cuda doc
+KEYWORDS=*
+LICENSE=MPL-2.0
+RESTRICT=test
+SLOT=3
+SRC_URI=https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.bz2
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	cuda	bb861e5221b7272ac90c2f12791c1e66	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=c2d559c6e86482744da8be64274feee8
