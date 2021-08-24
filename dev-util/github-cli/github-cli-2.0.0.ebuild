@@ -44,8 +44,8 @@ EGO_SUM=(
 	"cloud.google.com/go/storage v1.8.0/go.mod"
 	"cloud.google.com/go/storage v1.10.0/go.mod"
 	"dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod"
-	"github.com/AlecAivazis/survey/v2 v2.2.14"
-	"github.com/AlecAivazis/survey/v2 v2.2.14/go.mod"
+	"github.com/AlecAivazis/survey/v2 v2.3.1"
+	"github.com/AlecAivazis/survey/v2 v2.3.1/go.mod"
 	"github.com/BurntSushi/toml v0.3.1/go.mod"
 	"github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod"
 	"github.com/MakeNowJust/heredoc v1.0.0"
@@ -266,8 +266,6 @@ EGO_SUM=(
 	"github.com/miekg/dns v1.0.14/go.mod"
 	"github.com/mitchellh/cli v1.0.0/go.mod"
 	"github.com/mitchellh/go-homedir v1.0.0/go.mod"
-	"github.com/mitchellh/go-homedir v1.1.0"
-	"github.com/mitchellh/go-homedir v1.1.0/go.mod"
 	"github.com/mitchellh/go-testing-interface v1.0.0/go.mod"
 	"github.com/mitchellh/gox v0.4.0/go.mod"
 	"github.com/mitchellh/iochan v1.0.0/go.mod"
@@ -277,8 +275,9 @@ EGO_SUM=(
 	"github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod"
 	"github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742/go.mod"
 	"github.com/modern-go/reflect2 v1.0.1/go.mod"
-	"github.com/muesli/reflow v0.2.0"
 	"github.com/muesli/reflow v0.2.0/go.mod"
+	"github.com/muesli/reflow v0.2.1-0.20210502190812-c80126ec2ad5"
+	"github.com/muesli/reflow v0.2.1-0.20210502190812-c80126ec2ad5/go.mod"
 	"github.com/muesli/termenv v0.8.1"
 	"github.com/muesli/termenv v0.8.1/go.mod"
 	"github.com/olekukonko/tablewriter v0.0.5"
@@ -709,7 +708,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v1.14.0 -> cli-v1.14.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.0.0 -> cli-v2.0.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -724,7 +723,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v1.14.0"
+	export GH_VERSION="v2.0.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
