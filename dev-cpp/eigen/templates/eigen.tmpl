@@ -28,11 +28,6 @@ BDEPEND="
 DEPEND="
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 "
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-3.3.7-gentoo-cmake.patch
-)
-
 src_prepare() {
 	cmake_src_prepare
 
