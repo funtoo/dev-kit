@@ -1,0 +1,32 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit go-module
+
+EGO_SUM=(
+{{gosum}})
+
+go-module_set_globals
+
+DESCRIPTION="Run your GitHub Actions locally"
+HOMEPAGE="https://github.com/nektos/act"
+SRC_URI="{{artifacts[0].src_uri}}
+	${EGO_SUM_SRC_URI}"
+
+RDEPEND="
+	app-emulation/docker
+"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="*"
+
+post_src_unpack() {
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
+
+src_install() {
+	dobin dist/local/${PN}
+	dodoc README.md
+}
