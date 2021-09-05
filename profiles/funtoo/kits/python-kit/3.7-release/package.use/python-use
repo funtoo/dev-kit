@@ -9,6 +9,7 @@
 =dev-db/pgxnclient-1.2-r1 python_single_target_python2_7
 =dev-libs/libreport-2.0.13-r1 python_single_target_python2_7
 =dev-libs/xapian-bindings-1.2.25 python_single_target_python2_7
+=dev-util/apitrace-8.0 python_single_target_python2_7
 =dev-util/buildbot-0.8.12-r3 python_single_target_python2_7
 =dev-util/catalyst-2.0.18-r1 python_single_target_python2_7
 =dev-util/catalyst-2.0.18-r4 python_single_target_python2_7
@@ -383,7 +384,6 @@ dev-ros/visualization_msgs python_single_target_python2_7
 dev-ros/voxel_grid python_single_target_python2_7
 dev-ros/xacro python_single_target_python2_7
 dev-ros/xmlrpcpp python_single_target_python2_7
-dev-util/apitrace python_single_target_python2_7
 dev-util/bakefile python_single_target_python2_7
 dev-util/bam python_single_target_python2_7
 dev-util/buildbot-slave python_single_target_python2_7
