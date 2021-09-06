@@ -16,9 +16,9 @@ ARD_PF="${ARD_PN}-${PVR}"
 DESCRIPTION="AVR development board IDE and built-in libraries"
 HOMEPAGE="http://arduino.cc/en/Main/Software"
 SRC_URI="
-	amd64? ( http://www.arduino.cc/download.php?f=/arduino-1.8.15-linux64.tar.xz -> arduino-bin_amd64-1.8.15.tar.xz )
+	amd64? ( http://www.arduino.cc/download.php?f=/arduino-1.8.16-linux64.tar.xz -> arduino-bin_amd64-1.8.16.tar.xz )
 
-	x86? ( http://www.arduino.cc/download.php?f=/arduino-1.8.15-linux32.tar.xz -> arduino-bin_i386-1.8.15.tar.xz )
+	x86? ( http://www.arduino.cc/download.php?f=/arduino-1.8.16-linux32.tar.xz -> arduino-bin_i386-1.8.16.tar.xz )
 "
 
 RESTRICT="strip mirror test"
