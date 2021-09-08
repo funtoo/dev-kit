@@ -1,0 +1,35 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+CRATES="{{crates}}"
+
+inherit cargo
+
+DESCRIPTION="Helper program to build and install c-like libraries"
+HOMEPAGE="https://github.com/lu-zero/cargo-c"
+SRC_URI="{{artifacts[0].src_uri}}
+	$(cargo_crate_uris ${CRATES})"
+
+RESTRICT="mirror"
+# License set may be more restrictive as OR is not respected
+# use cargo-license for a more accurate license picture
+LICENSE="Apache-2.0 MIT"
+SLOT="0"
+KEYWORDS="*"
+
+BDEPEND="{% if version.rsplit(".", 1)[0]|float() >= 0.8 %}
+	>=virtual/rust-1.51.0
+{% endif %}"
+
+RDEPEND="sys-libs/zlib
+	dev-libs/openssl:0=
+	net-libs/libssh2
+	net-misc/curl[ssl]
+"
+
+src_unpack() {
+	cargo_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
