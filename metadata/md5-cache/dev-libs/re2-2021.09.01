@@ -1,0 +1,14 @@
+BDEPEND=icu? ( virtual/pkgconfig )
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=icu? ( dev-libs/icu )
+DESCRIPTION=An efficient, principled regular expression library
+EAPI=7
+HOMEPAGE=https://github.com/google/re2
+IUSE=icu
+KEYWORDS=*
+LICENSE=BSD
+RDEPEND=icu? ( dev-libs/icu )
+SLOT=0/9
+SRC_URI=https://api.github.com/repos/google/re2/tarball/2021-09-01 -> re2-2021.09.01.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=299609da8994ccf5c35903b79fcde6c7
