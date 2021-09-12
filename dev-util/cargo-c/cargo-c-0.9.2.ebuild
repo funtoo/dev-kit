@@ -117,7 +117,7 @@ tempfile-3.2.0
 termcolor-1.1.2
 textwrap-0.11.0
 thread_local-1.1.3
-tinyvec-1.3.1
+tinyvec-1.4.0
 tinyvec_macros-0.1.0
 toml-0.5.8
 typenum-1.14.0
