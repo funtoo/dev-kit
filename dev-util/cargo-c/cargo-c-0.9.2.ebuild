@@ -33,7 +33,7 @@ curl-sys-0.4.45+curl-7.78.0
 either-1.6.1
 env_logger-0.8.4
 filetime-0.2.15
-flate2-1.0.21
+flate2-1.0.22
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
