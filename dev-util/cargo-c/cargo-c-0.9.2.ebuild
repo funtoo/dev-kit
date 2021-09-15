@@ -29,7 +29,7 @@ crc32fast-1.2.1
 crossbeam-utils-0.8.5
 crypto-hash-0.3.4
 curl-0.4.38
-curl-sys-0.4.45+curl-7.78.0
+curl-sys-0.4.46+curl-7.79.0
 either-1.6.1
 env_logger-0.8.4
 filetime-0.2.15
@@ -60,7 +60,7 @@ itoa-0.4.8
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.101
+libc-0.2.102
 libgit2-sys-0.12.23+1.2.0
 libnghttp2-sys-0.1.6+1.43.0
 libssh2-sys-0.2.21
@@ -106,7 +106,7 @@ serde_ignored-0.1.2
 serde_json-1.0.68
 shell-escape-0.1.5
 sized-chunks-0.6.5
-socket2-0.4.1
+socket2-0.4.2
 strip-ansi-escapes-0.1.1
 strsim-0.8.0
 structopt-0.3.23
