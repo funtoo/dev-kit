@@ -29,7 +29,7 @@ crc32fast-1.2.1
 crossbeam-utils-0.8.5
 crypto-hash-0.3.4
 curl-0.4.38
-curl-sys-0.4.46+curl-7.79.0
+curl-sys-0.4.47+curl-7.79.0
 either-1.6.1
 env_logger-0.9.0
 filetime-0.2.15
