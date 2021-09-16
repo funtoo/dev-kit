@@ -13,7 +13,7 @@ bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.16
 bytesize-1.1.0
-cargo-0.55.0
+cargo-0.56.0
 cargo-platform-0.1.2
 cargo-util-0.1.1
 cbindgen-0.20.0
@@ -31,7 +31,7 @@ crypto-hash-0.3.4
 curl-0.4.38
 curl-sys-0.4.46+curl-7.79.0
 either-1.6.1
-env_logger-0.8.4
+env_logger-0.9.0
 filetime-0.2.15
 flate2-1.0.22
 fnv-1.0.7
@@ -72,7 +72,7 @@ miniz_oxide-0.4.4
 miow-0.3.7
 num_cpus-1.13.0
 once_cell-1.8.0
-opener-0.4.1
+opener-0.5.0
 openssl-0.10.36
 openssl-probe-0.1.4
 openssl-src-111.16.0+1.1.1l
@@ -92,10 +92,11 @@ rand_hc-0.3.1
 rand_xoshiro-0.4.0
 redox_syscall-0.2.10
 regex-1.5.4
+regex-automata-0.1.10
 regex-syntax-0.6.25
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
-rustfix-0.5.1
+rustfix-0.6.0
 ryu-1.0.5
 same-file-1.0.6
 schannel-0.1.19
@@ -145,7 +146,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.2 -> cargo-c-0.9.2.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.3 -> cargo-c-0.9.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 RESTRICT="mirror"
