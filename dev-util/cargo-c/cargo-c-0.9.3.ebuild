@@ -29,7 +29,7 @@ crc32fast-1.2.1
 crossbeam-utils-0.8.5
 crypto-hash-0.3.4
 curl-0.4.38
-curl-sys-0.4.46+curl-7.79.0
+curl-sys-0.4.47+curl-7.79.0
 either-1.6.1
 env_logger-0.9.0
 filetime-0.2.15
@@ -125,7 +125,7 @@ typenum-1.14.0
 unicode-bidi-0.3.6
 unicode-normalization-0.1.19
 unicode-segmentation-1.8.0
-unicode-width-0.1.8
+unicode-width-0.1.9
 unicode-xid-0.2.2
 url-2.2.2
 utf8parse-0.2.0
