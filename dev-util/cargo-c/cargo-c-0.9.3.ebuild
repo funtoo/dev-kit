@@ -62,7 +62,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.102
 libgit2-sys-0.12.23+1.2.0
-libnghttp2-sys-0.1.6+1.43.0
+libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.21
 libz-sys-1.1.3
 log-0.4.14
