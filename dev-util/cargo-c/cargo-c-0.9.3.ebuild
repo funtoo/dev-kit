@@ -11,7 +11,7 @@ atty-0.2.14
 autocfg-1.0.1
 bitflags-1.3.2
 bitmaps-2.1.0
-bstr-0.2.16
+bstr-0.2.17
 bytesize-1.1.0
 cargo-0.56.0
 cargo-platform-0.1.2
