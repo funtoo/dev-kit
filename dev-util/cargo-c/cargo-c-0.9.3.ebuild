@@ -11,7 +11,7 @@ atty-0.2.14
 autocfg-1.0.1
 bitflags-1.3.2
 bitmaps-2.1.0
-bstr-0.2.16
+bstr-0.2.17
 bytesize-1.1.0
 cargo-0.56.0
 cargo-platform-0.1.2
@@ -62,7 +62,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.102
 libgit2-sys-0.12.23+1.2.0
-libnghttp2-sys-0.1.6+1.43.0
+libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.21
 libz-sys-1.1.3
 log-0.4.14
