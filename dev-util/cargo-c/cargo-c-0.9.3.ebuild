@@ -29,7 +29,7 @@ crc32fast-1.2.1
 crossbeam-utils-0.8.5
 crypto-hash-0.3.4
 curl-0.4.38
-curl-sys-0.4.47+curl-7.79.0
+curl-sys-0.4.48+curl-7.79.1
 either-1.6.1
 env_logger-0.9.0
 filetime-0.2.15
@@ -76,7 +76,7 @@ opener-0.5.0
 openssl-0.10.36
 openssl-probe-0.1.4
 openssl-src-111.16.0+1.1.1l
-openssl-sys-0.9.66
+openssl-sys-0.9.67
 percent-encoding-2.1.0
 pkg-config-0.3.19
 ppv-lite86-0.2.10
