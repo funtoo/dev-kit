@@ -146,7 +146,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.3 -> cargo-c-0.9.3.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.4 -> cargo-c-0.9.4.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 RESTRICT="mirror"
