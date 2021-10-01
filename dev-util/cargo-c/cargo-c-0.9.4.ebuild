@@ -28,8 +28,8 @@ crates-io-0.33.0
 crc32fast-1.2.1
 crossbeam-utils-0.8.5
 crypto-hash-0.3.4
-curl-0.4.38
-curl-sys-0.4.48+curl-7.79.1
+curl-0.4.39
+curl-sys-0.4.49+curl-7.79.1
 either-1.6.1
 env_logger-0.9.0
 filetime-0.2.15
@@ -40,7 +40,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.0.1
 fwdansi-1.1.0
 getrandom-0.2.3
-git2-0.13.22
+git2-0.13.23
 git2-curl-0.14.1
 glob-0.3.0
 globset-0.4.8
@@ -61,7 +61,7 @@ jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.103
-libgit2-sys-0.12.23+1.2.0
+libgit2-sys-0.12.24+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.21
 libz-sys-1.1.3
