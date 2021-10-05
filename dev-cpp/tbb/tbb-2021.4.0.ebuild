@@ -25,7 +25,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 PATCHES=(
-	"${FILESDIR}/tbb-2021.3.0-cmake-hwloc.patch"
+	"${FILESDIR}/tbb-2021.4.0-cmake-hwloc.patch"
 	"${FILESDIR}/tbb-2021.3.0-riscv.patch"
 )
 
