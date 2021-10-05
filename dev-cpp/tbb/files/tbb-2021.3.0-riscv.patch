@@ -1,6 +1,6 @@
-diff -ru a/src/tbb/tools_api/ittnotify_config.h b/src/tbb/tools_api/ittnotify_config.h
---- a/src/tbb/tools_api/ittnotify_config.h	2021-06-30 10:19:55.000000000 +0200
-+++ b/src/tbb/tools_api/ittnotify_config.h	2021-07-08 00:16:45.860824932 +0200
+diff -urN tbb-2021.4.0/src/tbb/tools_api/ittnotify_config.h tbb-2021.4.0-fixed/src/tbb/tools_api/ittnotify_config.h
+--- tbb-2021.4.0/src/tbb/tools_api/ittnotify_config.h	2021-10-04 03:50:18.000000000 -0600
++++ tbb-2021.4.0-fixed/src/tbb/tools_api/ittnotify_config.h	2021-10-04 18:23:19.852545545 -0600
 @@ -159,6 +159,10 @@
  #  define ITT_ARCH_ARM64  6
  #endif /* ITT_ARCH_ARM64 */
