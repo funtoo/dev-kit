@@ -1,0 +1,23 @@
+diff -urN tbb-2021.4.0/CMakeLists.txt tbb-2021.4.0-fixed/CMakeLists.txt
+--- tbb-2021.4.0/CMakeLists.txt	2021-10-04 03:50:18.000000000 -0600
++++ tbb-2021.4.0-fixed/CMakeLists.txt	2021-10-04 18:16:34.161143833 -0600
+@@ -92,6 +92,7 @@
+     set(TBB_ARCH 64)
+ endif()
+ 
++option(TBBBIND_BUILD "Enable tbbbind build" ON)
+ option(TBB_TEST "Enable testing" ON)
+ option(TBB_EXAMPLES "Enable examples" OFF)
+ option(TBB_STRICT "Treat compiler warnings as errors" ON)
+@@ -198,8 +199,10 @@
+         add_subdirectory(src/tbbmalloc_proxy)
+         if (APPLE)
+             message(STATUS "TBBBind build targets are disabled due to unsupported environment")
+-        else()
++        elseif(TBBBIND_BUILD)
+             add_subdirectory(src/tbbbind)
++        else()
++            message(STATUS "TBBBind build target is disabled")
+         endif()
+     endif()
+ 
