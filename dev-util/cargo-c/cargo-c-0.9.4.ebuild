@@ -112,7 +112,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.8.0
 structopt-0.3.23
 structopt-derive-0.4.16
-syn-1.0.78
+syn-1.0.79
 tar-0.4.37
 tempfile-3.2.0
 termcolor-1.1.2
