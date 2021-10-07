@@ -122,7 +122,7 @@ tinyvec-1.5.0
 tinyvec_macros-0.1.0
 toml-0.5.8
 typenum-1.14.0
-unicode-bidi-0.3.6
+unicode-bidi-0.3.7
 unicode-normalization-0.1.19
 unicode-segmentation-1.8.0
 unicode-width-0.1.9
