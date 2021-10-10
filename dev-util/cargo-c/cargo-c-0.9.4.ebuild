@@ -63,7 +63,7 @@ lazycell-1.3.0
 libc-0.2.103
 libgit2-sys-0.12.24+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
-libssh2-sys-0.2.21
+libssh2-sys-0.2.23
 libz-sys-1.1.3
 log-0.4.14
 matches-0.1.9
