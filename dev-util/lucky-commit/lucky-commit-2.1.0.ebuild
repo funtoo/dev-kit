@@ -64,6 +64,8 @@ scopeguard-1.1.0
 semver-0.1.20
 sha-1-0.9.8
 sha1-asm-0.5.1
+sha2-0.9.8
+sha2-asm-0.6.2
 syn-1.0.74
 synstructure-0.12.5
 typenum-1.14.0
@@ -78,7 +80,7 @@ inherit cargo
 
 DESCRIPTION="Make your git commits lucky!"
 HOMEPAGE="https://github.com/not-an-aardvark/lucky-commit"
-SRC_URI="https://api.github.com/repos/not-an-aardvark/lucky-commit/tarball/refs/tags/v2.0.5 -> lucky-commit-2.0.5.tar.gz
+SRC_URI="https://api.github.com/repos/not-an-aardvark/lucky-commit/tarball/refs/tags/v2.1.0 -> lucky-commit-2.1.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
