@@ -82,7 +82,7 @@ pkg-config-0.3.20
 ppv-lite86-0.2.10
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.29
+proc-macro2-1.0.30
 quote-1.0.10
 rand-0.8.4
 rand_chacha-0.3.1
