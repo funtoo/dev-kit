@@ -22,8 +22,8 @@ cfg-if-1.0.0
 clap-2.33.3
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
-core-foundation-0.9.1
-core-foundation-sys-0.8.2
+core-foundation-0.9.2
+core-foundation-sys-0.8.3
 crates-io-0.33.0
 crc32fast-1.2.1
 crossbeam-utils-0.8.5
@@ -82,7 +82,7 @@ pkg-config-0.3.20
 ppv-lite86-0.2.10
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.29
+proc-macro2-1.0.30
 quote-1.0.10
 rand-0.8.4
 rand_chacha-0.3.1
