@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -13,7 +12,7 @@ SRC_URI="https://dev.gentoo.org/~polynomial-c/${MY_P}.tar.xz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="*"
 IUSE=""
 
 DEPEND="
@@ -30,6 +29,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.1.9998_pre20120806-qa.patch"
 	"${FILESDIR}/${PN}-0.1.9998_pre20110817-kash-link-pthread.patch"
 	"${FILESDIR}/${PN}-0.1.9998_pre20171020-gold.patch"
+	"${FILESDIR}/${PN}-0.1.9998-stat-sys_siglist.patch"
 )
 
 pkg_setup() {
