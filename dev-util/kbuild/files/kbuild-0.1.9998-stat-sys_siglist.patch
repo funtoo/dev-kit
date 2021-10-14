@@ -1,0 +1,26 @@
+--- a/src/kmk/glob/glob.c	2021-10-13 14:47:34.201076450 +0300
++++ b/src/kmk/glob/glob.c	2021-10-13 14:55:22.433085628 +0300
+@@ -258,6 +258,10 @@
+ # endif
+ #endif
+ 
++#ifndef __stat
++#define __stat stat
++#endif
++
+ #if !(defined STDC_HEADERS || defined __GNU_LIBRARY__)
+ # undef	size_t
+ # define size_t	unsigned int
+--- a/src/kash/jobs.c 2021-10-13 14:59:10.585090100 +0300
++++ b/src/kash/jobs.c 2021-10-13 14:59:55.133090973 +0300
+@@ -396,8 +396,8 @@
+ #endif
+ 				st = WTERMSIG(ps->status);
+ 			st &= 0x7f;
+-			if (st < NSIG && sys_siglist[st])
+-				scopyn(sys_siglist[st], s + col, 32);
++			if (st < NSIG && strsignal(st))
++				scopyn(strsignal(st), s + col, 32);
+ 			else
+ 				fmtstr(s + col, 16, "Signal %d", st);
+ 			if (WCOREDUMP(ps->status)) {
