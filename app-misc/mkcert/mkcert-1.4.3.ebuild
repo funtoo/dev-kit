@@ -5,8 +5,8 @@ EAPI=7
 inherit go-module
 
 EGO_SUM=(
-	"github.com/BurntSushi/toml v0.3.1"
-	"github.com/BurntSushi/toml v0.3.1/go.mod"
+	"github.com/!burnt!sushi/toml v0.3.1"
+	"github.com/!burnt!sushi/toml v0.3.1/go.mod"
 	"github.com/google/renameio v0.1.0/go.mod"
 	"github.com/jessevdk/go-flags v1.4.0/go.mod"
 	"github.com/kisielk/gotool v1.0.0/go.mod"
