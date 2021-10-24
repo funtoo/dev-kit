@@ -78,8 +78,8 @@ openssl-probe-0.1.4
 openssl-src-111.16.0+1.1.1l
 openssl-sys-0.9.67
 percent-encoding-2.1.0
-pkg-config-0.3.21
-ppv-lite86-0.2.14
+pkg-config-0.3.22
+ppv-lite86-0.2.15
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.30
