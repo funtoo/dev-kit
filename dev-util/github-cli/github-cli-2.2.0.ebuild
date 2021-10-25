@@ -82,8 +82,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.1.0/go.mod"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03/go.mod"
-	"github.com/cli/oauth v0.8.0"
-	"github.com/cli/oauth v0.8.0/go.mod"
+	"github.com/cli/oauth v0.9.0"
+	"github.com/cli/oauth v0.9.0/go.mod"
 	"github.com/cli/safeexec v1.0.0"
 	"github.com/cli/safeexec v1.0.0/go.mod"
 	"github.com/cli/shurcoo!l-graphql v0.0.0-20200707151639-0f7232a2bf7e"
@@ -97,8 +97,8 @@ EGO_SUM=(
 	"github.com/cpuguy83/go-md2man/v2 v2.0.0/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.1"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.1/go.mod"
-	"github.com/creack/pty v1.1.16"
-	"github.com/creack/pty v1.1.16/go.mod"
+	"github.com/creack/pty v1.1.17"
+	"github.com/creack/pty v1.1.17/go.mod"
 	"github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964"
 	"github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964/go.mod"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
@@ -113,8 +113,6 @@ EGO_SUM=(
 	"github.com/envoyproxy/go-control-plane v0.9.9-0.20201210154907-fd9021fe5dad/go.mod"
 	"github.com/envoyproxy/go-control-plane v0.9.9-0.20210217033140-668b12f5399d/go.mod"
 	"github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod"
-	"github.com/fatih/camelcase v1.0.0"
-	"github.com/fatih/camelcase v1.0.0/go.mod"
 	"github.com/fatih/color v1.7.0"
 	"github.com/fatih/color v1.7.0/go.mod"
 	"github.com/fsnotify/fsnotify v1.4.9/go.mod"
@@ -722,7 +720,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.1.0 -> cli-v2.1.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.2.0 -> cli-v2.2.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -737,7 +735,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.1.0"
+	export GH_VERSION="v2.2.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
