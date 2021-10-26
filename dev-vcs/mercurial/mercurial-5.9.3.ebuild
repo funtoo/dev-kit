@@ -9,7 +9,7 @@ inherit bash-completion-r1 elisp-common eutils distutils-r1 flag-o-matic
 
 DESCRIPTION="Scalable distributed SCM"
 HOMEPAGE="https://www.mercurial-scm.org/"
-SRC_URI="https://files.pythonhosted.org/packages/05/9e/b660abf0fabaf594134f2c1989ed458126291a21d5d8e5c4ef3b589c0512/mercurial-5.9.2.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/af/d2/2be6f3d4b3972b9eb23a3731835b57690e53ceebb44dcee0b3602d30f0b5/mercurial-5.9.3.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
