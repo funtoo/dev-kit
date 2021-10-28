@@ -73,10 +73,10 @@ miow-0.3.7
 num_cpus-1.13.0
 once_cell-1.8.0
 opener-0.5.0
-openssl-0.10.36
+openssl-0.10.37
 openssl-probe-0.1.4
 openssl-src-111.16.0+1.1.1l
-openssl-sys-0.9.67
+openssl-sys-0.9.68
 percent-encoding-2.1.0
 pkg-config-0.3.22
 ppv-lite86-0.2.15
