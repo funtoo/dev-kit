@@ -30,7 +30,6 @@ async def generate(hub, **pkginfo):
 	latest_version = tag_name.lstrip("v")
 
 	source_name = f"{pkginfo.get('name')}_{latest_version}_amd64.deb"
-
 	source_asset = next(
 		asset for asset in latest_release["assets"] if asset["name"] == source_name
 	)
