@@ -28,8 +28,8 @@ crates-io-0.33.0
 crc32fast-1.2.1
 crossbeam-utils-0.8.5
 crypto-hash-0.3.4
-curl-0.4.39
-curl-sys-0.4.49+curl-7.79.1
+curl-0.4.40
+curl-sys-0.4.50+curl-7.79.1
 either-1.6.1
 env_logger-0.9.0
 filetime-0.2.15
