@@ -4,7 +4,6 @@ import re
 from packaging import version
 from bs4 import BeautifulSoup
 
-
 async def generate(hub, **pkginfo):
     name = pkginfo["name"]
     homepage_data = await hub.pkgtools.fetch.get_page(
@@ -12,7 +11,8 @@ async def generate(hub, **pkginfo):
     )
     homepage_soup = BeautifulSoup(homepage_data, "html.parser")
 
-    name_pattern = re.compile(f"({name}-(.*)\\.tar\\.gz)")
+    # FL-9035: Match only 0.1.* for now due to neovim:
+    name_pattern = re.compile(f"({name}-(0\\.1\\.[0-9]+)\\.tar\\.gz)")
 
     link_matches = (
         name_pattern.match(link.get("href"))
@@ -20,7 +20,7 @@ async def generate(hub, **pkginfo):
     )
 
     valid_matches = (match.groups() for match in link_matches if match)
-    release_matches = (match for match in valid_matches if "rc" not in match[1].lower())
+    release_matches = (match for match in valid_matches if match[1].lower().startswith("0.1."))
 
     target_filename, target_version = max(
         release_matches, key=lambda match: version.parse(match[1])
