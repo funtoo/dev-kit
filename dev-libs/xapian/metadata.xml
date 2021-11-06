@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>blueness@gentoo.org</email>
-		<name>Anthony G. Basile</name>
-	</maintainer>
 	<longdescription lang="en">
 		Xapian is an Open Source Probabilistic Information Retrieval library,
 		released under the GPL. It's written in C++, with bindings to allow use

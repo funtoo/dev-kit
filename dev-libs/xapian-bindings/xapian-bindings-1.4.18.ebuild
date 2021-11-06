@@ -1,21 +1,22 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+LUA_COMPAT=( lua5-{1..4} luajit )
+
+PYTHON_COMPAT=( python3_{7,8,9} )
 PYTHON_REQ_USE="threads(+)"
 
-USE_PHP="php5-6 php7-1 php7-2"
+USE_PHP="php7-2 php7-3 php7-4"
 
 PHP_EXT_NAME="xapian"
 PHP_EXT_INI="yes"
 PHP_EXT_OPTIONAL_USE="php"
 
-USE_RUBY="ruby22 ruby23 ruby24"
+USE_RUBY="ruby25 ruby26 ruby27 ruby30"
 RUBY_OPTIONAL="yes"
 
-inherit java-pkg-opt-2 mono-env multibuild php-ext-source-r3 python-r1 ruby-ng toolchain-funcs
+inherit java-pkg-opt-2 lua mono-env multibuild php-ext-source-r3 python-r1 ruby-ng
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="https://www.xapian.org/"
@@ -23,15 +24,17 @@ SRC_URI="https://oligarchy.co.uk/xapian/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="next"
 IUSE="java lua mono perl php python ruby tcl"
 REQUIRED_USE="|| ( java lua mono perl php python ruby tcl )
+	lua? ( ${LUA_REQUIRED_USE} )
 	python? ( ${PYTHON_REQUIRED_USE} )
 	ruby? ( || ( $(ruby_get_use_targets) ) )"
 
-COMMONDEPEND=">=dev-libs/xapian-1.4.9:0/30
-	lua? ( dev-lang/lua:= )
+COMMONDEPEND=">=dev-libs/xapian-1.4.15
+	lua? ( ${LUA_DEPS} )
 	perl? ( dev-lang/perl:= )
+	php? ( dev-lang/php:=[-threads] )
 	python? (
 		dev-python/sphinx[${PYTHON_USEDEP}]
 		${PYTHON_DEPS}
@@ -49,8 +52,8 @@ S="${WORKDIR}/${P}"
 
 has_basic_bindings() {
 	# Update this list if new bindings are added that are not built
-	# multiple times for multiple versions like php, python and ruby are
-	return $(use mono || use java || use lua || use perl || use tcl)
+	# multiple times for multiple versions like lua, php, python and ruby are
+	return $(use mono || use java || use perl || use tcl)
 }
 
 php_copy_sources() {
@@ -96,6 +99,10 @@ src_prepare() {
 	# https://trac.xapian.org/ticket/702
 	export XAPIAN_CONFIG="/usr/bin/xapian-config"
 
+	if use lua; then
+		lua_copy_sources
+	fi
+
 	if use php; then
 		php_copy_sources
 	fi
@@ -117,9 +124,9 @@ src_configure() {
 			--disable-documentation
 			$(use_with mono csharp)
 			$(use_with java)
-			$(use_with lua)
 			$(use_with perl)
 			$(use_with tcl)
+			--without-lua
 			--without-php
 			--without-php7
 			--without-python
@@ -136,12 +143,33 @@ src_configure() {
 			local -x PERL_LIB="$(perl -MConfig -e 'print $Config{installvendorlib}')"
 		fi
 
-		if use lua; then
-			local -x LUA_INC="$("$(tc-getPKG_CONFIG)" --variable=INSTALL_INC lua)"
-			local -x LUA_LIB="$("$(tc-getPKG_CONFIG)" --variable=INSTALL_CMOD lua)"
-		fi
-
 		econf "${conf[@]}"
+	fi
+
+	lua_configure() {
+		local myconf=(
+			--disable-documentation
+			--without-csharp
+			--without-java
+			--without-perl
+			--without-tcl
+			--without-php
+			--without-php7
+			--without-python
+			--without-python3
+			--without-ruby
+			--with-lua
+		)
+
+		local -x LUA_INC="$(lua_get_include_dir)"
+		local -x LUA_LIB="$(lua_get_cmod_dir)"
+
+		econf "${myconf[@]}"
+
+	}
+
+	if use lua; then
+		lua_foreach_impl run_in_build_dir lua_configure
 	fi
 
 	php_configure() {
@@ -191,12 +219,8 @@ src_configure() {
 			--without-php7
 			--without-ruby
 			--without-tcl
+			--with-python3
 		)
-		if python_is_python3; then
-			myconf+=( --with-python3 )
-		else
-			myconf+=( --with-python )
-		fi
 
 		# Avoid sandbox failures when compiling modules
 		addpredict "$(python_get_sitedir)"
@@ -237,6 +261,10 @@ src_compile() {
 		default
 	fi
 
+	if use lua; then
+		lua_foreach_impl run_in_build_dir emake
+	fi
+
 	if use php; then
 		php_foreach_impl run_in_build_dir emake
 	fi
@@ -254,6 +282,10 @@ src_compile() {
 src_test() {
 	if has_basic_bindings ; then
 		default
+	fi
+
+	if use lua; then
+		lua_foreach_impl run_in_build_dir emake check
 	fi
 
 	if use php; then
@@ -278,7 +310,11 @@ src_install() {
 		java-pkg_dojar java/built/xapian.jar
 		# TODO: make the build system not install this...
 		java-pkg_doso java/.libs/libxapian_jni.so
-		rm -rf "${D}var" || die "could not remove java cruft!"
+		rm -rf "${ED}/var" || die "could not remove java cruft!"
+	fi
+
+	if use lua; then
+		lua_foreach_impl run_in_build_dir emake DESTDIR="${D}" install
 	fi
 
 	if use php; then
@@ -290,6 +326,7 @@ src_install() {
 
 	if use python; then
 		python_foreach_impl run_in_build_dir emake DESTDIR="${D}" install
+		python_foreach_impl python_optimize
 	fi
 
 	if use ruby; then
@@ -297,8 +334,8 @@ src_install() {
 	fi
 
 	# For some USE combinations this directory is not created
-	if [[ -d "${D}/usr/share/doc/xapian-bindings" ]]; then
-		mv "${D}/usr/share/doc/xapian-bindings" "${D}/usr/share/doc/${PF}" || die
+	if [[ -d "${ED}/usr/share/doc/xapian-bindings" ]]; then
+		mv "${ED}/usr/share/doc/xapian-bindings" "${ED}/usr/share/doc/${PF}" || die
 	fi
 
 	dodoc AUTHORS HACKING NEWS TODO README
