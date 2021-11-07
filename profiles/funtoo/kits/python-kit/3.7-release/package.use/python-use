@@ -8,7 +8,6 @@
 =dev-db/mongodb-4.0.27 python_single_target_python2_7
 =dev-db/pgxnclient-1.2-r1 python_single_target_python2_7
 =dev-libs/libreport-2.0.13-r1 python_single_target_python2_7
-=dev-libs/xapian-bindings-1.2.25 python_single_target_python2_7
 =dev-util/buildbot-0.8.12-r3 python_single_target_python2_7
 =dev-util/catalyst-2.0.18-r1 python_single_target_python2_7
 =dev-util/catalyst-2.0.18-r4 python_single_target_python2_7
