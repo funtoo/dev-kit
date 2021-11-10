@@ -18,6 +18,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="BSD"
 SLOT="{{libtool_rev}}/{{libtool_cur}}"
+SLOT="0/${PV}"
 IUSE="doc large-stack python static-libs test"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RESTRICT="!test? ( test )"
@@ -41,7 +42,6 @@ BDEPEND="
 	python? ( ${PYTHON_DEPS} )
 "
 
-PATCHES=( "${FILESDIR}"/0001-changes-needed-for-proper-slotting.patch )
 DOCS=( CHANGES.md CONTRIBUTORS.md README.md SECURITY.md docs/PortingGuide2-3.md )
 
 src_unpack() {
@@ -61,7 +61,6 @@ src_configure() {
 		-DIMATH_ENABLE_LARGE_STACK=$(usex large-stack)
 		-DIMATH_HALF_USE_LOOKUP_TABLE=ON
 		-DIMATH_INSTALL_PKG_CONFIG=ON
-		-DIMATH_OUTPUT_SUBDIR="${MY_PN}-${majorver}"
 		-DIMATH_USE_CLANG_TIDY=OFF
 		-DIMATH_USE_NOEXCEPT=ON
 	)

@@ -28,8 +28,6 @@ async def generate(hub, **pkginfo):
 	cmake_file = open(
 		glob.glob(os.path.join(artifact.extract_path, f"{github_user}-{github_repo}-*", "CMakeLists.txt"))[0]
 	).read()
-	libtool_cur = re.search("\(IMATH_LIBTOOL_CURRENT ([0-9]+)", cmake_file).group(1)
-	libtool_rev = re.search("\(IMATH_LIBTOOL_REVISION ([0-9]+)", cmake_file).group(1)
 	artifact.cleanup()
 
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
@@ -38,8 +36,6 @@ async def generate(hub, **pkginfo):
 		major_ver=version.split(".")[0],
 		github_user=github_user,
 		github_repo=github_repo,
-		libtool_cur=libtool_cur,
-		libtool_rev=libtool_rev,
 		artifacts=[artifact],
 	)
 	ebuild.push()
