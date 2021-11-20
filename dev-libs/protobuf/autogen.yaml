@@ -1,0 +1,36 @@
+protobuf:
+  generator: protobuf
+  packages:
+    - protobuf
+
+protobuf-c:
+  generator: protobuf-c
+  packages:
+    - protobuf-c
+
+####################################################################################
+# We are going to use our pypi generator to just grab the matching latest stuff
+# from pypi, even though it is included in the python/ subdir in the main protobuf
+# archive as well.
+####################################################################################
+
+protobuf_python:
+  generator: pypi-simple-1
+  packages:
+    - protobuf-python:
+        cat: dev-python
+        pypi_name: protobuf
+        python_compat: python3+
+        pydeps:
+          py:all:build:
+            - namespace-google
+            - six
+        depend: |
+          ~dev-libs/protobuf-${PV}
+        body: |
+          S=${S}/python
+
+          python_install_all() {
+            distutils-r1_python_install_all
+            find "${D}" -name '*.pth' -delete || die
+          }
