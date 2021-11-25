@@ -1,0 +1,34 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit go-module
+
+EGO_SUM=(
+{{ gosum }})
+
+go-module_set_globals
+
+SRC_URI="{{ artifacts[0].src_uri }}
+	${EGO_SUM_SRC_URI}"
+
+DESCRIPTION="A simple terminal UI for git commands"
+HOMEPAGE="http://github.com/jesseduffield/lazygit"
+
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="*"
+IUSE=""
+
+post_src_unpack() {
+	mv "${WORKDIR}"/{{ github_user }}-{{ github_repo }}-* "${S}" || die
+}
+
+src_compile() {
+	go build -mod=mod . || die "compile failed"
+}
+
+src_install() {
+	dobin ${PN}
+	dodoc README.md
+}
