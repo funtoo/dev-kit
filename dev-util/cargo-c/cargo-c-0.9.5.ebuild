@@ -104,7 +104,7 @@ semver-1.0.4
 serde-1.0.130
 serde_derive-1.0.130
 serde_ignored-0.1.2
-serde_json-1.0.71
+serde_json-1.0.72
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.2
@@ -112,7 +112,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.8.0
 structopt-0.3.25
 structopt-derive-0.4.18
-syn-1.0.81
+syn-1.0.82
 tar-0.4.37
 tempfile-3.2.0
 termcolor-1.1.2
