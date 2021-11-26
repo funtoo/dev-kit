@@ -1907,7 +1907,15 @@ post_src_unpack() {
 	mv ${WORKDIR}/nektos-act-* ${S} || die
 }
 
+src_compile() {
+	go build \
+		-ldflags "-X main.version=${PV}" \
+		-mod=mod \
+		-o ${PN} \
+		main.go || die "compile failed"
+}
+
 src_install() {
-	dobin dist/local/${PN}
+	dobin ${PN}
 	dodoc README.md
 }
