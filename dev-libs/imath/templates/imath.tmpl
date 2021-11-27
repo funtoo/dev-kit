@@ -17,7 +17,6 @@ KEYWORDS="*"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="BSD"
-SLOT="{{libtool_rev}}/{{libtool_cur}}"
 SLOT="0/${PV}"
 IUSE="doc large-stack python static-libs test"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -25,7 +24,8 @@ RESTRICT="!test? ( test )"
 
 # blocker due to file collision #803347
 RDEPEND="
-	!dev-libs/imath:0
+	!!dev-libs/imath:0
+	!!media-libs/ilmbase
 	sys-libs/zlib
 	python? (
 		${PYTHON_DEPS}
