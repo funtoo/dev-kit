@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=dev-lang/go
+DESCRIPTION=CLI and validation tools for Kubelet Container Runtime (CRI)
+EAPI=7
+HOMEPAGE=https://github.com/kubernetes-sigs/cri-tools
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD BSD-2 CC-BY-SA-4.0 ISC MIT MPL-2.0
+RESTRICT=strip test
+SLOT=0
+SRC_URI=https://github.com/kubernetes-sigs/cri-tools/archive/v1.22.0.tar.gz -> cri-tools-1.22.0.tar.gz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	go-module	27d2ced289f22701df157c186af79adb	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=563b8cff8a48f5d4600f59cbecaf7465
