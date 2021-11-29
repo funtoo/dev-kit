@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Small utility to modify the dynamic linker and RPATH of ELF executables"
 HOMEPAGE="https://nixos.org/patchelf.html"
-SRC_URI="https://github.com/NixOS/patchelf/archive/0.14.tar.gz -> patchelf-0.14.tar.gz"
+SRC_URI="https://github.com/NixOS/patchelf/archive/0.14.1.tar.gz -> patchelf-0.14.1.tar.gz"
 SLOT="0"
 KEYWORDS="*"
 LICENSE="GPL-3"
@@ -18,6 +18,11 @@ src_prepare() {
 	sed -i \
 		-e 's:-Werror::g' \
 		configure.ac || die
+
+	# FL-9115: add missing import for optional
+	sed -i \
+		-e '1s/^/#include <optional>\n/' \
+		src/patchelf.cc
 
 	eautoreconf
 }

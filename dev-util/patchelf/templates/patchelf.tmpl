@@ -19,6 +19,11 @@ src_prepare() {
 		-e 's:-Werror::g' \
 		configure.ac || die
 
+	# FL-9115: add missing import for optional
+	sed -i \
+		-e '1s/^/#include <optional>\n/' \
+		src/patchelf.cc
+
 	eautoreconf
 }
 
