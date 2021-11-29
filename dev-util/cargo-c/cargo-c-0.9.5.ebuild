@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
 ansi_term-0.11.0
-anyhow-1.0.49
+anyhow-1.0.50
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.0.1
@@ -97,7 +97,7 @@ regex-syntax-0.6.25
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.0
-ryu-1.0.5
+ryu-1.0.6
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4
