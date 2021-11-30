@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
-ansi_term-0.11.0
+ansi_term-0.12.1
 anyhow-1.0.51
 arrayvec-0.5.2
 atty-0.2.14
@@ -19,7 +19,7 @@ cargo-util-0.1.1
 cbindgen-0.20.0
 cc-1.0.72
 cfg-if-1.0.0
-clap-2.33.3
+clap-2.34.0
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
 core-foundation-0.9.2
