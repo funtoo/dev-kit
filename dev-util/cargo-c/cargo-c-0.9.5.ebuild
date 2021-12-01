@@ -40,7 +40,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.0.1
 fwdansi-1.1.0
 getrandom-0.2.3
-git2-0.13.24
+git2-0.13.25
 git2-curl-0.14.1
 glob-0.3.0
 globset-0.4.8
@@ -61,7 +61,7 @@ jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.108
-libgit2-sys-0.12.25+1.3.0
+libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.3
