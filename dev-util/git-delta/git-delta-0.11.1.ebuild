@@ -150,7 +150,7 @@ inherit bash-completion-r1 cargo
 
 DESCRIPTION="A syntax-highlighting pager for git"
 HOMEPAGE="https://github.com/dandavison/delta"
-SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.11.0 -> delta-0.11.0.tar.gz
+SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.11.1 -> delta-0.11.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 LGPL-3+ MIT Unlicense ZLIB"
