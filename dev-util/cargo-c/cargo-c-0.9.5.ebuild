@@ -55,7 +55,7 @@ idna-0.2.3
 ignore-0.4.18
 im-rc-15.0.0
 indexmap-1.7.0
-itertools-0.10.1
+itertools-0.10.3
 itoa-0.4.8
 jobserver-0.1.24
 lazy_static-1.4.0
@@ -78,7 +78,7 @@ openssl-probe-0.1.4
 openssl-src-300.0.2+3.0.0
 openssl-sys-0.9.71
 percent-encoding-2.1.0
-pkg-config-0.3.22
+pkg-config-0.3.23
 ppv-lite86-0.2.15
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
