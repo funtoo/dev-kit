@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="C++ fast and memory efficient hashtable based on robin hood hashing"
 HOMEPAGE="https://github.com/martinus/robin-hood-hashing"
-SRC_URI="https://api.github.com/repos/martinus/robin-hood-hashing/tarball/3.11.3 -> robin-hood-hashing-3.11.3.tar.gz"
+SRC_URI="https://api.github.com/repos/martinus/robin-hood-hashing/tarball/3.11.4 -> robin-hood-hashing-3.11.4.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

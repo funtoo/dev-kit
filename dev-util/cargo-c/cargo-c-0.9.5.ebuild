@@ -75,7 +75,7 @@ once_cell-1.8.0
 opener-0.5.0
 openssl-0.10.38
 openssl-probe-0.1.4
-openssl-src-300.0.2+3.0.0
+openssl-src-300.0.3+3.0.0
 openssl-sys-0.9.71
 percent-encoding-2.1.0
 pkg-config-0.3.23
@@ -101,8 +101,8 @@ ryu-1.0.6
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4
-serde-1.0.130
-serde_derive-1.0.130
+serde-1.0.131
+serde_derive-1.0.131
 serde_ignored-0.1.2
 serde_json-1.0.72
 shell-escape-0.1.5
