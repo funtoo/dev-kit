@@ -97,7 +97,7 @@ regex-syntax-0.6.25
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.0
-ryu-1.0.6
+ryu-1.0.7
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4
