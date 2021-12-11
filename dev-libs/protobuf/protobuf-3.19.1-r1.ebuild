@@ -9,7 +9,7 @@ HOMEPAGE="https://developers.google.com/protocol-buffers/ https://github.com/pro
 SRC_URI="https://github.com/protocolbuffers/protobuf/archive/v3.19.1.tar.gz -> protobuf-3.19.1.tar.gz"
 
 LICENSE="BSD"
-SLOT="0/28"
+SLOT="0/30"
 KEYWORDS="*"
 IUSE="emacs examples static-libs test zlib"
 RESTRICT="!test? ( test )"
