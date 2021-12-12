@@ -75,8 +75,8 @@ once_cell-1.8.0
 opener-0.5.0
 openssl-0.10.38
 openssl-probe-0.1.4
-openssl-src-300.0.3+3.0.0
-openssl-sys-0.9.71
+openssl-src-111.16.0+1.1.1l
+openssl-sys-0.9.72
 percent-encoding-2.1.0
 pkg-config-0.3.24
 ppv-lite86-0.2.15
@@ -97,7 +97,7 @@ regex-syntax-0.6.25
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.0
-ryu-1.0.7
+ryu-1.0.8
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4

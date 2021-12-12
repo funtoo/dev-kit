@@ -24,7 +24,6 @@ RESTRICT="!test? ( test )"
 
 # blocker due to file collision #803347
 RDEPEND="
-	!!dev-libs/imath:0
 	!!media-libs/ilmbase
 	sys-libs/zlib
 	python? (
