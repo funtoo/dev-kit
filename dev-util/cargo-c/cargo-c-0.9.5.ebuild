@@ -60,7 +60,7 @@ itoa-0.4.8
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.109
+libc-0.2.111
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -78,7 +78,7 @@ openssl-probe-0.1.4
 openssl-src-300.0.3+3.0.0
 openssl-sys-0.9.71
 percent-encoding-2.1.0
-pkg-config-0.3.23
+pkg-config-0.3.24
 ppv-lite86-0.2.15
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
