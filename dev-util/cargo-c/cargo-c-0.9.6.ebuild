@@ -13,7 +13,7 @@ bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
 bytesize-1.1.0
-cargo-0.57.0
+cargo-0.58.0
 cargo-platform-0.1.2
 cargo-util-0.1.1
 cbindgen-0.20.0
@@ -77,6 +77,7 @@ openssl-0.10.38
 openssl-probe-0.1.4
 openssl-src-111.16.0+1.1.1l
 openssl-sys-0.9.72
+os_info-3.0.8
 percent-encoding-2.1.0
 pkg-config-0.3.24
 ppv-lite86-0.2.15
@@ -146,7 +147,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.5 -> cargo-c-0.9.5.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.6 -> cargo-c-0.9.6.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 RESTRICT="mirror"
