@@ -56,7 +56,7 @@ ignore-0.4.18
 im-rc-15.0.0
 indexmap-1.7.0
 itertools-0.10.3
-itoa-0.4.8
+itoa-1.0.1
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -71,11 +71,11 @@ memchr-2.4.1
 miniz_oxide-0.4.4
 miow-0.3.7
 num_cpus-1.13.0
-once_cell-1.8.0
+once_cell-1.9.0
 opener-0.5.0
 openssl-0.10.38
 openssl-probe-0.1.4
-openssl-src-111.16.0+1.1.1l
+openssl-src-111.17.0+1.1.1m
 openssl-sys-0.9.72
 os_info-3.0.8
 percent-encoding-2.1.0
@@ -83,7 +83,7 @@ pkg-config-0.3.24
 ppv-lite86-0.2.15
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.33
+proc-macro2-1.0.34
 quote-1.0.10
 rand-0.8.4
 rand_chacha-0.3.1
@@ -105,7 +105,7 @@ semver-1.0.4
 serde-1.0.131
 serde_derive-1.0.131
 serde_ignored-0.1.2
-serde_json-1.0.72
+serde_json-1.0.73
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.2
@@ -114,7 +114,7 @@ strsim-0.8.0
 structopt-0.3.25
 structopt-derive-0.4.18
 syn-1.0.82
-tar-0.4.37
+tar-0.4.38
 tempfile-3.2.0
 termcolor-1.1.2
 textwrap-0.11.0
