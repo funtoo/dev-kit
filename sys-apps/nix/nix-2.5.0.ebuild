@@ -7,7 +7,7 @@ inherit autotools flag-o-matic linux-info readme.gentoo-r1 user
 DESCRIPTION="A purely functional package manager"
 HOMEPAGE="https://nixos.org/nix"
 
-SRC_URI="https://api.github.com/repos/NixOS/nix/tarball/refs/tags/2.4 -> nix-2.4.tar.gz"
+SRC_URI="https://api.github.com/repos/NixOS/nix/tarball/refs/tags/2.5.0 -> nix-2.5.0.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="*"
