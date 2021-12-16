@@ -33,7 +33,6 @@ dirs-3.0.2
 dirs-next-2.0.0
 dirs-sys-0.3.6
 dirs-sys-next-0.1.1
-doc-comment-0.3.3
 either-1.6.1
 encode_unicode-0.3.6
 error-chain-0.12.4
@@ -56,7 +55,7 @@ itoa-0.4.7
 jobserver-0.1.21
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.103
+libc-0.2.112
 libgit2-sys-0.12.24+1.3.0
 libz-sys-1.1.2
 line-wrap-0.1.1
@@ -114,7 +113,7 @@ structopt-0.3.25
 structopt-derive-0.4.18
 syn-1.0.57
 syntect-4.6.0
-sysinfo-0.19.2
+sysinfo-0.22.2
 termcolor-1.1.2
 terminal_size-0.1.15
 textwrap-0.11.0
@@ -150,7 +149,7 @@ inherit bash-completion-r1 cargo
 
 DESCRIPTION="A syntax-highlighting pager for git"
 HOMEPAGE="https://github.com/dandavison/delta"
-SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.11.2 -> delta-0.11.2.tar.gz
+SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.11.3 -> delta-0.11.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 LGPL-3+ MIT Unlicense ZLIB"
