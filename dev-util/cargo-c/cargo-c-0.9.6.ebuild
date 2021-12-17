@@ -102,8 +102,8 @@ ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4
-serde-1.0.131
-serde_derive-1.0.131
+serde-1.0.132
+serde_derive-1.0.132
 serde_ignored-0.1.2
 serde_json-1.0.73
 shell-escape-0.1.5
