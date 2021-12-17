@@ -8,7 +8,7 @@ MIN_PV="$(ver_cut 2)"
 
 DESCRIPTION="Netscape Portable Runtime"
 HOMEPAGE="https://www.mozilla.org/projects/nspr/"
-SRC_URI="https://ftp.mozilla.org/pub/nspr/releases/v4.32/src/nspr-4.32.tar.gz"
+SRC_URI="https://ftp.mozilla.org/pub/nspr/releases/v4.33/src/nspr-4.33.tar.gz"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
