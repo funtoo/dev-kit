@@ -77,7 +77,7 @@ openssl-0.10.38
 openssl-probe-0.1.4
 openssl-src-111.17.0+1.1.1m
 openssl-sys-0.9.72
-os_info-3.0.8
+os_info-3.0.9
 percent-encoding-2.1.0
 pkg-config-0.3.24
 ppv-lite86-0.2.15
