@@ -70,7 +70,7 @@ matches-0.1.9
 memchr-2.4.1
 miniz_oxide-0.4.4
 miow-0.3.7
-num_cpus-1.13.0
+num_cpus-1.13.1
 once_cell-1.9.0
 opener-0.5.0
 openssl-0.10.38

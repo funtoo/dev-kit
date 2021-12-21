@@ -27,11 +27,6 @@ BDEPEND="
 
 RESTRICT="!test? ( test )"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-20200923-arm_no_crypto.patch"
-)
-
-
 fix_src_dirs() {
 	# We need this because the top dir in the tarballs use the first part of the
 	# corresponding commit which changes every release
