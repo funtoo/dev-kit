@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="Cross-platform IDE for C and C++"
 HOMEPAGE="https://www.jetbrains.com/clion"
-SRC_URI="https://download.jetbrains.com/cpp/CLion-2021.3.tar.gz -> clion-2021.3.tar.gz"
+SRC_URI="https://download.jetbrains.com/cpp/CLion-2021.3.1.tar.gz -> clion-2021.3.1.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
