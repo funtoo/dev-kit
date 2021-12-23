@@ -33,6 +33,7 @@ async def generate(hub, **pkginfo):
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
 		**pkginfo,
 		version=version,
+		revision={ "3.1.3" : "1" },
 		major_ver=version.split(".")[0],
 		github_user=github_user,
 		github_repo=github_repo,
