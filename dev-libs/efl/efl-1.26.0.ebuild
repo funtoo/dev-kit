@@ -10,7 +10,7 @@ inherit meson python-any-r1 xdg-utils
 
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 HOMEPAGE="https://www.enlightenment.org"
-SRC_URI="https://api.github.com/repos/Enlightenment/efl/tarball/refs/tags/v1.25.1 -> efl-1.25.1.tar.gz"
+SRC_URI="https://api.github.com/repos/Enlightenment/efl/tarball/refs/tags/v1.26.0 -> efl-1.26.0.tar.gz"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 SLOT="0"
@@ -149,7 +149,7 @@ pkg_setup() {
 
 fix_src_dirs() {
 	pushd "${WORKDIR}"
-	mv Enlightenment-efl-* efl-1.25.1
+	mv Enlightenment-efl-* efl-1.26.0
 	popd
 }
 
