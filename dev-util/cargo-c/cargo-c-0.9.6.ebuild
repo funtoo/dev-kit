@@ -132,7 +132,7 @@ url-2.2.2
 utf8parse-0.2.0
 vcpkg-0.2.15
 vec_map-0.8.2
-version_check-0.9.3
+version_check-0.9.4
 vte-0.10.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.2
