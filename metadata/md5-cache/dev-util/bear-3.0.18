@@ -10,6 +10,6 @@ LICENSE=GPL-3+
 RDEPEND=>=dev-cpp/nlohmann_json-3.7:= >=dev-db/sqlite-3.14:= >=dev-libs/libfmt-6.2:= dev-libs/protobuf:= >=dev-libs/spdlog-1.5 >=net-libs/grpc-1.26:=
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://api.github.com/repos/rizsotto/Bear/tarball/3.0.17 -> bear-3.0.17.tar.gz
+SRC_URI=https://api.github.com/repos/rizsotto/Bear/tarball/3.0.18 -> bear-3.0.18.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	8b6048ab112e99353b21b318b9074eb6	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=cd7010e3661723bd37faf604345121be
+_md5_=f779703ab4b155016b50b1a343f85f1e
