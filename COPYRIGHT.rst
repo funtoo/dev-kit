@@ -33,8 +33,8 @@ in `kit-fixups`_ as well as `metatools`_ itself.
 Copyright
 =========
 
-| Copyright 2008-2021 Funtoo Solutions, Inc.
-| Copyright 1999-2021 Gentoo Foundation, Gentoo Authors, and
+| Copyright 2008-2022 Funtoo Solutions, Inc.
+| Copyright 1999-2022 Gentoo Foundation, Gentoo Authors, and
 | many independent contributors/authors as documented in the source code commit history.
-| Copyright 2017-2021 Sony Interactive Entertainment, Inc.
-| Copyright 2013-2021 Federico Moro (https://github.com/fmoro) and GitHub repository contributors.
+| Copyright 2017-2022 Sony Interactive Entertainment, Inc.
+| Copyright 2013-2022 Federico Moro (https://github.com/fmoro) and GitHub repository contributors.
