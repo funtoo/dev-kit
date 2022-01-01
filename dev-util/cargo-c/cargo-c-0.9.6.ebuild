@@ -80,7 +80,7 @@ openssl-sys-0.9.72
 os_info-3.0.9
 percent-encoding-2.1.0
 pkg-config-0.3.24
-ppv-lite86-0.2.15
+ppv-lite86-0.2.16
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.36
