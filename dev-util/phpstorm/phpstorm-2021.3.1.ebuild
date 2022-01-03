@@ -64,7 +64,7 @@ src_install() {
 
 	if use sysctl; then
 		dodir /etc/sysctl.d
-		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-inotify-watches.conf" || die
+		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-${PN}-idea-inotify-watches.conf" || die
 	fi
 
 }
