@@ -7,7 +7,7 @@ inherit cmake
 DESCRIPTION="JSON for Modern C++"
 HOMEPAGE="https://github.com/nlohmann/json"
 SRC_URI="
-	https://api.github.com/repos/nlohmann/json/tarball/v3.10.4 -> json-3.10.4.tar.gz
+	https://api.github.com/repos/nlohmann/json/tarball/v3.10.5 -> json-3.10.5.tar.gz
 	test? ( https://api.github.com/repos/nlohmann/json_test_data/tarball/v3.0.0 -> json_test_data-3.0.0.tar.gz )
 "
 
@@ -20,14 +20,14 @@ BDEPEND="doc? ( app-doc/doxygen )"
 
 DOCS=( ChangeLog.md README.md )
 
-S="${WORKDIR}/json-3.10.4"
+S="${WORKDIR}/json-3.10.5"
 
 fix_src_dirs() {
 	# We need this because the top dir in the tarballs use the first part of the
 	# corresponding commit which changes every release
 	
 	pushd "${WORKDIR}"
-	mv nlohmann-json-* json-3.10.4
+	mv nlohmann-json-* json-3.10.5
 	mv nlohmann-json_test_data-* json_test_data-3.0.0
 	popd
 }
