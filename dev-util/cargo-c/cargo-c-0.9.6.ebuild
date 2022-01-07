@@ -54,7 +54,7 @@ humantime-2.1.0
 idna-0.2.3
 ignore-0.4.18
 im-rc-15.0.0
-indexmap-1.7.0
+indexmap-1.8.0
 itertools-0.10.3
 itoa-1.0.1
 jobserver-0.1.24
