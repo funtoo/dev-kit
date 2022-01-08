@@ -26,12 +26,13 @@ core-foundation-0.9.2
 core-foundation-sys-0.8.3
 crates-io-0.33.0
 crc32fast-1.3.0
-crossbeam-utils-0.8.5
+crossbeam-utils-0.8.6
 crypto-hash-0.3.4
 curl-0.4.42
 curl-sys-0.4.52+curl-7.81.0
 either-1.6.1
 env_logger-0.9.0
+fastrand-1.6.0
 filetime-0.2.15
 flate2-1.0.22
 fnv-1.0.7
@@ -39,7 +40,6 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.0.1
 fwdansi-1.1.0
-getrandom-0.2.3
 git2-0.13.25
 git2-curl-0.14.1
 glob-0.3.0
@@ -55,6 +55,7 @@ idna-0.2.3
 ignore-0.4.18
 im-rc-15.0.0
 indexmap-1.8.0
+instant-0.1.12
 itertools-0.10.3
 itoa-1.0.1
 jobserver-0.1.24
@@ -80,16 +81,11 @@ openssl-sys-0.9.72
 os_info-3.0.9
 percent-encoding-2.1.0
 pkg-config-0.3.24
-ppv-lite86-0.2.16
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.36
 quote-1.0.14
-rand-0.8.4
-rand_chacha-0.3.1
 rand_core-0.5.1
-rand_core-0.6.3
-rand_hc-0.3.1
 rand_xoshiro-0.4.0
 redox_syscall-0.2.10
 regex-1.5.4
@@ -115,7 +111,7 @@ structopt-0.3.25
 structopt-derive-0.4.18
 syn-1.0.85
 tar-0.4.38
-tempfile-3.2.0
+tempfile-3.3.0
 termcolor-1.1.2
 textwrap-0.11.0
 thread_local-1.1.3
@@ -136,7 +132,6 @@ version_check-0.9.4
 vte-0.10.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.2
-wasi-0.10.2+wasi-snapshot-preview1
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
