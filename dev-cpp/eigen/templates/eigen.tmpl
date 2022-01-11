@@ -38,7 +38,6 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DCMAKEPACKAGE_INSTALL_DIR=$(get_libdir)/cmake/${PN}${SLOT}
 	)
 
 	cmake_src_configure
