@@ -6,24 +6,24 @@ EAPI=5
 
 inherit versionator eutils
 
-MY_PN="Visual_Paradigm" #_for_UML"
+MY_PN="Visual_Paradigm_CE" #"for_UML_CE"
 MY_P="${MY_PN}_$(get_version_component_range 1-2)"
 
 if [[ $(get_version_component_count) == 3 ]]; then
 	MY_PV="$(replace_all_version_separators _)"
-	SRC_URI_FORMAT="http://%s.visual-paradigm.com/visual-paradigm/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)
-		http://%s.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
+	SRC_URI_FORMAT="https://%s.dl.visual-paradigm.com/visual-paradigm/vpce$(get_version_component_range 1-2)/$(get_version_component_range 3)
+		https://%s.dl.visual-paradigm.com/archives/vpce$(get_version_component_range 1-2)/$(get_version_component_range 3)"
 else
 	MY_PV="$(replace_all_version_separators _ $(get_version_component_range 1-2))"
 	MY_PV="${MY_PV}_sp$(get_version_component_range 3)"
 	MY_PV="${MY_PV}_$(get_version_component_range 4)"
-	SRC_URI_FORMAT="http://%s.visual-paradigm.com/visual-paradigm/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)
-		http://%s.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
+	SRC_URI_FORMAT="https://%s.dl.visual-paradigm.com/visual-paradigm/${PN}$(get_version_component_range 1-2)/sp$(get_version_component_range 3)_$(get_version_component_range 4)
+		https://%s.dl.visual-paradigm.com/archives/${PN}$(get_version_component_range 1-2)/sp$(get_version_component_range 3)_$(get_version_component_range 4)"
 fi
 
-URIS=`printf "${SRC_URI_FORMAT} " eu{1..6} usa{1..6} uk{1..6}`
+URIS=`printf "${SRC_URI_FORMAT} " eu{1..9} usa{1..6} uk{1..6}`
 
-DESCRIPTION="Visual Paradigm for UML"
+DESCRIPTION="Visual Paradigm for UML Comunity Version"
 HOMEPAGE="http://www.visual-paradigm.com"
 
 SRC_URI="`for URI in $URIS; do printf "${URI}/%s " "${MY_PN}_${MY_PV}_Linux64_InstallFree.tar.gz"; done`"
@@ -31,7 +31,7 @@ SRC_URI="`for URI in $URIS; do printf "${URI}/%s " "${MY_PN}_${MY_PV}_Linux64_In
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="as-is" # actually, proprietary
-SLOT="0/$(get_version_component_range 1-2)"
+SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
@@ -59,10 +59,10 @@ src_install() {
 
 	chmod +x "${D}${INSTDIR}"/Application/bin/*
 
-	make_desktop_entry "${INSTDIR}"/Application/bin/"${MY_PN}" "Visual Paradigm for UML" "${INSTDIR}"/Application/resources/vpuml.png
+	make_desktop_entry "${INSTDIR}"/Application/bin/Visual_Paradigm "Visual Paradigm for UML CE" "${INSTDIR}"/Application/resources/vpuml.png
 
 	dodir /etc/env.d
-	cat - > "${D}"/etc/env.d/99vpuml <<EOF
-CONFIG_PROTECT="${INSTDIR}/Application/resources/product_edition.properties"
+	cat - > "${D}"/etc/env.d/99vpumlce <<EOF
+CONFIG_PROTECT="${INSTDIR}/resources/product_edition.properties"
 EOF
 }
