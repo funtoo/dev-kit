@@ -10,13 +10,13 @@ inherit meson python-any-r1 xdg-utils
 
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 HOMEPAGE="https://www.enlightenment.org"
-SRC_URI="https://api.github.com/repos/Enlightenment/efl/tarball/refs/tags/v1.26.1 -> efl-1.26.1.tar.gz"
+SRC_URI="https://download.enlightenment.org/rel/libs/efl/efl-1.26.1.tar.xz"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 SLOT="0"
 KEYWORDS="*"
 IUSE="+X avif bmp connman cpu_flags_arm_neon dds debug doc drm +eet efl-one elogind examples fbcon
-	+fontconfig fribidi gif gles2-only gnutls glib +gstreamer harfbuzz hyphen ibus ico
+	+fontconfig fribidi gif gles2-only gnutls glib +gstreamer harfbuzz heif hyphen ibus ico
 	jpeg2k json lua +luajit nls mono opengl +pdf physics pmaps postscript psd pulseaudio raw scim
 	sdl +sound +ssl +svg +system-lz4 tga tgv tiff tslib unwind v4l vnc wayland webp xcf
 	xim xpm xpresent zeroconf"
@@ -47,7 +47,9 @@ RDEPEND="
 	sys-libs/zlib
 	virtual/jpeg:0=
 	X? (
+		dev-libs/libinput
 		media-libs/freetype
+		x11-libs/libxkbcommon
 		x11-libs/libX11
 		x11-libs/libXcomposite
 		x11-libs/libXcursor
@@ -87,10 +89,11 @@ RDEPEND="
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
 	)
+	heif? ( media-libs/libheif )
 	hyphen? ( dev-libs/hyphen )
 	ibus? ( app-i18n/ibus )
 	jpeg2k? ( media-libs/openjpeg:= )
-	json? ( >=media-libs/rlottie-0.0.1_pre20200424:= )
+	json? ( >=media-libs/rlottie-0.2 )
 	lua? ( <dev-lang/lua-5.3[deprecated] )
 	luajit? ( dev-lang/luajit:* )
 	mono? ( dev-lang/mono )
@@ -137,23 +140,16 @@ BDEPEND="${PYTHON_DEPS}
 
 pkg_setup() {
 	# Deprecated, provided for backward-compatibility. Everything is moved to libefreet.so.
-	QA_FLAGS_IGNORED="/usr/$(get_libdir)/libefreet_trash.so.1.25.1
-		/usr/$(get_libdir)/libefreet_mime.so.1.25.1"
+	QA_FLAGS_IGNORED="/usr/$(get_libdir)/libefreet_trash.so.1.26.1
+		/usr/$(get_libdir)/libefreet_mime.so.1.26.1"
 		
 	# Get clean environment, see Gentoo bug #557408
 	xdg_environment_reset
 	python-any-r1_pkg_setup
 }
 
-fix_src_dirs() {
-	pushd "${WORKDIR}"
-	mv Enlightenment-efl-* efl-1.26.1
-	popd
-}
-
 src_unpack() {
 	default
-	fix_src_dirs
 }
 
 src_prepare() {
@@ -262,6 +258,7 @@ src_configure() {
 	! use dds && disabledEvasLoaders+="dds,"
 	! use eet && disabledEvasLoaders+="eet,"
 	! use gstreamer && disabledEvasLoaders+="gst,"
+	! use heif && disabledEvasLoaders+="heif,"
 	! use ico && disabledEvasLoaders+="ico,"
 	! use jpeg2k && disabledEvasLoaders+="jp2k,"
 	! use json && disabledEvasLoaders+="json,"
