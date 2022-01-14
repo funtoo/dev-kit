@@ -78,8 +78,8 @@ EGO_SUM=(
 	"github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod"
 	"github.com/jesseduffield/go-git/v5 v5.1.2-0.20201006095850-341962be15a4"
 	"github.com/jesseduffield/go-git/v5 v5.1.2-0.20201006095850-341962be15a4/go.mod"
-	"github.com/jesseduffield/gocui v0.3.1-0.20211102104458-40df0be5a474"
-	"github.com/jesseduffield/gocui v0.3.1-0.20211102104458-40df0be5a474/go.mod"
+	"github.com/jesseduffield/gocui v0.3.1-0.20220108045521-1945d7b9ed8b"
+	"github.com/jesseduffield/gocui v0.3.1-0.20220108045521-1945d7b9ed8b/go.mod"
 	"github.com/jesseduffield/minimal/gitignore v0.3.3-0.20211018110810-9cde264e6b1e"
 	"github.com/jesseduffield/minimal/gitignore v0.3.3-0.20211018110810-9cde264e6b1e/go.mod"
 	"github.com/jesseduffield/yaml v2.1.0+incompatible"
@@ -149,7 +149,6 @@ EGO_SUM=(
 	"github.com/stretchr/objx v0.1.1/go.mod"
 	"github.com/stretchr/testify v1.2.2/go.mod"
 	"github.com/stretchr/testify v1.4.0/go.mod"
-	"github.com/stretchr/testify v1.6.1"
 	"github.com/stretchr/testify v1.6.1/go.mod"
 	"github.com/stretchr/testify v1.7.0"
 	"github.com/stretchr/testify v1.7.0/go.mod"
@@ -185,8 +184,8 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1/go.mod"
 	"golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod"
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
-	"golang.org/x/sys v0.0.0-20211102061401-a2f17f7b995c"
-	"golang.org/x/sys v0.0.0-20211102061401-a2f17f7b995c/go.mod"
+	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e"
+	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e/go.mod"
 	"golang.org/x/term v0.0.0-20201210144234-2321bbc49cbf/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
@@ -219,7 +218,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.31.4 -> lazygit-0.31.4.tar.gz
+SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.32 -> lazygit-0.32.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="A simple terminal UI for git commands"
