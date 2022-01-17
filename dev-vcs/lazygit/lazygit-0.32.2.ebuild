@@ -218,7 +218,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.32.1 -> lazygit-0.32.1.tar.gz
+SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.32.2 -> lazygit-0.32.2.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="A simple terminal UI for git commands"
