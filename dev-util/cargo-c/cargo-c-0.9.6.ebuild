@@ -104,7 +104,7 @@ serde_ignored-0.1.2
 serde_json-1.0.75
 shell-escape-0.1.5
 sized-chunks-0.6.5
-socket2-0.4.2
+socket2-0.4.3
 strip-ansi-escapes-0.1.1
 strsim-0.8.0
 structopt-0.3.26
