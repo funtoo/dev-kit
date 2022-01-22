@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.52
+anyhow-1.0.53
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.0.1
@@ -13,7 +13,7 @@ bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
 bytesize-1.1.0
-cargo-0.58.0
+cargo-0.59.0
 cargo-platform-0.1.2
 cargo-util-0.1.1
 cbindgen-0.20.0
@@ -25,14 +25,14 @@ commoncrypto-sys-0.2.0
 core-foundation-0.9.2
 core-foundation-sys-0.8.3
 crates-io-0.33.0
-crc32fast-1.3.0
+crc32fast-1.3.1
 crossbeam-utils-0.8.6
 crypto-hash-0.3.4
 curl-0.4.42
 curl-sys-0.4.52+curl-7.81.0
 either-1.6.1
 env_logger-0.9.0
-fastrand-1.6.0
+fastrand-1.7.0
 filetime-0.2.15
 flate2-1.0.22
 fnv-1.0.7
@@ -84,7 +84,7 @@ pkg-config-0.3.24
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.36
-quote-1.0.14
+quote-1.0.15
 rand_core-0.5.1
 rand_xoshiro-0.4.0
 redox_syscall-0.2.10
@@ -98,10 +98,10 @@ ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4
-serde-1.0.133
-serde_derive-1.0.133
+serde-1.0.134
+serde_derive-1.0.134
 serde_ignored-0.1.2
-serde_json-1.0.75
+serde_json-1.0.76
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.3
@@ -142,7 +142,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.6 -> cargo-c-0.9.6.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.7 -> cargo-c-0.9.7.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 RESTRICT="mirror"
