@@ -98,10 +98,10 @@ ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.4
-serde-1.0.134
-serde_derive-1.0.134
+serde-1.0.135
+serde_derive-1.0.135
 serde_ignored-0.1.2
-serde_json-1.0.76
+serde_json-1.0.78
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.3
