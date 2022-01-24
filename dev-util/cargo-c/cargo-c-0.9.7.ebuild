@@ -114,7 +114,7 @@ tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.2
 textwrap-0.11.0
-thread_local-1.1.3
+thread_local-1.1.4
 tinyvec-1.5.1
 tinyvec_macros-0.1.0
 toml-0.5.8
