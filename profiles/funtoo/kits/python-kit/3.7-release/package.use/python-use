@@ -6,6 +6,7 @@
 =dev-db/barman-2.1 python_single_target_python2_7
 =dev-db/barman-2.3 python_single_target_python2_7
 =dev-db/mongodb-4.0.27 python_single_target_python2_7
+=dev-db/mongodb-4.0.28 python_single_target_python2_7
 =dev-db/pgxnclient-1.2-r1 python_single_target_python2_7
 =dev-libs/libreport-2.0.13-r1 python_single_target_python2_7
 =dev-util/buildbot-0.8.12-r3 python_single_target_python2_7
