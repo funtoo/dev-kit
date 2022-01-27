@@ -61,7 +61,7 @@ itoa-1.0.1
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.114
+libc-0.2.115
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -104,7 +104,7 @@ serde_ignored-0.1.2
 serde_json-1.0.78
 shell-escape-0.1.5
 sized-chunks-0.6.5
-socket2-0.4.3
+socket2-0.4.4
 strip-ansi-escapes-0.1.1
 strsim-0.8.0
 structopt-0.3.26
