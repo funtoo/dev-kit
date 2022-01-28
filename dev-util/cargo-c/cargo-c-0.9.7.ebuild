@@ -61,7 +61,7 @@ itoa-1.0.1
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.115
+libc-0.2.116
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
