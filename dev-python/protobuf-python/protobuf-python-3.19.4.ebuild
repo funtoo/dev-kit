@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="Protocol Buffers"
 HOMEPAGE="https://developers.google.com/protocol-buffers/ https://pypi.org/project/protobuf/"
-SRC_URI="https://files.pythonhosted.org/packages/d9/d5/bf6c307f58b4c486f6517341d2f2673cd889b7d3a83cae78a9081233c679/protobuf-3.19.3.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/6c/49/f864b9fd6310d9a15ddae5b37d78dff1df0e2e1da476442fee062c6032b2/protobuf-3.19.4.tar.gz
 "
 
 DEPEND="
@@ -21,7 +21,7 @@ SLOT="0"
 LICENSE=""
 KEYWORDS="*"
 
-S="${WORKDIR}/protobuf-3.19.3"
+S="${WORKDIR}/protobuf-3.19.4"
 
 S=${S}/python
 
