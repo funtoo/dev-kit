@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
 HOMEPAGE="https://www.jetbrains.com/python"
-SRC_URI="https://download.jetbrains.com/python/pycharm-professional-2021.3.1.tar.gz -> pycharm-professional-2021.3.1.tar.gz"
+SRC_URI="https://download.jetbrains.com/python/pycharm-professional-2021.3.2.tar.gz -> pycharm-professional-2021.3.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
