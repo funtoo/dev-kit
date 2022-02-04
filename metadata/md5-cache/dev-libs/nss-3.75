@@ -9,6 +9,6 @@ LICENSE=|| ( MPL-2.0 GPL-2 LGPL-2.1 )
 RDEPEND=>=dev-libs/nspr-4.32 >=dev-db/sqlite-3.8.2 >=sys-libs/zlib-1.2.8-r1 virtual/pkgconfig
 RESTRICT=test
 SLOT=0
-SRC_URI=https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_74_RTM/src/nss-3.74.tar.gz
+SRC_URI=https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_75_RTM/src/nss-3.75.tar.gz
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=973c6543a29fd5802385f81b02515e30
+_md5_=1a6df7a201da5304793aa61e70a5ddd8
