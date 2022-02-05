@@ -97,7 +97,7 @@ rustfix-0.6.0
 ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
-semver-1.0.4
+semver-1.0.5
 serde-1.0.136
 serde_derive-1.0.136
 serde_ignored-0.1.2
