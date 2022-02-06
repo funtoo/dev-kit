@@ -1,0 +1,15 @@
+BDEPEND=dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=iconv? ( virtual/libiconv ) qt5? ( dev-qt/qtcore:5 )
+DESCRIPTION=C++ port of the Log for Java (log4j) logging library
+EAPI=7
+HOMEPAGE=http://log4cplus.sourceforge.net/ https://github.com/log4cplus/log4cplus
+IUSE=explicit-initialization iconv qt5 server test threads
+KEYWORDS=*
+LICENSE=|| ( Apache-2.0 BSD-2 )
+RDEPEND=iconv? ( virtual/libiconv ) qt5? ( dev-qt/qtcore:5 )
+RESTRICT=!test? ( test )
+SLOT=0/3
+SRC_URI=https://github.com/log4cplus/log4cplus/releases/download/REL_2_0_7/log4cplus-2.0.7.tar.xz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=cb6e0b4782df150a162aa94f8cf24e68
