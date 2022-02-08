@@ -8,7 +8,7 @@ ansi_term-0.12.1
 anyhow-1.0.53
 arrayvec-0.5.2
 atty-0.2.14
-autocfg-1.0.1
+autocfg-1.1.0
 bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
@@ -22,10 +22,10 @@ cfg-if-1.0.0
 clap-2.34.0
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
-core-foundation-0.9.2
+core-foundation-0.9.3
 core-foundation-sys-0.8.3
 crates-io-0.33.0
-crc32fast-1.3.1
+crc32fast-1.3.2
 crossbeam-utils-0.8.7
 crypto-hash-0.3.4
 curl-0.4.42
