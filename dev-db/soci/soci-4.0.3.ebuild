@@ -6,7 +6,7 @@ inherit cmake-utils
 
 DESCRIPTION="Makes the illusion of embedding SQL queries in the regular C++ code"
 HOMEPAGE="http://soci.sourceforge.net/"
-SRC_URI="https://api.github.com/repos/SOCI/soci/tarball/refs/tags/v4.0.2 -> soci-4.0.2.tar.gz"
+SRC_URI="https://api.github.com/repos/SOCI/soci/tarball/refs/tags/v4.0.3 -> soci-4.0.3.tar.gz"
 
 LICENSE="Boost-1.0"
 SLOT="0"
