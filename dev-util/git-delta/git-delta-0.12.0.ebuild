@@ -6,7 +6,6 @@ CRATES="
 adler-0.2.3
 aho-corasick-0.7.15
 ansi_colours-1.0.4
-ansi_term-0.11.0
 ansi_term-0.12.1
 approx-0.5.0
 arrayvec-0.5.2
@@ -24,7 +23,8 @@ cfg-if-0.1.10
 cfg-if-1.0.0
 chrono-0.4.19
 chrono-humanize-0.2.1
-clap-2.33.3
+clap-3.0.7
+clap_derive-3.0.5
 console-0.15.0
 core-foundation-sys-0.8.3
 crc32fast-1.2.1
@@ -46,7 +46,7 @@ git2-0.13.23
 globset-0.4.8
 grep-cli-0.1.6
 hashbrown-0.8.2
-heck-0.3.2
+heck-0.4.0
 hermit-abi-0.1.17
 idna-0.2.0
 indexmap-1.5.2
@@ -62,7 +62,7 @@ line-wrap-0.1.1
 linked-hash-map-0.5.3
 log-0.4.11
 matches-0.1.8
-memchr-2.3.4
+memchr-2.4.1
 memoffset-0.6.4
 miniz_oxide-0.4.3
 nix-0.23.0
@@ -72,6 +72,7 @@ num-traits-0.2.14
 once_cell-1.8.0
 onig-6.1.1
 onig_sys-69.6.0
+os_str_bytes-6.0.0
 palette-0.6.0
 palette_derive-0.6.0
 pathdiff-0.2.1
@@ -86,8 +87,8 @@ ppv-lite86-0.2.15
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro-hack-0.5.19
-proc-macro2-1.0.24
-quote-1.0.8
+proc-macro2-1.0.36
+quote-1.0.14
 rand-0.8.4
 rand_chacha-0.3.1
 rand_core-0.6.3
@@ -108,15 +109,13 @@ serde_json-1.0.70
 shell-words-1.0.0
 siphasher-0.3.7
 smol_str-0.1.21
-strsim-0.8.0
-structopt-0.3.25
-structopt-derive-0.4.18
-syn-1.0.57
+strsim-0.10.0
+syn-1.0.85
 syntect-4.6.0
-sysinfo-0.22.2
+sysinfo-0.23.0
 termcolor-1.1.2
 terminal_size-0.1.15
-textwrap-0.11.0
+textwrap-0.14.2
 time-0.1.44
 tinyvec-1.1.0
 tinyvec_macros-0.1.0
@@ -129,7 +128,6 @@ unicode-xid-0.2.1
 url-2.2.0
 utf8parse-0.2.0
 vcpkg-0.2.11
-vec_map-0.8.2
 version_check-0.9.2
 vte-0.10.1
 vte_generate_state_changes-0.1.1
@@ -149,7 +147,7 @@ inherit bash-completion-r1 cargo
 
 DESCRIPTION="A syntax-highlighting pager for git"
 HOMEPAGE="https://github.com/dandavison/delta"
-SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.11.3 -> delta-0.11.3.tar.gz
+SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.12.0 -> delta-0.12.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 LGPL-3+ MIT Unlicense ZLIB"
