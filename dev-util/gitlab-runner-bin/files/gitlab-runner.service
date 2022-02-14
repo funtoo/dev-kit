@@ -1,0 +1,19 @@
+[Unit]
+Description=GitLab Runner
+After=syslog.target network.target
+ConditionFileIsExecutable=/usr/libexec/gitlab-runner/gitlab-runner
+
+[Service]
+#Environment="DAEMON_ARGS=--debug"
+Environment="DAEMON_ARGS=run --working-directory /var/lib/gitlab-runner --config /etc/gitlab-runner/config.toml --service gitlab-runner --user gitlab-runner"
+EnvironmentFile=-/etc/default/%p
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/usr/libexec/gitlab-runner/gitlab-runner $DAEMON_ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target

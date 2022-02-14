@@ -1,0 +1,14 @@
+# config file for /etc/init.d/gitlab-runner
+
+RUNNER_USER="gitlab-runner"
+RUNNER_DATADIR="/var/lib/gitlab-runner"
+RUNNER_LOGDIR="/var/log/gitlab-runner"
+RUNNER_CONFIG="/etc/gitlab-runner/config.toml"
+
+# Additional options (avoid --config, use the variable above)
+# run /usr/bin/gitlab-runner -h to see available options
+RUNNER_OPTS="-u ${RUNNER_USER} -d ${RUNNER_DATADIR}"
+
+# Logging
+#output_log="${RUNNER_LOGDIR}/gitlab-runner.log"
+#error_log="${RUNNER_LOGDIR}/error.log"

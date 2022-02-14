@@ -1,0 +1,31 @@
+#!/sbin/openrc-run
+# Distributed under the terms of the GNU General Public License v2
+
+extra_started_commands="reload"
+output_log="${output_log:-/dev/null}"
+error_log="${error_log:-${RUNNER_LOGDIR}/error.log}"
+
+name="${name:-GitLab Runner}"
+command="/usr/libexec/gitlab-runner/gitlab-runner"
+command_args="run -c ${RUNNER_CONFIG} ${RUNNER_OPTS}"
+command_background=true
+pidfile="/run/${RC_SVCNAME}.pid"
+required_files="${RUNNER_CONFIG}"
+retry="${retry:-TERM/60/KILL/5}"
+start_stop_daemon_args="${SSD_OPTS}"
+
+depend() {
+        need localmount net
+        after sshd
+}
+
+start_pre() {
+        checkpath -d -m 0700 -o "${RUNNER_USER}" "${RUNNER_DATADIR}"
+        checkpath -d -m 0750 -o "${RUNNER_USER}" "${RUNNER_LOGDIR}"
+}
+
+reload() {
+        ebegin "Reloading ${name} configuration"
+        start-stop-daemon --signal HUP --pidfile "${pidfile}"
+        eend $? "Failed to reload ${name}"
+}
