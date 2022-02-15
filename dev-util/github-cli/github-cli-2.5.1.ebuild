@@ -81,8 +81,8 @@ EGO_SUM=(
 	"github.com/beorn7/perks v1.0.0/go.mod"
 	"github.com/beorn7/perks v1.0.1/go.mod"
 	"github.com/bgentry/speakeasy v0.1.0/go.mod"
-	"github.com/briandowns/spinner v1.18.0"
-	"github.com/briandowns/spinner v1.18.0/go.mod"
+	"github.com/briandowns/spinner v1.18.1"
+	"github.com/briandowns/spinner v1.18.1/go.mod"
 	"github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod"
 	"github.com/census-instrumentation/opencensus-proto v0.3.0/go.mod"
 	"github.com/cespare/xxhash v1.1.0/go.mod"
@@ -881,7 +881,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.5.0 -> cli-v2.5.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.5.1 -> cli-v2.5.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -896,7 +896,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.5.0"
+	export GH_VERSION="v2.5.1"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
