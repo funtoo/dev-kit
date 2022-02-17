@@ -17,7 +17,7 @@ cargo-0.59.0
 cargo-platform-0.1.2
 cargo-util-0.1.1
 cbindgen-0.20.0
-cc-1.0.72
+cc-1.0.73
 cfg-if-1.0.0
 clap-2.34.0
 commoncrypto-0.2.0
