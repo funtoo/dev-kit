@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.53
+anyhow-1.0.54
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -61,7 +61,7 @@ itoa-1.0.1
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.118
+libc-0.2.119
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23

@@ -25,6 +25,7 @@ EGO_SUM=(
 	"github.com/creack/pty v1.1.9/go.mod"
 	"github.com/creack/pty v1.1.11"
 	"github.com/creack/pty v1.1.11/go.mod"
+	"github.com/davecgh/go-spew v0.0.0-20161028175848-04cdfd42973b/go.mod"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
 	"github.com/davecgh/go-spew v1.1.1"
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
@@ -41,6 +42,8 @@ EGO_SUM=(
 	"github.com/gdamore/encoding v1.0.0/go.mod"
 	"github.com/gdamore/tcell/v2 v2.4.0"
 	"github.com/gdamore/tcell/v2 v2.4.0/go.mod"
+	"github.com/gdamore/tcell/v2 v2.4.1-0.20210926162909-66f061b1fc9b"
+	"github.com/gdamore/tcell/v2 v2.4.1-0.20210926162909-66f061b1fc9b/go.mod"
 	"github.com/gliderlabs/ssh v0.2.2"
 	"github.com/gliderlabs/ssh v0.2.2/go.mod"
 	"github.com/go-errors/errors v1.0.2/go.mod"
@@ -131,6 +134,7 @@ EGO_SUM=(
 	"github.com/onsi/gomega v1.7.1/go.mod"
 	"github.com/pkg/errors v0.8.1"
 	"github.com/pkg/errors v0.8.1/go.mod"
+	"github.com/pmezard/go-difflib v0.0.0-20151028094244-d8ed2627bdf0/go.mod"
 	"github.com/pmezard/go-difflib v1.0.0"
 	"github.com/pmezard/go-difflib v1.0.0/go.mod"
 	"github.com/rivo/uniseg v0.1.0/go.mod"
@@ -138,6 +142,8 @@ EGO_SUM=(
 	"github.com/rivo/uniseg v0.2.0/go.mod"
 	"github.com/sahilm/fuzzy v0.1.0"
 	"github.com/sahilm/fuzzy v0.1.0/go.mod"
+	"github.com/sanity-io/litter v1.5.2"
+	"github.com/sanity-io/litter v1.5.2/go.mod"
 	"github.com/sergi/go-diff v1.1.0"
 	"github.com/sergi/go-diff v1.1.0/go.mod"
 	"github.com/sirupsen/logrus v1.4.2"
@@ -147,6 +153,7 @@ EGO_SUM=(
 	"github.com/stretchr/objx v0.1.0/go.mod"
 	"github.com/stretchr/objx v0.1.1"
 	"github.com/stretchr/objx v0.1.1/go.mod"
+	"github.com/stretchr/testify v0.0.0-20161117074351-18a02ba4a312/go.mod"
 	"github.com/stretchr/testify v1.2.2/go.mod"
 	"github.com/stretchr/testify v1.4.0/go.mod"
 	"github.com/stretchr/testify v1.6.1/go.mod"
@@ -218,7 +225,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.32.2 -> lazygit-0.32.2.tar.gz
+SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.33 -> lazygit-0.33.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="A simple terminal UI for git commands"
