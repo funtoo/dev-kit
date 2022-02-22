@@ -1,4 +1,5 @@
 #!/sbin/openrc-run
+# Copyright 1999-202020entoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 extra_started_commands="reload"
@@ -6,7 +7,7 @@ output_log="${output_log:-/dev/null}"
 error_log="${error_log:-${RUNNER_LOGDIR}/error.log}"
 
 name="${name:-GitLab Runner}"
-command="/usr/libexec/gitlab-runner/gitlab-runner"
+command="/usr/sbin/gitlab-runner"
 command_args="run -c ${RUNNER_CONFIG} ${RUNNER_OPTS}"
 command_background=true
 pidfile="/run/${RC_SVCNAME}.pid"
