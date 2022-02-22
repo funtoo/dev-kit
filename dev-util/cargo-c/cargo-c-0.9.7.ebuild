@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.54
+anyhow-1.0.55
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -97,7 +97,7 @@ rustfix-0.6.0
 ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
-semver-1.0.5
+semver-1.0.6
 serde-1.0.136
 serde_derive-1.0.136
 serde_ignored-0.1.2
