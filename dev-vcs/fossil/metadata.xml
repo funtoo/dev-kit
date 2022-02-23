@@ -7,8 +7,8 @@
 	</maintainer>
 	<use>
 		<flag name="openssl">Look for OpenSSL in the given path, automatically, in the source tree, or none</flag>
-		<flag name="miniz">Use miniz from the source tree</flag>
 		<flag name="zlib">Look for zlib in the given path, automatically, or in the source tree</flag>
+		<flag name="sqlite">Look for sqlite in the given path, automatically, or in the source tree.</flag>
 		<flag name="exec-rel-paths">Enable relative paths for external diff/gdiff</flag>
 		<flag name="th1-docs">Enable TH1 for embedded documentation pages</flag>
 		<flag name="th1-hooks">Enable TH1 hooks for commands and web pages</flag>

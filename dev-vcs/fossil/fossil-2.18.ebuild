@@ -6,14 +6,14 @@ inherit toolchain-funcs
 
 DESCRIPTION="Simple, high-reliability, source control management, and more"
 HOMEPAGE="http://www.fossil-scm.org/"
-SRC_URI="http://www.fossil-scm.org/home/tarball/f48180f2ff3169651a725396d4f7d667c99a92873b9c3df7eee2f144be7a0721/fossil-src-2.17.tar.gz"
+SRC_URI="http://www.fossil-scm.org/home/tarball/84f25d7eb10c0714109d69bb2809abfa8b4b5c3d73b151a5b10df724dacd46d8/fossil-src-2.18.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86"
 IUSE="+openssl \
--miniz \
 +zlib \
++sqlite \
 -exec-rel-paths \
 -th1-docs \
 -th1-hooks \
@@ -48,12 +48,12 @@ RDEPEND="${DEPEND}"
 # Tests can't be run from the build directory
 RESTRICT="test"
 
-S="${WORKDIR}"/fossil-src-2.17
+S="${WORKDIR}"/fossil-src-2.18
 
 src_configure() {
 	local myconf="--with-openssl=$(usex openssl 1 none) \
---with-miniz=$(usex miniz 1 0) \
 $(usex zlib "--with-zlib=1" "") \
+$(usex sqlite "--with-sqlite=1" "") \
 --with-exec-rel-paths=$(usex exec-rel-paths 1 0) \
 --with-th1-docs=$(usex th1-docs 1 0) \
 --with-th1-hooks=$(usex th1-hooks 1 0) \
