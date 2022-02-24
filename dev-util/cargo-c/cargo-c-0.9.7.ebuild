@@ -15,7 +15,7 @@ bstr-0.2.17
 bytesize-1.1.0
 cargo-0.59.0
 cargo-platform-0.1.2
-cargo-util-0.1.1
+cargo-util-0.1.2
 cbindgen-0.20.0
 cc-1.0.73
 cfg-if-1.0.0
@@ -24,7 +24,7 @@ commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
-crates-io-0.33.0
+crates-io-0.33.1
 crc32fast-1.3.2
 crossbeam-utils-0.8.7
 crypto-hash-0.3.4
