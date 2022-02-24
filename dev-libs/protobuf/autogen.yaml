@@ -1,38 +1,27 @@
-protobuf:
-  generator: protobuf
+protobufs:
+  generator: github-1
+  defaults:
+    tarball: protobuf-{version}.tar.xz
+    github:
+      user: protocolbuffers
+      repo: protobuf
+      query: tags
   packages:
-    - protobuf:
-        revision:
-          3.19.1: 1
-
-protobuf-c:
-  generator: protobuf-c
-  packages:
-    - protobuf-c
-
-####################################################################################
-# We are going to use our pypi generator to just grab the matching latest stuff
-# from pypi, even though it is included in the python/ subdir in the main protobuf
-# archive as well.
-####################################################################################
-
-protobuf_python:
-  generator: pypi-simple-1
-  packages:
+    - protobuf
     - protobuf-python:
         cat: dev-python
-        pypi_name: protobuf
         python_compat: python3+
-        pydeps:
-          py:all:build:
-            - namespace-google
-            - six
-        depend: |
-          ~dev-libs/protobuf-${PV}
-        body: |
-          S=${S}/python
+        depend:
+          - ~dev-libs/protobuf-${PV}
+          - dev-python/namespace-google
+          - dev-python/six
 
-          python_install_all() {
-            distutils-r1_python_install_all
-            find "${D}" -name '*.pth' -delete || die
-          }
+protobuf_c:
+  generator: github-1
+  defaults:
+    github:
+      user: protobuf-c
+      repo: protobuf-c
+      query: releases
+  packages:
+    - protobuf-c

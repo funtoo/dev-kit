@@ -6,10 +6,10 @@ inherit autotools elisp-common flag-o-matic multilib-minimal toolchain-funcs
 
 DESCRIPTION="Google's Protocol Buffers - Extensible mechanism for serializing structured data"
 HOMEPAGE="https://developers.google.com/protocol-buffers/ https://github.com/protocolbuffers/protobuf"
-SRC_URI="https://github.com/protocolbuffers/protobuf/archive/v3.19.4.tar.gz -> protobuf-3.19.4.tar.gz"
+SRC_URI="https://github.com/protocolbuffers/protobuf/tarball/22d0e265de7d2b3d2e9a00d071313502e7d4cccf -> protobuf-3.19.4-22d0e26.tar.gz"
 
 LICENSE="BSD"
-SLOT="0/30"
+SLOT="0"
 KEYWORDS="*"
 IUSE="emacs examples static-libs test zlib"
 RESTRICT="!test? ( test )"
@@ -27,6 +27,12 @@ PATCHES=(
 )
 
 DOCS=(CHANGES.txt CONTRIBUTORS.txt README.md)
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/protocolbuffers-protobuf-* "${S}" || die
+	fi
+}
 
 src_prepare() {
 	default

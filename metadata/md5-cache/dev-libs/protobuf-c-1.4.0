@@ -9,7 +9,7 @@ KEYWORDS=*
 LICENSE=BSD-2
 RDEPEND=>=dev-libs/protobuf-3:0=
 RESTRICT=test
-SLOT=0/1.0.0
-SRC_URI=https://github.com/protobuf-c/protobuf-c/archive/v1.4.0.tar.gz -> protobuf-c-1.4.0.tar.gz
+SLOT=0/
+SRC_URI=https://github.com/protobuf-c/protobuf-c/tarball/f224ab2eeb648a818eb20687d7150a285442c907 -> protobuf-c-1.4.0-f224ab2.tar.gz
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=567eb04c24d6c8b0b2b92946553e61f1
+_md5_=908b0c5165c88b4d82bc74b271f0324e
