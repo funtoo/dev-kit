@@ -9,12 +9,12 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Protocol Buffers implementation in C"
 HOMEPAGE="https://github.com/protobuf-c/protobuf-c"
-SRC_URI="https://github.com/protobuf-c/protobuf-c/archive/v1.4.0.tar.gz -> protobuf-c-1.4.0.tar.gz"
+SRC_URI="https://github.com/protobuf-c/protobuf-c/tarball/f224ab2eeb648a818eb20687d7150a285442c907 -> protobuf-c-1.4.0-f224ab2.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD-2"
 # Subslot == SONAME version
-SLOT="0/1.0.0"
+SLOT="0/"
 KEYWORDS="*"
 IUSE="static-libs"
 RESTRICT="test"
