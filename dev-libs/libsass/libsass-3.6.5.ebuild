@@ -18,6 +18,12 @@ DEPEND="${RDEPEND}"
 
 DOCS=( Readme.md SECURITY.md )
 
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv sass-libsass* "${S}" || die
+	fi
+}
+
 src_prepare() {
 	default
 
