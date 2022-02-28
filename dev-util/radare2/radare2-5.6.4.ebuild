@@ -7,7 +7,7 @@ inherit bash-completion-r1 eutils toolchain-funcs
 DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
 
-SRC_URI="https://github.com/radareorg/radare2/archive/5.6.2.tar.gz -> radare2-5.6.2.tar.gz"
+SRC_URI="https://github.com/radareorg/radare2/archive/5.6.4.tar.gz -> radare2-5.6.4.tar.gz"
 KEYWORDS="*"
 
 LICENSE="GPL-2"
