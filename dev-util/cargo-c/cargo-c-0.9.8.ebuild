@@ -87,7 +87,7 @@ proc-macro2-1.0.36
 quote-1.0.15
 rand_core-0.5.1
 rand_xoshiro-0.4.0
-redox_syscall-0.2.10
+redox_syscall-0.2.11
 regex-1.5.4
 regex-automata-0.1.10
 regex-syntax-0.6.25
