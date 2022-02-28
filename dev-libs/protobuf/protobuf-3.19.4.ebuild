@@ -4,7 +4,7 @@ EAPI="7"
 
 inherit autotools elisp-common flag-o-matic multilib-minimal toolchain-funcs
 
-DESCRIPTION="Google's Protocol Buffers - Extensible mechanism for serializing structured data"
+DESCRIPTION="Protocol Buffers - Google's data interchange format"
 HOMEPAGE="https://developers.google.com/protocol-buffers/ https://github.com/protocolbuffers/protobuf"
 SRC_URI="https://github.com/protocolbuffers/protobuf/tarball/22d0e265de7d2b3d2e9a00d071313502e7d4cccf -> protobuf-3.19.4-22d0e26.tar.gz"
 

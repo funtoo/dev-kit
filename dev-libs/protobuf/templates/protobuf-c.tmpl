@@ -7,7 +7,7 @@ inherit autotools
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="Protocol Buffers implementation in C"
+DESCRIPTION="{{ description }}"
 HOMEPAGE="https://github.com/protobuf-c/protobuf-c"
 SRC_URI="{{artifacts[0].src_uri}}"
 S="${WORKDIR}/${MY_P}"

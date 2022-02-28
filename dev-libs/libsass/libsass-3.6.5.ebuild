@@ -6,7 +6,7 @@ inherit autotools multilib-minimal
 
 SRC_URI="https://github.com/sass/libsass/tarball/f6afdbb9288d20d1257122e71d88e53348a53af3 -> libsass-3.6.5-f6afdbb.tar.gz"
 
-DESCRIPTION="A C/C++ implementation of a Sass CSS compiler"
+DESCRIPTION="A C/C++ implementation of a Sass compiler"
 HOMEPAGE="https://github.com/sass/libsass"
 LICENSE="MIT"
 SLOT="0/1" # libsass soname
