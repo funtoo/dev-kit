@@ -284,8 +284,8 @@ EGO_SUM=(
 	"github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod"
 	"github.com/inconshreveable/mousetrap v1.0.0"
 	"github.com/inconshreveable/mousetrap v1.0.0/go.mod"
-	"github.com/itchyny/gojq v0.12.6"
-	"github.com/itchyny/gojq v0.12.6/go.mod"
+	"github.com/itchyny/gojq v0.12.7"
+	"github.com/itchyny/gojq v0.12.7/go.mod"
 	"github.com/itchyny/timefmt-go v0.1.3"
 	"github.com/itchyny/timefmt-go v0.1.3/go.mod"
 	"github.com/joho/godotenv v1.4.0"
@@ -626,8 +626,9 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
 	"golang.org/x/sys v0.0.0-20211007075335-d3039528d8ac/go.mod"
 	"golang.org/x/sys v0.0.0-20211124211545-fe61309f8881/go.mod"
-	"golang.org/x/sys v0.0.0-20211205182925-97ca703d548d"
 	"golang.org/x/sys v0.0.0-20211205182925-97ca703d548d/go.mod"
+	"golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9"
+	"golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210503060354-a79de5458b56"
 	"golang.org/x/term v0.0.0-20210503060354-a79de5458b56/go.mod"
@@ -881,7 +882,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.5.1 -> cli-v2.5.1.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.5.2 -> cli-v2.5.2.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -896,7 +897,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.5.1"
+	export GH_VERSION="v2.5.2"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted

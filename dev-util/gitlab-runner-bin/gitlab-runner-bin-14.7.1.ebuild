@@ -9,7 +9,7 @@ HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-runner"
 
 # The following list of binaries is provided at the following URL
 # https://gitlab-runner-downloads.s3.amazonaws.com/v13.6.0/index.html
-SRC_URI="https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v14.8.1/downloads/binaries/gitlab-runner-linux-amd64 -> gitlab-runner-bin-14.8.1.tar.gz"
+SRC_URI="https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v14.7.1/downloads/binaries/gitlab-runner-linux-amd64 -> gitlab-runner-bin-14.7.1.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
