@@ -112,7 +112,7 @@ structopt-derive-0.4.18
 syn-1.0.86
 tar-0.4.38
 tempfile-3.3.0
-termcolor-1.1.2
+termcolor-1.1.3
 textwrap-0.11.0
 thread_local-1.1.4
 tinyvec-1.5.1
