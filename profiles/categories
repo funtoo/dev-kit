@@ -11,4 +11,5 @@ dev-ros
 dev-util
 dev-vcs
 sys-apps
+sys-fs
 virtual
