@@ -1,14 +1,14 @@
 BDEPEND=python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)]
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=~dev-libs/protobuf-3.19.4 dev-python/namespace-google dev-python/six
+DEPEND=~dev-libs/protobuf-3.20.0 dev-python/namespace-google dev-python/six
 DESCRIPTION=Protocol Buffers - Google's data interchange format
 EAPI=7
 HOMEPAGE=https://developers.google.com/protocol-buffers/ https://github.com/protocolbuffers/protobuf
 IUSE=python_targets_python3_7 python_targets_python3_9 python_targets_python3_8
 KEYWORDS=*
-RDEPEND=~dev-libs/protobuf-3.19.4 dev-python/namespace-google dev-python/six python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)]
+RDEPEND=~dev-libs/protobuf-3.20.0 dev-python/namespace-google dev-python/six python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)]
 REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_9 python_targets_python3_8 )
 SLOT=0
-SRC_URI=https://github.com/protocolbuffers/protobuf/tarball/22d0e265de7d2b3d2e9a00d071313502e7d4cccf -> protobuf-3.19.4-22d0e26.tar.gz
+SRC_URI=https://github.com/protocolbuffers/protobuf/tarball/388df0041ab711228a5c041f4df041388a0ef839 -> protobuf-3.20.0-388df00.tar.gz
 _eclasses_=distutils-r1	d8e145fbbe57f3a15ae504741fb95f66	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=fa78c5b0019a798622b8c2aef593dca8
+_md5_=a5dd3f5e0ddfb5e9fa76af9f901b3212
