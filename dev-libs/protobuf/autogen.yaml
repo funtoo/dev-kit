@@ -16,12 +16,7 @@ protobufs:
           - dev-python/namespace-google
           - dev-python/six
 
-protobuf_c:
-  generator: github-1
-  defaults:
-    github:
-      user: protobuf-c
-      repo: protobuf-c
-      query: releases
+protobuf-c:
+  generator: protobuf-c
   packages:
     - protobuf-c
