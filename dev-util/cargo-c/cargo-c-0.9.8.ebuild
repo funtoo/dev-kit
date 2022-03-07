@@ -65,7 +65,7 @@ libc-0.2.119
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
-libz-sys-1.1.3
+libz-sys-1.1.4
 log-0.4.14
 matches-0.1.9
 memchr-2.4.1
