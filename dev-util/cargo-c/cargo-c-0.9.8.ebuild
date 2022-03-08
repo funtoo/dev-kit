@@ -65,7 +65,7 @@ libc-0.2.119
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
-libz-sys-1.1.4
+libz-sys-1.1.5
 log-0.4.14
 matches-0.1.9
 memchr-2.4.1
@@ -88,7 +88,7 @@ quote-1.0.15
 rand_core-0.5.1
 rand_xoshiro-0.4.0
 redox_syscall-0.2.11
-regex-1.5.4
+regex-1.5.5
 regex-automata-0.1.10
 regex-syntax-0.6.25
 remove_dir_all-0.5.3
