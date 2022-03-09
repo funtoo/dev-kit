@@ -1,0 +1,40 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit go-module
+
+EGO_SUM=(
+{{ gosum }})
+
+go-module_set_globals
+
+DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
+HOMEPAGE="https://github.com/{{github_user}}/{{github_repo}}"
+SRC_URI="{{artifacts[0].src_uri}}
+	${EGO_SUM_SRC_URI}"
+
+LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
+SLOT="0"
+KEYWORDS="*"
+
+DEPEND=""
+RDEPEND=">=dev-vcs/git-1.7.3"
+BDEPEND=">=dev-lang/go-1.16.14"
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
+
+src_compile() {
+	# The default yq go binary will conflict with python-modules-kit's app-misc/yq, which also has a yq executable installed to /usr/bin/yq
+	# For now until a decision is made regarding app-misc/yq, yq-go will be used as the binary name to avoid any collisions
+	go build -o bin/yq-go || die "compile failed"
+}
+
+src_install() {
+	dobin bin/yq-go
+	dodoc README.md
+}
