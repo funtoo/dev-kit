@@ -4,11 +4,11 @@ DEPEND=dev-libs/libzip dev-libs/xxhash sys-apps/file sys-libs/zlib dev-libs/caps
 DESCRIPTION=unix-like reverse engineering framework and commandline tools
 EAPI=7
 HOMEPAGE=http://www.radare.org
-IUSE=ssl libressl
+IUSE=ssl libressl test
 KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=dev-libs/libzip dev-libs/xxhash sys-apps/file sys-libs/zlib dev-libs/capstone:0= ssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) )
 SLOT=0
-SRC_URI=https://github.com/radareorg/radare2/archive/5.6.4.tar.gz -> radare2-5.6.4.tar.gz
+SRC_URI=test? ( https://github.com/radareorg/radare2-testbins/tarball/673da5dc69d18e61ab9448227e67a05650bb27d7 -> radare2-testbins-20220307-673da5d.tar.gz ) https://github.com/radareorg/radare2/tarball/69587d462d246c98f5011b436aac710d5f9867d1 -> radare2-5.6.4-69587d4.tar.gz https://github.com/radareorg/vector35-arch-arm64/tarball/3c5eaba46dab72ecb7d5f5b865a13fdeee95b464 -> radare2-vector35-arch-arm64-20211019-3c5eaba.tar.gz https://github.com/radareorg/vector35-arch-armv7/tarball/dde39f69ffea19fc37e681874b12cb4707bc4f30 -> radare2-vector35-arch-armv7-20211026-dde39f6.tar.gz
 _eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=858905567cf3383c2e7f0779b8bb0f2c
+_md5_=a579b58b19892134dc5d4d20c7867d49

@@ -6,13 +6,14 @@ inherit bash-completion-r1 eutils toolchain-funcs
 
 DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
-
-SRC_URI="{{artifacts[0].src_uri}}"
-KEYWORDS="*"
+SRC_URI=" {% for flag, artifact in artifacts|dictsort(true) %}
+	{% if "USE:" in flag %}{{ flag[4:] }}? ( {{ artifact.src_uri }} ){% else %}{{ artifact.src_uri }}{% endif %}{% endfor %}"
 
 LICENSE="GPL-2"
+
+KEYWORDS="*"
 SLOT="0"
-IUSE="ssl libressl"
+IUSE="ssl libressl test"
 
 RDEPEND="
 	dev-libs/libzip
@@ -28,10 +29,27 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv {{ github_user }}-{{ github_repo }}* "${S}" || die
+	fi
+
+	mv {{ github_user }}-vector35-arch-arm64-* "${S}/libr/asm/arch/arm/v35arm64/arch-arm64" || die
+	mv {{ github_user }}-vector35-arch-armv7-* "${S}/libr/asm/arch/arm/v35arm64/arch-armv7" || die
+
+	if use test; then
+		cp -r radare2-testbins-* "${S}/test/bins" || die
+		cp -r radare2-testbins-* "${S}" || die
+	fi
+
+}
+
 src_prepare() {
 	# Fix hardcoded docdir for fortunes
 	sed -i -e "/^#define R2_FORTUNES/s/radare2/$PF/" \
 		libr/include/r_userconf.h.acr
+
 	default
 }
 
