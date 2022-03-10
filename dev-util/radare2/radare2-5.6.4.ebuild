@@ -6,13 +6,17 @@ inherit bash-completion-r1 eutils toolchain-funcs
 
 DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
-
-SRC_URI="https://github.com/radareorg/radare2/archive/5.6.4.tar.gz -> radare2-5.6.4.tar.gz"
-KEYWORDS="*"
+SRC_URI=" 
+	test? ( https://github.com/radareorg/radare2-testbins/tarball/673da5dc69d18e61ab9448227e67a05650bb27d7 -> radare2-testbins-20220307-673da5d.tar.gz )
+	https://github.com/radareorg/radare2/tarball/69587d462d246c98f5011b436aac710d5f9867d1 -> radare2-5.6.4-69587d4.tar.gz
+	https://github.com/radareorg/vector35-arch-arm64/tarball/3c5eaba46dab72ecb7d5f5b865a13fdeee95b464 -> radare2-vector35-arch-arm64-20211019-3c5eaba.tar.gz
+	https://github.com/radareorg/vector35-arch-armv7/tarball/dde39f69ffea19fc37e681874b12cb4707bc4f30 -> radare2-vector35-arch-armv7-20211026-dde39f6.tar.gz"
 
 LICENSE="GPL-2"
+
+KEYWORDS="*"
 SLOT="0"
-IUSE="ssl libressl"
+IUSE="ssl libressl test"
 
 RDEPEND="
 	dev-libs/libzip
@@ -28,10 +32,27 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv radareorg-radare2* "${S}" || die
+	fi
+
+	mv radareorg-vector35-arch-arm64-* "${S}/libr/asm/arch/arm/v35arm64/arch-arm64" || die
+	mv radareorg-vector35-arch-armv7-* "${S}/libr/asm/arch/arm/v35arm64/arch-armv7" || die
+
+	if use test; then
+		cp -r radare2-testbins-* "${S}/test/bins" || die
+		cp -r radare2-testbins-* "${S}" || die
+	fi
+
+}
+
 src_prepare() {
 	# Fix hardcoded docdir for fortunes
 	sed -i -e "/^#define R2_FORTUNES/s/radare2/$PF/" \
 		libr/include/r_userconf.h.acr
+
 	default
 }
 
