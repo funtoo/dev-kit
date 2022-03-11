@@ -8,8 +8,8 @@ inherit eutils
 DESCRIPTION="Pebble SDK"
 HOMEPAGE="https://developer.pebble.com/sdk/"
 SRC_URI="
-	amd64? ( https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux64.tar.bz2 )
-	x86? ( https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux32.tar.bz2 )
+	amd64? ( https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux64.tar.bz2 )
+	x86? ( https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux32.tar.bz2 )
 "
 
 LICENSE=""
