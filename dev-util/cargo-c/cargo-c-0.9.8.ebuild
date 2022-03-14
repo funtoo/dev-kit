@@ -61,7 +61,7 @@ itoa-1.0.1
 jobserver-0.1.24
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.119
+libc-0.2.120
 libgit2-sys-0.12.26+1.3.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -109,7 +109,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.8.0
 structopt-0.3.26
 structopt-derive-0.4.18
-syn-1.0.86
+syn-1.0.87
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
