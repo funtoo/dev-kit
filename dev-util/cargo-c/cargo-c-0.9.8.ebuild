@@ -26,7 +26,7 @@ core-foundation-0.9.3
 core-foundation-sys-0.8.3
 crates-io-0.33.1
 crc32fast-1.3.2
-crossbeam-utils-0.8.7
+crossbeam-utils-0.8.8
 crypto-hash-0.3.4
 curl-0.4.43
 curl-sys-0.4.53+curl-7.82.0
