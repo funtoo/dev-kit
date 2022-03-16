@@ -76,7 +76,7 @@ once_cell-1.10.0
 opener-0.5.0
 openssl-0.10.38
 openssl-probe-0.1.5
-openssl-src-111.17.0+1.1.1m
+openssl-src-111.18.0+1.1.1n
 openssl-sys-0.9.72
 os_info-3.2.0
 percent-encoding-2.1.0
