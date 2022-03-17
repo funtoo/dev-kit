@@ -44,6 +44,8 @@ EGO_SUM=(
 	"github.com/gdamore/tcell/v2 v2.4.0/go.mod"
 	"github.com/gdamore/tcell/v2 v2.4.1-0.20210926162909-66f061b1fc9b"
 	"github.com/gdamore/tcell/v2 v2.4.1-0.20210926162909-66f061b1fc9b/go.mod"
+	"github.com/gdamore/tcell/v2 v2.4.1-0.20220313203054-2a1a1b586447"
+	"github.com/gdamore/tcell/v2 v2.4.1-0.20220313203054-2a1a1b586447/go.mod"
 	"github.com/gliderlabs/ssh v0.2.2"
 	"github.com/gliderlabs/ssh v0.2.2/go.mod"
 	"github.com/go-errors/errors v1.0.2/go.mod"
@@ -191,6 +193,7 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1/go.mod"
 	"golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod"
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
+	"golang.org/x/sys v0.0.0-20211113001501-0c823b97ae02/go.mod"
 	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e"
 	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e/go.mod"
 	"golang.org/x/term v0.0.0-20201210144234-2321bbc49cbf/go.mod"
@@ -225,7 +228,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.33 -> lazygit-0.33.tar.gz
+SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.34 -> lazygit-0.34.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="A simple terminal UI for git commands"
