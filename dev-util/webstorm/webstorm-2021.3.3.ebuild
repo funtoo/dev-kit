@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="a PHP IDE by JetBrains"
-HOMEPAGE="https://www.jetbrains.com/phpstorm"
-SRC_URI="https://download.jetbrains.com/webide/PhpStorm-2021.3.2.tar.gz -> phpstorm-2021.3.2.tar.gz"
+DESCRIPTION="The smartest JavaScript IDE"
+HOMEPAGE="http://www.jetbrains.com/webstorm"
+SRC_URI="https://download.jetbrains.com/webstorm/WebStorm-2021.3.3.tar.gz -> webstorm-2021.3.3.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -28,12 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/PhpStorm-${PV}"
+S="${WORKDIR}/webstorm-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "PhpStorm-${PV}" || die
+		mv $(ls "${WORKDIR}") "webstorm-${PV}" || die
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "PhpStorm" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "WebStorm" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
