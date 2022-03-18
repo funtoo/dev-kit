@@ -84,7 +84,7 @@ pkg-config-0.3.24
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.36
-quote-1.0.15
+quote-1.0.16
 rand_core-0.5.1
 rand_xoshiro-0.4.0
 redox_syscall-0.2.11
