@@ -4,7 +4,7 @@ EAPI="7"
 
 inherit eutils gnome2-utils fdo-mime desktop
 
-KEYWORDS="-*{% for arch in artifacts %} ~{{ arch }}{% endfor %}"
+KEYWORDS="-* ~x86 ~amd64 ~arm ~arm64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 IUSE=""
@@ -15,8 +15,11 @@ ARD_PF="${ARD_PN}-${PVR}"
 
 DESCRIPTION="AVR development board IDE and built-in libraries"
 HOMEPAGE="http://arduino.cc/en/Main/Software"
-SRC_URI="{% for arch in artifacts %}
-	{{ arch }}? ( {{ artifacts[arch].src_uri }} ){% endfor %}
+SRC_URI="
+	x86? ( https://downloads.arduino.cc/arduino-1.8.19-linux32.tar.xz )
+	amd64? ( https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz )
+	arm? ( https://downloads.arduino.cc/arduino-1.8.19-linuxarm.tar.xz )
+	arm64? ( https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz )
 "
 
 RESTRICT="strip mirror test"
