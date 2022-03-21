@@ -4,21 +4,22 @@ EAPI=7
 
 CRATES="
 aho-corasick-0.7.18
-ansi_term-0.12.1
-anyhow-1.0.53
+anyhow-1.0.56
 arrayref-0.3.6
 arrayvec-0.5.2
 atty-0.2.14
+autocfg-1.1.0
 base64-0.13.0
 bitflags-1.3.2
 blake2b_simd-0.5.11
 bstr-0.2.17
 byteorder-1.4.3
 cfg-if-1.0.0
-clap-2.34.0
+clap-3.1.6
+clap_derive-3.1.4
 constant_time_eq-0.1.5
 cpp_demangle-0.3.5
-crossbeam-utils-0.8.7
+crossbeam-utils-0.8.8
 csv-1.1.6
 csv-core-0.1.10
 dirs-1.0.5
@@ -26,24 +27,27 @@ encode_unicode-0.3.6
 env_logger-0.9.0
 fuchsia-cprng-0.1.1
 getrandom-0.1.16
-goblin-0.4.3
-heck-0.3.3
+goblin-0.5.1
+hashbrown-0.11.2
+heck-0.4.0
 hermit-abi-0.1.19
 hexplay-0.2.1
 humantime-2.1.0
+indexmap-1.8.0
 itoa-0.4.8
 lazy_static-1.4.0
-libc-0.2.117
+libc-0.2.121
 log-0.4.14
 memchr-2.4.1
 memrange-0.1.3
-metagoblin-0.5.0
+metagoblin-0.6.0
+os_str_bytes-6.0.0
 plain-0.2.3
 prettytable-rs-0.8.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.36
-quote-1.0.15
+quote-1.0.16
 rand-0.3.23
 rand-0.4.6
 rand_core-0.3.1
@@ -51,30 +55,27 @@ rand_core-0.4.2
 rdrand-0.4.0
 redox_syscall-0.1.57
 redox_users-0.3.5
-regex-1.5.4
+regex-1.5.5
 regex-automata-0.1.10
 regex-syntax-0.6.25
 rust-argon2-0.8.3
 rustc-demangle-0.1.21
 rustc-serialize-0.3.24
 ryu-1.0.9
-scroll-0.10.2
-scroll_derive-0.10.5
+scroll-0.11.0
+scroll_derive-0.11.0
 serde-1.0.136
-strsim-0.8.0
-structopt-0.3.26
-structopt-derive-0.4.18
-syn-1.0.86
+strsim-0.10.0
+syn-1.0.89
 term-0.5.2
 termcolor-0.3.6
-termcolor-1.1.2
-textwrap-0.11.0
+termcolor-1.1.3
+terminal_size-0.1.17
+textwrap-0.15.0
 theban_interval_tree-0.7.1
 time-0.1.44
-unicode-segmentation-1.8.0
 unicode-width-0.1.9
 unicode-xid-0.2.2
-vec_map-0.8.2
 version_check-0.9.4
 wasi-0.9.0+wasi-snapshot-preview1
 wasi-0.10.0+wasi-snapshot-preview1
@@ -89,7 +90,7 @@ inherit cargo
 
 DESCRIPTION="Binary file analysis tool"
 HOMEPAGE="https://github.com/m4b/bingrep"
-SRC_URI="https://api.github.com/repos/m4b/bingrep/tarball/refs/tags/v0.9.1 -> bingrep-0.9.1.tar.gz
+SRC_URI="https://api.github.com/repos/m4b/bingrep/tarball/refs/tags/v0.10.0 -> bingrep-0.10.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
