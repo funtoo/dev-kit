@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit go-module
+inherit bash-completion-r1 go-module
 
 EGO_SUM=(
 	"cloud.google.com/go v0.26.0/go.mod"
