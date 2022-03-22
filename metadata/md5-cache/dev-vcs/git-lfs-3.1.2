@@ -1,5 +1,5 @@
 BDEPEND=doc? ( app-text/ronn ) >=dev-lang/go-1.12 app-arch/unzip
-DEFINED_PHASES=compile install postinst test unpack
+DEFINED_PHASES=compile install postinst prepare test unpack
 DESCRIPTION=Command line extension and specification for managing large files with git
 EAPI=7
 HOMEPAGE=https://git-lfs.github.com/
@@ -10,5 +10,5 @@ RDEPEND=dev-vcs/git
 RESTRICT=strip !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/git-lfs/git-lfs/archive/v3.1.2.tar.gz -> git-lfs-3.1.2.tar.gz
-_eclasses_=go-module	27d2ced289f22701df157c186af79adb
+_eclasses_=go-module	8e53ba8e864ebafd9a9e3abe8595666a	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=0c6b67ee4e0c77f024aa1dd48485df51
