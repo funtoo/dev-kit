@@ -1,20 +1,19 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
-inherit linux-mod versionator
+inherit linux-mod
 
 MY_P="${P/_rc/-rc}"
-MY_SLOT="$(get_version_component_range 1-2)"
+MY_SLOT="$(ver_cut 1-2)"
 
 DESCRIPTION="LTTng Kernel Tracer Modules"
-HOMEPAGE="http://lttng.org"
-SRC_URI="http://lttng.org/files/${PN}/${MY_P}.tar.bz2"
+HOMEPAGE="https://lttng.org"
+SRC_URI="https://lttng.org/files/lttng-modules/lttng-modules-2.13.2.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${MY_SLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE=""
 
 BUILD_TARGETS="default"
@@ -27,8 +26,8 @@ MODULE_NAMES="true"
 S="${WORKDIR}/${MY_P}"
 
 pkg_pretend() {
-	if kernel_is lt 2 6 27; then
-		eerror "${PN} require Linux kernel >= 2.6.27"
+	if kernel_is lt 3 0; then
+		eerror "${PN} require Linux kernel >= 3.0"
 		die "Please update your kernel!"
 	fi
 }
@@ -45,5 +44,5 @@ src_install() {
 	MODULE_NAMES=${modules}
 
 	linux-mod_src_install
-	dodoc ChangeLog README.md TODO
+	dodoc ChangeLog README.md
 }
