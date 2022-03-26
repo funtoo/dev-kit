@@ -14,11 +14,11 @@ KEYWORDS="*"
 IUSE="static-libs test"
 RESTRICT="!test? ( test )"
 
-BDEPEND="test? ( sys-process/time )"
+#BDEPEND="test? ( sys-process/time )"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.13.1-tests-no-benchmark.patch
-)
+#PATCHES=(
+#	"${FILESDIR}"/${PN}-0.13.1-tests-no-benchmark.patch
+#)
 
 src_prepare() {
 	default
