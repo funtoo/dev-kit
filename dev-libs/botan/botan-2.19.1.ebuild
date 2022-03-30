@@ -5,19 +5,17 @@ PYTHON_COMPAT=( python2+ )
 
 inherit multilib python-r1 toolchain-funcs
 
-MY_PN="Botan"
-MY_P="${MY_PN}-${PV}"
 DESCRIPTION="A C++ crypto library"
-HOMEPAGE="https://botan.randombit.net/"
-SRC_URI="https://botan.randombit.net/releases/${MY_P}.tar.xz"
+SRC_URI="https://github.com/randombit/botan/archive/refs/tags/2.19.1.tar.gz"
 
-KEYWORDS="amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~ppc-macos"
+HOMEPAGE="https://botan.randombit.net/"
+
+KEYWORDS="*"
 SLOT="2/$(ver_cut 1-2)" # soname version
 LICENSE="BSD"
 IUSE="bindist doc boost python bzip2 libressl lzma sqlite ssl static-libs zlib"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
-
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${P}"
 
 DEPEND="python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}
