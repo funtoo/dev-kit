@@ -54,7 +54,7 @@ humantime-2.1.0
 idna-0.2.3
 ignore-0.4.18
 im-rc-15.0.0
-indexmap-1.8.0
+indexmap-1.8.1
 instant-0.1.12
 itertools-0.10.3
 itoa-1.0.1
@@ -87,7 +87,7 @@ proc-macro2-1.0.36
 quote-1.0.17
 rand_core-0.5.1
 rand_xoshiro-0.4.0
-redox_syscall-0.2.12
+redox_syscall-0.2.13
 regex-1.5.5
 regex-automata-0.1.10
 regex-syntax-0.6.25
