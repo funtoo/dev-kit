@@ -80,7 +80,7 @@ openssl-src-111.18.0+1.1.1n
 openssl-sys-0.9.72
 os_info-3.2.0
 percent-encoding-2.1.0
-pkg-config-0.3.24
+pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.36

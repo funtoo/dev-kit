@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="An efficient, principled regular expression library"
 HOMEPAGE="https://github.com/google/re2"
-SRC_URI="https://api.github.com/repos/google/re2/tarball/2022-02-01 -> re2-2022.02.01.tar.gz"
+SRC_URI="https://api.github.com/repos/google/re2/tarball/2022-04-01 -> re2-2022.04.01.tar.gz"
 
 LICENSE="BSD"
 # NOTE: Always run libre2 through abi-compliance-checker!
@@ -25,7 +25,7 @@ HTML_DOCS=( doc/syntax.html )
 
 fix_src_dirs() {
 	pushd "${WORKDIR}"
-	mv google-re2-* re2-2022.02.01
+	mv google-re2-* re2-2022.04.01
 	popd
 }
 
