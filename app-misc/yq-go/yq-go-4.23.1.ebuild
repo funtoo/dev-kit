@@ -61,12 +61,16 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod"
 	"golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod"
 	"golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod"
+	"golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod"
+	"golang.org/x/sys v0.0.0-20210423082822-04245dca01da/go.mod"
 	"golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod"
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
 	"golang.org/x/sys v0.0.0-20211205182925-97ca703d548d"
 	"golang.org/x/sys v0.0.0-20211205182925-97ca703d548d/go.mod"
+	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.2/go.mod"
+	"golang.org/x/text v0.3.6/go.mod"
 	"golang.org/x/text v0.3.7"
 	"golang.org/x/text v0.3.7/go.mod"
 	"golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod"
@@ -87,7 +91,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.24.2 -> yq-go-v4.24.2.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.23.1 -> yq-go-v4.23.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

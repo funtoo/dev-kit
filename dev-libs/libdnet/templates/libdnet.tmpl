@@ -9,7 +9,7 @@ inherit autotools distutils-r1
 
 DESCRIPTION="simplified, portable interface to several low-level networking routines"
 HOMEPAGE="https://github.com/ofalk/libdnet"
-SRC_URI="https://github.com/ofalk/libdnet/tarball/3e782472d2a58d5e1b94d04eda4a364c2d257600 -> libdnet-1.14-3e78247.tar.gz"
+SRC_URI="{{ artifacts[0].src_uri }}"
 S="${WORKDIR}/${PN}-${P}"
 
 LICENSE="LGPL-2"
@@ -36,7 +36,7 @@ PATCHES=(
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv ofalk-libdnet* "${S}" || die
+		mv {{ github_user }}-{{ github_repo }}* "${S}" || die
 	fi
 }
 
