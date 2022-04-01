@@ -1,0 +1,10 @@
+github_rule:
+  generator: github-1
+  packages:
+    - libdnet:
+        github:
+          user: ofalk
+          repo: libdnet
+          query: releases
+        revision:
+          '1.14': '2'
