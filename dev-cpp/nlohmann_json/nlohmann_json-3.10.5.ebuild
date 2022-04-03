@@ -8,7 +8,7 @@ DESCRIPTION="JSON for Modern C++"
 HOMEPAGE="https://github.com/nlohmann/json"
 SRC_URI="
 	https://api.github.com/repos/nlohmann/json/tarball/v3.10.5 -> json-3.10.5.tar.gz
-	test? ( https://api.github.com/repos/nlohmann/json_test_data/tarball/v3.0.0 -> json_test_data-3.0.0.tar.gz )
+	test? ( https://api.github.com/repos/nlohmann/json_test_data/tarball/v3.1.0 -> json_test_data-3.1.0.tar.gz )
 "
 
 LICENSE="MIT"
@@ -28,7 +28,7 @@ fix_src_dirs() {
 	
 	pushd "${WORKDIR}"
 	mv nlohmann-json-* json-3.10.5
-	mv nlohmann-json_test_data-* json_test_data-3.0.0
+	mv nlohmann-json_test_data-* json_test_data-3.1.0
 	popd
 }
 
@@ -53,7 +53,7 @@ src_configure() {
 	)
 
 	# Define test data directory here to avoid unused var QA warning, bug #747826
-	use test && mycmakeargs+=( -DJSON_TestDataDirectory="${WORKDIR}"/json_test_data-3.0.0 )
+	use test && mycmakeargs+=( -DJSON_TestDataDirectory="${WORKDIR}"/json_test_data-3.1.0 )
 
 	cmake_src_configure
 }
