@@ -1,0 +1,8 @@
+github_rule:
+  generator: github-1
+  packages:
+    - yaml-cpp:
+        github:
+          user: jbeder
+          repo: yaml-cpp
+          query: releases
