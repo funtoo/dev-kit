@@ -25,7 +25,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	eapply "${FILESDIR}"/${PN}-0.2.3-makefile.patch
 	eapply_user
 }
 
