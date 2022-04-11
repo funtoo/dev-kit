@@ -34,7 +34,7 @@ either-1.6.1
 env_logger-0.9.0
 fastrand-1.7.0
 filetime-0.2.15
-flate2-1.0.22
+flate2-1.0.23
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -69,7 +69,7 @@ libz-sys-1.1.5
 log-0.4.16
 matches-0.1.9
 memchr-2.4.1
-miniz_oxide-0.4.4
+miniz_oxide-0.5.1
 miow-0.3.7
 num_cpus-1.13.1
 once_cell-1.10.0
@@ -84,7 +84,7 @@ pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.37
-quote-1.0.17
+quote-1.0.18
 rand_core-0.5.1
 rand_xoshiro-0.4.0
 redox_syscall-0.2.13
