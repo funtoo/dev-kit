@@ -1,23 +1,31 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="6"
 
 inherit toolchain-funcs
 
 DESCRIPTION="Minimalistic C client library for the Redis database"
 HOMEPAGE="https://github.com/redis/hiredis"
-SRC_URI="https://github.com/redis/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/redis/hiredis/tarball/b731283245f3183af527237166261ad0768ba7d4 -> hiredis-1.0.2-b731283.tar.gz"
 
 LICENSE="BSD"
-SLOT="0/0.14"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x64-solaris"
+SLOT="0/1.0.213"
+KEYWORDS="*"
 IUSE="examples static-libs test"
 
 DEPEND="test? ( dev-db/redis )"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.0.0-disable-network-tests.patch
+)
+
+post_src_unpack() {
+        if [ ! -d "${S}" ]; then
+                mv redis-hiredis* "${S}" || die
+        fi
+}
+
 src_prepare() {
-	local PATCHES=( "${FILESDIR}/${PN}-0.13.3-disable-network-tests.patch" )
 	default
 
 	# use GNU ld syntax on Solaris
@@ -65,7 +73,7 @@ src_test() {
 
 src_install() {
 	_build PREFIX="${ED%/}/usr" install
-	if ! use static-libs; then
+	if use static-libs; then
 		rm "${ED%/}/usr/$(get_libdir)/libhiredis.a" || die
 	fi
 
