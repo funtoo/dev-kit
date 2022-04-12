@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare test
 DEPEND=test? ( dev-db/redis )
 DESCRIPTION=Minimalistic C client library for the Redis database
-EAPI=7
+EAPI=6
 HOMEPAGE=https://github.com/redis/hiredis
 IUSE=examples static-libs test
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x64-solaris
+KEYWORDS=*
 LICENSE=BSD
-SLOT=0/0.14
-SRC_URI=https://github.com/redis/hiredis/archive/v0.14.0.tar.gz -> hiredis-0.14.0.tar.gz
+SLOT=0/1.0.213
+SRC_URI=https://github.com/redis/hiredis/tarball/b731283245f3183af527237166261ad0768ba7d4 -> hiredis-1.0.2-b731283.tar.gz
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=8b27bd2974f27256a919cea79ac5ba5f
+_md5_=b2be0200f0e046672eb06b012eb84461
