@@ -7,7 +7,7 @@ MY_SLOT="$(ver_cut 1-2)"
 
 DESCRIPTION="Linux Trace Toolkit - next generation"
 HOMEPAGE="https://lttng.org"
-SRC_URI="https://lttng.org/files/lttng-tools/lttng-tools-2.13.6.tar.bz2"
+SRC_URI="https://lttng.org/files/lttng-tools/lttng-tools-2.13.7.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${MY_SLOT}"
