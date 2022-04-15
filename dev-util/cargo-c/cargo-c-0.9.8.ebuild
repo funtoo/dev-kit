@@ -117,7 +117,7 @@ textwrap-0.11.0
 thread_local-1.1.4
 tinyvec-1.5.1
 tinyvec_macros-0.1.0
-toml-0.5.8
+toml-0.5.9
 typenum-1.15.0
 unicode-bidi-0.3.7
 unicode-normalization-0.1.19
