@@ -52,7 +52,7 @@ inherit cargo
 
 DESCRIPTION="A tool for generating C bindings to Rust code"
 HOMEPAGE="https://github.com/eqrion/cbindgen"
-SRC_URI="https://api.github.com/repos/eqrion/cbindgen/tarball/v0.22.0 -> cbindgen-0.22.0.tar.gz
+SRC_URI="https://api.github.com/repos/eqrion/cbindgen/tarball/v0.23.0 -> cbindgen-0.23.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT MPL-2.0 Apache-2.0 Unlicense ZLIB"
