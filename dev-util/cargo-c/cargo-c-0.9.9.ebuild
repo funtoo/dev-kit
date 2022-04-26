@@ -4,7 +4,6 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
-ansi_term-0.12.1
 anyhow-1.0.57
 arrayvec-0.5.2
 atty-0.2.14
@@ -12,19 +11,23 @@ autocfg-1.1.0
 bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
+bytes-1.1.0
 bytesize-1.1.0
-cargo-0.60.0
+cargo-0.61.1
 cargo-platform-0.1.2
 cargo-util-0.1.2
-cbindgen-0.20.0
+cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
-clap-2.34.0
+clap-3.1.12
+clap_derive-3.1.7
+clap_lex-0.1.1
+combine-4.6.4
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
-crates-io-0.33.1
+crates-io-0.34.0
 crc32fast-1.3.2
 crossbeam-utils-0.8.8
 crypto-hash-0.3.4
@@ -40,12 +43,12 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.0.1
 fwdansi-1.1.0
-git2-0.13.25
-git2-curl-0.14.1
+git2-0.14.2
+git2-curl-0.15.0
 glob-0.3.0
 globset-0.4.8
 hashbrown-0.11.2
-heck-0.3.3
+heck-0.4.0
 hermit-abi-0.1.19
 hex-0.3.2
 hex-0.4.3
@@ -59,10 +62,11 @@ instant-0.1.12
 itertools-0.10.3
 itoa-1.0.1
 jobserver-0.1.24
+kstring-1.0.6
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.124
-libgit2-sys-0.12.26+1.3.0
+libgit2-sys-0.13.2+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.5
@@ -79,6 +83,7 @@ openssl-probe-0.1.5
 openssl-src-111.18.0+1.1.1n
 openssl-sys-0.9.72
 os_info-3.2.0
+os_str_bytes-6.0.0
 percent-encoding-2.1.0
 pkg-config-0.3.25
 proc-macro-error-1.0.4
@@ -106,28 +111,25 @@ shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.4
 strip-ansi-escapes-0.1.1
-strsim-0.8.0
-structopt-0.3.26
-structopt-derive-0.4.18
+strsim-0.10.0
 syn-1.0.91
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
-textwrap-0.11.0
+textwrap-0.15.0
 thread_local-1.1.4
-tinyvec-1.5.1
+tinyvec-1.6.0
 tinyvec_macros-0.1.0
 toml-0.5.9
+toml_edit-0.13.4
 typenum-1.15.0
-unicode-bidi-0.3.7
+unicode-bidi-0.3.8
 unicode-normalization-0.1.19
-unicode-segmentation-1.9.0
 unicode-width-0.1.9
 unicode-xid-0.2.2
 url-2.2.2
 utf8parse-0.2.0
 vcpkg-0.2.15
-vec_map-0.8.2
 version_check-0.9.4
 vte-0.10.1
 vte_generate_state_changes-0.1.1
@@ -142,7 +144,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.8 -> cargo-c-0.9.8.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.9 -> cargo-c-0.9.9.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 RESTRICT="mirror"
