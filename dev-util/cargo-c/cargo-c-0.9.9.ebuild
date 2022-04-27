@@ -32,7 +32,7 @@ crc32fast-1.3.2
 crossbeam-utils-0.8.8
 crypto-hash-0.3.4
 curl-0.4.43
-curl-sys-0.4.53+curl-7.82.0
+curl-sys-0.4.54+curl-7.83.0
 either-1.6.1
 env_logger-0.9.0
 fastrand-1.7.0
@@ -43,7 +43,7 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.0.1
 fwdansi-1.1.0
-git2-0.14.2
+git2-0.14.3
 git2-curl-0.15.0
 glob-0.3.0
 globset-0.4.8
@@ -66,10 +66,10 @@ kstring-1.0.6
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.124
-libgit2-sys-0.13.2+1.4.2
+libgit2-sys-0.13.3+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
-libz-sys-1.1.5
+libz-sys-1.1.6
 log-0.4.16
 matches-0.1.9
 memchr-2.4.1
