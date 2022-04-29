@@ -56,7 +56,7 @@ home-0.5.3
 humantime-2.1.0
 idna-0.2.3
 ignore-0.4.18
-im-rc-15.0.0
+im-rc-15.1.0
 indexmap-1.8.1
 instant-0.1.12
 itertools-0.10.3
@@ -65,7 +65,7 @@ jobserver-0.1.24
 kstring-1.0.6
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.124
+libc-0.2.125
 libgit2-sys-0.13.3+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -90,8 +90,8 @@ proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.37
 quote-1.0.18
-rand_core-0.5.1
-rand_xoshiro-0.4.0
+rand_core-0.6.3
+rand_xoshiro-0.6.0
 redox_syscall-0.2.13
 regex-1.5.5
 regex-automata-0.1.10
@@ -112,7 +112,7 @@ sized-chunks-0.6.5
 socket2-0.4.4
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.91
+syn-1.0.92
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3

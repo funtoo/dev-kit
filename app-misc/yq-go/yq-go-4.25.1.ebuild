@@ -87,7 +87,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.24.5 -> yq-go-v4.24.5.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.25.1 -> yq-go-v4.25.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
