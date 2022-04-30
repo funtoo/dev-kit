@@ -1,0 +1,9 @@
+ctemplate:
+  generator: github-1
+  packages:
+    - ctemplate:
+        python_compat: python3+
+        github:
+          user: OlafvdSpek
+          repo: ctemplate
+          query: releases

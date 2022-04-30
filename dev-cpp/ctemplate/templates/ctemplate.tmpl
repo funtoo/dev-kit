@@ -1,32 +1,34 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( {{python_compat}} )
 
 inherit autotools elisp-common python-any-r1
 
 DESCRIPTION="A simple but powerful template language for C++"
 HOMEPAGE="https://github.com/olafvdspek/ctemplate"
-SRC_URI="https://dev.gentoo.org/~pinkbyte/distfiles/${P}.tar.bz2"
+SRC_URI="{{artifacts[0].src_uri}}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="*"
 IUSE="doc emacs vim-syntax static-libs test"
 
 DEPEND="test? ( ${PYTHON_DEPS} )"
 RDEPEND="
-	emacs? ( virtual/emacs )
+	emacs? ( >=app-editors/emacs-23.1:* )
 	vim-syntax? ( >=app-editors/vim-core-7 )"
 
 SITEFILE="70ctemplate-gentoo.el"
 
-# Some tests are broken in 2.3
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}"/${PN}-2.3-fix-build-system.patch )
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv {{ github_user }}-{{ github_repo }}* "${S}" || die
+	fi
+}
 
 src_prepare() {
 	default
@@ -48,7 +50,7 @@ src_compile() {
 src_install() {
 	default
 	if ! use doc; then
-		rm -r "${ED%/}"/usr/share/doc/${PF}/html || die
+		rm -r "${ED}"/usr/share/doc/${PF}/html || die
 	fi
 
 	if use vim-syntax; then
