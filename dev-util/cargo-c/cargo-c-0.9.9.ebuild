@@ -19,9 +19,9 @@ cargo-util-0.1.2
 cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.1.12
+clap-3.1.13
 clap_derive-3.1.7
-clap_lex-0.1.1
+clap_lex-0.2.0
 combine-4.6.4
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -72,7 +72,7 @@ libssh2-sys-0.2.23
 libz-sys-1.1.6
 log-0.4.16
 matches-0.1.9
-memchr-2.4.1
+memchr-2.5.0
 miniz_oxide-0.5.1
 miow-0.3.7
 num_cpus-1.13.1
