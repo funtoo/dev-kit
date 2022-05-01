@@ -19,7 +19,7 @@ cargo-util-0.1.2
 cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.1.13
+clap-3.1.14
 clap_derive-3.1.7
 clap_lex-0.2.0
 combine-4.6.4
@@ -103,9 +103,9 @@ ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.7
-serde-1.0.136
-serde_derive-1.0.136
-serde_ignored-0.1.2
+serde-1.0.137
+serde_derive-1.0.137
+serde_ignored-0.1.3
 serde_json-1.0.80
 shell-escape-0.1.5
 sized-chunks-0.6.5
