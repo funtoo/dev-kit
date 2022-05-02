@@ -82,7 +82,7 @@ openssl-0.10.38
 openssl-probe-0.1.5
 openssl-src-111.18.0+1.1.1n
 openssl-sys-0.9.72
-os_info-3.2.0
+os_info-3.3.0
 os_str_bytes-6.0.0
 percent-encoding-2.1.0
 pkg-config-0.3.25
@@ -102,7 +102,7 @@ rustfix-0.6.0
 ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
-semver-1.0.7
+semver-1.0.9
 serde-1.0.137
 serde_derive-1.0.137
 serde_ignored-0.1.3
