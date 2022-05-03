@@ -6,5 +6,6 @@ github_rule:
           user: ofalk
           repo: libdnet
           query: releases
+        select: 'libdnet-1\.14'
         revision:
           '1.14': '2'
