@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3+ )
 DISTUTILS_OPTIONAL=1
 inherit autotools distutils-r1
 
-DESCRIPTION="simplified, portable interface to several low-level networking routines"
+DESCRIPTION="libdnet provides a simplified, portable interface to several low-level networking routines."
 HOMEPAGE="https://github.com/ofalk/libdnet"
 SRC_URI="https://github.com/ofalk/libdnet/tarball/899cdc5039b53b4e0e0e73fd871c5ca3f658b2de -> libdnet-1.16.1-899cdc5.tar.gz"
 S="${WORKDIR}/${PN}-${P}"
