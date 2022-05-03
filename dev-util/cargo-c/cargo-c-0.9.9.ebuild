@@ -70,7 +70,7 @@ libgit2-sys-0.13.3+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.6
-log-0.4.16
+log-0.4.17
 matches-0.1.9
 memchr-2.5.0
 miniz_oxide-0.5.1
