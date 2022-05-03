@@ -78,10 +78,11 @@ miow-0.3.7
 num_cpus-1.13.1
 once_cell-1.10.0
 opener-0.5.0
-openssl-0.10.38
+openssl-0.10.39
+openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.18.0+1.1.1n
-openssl-sys-0.9.72
+openssl-sys-0.9.73
 os_info-3.3.0
 os_str_bytes-6.0.0
 percent-encoding-2.1.0
