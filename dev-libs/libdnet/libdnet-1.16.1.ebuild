@@ -29,10 +29,7 @@ BDEPEND="
 
 DOCS=( README.md THANKS )
 
-PATCHES=(
-	"${FILESDIR}/${PN}-1.14-ndisc.patch"
-	"${FILESDIR}/${PN}-1.14-strlcpy.patch"
-)
+PATCHES=()
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
