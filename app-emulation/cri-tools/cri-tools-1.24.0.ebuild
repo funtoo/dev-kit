@@ -4,7 +4,7 @@ EAPI=7
 
 inherit bash-completion-r1 go-module
 
-SRC_URI="https://github.com/kubernetes-sigs/cri-tools/archive/v1.23.0.tar.gz -> cri-tools-1.23.0.tar.gz
+SRC_URI="https://github.com/kubernetes-sigs/cri-tools/archive/v1.24.0.tar.gz -> cri-tools-1.24.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="CLI and validation tools for Kubelet Container Runtime (CRI)"
