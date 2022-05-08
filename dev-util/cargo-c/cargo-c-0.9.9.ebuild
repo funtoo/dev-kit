@@ -110,7 +110,7 @@ serde_ignored-0.1.3
 serde_json-1.0.81
 shell-escape-0.1.5
 sized-chunks-0.6.5
-socket2-0.4.4
+socket2-0.4.5
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
 syn-1.0.92
@@ -139,6 +139,12 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
+windows-sys-0.36.1
+windows_aarch64_msvc-0.36.1
+windows_i686_gnu-0.36.1
+windows_i686_msvc-0.36.1
+windows_x86_64_gnu-0.36.1
+windows_x86_64_msvc-0.36.1
 "
 
 inherit cargo
