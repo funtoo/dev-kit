@@ -1,0 +1,38 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit go-module
+
+EGO_SUM=(
+{{ gosum }})
+
+go-module_set_globals
+
+DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
+HOMEPAGE="https://github.com/{{github_user}}/{{github_repo}}"
+SRC_URI="{{artifacts[0].src_uri}}
+	${EGO_SUM_SRC_URI}"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="*"
+
+DEPEND=""
+RDEPEND=">=dev-vcs/git-1.7.3"
+BDEPEND=">=dev-lang/go-1.17"
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
+
+src_compile() {
+	go build -o bin/chezmoi || die "compile failed"
+}
+
+src_install() {
+	dobin bin/chezmoi
+	dodoc README.md
+}
