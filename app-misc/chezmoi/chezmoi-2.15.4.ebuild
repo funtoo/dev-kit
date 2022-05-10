@@ -280,8 +280,8 @@ EGO_SUM=(
 	"github.com/google/go-querystring v1.1.0"
 	"github.com/google/go-querystring v1.1.0/go.mod"
 	"github.com/google/gofuzz v1.0.0/go.mod"
-	"github.com/google/gops v0.3.22"
-	"github.com/google/gops v0.3.22/go.mod"
+	"github.com/google/gops v0.3.23"
+	"github.com/google/gops v0.3.23/go.mod"
 	"github.com/google/martian v2.1.0+incompatible"
 	"github.com/google/martian v2.1.0+incompatible/go.mod"
 	"github.com/google/martian/v3 v3.0.0/go.mod"
@@ -642,8 +642,8 @@ EGO_SUM=(
 	"golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa/go.mod"
 	"golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e/go.mod"
 	"golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4/go.mod"
-	"golang.org/x/crypto v0.0.0-20220427172511-eb4f295cb31f"
-	"golang.org/x/crypto v0.0.0-20220427172511-eb4f295cb31f/go.mod"
+	"golang.org/x/crypto v0.0.0-20220507011949-2cf3adece122"
+	"golang.org/x/crypto v0.0.0-20220507011949-2cf3adece122/go.mod"
 	"golang.org/x/exp v0.0.0-20190121172915-509febef88a4/go.mod"
 	"golang.org/x/exp v0.0.0-20190306152737-a1d7652674e8/go.mod"
 	"golang.org/x/exp v0.0.0-20190510132918-efd6b22b2522/go.mod"
@@ -849,8 +849,8 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9/go.mod"
 	"golang.org/x/sys v0.0.0-20220328115105-d36c6a25d886/go.mod"
 	"golang.org/x/sys v0.0.0-20220412211240-33da011f77ad/go.mod"
-	"golang.org/x/sys v0.0.0-20220429233432-b5fbb4746d32"
-	"golang.org/x/sys v0.0.0-20220429233432-b5fbb4746d32/go.mod"
+	"golang.org/x/sys v0.0.0-20220503163025-988cb79eb6c6"
+	"golang.org/x/sys v0.0.0-20220503163025-988cb79eb6c6/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210615171337-6886f2dfbf5b/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
@@ -1147,7 +1147,7 @@ go-module_set_globals
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://github.com/twpayne/chezmoi"
-SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.15.2 -> chezmoi-v2.15.2.tar.gz
+SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.15.4 -> chezmoi-v2.15.4.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="MIT"
