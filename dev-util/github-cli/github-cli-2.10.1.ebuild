@@ -73,8 +73,9 @@ EGO_SUM=(
 	"github.com/cli/shurcoo!l-graphql v0.0.1/go.mod"
 	"github.com/client9/misspell v0.3.4/go.mod"
 	"github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.1"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.1/go.mod"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.2"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
 	"github.com/creack/pty v1.1.18"
 	"github.com/creack/pty v1.1.18/go.mod"
@@ -129,8 +130,8 @@ EGO_SUM=(
 	"github.com/google/go-cmp v0.5.0/go.mod"
 	"github.com/google/go-cmp v0.5.1/go.mod"
 	"github.com/google/go-cmp v0.5.4/go.mod"
-	"github.com/google/go-cmp v0.5.7"
-	"github.com/google/go-cmp v0.5.7/go.mod"
+	"github.com/google/go-cmp v0.5.8"
+	"github.com/google/go-cmp v0.5.8/go.mod"
 	"github.com/google/martian v2.1.0+incompatible/go.mod"
 	"github.com/google/martian/v3 v3.0.0/go.mod"
 	"github.com/google/pprof v0.0.0-20181206194817-3ea8567a2e57/go.mod"
@@ -423,7 +424,6 @@ EGO_SUM=(
 	"golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod"
 	"golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898/go.mod"
 	"golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod"
-	"golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1"
 	"golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1/go.mod"
 	"google.golang.org/api v0.4.0/go.mod"
 	"google.golang.org/api v0.7.0/go.mod"
@@ -525,7 +525,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.9.0 -> cli-v2.9.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.10.1 -> cli-v2.10.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -540,7 +540,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.9.0"
+	export GH_VERSION="v2.10.1"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
