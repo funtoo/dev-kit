@@ -19,8 +19,8 @@ cargo-util-0.1.2
 cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.1.17
-clap_derive-3.1.7
+clap-3.1.18
+clap_derive-3.1.18
 clap_lex-0.2.0
 combine-4.6.4
 commoncrypto-0.2.0
@@ -43,7 +43,7 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.0.1
 fwdansi-1.1.0
-git2-0.14.3
+git2-0.14.4
 git2-curl-0.15.0
 glob-0.3.0
 globset-0.4.8
@@ -66,7 +66,7 @@ kstring-1.0.6
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.125
-libgit2-sys-0.13.3+1.4.2
+libgit2-sys-0.13.4+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.6
