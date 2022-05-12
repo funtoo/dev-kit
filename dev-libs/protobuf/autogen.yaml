@@ -1,11 +1,10 @@
 protobufs:
   generator: github-1
   defaults:
-    tarball: protobuf-{version}.tar.xz
     github:
       user: protocolbuffers
       repo: protobuf
-      query: tags
+      query: releases
   packages:
     - protobuf
     - protobuf-python:
