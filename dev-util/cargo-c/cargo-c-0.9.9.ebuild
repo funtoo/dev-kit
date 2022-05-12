@@ -32,7 +32,7 @@ crc32fast-1.3.2
 crossbeam-utils-0.8.8
 crypto-hash-0.3.4
 curl-0.4.43
-curl-sys-0.4.54+curl-7.83.0
+curl-sys-0.4.55+curl-7.83.1
 either-1.6.1
 env_logger-0.9.0
 fastrand-1.7.0
