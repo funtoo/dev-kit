@@ -113,7 +113,7 @@ sized-chunks-0.6.5
 socket2-0.4.4
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.93
+syn-1.0.94
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
