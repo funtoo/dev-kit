@@ -15,10 +15,9 @@ IUSE="debug lazy-lock prof static-libs stats xmalloc"
 
 HTML_DOCS=( doc/jemalloc.html )
 
-PATCHES=( "${FILESDIR}/${PN}-5.3.0-gentoo-fixups.patch" )
-
-src_prepare() {
-	default
+src_prepare() {	
+	use debug && eapply "${FILESDIR}/${PN}-5.3.0-gentoo-fixups.patch"
+	eapply_user      
 	eautoreconf
 }
 
