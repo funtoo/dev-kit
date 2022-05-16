@@ -60,7 +60,7 @@ im-rc-15.1.0
 indexmap-1.8.1
 instant-0.1.12
 itertools-0.10.3
-itoa-1.0.1
+itoa-1.0.2
 jobserver-0.1.24
 kstring-1.0.6
 lazy_static-1.4.0
@@ -100,7 +100,7 @@ regex-syntax-0.6.25
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.0
-ryu-1.0.9
+ryu-1.0.10
 same-file-1.0.6
 schannel-0.1.19
 semver-1.0.9
