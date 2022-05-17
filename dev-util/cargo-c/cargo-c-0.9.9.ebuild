@@ -65,7 +65,7 @@ jobserver-0.1.24
 kstring-1.0.6
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.125
+libc-0.2.126
 libgit2-sys-0.13.4+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -89,7 +89,7 @@ percent-encoding-2.1.0
 pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.38
+proc-macro2-1.0.39
 quote-1.0.18
 rand_core-0.6.3
 rand_xoshiro-0.6.0
@@ -113,7 +113,7 @@ sized-chunks-0.6.5
 socket2-0.4.4
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.94
+syn-1.0.95
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
@@ -125,6 +125,7 @@ toml-0.5.9
 toml_edit-0.13.4
 typenum-1.15.0
 unicode-bidi-0.3.8
+unicode-ident-1.0.0
 unicode-normalization-0.1.19
 unicode-width-0.1.9
 unicode-xid-0.2.3
