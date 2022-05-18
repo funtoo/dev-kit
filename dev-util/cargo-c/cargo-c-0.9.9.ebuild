@@ -102,7 +102,7 @@ rustc-workspace-hack-1.0.0
 rustfix-0.6.0
 ryu-1.0.10
 same-file-1.0.6
-schannel-0.1.19
+schannel-0.1.20
 semver-1.0.9
 serde-1.0.137
 serde_derive-1.0.137
@@ -140,6 +140,12 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
+windows-sys-0.36.1
+windows_aarch64_msvc-0.36.1
+windows_i686_gnu-0.36.1
+windows_i686_msvc-0.36.1
+windows_x86_64_gnu-0.36.1
+windows_x86_64_msvc-0.36.1
 "
 
 inherit cargo
