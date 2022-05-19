@@ -76,12 +76,12 @@ memchr-2.5.0
 miniz_oxide-0.5.1
 miow-0.3.7
 num_cpus-1.13.1
-once_cell-1.10.0
+once_cell-1.11.0
 opener-0.5.0
 openssl-0.10.40
 openssl-macros-0.1.0
 openssl-probe-0.1.5
-openssl-src-111.19.0+1.1.1o
+openssl-src-111.20.0+1.1.1o
 openssl-sys-0.9.73
 os_info-3.3.0
 os_str_bytes-6.0.1
