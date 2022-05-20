@@ -94,9 +94,9 @@ quote-1.0.18
 rand_core-0.6.3
 rand_xoshiro-0.6.0
 redox_syscall-0.2.13
-regex-1.5.5
+regex-1.5.6
 regex-automata-0.1.10
-regex-syntax-0.6.25
+regex-syntax-0.6.26
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.0
