@@ -19,7 +19,9 @@ IUSE="python test"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RESTRICT="!test? ( test )"
 
-DEPEND="python? ( ${PYTHON_DEPS} )"
+DEPEND="
+dev-libs/check
+python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	python? (
