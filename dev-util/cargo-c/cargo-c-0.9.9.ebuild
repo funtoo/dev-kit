@@ -76,7 +76,7 @@ memchr-2.5.0
 miniz_oxide-0.5.1
 miow-0.3.7
 num_cpus-1.13.1
-once_cell-1.11.0
+once_cell-1.12.0
 opener-0.5.0
 openssl-0.10.40
 openssl-macros-0.1.0
