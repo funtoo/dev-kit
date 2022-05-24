@@ -99,7 +99,7 @@ regex-automata-0.1.10
 regex-syntax-0.6.26
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
-rustfix-0.6.0
+rustfix-0.6.1
 ryu-1.0.10
 same-file-1.0.6
 schannel-0.1.20
