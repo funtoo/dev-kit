@@ -57,7 +57,7 @@ humantime-2.1.0
 idna-0.2.3
 ignore-0.4.18
 im-rc-15.1.0
-indexmap-1.8.1
+indexmap-1.8.2
 instant-0.1.12
 itertools-0.10.3
 itoa-1.0.2
@@ -69,7 +69,7 @@ libc-0.2.126
 libgit2-sys-0.13.4+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
-libz-sys-1.1.6
+libz-sys-1.1.8
 log-0.4.17
 matches-0.1.9
 memchr-2.5.0

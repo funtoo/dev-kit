@@ -81,13 +81,15 @@ EGO_SUM=(
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b"
 	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b/go.mod"
+	"gopkg.in/yaml.v3 v3.0.1"
+	"gopkg.in/yaml.v3 v3.0.1/go.mod"
 )
 
 go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.25.1 -> yq-go-v4.25.1.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.25.2 -> yq-go-v4.25.2.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
