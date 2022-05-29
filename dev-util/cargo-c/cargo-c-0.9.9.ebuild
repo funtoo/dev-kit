@@ -37,7 +37,7 @@ either-1.6.1
 env_logger-0.9.0
 fastrand-1.7.0
 filetime-0.2.16
-flate2-1.0.23
+flate2-1.0.24
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
