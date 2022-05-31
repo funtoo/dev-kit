@@ -73,7 +73,7 @@ libz-sys-1.1.8
 log-0.4.17
 matches-0.1.9
 memchr-2.5.0
-miniz_oxide-0.5.1
+miniz_oxide-0.5.3
 miow-0.3.7
 num_cpus-1.13.1
 once_cell-1.12.0
