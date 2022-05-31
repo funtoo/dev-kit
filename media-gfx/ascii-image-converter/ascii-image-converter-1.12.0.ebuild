@@ -361,7 +361,7 @@ go-module_set_globals
 
 DESCRIPTION="A cross-platform command-line tool to convert images into ascii art and print them on the console."
 HOMEPAGE="https://github.com/TheZoraiz/ascii-image-converter"
-SRC_URI="https://api.github.com/repos/TheZoraiz/ascii-image-converter/tarball/v1.11.0 -> ascii-image-converter-v1.11.0.tar.gz
+SRC_URI="https://api.github.com/repos/TheZoraiz/ascii-image-converter/tarball/v1.12.0 -> ascii-image-converter-v1.12.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
