@@ -13,4 +13,5 @@ dev-vcs
 media-gfx
 sys-apps
 sys-fs
+sys-process
 virtual
