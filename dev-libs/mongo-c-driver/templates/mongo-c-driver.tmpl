@@ -45,6 +45,9 @@ src_prepare() {
 		cp src/libbson/src/bson/bson-*.h src/libbson/tests/bson/ || die
 	fi
 
+	# Ignore warning on generate docs
+	sed -e 's|qEW|qE|g'  -i build/cmake/SphinxBuild.cmake
+
 	# remove doc files
 	sed -i '/^\s*install\s*(FILES COPYING NEWS/,/^\s*)/{d}' CMakeLists.txt || die
 
