@@ -9,7 +9,7 @@ MY_SLOT="$(ver_cut 1-2)"
 
 DESCRIPTION="Linux Trace Toolkit - UST library"
 HOMEPAGE="https://lttng.org"
-SRC_URI="https://lttng.org/files/lttng-ust/lttng-ust-2.13.2.tar.bz2"
+SRC_URI="https://lttng.org/files/lttng-ust/lttng-ust-2.13.3.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${MY_SLOT}"
