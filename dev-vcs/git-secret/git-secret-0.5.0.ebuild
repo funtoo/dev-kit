@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="a bash-tool to store your private data inside a git repository"
 HOMEPAGE="https://git-secret.io/"
-SRC_URI="https://api.github.com/repos/sobolevn/git-secret/tarball/v0.4.0 -> git-secret-0.4.0.tar.gz"
+SRC_URI="https://api.github.com/repos/sobolevn/git-secret/tarball/v0.5.0 -> git-secret-0.5.0.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
