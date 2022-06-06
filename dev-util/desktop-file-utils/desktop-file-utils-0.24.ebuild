@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -19,7 +18,7 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig"
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE=50${PN}-funtoo.el
 
 DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
