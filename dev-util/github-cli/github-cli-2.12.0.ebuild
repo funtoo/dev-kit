@@ -38,8 +38,8 @@ EGO_SUM=(
 	"cloud.google.com/go/storage v1.8.0/go.mod"
 	"cloud.google.com/go/storage v1.10.0/go.mod"
 	"dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod"
-	"github.com/!alec!aivazis/survey/v2 v2.3.4"
-	"github.com/!alec!aivazis/survey/v2 v2.3.4/go.mod"
+	"github.com/!alec!aivazis/survey/v2 v2.3.5"
+	"github.com/!alec!aivazis/survey/v2 v2.3.5/go.mod"
 	"github.com/!burnt!sushi/toml v0.3.1/go.mod"
 	"github.com/!burnt!sushi/xgb v0.0.0-20160522181843-27f122750802/go.mod"
 	"github.com/!make!now!just/heredoc v1.0.0"
@@ -166,8 +166,8 @@ EGO_SUM=(
 	"github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod"
 	"github.com/inconshreveable/mousetrap v1.0.0"
 	"github.com/inconshreveable/mousetrap v1.0.0/go.mod"
-	"github.com/itchyny/gojq v0.12.7"
-	"github.com/itchyny/gojq v0.12.7/go.mod"
+	"github.com/itchyny/gojq v0.12.8"
+	"github.com/itchyny/gojq v0.12.8/go.mod"
 	"github.com/itchyny/timefmt-go v0.1.3"
 	"github.com/itchyny/timefmt-go v0.1.3/go.mod"
 	"github.com/joho/godotenv v1.4.0"
@@ -237,8 +237,8 @@ EGO_SUM=(
 	"github.com/stretchr/testify v1.4.0/go.mod"
 	"github.com/stretchr/testify v1.6.1/go.mod"
 	"github.com/stretchr/testify v1.7.0/go.mod"
-	"github.com/stretchr/testify v1.7.1"
-	"github.com/stretchr/testify v1.7.1/go.mod"
+	"github.com/stretchr/testify v1.7.2"
+	"github.com/stretchr/testify v1.7.2/go.mod"
 	"github.com/yuin/goldmark v1.1.25/go.mod"
 	"github.com/yuin/goldmark v1.1.27/go.mod"
 	"github.com/yuin/goldmark v1.1.32/go.mod"
@@ -364,8 +364,9 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod"
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
 	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e/go.mod"
-	"golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9"
-	"golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9/go.mod"
+	"golang.org/x/sys v0.0.0-20220422013727-9388b58f7150/go.mod"
+	"golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a"
+	"golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210503060354-a79de5458b56/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211"
@@ -507,8 +508,8 @@ EGO_SUM=(
 	"gopkg.in/yaml.v2 v2.2.2/go.mod"
 	"gopkg.in/yaml.v2 v2.4.0/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
-	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b"
-	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b/go.mod"
+	"gopkg.in/yaml.v3 v3.0.1"
+	"gopkg.in/yaml.v3 v3.0.1/go.mod"
 	"honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod"
 	"honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod"
 	"honnef.co/go/tools v0.0.0-20190418001031-e561f6794a2a/go.mod"
@@ -525,7 +526,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.11.3 -> cli-v2.11.3.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.12.0 -> cli-v2.12.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -540,7 +541,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.11.3"
+	export GH_VERSION="v2.12.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
