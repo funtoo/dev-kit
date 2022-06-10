@@ -46,7 +46,7 @@ fwdansi-1.1.0
 git2-0.14.4
 git2-curl-0.15.0
 glob-0.3.0
-globset-0.4.8
+globset-0.4.9
 hashbrown-0.11.2
 heck-0.4.0
 hermit-abi-0.1.19
