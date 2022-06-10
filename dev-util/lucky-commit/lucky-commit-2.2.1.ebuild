@@ -80,7 +80,7 @@ inherit cargo
 
 DESCRIPTION="Make your git commits lucky!"
 HOMEPAGE="https://github.com/not-an-aardvark/lucky-commit"
-SRC_URI="https://api.github.com/repos/not-an-aardvark/lucky-commit/tarball/refs/tags/v2.2.0 -> lucky-commit-2.2.0.tar.gz
+SRC_URI="https://api.github.com/repos/not-an-aardvark/lucky-commit/tarball/refs/tags/v2.2.1 -> lucky-commit-2.2.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
