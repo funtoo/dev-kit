@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python2+ )
+PYTHON_COMPAT=( python3+ )
 
 inherit multilib python-r1 toolchain-funcs
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://botan.randombit.net/"
 KEYWORDS="*"
 SLOT="2/$(ver_cut 1-2)" # soname version
 LICENSE="BSD"
-IUSE="bindist doc boost python bzip2 libressl lzma sqlite ssl static-libs zlib"
+IUSE="bindist doc boost python bzip2 lzma sqlite static-libs zlib"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 S="${WORKDIR}/${P}"
 
@@ -24,10 +24,7 @@ RDEPEND="${DEPEND}
 	boost? ( >=dev-libs/boost-1.48:= )
 	lzma? ( app-arch/xz-utils:= )
 	sqlite? ( dev-db/sqlite:3= )
-	ssl? (
-		!libressl? ( dev-libs/openssl:0=[bindist=] )
-		libressl? ( dev-libs/libressl:0= )
-	)"
+"
 BDEPEND="dev-lang/python:*
 	doc? ( dev-python/sphinx )"
 
@@ -70,7 +67,6 @@ src_configure() {
 		$(use_with doc sphinx) \
 		$(use_with lzma) \
 		$(use_with sqlite sqlite3) \
-		$(use_with ssl openssl) \
 		$(use_with zlib) \
 		$(usex hppa --without-stack-protector '') \
 		--cc=gcc \
