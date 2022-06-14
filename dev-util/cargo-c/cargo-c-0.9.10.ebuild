@@ -124,7 +124,7 @@ toml-0.5.9
 toml_edit-0.13.4
 typenum-1.15.0
 unicode-bidi-0.3.8
-unicode-ident-1.0.0
+unicode-ident-1.0.1
 unicode-normalization-0.1.19
 unicode-width-0.1.9
 unicode-xid-0.2.3
