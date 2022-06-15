@@ -1,6 +1,6 @@
 BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=install postinst prepare setup unpack
-DEPEND=systemd? ( sys-apps/systemd )
+DEPEND=systemd? ( sys-apps/systemd ) sys-apps/shadow
 DESCRIPTION=GitLab Runner
 EAPI=7
 HOMEPAGE=https://gitlab.com/gitlab-org/gitlab-runner
@@ -11,5 +11,5 @@ RDEPEND=virtual/tmpfiles
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v15.0.0/downloads/binaries/gitlab-runner-linux-amd64 -> gitlab-runner-bin-15.0.0.tar.gz
-_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	tmpfiles	96a7c72c5b059d0b75854baf84950ce3	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	e68863263b1e8611dacf381bec5c8b2b
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	tmpfiles	96a7c72c5b059d0b75854baf84950ce3	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=575a871b137e20281bcb199fcd26cdfd

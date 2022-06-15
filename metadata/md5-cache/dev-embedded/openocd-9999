@@ -1,6 +1,6 @@
 BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure install postinst prepare setup unpack
-DEPEND=>=dev-lang/jimtcl-0.76:0= cmsis-dap? ( dev-libs/hidapi ) jlink? ( dev-embedded/libjaylink ) usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi:= ) virtual/pkgconfig >=sys-apps/texinfo-5
+DEPEND=>=dev-lang/jimtcl-0.76:0= cmsis-dap? ( dev-libs/hidapi ) jlink? ( dev-embedded/libjaylink ) usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi:= ) virtual/pkgconfig >=sys-apps/texinfo-5 sys-apps/shadow
 DESCRIPTION=OpenOCD - Open On-Chip Debugger
 EAPI=7
 HOMEPAGE=http://openocd.sourceforge.net
@@ -10,5 +10,5 @@ PROPERTIES=live
 RDEPEND=>=dev-lang/jimtcl-0.76:0= cmsis-dap? ( dev-libs/hidapi ) jlink? ( dev-embedded/libjaylink ) usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi:= )
 RESTRICT=strip
 SLOT=0
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	udev	7752f306eec7b286d00bdb47b763e7ac	user	e68863263b1e8611dacf381bec5c8b2b
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	udev	7752f306eec7b286d00bdb47b763e7ac	user	875055ddd565382c728563992ae3abf7
 _md5_=7fd14e4ba743814156c985f2e66ee878
