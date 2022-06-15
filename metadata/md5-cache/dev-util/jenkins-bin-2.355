@@ -1,4 +1,5 @@
 DEFINED_PHASES=install setup
+DEPEND=sys-apps/shadow
 DESCRIPTION=Extensible continuous integration server
 EAPI=7
 HOMEPAGE=https://jenkins.io/
@@ -8,5 +9,5 @@ RDEPEND=media-fonts/dejavu media-libs/freetype !dev-util/jenkins-lts-bin >=virtu
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://get.jenkins.io/war/2.355/jenkins.war -> jenkins-bin-2.355.war
-_eclasses_=user	e68863263b1e8611dacf381bec5c8b2b
+_eclasses_=user	875055ddd565382c728563992ae3abf7
 _md5_=ad8a0c73cb30362ec2a8d0db1a8bbbcb
