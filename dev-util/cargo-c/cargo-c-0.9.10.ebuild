@@ -47,7 +47,7 @@ git2-0.14.4
 git2-curl-0.15.0
 glob-0.3.0
 globset-0.4.9
-hashbrown-0.11.2
+hashbrown-0.12.1
 heck-0.4.0
 hermit-abi-0.1.19
 hex-0.3.2
@@ -57,7 +57,7 @@ humantime-2.1.0
 idna-0.2.3
 ignore-0.4.18
 im-rc-15.1.0
-indexmap-1.8.2
+indexmap-1.9.0
 instant-0.1.12
 itertools-0.10.3
 itoa-1.0.2
