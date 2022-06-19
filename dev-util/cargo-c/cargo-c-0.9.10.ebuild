@@ -89,7 +89,7 @@ pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.39
-quote-1.0.18
+quote-1.0.19
 rand_core-0.6.3
 rand_xoshiro-0.6.0
 redox_syscall-0.2.13
@@ -112,7 +112,7 @@ sized-chunks-0.6.5
 socket2-0.4.4
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.97
+syn-1.0.98
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
