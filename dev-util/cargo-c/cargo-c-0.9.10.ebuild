@@ -57,7 +57,7 @@ humantime-2.1.0
 idna-0.2.3
 ignore-0.4.18
 im-rc-15.1.0
-indexmap-1.9.0
+indexmap-1.9.1
 instant-0.1.12
 itertools-0.10.3
 itoa-1.0.2
@@ -80,7 +80,7 @@ opener-0.5.0
 openssl-0.10.40
 openssl-macros-0.1.0
 openssl-probe-0.1.5
-openssl-src-111.20.0+1.1.1o
+openssl-src-111.21.0+1.1.1p
 openssl-sys-0.9.74
 os_info-3.4.0
 os_str_bytes-6.1.0
