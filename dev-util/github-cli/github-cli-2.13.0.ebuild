@@ -236,13 +236,15 @@ EGO_SUM=(
 	"github.com/spf13/cobra v1.4.0/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
-	"github.com/stretchr/objx v0.1.0"
 	"github.com/stretchr/objx v0.1.0/go.mod"
+	"github.com/stretchr/objx v0.4.0"
+	"github.com/stretchr/objx v0.4.0/go.mod"
 	"github.com/stretchr/testify v1.4.0/go.mod"
 	"github.com/stretchr/testify v1.6.1/go.mod"
 	"github.com/stretchr/testify v1.7.0/go.mod"
-	"github.com/stretchr/testify v1.7.2"
-	"github.com/stretchr/testify v1.7.2/go.mod"
+	"github.com/stretchr/testify v1.7.1/go.mod"
+	"github.com/stretchr/testify v1.7.4"
+	"github.com/stretchr/testify v1.7.4/go.mod"
 	"github.com/yuin/goldmark v1.1.25/go.mod"
 	"github.com/yuin/goldmark v1.1.27/go.mod"
 	"github.com/yuin/goldmark v1.1.32/go.mod"
@@ -531,7 +533,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.12.1 -> cli-v2.12.1.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.13.0 -> cli-v2.13.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -546,7 +548,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.12.1"
+	export GH_VERSION="v2.13.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted

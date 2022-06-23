@@ -7,7 +7,7 @@ inherit go-module
 EGO_SUM=(
 	"github.com/a8m/envsubst v1.3.0"
 	"github.com/a8m/envsubst v1.3.0/go.mod"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.1/go.mod"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/davecgh/go-spew v1.1.0"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
 	"github.com/elliotchance/orderedmap v1.4.0"
@@ -40,8 +40,8 @@ EGO_SUM=(
 	"github.com/pmezard/go-difflib v1.0.0"
 	"github.com/pmezard/go-difflib v1.0.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
-	"github.com/spf13/cobra v1.4.0"
-	"github.com/spf13/cobra v1.4.0/go.mod"
+	"github.com/spf13/cobra v1.5.0"
+	"github.com/spf13/cobra v1.5.0/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
 	"github.com/stretchr/objx v0.1.0/go.mod"
@@ -79,8 +79,6 @@ EGO_SUM=(
 	"gopkg.in/yaml.v2 v2.2.2/go.mod"
 	"gopkg.in/yaml.v2 v2.4.0/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
-	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b"
-	"gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b/go.mod"
 	"gopkg.in/yaml.v3 v3.0.1"
 	"gopkg.in/yaml.v3 v3.0.1/go.mod"
 )
@@ -89,7 +87,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.25.2 -> yq-go-v4.25.2.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.25.3 -> yq-go-v4.25.3.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
