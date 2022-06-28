@@ -8,7 +8,7 @@ inherit distutils-r1
 S="${S}"/python
 DESCRIPTION="Protocol Buffers - Google's data interchange format"
 HOMEPAGE="https://developers.google.com/protocol-buffers/ https://github.com/protocolbuffers/protobuf"
-SRC_URI="https://github.com/protocolbuffers/protobuf/tarball/e73ed1630fdec85d7fb513c166629ed49cd4eb18 -> protobuf-21.1-e73ed16.tar.gz"
+SRC_URI="https://github.com/protocolbuffers/protobuf/tarball/839b18b1ba42639fedecfd751102afcc5736b5d4 -> protobuf-21.2-839b18b.tar.gz"
 
 DEPEND="
 	~dev-libs/protobuf-${PV}
