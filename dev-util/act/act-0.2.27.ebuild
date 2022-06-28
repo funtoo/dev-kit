@@ -1194,7 +1194,7 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.28 -> act-0.2.28.tar.gz
+SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.27 -> act-0.2.27.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 RDEPEND="
