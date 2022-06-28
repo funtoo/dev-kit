@@ -19,9 +19,9 @@ cargo-util-0.1.2
 cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.2.6
-clap_derive-3.2.6
-clap_lex-0.2.3
+clap-3.2.7
+clap_derive-3.2.7
+clap_lex-0.2.4
 combine-4.6.4
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
