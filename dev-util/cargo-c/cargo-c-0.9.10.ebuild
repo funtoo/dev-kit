@@ -33,7 +33,7 @@ crossbeam-utils-0.8.10
 crypto-hash-0.3.4
 curl-0.4.43
 curl-sys-0.4.55+curl-7.83.1
-either-1.6.1
+either-1.7.0
 env_logger-0.9.0
 fastrand-1.7.0
 filetime-0.2.16
@@ -106,7 +106,7 @@ semver-1.0.11
 serde-1.0.137
 serde_derive-1.0.137
 serde_ignored-0.1.3
-serde_json-1.0.81
+serde_json-1.0.82
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.4
