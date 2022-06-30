@@ -15,7 +15,7 @@ bytes-1.1.0
 bytesize-1.1.0
 cargo-0.62.0
 cargo-platform-0.1.2
-cargo-util-0.1.2
+cargo-util-0.1.3
 cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
