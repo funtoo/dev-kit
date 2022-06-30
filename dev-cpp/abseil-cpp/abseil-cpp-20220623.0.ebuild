@@ -9,8 +9,8 @@ inherit cmake flag-o-matic python-any-r1 toolchain-funcs
 DESCRIPTION="Abseil Common Libraries (C++), LTS Branch"
 HOMEPAGE="https://abseil.io"
 SRC_URI="
-	https://api.github.com/repos/abseil/abseil-cpp/tarball/20211102.0 -> abseil-cpp-20211102.0.tar.gz
-	test? ( https://api.github.com/repos/google/googletest/tarball/release-1.12.0 -> googletest-1.12.0.tar.gz )
+	https://api.github.com/repos/abseil/abseil-cpp/tarball/20220623.0 -> abseil-cpp-20220623.0.tar.gz
+	test? ( https://api.github.com/repos/google/googletest/tarball/release-1.12.1 -> googletest-1.12.1.tar.gz )
 "
 LICENSE="
 	Apache-2.0
@@ -33,7 +33,7 @@ fix_src_dirs() {
 	
 	pushd "${WORKDIR}"
 	mv abseil-abseil-cpp-* ${P}
-	mv google-googletest-* googletest-1.12.0
+	mv google-googletest-* googletest-1.12.1
 	popd
 }
 
@@ -60,7 +60,7 @@ src_prepare() {
 
 	if use test; then
 		sed -i 's/-Werror//g' \
-			"${WORKDIR}"/googletest-1.12.0/googletest/cmake/internal_utils.cmake || die
+			"${WORKDIR}"/googletest-1.12.1/googletest/cmake/internal_utils.cmake || die
 	fi
 }
 
@@ -74,7 +74,7 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DABSL_ENABLE_INSTALL=TRUE
-		-DABSL_LOCAL_GOOGLETEST_DIR="${WORKDIR}/googletest-1.12.0"
+		-DABSL_LOCAL_GOOGLETEST_DIR="${WORKDIR}/googletest-1.12.1"
 		-DCMAKE_CXX_STANDARD=17
 		$(usex test -DBUILD_TESTING=ON '') #intentional usex
 	)
