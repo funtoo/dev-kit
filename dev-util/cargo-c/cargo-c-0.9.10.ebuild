@@ -15,7 +15,7 @@ bytes-1.1.0
 bytesize-1.1.0
 cargo-0.62.0
 cargo-platform-0.1.2
-cargo-util-0.1.3
+cargo-util-0.1.2
 cbindgen-0.23.0
 cc-1.0.73
 cfg-if-1.0.0
@@ -36,7 +36,7 @@ curl-sys-0.4.55+curl-7.83.1
 either-1.7.0
 env_logger-0.9.0
 fastrand-1.7.0
-filetime-0.2.16
+filetime-0.2.17
 flate2-1.0.24
 fnv-1.0.7
 foreign-types-0.3.2
@@ -102,7 +102,7 @@ rustfix-0.6.1
 ryu-1.0.10
 same-file-1.0.6
 schannel-0.1.20
-semver-1.0.11
+semver-1.0.12
 serde-1.0.137
 serde_derive-1.0.137
 serde_ignored-0.1.3
@@ -125,7 +125,7 @@ toml_edit-0.13.4
 typenum-1.15.0
 unicode-bidi-0.3.8
 unicode-ident-1.0.1
-unicode-normalization-0.1.20
+unicode-normalization-0.1.21
 unicode-width-0.1.9
 unicode-xid-0.2.3
 url-2.2.2
