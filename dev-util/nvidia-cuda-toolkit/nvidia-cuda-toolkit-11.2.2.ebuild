@@ -14,7 +14,7 @@ LICENSE="NVIDIA-CUDA"
 SLOT="0/${PV}"
 KEYWORDS="-* ~amd64 ~amd64-linux"
 IUSE="debugger nsight profiler vis-profiler sanitizer"
-RESTRICT="bindist mirror"
+RESTRICT="bindist"
 
 BDEPEND=""
 RDEPEND="
