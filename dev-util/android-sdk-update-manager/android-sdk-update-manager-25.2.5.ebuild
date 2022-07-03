@@ -10,7 +10,6 @@ DESCRIPTION="Open Handset Alliance's Android SDK"
 HOMEPAGE="http://developer.android.com"
 SRC_URI="https://dl.google.com/android/repository/${MY_P}.zip"
 IUSE=""
-RESTRICT="mirror"
 
 LICENSE="android"
 SLOT="0"

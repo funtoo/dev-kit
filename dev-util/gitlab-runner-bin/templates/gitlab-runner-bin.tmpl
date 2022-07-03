@@ -22,7 +22,7 @@ DEPEND="
 	systemd? ( sys-apps/systemd )
 "
 
-RESTRICT="mirror strip"
+RESTRICT="strip"
 
 DOC_CONTENTS="Register the runner as root using\\n
 \\t# gitlab-runner register\\n

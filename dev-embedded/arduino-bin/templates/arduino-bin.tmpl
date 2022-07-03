@@ -19,7 +19,7 @@ SRC_URI="{% for arch in artifacts %}
 	{{ arch }}? ( {{ artifacts[arch].src_uri }} ){% endfor %}
 "
 
-RESTRICT="strip mirror test"
+RESTRICT="strip test"
 
 QA_PREBUILT="opt/arduino/*"
 

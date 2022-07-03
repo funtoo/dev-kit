@@ -22,7 +22,7 @@ SRC_URI="
 	arm64? ( https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz )
 "
 
-RESTRICT="strip mirror test"
+RESTRICT="strip test"
 
 QA_PREBUILT="opt/arduino/*"
 

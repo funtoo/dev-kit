@@ -154,7 +154,6 @@ HOMEPAGE="https://github.com/lu-zero/cargo-c"
 SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.10 -> cargo-c-0.9.10.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
-RESTRICT="mirror"
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
 LICENSE="Apache-2.0 MIT"
