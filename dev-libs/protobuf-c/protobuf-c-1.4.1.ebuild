@@ -9,7 +9,7 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION=""
 HOMEPAGE="https://github.com/protobuf-c/protobuf-c"
-SRC_URI="https://github.com/protobuf-c/protobuf-c/archive/v1.4.0.tar.gz -> protobuf-c-1.4.0.tar.gz"
+SRC_URI="https://github.com/protobuf-c/protobuf-c/archive/v1.4.1.tar.gz -> protobuf-c-1.4.1.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD-2"

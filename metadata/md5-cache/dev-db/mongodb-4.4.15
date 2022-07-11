@@ -12,5 +12,5 @@ RDEPEND=>=app-arch/snappy-1.1.3 >=dev-cpp/yaml-cpp-0.6.2:= >=dev-libs/boost-1.70
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://api.github.com/repos/mongodb/mongo/tarball/refs/tags/r4.4.15 -> mongodb-4.4.15.tar.gz
-_eclasses_=check-reqs	2c6f909675083dce8430b648bf737cb0	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	pax-utils	db85a3c508cf82c45f24b2723791cc93	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	116c0e643beeb6fc359101546f38b362	scons-utils	741000d14c0b59263aac3f3cf6e39909	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_eclasses_=check-reqs	2c6f909675083dce8430b648bf737cb0	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	pax-utils	db85a3c508cf82c45f24b2723791cc93	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	62a980ca9c5f570cad01b65ab90228ca	scons-utils	741000d14c0b59263aac3f3cf6e39909	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=8cbd7e3984764d08d84afa9f2904ac78
