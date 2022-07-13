@@ -7,5 +7,5 @@ KEYWORDS=*
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/benhoyt/inih/archive/r49.tar.gz -> inih-49.tar.gz
-_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	62a980ca9c5f570cad01b65ab90228ca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	32393cac272daca4c136cc44e6005b67	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=2eb949f52200279918e2ea2fa752c02f
