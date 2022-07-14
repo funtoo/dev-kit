@@ -38,7 +38,7 @@ predicates-tree-1.0.5
 rayon-1.5.1
 rayon-core-1.9.1
 redox_syscall-0.2.10
-regex-1.5.4
+regex-1.5.5
 regex-automata-0.1.10
 regex-syntax-0.6.25
 remove_dir_all-0.5.3
@@ -63,7 +63,7 @@ inherit cargo
 
 DESCRIPTION="A more intuitive version of du in rust"
 HOMEPAGE="https://github.com/bootandy/dust"
-SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v0.8.0 -> dust-0.8.0.tar.gz
+SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v0.8.1 -> dust-0.8.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
