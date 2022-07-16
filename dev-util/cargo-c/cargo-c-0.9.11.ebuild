@@ -107,7 +107,7 @@ schannel-0.1.20
 semver-1.0.12
 serde-1.0.139
 serde_derive-1.0.139
-serde_ignored-0.1.3
+serde_ignored-0.1.4
 serde_json-1.0.82
 shell-escape-0.1.5
 sized-chunks-0.6.5
@@ -127,7 +127,7 @@ toml-0.5.9
 toml_edit-0.14.4
 typenum-1.15.0
 unicode-bidi-0.3.8
-unicode-ident-1.0.1
+unicode-ident-1.0.2
 unicode-normalization-0.1.21
 unicode-width-0.1.9
 unicode-xid-0.2.3
