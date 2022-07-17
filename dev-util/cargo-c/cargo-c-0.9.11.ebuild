@@ -47,7 +47,7 @@ git2-0.14.4
 git2-curl-0.15.0
 glob-0.3.0
 globset-0.4.9
-hashbrown-0.12.2
+hashbrown-0.12.3
 heck-0.4.0
 hermit-abi-0.1.19
 hex-0.3.2
@@ -84,7 +84,7 @@ openssl-probe-0.1.5
 openssl-src-111.22.0+1.1.1q
 openssl-sys-0.9.75
 os_info-3.4.0
-os_str_bytes-6.1.0
+os_str_bytes-6.2.0
 pathdiff-0.2.1
 percent-encoding-2.1.0
 pkg-config-0.3.25
