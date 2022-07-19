@@ -2,7 +2,7 @@
 
 EAPI=7
 
-SRC_URI="https://github.com/dylanaraps/neofetch/archive/7.1.0/neofetch-7.1.0.tar.gz"
+SRC_URI="https://github.com/dylanaraps/neofetch/archive/7.1.0/neofetch-7.1.0.tar.gz -> neofetch-7.1.0.tar.gz"
 KEYWORDS="*"
 
 DESCRIPTION="Simple information system script"

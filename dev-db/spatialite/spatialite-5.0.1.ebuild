@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A complete Spatial DBMS in a nutshell built upon sqlite"
 HOMEPAGE="https://www.gaia-gis.it/gaia-sins/"
-SRC_URI=http://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-5.0.1.tar.gz
+SRC_URI=http://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-5.0.1.tar.gz -> libspatialite-5.0.1.tar.gz
 
 LICENSE="MPL-1.1 gcp? ( GPL-2+ )"
 SLOT="0"
