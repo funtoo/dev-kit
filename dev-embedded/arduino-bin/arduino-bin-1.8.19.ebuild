@@ -16,10 +16,10 @@ ARD_PF="${ARD_PN}-${PVR}"
 DESCRIPTION="AVR development board IDE and built-in libraries"
 HOMEPAGE="http://arduino.cc/en/Main/Software"
 SRC_URI="
-	x86? ( https://downloads.arduino.cc/arduino-1.8.19-linux32.tar.xz )
-	amd64? ( https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz )
-	arm? ( https://downloads.arduino.cc/arduino-1.8.19-linuxarm.tar.xz )
-	arm64? ( https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz )
+	x86? ( https://downloads.arduino.cc/arduino-1.8.19-linux32.tar.xz -> arduino-1.8.19-linux32.tar.xz )
+	amd64? ( https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz -> arduino-1.8.19-linux64.tar.xz )
+	arm? ( https://downloads.arduino.cc/arduino-1.8.19-linuxarm.tar.xz -> arduino-1.8.19-linuxarm.tar.xz )
+	arm64? ( https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz -> arduino-1.8.19-linuxaarch64.tar.xz )
 "
 
 RESTRICT="strip test"

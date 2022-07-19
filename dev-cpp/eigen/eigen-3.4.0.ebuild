@@ -6,7 +6,7 @@ inherit cmake cuda
 
 DESCRIPTION="C++ template library for linear algebra"
 HOMEPAGE="http://eigen.tuxfamily.org/index.php?title=Main_Page"
-SRC_URI="https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2"
+SRC_URI="https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2 -> eigen-3.4.0.tar.bz2"
 
 LICENSE="MPL-2.0"
 SLOT="3"

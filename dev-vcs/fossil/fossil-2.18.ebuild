@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Simple, high-reliability, source control management, and more"
 HOMEPAGE="http://www.fossil-scm.org/"
-SRC_URI="http://www.fossil-scm.org/home/tarball/84f25d7eb10c0714109d69bb2809abfa8b4b5c3d73b151a5b10df724dacd46d8/fossil-src-2.18.tar.gz"
+SRC_URI="http://www.fossil-scm.org/home/tarball/84f25d7eb10c0714109d69bb2809abfa8b4b5c3d73b151a5b10df724dacd46d8/fossil-src-2.18.tar.gz -> fossil-src-2.18.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
