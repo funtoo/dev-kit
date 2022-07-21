@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Simple, high-reliability, source control management, and more"
 HOMEPAGE="http://www.fossil-scm.org/"
-SRC_URI="http://www.fossil-scm.org/home/tarball/84f25d7eb10c0714109d69bb2809abfa8b4b5c3d73b151a5b10df724dacd46d8/fossil-src-2.18.tar.gz -> fossil-src-2.18.tar.gz"
+SRC_URI="http://www.fossil-scm.org/home/tarball/1e131febd3fbb028d00cab6d020214e8fe36be95daaf93237523c29c542e9a5f/fossil-src-2.19.tar.gz -> fossil-src-2.19.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -28,7 +28,8 @@ IUSE="+openssl \
 +fusefs \
 -debug \
 -no-opt \
--json"
+-json \
++emsdk"
 
 REQUIRED_USE="openssl? ( !miniz )"
 
@@ -48,7 +49,7 @@ RDEPEND="${DEPEND}"
 # Tests can't be run from the build directory
 RESTRICT="test"
 
-S="${WORKDIR}"/fossil-src-2.18
+S="${WORKDIR}"/fossil-src-2.19
 
 src_configure() {
 	local myconf="--with-openssl=$(usex openssl 1 none) \
@@ -68,7 +69,8 @@ $(usex sqlite "--with-sqlite=1" "") \
 --fusefs=$(usex fusefs 1 0) \
 --fossil-debug=$(usex debug 1 0) \
 --no-opt=$(usex no-opt 1 0) \
---json=$(usex json 1 0)"
+--json=$(usex json 1 0) \
+--with-emsdk=$(usex emsdk 1 0)"
 	tc-export CC
 	echo "./configure ${myconf}"
 	./configure ${myconf} || die

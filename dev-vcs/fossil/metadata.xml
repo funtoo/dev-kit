@@ -24,5 +24,6 @@
 		<flag name="debug">Build with fossil debugging enabled</flag>
 		<flag name="no-opt">Build without optimization</flag>
 		<flag name="json">Build with fossil JSON API enabled</flag>
+		<flag name="emsdk">Directory containing the Emscripten SDK</flag>
 	</use>
 </pkgmetadata>
