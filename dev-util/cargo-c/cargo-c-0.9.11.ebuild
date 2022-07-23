@@ -29,13 +29,13 @@ core-foundation-0.9.3
 core-foundation-sys-0.8.3
 crates-io-0.34.0
 crc32fast-1.3.2
-crossbeam-utils-0.8.10
+crossbeam-utils-0.8.11
 crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.56+curl-7.83.1
 either-1.7.0
 env_logger-0.9.0
-fastrand-1.7.0
+fastrand-1.8.0
 filetime-0.2.17
 flate2-1.0.24
 fnv-1.0.7
@@ -94,7 +94,7 @@ proc-macro2-1.0.40
 quote-1.0.20
 rand_core-0.6.3
 rand_xoshiro-0.6.0
-redox_syscall-0.2.13
+redox_syscall-0.2.15
 regex-1.6.0
 regex-automata-0.1.10
 regex-syntax-0.6.27
