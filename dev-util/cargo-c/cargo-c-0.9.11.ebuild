@@ -19,8 +19,8 @@ cargo-util-0.2.0
 cbindgen-0.24.3
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.2.14
-clap_derive-3.2.7
+clap-3.2.15
+clap_derive-3.2.15
 clap_lex-0.2.4
 combine-4.6.4
 commoncrypto-0.2.0
@@ -90,7 +90,7 @@ percent-encoding-2.1.0
 pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.40
+proc-macro2-1.0.42
 quote-1.0.20
 rand_core-0.6.3
 rand_xoshiro-0.6.0
