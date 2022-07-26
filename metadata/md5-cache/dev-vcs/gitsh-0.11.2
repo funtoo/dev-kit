@@ -1,15 +1,15 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( dev-vcs/git ) test? ( ruby_targets_ruby26? ( dev-ruby/bundler[ruby_targets_ruby26(-)] dev-ruby/parslet[ruby_targets_ruby26(-)] ) ) ruby_targets_ruby26? ( test? ( dev-ruby/pry[ruby_targets_ruby26(-)] ) ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 ruby_targets_ruby26? ( dev-lang/ruby:2.6 ) ruby_targets_ruby26? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby26(-)] ) ) ruby_targets_ruby26? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby26(-)] ) ) ruby_targets_ruby26? ( virtual/rubygems[ruby_targets_ruby26(-)] !!dev-ruby/psych[ruby_targets_ruby26(-)] ) test? ( ruby_targets_ruby26? ( virtual/rubygems[ruby_targets_ruby26(-)] ) )
+DEPEND=test? ( dev-vcs/git ) test? ( ruby_targets_ruby27? ( dev-ruby/bundler[ruby_targets_ruby27(-)] dev-ruby/parslet[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( test? ( dev-ruby/pry[ruby_targets_ruby27(-)] ) ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] ) test? ( ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] ) )
 DESCRIPTION=An interactive shell for git
 EAPI=6
 HOMEPAGE=https://github.com/thoughtbot/gitsh
 IUSE=test ruby_targets_ruby23 ruby_targets_ruby24 ruby_targets_ruby25 doc test test
 KEYWORDS=~amd64 ~amd64-linux
 LICENSE=BSD
-RDEPEND=sys-libs/readline ruby_targets_ruby26? ( dev-ruby/bundler[ruby_targets_ruby26(-)] dev-ruby/parslet[ruby_targets_ruby26(-)] ) ruby_targets_ruby26? ( dev-lang/ruby:2.6 ) ruby_targets_ruby26? ( virtual/rubygems[ruby_targets_ruby26(-)] )
-REQUIRED_USE=|| ( ruby_targets_ruby26 )
+RDEPEND=sys-libs/readline ruby_targets_ruby27? ( dev-ruby/bundler[ruby_targets_ruby27(-)] dev-ruby/parslet[ruby_targets_ruby27(-)] ) ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] )
+REQUIRED_USE=|| ( ruby_targets_ruby27 )
 RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/thoughtbot/gitsh/archive/v0.11.2.tar.gz -> gitsh-0.11.2.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	estack	43ddf5aaffa7a8d0482df54d25a66a1f	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	6ee14a23a169409059ed36d4dddc3197	ruby-ng	40cdc81a417bc6d63c6a19ff8029bdc2	ruby-utils	ec0e33f7343a706b3b8fc14cb63b25e8	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	estack	43ddf5aaffa7a8d0482df54d25a66a1f	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	517b8b0e1f18ba9deb1c46ddfb88b95b	ruby-utils	daabb2a420d9b5dd405eb5474382f47b	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=b458ef64b882b4d5581ea810e50aa943
