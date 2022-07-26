@@ -65,8 +65,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.1.0/go.mod"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03/go.mod"
-	"github.com/cli/go-gh v0.0.4-0.20220623035622-91ca4ef447d4"
-	"github.com/cli/go-gh v0.0.4-0.20220623035622-91ca4ef447d4/go.mod"
+	"github.com/cli/go-gh v0.0.4-0.20220725193052-79f89db738dc"
+	"github.com/cli/go-gh v0.0.4-0.20220725193052-79f89db738dc/go.mod"
 	"github.com/cli/oauth v0.9.0"
 	"github.com/cli/oauth v0.9.0/go.mod"
 	"github.com/cli/safeexec v1.0.0"
@@ -249,6 +249,8 @@ EGO_SUM=(
 	"github.com/stretchr/testify v1.7.1/go.mod"
 	"github.com/stretchr/testify v1.7.5"
 	"github.com/stretchr/testify v1.7.5/go.mod"
+	"github.com/thlib/go-timezone-local v0.0.0-20210907160436-ef149e42d28e"
+	"github.com/thlib/go-timezone-local v0.0.0-20210907160436-ef149e42d28e/go.mod"
 	"github.com/yuin/goldmark v1.1.25/go.mod"
 	"github.com/yuin/goldmark v1.1.27/go.mod"
 	"github.com/yuin/goldmark v1.1.32/go.mod"
@@ -372,6 +374,7 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210423082822-04245dca01da/go.mod"
 	"golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1/go.mod"
 	"golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod"
+	"golang.org/x/sys v0.0.0-20210831042530-f4d43177bf5e/go.mod"
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
 	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e/go.mod"
 	"golang.org/x/sys v0.0.0-20220422013727-9388b58f7150/go.mod"
@@ -541,7 +544,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.14.2 -> cli-v2.14.2.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.14.3 -> cli-v2.14.3.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -556,7 +559,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.14.2"
+	export GH_VERSION="v2.14.3"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
