@@ -203,6 +203,8 @@ EGO_SUM=(
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
 	"github.com/dlclark/regexp2 v1.4.0"
 	"github.com/dlclark/regexp2 v1.4.0/go.mod"
+	"github.com/dlclark/regexp2 v1.7.0"
+	"github.com/dlclark/regexp2 v1.7.0/go.mod"
 	"github.com/dustin/go-humanize v1.0.0/go.mod"
 	"github.com/emirpasic/gods v1.12.0/go.mod"
 	"github.com/emirpasic/gods v1.18.1"
@@ -613,6 +615,8 @@ EGO_SUM=(
 	"github.com/spf13/afero v1.8.2/go.mod"
 	"github.com/spf13/afero v1.9.0"
 	"github.com/spf13/afero v1.9.0/go.mod"
+	"github.com/spf13/afero v1.9.2"
+	"github.com/spf13/afero v1.9.2/go.mod"
 	"github.com/spf13/cast v1.3.1/go.mod"
 	"github.com/spf13/cast v1.5.0"
 	"github.com/spf13/cast v1.5.0/go.mod"
@@ -842,6 +846,8 @@ EGO_SUM=(
 	"golang.org/x/oauth2 v0.0.0-20220608161450-d0670ef3b1eb/go.mod"
 	"golang.org/x/oauth2 v0.0.0-20220630143837-2104d58473e0"
 	"golang.org/x/oauth2 v0.0.0-20220630143837-2104d58473e0/go.mod"
+	"golang.org/x/oauth2 v0.0.0-20220718184931-c8730f7fcb92"
+	"golang.org/x/oauth2 v0.0.0-20220718184931-c8730f7fcb92/go.mod"
 	"golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f/go.mod"
 	"golang.org/x/sync v0.0.0-20181108010431-42b317875d0f/go.mod"
 	"golang.org/x/sync v0.0.0-20181221193216-37e7f081c4d4/go.mod"
@@ -1276,7 +1282,7 @@ go-module_set_globals
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://github.com/twpayne/chezmoi"
-SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.19.0 -> chezmoi-v2.19.0.tar.gz
+SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.20.0 -> chezmoi-v2.20.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="MIT"
