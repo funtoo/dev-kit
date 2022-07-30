@@ -11,7 +11,7 @@ autocfg-1.1.0
 bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
-bytes-1.2.0
+bytes-1.2.1
 bytesize-1.1.0
 cargo-0.63.1
 cargo-platform-0.1.2
