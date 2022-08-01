@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
-anyhow-1.0.58
+anyhow-1.0.59
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -83,7 +83,7 @@ openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.22.0+1.1.1q
 openssl-sys-0.9.75
-os_info-3.4.0
+os_info-3.5.0
 os_str_bytes-6.2.0
 pathdiff-0.2.1
 percent-encoding-2.1.0
@@ -105,8 +105,8 @@ ryu-1.0.10
 same-file-1.0.6
 schannel-0.1.20
 semver-1.0.12
-serde-1.0.140
-serde_derive-1.0.140
+serde-1.0.141
+serde_derive-1.0.141
 serde_ignored-0.1.4
 serde_json-1.0.82
 shell-escape-0.1.5

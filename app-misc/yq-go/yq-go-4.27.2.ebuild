@@ -24,6 +24,8 @@ EGO_SUM=(
 	"github.com/go-playground/locales v0.13.0/go.mod"
 	"github.com/go-playground/universal-translator v0.17.0/go.mod"
 	"github.com/go-playground/validator/v10 v10.4.1/go.mod"
+	"github.com/goccy/go-json v0.9.10"
+	"github.com/goccy/go-json v0.9.10/go.mod"
 	"github.com/goccy/go-yaml v1.9.5"
 	"github.com/goccy/go-yaml v1.9.5/go.mod"
 	"github.com/hexops/gotextdiff v1.0.3"
@@ -90,7 +92,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.26.1 -> yq-go-v4.26.1.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.27.2 -> yq-go-v4.27.2.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
