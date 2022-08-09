@@ -22,7 +22,7 @@ cfg-if-1.0.0
 clap-3.2.16
 clap_derive-3.2.15
 clap_lex-0.2.4
-combine-4.6.4
+combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
 core-foundation-0.9.3
@@ -105,8 +105,8 @@ ryu-1.0.11
 same-file-1.0.6
 schannel-0.1.20
 semver-1.0.13
-serde-1.0.142
-serde_derive-1.0.142
+serde-1.0.143
+serde_derive-1.0.143
 serde_ignored-0.1.5
 serde_json-1.0.83
 shell-escape-0.1.5
