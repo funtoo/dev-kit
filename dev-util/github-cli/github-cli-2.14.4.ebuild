@@ -65,8 +65,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.1.0/go.mod"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03/go.mod"
-	"github.com/cli/go-gh v0.0.4-0.20220725193052-79f89db738dc"
-	"github.com/cli/go-gh v0.0.4-0.20220725193052-79f89db738dc/go.mod"
+	"github.com/cli/go-gh v0.1.0"
+	"github.com/cli/go-gh v0.1.0/go.mod"
 	"github.com/cli/oauth v0.9.0"
 	"github.com/cli/oauth v0.9.0/go.mod"
 	"github.com/cli/safeexec v1.0.0"
@@ -157,7 +157,6 @@ EGO_SUM=(
 	"github.com/gorilla/websocket v1.4.2"
 	"github.com/gorilla/websocket v1.4.2/go.mod"
 	"github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542"
-	"github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542/go.mod"
 	"github.com/hashicorp/errwrap v1.0.0"
 	"github.com/hashicorp/errwrap v1.0.0/go.mod"
 	"github.com/hashicorp/go-multierror v1.1.1"
@@ -216,7 +215,6 @@ EGO_SUM=(
 	"github.com/muesli/termenv v0.11.1-0.20220204035834-5ac8409525e0/go.mod"
 	"github.com/muhammadmuzzammil1998/jsonc v0.0.0-20201229145248-615b0916ca38"
 	"github.com/muhammadmuzzammil1998/jsonc v0.0.0-20201229145248-615b0916ca38/go.mod"
-	"github.com/nbio/st v0.0.0-20140626010706-e9e8d9816f32/go.mod"
 	"github.com/olekukonko/tablewriter v0.0.5"
 	"github.com/olekukonko/tablewriter v0.0.5/go.mod"
 	"github.com/opentracing/opentracing-go v1.1.0"
@@ -522,7 +520,6 @@ EGO_SUM=(
 	"gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15/go.mod"
 	"gopkg.in/errgo.v2 v2.1.0/go.mod"
 	"gopkg.in/h2non/gock.v1 v1.1.2"
-	"gopkg.in/h2non/gock.v1 v1.1.2/go.mod"
 	"gopkg.in/yaml.v2 v2.2.2/go.mod"
 	"gopkg.in/yaml.v2 v2.4.0/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
@@ -544,7 +541,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.14.3 -> cli-v2.14.3.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.14.4 -> cli-v2.14.4.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -559,7 +556,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.14.3"
+	export GH_VERSION="v2.14.4"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
