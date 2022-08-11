@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.18
-anyhow-1.0.60
+anyhow-1.0.61
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -15,7 +15,7 @@ bytes-1.2.1
 bytesize-1.1.0
 cargo-0.63.1
 cargo-platform-0.1.2
-cargo-util-0.2.0
+cargo-util-0.2.1
 cbindgen-0.24.3
 cc-1.0.73
 cfg-if-1.0.0
