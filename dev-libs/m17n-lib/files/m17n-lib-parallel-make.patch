@@ -59,3 +59,4 @@
 +linkgui_LDADD = libm17n-gui.la
  linkgui_LDFLAGS = -static
  endif
+

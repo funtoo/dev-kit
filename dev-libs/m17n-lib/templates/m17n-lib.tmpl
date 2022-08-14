@@ -7,7 +7,7 @@ inherit autotools
 
 DESCRIPTION="Multilingual Library for Unix/Linux"
 HOMEPAGE="https://savannah.nongnu.org/projects/m17n https://git.savannah.nongnu.org/cgit/m17n/m17n-lib.git"
-SRC_URI="https://download.savannah.nongnu.org/releases/m17n/m17n-lib-1.8.0.tar.gz -> m17n-lib-1.8.0.tar.gz"
+SRC_URI="{{ artifacts[0].src_uri }}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -84,3 +84,4 @@ src_configure() {
 
     econf "${myconf[@]}"
 }
+

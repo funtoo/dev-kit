@@ -9,3 +9,4 @@
    ispell = popen (command, "r");
    if (! ispell)
      return add_action (actions, msymbol ("shift"), Msymbol, init_state);
+

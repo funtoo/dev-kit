@@ -1,11 +1,11 @@
 DEFINED_PHASES=install
 DEPEND=sys-devel/gettext
 DESCRIPTION=Database for the m17n library
-EAPI=6
-HOMEPAGE=https://savannah.nongnu.org/projects/m17n https://git.savannah.nongnu.org/cgit/m17n/m17n-db.git
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86
+EAPI=7
+HOMEPAGE=https://savannah.nongnu.org/projects/m17n
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=LGPL-2.1
-RDEPEND=virtual/libintl
+RDEPEND=!dev-db/m17n-contrib virtual/libintl
 SLOT=0
-SRC_URI=mirror://nongnu/m17n/m17n-db-1.8.0.tar.gz
-_md5_=0968d42289699bb807a3975e91b00cd5
+SRC_URI=https://download.savannah.nongnu.org/releases/m17n/m17n-db-1.8.0.tar.gz -> m17n-db-1.8.0.tar.gz
+_md5_=e244ef6fb0c6469c693ec1f812516b6d
