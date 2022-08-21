@@ -108,7 +108,7 @@ semver-1.0.13
 serde-1.0.144
 serde_derive-1.0.144
 serde_ignored-0.1.5
-serde_json-1.0.83
+serde_json-1.0.84
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.4

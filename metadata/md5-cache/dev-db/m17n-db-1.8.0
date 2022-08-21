@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 RDEPEND=!dev-db/m17n-contrib virtual/libintl
 SLOT=0
 SRC_URI=https://download.savannah.nongnu.org/releases/m17n/m17n-db-1.8.0.tar.gz -> m17n-db-1.8.0.tar.gz
-_md5_=e244ef6fb0c6469c693ec1f812516b6d
+_md5_=9b25e30eb609ab33bb7d634d1e3cbe37
