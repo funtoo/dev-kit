@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Client library written in C for MongoDB"
 HOMEPAGE="https://github.com/mongodb/mongo-c-driver"
-SRC_URI="https://github.com/mongodb/mongo-c-driver/releases/download/${PV}/${P}.tar.gz"
+SRC_URI="{{ artifacts[0].src_uri }}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -22,7 +22,6 @@ RESTRICT="x86? ( test )
 RDEPEND="app-arch/snappy:=
 	app-arch/zstd:=
 	>=dev-libs/libbson-${PV}[static-libs?]
-	dev-python/sphinx
 	sys-libs/zlib:=
 	icu? ( dev-libs/icu:= )
 	sasl? ( dev-libs/cyrus-sasl:= )
@@ -31,6 +30,7 @@ RDEPEND="app-arch/snappy:=
 		libressl? ( dev-libs/libressl:0= )
 	)"
 DEPEND="${RDEPEND}
+	dev-python/sphinx
 	test? (
 		dev-db/mongodb
 		dev-libs/libbson[static-libs]

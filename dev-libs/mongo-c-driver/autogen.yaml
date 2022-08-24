@@ -1,0 +1,8 @@
+mongo_c:
+  generator: github-1
+  packages:
+    - mongo-c-driver:
+        github:
+          user: mongodb
+          query: releases
+          tarball: 'mongo-c-driver-{version}.tar.gz'
