@@ -36,8 +36,3 @@ async def submit(package, hub, **pkginfo):
         artifacts=[hub.pkgtools.ebuild.Artifact(url=url)],
     )
     ebuild.push()
-
-async def generate(hub, **pkginfo):
-    packages = [[ "dev-db", "m17n-db" ], [ "dev-db", "m17n-contrib"], [ "dev-libs", "m17n-lib" ]]
-    for package in packages:
-        await submit(package, hub, **pkginfo)
