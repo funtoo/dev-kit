@@ -1,9 +1,0 @@
-libpinyin:
-  generator: github-1
-  packages:
-    - libpinyin:
-        github:
-          user: libpinyin
-          repo: libpinyin
-          query: releases
-          tarball: "libpinyin-{version}.tar.gz"
