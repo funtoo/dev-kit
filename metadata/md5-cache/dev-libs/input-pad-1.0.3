@@ -1,0 +1,14 @@
+BDEPEND=dev-util/intltool sys-devel/gettext virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/glib:2 dev-libs/libxml2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libxkbfile x11-libs/libxklavier virtual/libintl eekboard? ( dev-libs/eekboard ) introspection? ( dev-libs/gobject-introspection ) xtest? ( x11-libs/libXtst )
+DESCRIPTION=On-screen input pad to send characters with mouse
+EAPI=7
+HOMEPAGE=https://github.com/fujiwarat/input-pad/wiki
+IUSE=eekboard +introspection static-libs xtest
+KEYWORDS=*
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/glib:2 dev-libs/libxml2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libxkbfile x11-libs/libxklavier virtual/libintl eekboard? ( dev-libs/eekboard ) introspection? ( dev-libs/gobject-introspection ) xtest? ( x11-libs/libXtst )
+SLOT=0
+SRC_URI=https://github.com/fujiwarat/input-pad/releases/download/1.0.3/input-pad-1.0.3.tar.gz -> input-pad-1.0.3.tar.gz
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=310536bc11da17dc91bc030cb4066430

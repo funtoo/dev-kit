@@ -23,7 +23,7 @@ fi
 
 LICENSE="GPL-3+"
 SLOT="0/13"
-KEYWORDS="amd64 ~arm64 ppc ppc64 x86"
+KEYWORDS="*"
 IUSE=""
 
 BDEPEND="virtual/pkgconfig"

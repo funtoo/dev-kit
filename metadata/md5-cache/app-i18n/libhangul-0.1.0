@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig nls? ( sys-devel/gettext )
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=virtual/libiconv nls? ( virtual/libintl )
+DESCRIPTION=Library for hangul input method logic, hanja dictionary
+EAPI=7
+HOMEPAGE=https://github.com/libhangul/libhangul
+IUSE=+nls static-libs
+KEYWORDS=*
+LICENSE=LGPL-2.1+
+RDEPEND=virtual/libiconv nls? ( virtual/libintl )
+SLOT=0/1
+SRC_URI=https://api.github.com/repos/libhangul/libhangul/tarball/refs/tags/libhangul-0.1.0 -> libhangul-0.1.0.tar.gz
+_md5_=20df7e9fad9edcfe2a4006475f21d9d5
