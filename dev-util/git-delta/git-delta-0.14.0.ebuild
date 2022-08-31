@@ -18,9 +18,10 @@ bitflags-1.3.2
 box_drawing-0.1.2
 bstr-0.2.15
 bugreport-0.5.0
-bytelines-2.2.2
+bytelines-2.4.0
 bytemuck-1.7.3
 byteorder-1.3.4
+bytes-1.1.0
 bytesize-1.1.0
 cc-1.0.66
 cfg-if-0.1.10
@@ -28,14 +29,15 @@ cfg-if-1.0.0
 chrono-0.4.19
 chrono-humanize-0.2.1
 clap-2.34.0
-clap-3.0.7
-clap_derive-3.0.5
+clap-3.2.8
+clap_derive-3.2.7
+clap_lex-0.2.4
 clircle-0.3.0
 console-0.15.0
 content_inspector-0.2.4
 core-foundation-sys-0.8.3
 crc32fast-1.2.1
-ctrlc-3.2.1
+ctrlc-3.2.2
 dirs-4.0.0
 dirs-next-2.0.0
 dirs-sys-0.3.6
@@ -54,6 +56,15 @@ find-crate-0.6.3
 flate2-1.0.19
 fnv-1.0.7
 form_urlencoded-1.0.0
+futures-0.3.21
+futures-channel-0.3.21
+futures-core-0.3.21
+futures-executor-0.3.21
+futures-io-0.3.21
+futures-macro-0.3.21
+futures-sink-0.3.21
+futures-task-0.3.21
+futures-util-0.3.21
 getrandom-0.1.16
 getrandom-0.2.3
 git-version-0.3.5
@@ -67,12 +78,11 @@ heck-0.4.0
 hermit-abi-0.1.17
 idna-0.2.0
 indexmap-1.5.2
-itertools-0.10.1
-itoa-0.4.7
+itertools-0.10.3
 itoa-1.0.1
 jobserver-0.1.21
 lazy_static-1.4.0
-libc-0.2.112
+libc-0.2.126
 libgit2-sys-0.13.2+1.4.2
 libz-sys-1.1.2
 line-wrap-0.1.1
@@ -80,14 +90,13 @@ linked-hash-map-0.5.3
 log-0.4.11
 matches-0.1.8
 memchr-2.4.1
-memoffset-0.6.4
 miniz_oxide-0.4.3
-nix-0.23.0
+nix-0.24.1
 ntapi-0.3.6
 num-integer-0.1.44
 num-traits-0.2.14
 num_threads-0.1.6
-once_cell-1.10.0
+once_cell-1.12.1
 onig-6.1.1
 onig_sys-69.6.0
 os_str_bytes-6.0.0
@@ -100,6 +109,8 @@ phf-0.9.0
 phf_generator-0.9.1
 phf_macros-0.9.0
 phf_shared-0.9.0
+pin-project-lite-0.2.8
+pin-utils-0.1.0
 pkg-config-0.3.19
 plist-1.3.1
 ppv-lite86-0.2.15
@@ -124,32 +135,34 @@ ryu-1.0.5
 safemem-0.3.3
 same-file-1.0.6
 semver-1.0.6
-serde-1.0.118
-serde_derive-1.0.118
-serde_json-1.0.70
+serde-1.0.138
+serde_derive-1.0.138
+serde_json-1.0.82
 serde_yaml-0.8.23
 shell-escape-0.1.5
 shell-words-1.1.0
 siphasher-0.3.7
-smol_str-0.1.21
+slab-0.4.6
+smol_str-0.1.23
 std_prelude-0.2.12
 strsim-0.8.0
 strsim-0.10.0
-syn-1.0.85
+syn-1.0.94
 syntect-5.0.0
 sys-info-0.9.1
-sysinfo-0.23.0
+sysinfo-0.24.5
 term_size-0.3.2
 termcolor-1.1.2
 terminal_size-0.1.15
 textwrap-0.11.0
-textwrap-0.14.2
+textwrap-0.15.0
 thiserror-1.0.30
 thiserror-impl-1.0.30
 time-0.1.44
 time-0.3.9
 tinyvec-1.1.0
 tinyvec_macros-0.1.0
+tokio-1.17.0
 toml-0.5.8
 unicode-bidi-0.3.4
 unicode-normalization-0.1.16
@@ -180,7 +193,7 @@ inherit bash-completion-r1 cargo
 
 DESCRIPTION="A syntax-highlighting pager for git"
 HOMEPAGE="https://github.com/dandavison/delta"
-SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.13.0 -> delta-0.13.0.tar.gz
+SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.14.0 -> delta-0.14.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 LGPL-3+ MIT Unlicense ZLIB"
