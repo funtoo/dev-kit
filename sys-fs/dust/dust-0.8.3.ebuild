@@ -10,11 +10,13 @@ atty-0.2.14
 autocfg-1.1.0
 bitflags-1.3.2
 bstr-0.2.17
+cc-1.0.73
 cfg-if-1.0.0
 clap-3.2.17
 clap_complete-3.2.4
 clap_lex-0.2.4
 config-file-0.2.3
+core-foundation-sys-0.8.3
 crossbeam-channel-0.5.6
 crossbeam-deque-0.8.2
 crossbeam-epoch-0.9.10
@@ -36,6 +38,7 @@ libc-0.2.132
 lscolors-0.7.1
 memchr-2.5.0
 memoffset-0.6.5
+ntapi-0.3.7
 num_cpus-1.13.1
 once_cell-1.13.1
 os_str_bytes-6.3.0
@@ -58,6 +61,7 @@ serde_derive-1.0.143
 stfu8-0.2.5
 strsim-0.10.0
 syn-1.0.99
+sysinfo-0.15.9
 tempfile-3.3.0
 termcolor-1.1.3
 terminal_size-0.1.17
@@ -81,7 +85,7 @@ inherit cargo
 
 DESCRIPTION="A more intuitive version of du in rust"
 HOMEPAGE="https://github.com/bootandy/dust"
-SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v0.8.2 -> dust-0.8.2.tar.gz
+SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v0.8.3 -> dust-0.8.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
