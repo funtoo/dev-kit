@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Fast and correct automated build system
+EAPI=7
+HOMEPAGE=https://bazel.build/
+KEYWORDS=-* amd64
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jre-11
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/bazelbuild/bazel/releases/download/5.3.0/bazel_nojdk-5.3.0-linux-x86_64 -> bazel_nojdk-5.3.0-linux-x86_64
+_md5_=acf4faf74dac7d70ec4923b95d0166ab
