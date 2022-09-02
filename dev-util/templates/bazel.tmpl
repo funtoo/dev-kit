@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,44 +6,27 @@ inherit bash-completion-r1 java-pkg-2 multiprocessing
 
 DESCRIPTION="Fast and correct automated build system"
 HOMEPAGE="https://bazel.build/"
-
-SRC_URI="https://github.com/bazelbuild/bazel/releases/download/${PV}/${P}-dist.zip"
+SRC_URI="{{ artifacts[0].src_uri }}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="examples test tools"
+KEYWORDS="*"
+IUSE="examples tools"
 # strip corrupts the bazel binary
-RESTRICT="strip test? ( network-sandbox ) !test? ( test )"
-RDEPEND=">=virtual/jdk-1.8:*"
-DEPEND="${RDEPEND}
+# test fails with network-sandbox: An error occurred during the fetch of repository 'io_bazel_skydoc' (bug 690794)
+RESTRICT="strip test"
+RDEPEND=">=virtual/jre-11"
+DEPEND="
+	virtual/jdk:11
 	app-arch/unzip
 	app-arch/zip"
 
 S="${WORKDIR}"
-QA_FLAGS_IGNORED="usr/bin/bazel"
-
-bazel-get-flags() {
-	local i fs=()
-	for i in ${CFLAGS}; do
-		fs+=( "--copt=${i}" "--host_copt=${i}" )
-	done
-	for i in ${CXXFLAGS}; do
-		fs+=( "--cxxopt=${i}" "--host_cxxopt=${i}" )
-	done
-	for i in ${CPPFLAGS}; do
-		fs+=( "--copt=${i}" "--host_copt=${i}" )
-		fs+=( "--cxxopt=${i}" "--host_cxxopt=${i}" )
-	done
-	for i in ${LDFLAGS}; do
-		fs+=( "--linkopt=${i}" "--host_linkopt=${i}" )
-	done
-	echo "${fs[*]}"
-}
 
 pkg_setup() {
-	echo ${PATH} | grep -q ccache && \
+	if has ccache ${FEATURES}; then
 		ewarn "${PN} usually fails to compile with ccache, you have been warned"
+	fi
 	java-pkg-2_pkg_setup
 }
 
@@ -63,30 +45,20 @@ src_prepare() {
 	# R: /proc/24939/setgroups
 	# C: /usr/lib/systemd/systemd
 	addpredict /proc
-
-	# Use standalone strategy to deactivate the bazel sandbox, since it
-	# conflicts with FEATURES=sandbox.
-	cat > "${T}/bazelrc" <<-EOF || die
-		build --verbose_failures
-		build --spawn_strategy=standalone --genrule_strategy=standalone
-
-		build --distdir="${S}/derived/distdir/"
-		build --jobs=$(makeopts_jobs) $(bazel-get-flags)
-
-		test --verbose_failures --verbose_test_summary
-		test --spawn_strategy=standalone --genrule_strategy=standalone
-		EOF
 }
 
 src_compile() {
-	export EXTRA_BAZEL_ARGS="--jobs=$(makeopts_jobs) --host_javabase=@local_jdk//:jdk"
-	VERBOSE=yes ./compile.sh || die
+	export JAVA_HOME=$(java-config --jre-home) # so keepwork works
+	export EXTRA_BAZEL_ARGS="--jobs=$(makeopts_jobs)
+		--java_runtime_version=local_jdk
+		--tool_java_runtime_version=local_jdk"
+	VERBOSE=yes ./compile.sh || die "Failed compiling bazel"
 
 	./scripts/generate_bash_completion.sh \
 		--bazel=output/bazel \
 		--output=bazel-complete.bash \
 		--prepend=scripts/bazel-complete-header.bash \
-		--prepend=scripts/bazel-complete-template.bash
+		--prepend=scripts/bazel-complete-template.bash || die "Failed to generate bash completions"
 }
 
 src_test() {
@@ -117,5 +89,6 @@ src_install() {
 		docinto tools
 		dodoc -r tools/*
 		docompress -x /usr/share/doc/${PF}/tools
+		docompress -x /usr/share/doc/${PF}/tools/build_defs/pkg/testdata
 	fi
 }
