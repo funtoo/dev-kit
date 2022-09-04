@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-aho-corasick-0.7.18
+aho-corasick-0.7.19
 anyhow-1.0.63
 arrayvec-0.5.2
 atty-0.2.14
@@ -73,7 +73,7 @@ libz-sys-1.1.8
 log-0.4.17
 matches-0.1.9
 memchr-2.5.0
-miniz_oxide-0.5.3
+miniz_oxide-0.5.4
 miow-0.3.7
 num_cpus-1.13.1
 once_cell-1.14.0
