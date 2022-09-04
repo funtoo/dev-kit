@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.19
-anyhow-1.0.63
+anyhow-1.0.64
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
