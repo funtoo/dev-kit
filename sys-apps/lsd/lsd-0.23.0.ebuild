@@ -4,21 +4,22 @@ EAPI=7
 
 CRATES="
 aho-corasick-0.7.18
-ansi_term-0.11.0
 ansi_term-0.12.1
 assert_cmd-1.0.8
 assert_fs-1.0.7
 atty-0.2.14
 autocfg-1.1.0
-bitflags-1.2.1
+bitflags-1.3.2
 bstr-0.2.17
 cfg-if-1.0.0
 chrono-0.4.19
 chrono-humanize-0.1.2
-clap-2.33.4
+clap-3.2.17
+clap_complete-3.2.4
+clap_lex-0.2.4
 crossbeam-utils-0.8.8
-crossterm-0.21.0
-crossterm_winapi-0.8.0
+crossterm-0.24.0
+crossterm_winapi-0.9.0
 difference-2.0.0
 difflib-0.4.0
 dirs-3.0.2
@@ -48,15 +49,16 @@ log-0.4.16
 lscolors-0.9.0
 matches-0.1.9
 memchr-2.4.1
-mio-0.7.14
-miow-0.3.7
+mio-0.8.4
 normalize-line-endings-0.3.0
-ntapi-0.3.7
 num-integer-0.1.44
 num-traits-0.2.14
 once_cell-1.10.0
+os_str_bytes-6.3.0
 parking_lot-0.11.2
+parking_lot-0.12.1
 parking_lot_core-0.8.5
+parking_lot_core-0.9.3
 percent-encoding-2.1.0
 predicates-1.0.8
 predicates-2.1.1
@@ -78,18 +80,18 @@ serde_derive-1.0.136
 serde_yaml-0.8.23
 serial_test-0.5.1
 serial_test_derive-0.5.1
-signal-hook-0.3.9
-signal-hook-mio-0.2.1
+signal-hook-0.3.14
+signal-hook-mio-0.2.3
 signal-hook-registry-1.4.0
 smallvec-1.8.0
-strsim-0.8.0
+strsim-0.10.0
 syn-1.0.89
 tempfile-3.3.0
 term_grid-0.1.7
-term_size-0.3.2
+termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
-textwrap-0.11.0
+textwrap-0.15.0
 thiserror-1.0.30
 thiserror-impl-1.0.30
 thread_local-1.1.4
@@ -102,16 +104,22 @@ unicode-width-0.1.9
 unicode-xid-0.2.2
 url-2.1.1
 users-0.11.0
-vec_map-0.8.2
 version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
 wasi-0.10.2+wasi-snapshot-preview1
+wasi-0.11.0+wasi-snapshot-preview1
 wild-2.0.4
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
+windows-sys-0.36.1
+windows_aarch64_msvc-0.36.1
+windows_i686_gnu-0.36.1
+windows_i686_msvc-0.36.1
+windows_x86_64_gnu-0.36.1
+windows_x86_64_msvc-0.36.1
 xattr-0.2.2
 xdg-2.1.0
 yaml-rust-0.4.5
@@ -121,7 +129,7 @@ inherit cargo
 
 DESCRIPTION="A modern ls with a lot of pretty colors and awesome icons"
 HOMEPAGE="https://github.com/Peltoche/lsd"
-SRC_URI="https://api.github.com/repos/Peltoche/lsd/tarball/0.22.0 -> lsd-0.22.0.tar.gz
+SRC_URI="https://api.github.com/repos/Peltoche/lsd/tarball/0.23.0 -> lsd-0.23.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
