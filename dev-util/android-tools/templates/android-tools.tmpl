@@ -1,0 +1,79 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+PYTHON_COMPAT=( python3+ )
+
+inherit cmake python-r1
+
+DESCRIPTION="{{ desc }}"
+HOMEPAGE="{{ homepage }}"
+SRC_URI="{{ artifacts[0].src_uri }}"
+
+# The entire source code is Apache-2.0, except for fastboot which is BSD-2.
+LICENSE="Apache-2.0 BSD-2"
+SLOT="0"
+KEYWORDS="*"
+IUSE="python"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
+# dev-libs/libpcre only required for e2fsdroid
+DEPEND="
+	app-arch/brotli:=
+	app-arch/lz4:=
+	app-arch/zstd:=
+	dev-libs/libpcre2:=
+	>=dev-libs/protobuf-3.0.0:=
+	sys-libs/zlib:=
+	virtual/libusb:1=
+"
+RDEPEND="${DEPEND}
+	python? ( ${PYTHON_DEPS} )
+"
+BDEPEND="
+	dev-lang/go
+"
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/${P/_p/p} "${S}" || die
+	fi
+}
+
+DOCS=()
+
+src_prepare() {
+	mkdir -p vendor/core/include/gtest
+	echo '#define FRIEND_TEST(...)' > vendor/core/include/gtest/gtest_prod.h
+	cmake_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=(
+		# Statically link the bundled boringssl
+		-DBUILD_SHARED_LIBS=OFF
+	)
+	cmake_src_configure
+}
+
+src_compile() {
+	export GOCACHE="${T}/go-build"
+	export GOFLAGS="-mod=vendor"
+	cmake_src_compile
+}
+
+src_install() {
+	cmake_src_install
+	rm "${ED}/usr/bin/mkbootimg" || die
+	rm "${ED}/usr/bin/unpack_bootimg" || die
+	rm "${ED}/usr/bin/repack_bootimg" || die
+	if use python; then
+		python_foreach_impl python_newexe vendor/mkbootimg/mkbootimg.py mkbootimg
+		python_foreach_impl python_newexe vendor/mkbootimg/unpack_bootimg.py unpack_bootimg
+		python_foreach_impl python_newexe vendor/mkbootimg/repack_bootimg.py repack_bootimg
+	fi
+	docinto adb
+	dodoc vendor/adb/*.{txt,TXT}
+	docinto fastboot
+	dodoc vendor/core/fastboot/README.md
+}

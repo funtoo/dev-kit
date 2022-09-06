@@ -1,0 +1,16 @@
+android_tools:
+ generator: github-1
+ packages:
+   - android-tools:
+       desc: Android platform tools (adb, fastboot, and mkbootimg)
+       homepage: https://github.com/nmeum/android-tools/ https://developer.android.com/
+       github:
+         user: nmeum
+         repo: android-tools
+         query: releases
+         tarball: android-tools-{tag}.tar.xz
+         select: '\d+\.\d+\.\d+(?:_p\d+)'
+         transform:
+           - kind: string
+             match: 'p'
+             replace: '_p'

@@ -1,0 +1,86 @@
+From 32d76cdbeb8a4fc2bb5fe22f496a9b82b68305a3 Mon Sep 17 00:00:00 2001
+From: mid-kid <esteve.varela@gmail.com>
+Date: Sat, 10 Jul 2021 16:19:59 +0200
+Subject: [PATCH] Remove the useless dependency on gtest
+
+In case this patch becomes annoying to maintain, creating a mock header
+using the following commands would do the trick just fine:
+    mkdir -p vendor/core/include/gtest
+    echo '#define FRIEND_TEST(...)' > vendor/core/include/gtest/gtest_prod.h
+---
+ ...move-the-useless-dependency-on-gtest.patch | 30 +++++++++++++++++++
+ ...move-the-useless-dependency-on-gtest.patch | 28 +++++++++++++++++
+ 2 files changed, 58 insertions(+)
+ create mode 100644 patches/core/0011-Remove-the-useless-dependency-on-gtest.patch
+ create mode 100644 patches/libziparchive/0004-Remove-the-useless-dependency-on-gtest.patch
+
+diff --git a/patches/core/0011-Remove-the-useless-dependency-on-gtest.patch b/patches/core/0011-Remove-the-useless-dependency-on-gtest.patch
+new file mode 100644
+index 0000000..61ec52d
+--- /dev/null
++++ b/patches/core/0011-Remove-the-useless-dependency-on-gtest.patch
+@@ -0,0 +1,30 @@
++From f3d14a67cb64cccbc0f6bac8ecef92b06f11b020 Mon Sep 17 00:00:00 2001
++From: mid-kid <esteve.varela@gmail.com>
++Date: Sat, 10 Jul 2021 16:14:34 +0200
++Subject: [PATCH] Remove the useless dependency on gtest
++
++---
++ fastboot/socket.h | 4 ----
++ 1 file changed, 4 deletions(-)
++
++diff --git a/fastboot/socket.h b/fastboot/socket.h
++index ced760c03..9155de338 100644
++--- a/fastboot/socket.h
+++++ b/fastboot/socket.h
++@@ -41,7 +41,6 @@
++ #include <sys/select.h>
++ #include <android-base/macros.h>
++ #include <cutils/sockets.h>
++-#include <gtest/gtest_prod.h>
++ 
++ // Socket interface to be implemented for each platform.
++ class Socket {
++@@ -120,8 +119,5 @@ class Socket {
++             socket_send_buffers_function_ = &socket_send_buffers;
++ 
++   private:
++-    FRIEND_TEST(SocketTest, TestTcpSendBuffers);
++-    FRIEND_TEST(SocketTest, TestUdpSendBuffers);
++-
++     DISALLOW_COPY_AND_ASSIGN(Socket);
++ };
+diff --git a/patches/libziparchive/0004-Remove-the-useless-dependency-on-gtest.patch b/patches/libziparchive/0004-Remove-the-useless-dependency-on-gtest.patch
+new file mode 100644
+index 0000000..cd57b68
+--- /dev/null
++++ b/patches/libziparchive/0004-Remove-the-useless-dependency-on-gtest.patch
+@@ -0,0 +1,28 @@
++From cf2390b7e3a7e849725e54a8a03c526f34e79e7c Mon Sep 17 00:00:00 2001
++From: mid-kid <esteve.varela@gmail.com>
++Date: Sat, 10 Jul 2021 16:15:46 +0200
++Subject: [PATCH] Remove the useless dependency on gtest
++
++---
++ include/ziparchive/zip_writer.h | 3 ---
++ 1 file changed, 3 deletions(-)
++
++diff --git a/include/ziparchive/zip_writer.h b/include/ziparchive/zip_writer.h
++index d68683d..82d53fc 100644
++--- a/include/ziparchive/zip_writer.h
+++++ b/include/ziparchive/zip_writer.h
++@@ -19,7 +19,6 @@
++ #include <cstdio>
++ #include <ctime>
++ 
++-#include <gtest/gtest_prod.h>
++ #include <memory>
++ #include <string>
++ #include <string_view>
++@@ -184,6 +183,4 @@ class ZipWriter {
++ 
++   std::unique_ptr<z_stream, void (*)(z_stream*)> z_stream_;
++   std::vector<uint8_t> buffer_;
++-
++-  FRIEND_TEST(zipwriter, WriteToUnseekableFile);
++ };
