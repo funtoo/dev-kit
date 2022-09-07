@@ -131,7 +131,7 @@ unicode-ident-1.0.3
 unicode-normalization-0.1.21
 unicode-width-0.1.9
 unicode-xid-0.2.3
-url-2.2.2
+url-2.3.0
 utf8parse-0.2.0
 vcpkg-0.2.15
 version_check-0.9.4
