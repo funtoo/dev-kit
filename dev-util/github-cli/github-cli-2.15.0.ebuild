@@ -75,7 +75,6 @@ EGO_SUM=(
 	"github.com/cli/shurcoo!l-graphql v0.0.1/go.mod"
 	"github.com/client9/misspell v0.3.4/go.mod"
 	"github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.1/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
@@ -231,14 +230,14 @@ EGO_SUM=(
 	"github.com/rogpeppe/go-internal v1.3.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
-	"github.com/shurcoo!l/githubv4 v0.0.0-20200928013246-d292edc3691b"
-	"github.com/shurcoo!l/githubv4 v0.0.0-20200928013246-d292edc3691b/go.mod"
+	"github.com/shurcoo!l/githubv4 v0.0.0-20220115235240-a14260e6f8a2"
+	"github.com/shurcoo!l/githubv4 v0.0.0-20220115235240-a14260e6f8a2/go.mod"
 	"github.com/shurcoo!l/graphql v0.0.0-20200928012149-18c5c3165e3a"
 	"github.com/shurcoo!l/graphql v0.0.0-20200928012149-18c5c3165e3a/go.mod"
 	"github.com/sourcegraph/jsonrpc2 v0.1.0"
 	"github.com/sourcegraph/jsonrpc2 v0.1.0/go.mod"
-	"github.com/spf13/cobra v1.4.0"
-	"github.com/spf13/cobra v1.4.0/go.mod"
+	"github.com/spf13/cobra v1.5.0"
+	"github.com/spf13/cobra v1.5.0/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
 	"github.com/stretchr/objx v0.1.0/go.mod"
@@ -545,7 +544,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.14.7 -> cli-v2.14.7.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.15.0 -> cli-v2.15.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -560,7 +559,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.14.7"
+	export GH_VERSION="v2.15.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
