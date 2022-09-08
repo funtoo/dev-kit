@@ -32,7 +32,7 @@ crc32fast-1.3.2
 crossbeam-utils-0.8.11
 crypto-hash-0.3.4
 curl-0.4.44
-curl-sys-0.4.57+curl-7.85.0
+curl-sys-0.4.56+curl-7.83.1
 either-1.8.0
 env_logger-0.9.0
 fastrand-1.8.0
@@ -41,7 +41,7 @@ flate2-1.0.24
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
-form_urlencoded-1.0.1
+form_urlencoded-1.1.0
 fwdansi-1.1.0
 git2-0.14.4
 git2-curl-0.15.0
@@ -54,7 +54,7 @@ hex-0.3.2
 hex-0.4.3
 home-0.5.3
 humantime-2.1.0
-idna-0.2.3
+idna-0.3.0
 ignore-0.4.18
 im-rc-15.1.0
 indexmap-1.9.1
@@ -71,7 +71,6 @@ libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
 log-0.4.17
-matches-0.1.9
 memchr-2.5.0
 miniz_oxide-0.5.4
 miow-0.3.7
@@ -86,7 +85,7 @@ openssl-sys-0.9.75
 os_info-3.5.0
 os_str_bytes-6.3.0
 pathdiff-0.2.1
-percent-encoding-2.1.0
+percent-encoding-2.2.0
 pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
@@ -131,7 +130,7 @@ unicode-ident-1.0.3
 unicode-normalization-0.1.21
 unicode-width-0.1.9
 unicode-xid-0.2.3
-url-2.3.0
+url-2.3.1
 utf8parse-0.2.0
 vcpkg-0.2.15
 version_check-0.9.4
