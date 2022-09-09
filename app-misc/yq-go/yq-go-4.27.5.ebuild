@@ -15,8 +15,8 @@ EGO_SUM=(
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/davecgh/go-spew v1.1.0"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
-	"github.com/elliotchance/orderedmap v1.4.0"
-	"github.com/elliotchance/orderedmap v1.4.0/go.mod"
+	"github.com/elliotchance/orderedmap v1.5.0"
+	"github.com/elliotchance/orderedmap v1.5.0/go.mod"
 	"github.com/fatih/color v1.10.0/go.mod"
 	"github.com/fatih/color v1.13.0"
 	"github.com/fatih/color v1.13.0/go.mod"
@@ -92,7 +92,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.27.3 -> yq-go-v4.27.3.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.27.5 -> yq-go-v4.27.5.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
