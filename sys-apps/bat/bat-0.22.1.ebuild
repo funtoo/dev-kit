@@ -154,7 +154,7 @@ inherit cargo
 
 DESCRIPTION="A cat(1) clone with wings"
 HOMEPAGE="https://github.com/sharkdp/bat"
-SRC_URI="https://api.github.com/repos/sharkdp/bat/tarball/v0.22.0 -> bat-0.22.0.tar.gz
+SRC_URI="https://api.github.com/repos/sharkdp/bat/tarball/v0.22.1 -> bat-0.22.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
