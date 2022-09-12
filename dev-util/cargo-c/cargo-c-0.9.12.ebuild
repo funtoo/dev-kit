@@ -19,7 +19,7 @@ cargo-util-0.2.1
 cbindgen-0.24.3
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.2.20
+clap-3.2.21
 clap_derive-3.2.18
 clap_lex-0.2.4
 combine-4.6.6
