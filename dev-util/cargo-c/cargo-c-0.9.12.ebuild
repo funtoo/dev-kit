@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.19
-anyhow-1.0.64
+anyhow-1.0.65
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -59,7 +59,7 @@ ignore-0.4.18
 im-rc-15.1.0
 indexmap-1.9.1
 instant-0.1.12
-itertools-0.10.3
+itertools-0.10.4
 itoa-1.0.3
 jobserver-0.1.24
 kstring-2.0.0
@@ -128,7 +128,7 @@ typenum-1.15.0
 unicode-bidi-0.3.8
 unicode-ident-1.0.3
 unicode-normalization-0.1.21
-unicode-width-0.1.9
+unicode-width-0.1.10
 unicode-xid-0.2.3
 url-2.3.1
 utf8parse-0.2.0
