@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="a Java IDE by JetBrains (Community Edition)"
+DESCRIPTION="a Java IDE by JetBrains (Ultimate Edition)"
 HOMEPAGE="https://www.jetbrains.com/idea"
-SRC_URI="https://download.jetbrains.com/idea/ideaIC-2022.2.1.tar.gz -> idea-community-2022.2.1.tar.gz"
+SRC_URI="https://download.jetbrains.com/idea/ideaIU-2022.2.2.tar.gz -> idea-ultimate-2022.2.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -28,12 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/idea-IC-${PV}"
+S="${WORKDIR}/idea-IU-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "idea-IC-${PV}" || die
+		mv $(ls "${WORKDIR}") "idea-IU-${PV}" || die
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "IntelliJ IDEA Community Edition" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "IntelliJ IDEA Ultimate" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
