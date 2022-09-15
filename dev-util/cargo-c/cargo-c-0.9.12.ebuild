@@ -91,7 +91,7 @@ proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.43
 quote-1.0.21
-rand_core-0.6.3
+rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 regex-1.6.0
@@ -103,7 +103,7 @@ rustfix-0.6.1
 ryu-1.0.11
 same-file-1.0.6
 schannel-0.1.20
-semver-1.0.13
+semver-1.0.14
 serde-1.0.144
 serde_derive-1.0.144
 serde_ignored-0.1.5
@@ -118,7 +118,7 @@ syn-1.0.99
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
-textwrap-0.15.0
+textwrap-0.15.1
 thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
@@ -129,7 +129,7 @@ unicode-bidi-0.3.8
 unicode-ident-1.0.4
 unicode-normalization-0.1.21
 unicode-width-0.1.10
-unicode-xid-0.2.3
+unicode-xid-0.2.4
 url-2.3.1
 utf8parse-0.2.0
 vcpkg-0.2.15
