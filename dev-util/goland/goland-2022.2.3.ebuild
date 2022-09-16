@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="The smartest JavaScript IDE"
-HOMEPAGE="http://www.jetbrains.com/webstorm"
-SRC_URI="https://download.jetbrains.com/webstorm/WebStorm-2022.2.1.tar.gz -> webstorm-2022.2.1.tar.gz"
+DESCRIPTION="Golang IDE by JetBrains"
+HOMEPAGE="https://www.jetbrains.com/go"
+SRC_URI="https://download.jetbrains.com/go/goland-2022.2.3.tar.gz -> goland-2022.2.3.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -28,12 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/webstorm-${PV}"
+S="${WORKDIR}/GoLand-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "webstorm-${PV}" || die
+		mv $(ls "${WORKDIR}") "GoLand-${PV}" || die
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "WebStorm" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "GoLand" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
