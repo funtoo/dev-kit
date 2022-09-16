@@ -19,7 +19,7 @@ cargo-util-0.2.1
 cbindgen-0.24.3
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.2.21
+clap-3.2.22
 clap_derive-3.2.18
 clap_lex-0.2.4
 combine-4.6.6
@@ -127,7 +127,7 @@ toml_edit-0.14.4
 typenum-1.15.0
 unicode-bidi-0.3.8
 unicode-ident-1.0.4
-unicode-normalization-0.1.21
+unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4
 url-2.3.1
