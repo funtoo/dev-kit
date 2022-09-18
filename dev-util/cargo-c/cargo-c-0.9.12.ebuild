@@ -34,7 +34,7 @@ crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.56+curl-7.83.1
 either-1.8.0
-env_logger-0.9.0
+env_logger-0.9.1
 fastrand-1.8.0
 filetime-0.2.17
 flate2-1.0.24
