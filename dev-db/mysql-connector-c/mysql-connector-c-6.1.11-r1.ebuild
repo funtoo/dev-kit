@@ -30,7 +30,7 @@ CDEPEND="
 	!libressl? ( dev-libs/openssl:0=[${MULTILIB_USEDEP}] )
 	"
 RDEPEND="${CDEPEND}
-	!dev-db/mysql[client-libs(+)]
+	!dev-db/mysql-community
 	!dev-db/mysql-cluster[client-libs(+)]
 	!dev-db/mariadb[client-libs(+)]
 	!dev-db/mariadb-connector-c[mysqlcompat]
