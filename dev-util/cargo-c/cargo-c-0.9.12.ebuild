@@ -59,7 +59,7 @@ ignore-0.4.18
 im-rc-15.1.0
 indexmap-1.9.1
 instant-0.1.12
-itertools-0.10.4
+itertools-0.10.5
 itoa-1.0.3
 jobserver-0.1.24
 kstring-2.0.0
