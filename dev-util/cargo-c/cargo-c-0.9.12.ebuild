@@ -65,7 +65,7 @@ jobserver-0.1.24
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.132
+libc-0.2.133
 libgit2-sys-0.13.4+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -82,7 +82,7 @@ openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.22.0+1.1.1q
 openssl-sys-0.9.75
-os_info-3.5.0
+os_info-3.5.1
 os_str_bytes-6.3.0
 pathdiff-0.2.1
 percent-encoding-2.2.0
