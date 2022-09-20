@@ -32,7 +32,6 @@ dev-cpp/icnc python_single_target_python2_7
 dev-db/SchemaSync python_single_target_python2_7
 dev-db/hyperdex python_single_target_python2_7
 dev-db/metakit python_single_target_python2_7
-dev-db/percona-server python_single_target_python2_7
 dev-db/pg_activity python_single_target_python2_7
 dev-embedded/bitbake python_single_target_python2_7
 dev-embedded/pk2-la python_single_target_python2_7

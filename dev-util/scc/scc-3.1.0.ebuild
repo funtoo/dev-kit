@@ -39,13 +39,13 @@ EGO_SUM=(
 	"golang.org/x/text v0.3.0/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
-	"gopkg.in/yaml.v2 v2.2.2"
-	"gopkg.in/yaml.v2 v2.2.2/go.mod"
+	"gopkg.in/yaml.v2 v2.2.8"
+	"gopkg.in/yaml.v2 v2.2.8/go.mod"
 )
 
 go-module_set_globals
 
-SRC_URI="https://github.com/boyter/scc/archive/v3.0.0.tar.gz -> scc-v3.0.0.tar.gz
+SRC_URI="https://github.com/boyter/scc/archive/v3.1.0.tar.gz -> scc-v3.1.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="A tool similar to cloc, sloccount and tokei"
