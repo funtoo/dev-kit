@@ -38,8 +38,8 @@ EGO_SUM=(
 	"cloud.google.com/go/storage v1.8.0/go.mod"
 	"cloud.google.com/go/storage v1.10.0/go.mod"
 	"dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod"
-	"github.com/!alec!aivazis/survey/v2 v2.3.5"
-	"github.com/!alec!aivazis/survey/v2 v2.3.5/go.mod"
+	"github.com/!alec!aivazis/survey/v2 v2.3.6"
+	"github.com/!alec!aivazis/survey/v2 v2.3.6/go.mod"
 	"github.com/!burnt!sushi/toml v0.3.1/go.mod"
 	"github.com/!burnt!sushi/xgb v0.0.0-20160522181843-27f122750802/go.mod"
 	"github.com/!make!now!just/heredoc v1.0.0"
@@ -65,8 +65,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.1.0/go.mod"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03/go.mod"
-	"github.com/cli/go-gh v0.1.1-0.20220817122932-3630ab390fe7"
-	"github.com/cli/go-gh v0.1.1-0.20220817122932-3630ab390fe7/go.mod"
+	"github.com/cli/go-gh v0.1.1-0.20220913125123-04019861008e"
+	"github.com/cli/go-gh v0.1.1-0.20220913125123-04019861008e/go.mod"
 	"github.com/cli/oauth v0.9.0"
 	"github.com/cli/oauth v0.9.0/go.mod"
 	"github.com/cli/safeexec v1.0.0"
@@ -134,8 +134,8 @@ EGO_SUM=(
 	"github.com/google/go-cmp v0.5.1/go.mod"
 	"github.com/google/go-cmp v0.5.4/go.mod"
 	"github.com/google/go-cmp v0.5.5/go.mod"
-	"github.com/google/go-cmp v0.5.8"
-	"github.com/google/go-cmp v0.5.8/go.mod"
+	"github.com/google/go-cmp v0.5.9"
+	"github.com/google/go-cmp v0.5.9/go.mod"
 	"github.com/google/martian v2.1.0+incompatible/go.mod"
 	"github.com/google/martian/v3 v3.0.0/go.mod"
 	"github.com/google/pprof v0.0.0-20181206194817-3ea8567a2e57/go.mod"
@@ -230,10 +230,10 @@ EGO_SUM=(
 	"github.com/rogpeppe/go-internal v1.3.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
-	"github.com/shurcoo!l/githubv4 v0.0.0-20220115235240-a14260e6f8a2"
-	"github.com/shurcoo!l/githubv4 v0.0.0-20220115235240-a14260e6f8a2/go.mod"
-	"github.com/shurcoo!l/graphql v0.0.0-20200928012149-18c5c3165e3a"
-	"github.com/shurcoo!l/graphql v0.0.0-20200928012149-18c5c3165e3a/go.mod"
+	"github.com/shurcoo!l/githubv4 v0.0.0-20220520033151-0b4e3294ff00"
+	"github.com/shurcoo!l/githubv4 v0.0.0-20220520033151-0b4e3294ff00/go.mod"
+	"github.com/shurcoo!l/graphql v0.0.0-20220606043923-3cf50f8a0a29"
+	"github.com/shurcoo!l/graphql v0.0.0-20220606043923-3cf50f8a0a29/go.mod"
 	"github.com/sourcegraph/jsonrpc2 v0.1.0"
 	"github.com/sourcegraph/jsonrpc2 v0.1.0/go.mod"
 	"github.com/spf13/cobra v1.5.0"
@@ -323,8 +323,9 @@ EGO_SUM=(
 	"golang.org/x/net v0.0.0-20210614182718-04defd469f4e/go.mod"
 	"golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2/go.mod"
 	"golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd/go.mod"
-	"golang.org/x/net v0.0.0-20220624214902-1bab6f366d9e"
 	"golang.org/x/net v0.0.0-20220624214902-1bab6f366d9e/go.mod"
+	"golang.org/x/net v0.0.0-20220722155237-a158d28d115b"
+	"golang.org/x/net v0.0.0-20220722155237-a158d28d115b/go.mod"
 	"golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be/go.mod"
 	"golang.org/x/oauth2 v0.0.0-20190226205417-e64efc72b421/go.mod"
 	"golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45/go.mod"
@@ -544,7 +545,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.15.0 -> cli-v2.15.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.16.0 -> cli-v2.16.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -559,7 +560,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.15.0"
+	export GH_VERSION="v2.16.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
