@@ -61,7 +61,7 @@ indexmap-1.9.1
 instant-0.1.12
 itertools-0.10.5
 itoa-1.0.3
-jobserver-0.1.24
+jobserver-0.1.25
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
