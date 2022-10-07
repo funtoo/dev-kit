@@ -60,7 +60,7 @@ im-rc-15.1.0
 indexmap-1.9.1
 instant-0.1.12
 itertools-0.10.5
-itoa-1.0.3
+itoa-1.0.4
 jobserver-0.1.25
 kstring-2.0.0
 lazy_static-1.4.0
@@ -114,7 +114,7 @@ socket2-0.4.7
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.101
+syn-1.0.102
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
