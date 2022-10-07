@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="The Most Intelligent Ruby and Rails IDE"
 HOMEPAGE="https://www.jetbrains.com/ruby"
-SRC_URI="https://download.jetbrains.com/ruby/RubyMine-2022.2.2.tar.gz -> rubymine-2022.2.2.tar.gz"
+SRC_URI="https://download.jetbrains.com/ruby/RubyMine-2022.2.3.tar.gz -> rubymine-2022.2.3.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
