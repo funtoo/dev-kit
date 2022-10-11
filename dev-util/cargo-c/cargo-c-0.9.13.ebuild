@@ -52,7 +52,7 @@ heck-0.4.0
 hermit-abi-0.1.19
 hex-0.3.2
 hex-0.4.3
-home-0.5.3
+home-0.5.4
 humantime-2.1.0
 idna-0.3.0
 ignore-0.4.18
@@ -80,7 +80,7 @@ opener-0.5.0
 openssl-0.10.42
 openssl-macros-0.1.0
 openssl-probe-0.1.5
-openssl-src-111.22.0+1.1.1q
+openssl-src-111.23.0+1.1.1r
 openssl-sys-0.9.76
 os_info-3.5.1
 os_str_bytes-6.3.0
