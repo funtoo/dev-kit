@@ -4,11 +4,11 @@ EAPI=7
 
 inherit flag-o-matic toolchain-funcs
 
-NSPR_VER="4.34.1"
+NSPR_VER="4.35"
 
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
-SRC_URI="https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_83_RTM/src/nss-3.83.tar.gz -> nss-3.83.tar.gz"
+SRC_URI="https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_84_RTM/src/nss-3.84.tar.gz -> nss-3.84.tar.gz"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
