@@ -1,8 +1,8 @@
 =dev-cpp/gtest-1.7.0-r1 python_single_target_python2_7 python_targets_python2_7
-=dev-cpp/gtest-1.8.1 python_single_target_pypy python_targets_pypy
-=dev-cpp/gtest-1.8.1-r1 python_single_target_pypy python_targets_pypy
-=dev-cpp/gtest-1.9.0_pre20190607 python_single_target_pypy python_targets_pypy
-=dev-cpp/gtest-9999 python_single_target_pypy python_targets_pypy
+=dev-cpp/gtest-1.8.1 python_single_target_python2_7 python_targets_python2_7
+=dev-cpp/gtest-1.8.1-r1 python_single_target_python2_7 python_targets_python2_7
+=dev-cpp/gtest-1.9.0_pre20190607 python_single_target_python2_7 python_targets_python2_7
+=dev-cpp/gtest-9999 python_single_target_python2_7 python_targets_python2_7
 =dev-db/barman-2.1 python_single_target_python2_7 python_targets_python2_7
 =dev-db/barman-2.3 python_single_target_python2_7 python_targets_python2_7
 =dev-db/pgxnclient-1.2-r1 python_single_target_python2_7 python_targets_python2_7
@@ -409,7 +409,7 @@ dev-vcs/bzr-rewrite python_single_target_python2_7 python_targets_python2_7
 dev-vcs/bzr-xmloutput python_single_target_python2_7 python_targets_python2_7
 dev-vcs/bzrtools python_single_target_python2_7 python_targets_python2_7
 dev-vcs/cvs2svn python_single_target_python2_7 python_targets_python2_7
-dev-vcs/git-bz python_single_target_pypy python_targets_pypy
+dev-vcs/git-bz python_single_target_python2_7 python_targets_python2_7
 dev-vcs/git-deps python_single_target_python2_7 python_targets_python2_7
 dev-vcs/git-remote-hg python_single_target_python2_7 python_targets_python2_7
 dev-vcs/github-pages-publish python_single_target_python2_7 python_targets_python2_7
