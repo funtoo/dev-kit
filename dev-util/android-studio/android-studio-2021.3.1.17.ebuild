@@ -31,7 +31,7 @@ QA_PREBUILT="
 
 DESCRIPTION="Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/studio"
-SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.3.1.16/android-studio-2021.3.1.16-linux.tar.gz -> android-studio-2021.3.1.16-linux.tar.gz"
+SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.3.1.17/android-studio-2021.3.1.17-linux.tar.gz -> android-studio-2021.3.1.17-linux.tar.gz"
 
 LICENSE="Apache-2.0 android-sdk"
 SLOT="0"
