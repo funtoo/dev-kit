@@ -89,7 +89,7 @@ percent-encoding-2.2.0
 pkg-config-0.3.25
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.46
+proc-macro2-1.0.47
 quote-1.0.21
 rand_core-0.6.4
 rand_xoshiro-0.6.0
