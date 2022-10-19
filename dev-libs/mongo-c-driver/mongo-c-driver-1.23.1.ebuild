@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Client library written in C for MongoDB"
 HOMEPAGE="https://github.com/mongodb/mongo-c-driver"
-SRC_URI="https://github.com/mongodb/mongo-c-driver/releases/download/1.23.0/mongo-c-driver-1.23.0.tar.gz -> mongo-c-driver-1.23.0.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-c-driver/releases/download/1.23.1/mongo-c-driver-1.23.1.tar.gz -> mongo-c-driver-1.23.1.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
