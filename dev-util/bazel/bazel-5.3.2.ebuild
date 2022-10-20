@@ -6,7 +6,7 @@ inherit bash-completion-r1 java-pkg-2 multiprocessing
 
 DESCRIPTION="Fast and correct automated build system"
 HOMEPAGE="https://bazel.build/"
-SRC_URI="https://github.com/bazelbuild/bazel/releases/download/5.3.1/bazel-5.3.1-dist.zip -> bazel-5.3.1-dist.zip"
+SRC_URI="https://github.com/bazelbuild/bazel/releases/download/5.3.2/bazel-5.3.2-dist.zip -> bazel-5.3.2-dist.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
