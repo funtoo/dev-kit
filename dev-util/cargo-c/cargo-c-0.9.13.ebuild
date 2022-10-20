@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.19
-anyhow-1.0.65
+anyhow-1.0.66
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -114,7 +114,7 @@ socket2-0.4.7
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.102
+syn-1.0.103
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
