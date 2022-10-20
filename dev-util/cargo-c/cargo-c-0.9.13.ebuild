@@ -36,7 +36,7 @@ curl-sys-0.4.56+curl-7.83.1
 either-1.8.0
 env_logger-0.9.1
 fastrand-1.8.0
-filetime-0.2.17
+filetime-0.2.18
 flate2-1.0.24
 fnv-1.0.7
 foreign-types-0.3.2
@@ -142,11 +142,19 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.36.1
+windows-sys-0.42.0
+windows_aarch64_gnullvm-0.42.0
 windows_aarch64_msvc-0.36.1
+windows_aarch64_msvc-0.42.0
 windows_i686_gnu-0.36.1
+windows_i686_gnu-0.42.0
 windows_i686_msvc-0.36.1
+windows_i686_msvc-0.42.0
 windows_x86_64_gnu-0.36.1
+windows_x86_64_gnu-0.42.0
+windows_x86_64_gnullvm-0.42.0
 windows_x86_64_msvc-0.36.1
+windows_x86_64_msvc-0.42.0
 "
 
 inherit cargo

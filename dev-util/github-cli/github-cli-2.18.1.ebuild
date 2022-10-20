@@ -548,7 +548,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.18.0 -> cli-v2.18.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.18.1 -> cli-v2.18.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -563,7 +563,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.18.0"
+	export GH_VERSION="v2.18.1"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
