@@ -1,0 +1,7 @@
+mdds:
+  generator: github-1
+  packages:
+    - mdds:
+        github:
+          user: kohei-us
+          query: tags
