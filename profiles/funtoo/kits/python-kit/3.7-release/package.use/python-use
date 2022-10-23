@@ -402,7 +402,6 @@ dev-util/tailor python_single_target_python2_7
 dev-util/trace-cmd python_single_target_python2_7
 dev-util/uncrustify python_single_target_python2_7
 dev-util/wxglade python_single_target_python2_7
-dev-util/xdelta python_single_target_python2_7
 dev-util/xesam-tools python_single_target_python2_7
 dev-util/xxdiff python_single_target_python2_7
 dev-vcs/bzr python_single_target_python2_7
