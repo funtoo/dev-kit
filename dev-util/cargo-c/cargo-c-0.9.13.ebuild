@@ -19,7 +19,7 @@ cargo-util-0.2.1
 cbindgen-0.24.3
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.2.22
+clap-3.2.21
 clap_derive-3.2.18
 clap_lex-0.2.4
 combine-4.6.6
@@ -118,7 +118,7 @@ syn-1.0.103
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
-textwrap-0.15.1
+textwrap-0.15.0
 thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
