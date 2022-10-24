@@ -19,7 +19,7 @@ cargo-util-0.2.1
 cbindgen-0.24.3
 cc-1.0.73
 cfg-if-1.0.0
-clap-3.2.21
+clap-3.2.23
 clap_derive-3.2.18
 clap_lex-0.2.4
 combine-4.6.6
@@ -65,7 +65,7 @@ jobserver-0.1.25
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.135
+libc-0.2.136
 libgit2-sys-0.13.4+1.4.2
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -118,7 +118,7 @@ syn-1.0.103
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
-textwrap-0.15.0
+textwrap-0.16.0
 thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
