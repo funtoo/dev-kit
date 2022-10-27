@@ -30,7 +30,7 @@ executable-path-1.0.0
 fastrand-1.8.0
 generic-array-0.14.6
 getopts-0.2.21
-getrandom-0.2.7
+getrandom-0.2.8
 heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
@@ -39,7 +39,7 @@ instant-0.1.12
 itoa-1.0.4
 lazy_static-1.4.0
 lexiclean-0.0.1
-libc-0.2.135
+libc-0.2.137
 linked-hash-map-0.5.6
 log-0.4.17
 memchr-2.5.0
@@ -60,19 +60,19 @@ regex-syntax-0.6.27
 remove_dir_all-0.5.3
 rustversion-1.0.9
 ryu-1.0.11
-serde-1.0.145
-serde_derive-1.0.145
+serde-1.0.147
+serde_derive-1.0.147
 serde_json-1.0.87
 sha2-0.10.6
 similar-2.2.0
-snafu-0.7.2
-snafu-derive-0.7.2
+snafu-0.7.3
+snafu-derive-0.7.3
 strsim-0.8.0
 structopt-0.3.26
 structopt-derive-0.4.18
 strum-0.24.1
 strum_macros-0.24.3
-syn-1.0.102
+syn-1.0.103
 target-2.0.0
 tempfile-3.3.0
 temptree-0.2.0
@@ -102,7 +102,7 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://api.github.com/repos/casey/just/tarball/1.6.0 -> just-1.6.0.tar.gz
+SRC_URI="https://api.github.com/repos/casey/just/tarball/1.7.0 -> just-1.7.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
