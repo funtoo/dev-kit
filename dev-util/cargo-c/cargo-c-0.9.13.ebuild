@@ -17,7 +17,7 @@ cargo-0.65.0
 cargo-platform-0.1.2
 cargo-util-0.2.1
 cbindgen-0.24.3
-cc-1.0.73
+cc-1.0.74
 cfg-if-1.0.0
 clap-3.2.23
 clap_derive-3.2.18
@@ -75,7 +75,7 @@ memchr-2.5.0
 miniz_oxide-0.5.4
 miow-0.3.7
 num_cpus-1.13.1
-once_cell-1.15.0
+once_cell-1.16.0
 opener-0.5.0
 openssl-0.10.42
 openssl-macros-0.1.0

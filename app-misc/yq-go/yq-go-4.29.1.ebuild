@@ -28,8 +28,8 @@ EGO_SUM=(
 	"github.com/go-playground/validator/v10 v10.4.1/go.mod"
 	"github.com/goccy/go-json v0.9.11"
 	"github.com/goccy/go-json v0.9.11/go.mod"
-	"github.com/goccy/go-yaml v1.9.5"
-	"github.com/goccy/go-yaml v1.9.5/go.mod"
+	"github.com/goccy/go-yaml v1.9.6"
+	"github.com/goccy/go-yaml v1.9.6/go.mod"
 	"github.com/hexops/gotextdiff v1.0.3"
 	"github.com/inconshreveable/mousetrap v1.0.1"
 	"github.com/inconshreveable/mousetrap v1.0.1/go.mod"
@@ -50,8 +50,8 @@ EGO_SUM=(
 	"github.com/pmezard/go-difflib v1.0.0"
 	"github.com/pmezard/go-difflib v1.0.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
-	"github.com/spf13/cobra v1.6.0"
-	"github.com/spf13/cobra v1.6.0/go.mod"
+	"github.com/spf13/cobra v1.6.1"
+	"github.com/spf13/cobra v1.6.1/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
 	"github.com/stretchr/objx v0.1.0/go.mod"
@@ -69,6 +69,7 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod"
 	"golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod"
 	"golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod"
+	"golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12/go.mod"
 	"golang.org/x/sys v0.0.0-20220712014510-0a85c31ab51e"
 	"golang.org/x/sys v0.0.0-20220712014510-0a85c31ab51e/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
@@ -93,7 +94,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.28.2 -> yq-go-v4.28.2.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.29.1 -> yq-go-v4.29.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
