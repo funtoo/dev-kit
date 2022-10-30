@@ -8,7 +8,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 android_system_properties-0.1.4
 ansi_term-0.12.1
-anyhow-1.0.65
+anyhow-1.0.66
 arc-swap-1.5.0
 arrayvec-0.4.12
 arrayvec-0.7.2
@@ -44,6 +44,7 @@ clru-0.5.0
 cmake-0.1.48
 color_quant-1.1.0
 compact_str-0.4.0
+console-0.15.2
 core-foundation-sys-0.8.3
 cpufeatures-0.2.5
 crc-3.0.0
@@ -57,16 +58,19 @@ crossbeam-queue-0.3.5
 crossbeam-utils-0.8.8
 crunchy-0.2.2
 crypto-common-0.1.6
+ctor-0.1.22
 dashmap-4.0.2
 dashmap-5.3.3
 deflate-1.0.0
 deunicode-0.4.3
+diff-0.1.13
 digest-0.10.5
 dirs-3.0.2
 dirs-4.0.0
 dirs-sys-0.3.7
 either-1.6.1
 enable-ansi-support-0.1.2
+encode_unicode-0.3.6
 encoding_rs-0.8.31
 encoding_rs_io-0.1.7
 env_logger-0.8.4
@@ -150,6 +154,7 @@ idna-0.2.3
 ignore-0.4.18
 image-0.24.4
 indexmap-1.9.1
+insta-1.21.0
 instant-0.1.12
 io-close-0.3.7
 io-lifetimes-0.7.2
@@ -165,7 +170,7 @@ lebe-0.5.2
 libc-0.2.134
 libgit2-sys-0.14.0+1.5.0
 libz-sys-1.1.6
-linked-hash-map-0.5.4
+linked-hash-map-0.5.6
 linux-raw-sys-0.0.46
 lock_api-0.4.7
 log-0.4.17
@@ -189,6 +194,7 @@ num_cpus-1.13.1
 num_threads-0.1.6
 once_cell-1.15.0
 os_str_bytes-6.0.1
+output_vt100-0.1.3
 owo-colors-3.5.0
 parking_lot-0.11.2
 parking_lot-0.12.0
@@ -210,6 +216,7 @@ pin-project-internal-1.0.10
 pkg-config-0.3.25
 png-0.17.5
 ppv-lite86-0.2.16
+pretty_assertions-1.3.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.46
@@ -235,14 +242,15 @@ ryu-1.0.10
 same-file-1.0.6
 scoped_threadpool-0.1.9
 scopeguard-1.1.0
-serde-1.0.145
-serde_derive-1.0.145
+serde-1.0.147
+serde_derive-1.0.147
 serde_json-1.0.85
 serde_yaml-0.9.13
 sha1-0.10.5
 sha1_smol-1.0.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
+similar-2.2.0
 siphasher-0.3.10
 slug-0.1.4
 smallvec-1.9.0
@@ -257,6 +265,7 @@ tempfile-3.3.0
 tera-1.17.1
 term_size-0.3.2
 termcolor-1.1.3
+terminal_size-0.1.17
 terminal_size-0.2.1
 textwrap-0.11.0
 thiserror-1.0.35
@@ -318,6 +327,7 @@ windows_x86_64_msvc-0.36.1
 windows_x86_64_msvc-0.37.0
 xz2-0.1.7
 yaml-rust-0.4.5
+yansi-0.5.1
 zstd-0.11.2+zstd.1.5.2
 zstd-safe-5.0.2+zstd.1.5.2
 zstd-sys-2.0.1+zstd.1.5.2
@@ -327,7 +337,7 @@ inherit cargo
 
 DESCRIPTION="Onefetch is a command-line Git information tool"
 HOMEPAGE="https://github.com/o2sh/onefetch"
-SRC_URI="https://api.github.com/repos/o2sh/onefetch/tarball/v2.13.1 -> onefetch-2.13.1.tar.gz
+SRC_URI="https://api.github.com/repos/o2sh/onefetch/tarball/v2.13.2 -> onefetch-2.13.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
