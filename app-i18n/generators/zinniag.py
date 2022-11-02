@@ -44,6 +44,6 @@ async def generate(hub, **pkginfo):
         github_user=github_user,
         github_repo=github_repo,
         version=version,
-        artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)],
+        artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name), hub.pkgtools.ebuild.Artifact("https://i-use-gentoo-btw.com/files/tomoe-models.tar.xz")], # Second argument is for the machine learning models
     )
     ebuild.push()

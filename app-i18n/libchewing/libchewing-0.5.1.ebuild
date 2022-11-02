@@ -17,7 +17,7 @@ RESTRICT="!test? ( test )"
 BDEPEND="virtual/pkgconfig"
 RDEPEND="dev-db/sqlite:3"
 DEPEND="${RDEPEND}
-	test? ( sys-libs/ncurses[unicode(+)] )"
+	test? ( sys-libs/ncurses )"
 
 src_prepare() {
 	default

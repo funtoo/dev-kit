@@ -6,8 +6,8 @@ inherit autotools
 
 DESCRIPTION="Handwriting model files trained with Tomoe data"
 HOMEPAGE="https://taku910.github.io/zinnia/ https://github.com/taku910/zinnia https://sourceforge.net/projects/zinnia/"
-SRC_URI="{{ artifacts[0].src_uri }}
-	{{ artifacts[1].src_uri }}"
+SRC_URI="https://github.com/taku910/zinnia/archive/581faa8f6f15e4a7b21964be3a5ec36265c80e5b.tar.gz -> zinnia-tomoe-20160901.tar.gz
+	https://i-use-gentoo-btw.com/files/tomoe-models.tar.xz -> tomoe-models.tar.xz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
