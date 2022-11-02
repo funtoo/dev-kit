@@ -7,8 +7,8 @@ inherit autotools python-any-r1
 
 DESCRIPTION="The Chinese PinYin and Bopomofo conversion library"
 HOMEPAGE="https://github.com/pyzy/pyzy"
-SRC_URI="https://github.com/openSUSE/pyzy/tarball/80b72cbec3981296666351f2e3a813965e0ad61c -> pyzy-1.1-80b72cb.tar.gz
-	https://github.com/openSUSE/pyzy-database/archive/refs/tags/1.0.0.tar.gz -> pyzy-database.tar.gz"
+SRC_URI="https://github.com/openSUSE/pyzy/archive/refs/tags/1.1.tar.gz -> 1.1.tar.gz
+	https://github.com/openSUSE/pyzy-database/archive/refs/tags/1.0.0.tar.gz -> 1.0.0.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -26,18 +26,18 @@ BDEPEND="
 	sys-devel/autoconf-archive
 	doc? ( app-doc/doxygen )"
 
-PATCHES=( "${FILESDIR}/pyzy-db.patch" )
-
 src_unpack() {
 	unpack ${A}
-	mv "${WORKDIR}"/openSUSE-"${PN}"-* "${S}"
 	mv "${WORKDIR}"/pyzy-database-* "${WORKDIR}"/pyzy-database
 }
 
 src_prepare() {
 	./autogen.sh
-	mv "${WORKDIR}"/pyzy-database/db data/db/open-phrase || die
 
+	sed -i '/wget/d' "${S}"/data/db/open-phrase/Makefile.am
+	sed -i '/tar/d' "${S}"/data/db/open-phrase/Makefile.am
+
+	mv "${WORKDIR}"/pyzy-database/db data/db/open-phrase || die
 	default
 	eautoreconf
 }

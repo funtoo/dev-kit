@@ -1,0 +1,8 @@
+libx86emu:
+  generator: github-1
+  packages:
+    - libx86emu:
+        github:
+          user: wfeldt
+          repo: libx86emu
+          query: tags

@@ -1,0 +1,41 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI="7"
+
+inherit autotools
+
+DESCRIPTION="Handwriting model files trained with Tomoe data"
+HOMEPAGE="https://taku910.github.io/zinnia/ https://github.com/taku910/zinnia https://sourceforge.net/projects/zinnia/"
+SRC_URI="https://github.com/taku910/zinnia/archive/581faa8f6f15e4a7b21964be3a5ec36265c80e5b.tar.gz -> zinnia-tomoe-20160901.tar.gz
+	https://i-use-gentoo-btw.com/files/tomoe-models.tar.xz -> tomoe-models.tar.xz"
+
+LICENSE="LGPL-2.1+"
+SLOT="0"
+KEYWORDS="*"
+IUSE=""
+
+RDEPEND="app-i18n/zinnia"
+DEPEND="${RDEPEND}"
+
+DOCS=( AUTHORS )
+
+src_unpack() {
+	unpack ${A}
+	mv "${WORKDIR}"/zinnia-* "${S}"
+	S="${S}/zinnia-tomoe-model"
+
+	# The model files are missing from the github repo, so I downloaded the old source
+	# and copied them, hope they still work because as of the writing of this template
+	# the last commit(27th of August 2022) was in 2016 on the github repo, but the last
+	# updates to zinnia's recognition models were 8 years ago. It was a big pain finding
+	# these so that's why I copied them to the files directory
+	mv "${WORKDIR}"/handwriting-* "${S}"
+}
+
+src_prepare() {
+	default
+	sed -i "/^modeldir[[:space:]]*=/s/lib/$(get_libdir)/" Makefile.am || die
+
+	mv configure.{in,ac} || die
+	eautoreconf
+}

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=~dev-util/colm-0.13.0.7
 SLOT=0
 SRC_URI=https://www.colm.net/files/ragel/ragel-7.0.0.12.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=a11312b2218522f39d8e0709867111b7

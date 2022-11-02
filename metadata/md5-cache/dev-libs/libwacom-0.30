@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-libs/glib:2 virtual/libgudev:=
 SLOT=0
 SRC_URI=https://github.com/linuxwacom/libwacom/archive/libwacom-0.30.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	udev	7752f306eec7b286d00bdb47b763e7ac
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	udev	7752f306eec7b286d00bdb47b763e7ac
 _md5_=27aaeb3025103c6134e32df9b69c819d

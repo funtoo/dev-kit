@@ -1,6 +1,6 @@
 BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-db/sqlite:3 test? ( sys-libs/ncurses[unicode(+)] )
+DEPEND=dev-db/sqlite:3 test? ( sys-libs/ncurses )
 DESCRIPTION=Intelligent phonetic (Zhuyin/Bopomofo) input method library
 EAPI=7
 HOMEPAGE=http://chewing.im/ https://github.com/chewing/libchewing
@@ -11,5 +11,5 @@ RDEPEND=dev-db/sqlite:3
 RESTRICT=!test? ( test )
 SLOT=0/3
 SRC_URI=https://github.com/chewing/libchewing/releases/download/v0.5.1/libchewing-0.5.1.tar.bz2 -> libchewing-0.5.1.tar.bz2
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=47ba94b9cc277b5d045711bbe99599db
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=9f3d4e3850966bf1eb76825b048e9dc6

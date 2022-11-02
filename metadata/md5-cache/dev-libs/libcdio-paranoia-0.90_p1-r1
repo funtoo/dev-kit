@@ -9,5 +9,5 @@ LICENSE=GPL-3+ GPL-2+ LGPL-2.1
 RDEPEND=app-eselect/eselect-cdparanoia >=dev-libs/libcdio-0.90-r1[-mgorny(-)] >=virtual/libiconv-0-r1[-mgorny(-)]
 SLOT=0
 SRC_URI=mirror://gnu/libcdio/libcdio-paranoia-10.2+0.90+1.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=00707bfa62dbfb048a9625718685379a
