@@ -44,7 +44,7 @@ linked-hash-map-0.5.6
 log-0.4.17
 memchr-2.5.0
 nix-0.25.0
-once_cell-1.15.0
+once_cell-1.16.0
 output_vt100-0.1.3
 pretty_assertions-1.3.0
 proc-macro-error-1.0.4
@@ -102,7 +102,7 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://api.github.com/repos/casey/just/tarball/1.7.0 -> just-1.7.0.tar.gz
+SRC_URI="https://api.github.com/repos/casey/just/tarball/1.8.0 -> just-1.8.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

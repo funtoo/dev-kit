@@ -52,6 +52,8 @@ EGO_SUM=(
 	"github.com/aymerick/douceur v0.2.0/go.mod"
 	"github.com/briandowns/spinner v1.18.1"
 	"github.com/briandowns/spinner v1.18.1/go.mod"
+	"github.com/cenkalti/backoff/v4 v4.1.3"
+	"github.com/cenkalti/backoff/v4 v4.1.3/go.mod"
 	"github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod"
 	"github.com/charmbracelet/glamour v0.5.1-0.20220727184942-e70ff2d969da"
 	"github.com/charmbracelet/glamour v0.5.1-0.20220727184942-e70ff2d969da/go.mod"
@@ -65,8 +67,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.1.0/go.mod"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03/go.mod"
-	"github.com/cli/go-gh v0.1.2"
-	"github.com/cli/go-gh v0.1.2/go.mod"
+	"github.com/cli/go-gh v0.1.3-0.20221102170023-e3ec45fb1d1b"
+	"github.com/cli/go-gh v0.1.3-0.20221102170023-e3ec45fb1d1b/go.mod"
 	"github.com/cli/oauth v0.9.0"
 	"github.com/cli/oauth v0.9.0/go.mod"
 	"github.com/cli/safeexec v1.0.0"
@@ -548,7 +550,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.18.1 -> cli-v2.18.1.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.19.0 -> cli-v2.19.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -563,7 +565,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.18.1"
+	export GH_VERSION="v2.19.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
