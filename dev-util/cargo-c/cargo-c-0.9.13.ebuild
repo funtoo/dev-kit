@@ -15,7 +15,7 @@ bytes-1.2.1
 bytesize-1.1.0
 cargo-0.65.0
 cargo-platform-0.1.2
-cargo-util-0.2.1
+cargo-util-0.2.2
 cbindgen-0.24.3
 cc-1.0.74
 cfg-if-1.0.0
@@ -74,7 +74,7 @@ log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.5.4
 miow-0.3.7
-num_cpus-1.13.1
+num_cpus-1.14.0
 once_cell-1.16.0
 opener-0.5.0
 openssl-0.10.42
