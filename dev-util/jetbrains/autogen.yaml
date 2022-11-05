@@ -1,6 +1,7 @@
 jetbrains_rule:
   defaults:
     cat: dev-util
+    template: jetbrains.tmpl
   packages:
     - clion:
         fullname: CLion
@@ -72,3 +73,10 @@ jetbrains_rule:
         homepage: http://www.jetbrains.com/webstorm
         jid: WS
         srcdir: webstorm
+    - jetbrains-toolbox:
+        fullname: JetBrains Toolbox
+        description: Manage all your JetBrains Projects and Tools
+        license: JetBrains
+        homepage: http://www.jetbrains.com/webstorm
+        jid: TBA
+        template: jetbrains-toolbox.tmpl

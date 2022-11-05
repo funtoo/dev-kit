@@ -17,7 +17,7 @@ async def generate(hub, **pkginfo):
 	final_name = f"{name}-{version}.tar.gz"
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
 		**pkginfo,
-		template="jetbrains.tmpl",
+		build=rel["build"],
 		version=version,
 		artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)],
 	)

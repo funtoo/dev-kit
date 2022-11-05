@@ -13,7 +13,7 @@ bitmaps-2.1.0
 bstr-0.2.17
 bytes-1.2.1
 bytesize-1.1.0
-cargo-0.65.0
+cargo-0.66.0
 cargo-platform-0.1.2
 cargo-util-0.2.2
 cbindgen-0.24.3
@@ -43,8 +43,8 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.1.0
 fwdansi-1.1.0
-git2-0.14.4
-git2-curl-0.15.0
+git2-0.15.0
+git2-curl-0.16.0
 glob-0.3.0
 globset-0.4.9
 hashbrown-0.12.3
@@ -66,7 +66,7 @@ kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.137
-libgit2-sys-0.13.4+1.4.2
+libgit2-sys-0.14.0+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
@@ -74,7 +74,6 @@ log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.5.4
 miow-0.3.7
-num_cpus-1.14.0
 once_cell-1.16.0
 opener-0.5.0
 openssl-0.10.42
@@ -161,7 +160,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.13 -> cargo-c-0.9.13.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.14 -> cargo-c-0.9.14.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 # License set may be more restrictive as OR is not respected
