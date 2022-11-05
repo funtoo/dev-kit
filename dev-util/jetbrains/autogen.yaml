@@ -77,6 +77,6 @@ jetbrains_rule:
         fullname: JetBrains Toolbox
         description: Manage all your JetBrains Projects and Tools
         license: JetBrains
-        homepage: http://www.jetbrains.com/webstorm
+        homepage: https://www.jetbrains.com/toolbox-app
         jid: TBA
         template: jetbrains-toolbox.tmpl

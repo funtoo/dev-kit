@@ -5,7 +5,7 @@ EAPI=7
 inherit eutils desktop xdg
 
 DESCRIPTION="Manage all your JetBrains Projects and Tools"
-HOMEPAGE="http://www.jetbrains.com/webstorm"
+HOMEPAGE="https://www.jetbrains.com/toolbox-app"
 SRC_URI="https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.26.5.13419.tar.gz -> jetbrains-toolbox-1.26.5.tar.gz"
 
 LICENSE="JetBrains"
