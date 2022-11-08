@@ -17,7 +17,7 @@ cargo-0.66.0
 cargo-platform-0.1.2
 cargo-util-0.2.2
 cbindgen-0.24.3
-cc-1.0.74
+cc-1.0.75
 cfg-if-1.0.0
 clap-3.2.23
 clap_derive-3.2.18
@@ -34,7 +34,7 @@ crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
 either-1.8.0
-env_logger-0.9.1
+env_logger-0.9.3
 fastrand-1.8.0
 filetime-0.2.18
 flate2-1.0.24
