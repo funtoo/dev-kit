@@ -17,7 +17,7 @@ cargo-0.66.0
 cargo-platform-0.1.2
 cargo-util-0.2.2
 cbindgen-0.24.3
-cc-1.0.75
+cc-1.0.76
 cfg-if-1.0.0
 clap-3.2.23
 clap_derive-3.2.18
