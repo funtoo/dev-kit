@@ -66,8 +66,8 @@ EGO_SUM=(
 	"github.com/aymanbagabas/go-osc52 v1.2.1/go.mod"
 	"github.com/aymerick/douceur v0.2.0"
 	"github.com/aymerick/douceur v0.2.0/go.mod"
-	"github.com/bmatcuk/doublestar/v4 v4.2.0"
-	"github.com/bmatcuk/doublestar/v4 v4.2.0/go.mod"
+	"github.com/bmatcuk/doublestar/v4 v4.3.1"
+	"github.com/bmatcuk/doublestar/v4 v4.3.1/go.mod"
 	"github.com/bradenhilton/cityhash v1.0.0"
 	"github.com/bradenhilton/cityhash v1.0.0/go.mod"
 	"github.com/bradenhilton/mozillainstallhash v1.0.0"
@@ -224,8 +224,8 @@ EGO_SUM=(
 	"github.com/mitchellh/reflectwalk v1.0.2"
 	"github.com/mitchellh/reflectwalk v1.0.2/go.mod"
 	"github.com/muesli/ansi v0.0.0-20211018074035-2e021307bc4b/go.mod"
-	"github.com/muesli/ansi v0.0.0-20211031195517-c9f0611b6c70"
-	"github.com/muesli/ansi v0.0.0-20211031195517-c9f0611b6c70/go.mod"
+	"github.com/muesli/ansi v0.0.0-20221106050444-61f0cd9a192a"
+	"github.com/muesli/ansi v0.0.0-20221106050444-61f0cd9a192a/go.mod"
 	"github.com/muesli/cancelreader v0.2.0/go.mod"
 	"github.com/muesli/cancelreader v0.2.2"
 	"github.com/muesli/cancelreader v0.2.2/go.mod"
@@ -337,8 +337,8 @@ EGO_SUM=(
 	"golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d/go.mod"
 	"golang.org/x/crypto v0.1.0"
 	"golang.org/x/crypto v0.1.0/go.mod"
-	"golang.org/x/exp v0.0.0-20221028150844-83b7d23a625f"
-	"golang.org/x/exp v0.0.0-20221028150844-83b7d23a625f/go.mod"
+	"golang.org/x/exp v0.0.0-20221106115401-f9659909a136"
+	"golang.org/x/exp v0.0.0-20221106115401-f9659909a136/go.mod"
 	"golang.org/x/mod v0.6.0"
 	"golang.org/x/mod v0.6.0/go.mod"
 	"golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod"
@@ -437,7 +437,7 @@ go-module_set_globals
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://github.com/twpayne/chezmoi"
-SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.26.0 -> chezmoi-v2.26.0.tar.gz
+SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.27.0 -> chezmoi-v2.27.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="MIT"

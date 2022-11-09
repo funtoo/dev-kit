@@ -95,6 +95,10 @@ EGO_SUM=(
 	"github.com/fatih/color v1.7.0/go.mod"
 	"github.com/gabriel-vasile/mimetype v1.4.1"
 	"github.com/gabriel-vasile/mimetype v1.4.1/go.mod"
+	"github.com/gdamore/encoding v1.0.0"
+	"github.com/gdamore/encoding v1.0.0/go.mod"
+	"github.com/gdamore/tcell/v2 v2.5.3"
+	"github.com/gdamore/tcell/v2 v2.5.3/go.mod"
 	"github.com/go-gl/glfw v0.0.0-20190409004039-e6da0acd62b1/go.mod"
 	"github.com/go-gl/glfw/v3.3/glfw v0.0.0-20191125211704-12ad95a8df72/go.mod"
 	"github.com/go-gl/glfw/v3.3/glfw v0.0.0-20200222043503-6f7a984d4dc4/go.mod"
@@ -225,9 +229,12 @@ EGO_SUM=(
 	"github.com/pmezard/go-difflib v1.0.0"
 	"github.com/pmezard/go-difflib v1.0.0/go.mod"
 	"github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod"
+	"github.com/rivo/tview v0.0.0-20221029100920-c4a7e501810d"
+	"github.com/rivo/tview v0.0.0-20221029100920-c4a7e501810d/go.mod"
 	"github.com/rivo/uniseg v0.1.0/go.mod"
-	"github.com/rivo/uniseg v0.2.0"
 	"github.com/rivo/uniseg v0.2.0/go.mod"
+	"github.com/rivo/uniseg v0.4.2"
+	"github.com/rivo/uniseg v0.4.2/go.mod"
 	"github.com/rogpeppe/go-internal v1.3.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
@@ -377,12 +384,14 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20210831042530-f4d43177bf5e/go.mod"
 	"golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e/go.mod"
 	"golang.org/x/sys v0.0.0-20220209214540-3681064d5158/go.mod"
+	"golang.org/x/sys v0.0.0-20220318055525-2edf467146b5/go.mod"
 	"golang.org/x/sys v0.0.0-20220422013727-9388b58f7150/go.mod"
 	"golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a/go.mod"
 	"golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10/go.mod"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
+	"golang.org/x/term v0.0.0-20201210144234-2321bbc49cbf/go.mod"
 	"golang.org/x/term v0.0.0-20210503060354-a79de5458b56/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
@@ -550,7 +559,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.19.0 -> cli-v2.19.0.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.20.0 -> cli-v2.20.0.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -565,7 +574,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.19.0"
+	export GH_VERSION="v2.20.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
