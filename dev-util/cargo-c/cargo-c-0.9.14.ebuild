@@ -82,7 +82,7 @@ openssl-probe-0.1.5
 openssl-src-111.24.0+1.1.1s
 openssl-sys-0.9.77
 os_info-3.5.1
-os_str_bytes-6.3.1
+os_str_bytes-6.4.0
 pathdiff-0.2.1
 percent-encoding-2.2.0
 pkg-config-0.3.26
