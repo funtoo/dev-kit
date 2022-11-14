@@ -16,9 +16,9 @@ bumpalo-3.11.1
 cc-1.0.73
 cfg-if-1.0.0
 chrono-0.4.22
-clap-4.0.18
-clap_complete-4.0.3
-clap_derive-4.0.18
+clap-4.0.22
+clap_complete-4.0.5
+clap_derive-4.0.21
 clap_lex-0.3.0
 codespan-reporting-0.11.1
 core-foundation-sys-0.8.3
@@ -129,7 +129,7 @@ inherit cargo
 
 DESCRIPTION="Alternative to find that provides sensible defaults for 80% of the use cases"
 HOMEPAGE="https://github.com/sharkdp/fd"
-SRC_URI="https://api.github.com/repos/sharkdp/fd/tarball/v8.5.2 -> fd-8.5.2.tar.gz
+SRC_URI="https://api.github.com/repos/sharkdp/fd/tarball/v8.5.3 -> fd-8.5.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
