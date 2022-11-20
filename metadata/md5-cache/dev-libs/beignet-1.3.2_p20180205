@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare pretend setup test
-DEPEND=media-libs/mesa[-mgorny(-)] <sys-devel/clang-6.0.0:=[-mgorny(-)] >=x11-libs/libdrm-2.4.70[video_cards_intel,-mgorny(-)] x11-libs/libXext[-mgorny(-)] x11-libs/libXfixes[-mgorny(-)] || ( dev-lang/python:3.10 >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 ) ocl-icd? ( dev-libs/ocl-icd ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-3.9.6 !!sys-devel/llvm:0
+DEPEND=media-libs/mesa[-mgorny(-)] <sys-devel/clang-6.0.0:=[-mgorny(-)] >=x11-libs/libdrm-2.4.70[video_cards_intel,-mgorny(-)] x11-libs/libXext[-mgorny(-)] x11-libs/libXfixes[-mgorny(-)] || ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 ) ocl-icd? ( dev-libs/ocl-icd ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-3.9.6 !!sys-devel/llvm:0
 DESCRIPTION=OpenCL implementation for Intel GPUs
 EAPI=6
 HOMEPAGE=https://01.org/beignet

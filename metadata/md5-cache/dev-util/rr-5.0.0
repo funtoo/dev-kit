@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=sys-libs/zlib dev-libs/capnproto python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) test? ( dev-python/pexpect[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] sys-devel/gdb[xml] ) sys-devel/make >=dev-util/cmake-3.9.6
+DEPEND=sys-libs/zlib dev-libs/capnproto python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) test? ( dev-python/pexpect[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] sys-devel/gdb[xml] ) sys-devel/make >=dev-util/cmake-3.9.6
 DESCRIPTION=Record and Replay Framework
 EAPI=6
 HOMEPAGE=https://rr-project.org/

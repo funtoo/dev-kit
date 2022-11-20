@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=test? ( || ( dev-lang/python:3.10 >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 ) ) sys-devel/make >=dev-util/cmake-3.9.6
+DEPEND=test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 ) ) sys-devel/make >=dev-util/cmake-3.9.6
 DESCRIPTION=Google C++ Testing Framework
 EAPI=6
 HOMEPAGE=https://github.com/google/googletest
