@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] dev-vcs/mercurial python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) python_single_target_python2_7? ( >=dev-python/setuptools-42.0.2[python_targets_python2_7(-)] )
+DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] dev-vcs/mercurial python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) python_single_target_python2_7? ( >=dev-python/setuptools-42.0.2[python_targets_python2_7(-)] )
 DESCRIPTION=A set of scripts to work locally on Subversion checkouts using Mercurial
 EAPI=5
 HOMEPAGE=https://pypi.org/project/hgsvn/
 IUSE=python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-linux ~x86-macos
 LICENSE=GPL-3
-RDEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] dev-vcs/mercurial dev-vcs/subversion[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
+RDEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] dev-vcs/mercurial dev-vcs/subversion[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
 REQUIRED_USE=^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://pypi/h/hgsvn/hgsvn-0.2.3.zip

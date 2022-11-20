@@ -57,7 +57,7 @@ humantime-2.1.0
 idna-0.3.0
 ignore-0.4.18
 im-rc-15.1.0
-indexmap-1.9.1
+indexmap-1.9.2
 instant-0.1.12
 itertools-0.10.5
 itoa-1.0.4
@@ -106,7 +106,7 @@ semver-1.0.14
 serde-1.0.147
 serde_derive-1.0.147
 serde_ignored-0.1.5
-serde_json-1.0.87
+serde_json-1.0.88
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.7

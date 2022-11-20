@@ -6,7 +6,7 @@ HOMEPAGE=http://bazaar-vcs.org/XMLOutput
 IUSE=python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=dev-vcs/bzr[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
+RDEPEND=dev-vcs/bzr[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
 REQUIRED_USE=^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=https://launchpad.net/bzr-xmloutput/trunk/0.8.8/+download/bzr-xmloutput-0.8.8.tar.gz

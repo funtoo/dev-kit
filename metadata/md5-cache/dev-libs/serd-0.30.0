@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=|| ( dev-lang/python:3.10[threads(+)] >=dev-lang/python-2.7.5-r2:2.7[threads(+)] dev-lang/python:3.8[threads(+)] dev-lang/python:3.9[threads(+)] dev-lang/python:3.7[threads(+)] ) doc? ( app-doc/doxygen )
+DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7[threads(+)] dev-lang/python:3.8[threads(+)] dev-lang/python:3.9[threads(+)] dev-lang/python:3.7[threads(+)] dev-lang/python:3.10[threads(+)] ) doc? ( app-doc/doxygen )
 DESCRIPTION=Library for RDF syntax which supports reading and writing Turtle and NTriples
 EAPI=6
 HOMEPAGE=http://drobilla.net/software/serd/

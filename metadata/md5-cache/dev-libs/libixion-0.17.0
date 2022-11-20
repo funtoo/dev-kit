@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=dev-libs/boost:= dev-libs/spdlog:= dev-util/mdds:2.0 python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) )
+DEPEND=dev-libs/boost:= dev-libs/spdlog:= dev-util/mdds:2.0 python? ( python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) )
 DESCRIPTION=General purpose formula parser & interpreter
 EAPI=7
 HOMEPAGE=https://gitlab.com/ixion/ixion
-IUSE=debug python static-libs +threads python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 python_single_target_python3_10 python_targets_python3_7 python_targets_python3_9 python_targets_python3_8 python_targets_python3_10
+IUSE=debug python static-libs +threads python_single_target_python3_10 python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 python_targets_python3_10 python_targets_python3_7 python_targets_python3_9 python_targets_python3_8
 KEYWORDS=*
 LICENSE=MIT
-RDEPEND=dev-libs/boost:= dev-libs/spdlog:= dev-util/mdds:2.0 python? ( python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) )
-REQUIRED_USE=python? ( ^^ ( python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 python_single_target_python3_10 ) )
+RDEPEND=dev-libs/boost:= dev-libs/spdlog:= dev-util/mdds:2.0 python? ( python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python3_10 python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 ) )
 SLOT=0/0.17
 SRC_URI=https://kohei.us/files/ixion/src/libixion-0.17.0.tar.xz
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	32393cac272daca4c136cc44e6005b67	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
