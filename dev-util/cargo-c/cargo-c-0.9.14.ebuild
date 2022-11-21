@@ -11,13 +11,13 @@ autocfg-1.1.0
 bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
-bytes-1.2.1
+bytes-1.3.0
 bytesize-1.1.0
 cargo-0.66.0
 cargo-platform-0.1.2
 cargo-util-0.2.2
 cbindgen-0.24.3
-cc-1.0.76
+cc-1.0.77
 cfg-if-1.0.0
 clap-3.2.23
 clap_derive-3.2.18
@@ -82,7 +82,7 @@ openssl-probe-0.1.5
 openssl-src-111.24.0+1.1.1s
 openssl-sys-0.9.77
 os_info-3.5.1
-os_str_bytes-6.4.0
+os_str_bytes-6.4.1
 pathdiff-0.2.1
 percent-encoding-2.2.0
 pkg-config-0.3.26
