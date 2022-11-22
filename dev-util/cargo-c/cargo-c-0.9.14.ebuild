@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-aho-corasick-0.7.19
+aho-corasick-0.7.20
 anyhow-1.0.66
 arrayvec-0.5.2
 atty-0.2.14
@@ -29,7 +29,7 @@ core-foundation-0.9.3
 core-foundation-sys-0.8.3
 crates-io-0.34.0
 crc32fast-1.3.2
-crossbeam-utils-0.8.13
+crossbeam-utils-0.8.14
 crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
@@ -106,7 +106,7 @@ semver-1.0.14
 serde-1.0.147
 serde_derive-1.0.147
 serde_ignored-0.1.5
-serde_json-1.0.88
+serde_json-1.0.89
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.7
