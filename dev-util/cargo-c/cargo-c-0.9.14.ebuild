@@ -37,7 +37,7 @@ either-1.8.0
 env_logger-0.9.3
 fastrand-1.8.0
 filetime-0.2.18
-flate2-1.0.24
+flate2-1.0.25
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -72,7 +72,7 @@ libssh2-sys-0.2.23
 libz-sys-1.1.8
 log-0.4.17
 memchr-2.5.0
-miniz_oxide-0.5.4
+miniz_oxide-0.6.2
 miow-0.3.7
 once_cell-1.16.0
 opener-0.5.0
