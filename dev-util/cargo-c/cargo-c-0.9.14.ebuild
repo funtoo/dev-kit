@@ -103,8 +103,8 @@ ryu-1.0.11
 same-file-1.0.6
 schannel-0.1.20
 semver-1.0.14
-serde-1.0.147
-serde_derive-1.0.147
+serde-1.0.148
+serde_derive-1.0.148
 serde_ignored-0.1.5
 serde_json-1.0.89
 shell-escape-0.1.5
@@ -113,7 +113,7 @@ socket2-0.4.7
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.103
+syn-1.0.104
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
