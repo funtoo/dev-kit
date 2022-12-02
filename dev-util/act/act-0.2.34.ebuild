@@ -249,8 +249,9 @@ EGO_SUM=(
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/creack/pty v1.1.7/go.mod"
 	"github.com/creack/pty v1.1.9/go.mod"
-	"github.com/creack/pty v1.1.17"
 	"github.com/creack/pty v1.1.17/go.mod"
+	"github.com/creack/pty v1.1.18"
+	"github.com/creack/pty v1.1.18/go.mod"
 	"github.com/cyphar/filepath-securejoin v0.2.2/go.mod"
 	"github.com/cyphar/filepath-securejoin v0.2.3/go.mod"
 	"github.com/d2g/dhcp4 v0.0.0-20170904100407-a1d1b6c41b1c/go.mod"
@@ -545,8 +546,8 @@ EGO_SUM=(
 	"github.com/mitchellh/mapstructure v1.1.2"
 	"github.com/mitchellh/mapstructure v1.1.2/go.mod"
 	"github.com/mitchellh/osext v0.0.0-20151018003038-5e2d6d41470f/go.mod"
-	"github.com/moby/buildkit v0.10.5"
-	"github.com/moby/buildkit v0.10.5/go.mod"
+	"github.com/moby/buildkit v0.10.6"
+	"github.com/moby/buildkit v0.10.6/go.mod"
 	"github.com/moby/locker v1.0.1/go.mod"
 	"github.com/moby/sys/mount v0.3.1"
 	"github.com/moby/sys/mount v0.3.1/go.mod"
@@ -661,8 +662,8 @@ EGO_SUM=(
 	"github.com/prometheus/procfs v0.2.0/go.mod"
 	"github.com/prometheus/procfs v0.6.0/go.mod"
 	"github.com/prometheus/tsdb v0.7.1/go.mod"
-	"github.com/rhysd/actionlint v1.6.21"
-	"github.com/rhysd/actionlint v1.6.21/go.mod"
+	"github.com/rhysd/actionlint v1.6.22"
+	"github.com/rhysd/actionlint v1.6.22/go.mod"
 	"github.com/rivo/uniseg v0.2.0/go.mod"
 	"github.com/rivo/uniseg v0.3.4"
 	"github.com/rivo/uniseg v0.3.4/go.mod"
@@ -1213,7 +1214,7 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.33 -> act-0.2.33.tar.gz
+SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.34 -> act-0.2.34.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 RDEPEND="
