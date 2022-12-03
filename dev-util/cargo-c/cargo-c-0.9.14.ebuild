@@ -65,7 +65,7 @@ jobserver-0.1.25
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.137
+libc-0.2.138
 libgit2-sys-0.14.0+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
