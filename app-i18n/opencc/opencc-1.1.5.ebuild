@@ -7,7 +7,7 @@ inherit cmake python-any-r1
 
 DESCRIPTION="Library for conversion between Traditional and Simplified Chinese characters"
 HOMEPAGE="https://github.com/BYVoid/OpenCC"
-SRC_URI="https://github.com/BYVoid/OpenCC/archive/refs/tags/ver.1.1.4.tar.gz -> opencc-1.1.4.tar.gz"
+SRC_URI="https://github.com/BYVoid/OpenCC/archive/refs/tags/ver.1.1.5.tar.gz -> opencc-1.1.5.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0/1.1"
