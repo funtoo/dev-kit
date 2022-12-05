@@ -123,7 +123,7 @@ tinyvec-1.6.0
 tinyvec_macros-0.1.0
 toml-0.5.9
 toml_edit-0.14.4
-typenum-1.15.0
+typenum-1.16.0
 unicode-bidi-0.3.8
 unicode-ident-1.0.5
 unicode-normalization-0.1.22
