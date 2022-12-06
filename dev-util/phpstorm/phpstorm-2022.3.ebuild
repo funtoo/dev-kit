@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="a PHP IDE by JetBrains"
 HOMEPAGE="https://www.jetbrains.com/phpstorm"
-SRC_URI="https://download.jetbrains.com/webide/PhpStorm-2022.2.4.tar.gz -> phpstorm-2022.2.4.tar.gz"
+SRC_URI="https://download.jetbrains.com/webide/PhpStorm-2022.3.tar.gz -> phpstorm-2022.3.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
