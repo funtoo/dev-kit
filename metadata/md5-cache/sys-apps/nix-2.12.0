@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=LGPL-2.1
 RDEPEND=app-arch/brotli app-arch/bzip2 app-arch/xz-utils dev-db/sqlite dev-libs/editline:0= dev-libs/boost:0=[context] net-misc/curl sys-libs/libseccomp sys-libs/zlib gc? ( dev-libs/boehm-gc[cxx] ) doc? ( dev-libs/libxml2 dev-libs/libxslt app-text/docbook-xsl-stylesheets ) s3? ( dev-libs/aws-sdk-cpp ) sodium? ( dev-libs/libsodium:0= ) dev-libs/openssl:0=
 SLOT=0
-SRC_URI=https://api.github.com/repos/NixOS/nix/tarball/refs/tags/2.11.1 -> nix-2.11.1.tar.gz
+SRC_URI=https://api.github.com/repos/NixOS/nix/tarball/refs/tags/2.12.0 -> nix-2.12.0.tar.gz
 _eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
-_md5_=5ef6a329bdc354fe42957572d30a83fc
+_md5_=702ef1dbdfe99cfdb3bb955b56672334
