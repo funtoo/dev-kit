@@ -36,7 +36,7 @@ curl-sys-0.4.59+curl-7.86.0
 either-1.8.0
 env_logger-0.9.3
 fastrand-1.8.0
-filetime-0.2.18
+filetime-0.2.19
 flate2-1.0.25
 fnv-1.0.7
 foreign-types-0.3.2
