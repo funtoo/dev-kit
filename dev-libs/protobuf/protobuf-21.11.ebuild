@@ -6,7 +6,7 @@ inherit autotools elisp-common flag-o-matic multilib-minimal toolchain-funcs
 
 DESCRIPTION="Protocol Buffers - Google's data interchange format"
 HOMEPAGE="https://developers.google.com/protocol-buffers/ https://github.com/protocolbuffers/protobuf"
-SRC_URI="https://github.com/protocolbuffers/protobuf/tarball/11bc195441adfbc87ff0349f1c4be7a239d1daad -> protobuf-21.10-11bc195.tar.gz"
+SRC_URI="https://github.com/protocolbuffers/protobuf/tarball/a474c5b9ff43c4dda5d3132024eee8cef71b83fc -> protobuf-21.11-a474c5b.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
