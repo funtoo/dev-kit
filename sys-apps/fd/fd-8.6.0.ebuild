@@ -5,7 +5,6 @@ EAPI=7
 CRATES="
 aho-corasick-0.7.19
 android_system_properties-0.1.5
-ansi_term-0.12.1
 anyhow-1.0.66
 argmax-0.3.1
 atty-0.2.14
@@ -15,9 +14,9 @@ bstr-0.2.17
 bumpalo-3.11.1
 cc-1.0.73
 cfg-if-1.0.0
-chrono-0.4.22
+chrono-0.4.23
 clap-4.0.22
-clap_complete-4.0.5
+clap_complete-4.0.6
 clap_derive-4.0.21
 clap_lex-0.3.0
 codespan-reporting-0.11.1
@@ -25,58 +24,57 @@ core-foundation-sys-0.8.3
 crossbeam-channel-0.5.6
 crossbeam-utils-0.8.12
 ctrlc-3.2.3
-cxx-1.0.80
-cxx-build-1.0.80
-cxxbridge-flags-1.0.80
-cxxbridge-macro-1.0.80
+cxx-1.0.82
+cxx-build-1.0.82
+cxxbridge-flags-1.0.82
+cxxbridge-macro-1.0.82
 diff-0.1.13
 dirs-next-2.0.0
 dirs-sys-next-0.1.2
 errno-0.2.8
 errno-dragonfly-0.1.2
 faccess-0.2.4
+fastrand-1.8.0
 filetime-0.2.18
 fnv-1.0.7
 fs_extra-1.2.0
-fuchsia-cprng-0.1.1
 getrandom-0.2.8
 globset-0.4.9
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.51
+iana-time-zone-0.1.53
 iana-time-zone-haiku-0.1.1
 ignore-0.4.18
+instant-0.1.12
 io-lifetimes-0.7.4
 jemalloc-sys-0.5.2+5.3.0-patched
 jemallocator-0.5.0
 js-sys-0.3.60
 lazy_static-1.4.0
-libc-0.2.136
+libc-0.2.137
 link-cplusplus-1.0.7
 linux-raw-sys-0.0.46
 log-0.4.17
-lscolors-0.12.0
+lscolors-0.13.0
 memchr-2.5.0
 nix-0.24.2
 nix-0.25.0
 normpath-0.3.2
+nu-ansi-term-0.46.0
 num-integer-0.1.45
 num-traits-0.2.15
 num_cpus-1.13.1
 once_cell-1.15.0
 os_str_bytes-6.3.0
+overload-0.1.1
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.47
 quote-1.0.21
-rand-0.4.6
-rand_core-0.3.1
-rand_core-0.4.2
-rdrand-0.4.0
 redox_syscall-0.2.16
 redox_users-0.4.3
-regex-1.6.0
+regex-1.7.0
 regex-syntax-0.6.27
 remove_dir_all-0.5.3
 rustix-0.35.12
@@ -84,7 +82,7 @@ same-file-1.0.6
 scratch-1.0.2
 strsim-0.10.0
 syn-1.0.103
-tempdir-0.3.7
+tempfile-3.3.0
 termcolor-1.1.3
 terminal_size-0.2.1
 test-case-2.2.2
@@ -92,13 +90,11 @@ test-case-macros-2.2.2
 thiserror-1.0.37
 thiserror-impl-1.0.37
 thread_local-1.1.4
-time-0.1.44
 unicode-ident-1.0.5
 unicode-width-0.1.10
 users-0.11.0
 version_check-0.9.4
 walkdir-2.3.2
-wasi-0.10.0+wasi-snapshot-preview1
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.83
 wasm-bindgen-backend-0.2.83
@@ -129,7 +125,7 @@ inherit cargo
 
 DESCRIPTION="Alternative to find that provides sensible defaults for 80% of the use cases"
 HOMEPAGE="https://github.com/sharkdp/fd"
-SRC_URI="https://api.github.com/repos/sharkdp/fd/tarball/v8.5.3 -> fd-8.5.3.tar.gz
+SRC_URI="https://api.github.com/repos/sharkdp/fd/tarball/v8.6.0 -> fd-8.6.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
