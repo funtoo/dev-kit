@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="libspnav is a replacement for the magellan library with a cleaner API"
 HOMEPAGE="http://spacenav.sourceforge.net/"
-SRC_URI="https://api.github.com/repos/FreeSpacenav/libspnav/tarball/v1.0 -> libspnav-1.0.tar.gz"
+SRC_URI="https://api.github.com/repos/FreeSpacenav/libspnav/tarball/v1.1 -> libspnav-1.1.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

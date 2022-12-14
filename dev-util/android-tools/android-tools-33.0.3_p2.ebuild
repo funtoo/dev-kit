@@ -8,7 +8,7 @@ inherit cmake python-r1
 
 DESCRIPTION="Android platform tools (adb, fastboot, and mkbootimg)"
 HOMEPAGE="https://github.com/nmeum/android-tools/ https://developer.android.com/"
-SRC_URI="https://github.com/nmeum/android-tools/releases/download/33.0.3p1/android-tools-33.0.3p1.tar.xz -> android-tools-33.0.3p1.tar.xz"
+SRC_URI="https://github.com/nmeum/android-tools/releases/download/33.0.3p2/android-tools-33.0.3p2.tar.xz -> android-tools-33.0.3p2.tar.xz"
 
 # The entire source code is Apache-2.0, except for fastboot which is BSD-2.
 LICENSE="Apache-2.0 BSD-2"

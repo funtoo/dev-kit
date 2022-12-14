@@ -121,7 +121,7 @@ textwrap-0.16.0
 thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
-toml-0.5.9
+toml-0.5.10
 toml_edit-0.14.4
 typenum-1.16.0
 unicode-bidi-0.3.8
