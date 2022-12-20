@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
-anyhow-1.0.67
+anyhow-1.0.68
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -88,8 +88,8 @@ percent-encoding-2.2.0
 pkg-config-0.3.26
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.48
-quote-1.0.22
+proc-macro2-1.0.49
+quote-1.0.23
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
@@ -102,18 +102,18 @@ rustfix-0.6.1
 ryu-1.0.12
 same-file-1.0.6
 schannel-0.1.20
-semver-1.0.15
+semver-1.0.16
 serde-1.0.151
 serde_derive-1.0.151
 serde_ignored-0.1.6
-serde_json-1.0.90
+serde_json-1.0.91
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.7
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-syn-1.0.106
+syn-1.0.107
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
