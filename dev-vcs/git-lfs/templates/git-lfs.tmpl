@@ -1,48 +1,74 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-EGO_PN=github.com/git-lfs/git-lfs
+
 inherit go-module
 
-DESCRIPTION="Command line extension and specification for managing large files with git"
+EGO_SUM=(
+{{ gosum }})
+
+go-module_set_globals
+
+EGO_PN=github.com/git-lfs/git-lfs
+DESCRIPTION="Git extension for versioning large files"
 HOMEPAGE="https://git-lfs.github.com/"
 
-SRC_URI="{{artifacts[0].src_uri}}"
+SRC_URI="{{artifacts[0].src_uri}}
+	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 
 LICENSE="Apache-2.0 BSD BSD-2 BSD-4 ISC MIT"
 SLOT="0"
 IUSE="doc test"
 
-BDEPEND="doc? ( app-text/ronn )"
+BDEPEND="
+	doc? ( app-text/asciidoctor )
+	>=dev-lang/go-1.18"
 RDEPEND="dev-vcs/git"
 
 RESTRICT+=" !test? ( test )"
+
+DOCS=(
+	CHANGELOG.md
+	CODE-OF-CONDUCT.md
+	CONTRIBUTING.md
+	README.md
+	SECURITY.md
+)
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
 
 src_compile() {
 	# Flags -w, -s: Omit debugging information to reduce binary size,
 	# see https://golang.org/cmd/link/.
 	local mygobuildargs=(
 		-ldflags="-X ${EGO_PN}/config.GitCommit=${GIT_COMMIT} -s -w"
-		-mod vendor -v -work -x
+		-v -work -x
 	)
 	go build "${mygobuildargs[@]}" -o git-lfs git-lfs.go || die
 
 	if use doc; then
-		ronn docs/man/*.ronn || die "man building failed"
+		emake man
 	fi
 }
 
 src_install() {
 	dobin git-lfs
-	dodoc {CHANGELOG,CODE-OF-CONDUCT,CONTRIBUTING,README}.md
-	use doc && doman docs/man/*.1
+	einstalldocs
+	if use doc; then
+		doman man/man1/*.1
+		doman man/man5/*.5
+		doman man/man7/*.7
+	fi
 }
 
 src_test() {
 	local mygotestargs=(
 		-ldflags="-X ${EGO_PN}/config.GitCommit=${GIT_COMMIT}"
-		-mod vendor
 	)
 	go test "${mygotestargs[@]}" ./... || die
 }

@@ -256,7 +256,6 @@ dev-ros/rospack python_single_target_python2_7
 dev-ros/rosparam python_single_target_python2_7
 dev-ros/rospy python_single_target_python2_7
 dev-ros/rospy_tutorials python_single_target_python2_7
-dev-ros/rosserial_arduino python_single_target_python2_7
 dev-ros/rosserial_client python_single_target_python2_7
 dev-ros/rosserial_embeddedlinux python_single_target_python2_7
 dev-ros/rosserial_msgs python_single_target_python2_7
