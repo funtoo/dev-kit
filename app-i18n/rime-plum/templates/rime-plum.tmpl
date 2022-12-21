@@ -56,7 +56,7 @@ src_install() {
 
 	# Manage permissions here
 	fowners -R :rime /var/lib/plum/
-	fperms -R g+w /var/lib/plum/
+	fperms -R g+w+s /var/lib/plum/
 }
 
 pkg_postinst() {

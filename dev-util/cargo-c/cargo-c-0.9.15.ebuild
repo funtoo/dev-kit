@@ -13,15 +13,17 @@ bitmaps-2.1.0
 bstr-0.2.17
 bytes-1.3.0
 bytesize-1.1.0
-cargo-0.66.0
+cargo-0.67.0
 cargo-platform-0.1.2
 cargo-util-0.2.2
 cbindgen-0.24.3
 cc-1.0.78
 cfg-if-1.0.0
 clap-3.2.23
-clap_derive-3.2.18
+clap-4.0.30
+clap_derive-4.0.21
 clap_lex-0.2.4
+clap_lex-0.3.0
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -35,6 +37,8 @@ curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
 either-1.8.0
 env_logger-0.9.3
+errno-0.2.8
+errno-dragonfly-0.1.2
 fastrand-1.8.0
 filetime-0.2.19
 flate2-1.0.25
@@ -50,6 +54,7 @@ globset-0.4.9
 hashbrown-0.12.3
 heck-0.4.0
 hermit-abi-0.1.19
+hermit-abi-0.2.6
 hex-0.3.2
 hex-0.4.3
 home-0.5.4
@@ -59,6 +64,8 @@ ignore-0.4.18
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
+io-lifetimes-1.0.3
+is-terminal-0.4.2
 itertools-0.10.5
 itoa-1.0.5
 jobserver-0.1.25
@@ -70,17 +77,20 @@ libgit2-sys-0.14.0+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
+linux-raw-sys-0.1.4
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
 miow-0.3.7
+num-traits-0.2.15
 once_cell-1.16.0
 opener-0.5.0
-openssl-0.10.44
+openssl-0.10.45
 openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.24.0+1.1.1s
-openssl-sys-0.9.79
+openssl-sys-0.9.80
+ordered-float-2.10.0
 os_info-3.5.1
 os_str_bytes-6.4.1
 pathdiff-0.2.1
@@ -99,11 +109,13 @@ regex-syntax-0.6.28
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
+rustix-0.36.5
 ryu-1.0.12
 same-file-1.0.6
 schannel-0.1.20
 semver-1.0.16
 serde-1.0.151
+serde-value-0.7.0
 serde_derive-1.0.151
 serde_ignored-0.1.6
 serde_json-1.0.91
@@ -122,7 +134,8 @@ thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 toml-0.5.10
-toml_edit-0.14.4
+toml_datetime-0.5.0
+toml_edit-0.15.0
 typenum-1.16.0
 unicode-bidi-0.3.8
 unicode-ident-1.0.6
@@ -160,7 +173,7 @@ inherit cargo
 
 DESCRIPTION="Helper program to build and install c-like libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.14 -> cargo-c-0.9.14.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.15 -> cargo-c-0.9.15.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 # License set may be more restrictive as OR is not respected
