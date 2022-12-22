@@ -20,7 +20,7 @@ cbindgen-0.24.3
 cc-1.0.78
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.0.30
+clap-4.0.31
 clap_derive-4.0.21
 clap_lex-0.2.4
 clap_lex-0.3.0
@@ -72,7 +72,7 @@ jobserver-0.1.25
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.138
+libc-0.2.139
 libgit2-sys-0.14.0+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
