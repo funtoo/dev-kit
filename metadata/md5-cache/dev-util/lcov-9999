@@ -1,11 +1,12 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install postinst prepare unpack
+DEFINED_PHASES=compile install prepare unpack
 DESCRIPTION=A graphical front-end for GCC's coverage testing tool gcov
 EAPI=7
 HOMEPAGE=http://ltp.sourceforge.net/coverage/lcov.php
+IUSE=png
 LICENSE=GPL-2+
 PROPERTIES=live
-RDEPEND=dev-lang/perl dev-perl/JSON dev-perl/PerlIO-gzip
+RDEPEND=dev-lang/perl png? ( dev-perl/GD[png] )
 SLOT=0
-_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	optfeature	8e0c2c8d30c10832f241f5e76ef3f0c7	prefix	e51c7882b7b721e54e684f7eb143cbfe
-_md5_=e4b2a0cb05e2b7c48352d3bf9d749c40
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	prefix	e51c7882b7b721e54e684f7eb143cbfe
+_md5_=4d408d5dd239b089d850626526196bc9

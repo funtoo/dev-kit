@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Binary to hexadecimal converter"
 HOMEPAGE="http://www-tet.ee.tu-berlin.de/solyga/linux/"
@@ -11,7 +11,7 @@ SRC_URI="http://linux.xulin.de/c/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~x86 ~sparc ~mips ~ppc"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-prll-flags.patch

@@ -1,9 +1,8 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit autotools
+EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://ode.org/"
@@ -11,28 +10,19 @@ SRC_URI="https://bitbucket.org/odedevs/ode/downloads/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1+ BSD )"
 SLOT="0/6"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug doc double-precision examples gyroscopic static-libs"
 
-RDEPEND="
-	examples? (
-		virtual/glu
-		virtual/opengl
-	)
-"
-DEPEND="${RDEPEND}"
-BDEPEND="doc? ( app-doc/doxygen )"
+RDEPEND="examples? (
+	virtual/glu
+	virtual/opengl )"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 MY_EXAMPLES_DIR=/usr/share/doc/${PF}/examples
 
-DOCS=( CHANGELOG.txt README.md )
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.14-gcc7.patch
-)
-
 src_prepare() {
-	default
+	epatch "${FILESDIR}"/${PN}-0.14-gcc7.patch
 
 	sed -i \
 		-e "s:\$.*/drawstuff/textures:${MY_EXAMPLES_DIR}:" \
@@ -57,35 +47,28 @@ src_configure() {
 src_compile() {
 	emake
 	if use doc ; then
-		cd ode/doc || die
+		cd ode/doc
 		doxygen Doxyfile || die
 	fi
 }
 
 src_install() {
-	default
-
-	find "${ED}" -name '*.la' -delete || die
-
+	DOCS="CHANGELOG.txt README.md" \
+		default
+	prune_libtool_files
 	if use doc ; then
-		docinto html
-		dodoc docs/*
+		dohtml docs/*
 	fi
-
-	if use examples ; then
-		docompress -x ${MY_EXAMPLES_DIR}
-
-		insinto ${MY_EXAMPLES_DIR}
-		exeinto ${MY_EXAMPLES_DIR}
-
+	if use examples; then
+		docompress -x "${MY_EXAMPLES_DIR}"
+		insinto "${MY_EXAMPLES_DIR}"
+		exeinto "${MY_EXAMPLES_DIR}"
 		doexe drawstuff/dstest/dstest
 		doins ode/demo/*.{c,cpp,h} \
 			drawstuff/textures/*.ppm \
 			drawstuff/dstest/dstest.cpp \
 			drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp}
-
-		cd ode/demo || die
-
+		cd ode/demo
 		local f
 		for f in *.c* ; do
 			doexe .libs/${f%.*}

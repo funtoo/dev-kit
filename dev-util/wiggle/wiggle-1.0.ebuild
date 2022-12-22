@@ -1,22 +1,21 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
 inherit fixheadtails toolchain-funcs
 
-DESCRIPTION="Tool for applying patches that patch cannot apply because of conflicting changes"
-HOMEPAGE="https://neil.brown.name/wiggle https://git.neil.brown.name/?p=wiggle.git"
+DESCRIPTION="tool for applying patches that patch cannot apply because of conflicting changes"
+HOMEPAGE="https://neil.brown.name/wiggle https://neil.brown.name/git?p=wiggle"
 SRC_URI="https://neil.brown.name/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
-RESTRICT="!test? ( test )"
 
 # The 'p' tool does support bitkeeper, but I'm against just dumping it in here
-# due to it's size.  I've explictly listed every other dependency here due to
+# due to it's size.  I've explictly listed every other dependancy here due to
 # the nature of the shell program 'p'
 RDEPEND="
 	dev-util/diffstat
@@ -30,13 +29,11 @@ RDEPEND="
 	sys-apps/coreutils
 	sys-devel/patch
 	sys-libs/ncurses:0=
-"
-DEPEND="${RDEPEND}"
-BDEPEND="
+	"
+DEPEND="${RDEPEND}
 	sys-apps/groff
 	virtual/pkgconfig
-	test? ( sys-process/time )
-"
+	test? ( sys-process/time )"
 
 PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
 
@@ -50,8 +47,6 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export PKG_CONFIG
-
 	emake CC="$(tc-getCC)" ${PN}
 }
 

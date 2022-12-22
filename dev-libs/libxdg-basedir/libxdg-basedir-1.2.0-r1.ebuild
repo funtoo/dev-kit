@@ -1,35 +1,33 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit autotools
+EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="Small library to access XDG Base Directories Specification paths"
 HOMEPAGE="https://github.com/devnev/libxdg-basedir"
-SRC_URI="https://github.com/devnev/libxdg-basedir/archive/${P}.tar.gz"
-S="${WORKDIR}/${PN}-${P}"
+SRC_URI="${HOMEPAGE}/archive/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ~hppa ppc ppc64 x86 ~amd64-linux ~x64-macos ~x86-solaris"
-IUSE="doc"
+KEYWORDS="amd64 arm ~arm64 hppa ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-solaris"
+IUSE="doc static-libs"
 
-BDEPEND="doc? ( app-doc/doxygen )"
+RDEPEND=""
+DEPEND="doc? ( app-doc/doxygen )"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-buffer-overflow.patch
-)
+S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
-	default
+	epatch "${FILESDIR}/${P}-buffer-overflow.patch"
 
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--disable-static \
+		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		$(use_enable doc doxygen-html)
 }
 
@@ -45,9 +43,8 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	if use doc; then
-		docinto html
-		dodoc -r doc/html/*
+		dohtml -r doc/html/*
 	fi
 
-	find "${ED}" -type f -name '*.la' -delete
+	find "${D}" -type f -name '*.la' -delete
 }

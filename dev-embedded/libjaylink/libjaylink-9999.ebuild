@@ -1,36 +1,32 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="5"
 
-EGIT_REPO_URI="https://gitlab.zapb.de/libjaylink/libjaylink.git"
+EGIT_REPO_URI="git://git.zapb.de/libjaylink.git"
 
-inherit git-r3 autotools multilib-minimal
+inherit git-r3 autotools eutils
 
 DESCRIPTION="Library to access J-Link devices"
-HOMEPAGE="https://gitlab.zapb.de/libjaylink/libjaylink"
+HOMEPAGE="http://git.zapb.de/libjaylink.git"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="static-libs"
 
-DEPEND="virtual/libusb:1[${MULTILIB_USEDEP}]"
+DEPEND="virtual/libusb:1"
 RDEPEND="${DEPEND}"
-BDEPEND="virtual/pkgconfig"
 
 src_prepare() {
-	sed -i -e "/^JAYLINK_CFLAGS=/ s/ -Werror / /" configure.ac || die
-	eapply_user
-	eautoreconf
-	multilib_copy_sources
+	eautoreconf || die
 }
 
-multilib_src_configure() {
+src_configure() {
 	econf $(use_enable static-libs static)
 }
 
-multilib_src_install_all() {
-	einstalldocs
-	use static-libs || find "${D}" -name '*.la' -delete || die
+src_install() {
+	default
+	prune_libtool_files
 }

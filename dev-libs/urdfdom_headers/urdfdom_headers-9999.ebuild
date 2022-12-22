@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -9,9 +9,10 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	EGIT_REPO_URI="https://github.com/ros/urdfdom_headers"
 fi
 
-inherit ${SCM} cmake
+inherit ${SCM} cmake-utils
 
 if [ "${PV#9999}" != "${PV}" ] ; then
+	KEYWORDS=""
 	SRC_URI=""
 else
 	KEYWORDS="~amd64 ~arm"

@@ -1,12 +1,11 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
-CMAKE_ECLASS=cmake
 inherit cmake-multilib
 
-DESCRIPTION="C library that exports various synchronization primitives, such as mutexes"
+DESCRIPTION="A C library that exports various synchronization primitives, such as mutexes"
 HOMEPAGE="https://github.com/google/nsync"
 SRC_URI="https://github.com/google/nsync/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -15,13 +14,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
 
-RESTRICT="!test? ( test )"
-
 DOCS=( README )
 
 multilib_src_configure() {
 	local mycmakeargs=(
+		-DBUILD_SHARED_LIBS=ON
 		-DNSYNC_ENABLE_TESTS=$(usex test)
 	)
-	cmake_src_configure
+
+	cmake-utils_src_configure
 }

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install test unpack
+DEPEND=>=dev-lang/go-1.4 >=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=CGO bindings for libusb
+EAPI=5
+HOMEPAGE=https://github.com/hanwen/usb
+LICENSE=BSD
+PROPERTIES=live
+RESTRICT=test
+SLOT=0
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=09db55b0911338838e3093ee133c9279

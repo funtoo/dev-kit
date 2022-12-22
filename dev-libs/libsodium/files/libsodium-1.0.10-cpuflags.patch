@@ -1,5 +1,5 @@
---- a/configure.ac
-+++ b/configure.ac
+--- libsodium-1.0.10/configure.ac
++++ libsodium-1.0.10/configure.ac
 @@ -344,6 +344,10 @@
      [AC_MSG_RESULT(no)])
    CFLAGS="$oldcflags"

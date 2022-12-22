@@ -1,7 +1,7 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=0
 
 DESCRIPTION="Commandline-driven interface to PICSTART+ PIC programmer"
 HOMEPAGE="http://gatling.ikk.sztaki.hu/~kissg/pd/pista/pista.html"
@@ -15,10 +15,13 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/TermReadKey"
-DEPEND="dev-lang/perl"
 
-DOCS=( README Changes Copyright doc/pista.html )
-
-src_configure() {
+src_compile() {
 	perl Makefile.PL PREFIX=/usr || die "Running Makefile.PL failed"
+	emake || die "make failed"
+}
+
+src_install() {
+	emake install DESTDIR=${D} || die
+	dodoc README Changes Copyright doc/pista.html
 }

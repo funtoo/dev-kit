@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=>=sys-kernel/linux-headers-4.8
+DESCRIPTION=A Linux system call fuzz tester
+EAPI=7
+HOMEPAGE=http://codemonkey.org.uk/projects/trinity/ https://github.com/kernelslacker/trinity/
+IUSE=examples
+LICENSE=GPL-2
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=478679b7d8b191aaa9b5f4f00a16e763

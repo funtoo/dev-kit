@@ -1,8 +1,8 @@
-=app-misc/ranger-1.9.2 python_single_target_python3_7
 =dev-cpp/gtest-1.7.0-r1 python_single_target_python2_7 python_targets_python2_7
 =dev-cpp/gtest-1.8.1 python_single_target_python2_7 python_targets_python2_7
 =dev-cpp/gtest-1.8.1-r1 python_single_target_python2_7 python_targets_python2_7
 =dev-cpp/gtest-1.9.0_pre20190607 python_single_target_python2_7 python_targets_python2_7
+=dev-cpp/gtest-9999 python_single_target_python2_7 python_targets_python2_7
 =dev-db/barman-2.1 python_single_target_python2_7 python_targets_python2_7
 =dev-db/barman-2.3 python_single_target_python2_7 python_targets_python2_7
 =dev-db/pg_activity-1.5.0 python_single_target_python2_7 python_targets_python2_7
@@ -12,7 +12,6 @@
 =dev-games/cegui-0.8.7 python_single_target_python2_7 python_targets_python2_7
 =dev-games/tiled-1.4.3-r1 python_single_target_python3_7
 =dev-libs/eekboard-1.0.8_p20121001 python_single_target_python2_7 python_targets_python2_7
-=dev-libs/libcec-4.0.4-r1 python_single_target_python3_7
 =dev-libs/libcec-4.0.7 python_single_target_python3_7
 =dev-libs/libpqxx-6.0.0 python_single_target_python2_7 python_targets_python2_7
 =dev-libs/libreport-2.0.13-r1 python_single_target_python2_7 python_targets_python2_7
@@ -65,6 +64,7 @@
 =dev-util/gertty-1.4.0 python_single_target_python2_7 python_targets_python2_7
 =dev-util/gertty-1.5.0 python_single_target_python2_7 python_targets_python2_7
 =dev-util/gyp-20170904022846 python_single_target_python2_7 python_targets_python2_7
+=dev-util/gyp-99999999999999 python_single_target_python2_7 python_targets_python2_7
 =dev-util/imediff2-1.1.2-r6 python_single_target_python3_7
 =dev-util/rbtools-0.7.10 python_single_target_python2_7 python_targets_python2_7
 =dev-util/rbtools-0.7.11 python_single_target_python2_7 python_targets_python2_7
@@ -72,7 +72,7 @@
 =dev-util/redo-0.41 python_single_target_python2_7 python_targets_python2_7
 =dev-util/redo-0.42a python_single_target_python3_8 python_targets_python3_8
 =dev-util/redo-0.42c python_single_target_python3_8 python_targets_python3_8
-=dev-util/redo-99999 python_single_target_python3_8 python_targets_python3_8
+=dev-util/redo-99999 python_single_target_python2_7 python_targets_python2_7
 =dev-util/rpmdevtools-8.10 python_single_target_python2_7 python_targets_python2_7
 =dev-util/rr-4.5.0 python_single_target_python2_7 python_targets_python2_7
 =dev-util/rr-5.0.0 python_single_target_python2_7 python_targets_python2_7
@@ -88,8 +88,8 @@
 =dev-util/uncrustify-0.68.1 python_single_target_python2_7 python_targets_python2_7
 =dev-util/uncrustify-0.69.0 python_single_target_python2_7 python_targets_python2_7
 =dev-util/uncrustify-0.71.0 python_single_target_python3_7
+=dev-util/uncrustify-9999 python_single_target_python2_7 python_targets_python2_7
 =dev-util/wstool-0.1.18 python_single_target_python3_7
-=dev-util/wstool-9999 python_single_target_python3_7
 =dev-vcs/git-spindle-3.3 python_single_target_python2_7 python_targets_python2_7
 =dev-vcs/stgit-0.16-r2 python_single_target_python2_7 python_targets_python2_7
 =dev-vcs/stgit-0.18 python_single_target_python2_7 python_targets_python2_7
@@ -451,7 +451,6 @@ dev-util/mpatch python_single_target_python2_7 python_targets_python2_7
 dev-util/osc python_single_target_python2_7 python_targets_python2_7
 dev-util/qmtest python_single_target_python2_7 python_targets_python2_7
 dev-util/repo python_single_target_python2_7 python_targets_python2_7
-dev-util/rosinstall python_single_target_python3_7
 dev-util/tailor python_single_target_python2_7 python_targets_python2_7
 dev-util/wxglade python_single_target_python2_7 python_targets_python2_7
 dev-util/xesam-tools python_single_target_python2_7 python_targets_python2_7

@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
 
-inherit epatch toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An application for working with the Microchip PicKit2 PIC programmer"
 HOMEPAGE="http://www.microchip.com/pickit2"

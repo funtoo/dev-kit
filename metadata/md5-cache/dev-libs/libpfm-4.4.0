@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Hardware-based performance monitoring interface for Linux
+EAPI=5
+HOMEPAGE=http://perfmon2.sourceforge.net
+IUSE=static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 MIT
+SLOT=0/4
+SRC_URI=mirror://sourceforge/perfmon2/libpfm4/libpfm-4.4.0.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=8668b8a0d07794f9618cd291092a30ab

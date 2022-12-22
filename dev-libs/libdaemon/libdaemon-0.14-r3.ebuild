@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
-inherit autotools multilib-minimal
+inherit multilib-minimal
 
 DESCRIPTION="Simple library for creating daemon processes in C"
 HOMEPAGE="http://0pointer.de/lennart/projects/libdaemon/"
@@ -11,10 +11,11 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/5"
-KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc examples static-libs"
 
-BDEPEND="doc? ( app-doc/doxygen )"
+RDEPEND=""
+DEPEND="doc? ( app-doc/doxygen )"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-man-page-typo-fix.patch
@@ -23,17 +24,13 @@ PATCHES=(
 src_prepare() {
 	default
 
-	# Refresh bundled libtool (ltmain.sh)
-	# (elibtoolize is insufficient)
-	# bug #668404
-	eautoreconf
-
 	# doxygen is broken with out-of-source builds
 	multilib_copy_sources
 }
 
 multilib_src_configure() {
 	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--localstatedir=/var \
 		--disable-examples \
 		--disable-lynx \
@@ -61,8 +58,7 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	einstalldocs
-
-	find "${ED}" -name '*.la' -delete || die
+	find "${D}" -name '*.la' -delete || die
 
 	if use examples; then
 		docinto examples

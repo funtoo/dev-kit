@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<maintainer type="project">
+	<email>bsd@gentoo.org</email>
+	<name>BSD Project</name>
+</maintainer>
 <maintainer type="project">
 	<email>prefix@gentoo.org</email>
 	<name>Prefix Project</name>

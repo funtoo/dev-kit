@@ -1,7 +1,8 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
+inherit eutils
 
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://ode.org/"
@@ -9,22 +10,16 @@ SRC_URI="mirror://sourceforge/opende/${P}.tar.bz2"
 
 LICENSE="|| ( LGPL-2.1 BSD )"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug doc double-precision examples gyroscopic static-libs"
 
-RDEPEND="
-	examples? (
+RDEPEND="examples? (
 		virtual/opengl
-	)
-"
-DEPEND="${RDEPEND}"
-BDEPEND="doc? ( app-doc/doxygen )"
-
-DOCS=( CHANGELOG.txt README.txt )
+	)"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	default
-
 	sed -i \
 		-e "s:\$.*/drawstuff/textures:/usr/share/doc/${PF}/examples:" \
 		drawstuff/src/Makefile.in \
@@ -46,38 +41,30 @@ src_configure() {
 
 src_compile() {
 	emake
-
 	if use doc ; then
-		cd ode/doc || die
+		cd ode/doc
 		doxygen Doxyfile || die
 	fi
 }
 
 src_install() {
-	default
-
-	find "${ED}" -name '*.la' -delete || die
-
+	DOCS="CHANGELOG.txt README.txt" \
+		default
+	prune_libtool_files
 	if use doc ; then
-		docinto html
-		dodoc docs/*
+		dohtml docs/*
 	fi
-
-	if use examples ; then
-		cd ode/demo || die
-
+	if use examples; then
+		cd ode/demo
 		exeinto /usr/share/doc/${PF}/examples
-
 		local f
 		for f in *.c* ; do
 			doexe .libs/${f%.*}
 		done
-
-		cd ../.. || die
-
+		cd ../..
 		doexe drawstuff/dstest/dstest
-		docinto examples
-		dodoc ode/demo/*.{c,cpp,h} \
+		insinto /usr/share/doc/${PF}/examples
+		doins ode/demo/*.{c,cpp,h} \
 			drawstuff/textures/*.ppm \
 			drawstuff/dstest/dstest.cpp \
 			drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp}

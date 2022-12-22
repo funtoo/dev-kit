@@ -1,12 +1,12 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=!dev-db/tinycdb
+DEPEND=>=sys-apps/sed-4 !dev-db/tinycdb
 DESCRIPTION=Fast, reliable, simple package for creating and reading constant databases
-EAPI=7
+EAPI=5
 HOMEPAGE=http://cr.yp.to/cdb.html
-KEYWORDS=~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=public-domain
-RDEPEND=!dev-db/tinycdb
+RDEPEND=>=sys-apps/sed-4 !dev-db/tinycdb
 SLOT=0
 SRC_URI=http://cr.yp.to/cdb/cdb-0.75.tar.gz
-_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=7c8a597468ebe029375c42c2f9d5082f
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=59700df22ebf615e8fce9520b6b1fc57

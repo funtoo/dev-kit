@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI="4"
 
-inherit autotools
+inherit eutils autotools multilib
 
 DESCRIPTION="FastCGI Developer's Kit"
 HOMEPAGE="http://www.fastcgi.com/"
@@ -11,46 +11,41 @@ SRC_URI="http://www.fastcgi.com/dist/fcgi-2.4.1-SNAP-0910052249.tar.gz"
 
 LICENSE="FastCGI"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="html"
 
-S="${WORKDIR}/${PN}-2.4.1-SNAP-0910052249"
+DEPEND=""
+RDEPEND=""
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-2.4.0-Makefile.patch
-	"${FILESDIR}"/${PN}-2.4.0-clientdata-pointer.patch
-	"${FILESDIR}"/${PN}-2.4.0-html-updates.patch
-	"${FILESDIR}"/${PN}-2.4.1_pre0311112127-gcc44.patch
-	"${FILESDIR}"/${P}-link.patch
-	"${FILESDIR}"/${P}-poll.patch
-)
+S="${WORKDIR}/fcgi-2.4.1-SNAP-0910052249"
 
 src_prepare() {
-	default
+	epatch "${FILESDIR}/fcgi-2.4.0-Makefile.patch"
+	epatch "${FILESDIR}/fcgi-2.4.0-clientdata-pointer.patch"
+	epatch "${FILESDIR}/fcgi-2.4.0-html-updates.patch"
+	epatch "${FILESDIR}"/fcgi-2.4.1_pre0311112127-gcc44.patch
+	epatch "${FILESDIR}"/${P}-link.patch
+	epatch "${FILESDIR}"/${P}-poll.patch
+
 	eautoreconf
 }
 
-src_configure() {
-	econf --disable-static
-}
-
 src_install() {
-	emake DESTDIR="${D}" install LIBRARY_PATH="${ED}"/usr/$(get_libdir)
-	einstalldocs
+	emake DESTDIR="${D}" install LIBRARY_PATH="${ED}/usr/$(get_libdir)"
+
+	dodoc README
 
 	# install the manpages into the right place
 	doman doc/*.[13]
 
 	# Only install the html documentation if USE=html
-	if use html; then
-		docinto html
-		dodoc -r doc/*/* images
+	if use html ; then
+		dohtml "${S}"/doc/*/*
+		insinto /usr/share/doc/${PF}/html
+		doins -r "${S}/images"
 	fi
 
 	# install examples in the right place
-	docinto examples
-	dodoc examples/*.c
-
-	# no static archives
-	find "${D}" -name '*.la' -delete || die
+	insinto /usr/share/doc/${PF}/examples
+	doins "${S}/examples/"*.c
 }

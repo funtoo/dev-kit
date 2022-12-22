@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -9,9 +9,10 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	EGIT_REPO_URI="https://github.com/OpenNI/OpenNI"
 fi
 
-inherit ${SCM} toolchain-funcs multilib java-pkg-opt-2
+inherit ${SCM} toolchain-funcs eutils multilib java-pkg-opt-2
 
 if [ "${PV#9999}" != "${PV}" ] ; then
+	KEYWORDS=""
 	SRC_URI=""
 else
 	KEYWORDS="~amd64 ~arm"
@@ -31,21 +32,19 @@ RDEPEND="
 	virtual/jpeg:0
 	dev-libs/tinyxml
 	opengl? ( media-libs/freeglut !dev-libs/OpenNI2[opengl] )
-	java? ( virtual/jre:1.8 )
+	java? ( >=virtual/jre-1.5 )
 "
 DEPEND="${RDEPEND}
+	dev-lang/python
 	doc? ( app-doc/doxygen )
-	java? ( virtual/jdk:1.8 )"
-
-PATCHES=(
-	"${FILESDIR}/tinyxml.patch"
-	"${FILESDIR}/jpeg.patch"
-	"${FILESDIR}/soname.patch"
-	"${FILESDIR}/${PN}-1.5.7.10-gcc6.patch"
-)
+	java? ( >=virtual/jdk-1.5 )"
 
 src_prepare() {
-	default
+	epatch \
+		"${FILESDIR}/tinyxml.patch" \
+		"${FILESDIR}/jpeg.patch" \
+		"${FILESDIR}/soname.patch" \
+		"${FILESDIR}/${PN}-1.5.7.10-gcc6.patch"
 
 	rm -rf External/{LibJPEG,TinyXml}
 	for i in Platform/Linux/Build/Common/Platform.* Externals/PSCommon/Linux/Build/Platform.* ; do
@@ -92,8 +91,7 @@ src_install() {
 	dodoc Documentation/OpenNI_UserGuide.pdf CHANGES NOTICE README
 
 	if use doc ; then
-		docinto html
-		dodoc -r "${S}/Source/DoxyGen/html/"*
+		dohtml -r "${S}/Source/DoxyGen/html/"*
 		dodoc Source/DoxyGen/Text/*.txt
 	fi
 

@@ -1,12 +1,14 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
 ROS_REPO_URI="https://github.com/ros/ros_comm"
 KEYWORDS="~amd64 ~arm"
 ROS_SUBDIR=test/${PN}
 CATKIN_HAS_MESSAGES=yes
+
+PYTHON_COMPAT=( python2_7 )
 
 inherit ros-catkin
 
@@ -15,19 +17,14 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-ros/rosgraph[${PYTHON_SINGLE_USEDEP}]
-	dev-ros/rostest[${PYTHON_SINGLE_USEDEP}]
-	dev-ros/std_msgs[${PYTHON_SINGLE_USEDEP}]"
+RDEPEND="dev-ros/rosgraph[${PYTHON_USEDEP}]
+	dev-ros/rostest[${PYTHON_USEDEP}]
+	dev-ros/std_msgs[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? (	dev-ros/roslib[${PYTHON_SINGLE_USEDEP}] )
+	test? (	dev-ros/roslib[${PYTHON_USEDEP}] )
 "
 
 mycatkincmakeargs=( "-DCATKIN_ENABLE_TESTING=ON" )
-
-src_test() {
-	export ROS_PACKAGE_PATH="${S}:${ROS_PACKAGE_PATH}"
-	ros-catkin_src_test
-}
 
 src_install() {
 	ros-catkin_src_install

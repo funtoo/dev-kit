@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=dev-haskell/mtl:=[profile?] >=dev-lang/ghc-7.4.1:= dev-haskell/alex >=dev-haskell/cabal-1.8 dev-haskell/happy test? ( >=dev-haskell/doctest-0.8 dev-haskell/hspec dev-haskell/hunit >=dev-haskell/quickcheck-2.5 dev-haskell/temporary ) doc? ( || ( dev-haskell/haddock >=dev-lang/ghc-7.10.2 ) ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=A compiler front-end generator
+EAPI=5
+HOMEPAGE=http://bnfc.digitalgrammars.com/
+IUSE=doc hscolour profile test
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-haskell/mtl:=[profile?] >=dev-lang/ghc-7.4.1:=
+RESTRICT=test
+SLOT=0/2.8
+SRC_URI=mirror://hackage/packages/archive/BNFC/2.8/BNFC-2.8.tar.gz
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ghc-package	fac7ea2deca456f8e70b85a6ebef9e8a	haskell-cabal	29d0cddd97161a1753d846582e274f0d	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=a0eae429b149e9ad3b080284a1ab1449

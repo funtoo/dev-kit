@@ -1,5 +1,5 @@
---- a/arithchk.c
-+++ b/arithchk.c
+--- arithchk.c
++++ arithchk.c
 @@ -122,7 +122,7 @@
  	long Cray1;
  

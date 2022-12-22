@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=4
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 DESCRIPTION="feature rich database generator for high performance C applications"
 HOMEPAGE="http://datadraw.sourceforge.net/"
@@ -12,33 +12,39 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${PN}${PV}/${PN}${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples"
+IUSE="doc examples"
 
-S="${WORKDIR}/${PN}${PV}"
+DEPEND=""
+RDEPEND=""
 
-PATCHES=( "${FILESDIR}"/${P}-buildsystem.patch )
+S=${WORKDIR}/${PN}${PV}
 
-src_configure() {
-	tc-export AR CC
-	default
+src_prepare() {
+	tc-export CC
+	sed -e "/^CFLAGS=/s:-g -Wall:${CFLAGS}:" \
+		-i configure \
+		-i dataview/configure \
+		-i util/configure || die
+
+	sed -e '/^datadraw:/,+2s:\\$(CFLAGS):\\$(CFLAGS) \\$(LDFLAGS):' \
+		-i configure || die
 }
 
 src_install() {
-	dobin datadraw
+	dobin ${PN}
 
-	local lib
-	for lib in util/*.a; do
-		newlib.a ${lib} lib${lib#*/}
+	insinto /usr/$(get_libdir)
+	for lib in util/*.a ; do
+		newins ${lib} lib$(basename ${lib})
 	done
+	insinto /usr/include
 
-	doheader util/*.h
+	doins util/*.h
 
-	HTML_DOCS=( www/index.html www/images )
-	einstalldocs
-	dodoc manual.pdf
-
-	if use examples; then
-		dodoc -r examples
-		docompress -x /usr/share/doc/${PF}/examples
+	dodoc README
+	if use doc ; then
+		dodoc manual.pdf
+		dohtml -r www/index.html www/images
 	fi
+	use examples && dodoc -r examples
 }

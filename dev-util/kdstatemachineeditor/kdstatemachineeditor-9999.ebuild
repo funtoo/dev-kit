@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit cmake qmake-utils
+inherit cmake-utils qmake-utils
 
 DESCRIPTION="Framework for creating Qt State Machine metacode using graphical user interfaces"
 HOMEPAGE="https://github.com/KDAB/KDStateMachineEditor"
@@ -18,7 +18,6 @@ fi
 
 LICENSE="GPL-2+"
 IUSE="doc test"
-RESTRICT="!test? ( test )"
 SLOT="0"
 
 RDEPEND="
@@ -49,5 +48,5 @@ src_configure() {
 		-DBUILD_TESTING=$(usex test)
 		-DECM_MKSPECS_INSTALL_DIR=$(qt5_get_mkspecsdir)/modules
 	)
-	cmake_src_configure
+	cmake-utils_src_configure
 }

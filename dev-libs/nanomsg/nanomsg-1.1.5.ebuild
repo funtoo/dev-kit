@@ -1,9 +1,8 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
-CMAKE_ECLASS=cmake
 inherit cmake-multilib
 
 DESCRIPTION="High-performance messaging interface for distributed applications"
@@ -12,23 +11,15 @@ SRC_URI="https://github.com/nanomsg/nanomsg/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/5.0.0"
-KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ppc ~riscv x86"
-IUSE="doc"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+IUSE="doc static-libs"
 
 DEPEND="doc? ( dev-ruby/asciidoctor )"
-
-multilib_src_prepare() {
-	eapply_user
-	# Old CPUs like HPPA fails test because of timeout
-	sed -i \
-		-e '/inproc_shutdown/s/5/80/' \
-		-e '/ws_async_shutdown/s/5/80/' \
-		-e '/ipc_shutdown/s/30/80/' CMakeLists.txt || die
-}
+RDEPEND=""
 
 multilib_src_configure() {
 	local mycmakeargs=(
-		-DNN_STATIC_LIB=OFF
+		-DNN_STATIC_LIB=$(usex static-libs ON OFF)
 	)
 	if multilib_is_native_abi; then
 		mycmakeargs+=(
@@ -41,5 +32,5 @@ multilib_src_configure() {
 			-DNN_ENABLE-NANOCAT=OFF
 		)
 	fi
-	cmake_src_configure
+	cmake-utils_src_configure
 }

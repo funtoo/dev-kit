@@ -1,17 +1,20 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
 
-inherit toolchain-funcs
+inherit eutils
 
 DESCRIPTION="ITS4: Software Security Tool"
 HOMEPAGE="http://www.cigital.com/its4/"
 SRC_URI="https://dev.gentoo.org/~robbat2/distfiles/${P}.tgz"
-
 LICENSE="ITS4"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~x86 ~ppc ~amd64"
+IUSE=""
+
+DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/${PN}"
 

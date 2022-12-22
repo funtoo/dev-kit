@@ -1,11 +1,11 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI="4"
 
-inherit flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="Ethernet program loader for the Dreamcast"
+DESCRIPTION="ethernet program loader for the Dreamcast"
 HOMEPAGE="http://cadcdev.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cadcdev/dcload-ip-${PV}-src.tar.gz"
 
@@ -14,20 +14,18 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc"
 
-RDEPEND="sys-libs/binutils-libs"
-DEPEND="${RDEPEND}"
+S=${WORKDIR}/dcload-ip-${PV}
 
-S="${WORKDIR}/dcload-ip-${PV}"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-bfd-update.patch
-	"${FILESDIR}"/${P}-headers.patch
-	"${FILESDIR}"/${P}-makefile.patch
-)
-
-src_configure() {
-	tc-export CC
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-bfd-update.patch
+	epatch "${FILESDIR}"/${P}-headers.patch
 	append-cppflags -DPACKAGE -DPACKAGE_VERSION #465952
+	sed -i \
+		-e "/^HOSTCC/s:gcc:$(tc-getCC):" \
+		-e "/^HOSTCFLAGS/s:-O2:${CFLAGS} ${CPPFLAGS}:" \
+		-e 's:-L/usr/local/dcdev/lib:$(LDFLAGS):' \
+		-e 's:/usr/local/dcdev/include:.:' \
+		Makefile.cfg || die "sed"
 }
 
 src_compile() {
@@ -36,8 +34,9 @@ src_compile() {
 
 src_install() {
 	dobin host-src/tool/dc-tool
-
 	dodoc README NETWORK CHANGES
 	dodoc -r make-cd
-	use doc && dodoc -r example-src
+	if use doc ; then
+		dodoc -r example-src
+	fi
 }

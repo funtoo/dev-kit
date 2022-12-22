@@ -1,7 +1,7 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
 inherit autotools
 
@@ -12,18 +12,19 @@ SRC_URI="mirror://sourceforge/g15tools/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
+
 IUSE="truetype"
 
 RDEPEND="
 	dev-libs/libg15
-	truetype? ( media-libs/freetype )"
-DEPEND="${RDEPEND}"
-BDEPEND="
+	truetype? ( media-libs/freetype )
+"
+DEPEND="${RDEPEND}
 	truetype? ( virtual/pkgconfig )"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-pixel-c.patch
-	"${FILESDIR}"/${P}-freetype_pkgconfig.patch
+	"${FILESDIR}/${P}-pixel-c.patch"
+	"${FILESDIR}/${P}-freetype_pkgconfig.patch"
 )
 
 src_prepare() {
@@ -35,14 +36,15 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--disable-static
-		$(use_enable truetype ttf)
+		$(use_enable truetype ttf )
 	)
 	econf "${myeconfargs[@]}"
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" \
+		docdir=/usr/share/doc/${PF} install
+	rm "${ED%/}/usr/share/doc/${PF}/COPYING"
 
-	# no static archives
-	find "${ED}" -type f -name '*.la' -delete || die
+	find "${ED}" -name '*.la' -delete || die
 }

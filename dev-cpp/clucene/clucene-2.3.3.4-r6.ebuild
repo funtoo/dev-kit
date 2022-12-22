@@ -1,12 +1,12 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
 MY_PN="${PN}"-core
 MY_P="${MY_PN}"-"${PV}"
 
-inherit cmake multilib
+inherit cmake-utils multilib
 
 DESCRIPTION="High-performance, full-featured text search engine based off of lucene in C++"
 HOMEPAGE="http://clucene.sourceforge.net/"
@@ -14,13 +14,14 @@ SRC_URI="mirror://sourceforge/clucene/${MY_P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-2.1 )"
 SLOT="1"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 
 IUSE="debug doc static-libs"
 
-BDEPEND="
+DEPEND="
 	doc? ( >=app-doc/doxygen-1.4.2 )
 "
+RDEPEND=""
 
 RESTRICT="test"
 
@@ -29,15 +30,13 @@ DOCS=(AUTHORS ChangeLog README README.PACKAGE REQUESTS)
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 PATCHES=(
-	"${FILESDIR}"/clucene-2.3.3.4-fix-clang.patch
 	"${FILESDIR}/${P}-contrib.patch"
 	"${FILESDIR}/${P}-pkgconfig.patch"
 	"${FILESDIR}/${P}-gcc6.patch"
-	"${FILESDIR}/${P}-gmtime.patch"
 )
 
 src_prepare() {
-	cmake_src_prepare
+	cmake-utils_src_prepare
 
 	# patch out installing bundled boost headers, we build against system one
 	sed -i \
@@ -60,5 +59,5 @@ src_configure() {
 		-DBUILD_STATIC_LIBRARIES=$(usex static-libs)
 	)
 
-	cmake_src_configure
+	cmake-utils_src_configure
 }

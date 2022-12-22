@@ -1,15 +1,13 @@
-BDEPEND=>=dev-libs/expat-2.1.0-r3 >=dev-libs/glib-2.40:2 >=sys-apps/dbus-1.8 >=dev-util/glib-utils-2.40 >=dev-util/gtk-doc-am-1.14 virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/expat-2.1.0-r3[-mgorny(-)] >=dev-libs/glib-2.40:2[-mgorny(-)] >=sys-apps/dbus-1.8[-mgorny(-)]
+DEFINED_PHASES=compile configure install test
+DEPEND=>=dev-libs/expat-2.1.0-r3[-mgorny(-)] >=dev-libs/glib-2.40:2[-mgorny(-)] >=sys-apps/dbus-1.8[-mgorny(-)] >=dev-util/glib-utils-2.40 >=dev-util/gtk-doc-am-1.14 virtual/pkgconfig
 DESCRIPTION=D-Bus bindings for glib
-EAPI=7
+EAPI=6
 HOMEPAGE=https://dbus.freedesktop.org/
 IUSE=debug static-libs test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
-KEYWORDS=~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x86-solaris
 LICENSE=|| ( GPL-2 AFL-2.1 )
 RDEPEND=>=dev-libs/expat-2.1.0-r3[-mgorny(-)] >=dev-libs/glib-2.40:2[-mgorny(-)] >=sys-apps/dbus-1.8[-mgorny(-)]
-RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.110.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	bash-completion-r1	47a7402d95930413ce25ba8d857339bb	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=395dd4857b02c6a4a06291114a29afce
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=5125545c9536ab360aa0ab57d57665b1

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare setup test unpack
+DEPEND=>=dev-lang/go-1.10:= sys-apps/shadow virtual/pkgconfig >=dev-lang/go-1.10
+DESCRIPTION=Highly-available key value store for shared configuration and service discovery
+EAPI=6
+HOMEPAGE=https://github.com/etcd-io/etcd
+IUSE=doc +server
+KEYWORDS=amd64
+LICENSE=Apache-2.0
+RDEPEND=!dev-db/etcdctl
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/etcd-io/etcd/archive/v3.3.12.tar.gz -> etcd-3.3.12.tar.gz
+_eclasses_=golang-base	e62ea82a4485a73fb191120f7aad958e	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=b876317d88f76efa6a56bd988991ea88

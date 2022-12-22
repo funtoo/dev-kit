@@ -1,7 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=4
+
+inherit autotools-utils
 
 DESCRIPTION="An Event Expression Library inspired by CEE"
 HOMEPAGE="http://www.libee.org"
@@ -9,28 +11,23 @@ SRC_URI="http://www.libee.org/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ~arm64 ~hppa x86 ~amd64-linux"
-IUSE="debug"
+KEYWORDS="amd64 arm ~arm64 hppa x86 ~amd64-linux"
+IUSE="debug static-libs"
 
-RDEPEND="
-	dev-libs/libxml2
+DEPEND="dev-libs/libxml2
 	dev-libs/libestr"
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
+
+DOCS=(INSTALL ChangeLog)
 
 src_configure() {
-	econf \
-		--disable-static \
-		--enable-testbench \
+	local myeconfargs=(
 		$(use_enable debug)
+		--enable-testbench
+	)
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	emake -j1
-}
-
-src_install() {
-	default
-
-	# no static archives
-	find "${D}" -name '*.la' -delete || die
+	autotools-utils_src_compile -j1
 }

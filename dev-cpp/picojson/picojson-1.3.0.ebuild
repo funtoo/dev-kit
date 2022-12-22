@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -12,6 +12,10 @@ SRC_URI="https://github.com/kazuho/picojson/archive/v${PV}.tar.gz -> ${P}.tar.gz
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE=""
+
+DEPEND=""
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	:

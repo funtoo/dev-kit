@@ -1,7 +1,7 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -12,23 +12,22 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-
-src_configure() {
-	tc-export CC
-}
+IUSE=""
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" -C src
-	emake CFLAGS="${CFLAGS}" -C src/icddump
+	tc-export CC
+
+	cd "${S}"/src
+	emake CFLAGS="${CFLAGS}"
+	cd "${S}"/src/icddump
+	emake CFLAGS="${CFLAGS}"
 }
 
 src_install() {
 	dobin src/icdprog
 	dobin src/icddump/icddump
-
-	DOCS=( src/README.coders )
-	HTML_DOCS=( readme.html )
-	einstalldocs
+	dohtml readme.html
+	dodoc src/README.coders
 }
 
 pkg_postinst() {

@@ -1,9 +1,8 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit autotools
+EAPI=5
+inherit eutils
 
 DESCRIPTION="Worldforge math library"
 HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/wfmath"
@@ -12,26 +11,14 @@ SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="doc"
+IUSE="doc static-libs"
 
-BDEPEND="
-	virtual/pkgconfig
-	doc? ( app-doc/doxygen )
-"
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.0.2-fix-bashisms.patch
-)
-
-src_prepare() {
-	default
-
-	# For bashisms patch
-	eautoreconf
-}
+RDEPEND=""
+DEPEND="doc? ( app-doc/doxygen )
+	virtual/pkgconfig"
 
 src_configure() {
-	econf --disable-static
+	econf $(use_enable static-libs static)
 }
 
 src_compile() {
@@ -41,11 +28,6 @@ src_compile() {
 
 src_install() {
 	default
-
-	if use doc ; then
-		docinto html
-		dodoc doc/html/*
-	fi
-
-	find "${ED}" -type f -name '*.la' -delete || die
+	use doc && dohtml doc/html/*
+	prune_libtool_files
 }

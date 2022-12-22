@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=4
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="A commandline interface to Microchip's PICSTART+ programmer"
 HOMEPAGE="http://home.pacbell.net/theposts/picmicro/"
@@ -12,39 +12,30 @@ SRC_URI="http://home.pacbell.net/theposts/picmicro/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-makefile.patch
-	"${FILESDIR}"/${P}-errno.patch
-	"${FILESDIR}"/${P}-C99-stdbool.patch
-)
+IUSE=""
 
 src_prepare() {
-	default
+	sed -i -e '/strip/d' \
+		-e 's:$(CC):\0 $(LDFLAGS):' \
+		{.,fixchksum,picsnoop}/Makefile || die "sed failed"
 
-	# remove stale binaries
-	rm picsnoop/{picsnoop,*.o} || die
-}
+	rm -f picsnoop/{picsnoop,*.o}
 
-src_configure() {
-	tc-export CC
+	epatch "${FILESDIR}"/${P}-errno.patch
 }
 
 src_compile() {
-	emake
-	emake -C picsnoop
-	emake -C fixchksum
+	emake CC=$(tc-getCC) OPTIONS="${CFLAGS} -x c++"
+	emake -C picsnoop CC=$(tc-getCC) OPTIONS="${CFLAGS} -x c++"
+	emake -C fixchksum CC=$(tc-getCC) OPTIONS="${CFLAGS}"
 }
 
 src_install() {
-	dobin picp picsnoop/picsnoop fixchksum/fixchksum
-
-	einstalldocs
-	dodoc BugReports.txt HISTORY LICENSE.TXT NOTES PSCOMMANDS.TXT
-
+	dobin picp
+	dobin picsnoop/picsnoop
+	dobin fixchksum/fixchksum
+	dodoc README HISTORY LICENSE.TXT NOTES PSCOMMANDS.TXT BugReports.txt TODO
 	newdoc picsnoop/README.TXT PICSNOOP.txt
 	newdoc fixchksum/README fixchksum.txt
-
-	docinto html
-	dodoc PICPmanual.html
+	dohtml PICPmanual.html
 }

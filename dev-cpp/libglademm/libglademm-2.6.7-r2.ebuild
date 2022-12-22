@@ -1,18 +1,18 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit eutils flag-o-matic gnome2 multilib-minimal
+inherit flag-o-matic gnome2 multilib-minimal
 
 DESCRIPTION="C++ bindings for libglade"
 HOMEPAGE="https://www.gtkmm.org"
 
 LICENSE="LGPL-2.1+"
 SLOT="2.4"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="
@@ -46,7 +46,7 @@ multilib_src_compile() {
 	gnome2_src_compile
 
 	if multilib_is_native_abi && use doc; then
-		emake -C "docs/reference" all
+		emake -C "docs/reference" all || die "emake doc failed"
 	fi
 }
 
@@ -54,7 +54,7 @@ multilib_src_install() {
 	gnome2_src_install
 
 	if use examples; then
-		emake -C "examples" distclean
+		emake -C "examples" distclean || die "examples clean up failed"
 	fi
 }
 
@@ -69,6 +69,6 @@ multilib_src_install_all() {
 		find "${S}/examples" -name "Makefile*" -delete \
 			|| die "examples cleanup failed"
 		insinto "/usr/share/doc/${PF}"
-		doins -r examples
+		doins -r examples || die "doins failed"
 	fi
 }

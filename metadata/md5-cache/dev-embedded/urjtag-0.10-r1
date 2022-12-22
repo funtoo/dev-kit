@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=ftdi? ( dev-embedded/libftdi:0 ) readline? ( sys-libs/readline:= ) usb? ( virtual/libusb:0 )
+DESCRIPTION=Tool for communicating over JTAG with flash chips, CPUs, and many more
+EAPI=5
+HOMEPAGE=http://urjtag.sourceforge.net/
+IUSE=ftdi readline usb
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=ftdi? ( dev-embedded/libftdi:0 ) readline? ( sys-libs/readline:= ) usb? ( virtual/libusb:0 ) !dev-embedded/jtag
+SLOT=0
+SRC_URI=mirror://sourceforge/urjtag/urjtag-0.10.tar.bz2
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=a10ce30a103088ea11c7f0533a2d8733

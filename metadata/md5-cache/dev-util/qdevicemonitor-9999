@@ -1,12 +1,11 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install unpack
-DEPEND=app-pda/usbmuxd dev-qt/qtcore:5 dev-qt/qtgui:5 dev-util/android-tools
+DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-util/android-tools app-pda/usbmuxd >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Crossplatform log viewer for Android, iOS and text files
-EAPI=7
+EAPI=6
 HOMEPAGE=https://github.com/alopatindev/qdevicemonitor
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=app-pda/usbmuxd dev-qt/qtcore:5 dev-qt/qtgui:5 dev-util/android-tools
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-util/android-tools app-pda/usbmuxd
 SLOT=0
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	estack	43ddf5aaffa7a8d0482df54d25a66a1f	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=05596d572d483a903e5b43a16aa6d5d8
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=fab84895c0020da5a0e6f5f83d92ac26

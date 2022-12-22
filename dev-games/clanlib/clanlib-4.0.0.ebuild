@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit autotools toolchain-funcs
+inherit autotools
 
 MY_PN=ClanLib
 
@@ -60,9 +60,6 @@ src_configure() {
 		$(use_enable ipv6 getaddr)
 		$(use_enable static-libs static)
 	)
-
-	tc-export PKG_CONFIG
-
 	econf "${myeconfargs[@]}"
 }
 

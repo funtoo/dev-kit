@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
-inherit pax-utils multilib-minimal
+inherit eutils pax-utils multilib-minimal
 
 DESCRIPTION="Oracle 18c Instant Client with SDK"
 HOMEPAGE="https://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index.html"

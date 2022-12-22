@@ -1,9 +1,8 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit autotools flag-o-matic
+EAPI=5
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="the UCL Compression Library"
 HOMEPAGE="http://www.oberhumer.com/opensource/ucl/"
@@ -11,18 +10,14 @@ SRC_URI="http://www.oberhumer.com/opensource/ucl/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
 DEPEND="!!dev-libs/libucl"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-CFLAGS.patch
-	"${FILESDIR}"/${P}-x32.patch #426334
-)
-
 src_prepare() {
-	default
+	epatch "${FILESDIR}"/${P}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P}-x32.patch #426334
 
 	# lzo (and ucl) have some weird sort of mfx_* set of autoconf macros
 	# which may only be distributed with lzo itself? Rescue them and
@@ -46,6 +41,5 @@ src_configure() {
 
 src_install() {
 	default
-
-	find "${ED}" -type f -name '*.la' -delete || die
+	prune_libtool_files
 }

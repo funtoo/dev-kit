@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -11,12 +11,13 @@ SRC_URI="
 	mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? ( mirror://sourceforge/${PN}/${PN}-docs-${PV}.tar.gz )"
 
-LICENSE="LGPL-3"
 SLOT="0"
+LICENSE="LGPL-3"
 IUSE="doc"
 KEYWORDS="~amd64 ~x86"
 
-BDEPEND="doc? ( app-doc/doxygen )"
+RDEPEND=""
+DEPEND="doc? ( app-doc/doxygen )"
 
 src_compile() {
 	if use doc; then
@@ -37,8 +38,5 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README
 
-	if use doc ; then
-		docinto html
-		dodoc -r "${WORKDIR}"/${PN}-docs-${PV}/*
-	fi
+	use doc && dohtml -r "${WORKDIR}"/${PN}-docs-${PV}/*
 }

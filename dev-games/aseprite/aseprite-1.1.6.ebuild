@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit cmake-utils desktop flag-o-matic
+inherit cmake-utils eutils flag-o-matic
 
 DESCRIPTION="Animated sprite editor & pixel art tool"
 HOMEPAGE="https://www.aseprite.org"
@@ -17,7 +17,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 
 IUSE="debug kde gtk3 test webp"
-RESTRICT="!test? ( test )"
 
 RDEPEND="dev-libs/tinyxml
 	media-libs/allegro:0[X,png]
@@ -55,7 +54,6 @@ src_prepare() {
 	if use debug ; then
 		sed -i '/-DNDEBUG/d' CMakeLists.txt || die
 	fi
-
 	# Fix shebang in thumbnailer
 	sed -i -e 's:#!/usr/bin/sh:#!/bin/sh:' desktop/aseprite-thumbnailer || die
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="project">
     <email>sci@gentoo.org</email>
@@ -17,6 +17,7 @@
   </longdescription>
   <use>
     <flag name="cuda">Enable NVIDIA CUDA toolkit support</flag>
+    <flag name="mkl">Enable a plugin for Intel Math Kernel Library <pkg>sci-libs/mkl</pkg></flag>
   </use>
   <upstream>
     <remote-id type="github">libdynd/libdynd</remote-id>

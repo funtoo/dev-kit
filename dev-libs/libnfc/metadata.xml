@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<!-- maintainer-needed -->
+	<maintainer type="person">
+		<email>ikelos@gentoo.org</email>
+		<name>Mike Auty</name>
+	</maintainer>
 	<use>
 		<flag name="pcsc-lite">Enable NFC drivers that require pcsc-lite</flag>
 	</use>

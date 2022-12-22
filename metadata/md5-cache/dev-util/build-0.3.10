@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DESCRIPTION=A massively-parallel software build system implemented on top of GNU make
+EAPI=6
+HOMEPAGE=https://www.codesynthesis.com/projects/build/
+IUSE=examples
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=!dev-util/build:0.3
+SLOT=0
+SRC_URI=https://www.codesynthesis.com/download/build/0.3/build-0.3.10.tar.bz2
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	versionator	2352c3fc97241f6a02042773c8287748
+_md5_=fb7de777b4e4bd20a908825ca4175a75

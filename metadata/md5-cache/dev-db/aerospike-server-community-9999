@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare setup unpack
+DEPEND=dev-libs/jansson dev-libs/jemalloc >=dev-vcs/git-1.8.2.1[curl] virtual/pkgconfig sys-apps/shadow
+DESCRIPTION=Flash-optimized, in-memory, nosql database
+EAPI=5
+HOMEPAGE=http://www.aerospike.com
+IUSE=+tools
+LICENSE=AGPL-3
+PROPERTIES=live
+RDEPEND=dev-libs/jansson dev-libs/jemalloc
+SLOT=0
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=9eef3ca60d15540532ef846e925f0435

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install test unpack
+DEPEND=>=dev-lang/go-1.10
+DESCRIPTION=Run your Bitrise.io automations on any Mac or Linux machine
+EAPI=6
+HOMEPAGE=https://www.bitrise.io/cli
+IUSE=doc
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=dev-util/envman-1.2.0 >=dev-util/stepman-0.10.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/bitrise-io/bitrise/archive/1.20.0.tar.gz -> bitrise-1.20.0.tar.gz
+_eclasses_=golang-base	e62ea82a4485a73fb191120f7aad958e	golang-build	2ecd6011551701f98dd49a0341318936	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=caeae143bd0ae35a44790c60203fbe71

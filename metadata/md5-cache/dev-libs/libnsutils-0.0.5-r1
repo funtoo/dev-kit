@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-util/netsurf-buildsystem
+DESCRIPTION=base64 and time library, written in C
+EAPI=7
+HOMEPAGE=http://www.netsurf-browser.org/
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64
+LICENSE=MIT
+SLOT=0/0.0.5
+SRC_URI=https://download.netsurf-browser.org/libs/releases/libnsutils-0.0.5-src.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=324c77b55591cd3953818ad191f3f3ff

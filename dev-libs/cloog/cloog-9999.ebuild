@@ -1,49 +1,50 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
-inherit autotools
+inherit eutils multilib-minimal
+
+if [[ ${PV} == *9999 ]] ; then
+	inherit autotools git-r3
+	EGIT_REPO_URI="https://repo.or.cz/cloog.git"
+else
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	SRC_URI="http://www.bastoul.net/cloog/pages/download/${P}.tar.gz"
+fi
 
 DESCRIPTION="A loop generator for scanning polyhedra"
-HOMEPAGE="http://www.bastoul.net/cloog/ https://github.com/periscop/cloog"
-
-if [[ ${PV} == 9999 ]] ; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/periscop/cloog"
-else
-	SRC_URI="https://github.com/periscop/cloog/archive/${P}.tar.gz"
-	S="${WORKDIR}"/cloog-${P}
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-fi
+HOMEPAGE="http://www.bastoul.net/cloog/"
 
 LICENSE="LGPL-2.1"
 SLOT="0/4"
 IUSE="static-libs"
 
-RDEPEND="
-	dev-libs/gmp:=
-	dev-libs/isl:=
-"
-DEPEND="${RDEPEND}"
-BDEPEND="virtual/pkgconfig"
-
-PATCHES=( "${FILESDIR}"/${PN}-0.20.0-notex.patch )
+RDEPEND=">=dev-libs/gmp-6.0.0[${MULTILIB_USEDEP}]
+	>=dev-libs/isl-0.15:0=[${MULTILIB_USEDEP}]
+	!dev-libs/cloog-ppl"
+DEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 DOCS=( README )
 
 src_prepare() {
 	default
-	AT_NO_RECURSIVE=yes eautoreconf -i
-	# m4/ax_create_pkgconfig_info.m4 includes LDFLAGS
-	# sed to avoid eautoreconf
-	sed -i -e '/Libs:/s:@LDFLAGS@ ::' configure || die
+
+	if [[ ${PV} == "9999" ]] ; then
+		./get_submodules.sh
+		eautoreconf -i
+	else
+		# m4/ax_create_pkgconfig_info.m4 includes LDFLAGS
+		# sed to avoid eautoreconf
+		sed -i -e '/Libs:/s:@LDFLAGS@ ::' configure || die
+	fi
 
 	# Make sure we always use the system isl.
-	rm -rf isl || die
+	rm -rf isl
 }
 
-src_configure() {
+multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		--with-gmp=system \
 		--with-isl=system \
@@ -52,6 +53,12 @@ src_configure() {
 }
 
 # The default src_test() fails, so we'll just run these directly
-src_test() {
+multilib_src_test () {
+	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	emake -j1 check
+}
+
+multilib_src_install_all() {
+	einstalldocs
+	find "${ED}" -type f -name '*.la' -delete
 }

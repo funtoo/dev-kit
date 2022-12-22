@@ -1,7 +1,8 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
+inherit eutils
 
 MY_P=${PN}0-${PV}
 
@@ -12,16 +13,19 @@ SRC_URI="mirror://sourceforge/xffm/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
+IUSE=""
 
-BDEPEND="virtual/pkgconfig"
+RDEPEND=""
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/${MY_P}
 
-src_configure() {
-	econf --disable-static
+pkg_setup() {
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -delete || die
+	prune_libtool_files
 }

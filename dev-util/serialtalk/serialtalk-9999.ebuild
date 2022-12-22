@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
-inherit cmake
+inherit cmake-utils
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
@@ -18,3 +18,7 @@ HOMEPAGE="https://github.com/BGO-OD/serialtalk"
 
 LICENSE="GPL-3+"
 SLOT="0"
+
+src_install() {
+	cmake-utils_src_install
+}

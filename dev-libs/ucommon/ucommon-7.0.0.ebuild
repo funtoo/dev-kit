@@ -1,9 +1,8 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-
-inherit autotools flag-o-matic
+inherit autotools
 
 DESCRIPTION="Portable C++ runtime for threads and sockets"
 HOMEPAGE="https://www.gnu.org/software/commoncpp"
@@ -12,21 +11,29 @@ SRC_URI="mirror://gnu/commoncpp/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0/8" # soname version
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux"
-IUSE="doc +cxx debug ssl gnutls"
+IUSE="doc static-libs +cxx debug libressl ssl gnutls"
 
 RDEPEND="
 	ssl? (
-		net-libs/gnutls:=
-		dev-libs/libgcrypt:=
+		gnutls? (
+			net-libs/gnutls:0=
+			dev-libs/libgcrypt:0=
+		)
+		!gnutls? (
+			!libressl? ( dev-libs/openssl:0= )
+			libressl? ( dev-libs/libressl:0= )
+		)
 	)"
-DEPEND="${RDEPEND}"
-BDEPEND="
+
+DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+"
+
+DOCS=(README NEWS SUPPORT ChangeLog AUTHORS)
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-6.0.3-install_gcrypt.m4_file.patch
-	"${FILESDIR}"/${PN}-7.0.0-c++17-dynamic-exception-specifications.patch
+	"${FILESDIR}/${PN}-6.0.3-install_gcrypt.m4_file.patch"
 )
 
 src_prepare() {
@@ -43,33 +50,28 @@ src_prepare() {
 }
 
 src_configure() {
-	# https://bugs.gentoo.org/730018
-	# need to link GCC's libatomic when compiling with clang
-	append-libs -latomic
+	local myconf=""
+	if use ssl; then
+		myconf+=" --with-sslstack=$(usex gnutls gnu ssl) "
+	else
+		myconf+=" --with-sslstack=nossl ";
+	fi
 
 	local myeconfargs=(
-		--disable-static
-		--with-pkg-config
-		# don't bother with openssl, incompatible with the 1.1 API
-		--with-sslstack=$(usex ssl gnu nossl)
 		$(use_enable cxx stdcpp)
+		${myconf}
+		--enable-atomics
+		--with-pkg-config
 	)
-	econf "${myeconfargs[@]}"
+	econf "${myeconfargs}"
 }
 
 src_compile() {
 	default
-
-	if use doc; then
-		emake doxy
-		HTML_DOCS=( doc/html/. )
-	fi
+	use doc && emake doxy
 }
 
 src_install() {
+	use doc && HTML_DOCS="doc/html/*"
 	default
-	dodoc SUPPORT
-
-	# no static archives
-	find "${ED}" -name '*.la' -delete || die
 }

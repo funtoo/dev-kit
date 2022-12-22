@@ -1,5 +1,5 @@
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
 @@ -519,7 +519,9 @@
  endif ()
  

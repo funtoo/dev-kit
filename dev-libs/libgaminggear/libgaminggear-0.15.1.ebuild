@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
-inherit cmake xdg
+inherit cmake-utils gnome2-utils
 
 DESCRIPTION="Provides functionality for gaming input devices"
 
@@ -26,43 +26,35 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
-	dev-libs/libgudev
-	media-libs/harfbuzz
-"
-BDEPEND="
-	dev-util/glib-utils
+	virtual/libgudev
 	doc? ( app-doc/doxygen )
 "
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.10.0-doc.patch
-	"${FILESDIR}"/${P}-cmake-3.13.patch
 )
-
-# Required because xdg.eclass overrides src_prepare() from cmake.eclass
-src_prepare() {
-	cmake_src_prepare
-}
 
 src_configure() {
 	mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
+		-DDOCDIR=share/doc/${PF}
 		-DWITH_DOC="$(usex doc)"
 	)
-	cmake_src_configure
+	cmake-utils_src_configure
 }
 
 src_install() {
-	cmake_src_install
+	cmake-utils_src_install
 }
 
 pkg_preinst() {
-	xdg_pkg_preinst
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	xdg_pkg_postinst
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	xdg_pkg_postrm
+	gnome2_icon_cache_update
 }

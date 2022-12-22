@@ -1,26 +1,23 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Library for parsing mathematical expressions"
 HOMEPAGE="http://muparser.beltoforion.de/"
 SRC_URI="https://github.com/beltoforion/muparser/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}"/muparser-${PV}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc test"
-RESTRICT="!test? ( test )"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.32-parallel-build.patch
-)
+S=${WORKDIR}/muparser-${PV}
 
 src_prepare() {
-	default
-
+	epatch "${FILESDIR}"/${PN}-1.32-parallel-build.patch
 	sed -i \
 		-e 's:-O2::g' \
 		configure || die

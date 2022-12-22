@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=>=app-portage/elt-patches-20170815
+DESCRIPTION=begemot utility function library
+EAPI=0
+HOMEPAGE=http://people.freebsd.org/~harti/
+KEYWORDS=~amd64 ~amd64-fbsd ~x86-fbsd
+LICENSE=BSD
+SLOT=0
+SRC_URI=http://people.freebsd.org/~harti/libbegemot/libbegemot-1.11.tar.gz
+_eclasses_=libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=20b0d8fb4c7cd30782e786691f060ff6

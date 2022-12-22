@@ -1,15 +1,11 @@
-BDEPEND=test? ( dev-util/cppcheck ) >=dev-vcs/git-1.8.2.1[curl] dev-util/ninja dev-util/cmake
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-libs/boost:=[threads(+)]
+DEPEND=dev-libs/boost:=[threads] >=dev-vcs/git-1.8.2.1[curl] sys-devel/make >=dev-util/cmake-3.9.6
 DESCRIPTION=A ROS-independent package for logging into rosconsole/rosout
-EAPI=7
-HOMEPAGE=https://wiki.ros.org/console_bridge
-IUSE=test
+EAPI=5
+HOMEPAGE=http://wiki.ros.org/console_bridge
 LICENSE=BSD
 PROPERTIES=live
-RDEPEND=dev-libs/boost:=[threads(+)]
-RESTRICT=!test? ( test )
-SLOT=0/1
-SRC_URI=https://raw.githubusercontent.com/ament/ament_lint/0.9.5/ament_cppcheck/ament_cppcheck/main.py -> console_bridge-9999-ament-0.9.5-cppcheck.py https://raw.githubusercontent.com/ament/ament_lint/0.9.5/ament_cpplint/ament_cpplint/cpplint.py -> console_bridge-9999-ament-0.9.5-cpplint.py
-_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=229138a3716bee6e982212ddf6c0036f
+RDEPEND=dev-libs/boost:=[threads]
+SLOT=0/4
+_eclasses_=cmake-utils	77cd39e6009811bf97a59d91ffd5b54f	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=c41890e6a6483cac7e67175e1b9907e1

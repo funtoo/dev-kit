@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
 inherit autotools
 
@@ -11,22 +11,17 @@ SRC_URI="https://github.com/google/gumbo-parser/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv ~s390 x86 ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc test"
-RESTRICT="!test? ( test )"
+KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
-DEPEND="test? ( dev-cpp/gtest )"
-BDEPEND="doc? ( app-doc/doxygen )"
+IUSE="doc test"
 
 S="${WORKDIR}/gumbo-parser-${PV}"
 
-src_prepare() {
-	default
-	eautoreconf
-}
+DEPEND="test? ( dev-cpp/gtest )
+	doc? ( app-doc/doxygen )"
 
-src_configure() {
-	econf --disable-static
+src_prepare() {
+	eautoreconf
 }
 
 src_compile() {
@@ -34,13 +29,16 @@ src_compile() {
 
 	if use doc; then
 		doxygen || die "doxygen failed"
-		HTML_DOCS=( docs/html/. )
 	fi
 }
 
 src_install() {
 	default
-	use doc && doman docs/man/man3/*
 
-	find "${ED}" -name '*.la' -delete || die
+	if use doc; then
+		dohtml -r docs/html/.
+		for page in docs/man/man3/* ; do
+			doman ${page}
+		done
+	fi
 }

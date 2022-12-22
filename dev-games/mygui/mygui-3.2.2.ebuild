@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -16,8 +16,7 @@ SRC_URI="https://github.com/MyGUI/mygui/archive/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug doc +ogre opengl plugins samples static-libs test tools l10n_ru"
-RESTRICT="!test? ( test )"
+IUSE="debug doc +ogre -opengl plugins samples static-libs test tools l10n_ru"
 REQUIRED_USE="ogre? ( !opengl )
 	opengl? ( !ogre )"
 
@@ -41,7 +40,6 @@ PATCHES=(
 	"${FILESDIR}"/${P}-underlinking.patch
 	"${FILESDIR}"/${P}-build.patch
 	"${FILESDIR}"/${P}-FHS.patch
-	"${FILESDIR}"/${P}-c++17.patch
 )
 
 pkg_setup() {

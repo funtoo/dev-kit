@@ -1,4 +1,4 @@
-# Copyright 2019-2021 Gentoo Authors
+# Copyright 2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,21 +10,23 @@ HOMEPAGE="https://freaklabs.org/chibiarduino/"
 #GIT_COMMIT="ff3ebd11934c123091d485e6dc2845d78bda4255"
 #SRC_URI="https://github.com/freaklabs/freaklabs-boards/archive/${GIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 #S="${WORKDIR}/${PN}-${GIT_COMMIT}"
-
-SRC_URI="https://freaklabs.org/pub/chibiArduino/boards/freaklabs-v${PV}-manual%20install.zip -> freaklabs-v${PV}-manual-install.zip"
 S="${WORKDIR}/freaklabs-v1.0.0"
+
+SRC_URI="https://freaklabs.org/pub/chibiArduino/boards/freaklabs-v${PV}-manual%20install.zip"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-BDEPEND="app-arch/unzip"
+DEPEND=""
+RDEPEND="${DEPEND}"
+BDEPEND=""
 PDEPEND="dev-embedded/arduino"
 
 src_install() {
 	insinto /usr/share/arduino/hardware/freaklabs/avr
 	doins -r avr/*
-
 	#non working 1.0.3
 	#doins -r boards/1.0.3/{boards.txt,platform.local.txt,variants,bootloaders}
 }

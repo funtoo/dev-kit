@@ -1,15 +1,18 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Perl script to colorise the gcc output."
 HOMEPAGE="http://schlueters.de/colorgcc.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ppc sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+LICENSE="GPL-2"
+KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE=""
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"
@@ -21,21 +24,24 @@ PATCHES=(
 	"${FILESDIR}"/${P}-nohang.patch
 )
 
+src_prepare() {
+	epatch "${PATCHES[@]}"
+}
+
 src_install() {
-	dobin ${PN}
-
-	insinto /etc/${PN}
-	doins ${PN}rc
-
+	dobin "${PN}"
+	dodir "/etc/${PN}" "/usr/lib/${PN}/bin"
+	insinto "/etc/${PN}"
+	doins "${PN}rc"
 	einfo "Scanning for compiler front-ends"
-	dodir /usr/lib/${PN}/bin
-	local c COMPILERS=( gcc cc c++ g++ ${CHOST}-gcc ${CHOST}-c++ ${CHOST}-g++ )
+	into "/usr/lib/${PN}/bin"
+	local COMPILERS=( gcc cc c++ g++ ${CHOST}-gcc ${CHOST}-c++ ${CHOST}-g++ )
 	for c in "${COMPILERS[@]}"; do
 		[[ -n "$(type -p ${c})" ]] && \
-			dosym ../../../bin/${PN} /usr/lib/${PN}/bin/${c}
+			dosym "/usr/bin/${PN}" "/usr/lib/${PN}/bin/${c}"
 	done
 
-	einstalldocs
+	dodoc CREDITS ChangeLog
 }
 
 pkg_postinst() {

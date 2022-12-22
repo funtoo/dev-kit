@@ -1,5 +1,5 @@
---- a/memprof.desktop
-+++ b/memprof.desktop
+--- memprof.desktop
++++ memprof.desktop
 @@ -11,17 +11,13 @@
  Name[uk]=MemProf
  Comment=Check a program for leaks and analyze its memory usage

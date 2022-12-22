@@ -1,46 +1,25 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_P=uudeview-${PV}
 
 DESCRIPTION="Library that supports Base64 (MIME), uuencode, xxencode and binhex coding"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"
 SRC_URI="http://www.fpx.de/fp/Software/UUDeview/download/${MY_P}.tar.gz"
-S="${WORKDIR}"/${MY_P}/${PN}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE=""
 
-BDEPEND="sys-devel/libtool"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-shared.patch
-)
+S=${WORKDIR}/${MY_P}/${PN}
 
 src_prepare() {
-	default
-
+	epatch "${FILESDIR}/${P}-shared.patch"
 	sed -i 's:\<ar\>:$(AR):' Makefile.in || die
-	# Fix Darwin and other platforms with a non-GNU default libtool
-	sed -i 's/libtool/$(LIBTOOL)/' Makefile.in || die
-}
-
-src_configure() {
 	tc-export AR CC RANLIB
-	econf
-}
-
-src_compile() {
-	if use prefix ; then
-		LIBTOOL=glibtool
-	else
-		LIBTOOL=libtool
-	fi
-
-	LIBTOOL="${LIBTOOL}" emake
 }
