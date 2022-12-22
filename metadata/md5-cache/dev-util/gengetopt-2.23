@@ -1,11 +1,11 @@
 BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-DEFINED_PHASES=configure prepare
+DEFINED_PHASES=prepare
 DESCRIPTION=A tool to write command line option parsing code for C programs
 EAPI=7
 HOMEPAGE=https://www.gnu.org/software/gengetopt/
-KEYWORDS=~amd64 ~arm ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris
+KEYWORDS=amd64 arm ~arm64 ~hppa ppc ppc64 ~riscv x86 ~x64-cygwin ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://gnu/gengetopt/gengetopt-2.23.tar.xz
 _eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=048c7ad5e0070ccb05e19c6f6d622000
+_md5_=450ef9149d58864bc88386737731fd7a

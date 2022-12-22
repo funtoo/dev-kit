@@ -1,0 +1,11 @@
+BDEPEND=app-text/texi2html sys-apps/texinfo >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare test unpack
+DESCRIPTION=A Debug Malloc Library
+EAPI=7
+HOMEPAGE=https://dmalloc.com
+IUSE=threads
+LICENSE=ISC
+PROPERTIES=live
+SLOT=0
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=bcba3397768bf275458f7ebcf4784f43

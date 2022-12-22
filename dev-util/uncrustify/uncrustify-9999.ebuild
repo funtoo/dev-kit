@@ -1,9 +1,9 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-if [[ $PV == *9999* ]]; then
+if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 	scm_eclass=git-r3
 else
@@ -12,9 +12,9 @@ else
 	S=${WORKDIR}/${PN}-${P}
 fi
 
-inherit cmake-utils ${scm_eclass}
+inherit cmake ${scm_eclass}
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit python-any-r1
 
@@ -24,10 +24,10 @@ HOMEPAGE="http://uncrustify.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
-DEPEND="test? ( ${PYTHON_DEPS} )"
+BDEPEND="test? ( ${PYTHON_DEPS} )"
 
-python_test() {
-	cd tests
-	${EPYTHON} run_tests.py || die "tests failed"
+pkg_setup() {
+	use test && python-any-r1_pkg_setup
 }

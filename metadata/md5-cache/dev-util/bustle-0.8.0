@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm setup test
+DEPEND=dev-haskell/cairo:= dev-haskell/gio:= dev-haskell/glib:= dev-haskell/gtk3:= >=dev-haskell/mtl-2.2.1:= dev-haskell/pango:= dev-haskell/text:= >=dev-lang/ghc-8.4.3:= dev-libs/glib:2 net-libs/libpcap >=dev-haskell/cabal-2.2.0.1 virtual/pkgconfig test? ( dev-haskell/hunit dev-haskell/quickcheck dev-haskell/test-framework dev-haskell/test-framework-hunit )
+DESCRIPTION=Draw sequence diagrams of D-Bus traffic
+EAPI=7
+HOMEPAGE=https://gitlab.freedesktop.org/bustle/bustle#readme
+IUSE=interactivetests +threaded test
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1 GPL-2 GPL-3
+RDEPEND=dev-haskell/cairo:= dev-haskell/gio:= dev-haskell/glib:= dev-haskell/gtk3:= >=dev-haskell/mtl-2.2.1:= dev-haskell/pango:= dev-haskell/text:= >=dev-lang/ghc-8.4.3:= dev-libs/glib:2 net-libs/libpcap
+SLOT=0
+SRC_URI=https://hackage.haskell.org/package/bustle-0.8.0/bustle-0.8.0.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ghc-package	fac7ea2deca456f8e70b85a6ebef9e8a	haskell-cabal	29d0cddd97161a1753d846582e274f0d	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=46163976cf73153cb6d6981d06dead92

@@ -1,13 +1,13 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+PYTHON_COMPAT=( python{3_7,3_8} )
 MY_PV=${PV/_p/-}
 MY_P=${PN}-${MY_PV}
 
-inherit cmake-utils linux-info python-single-r1 toolchain-funcs
+inherit cmake linux-info python-single-r1 toolchain-funcs
 
 DESCRIPTION="Library for communicating with the Pulse-Eight USB HDMI-CEC Adaptor"
 HOMEPAGE="http://libcec.pulse-eight.com"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/Pulse-Eight/${PN}/archive/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE="cubox exynos python raspberry-pi +xrandr"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -43,7 +43,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cmake-utils_src_prepare
+	cmake_src_prepare
 
 	# Do not hardcode the python libpath #577612
 	sed -i \
@@ -68,7 +68,7 @@ src_configure() {
 		-DRPI_LIB_DIR=$( $(tc-getPKG_CONFIG) --variable=libdir bcm_host)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 pkg_postinst() {

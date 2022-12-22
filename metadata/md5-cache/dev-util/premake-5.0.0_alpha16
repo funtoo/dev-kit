@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install test
+DESCRIPTION=A makefile generation tool
+EAPI=8
+HOMEPAGE=https://premake.github.io
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=BSD
+SLOT=5
+SRC_URI=https://github.com/premake/premake-core/archive/v5.0.0-alpha16.tar.gz -> premake-5.0.0_alpha16.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=5b7ffcced4219e38bf3949e2ee18616e

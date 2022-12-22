@@ -1,0 +1,14 @@
+BDEPEND=sys-apps/texinfo >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install postinst postrm prepare
+DEPEND=>=sys-libs/gdbm-1.8.0:= virtual/libcrypt:= emacs? ( >=app-editors/emacs-23.1:* ) gmp? ( dev-libs/gmp:= ) readline? ( sys-libs/readline:0= )
+DESCRIPTION=Shared library implementing a Lisp dialect
+EAPI=7
+HOMEPAGE=https://sawfish.fandom.com/
+IUSE=emacs gmp readline
+KEYWORDS=~alpha amd64 ~ia64 ppc ppc64 sparc x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/gdbm-1.8.0:= virtual/libcrypt:= emacs? ( >=app-editors/emacs-23.1:* ) gmp? ( dev-libs/gmp:= ) readline? ( sys-libs/readline:0= )
+SLOT=0
+SRC_URI=https://download.tuxfamily.org/librep/librep_0.92.7.tar.xz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	elisp-common	23f47b2e1de7abf387105eddd1318738	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=e9a7ab503f24cd4826cfd3ea5d5d1f85

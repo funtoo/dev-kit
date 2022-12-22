@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,15 +11,14 @@ SRC_URI="https://github.com/sqlcipher/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
-IUSE="debug libedit readline libressl static-libs tcl test"
+IUSE="debug libedit readline static-libs tcl test"
 
 # Tcl is always needed by buildsystem
 RDEPEND="
 	libedit? ( dev-libs/libedit[${MULTILIB_USEDEP}] )
-	!libressl? ( dev-libs/openssl:0=[${MULTILIB_USEDEP}] )
-	libressl? ( dev-libs/libressl:0=[${MULTILIB_USEDEP}] )
+	dev-libs/openssl:0=[${MULTILIB_USEDEP}]
 	readline? ( sys-libs/readline:0=[${MULTILIB_USEDEP}] )
 	tcl? ( dev-lang/tcl:=[${MULTILIB_USEDEP}] )
 "
@@ -35,15 +34,19 @@ REQUIRED_USE="
 
 DOCS=( README.md )
 
+# Testsuite fails, bug #692310
+RESTRICT="test"
+
 src_prepare() {
 	# Column metadata added due to bug #670346
 	append-cflags -DSQLITE_HAS_CODEC -DSQLITE_ENABLE_COLUMN_METADATA
-	default_src_prepare
+
+	default
 	eautoreconf
 }
 
 multilib_src_configure() {
-	ECONF_SOURCE=${S} \
+	ECONF_SOURCE="${S}" \
 	econf \
 		--enable-fts3 \
 		--enable-fts4 \

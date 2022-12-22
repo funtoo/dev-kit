@@ -1,8 +1,8 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit toolchain-funcs versionator
+inherit flag-o-matic toolchain-funcs versionator
 
 MY_P=${PN}_$(replace_all_version_separators '_')
 
@@ -27,6 +27,9 @@ src_configure() {
 	# other flags will break duma
 	export CFLAGS="-O0 -Wall -Wextra -U_FORTIFY_SOURCE"
 	tc-export AR CC CXX LD RANLIB
+
+	# bug #789708
+	append-cxxflags -std=c++14
 
 	case "${CHOST}" in
 		*-linux-gnu)
@@ -68,7 +71,7 @@ src_test() {
 	elog "Both static and dynamic confidence tests should say PASSED."
 }
 
-src_install(){
+src_install() {
 	emake prefix="${D}/usr" libdir="${D}/usr/$(get_libdir)" \
 		docdir="${D}/usr/share/doc/${PF}" install
 
@@ -78,8 +81,8 @@ src_install(){
 	dodoc CHANGELOG TODO GNUmakefile
 
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins example[1-6].cpp example_makes/ex6/Makefile
+		docinto examples
+		dodoc example[1-6].cpp example_makes/ex6/Makefile
 	fi
 }
 

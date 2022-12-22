@@ -1,0 +1,15 @@
+BDEPEND=dev-util/gtk-doc-am virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=examples? ( dev-libs/glib:2 )
+DESCRIPTION=Library of simple functions that are optimized for various CPUs
+EAPI=7
+HOMEPAGE=https://liboil.freedesktop.org/
+IUSE=+examples test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS=~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+LICENSE=BSD-2
+RDEPEND=examples? ( dev-libs/glib:2 )
+RESTRICT=!test? ( test )
+SLOT=0.3
+SRC_URI=https://liboil.freedesktop.org/download/liboil-0.3.17.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=faff30a5e79fd57f9a001cb28bab85b3

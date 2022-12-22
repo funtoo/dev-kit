@@ -1,11 +1,10 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 ROS_REPO_URI="https://github.com/ros-visualization/python_qt_binding"
 KEYWORDS="~amd64 ~arm"
-PYTHON_COMPAT=( python{2_7,3_5} )
 
 inherit ros-catkin
 
@@ -15,6 +14,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	dev-python/PyQt5[gui,widgets,${PYTHON_USEDEP}]
+	$(python_gen_cond_dep "dev-python/PyQt5[gui,widgets,printsupport,\${PYTHON_USEDEP}]")
 "
 DEPEND="${RDEPEND}"

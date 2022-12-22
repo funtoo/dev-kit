@@ -1,9 +1,9 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils autotools
+inherit autotools
 
 DESCRIPTION="A collection of powerful tools for manipulating EPROM load files"
 HOMEPAGE="http://srecord.sourceforge.net/"
@@ -13,6 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="static-libs test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="dev-libs/libgcrypt:0"
 DEPEND="${RDEPEND}
@@ -35,5 +36,5 @@ src_configure() {
 
 src_install() {
 	default
-	prune_libtool_files
+	find "${ED}" -name '*.la' -delete || die
 }

@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=prepare
+DEPEND=test? ( >=dev-cpp/gtest-1.8.0 )
+DESCRIPTION=Unit testing and mocking framework for C/C++
+EAPI=7
+HOMEPAGE=https://cpputest.github.io/ https://github.com/cpputest/cpputest
+IUSE=test
+KEYWORDS=amd64 arm arm64 ppc ppc64 ~riscv x86
+LICENSE=BSD
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/cpputest/cpputest/releases/download/v4.0/cpputest-4.0.tar.gz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=1b8b210d7f99aaca96f1645cc179dd97

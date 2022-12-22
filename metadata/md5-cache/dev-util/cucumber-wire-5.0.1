@@ -1,0 +1,16 @@
+BDEPEND=test? ( ruby_targets_ruby27? ( >=dev-util/cucumber-core-9.0.1:9[ruby_targets_ruby27(-)] >=dev-util/cucumber-cucumber-expressions-12.1.1:12[ruby_targets_ruby27(-)] >=dev-util/cucumber-messages-15.0.0:15[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] ) test? ( ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] ) )
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] )
+DESCRIPTION=Executable feature scenarios
+EAPI=7
+HOMEPAGE=https://cucumber.io/
+IUSE=test ruby_targets_ruby26 ruby_targets_ruby27 doc test test
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~s390 ~sparc ~x86
+LICENSE=Ruby
+RDEPEND=ruby_targets_ruby27? ( >=dev-util/cucumber-core-9.0.1:9[ruby_targets_ruby27(-)] >=dev-util/cucumber-cucumber-expressions-12.1.1:12[ruby_targets_ruby27(-)] >=dev-util/cucumber-messages-15.0.0:15[ruby_targets_ruby27(-)] ) ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] )
+REQUIRED_USE=|| ( ruby_targets_ruby27 )
+RESTRICT=!test? ( test ) !test? ( test )
+SLOT=5
+SRC_URI=https://rubygems.org/gems/cucumber-wire-5.0.1.gem
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	517b8b0e1f18ba9deb1c46ddfb88b95b	ruby-utils	daabb2a420d9b5dd405eb5474382f47b	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=78617afc6f496966049c4f30a4974303

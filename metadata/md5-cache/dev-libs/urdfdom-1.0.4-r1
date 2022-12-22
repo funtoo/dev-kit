@@ -1,0 +1,13 @@
+BDEPEND=dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-libs/urdfdom_headers-1.0.0 >=dev-libs/console_bridge-0.3:= dev-libs/tinyxml[stl] dev-libs/boost:=[threads(+)]
+DESCRIPTION=URDF (U-Robot Description Format) library
+EAPI=7
+HOMEPAGE=http://ros.org/wiki/urdf
+KEYWORDS=~amd64 ~arm
+LICENSE=BSD
+RDEPEND=>=dev-libs/urdfdom_headers-1.0.0 >=dev-libs/console_bridge-0.3:= dev-libs/tinyxml[stl] dev-libs/boost:=[threads(+)]
+SLOT=0/1
+SRC_URI=https://github.com/ros/urdfdom/archive/1.0.4.tar.gz -> urdfdom-1.0.4.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=40bcd781942ff9d2bf5d07b627d50e45

@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=ssl? ( dev-libs/openssl:0= ) zlib? ( sys-libs/zlib:0= ) test? ( dev-cpp/gtest )
+DESCRIPTION=RPC/Serialization system with capabilities support
+EAPI=7
+HOMEPAGE=https://capnproto.org
+IUSE=+ssl static-libs test zlib
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86
+LICENSE=MIT
+RDEPEND=ssl? ( dev-libs/openssl:0= ) zlib? ( sys-libs/zlib:0= )
+RESTRICT=!test? ( test )
+SLOT=0/080
+SRC_URI=https://github.com/sandstorm-io/capnproto/archive/v0.8.0.tar.gz -> capnproto-0.8.0.tar.gz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=753fe719f49a2eeb1e3be3a18e1f0078

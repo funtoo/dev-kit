@@ -1,8 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+EAPI=7
+PYTHON_COMPAT=( python3_{7,8} )
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -13,10 +13,9 @@ fi
 inherit ${SCM} distutils-r1
 
 DESCRIPTION="Command-line tools for maintaining a workspace of projects for ROS"
-HOMEPAGE="http://wiki.ros.org/rosinstall http://wiki.ros.org/roslocate"
+HOMEPAGE="https://wiki.ros.org/rosinstall https://wiki.ros.org/roslocate"
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SRC_URI=""
-	KEYWORDS=""
 else
 	SRC_URI="http://download.ros.org/downloads/${PN}/${P}.tar.gz
 		https://github.com/vcstools/rosinstall/archive/${PV}.tar.gz -> ${P}.tar.gz
@@ -27,6 +26,7 @@ fi
 LICENSE="BSD"
 SLOT="0"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-python/catkin_pkg[${PYTHON_USEDEP}]

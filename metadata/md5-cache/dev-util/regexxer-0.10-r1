@@ -1,0 +1,13 @@
+BDEPEND=dev-util/intltool virtual/pkgconfig sys-devel/gettext >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare
+DEPEND=dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-cpp/gtksourceviewmm:3.0 dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=An interactive tool for performing search and replace operations
+EAPI=7
+HOMEPAGE=http://regexxer.sourceforge.net/
+KEYWORDS=amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-cpp/gtksourceviewmm:3.0
+SLOT=0
+SRC_URI=mirror://sourceforge/regexxer/regexxer-0.10.tar.xz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome.org	532d56d07b9eace4831aaa817d2b756a	gnome2	6ba4e4d30451c4550e61b9eac4484ba9	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=7179ff7f9eca8f7c79664be0f048387f

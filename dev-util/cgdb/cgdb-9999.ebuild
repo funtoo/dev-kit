@@ -1,28 +1,30 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 if [[ ${PV} = *9999* ]]; then
+	EGIT_REPO_URI="https://github.com/cgdb/cgdb.git"
 	inherit git-r3
-	EGIT_REPO_URI="
-		https://github.com/cgdb/cgdb.git
-		git@github.com:cgdb/cgdb.git"
 else
 	SRC_URI="https://github.com/cgdb/cgdb/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 fi
-inherit multilib-minimal
+
+inherit autotools multilib-minimal
 
 DESCRIPTION="A curses front-end for GDB, the GNU debugger"
-HOMEPAGE="http://cgdb.github.io/"
+HOMEPAGE="https://cgdb.github.io/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
-	sys-libs/ncurses:0=
+	sys-libs/ncurses:=
 	sys-libs/readline:0="
+RDEPEND="${DEPEND}
+	sys-devel/gdb"
 
 BDEPEND="
 	test? (
@@ -30,15 +32,16 @@ BDEPEND="
 		app-misc/dtach
 	)"
 
-RDEPEND="
-	${DEPEND}
-	sys-devel/gdb"
-
 DOCS=( AUTHORS ChangeLog FAQ INSTALL NEWS README.md )
+
+PATCHES=(
+	# Bug: #724256
+	"${FILESDIR}/${P}-respect-AR.patch"
+)
 
 src_prepare() {
 	default
-	./autogen.sh || die
+	AT_M4DIR="config" eautoreconf
 }
 
 multilib_src_test() {

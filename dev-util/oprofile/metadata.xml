@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
     <email>bircoph@gentoo.org</email>
     <name>Andrew Savchenko</name>
   </maintainer>
-  <longdescription>A transparent low-overhead system-wide profiler</longdescription>
+  <use>
+     <flag name="apidoc">Provide doxygen generated API docs.</flag>
+  </use>
   <upstream>
     <remote-id type="sourceforge">oprofile</remote-id>
   </upstream>

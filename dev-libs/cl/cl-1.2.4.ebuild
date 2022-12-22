@@ -1,12 +1,12 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit eutils multilib
+inherit multilib
 
 DESCRIPTION="OpenCL bindings for Erlang"
 HOMEPAGE="https://github.com/tonyrog/cl"
-SRC_URI="${HOMEPAGE}/archive/${P}.tar.gz"
+SRC_URI="https://github.com/tonyrog/cl/archive/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

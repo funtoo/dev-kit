@@ -1,0 +1,15 @@
+BDEPEND=dev-perl/Template-Toolkit dev-perl/XML-Simple graphviz? ( dev-perl/GraphViz ) test? ( dev-perl/Test-Pod ) dev-lang/perl:=
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl:=
+DESCRIPTION=Parses source code, XML or data and produces an XML document in Dia format
+EAPI=7
+HOMEPAGE=http://www.aarontrevena.co.uk/opensource/autodia/ https://metacpan.org/release/Autodia
+IUSE=graphviz test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/Template-Toolkit dev-perl/XML-Simple graphviz? ( dev-perl/GraphViz ) dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/T/TE/TEEJAY/Autodia-2.14.tar.gz mirror://gentoo/Autodia-2.14-dbi.patch.gz
+_eclasses_=multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	perl-module	768f1dfc0a27ff40f1ece5cb8c22714a
+_md5_=09818f4296ed225c5a733170d5187a98

@@ -1,0 +1,15 @@
+BDEPEND=dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=gflags? ( dev-cpp/gflags:0=[-mgorny(-)] ) libunwind? ( llvm-libunwind? ( sys-libs/llvm-libunwind:0=[-mgorny(-)] ) !llvm-libunwind? ( sys-libs/libunwind:0=[-mgorny(-)] ) ) test? ( >=dev-cpp/gtest-1.8.0[-mgorny(-)] )
+DESCRIPTION=Google Logging library
+EAPI=7
+HOMEPAGE=https://github.com/google/glog
+IUSE=gflags +libunwind llvm-libunwind test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS=~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc64 ~s390 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=gflags? ( dev-cpp/gflags:0=[-mgorny(-)] ) libunwind? ( llvm-libunwind? ( sys-libs/llvm-libunwind:0=[-mgorny(-)] ) !llvm-libunwind? ( sys-libs/libunwind:0=[-mgorny(-)] ) )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/google/glog/archive/v0.5.0.tar.gz -> glog-0.5.0.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	cmake-multilib	b396704c8c04bb210b7b45dff5c67fea	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=58f1afa0cf448dce3d80c8ecd5618ddf

@@ -1,13 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=8
 
-EGIT_REPO_URI="git://git.sv.gnu.org/quilt.git"
+EGIT_REPO_URI="https://git.savannah.gnu.org/git/quilt.git"
 
-[[ ${PV} == 9999 ]] && inherit git-2
+[[ ${PV} == 9999 ]] && inherit git-r3
 
-inherit bash-completion-r1 eutils
+inherit bash-completion-r1
 
 DESCRIPTION="quilt patch manager"
 HOMEPAGE="https://savannah.nongnu.org/projects/quilt"
@@ -16,7 +16,7 @@ HOMEPAGE="https://savannah.nongnu.org/projects/quilt"
 LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-solaris"
 IUSE="graphviz elibc_Darwin elibc_SunOS"
 
 RDEPEND="
@@ -25,13 +25,16 @@ RDEPEND="
 	sys-apps/ed
 	elibc_Darwin? ( app-misc/getopt )
 	elibc_SunOS? ( app-misc/getopt )
-	>=sys-apps/coreutils-8.5
+	>=sys-apps/coreutils-8.32-r1
 	graphviz? ( media-gfx/graphviz )
 "
 
 src_prepare() {
+
+	default
+
 	# Add support for USE=graphviz
-	use graphviz || epatch "${FILESDIR}/${PN}-0.60-no-graphviz.patch"
+	use graphviz || eapply "${FILESDIR}/${PN}-0.66-no-graphviz.patch"
 
 	# remove failing test, because it fails on root-build
 	rm -rf test/delete.test
@@ -45,14 +48,13 @@ src_configure() {
 }
 
 src_install() {
-	emake BUILD_ROOT="${ED}" install
-
-	rm -rf "${ED}"/usr/share/doc/${P}
-	dodoc AUTHORS TODO quilt.changes doc/README doc/README.MAIL \
-		doc/quilt.pdf
+	emake BUILD_ROOT="${D}" install
 
 	rm -rf "${ED}"/etc/bash_completion.d
 	newbashcomp bash_completion ${PN}
+
+	rm -rf "${ED}"/usr/share/doc/${PN}
+	dodoc AUTHORS TODO "doc/README" "doc/README.MAIL" "doc/quilt.pdf"
 
 	# Remove the compat symlinks
 	rm -rf "${ED}"/usr/share/quilt/compat
@@ -62,7 +64,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! has_version app-emacs/quilt-el ; then
+	if ! has_version -r 'app-emacs/quilt-el' ; then
 		elog "If you plan to use quilt with emacs consider installing \"app-emacs/quilt-el\""
 	fi
 }

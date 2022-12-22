@@ -1,7 +1,7 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit autotools
 
@@ -11,10 +11,15 @@ SRC_URI="http://www.codesink.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="doc examples"
 
-DEPEND="doc? ( app-doc/doxygen )"
+BDEPEND="doc? ( app-doc/doxygen )"
+
+PATCHES=(
+	"${FILESDIR}/signed-char.patch"
+	"${FILESDIR}/${P}-build-mmap.patch"
+)
 
 src_prepare() {
 	default
@@ -44,5 +49,6 @@ src_install() {
 		dodoc examples/{README,TODO,test.msg,*.cxx,*.h}
 	fi
 
-	rm "${D}"/usr/$(get_libdir)/libmimetic.la || die
+	# bug #778887
+	find "${ED}" -name '*.la' -delete || die
 }

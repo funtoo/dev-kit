@@ -5,10 +5,10 @@ EAPI=7
 
 DESCRIPTION="Official ODBC driver for PostgreSQL"
 HOMEPAGE="https://odbc.postgresql.org/"
-SRC_URI="mirror://postgresql/odbc/versions/src/${P}.tar.gz"
+SRC_URI="https://ftp.postgresql.org/pub/odbc/versions/src/${P}.tar.gz"
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc iodbc ssl threads"
 
 DEPEND="dev-db/postgresql:*[ssl?]
