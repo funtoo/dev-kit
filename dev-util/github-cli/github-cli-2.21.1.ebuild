@@ -67,12 +67,13 @@ EGO_SUM=(
 	"github.com/cli/browser v1.1.0/go.mod"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03"
 	"github.com/cli/crypto v0.0.0-20210929142629-6be313f59b03/go.mod"
-	"github.com/cli/go-gh v0.1.3-0.20221102170023-e3ec45fb1d1b"
-	"github.com/cli/go-gh v0.1.3-0.20221102170023-e3ec45fb1d1b/go.mod"
+	"github.com/cli/go-gh v1.0.0"
+	"github.com/cli/go-gh v1.0.0/go.mod"
 	"github.com/cli/oauth v0.9.0"
 	"github.com/cli/oauth v0.9.0/go.mod"
-	"github.com/cli/safeexec v1.0.0"
 	"github.com/cli/safeexec v1.0.0/go.mod"
+	"github.com/cli/safeexec v1.0.1"
+	"github.com/cli/safeexec v1.0.1/go.mod"
 	"github.com/cli/shurcoo!l-graphql v0.0.2"
 	"github.com/cli/shurcoo!l-graphql v0.0.2/go.mod"
 	"github.com/client9/misspell v0.3.4/go.mod"
@@ -175,8 +176,8 @@ EGO_SUM=(
 	"github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec"
 	"github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec/go.mod"
 	"github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod"
-	"github.com/inconshreveable/mousetrap v1.0.0"
-	"github.com/inconshreveable/mousetrap v1.0.0/go.mod"
+	"github.com/inconshreveable/mousetrap v1.0.1"
+	"github.com/inconshreveable/mousetrap v1.0.1/go.mod"
 	"github.com/itchyny/gojq v0.12.8"
 	"github.com/itchyny/gojq v0.12.8/go.mod"
 	"github.com/itchyny/timefmt-go v0.1.3"
@@ -244,8 +245,8 @@ EGO_SUM=(
 	"github.com/shurcoo!l/graphql v0.0.0-20220606043923-3cf50f8a0a29/go.mod"
 	"github.com/sourcegraph/jsonrpc2 v0.1.0"
 	"github.com/sourcegraph/jsonrpc2 v0.1.0/go.mod"
-	"github.com/spf13/cobra v1.5.0"
-	"github.com/spf13/cobra v1.5.0/go.mod"
+	"github.com/spf13/cobra v1.6.1"
+	"github.com/spf13/cobra v1.6.1/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
 	"github.com/stretchr/objx v0.1.0/go.mod"
@@ -348,8 +349,8 @@ EGO_SUM=(
 	"golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e/go.mod"
 	"golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a/go.mod"
 	"golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208/go.mod"
-	"golang.org/x/sync v0.0.0-20210220032951-036812b2e83c"
-	"golang.org/x/sync v0.0.0-20210220032951-036812b2e83c/go.mod"
+	"golang.org/x/sync v0.1.0"
+	"golang.org/x/sync v0.1.0/go.mod"
 	"golang.org/x/sys v0.0.0-20180830151530-49385e6e1522/go.mod"
 	"golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod"
 	"golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223/go.mod"
@@ -539,7 +540,6 @@ EGO_SUM=(
 	"gopkg.in/errgo.v2 v2.1.0/go.mod"
 	"gopkg.in/h2non/gock.v1 v1.1.2"
 	"gopkg.in/yaml.v2 v2.2.2/go.mod"
-	"gopkg.in/yaml.v2 v2.4.0/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
 	"gopkg.in/yaml.v3 v3.0.1"
 	"gopkg.in/yaml.v3 v3.0.1/go.mod"
@@ -559,7 +559,7 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.20.2 -> cli-v2.20.2.tar.gz
+SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.21.1 -> cli-v2.21.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
@@ -574,7 +574,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.20.2"
+	export GH_VERSION="v2.21.1"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
