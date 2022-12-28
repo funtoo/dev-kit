@@ -109,14 +109,14 @@ regex-syntax-0.6.28
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.5
+rustix-0.36.6
 ryu-1.0.12
 same-file-1.0.6
 schannel-0.1.20
 semver-1.0.16
-serde-1.0.151
+serde-1.0.152
 serde-value-0.7.0
-serde_derive-1.0.151
+serde_derive-1.0.152
 serde_ignored-0.1.6
 serde_json-1.0.91
 shell-escape-0.1.5
