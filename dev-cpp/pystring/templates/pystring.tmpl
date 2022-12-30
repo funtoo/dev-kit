@@ -19,7 +19,8 @@ LICENSE="BSD"
 SLOT="0"
 
 PATCHES=(
-	# Patch to convert the project into cmake. Taken from:
+	# https://bugs.funtoo.org/browse/FL-10883
+	# Upstream recently added a simple CMakeLists.txt but it does not install pystring header files
 	# https://github.com/imageworks/pystring/pull/29
 	"${FILESDIR}/cmake.patch"
 )

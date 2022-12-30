@@ -1,43 +1,37 @@
-From 4f653fc35421129eae8a2c424901ca7170059370 Mon Sep 17 00:00:00 2001
-From: Harry Mallon <harry.mallon@codex.online>
-Date: Thu, 15 Apr 2021 15:50:22 +0100
-Subject: [PATCH] Add a CMake configuration
-
----
- CMakeLists.txt                | 56 +++++++++++++++++++++++++++++++++++
- cmake/pystringConfig.cmake.in |  4 +++
- 2 files changed, 60 insertions(+)
- create mode 100644 CMakeLists.txt
- create mode 100644 cmake/pystringConfig.cmake.in
-
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-new file mode 100644
-index 0000000..0081a83
---- /dev/null
+index fed418f..0081a83 100644
+--- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -0,0 +1,56 @@
-+cmake_minimum_required(VERSION 3.2)
-+
+@@ -1,22 +1,56 @@
+ cmake_minimum_required(VERSION 3.2)
+-project(pystring CXX)
+
+-set(BUILD_SHARED_LIBS YES)
 +option(BUILD_SHARED_LIBS "Create shared libraries if ON" OFF)
 +
 +project(pystring LANGUAGES CXX)
 +
 +# pystring library ======
-+
-+add_library(pystring
-+    pystring.cpp
-+    pystring.h
-+)
+
+ add_library(pystring
+     pystring.cpp
+     pystring.h
+ )
 +set_target_properties(pystring
 +    PROPERTIES
 +        PUBLIC_HEADER pystring.h
 +        SOVERSION 0.0)
-+
+
+-add_executable (pystring_test test.cpp)
+-TARGET_LINK_LIBRARIES (pystring_test pystring)
 +set(EXPORT_NAME "${PROJECT_NAME}Targets")
 +set(NAMESPACE "${PROJECT_NAME}::")
-+
+
+-enable_testing()
+-add_test(NAME PyStringTest COMMAND pystring_test)
 +# test ======
-+
+
+-include(GNUInstallDirs)
 +include(CTest)
 +
 +if(BUILD_TESTING)
@@ -50,11 +44,13 @@ index 0000000..0081a83
 +
 +    add_test(NAME pystring_test COMMAND pystring_test)
 +endif()
-+
+
 +# install and cmake configs ======
 +
 +include(GNUInstallDirs)
-+install(TARGETS pystring
+ install(TARGETS pystring
+-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-)
 +        EXPORT "${EXPORT_NAME}"
 +        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 +        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -68,7 +64,7 @@ index 0000000..0081a83
 +
 +install(FILES ${CMAKE_CURRENT_BINARY_DIR}/pystringConfig.cmake
 +    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pystring)
-+
+
 +install(EXPORT "${EXPORT_NAME}"
 +        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pystring
 +        NAMESPACE "${NAMESPACE}")
