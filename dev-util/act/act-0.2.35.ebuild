@@ -268,16 +268,16 @@ EGO_SUM=(
 	"github.com/dgryski/go-sip13 v0.0.0-20181026042036-e10d5fee7954/go.mod"
 	"github.com/dnaeon/go-vcr v1.0.1/go.mod"
 	"github.com/docker/cli v0.0.0-20191017083524-a8ff7f821017/go.mod"
-	"github.com/docker/cli v20.10.21+incompatible"
-	"github.com/docker/cli v20.10.21+incompatible/go.mod"
+	"github.com/docker/cli v20.10.22+incompatible"
+	"github.com/docker/cli v20.10.22+incompatible/go.mod"
 	"github.com/docker/distribution v0.0.0-20190905152932-14b96e55d84c/go.mod"
 	"github.com/docker/distribution v2.7.1-0.20190205005809-0d3efadf0154+incompatible/go.mod"
 	"github.com/docker/distribution v2.7.1+incompatible/go.mod"
 	"github.com/docker/distribution v2.8.1+incompatible"
 	"github.com/docker/distribution v2.8.1+incompatible/go.mod"
 	"github.com/docker/docker v1.4.2-0.20190924003213-a8608b5b67c7/go.mod"
-	"github.com/docker/docker v20.10.21+incompatible"
-	"github.com/docker/docker v20.10.21+incompatible/go.mod"
+	"github.com/docker/docker v20.10.22+incompatible"
+	"github.com/docker/docker v20.10.22+incompatible/go.mod"
 	"github.com/docker/docker-credential-helpers v0.6.3/go.mod"
 	"github.com/docker/docker-credential-helpers v0.6.4"
 	"github.com/docker/docker-credential-helpers v0.6.4/go.mod"
@@ -1214,7 +1214,7 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.34 -> act-0.2.34.tar.gz
+SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.35 -> act-0.2.35.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 RDEPEND="
