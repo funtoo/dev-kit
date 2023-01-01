@@ -1,15 +1,15 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( ruby_targets_ruby27? ( >=dev-util/cucumber-3.0.2[ruby_targets_ruby27(-)] <dev-util/cucumber-4[ruby_targets_ruby27(-)] >=dev-ruby/nokogiri-1.8[ruby_targets_ruby27(-)] >=dev-ruby/capybara-1.1.2:*[ruby_targets_ruby27(-)] <dev-ruby/capybara-4:*[ruby_targets_ruby27(-)] >=dev-ruby/railties-4:*[ruby_targets_ruby27(-)] <dev-ruby/railties-6:*[ruby_targets_ruby27(-)] >=dev-ruby/mime-types-1.17:*[ruby_targets_ruby27(-)] <dev-ruby/mime-types-4:*[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby27(-)] >=dev-ruby/rspec-core-2.14.8-r2[ruby_targets_ruby27(-)] ) ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] ) test? ( ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] ) )
+DEPEND=test? ( ruby_targets_ruby30? ( >=dev-util/cucumber-3.0.2[ruby_targets_ruby30(-)] <dev-util/cucumber-4[ruby_targets_ruby30(-)] >=dev-ruby/nokogiri-1.8[ruby_targets_ruby30(-)] >=dev-ruby/capybara-1.1.2:*[ruby_targets_ruby30(-)] <dev-ruby/capybara-4:*[ruby_targets_ruby30(-)] >=dev-ruby/railties-4:*[ruby_targets_ruby30(-)] <dev-ruby/railties-6:*[ruby_targets_ruby30(-)] >=dev-ruby/mime-types-1.17:*[ruby_targets_ruby30(-)] <dev-ruby/mime-types-4:*[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby30(-)] >=dev-ruby/rspec-core-2.14.8-r2[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) test? ( ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) )
 DESCRIPTION=Executable feature scenarios for Rails
 EAPI=6
 HOMEPAGE=https://github.com/cucumber/cucumber/wikis
 IUSE=test ruby_targets_ruby23 ruby_targets_ruby24 ruby_targets_ruby25 test test
 KEYWORDS=~amd64
 LICENSE=Ruby
-RDEPEND=ruby_targets_ruby27? ( >=dev-util/cucumber-3.0.2[ruby_targets_ruby27(-)] <dev-util/cucumber-4[ruby_targets_ruby27(-)] >=dev-ruby/nokogiri-1.8[ruby_targets_ruby27(-)] >=dev-ruby/capybara-1.1.2:*[ruby_targets_ruby27(-)] <dev-ruby/capybara-4:*[ruby_targets_ruby27(-)] >=dev-ruby/railties-4:*[ruby_targets_ruby27(-)] <dev-ruby/railties-6:*[ruby_targets_ruby27(-)] >=dev-ruby/mime-types-1.17:*[ruby_targets_ruby27(-)] <dev-ruby/mime-types-4:*[ruby_targets_ruby27(-)] ) ruby_targets_ruby27? ( dev-lang/ruby:2.7 ) ruby_targets_ruby27? ( virtual/rubygems[ruby_targets_ruby27(-)] )
-REQUIRED_USE=|| ( ruby_targets_ruby27 )
+RDEPEND=ruby_targets_ruby30? ( >=dev-util/cucumber-3.0.2[ruby_targets_ruby30(-)] <dev-util/cucumber-4[ruby_targets_ruby30(-)] >=dev-ruby/nokogiri-1.8[ruby_targets_ruby30(-)] >=dev-ruby/capybara-1.1.2:*[ruby_targets_ruby30(-)] <dev-ruby/capybara-4:*[ruby_targets_ruby30(-)] >=dev-ruby/railties-4:*[ruby_targets_ruby30(-)] <dev-ruby/railties-6:*[ruby_targets_ruby30(-)] >=dev-ruby/mime-types-1.17:*[ruby_targets_ruby30(-)] <dev-ruby/mime-types-4:*[ruby_targets_ruby30(-)] ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] )
+REQUIRED_USE=|| ( ruby_targets_ruby30 )
 RESTRICT=test !test? ( test )
 SLOT=1
 SRC_URI=https://rubygems.org/gems/cucumber-rails-1.6.0.gem
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	517b8b0e1f18ba9deb1c46ddfb88b95b	ruby-utils	daabb2a420d9b5dd405eb5474382f47b	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	b696b71528105a90c4e44b101bd7f8ed	ruby-utils	3791942eec3367882de76288f91c9d78	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=34f30c80a3d3524e946b85758ad4873c
