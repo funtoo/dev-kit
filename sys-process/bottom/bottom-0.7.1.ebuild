@@ -213,7 +213,7 @@ inherit cargo
 
 DESCRIPTION="Yet another cross-platform graphical process/system monitor written in Rust"
 HOMEPAGE="https://github.com/ClementTsang/bottom"
-SRC_URI="https://api.github.com/repos/ClementTsang/bottom/tarball/0.7.0 -> bottom-0.7.0.tar.gz
+SRC_URI="https://api.github.com/repos/ClementTsang/bottom/tarball/0.7.1 -> bottom-0.7.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

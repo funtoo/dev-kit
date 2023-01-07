@@ -11,6 +11,7 @@ autocfg-1.1.0
 bitflags-1.3.2
 bitmaps-2.1.0
 bstr-0.2.17
+bstr-1.1.0
 bytes-1.3.0
 bytesize-1.1.0
 cargo-0.67.0
@@ -31,7 +32,6 @@ core-foundation-0.9.3
 core-foundation-sys-0.8.3
 crates-io-0.34.0
 crc32fast-1.3.2
-crossbeam-utils-0.8.14
 crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
@@ -49,8 +49,8 @@ form_urlencoded-1.1.0
 fwdansi-1.1.0
 git2-0.15.0
 git2-curl-0.16.0
-glob-0.3.0
-globset-0.4.9
+glob-0.3.1
+globset-0.4.10
 hashbrown-0.12.3
 heck-0.4.0
 hermit-abi-0.1.19
@@ -60,7 +60,7 @@ hex-0.4.3
 home-0.5.4
 humantime-2.1.0
 idna-0.3.0
-ignore-0.4.18
+ignore-0.4.19
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
