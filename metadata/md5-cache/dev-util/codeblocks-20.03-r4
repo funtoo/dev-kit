@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=app-arch/zip >=dev-libs/tinyxml-2.6.2-r3 >=dev-util/astyle-3.1-r2:0/3.1 x11-libs/wxGTK:3.0-gtk3[X]
 SLOT=0
 SRC_URI=mirror://sourceforge/codeblocks/codeblocks-20.03.tar.xz https://dev.gentoo.org/~leio/distfiles/codeblocks-20.03-fortran.tar.xz https://dev.gentoo.org/~leio/distfiles/codeblocks-20.03-fortran-update-v1.7.tar.xz https://dev.gentoo.org/~leio/distfiles/codeblocks-20.03-fortran-update-v1.8.tar.xz https://dev.gentoo.org/~leio/distfiles/codeblocks-20.03-codecompletion-symbolbrowser-update.tar.xz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	wxwidgets	e1e6e1eb5b3d911b3abd712f611e2312	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	wxwidgets	e1e6e1eb5b3d911b3abd712f611e2312	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=96a2faa071a8ee9890d489c17dcc19cd
