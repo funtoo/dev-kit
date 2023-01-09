@@ -171,26 +171,22 @@ windows_x86_64_msvc-0.42.0
 
 inherit cargo
 
-DESCRIPTION="Helper program to build and install c-like libraries"
+DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
 SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.15 -> cargo-c-0.9.15.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
-# License set may be more restrictive as OR is not respected
-# use cargo-license for a more accurate license picture
-LICENSE="Apache-2.0 MIT"
+LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="*"
 
-BDEPEND="
-	>=virtual/rust-1.51.0
-"
-
+DEPEND=""
 RDEPEND="sys-libs/zlib
 	dev-libs/openssl:0=
 	net-libs/libssh2
 	net-misc/curl[ssl]
 "
+BDEPEND=">=virtual/rust-1.66.0"
 
 src_unpack() {
 	cargo_src_unpack
