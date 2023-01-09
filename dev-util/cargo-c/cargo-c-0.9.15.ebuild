@@ -103,7 +103,7 @@ quote-1.0.23
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
-regex-1.7.0
+regex-1.7.1
 regex-automata-0.1.10
 regex-syntax-0.6.28
 remove_dir_all-0.5.3
@@ -112,7 +112,7 @@ rustfix-0.6.1
 rustix-0.36.6
 ryu-1.0.12
 same-file-1.0.6
-schannel-0.1.20
+schannel-0.1.21
 semver-1.0.16
 serde-1.0.152
 serde-value-0.7.0
@@ -153,19 +153,13 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
-windows-sys-0.36.1
 windows-sys-0.42.0
 windows_aarch64_gnullvm-0.42.0
-windows_aarch64_msvc-0.36.1
 windows_aarch64_msvc-0.42.0
-windows_i686_gnu-0.36.1
 windows_i686_gnu-0.42.0
-windows_i686_msvc-0.36.1
 windows_i686_msvc-0.42.0
-windows_x86_64_gnu-0.36.1
 windows_x86_64_gnu-0.42.0
 windows_x86_64_gnullvm-0.42.0
-windows_x86_64_msvc-0.36.1
 windows_x86_64_msvc-0.42.0
 "
 

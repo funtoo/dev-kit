@@ -15,6 +15,7 @@ atty-0.2.14
 autocfg-1.1.0
 backtrace-0.3.66
 bitflags-1.3.2
+byteorder-1.4.3
 camino-1.1.1
 cargo-platform-0.1.2
 cargo_metadata-0.15.0
@@ -137,6 +138,9 @@ threadpool-1.8.1
 tikv-jemalloc-ctl-0.5.0
 tikv-jemalloc-sys-0.5.2+5.3.0-patched
 tikv-jemallocator-0.5.0
+time-0.3.17
+time-core-0.1.0
+time-macros-0.2.6
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 tracing-0.1.37
@@ -181,13 +185,14 @@ xflags-0.3.0
 xflags-macros-0.3.0
 xshell-0.2.2
 xshell-macros-0.2.2
+zip-0.6.3
 "
 
 inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-01-02 -> rust-analyzer-20230102.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-01-09 -> rust-analyzer-20230109.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -211,6 +216,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-01-02-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-01-09-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
