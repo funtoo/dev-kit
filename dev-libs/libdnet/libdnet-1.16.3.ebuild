@@ -9,7 +9,7 @@ inherit autotools distutils-r1
 
 DESCRIPTION="libdnet provides a simplified, portable interface to several low-level networking routines."
 HOMEPAGE="https://github.com/ofalk/libdnet"
-SRC_URI="https://github.com/ofalk/libdnet/tarball/4e4fc687953105b66bcc847a68869126ac3ec918 -> libdnet-1.16.2-4e4fc68.tar.gz"
+SRC_URI="https://github.com/ofalk/libdnet/tarball/a03043bec8e66b240a45555e37147b22db182c21 -> libdnet-1.16.3-a03043b.tar.gz"
 S="${WORKDIR}/${PN}-${P}"
 
 LICENSE="LGPL-2"

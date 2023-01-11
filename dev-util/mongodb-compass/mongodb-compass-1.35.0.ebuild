@@ -6,7 +6,7 @@ inherit desktop eutils unpacker xdg
 
 DESCRIPTION="The GUI for MongoDB"
 HOMEPAGE="https://mongodb.com/compass https://github.com/mongodb-js/compass"
-SRC_URI="https://github.com/mongodb-js/compass/releases/download/v1.34.2/mongodb-compass_1.34.2_amd64.deb -> mongodb-compass_1.34.2_amd64.deb"
+SRC_URI="https://github.com/mongodb-js/compass/releases/download/v1.35.0/mongodb-compass_1.35.0_amd64.deb -> mongodb-compass_1.35.0_amd64.deb"
 
 LICENSE="SSPL"
 SLOT="0"
