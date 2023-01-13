@@ -6,7 +6,7 @@ inherit autotools toolchain-funcs
 
 DESCRIPTION="A collection of multi-dimensional data structure and indexing algorithm"
 HOMEPAGE="https://gitlab.com/mdds/mdds"
-SRC_URI="https://github.com/kohei-us/mdds/tarball/c479747d204b8953933fdbec9a88650a75b822b7 -> mdds-2.0.3-c479747.tar.gz"
+SRC_URI="https://github.com/kohei-us/mdds/tarball/acf587d69fce339a4f6c83a1e22f0ddf245c2dd7 -> mdds-2.1.0-acf587d.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT"
 SLOT="${PV%.*}/${PV}"
