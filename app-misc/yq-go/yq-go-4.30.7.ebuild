@@ -10,8 +10,8 @@ EGO_SUM=(
 	"github.com/alecthomas/assert/v2 v2.0.3"
 	"github.com/alecthomas/participle/v2 v2.0.0-beta.5"
 	"github.com/alecthomas/participle/v2 v2.0.0-beta.5/go.mod"
-	"github.com/alecthomas/repr v0.1.1"
-	"github.com/alecthomas/repr v0.1.1/go.mod"
+	"github.com/alecthomas/repr v0.2.0"
+	"github.com/alecthomas/repr v0.2.0/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/davecgh/go-spew v1.1.0"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
@@ -28,8 +28,8 @@ EGO_SUM=(
 	"github.com/go-playground/validator/v10 v10.4.1/go.mod"
 	"github.com/goccy/go-json v0.10.0"
 	"github.com/goccy/go-json v0.10.0/go.mod"
-	"github.com/goccy/go-yaml v1.9.7"
-	"github.com/goccy/go-yaml v1.9.7/go.mod"
+	"github.com/goccy/go-yaml v1.9.8"
+	"github.com/goccy/go-yaml v1.9.8/go.mod"
 	"github.com/hexops/gotextdiff v1.0.3"
 	"github.com/inconshreveable/mousetrap v1.0.1"
 	"github.com/inconshreveable/mousetrap v1.0.1/go.mod"
@@ -94,7 +94,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.30.6 -> yq-go-v4.30.6.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.30.7 -> yq-go-v4.30.7.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
