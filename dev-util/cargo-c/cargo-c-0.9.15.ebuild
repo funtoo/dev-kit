@@ -8,33 +8,38 @@ anyhow-1.0.68
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
+base64-0.13.1
 bitflags-1.3.2
 bitmaps-2.1.0
+block-buffer-0.10.3
 bstr-0.2.17
+bstr-1.1.0
 bytes-1.3.0
 bytesize-1.1.0
-cargo-0.67.0
+cargo-0.67.1
 cargo-platform-0.1.2
 cargo-util-0.2.2
 cbindgen-0.24.3
 cc-1.0.78
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.0.32
-clap_derive-4.0.21
+clap-4.1.1
+clap_derive-4.1.0
 clap_lex-0.2.4
-clap_lex-0.3.0
+clap_lex-0.3.1
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
+cpufeatures-0.2.5
 crates-io-0.34.0
 crc32fast-1.3.2
-crossbeam-utils-0.8.14
+crypto-common-0.1.6
 crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
+digest-0.10.6
 either-1.8.0
 env_logger-0.9.3
 errno-0.2.8
@@ -47,24 +52,26 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.1.0
 fwdansi-1.1.0
-git2-0.15.0
-git2-curl-0.16.0
-glob-0.3.0
-globset-0.4.9
+generic-array-0.14.6
+git2-0.16.0
+git2-curl-0.17.0
+glob-0.3.1
+globset-0.4.10
 hashbrown-0.12.3
 heck-0.4.0
 hermit-abi-0.1.19
 hermit-abi-0.2.6
 hex-0.3.2
 hex-0.4.3
+hmac-0.12.1
 home-0.5.4
 humantime-2.1.0
 idna-0.3.0
-ignore-0.4.18
+ignore-0.4.19
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
-io-lifetimes-1.0.3
+io-lifetimes-1.0.4
 is-terminal-0.4.2
 itertools-0.10.5
 itoa-1.0.5
@@ -73,7 +80,7 @@ kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.139
-libgit2-sys-0.14.0+1.5.0
+libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
@@ -103,7 +110,7 @@ quote-1.0.23
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
-regex-1.7.0
+regex-1.7.1
 regex-automata-0.1.10
 regex-syntax-0.6.28
 remove_dir_all-0.5.3
@@ -112,19 +119,21 @@ rustfix-0.6.1
 rustix-0.36.6
 ryu-1.0.12
 same-file-1.0.6
-schannel-0.1.20
+schannel-0.1.21
 semver-1.0.16
 serde-1.0.152
 serde-value-0.7.0
 serde_derive-1.0.152
 serde_ignored-0.1.7
 serde_json-1.0.91
+sha1-0.10.5
 shell-escape-0.1.5
 sized-chunks-0.6.5
 socket2-0.4.7
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
+subtle-2.4.1
 syn-1.0.107
 tar-0.4.38
 tempfile-3.3.0
@@ -153,44 +162,34 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
-windows-sys-0.36.1
 windows-sys-0.42.0
-windows_aarch64_gnullvm-0.42.0
-windows_aarch64_msvc-0.36.1
-windows_aarch64_msvc-0.42.0
-windows_i686_gnu-0.36.1
-windows_i686_gnu-0.42.0
-windows_i686_msvc-0.36.1
-windows_i686_msvc-0.42.0
-windows_x86_64_gnu-0.36.1
-windows_x86_64_gnu-0.42.0
-windows_x86_64_gnullvm-0.42.0
-windows_x86_64_msvc-0.36.1
-windows_x86_64_msvc-0.42.0
+windows_aarch64_gnullvm-0.42.1
+windows_aarch64_msvc-0.42.1
+windows_i686_gnu-0.42.1
+windows_i686_msvc-0.42.1
+windows_x86_64_gnu-0.42.1
+windows_x86_64_gnullvm-0.42.1
+windows_x86_64_msvc-0.42.1
 "
 
 inherit cargo
 
-DESCRIPTION="Helper program to build and install c-like libraries"
+DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
 SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.15 -> cargo-c-0.9.15.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
-# License set may be more restrictive as OR is not respected
-# use cargo-license for a more accurate license picture
-LICENSE="Apache-2.0 MIT"
+LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="*"
 
-BDEPEND="
-	>=virtual/rust-1.51.0
-"
-
+DEPEND=""
 RDEPEND="sys-libs/zlib
 	dev-libs/openssl:0=
 	net-libs/libssh2
 	net-misc/curl[ssl]
 "
+BDEPEND=">=virtual/rust-1.66.0"
 
 src_unpack() {
 	cargo_src_unpack
