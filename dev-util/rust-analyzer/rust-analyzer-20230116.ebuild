@@ -25,7 +25,7 @@ chalk-derive-0.88.0
 chalk-ir-0.88.0
 chalk-recursive-0.88.0
 chalk-solve-0.88.0
-command-group-1.0.8
+command-group-2.0.1
 countme-3.0.1
 cov-mark-2.0.0-pre.1
 crc32fast-1.3.2
@@ -66,7 +66,7 @@ jod-thread-0.1.2
 kqueue-1.0.6
 kqueue-sys-1.0.3
 lazy_static-1.4.0
-libc-0.2.135
+libc-0.2.139
 libloading-0.7.3
 libmimalloc-sys-0.1.26
 lock_api-0.4.9
@@ -80,7 +80,7 @@ mimalloc-0.1.30
 miniz_oxide-0.5.4
 mio-0.8.4
 miow-0.5.0
-nix-0.22.3
+nix-0.26.1
 notify-5.0.0
 num_cpus-1.13.1
 object-0.29.0
@@ -128,6 +128,7 @@ sharded-slab-0.1.4
 smallvec-1.10.0
 smol_str-0.1.23
 snap-1.0.5
+static_assertions-1.1.0
 syn-1.0.102
 synstructure-0.12.6
 text-size-1.1.0
@@ -192,7 +193,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-01-09 -> rust-analyzer-20230109.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-01-16 -> rust-analyzer-20230116.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -216,6 +217,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-01-09-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-01-16-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
