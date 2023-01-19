@@ -67,7 +67,7 @@ hmac-0.12.1
 home-0.5.4
 humantime-2.1.0
 idna-0.3.0
-ignore-0.4.19
+ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
@@ -105,7 +105,7 @@ percent-encoding-2.2.0
 pkg-config-0.3.26
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.49
+proc-macro2-1.0.50
 quote-1.0.23
 rand_core-0.6.4
 rand_xoshiro-0.6.0
@@ -116,7 +116,7 @@ regex-syntax-0.6.28
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.6
+rustix-0.36.7
 ryu-1.0.12
 same-file-1.0.6
 schannel-0.1.21
@@ -137,7 +137,7 @@ subtle-2.4.1
 syn-1.0.107
 tar-0.4.38
 tempfile-3.3.0
-termcolor-1.1.3
+termcolor-1.2.0
 textwrap-0.16.0
 thread_local-1.1.4
 tinyvec-1.6.0

@@ -11,8 +11,7 @@ async def generate(hub, **pkginfo):
     )
     homepage_soup = BeautifulSoup(homepage_data, "html.parser")
 
-    # FL-10615: Match only 0.3 for app-editors/neovim-0.8.0
-    name_pattern = re.compile(f"({name}-(0\\.3)\\.tar\\.gz)")
+    name_pattern = re.compile(f"({name}-(.*)\\.tar\\.gz)")
 
     link_matches = (
         name_pattern.match(link.get("href"))
@@ -20,7 +19,7 @@ async def generate(hub, **pkginfo):
     )
 
     valid_matches = (match.groups() for match in link_matches if match)
-    release_matches = (match for match in valid_matches if match[1].lower().startswith("0.3"))
+    release_matches = (match for match in valid_matches if match[1] == "0.3" or match[1].startswith("0.3."))
 
     target_filename, target_version = max(
         release_matches, key=lambda match: version.parse(match[1])
