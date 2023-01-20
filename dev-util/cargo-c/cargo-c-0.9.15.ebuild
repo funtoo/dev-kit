@@ -146,7 +146,7 @@ toml-0.5.11
 toml_datetime-0.5.0
 toml_edit-0.15.0
 typenum-1.16.0
-unicode-bidi-0.3.9
+unicode-bidi-0.3.10
 unicode-ident-1.0.6
 unicode-normalization-0.1.22
 unicode-width-0.1.10
