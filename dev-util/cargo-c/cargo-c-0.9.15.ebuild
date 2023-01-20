@@ -143,7 +143,7 @@ thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 toml-0.5.11
-toml_datetime-0.5.0
+toml_datetime-0.5.1
 toml_edit-0.15.0
 typenum-1.16.0
 unicode-bidi-0.3.10
