@@ -53,7 +53,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.1.0
 fwdansi-1.1.0
 generic-array-0.14.6
-git2-0.16.0
+git2-0.16.1
 git2-curl-0.17.0
 glob-0.3.1
 globset-0.4.10
@@ -80,7 +80,7 @@ kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.139
-libgit2-sys-0.14.1+1.5.0
+libgit2-sys-0.14.2+1.5.1
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
