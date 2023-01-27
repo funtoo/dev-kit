@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
 HOMEPAGE="https://www.jetbrains.com/python"
-SRC_URI="https://download.jetbrains.com/python/pycharm-professional-2022.3.1.tar.gz -> pycharm-professional-2022.3.1.tar.gz"
+SRC_URI="https://download.jetbrains.com/python/pycharm-community-2022.3.2.tar.gz -> pycharm-community-2022.3.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "PyCharm Professional" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "PyCharm Community Edition" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"

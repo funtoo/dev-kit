@@ -18,7 +18,7 @@ bytes-1.3.0
 bytesize-1.1.0
 cargo-0.67.1
 cargo-platform-0.1.2
-cargo-util-0.2.2
+cargo-util-0.2.3
 cbindgen-0.24.3
 cc-1.0.78
 cfg-if-1.0.0
@@ -40,7 +40,7 @@ crypto-hash-0.3.4
 curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
 digest-0.10.6
-either-1.8.0
+either-1.8.1
 env_logger-0.9.3
 errno-0.2.8
 errno-dragonfly-0.1.2
@@ -88,7 +88,7 @@ linux-raw-sys-0.1.4
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
-miow-0.3.7
+miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.0
 opener-0.5.0
