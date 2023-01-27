@@ -16,7 +16,7 @@ bstr-0.2.17
 bstr-1.1.0
 bytes-1.3.0
 bytesize-1.1.0
-cargo-0.67.1
+cargo-0.68.0
 cargo-platform-0.1.2
 cargo-util-0.2.3
 cbindgen-0.24.3
@@ -33,7 +33,7 @@ commoncrypto-sys-0.2.0
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
 cpufeatures-0.2.5
-crates-io-0.34.0
+crates-io-0.35.0
 crc32fast-1.3.2
 crypto-common-0.1.6
 crypto-hash-0.3.4
@@ -41,7 +41,7 @@ curl-0.4.44
 curl-sys-0.4.59+curl-7.86.0
 digest-0.10.6
 either-1.8.1
-env_logger-0.9.3
+env_logger-0.10.0
 errno-0.2.8
 errno-dragonfly-0.1.2
 fastrand-1.8.0
@@ -65,6 +65,7 @@ hex-0.3.2
 hex-0.4.3
 hmac-0.12.1
 home-0.5.4
+http-auth-0.1.7
 humantime-2.1.0
 idna-0.3.0
 ignore-0.4.20
@@ -89,6 +90,7 @@ log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
 miow-0.5.0
+nom8-0.2.0
 num-traits-0.2.15
 once_cell-1.17.0
 opener-0.5.0
@@ -126,6 +128,7 @@ serde-value-0.7.0
 serde_derive-1.0.152
 serde_ignored-0.1.7
 serde_json-1.0.91
+serde_spanned-0.6.0
 sha1-0.10.5
 shell-escape-0.1.5
 sized-chunks-0.6.5
@@ -143,8 +146,10 @@ thread_local-1.1.4
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 toml-0.5.11
+toml-0.6.0
 toml_datetime-0.5.1
 toml_edit-0.15.0
+toml_edit-0.18.1
 typenum-1.16.0
 unicode-bidi-0.3.10
 unicode-ident-1.0.6
@@ -176,7 +181,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.15 -> cargo-c-0.9.15.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.16 -> cargo-c-0.9.16.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
