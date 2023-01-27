@@ -76,11 +76,11 @@ src_install() {
 	insinto "${dir}"
 	doins -r *
 
-	fperms 755 "${dir}"/bin/{fsnotifier,format.sh,game-tools.sh,inspect.sh,ltedit.sh,profiler.sh,studio.sh,printenv.py,restart.py}
+	fperms 755 "${dir}"/bin/{fsnotifier,format.sh,game-tools.sh,inspect.sh,ltedit.sh,profiler.sh,studio.sh,restart.py}
 	fperms -R 755 "${dir}"/bin/helpers
 	fperms -R 755 "${dir}"/bin/lldb
-	fperms -R 755 "${dir}"/jre/bin
-	fperms 755 "${dir}"/jre/lib/{jexec,jspawnhelper}
+	fperms -R 755 "${dir}"/jbr/bin
+	fperms 755 "${dir}"/jbr/lib/{jexec,jspawnhelper}
 	fperms -R 755 "${dir}"/plugins/Kotlin/kotlinc/bin
 	fperms -R 755 "${dir}"/plugins/android/resources/installer
 	fperms -R 755 "${dir}"/plugins/android/resources/perfetto
