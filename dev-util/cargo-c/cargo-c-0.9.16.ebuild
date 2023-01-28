@@ -12,7 +12,6 @@ base64-0.13.1
 bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.3
-bstr-0.2.17
 bstr-1.1.0
 bytes-1.3.0
 bytesize-1.1.0
@@ -20,7 +19,7 @@ cargo-0.68.0
 cargo-platform-0.1.2
 cargo-util-0.2.3
 cbindgen-0.24.3
-cc-1.0.78
+cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
 clap-4.1.4
@@ -93,7 +92,7 @@ miow-0.5.0
 nom8-0.2.0
 num-traits-0.2.15
 once_cell-1.17.0
-opener-0.5.0
+opener-0.5.1
 openssl-0.10.45
 openssl-macros-0.1.0
 openssl-probe-0.1.5
