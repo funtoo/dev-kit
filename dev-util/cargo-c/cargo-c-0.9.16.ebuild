@@ -64,7 +64,7 @@ hex-0.3.2
 hex-0.4.3
 hmac-0.12.1
 home-0.5.4
-http-auth-0.1.7
+http-auth-0.1.8
 humantime-2.1.0
 idna-0.3.0
 ignore-0.4.20
@@ -92,14 +92,14 @@ miow-0.5.0
 nom8-0.2.0
 num-traits-0.2.15
 once_cell-1.17.0
-opener-0.5.1
+opener-0.5.2
 openssl-0.10.45
 openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.24.0+1.1.1s
 openssl-sys-0.9.80
 ordered-float-2.10.0
-os_info-3.5.1
+os_info-3.6.0
 os_str_bytes-6.4.1
 pathdiff-0.2.1
 percent-encoding-2.2.0
@@ -127,7 +127,7 @@ serde-value-0.7.0
 serde_derive-1.0.152
 serde_ignored-0.1.7
 serde_json-1.0.91
-serde_spanned-0.6.0
+serde_spanned-0.6.1
 sha1-0.10.5
 shell-escape-0.1.5
 sized-chunks-0.6.5
