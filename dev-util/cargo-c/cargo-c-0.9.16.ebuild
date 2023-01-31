@@ -13,7 +13,7 @@ bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.3
 bstr-1.1.0
-bytes-1.3.0
+bytes-1.4.0
 bytesize-1.1.0
 cargo-0.68.0
 cargo-platform-0.1.2
