@@ -12,7 +12,7 @@ base64-0.13.1
 bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.3
-bstr-1.1.0
+bstr-1.2.0
 bytes-1.4.0
 bytesize-1.1.0
 cargo-0.68.0
@@ -57,7 +57,7 @@ git2-curl-0.17.0
 glob-0.3.1
 globset-0.4.10
 hashbrown-0.12.3
-heck-0.4.0
+heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
 hex-0.3.2
@@ -87,7 +87,7 @@ libz-sys-1.1.8
 linux-raw-sys-0.1.4
 log-0.4.17
 memchr-2.5.0
-miniz_oxide-0.6.2
+miniz_oxide-0.6.3
 miow-0.5.0
 nom8-0.2.0
 num-traits-0.2.15
