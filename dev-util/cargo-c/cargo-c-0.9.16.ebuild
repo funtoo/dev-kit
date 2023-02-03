@@ -71,7 +71,7 @@ ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
-io-lifetimes-1.0.4
+io-lifetimes-1.0.5
 is-terminal-0.4.2
 itertools-0.10.5
 itoa-1.0.5
@@ -87,7 +87,7 @@ libz-sys-1.1.8
 linux-raw-sys-0.1.4
 log-0.4.17
 memchr-2.5.0
-miniz_oxide-0.6.3
+miniz_oxide-0.6.2
 miow-0.5.0
 nom8-0.2.0
 num-traits-0.2.15
@@ -143,7 +143,7 @@ termcolor-1.2.0
 textwrap-0.16.0
 thread_local-1.1.4
 tinyvec-1.6.0
-tinyvec_macros-0.1.0
+tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.6.0
 toml_datetime-0.5.1
@@ -167,6 +167,8 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
+windows-sys-0.45.0
+windows-targets-0.42.1
 windows_aarch64_gnullvm-0.42.1
 windows_aarch64_msvc-0.42.1
 windows_i686_gnu-0.42.1
