@@ -59,7 +59,7 @@ globset-0.4.10
 hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.1.19
-hermit-abi-0.2.6
+hermit-abi-0.3.0
 hex-0.3.2
 hex-0.4.3
 hmac-0.12.1
@@ -72,7 +72,7 @@ im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
 io-lifetimes-1.0.5
-is-terminal-0.4.2
+is-terminal-0.4.3
 itertools-0.10.5
 itoa-1.0.5
 jobserver-0.1.25
@@ -117,7 +117,7 @@ regex-syntax-0.6.28
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.7
+rustix-0.36.8
 ryu-1.0.12
 same-file-1.0.6
 schannel-0.1.21
