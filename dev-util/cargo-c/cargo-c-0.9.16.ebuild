@@ -96,7 +96,7 @@ opener-0.5.2
 openssl-0.10.45
 openssl-macros-0.1.0
 openssl-probe-0.1.5
-openssl-src-111.24.0+1.1.1s
+openssl-src-111.25.0+1.1.1t
 openssl-sys-0.9.80
 ordered-float-2.10.0
 os_info-3.6.0
