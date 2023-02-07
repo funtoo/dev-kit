@@ -10,7 +10,7 @@ def get_release(releases_data):
 
 async def generate(hub, **pkginfo):
 	python_compat = "python3+"
-	user = "radareorg"
+	user = "rizinorg"
 	name = pkginfo["name"]
 	releases_data = await hub.pkgtools.fetch.get_page(
 		f"https://api.github.com/repos/{user}/{name}/releases", is_json=True

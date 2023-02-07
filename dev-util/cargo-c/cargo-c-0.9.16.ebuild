@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
-anyhow-1.0.68
+anyhow-1.0.69
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -12,7 +12,7 @@ base64-0.13.1
 bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.3
-bstr-1.1.0
+bstr-1.2.0
 bytes-1.4.0
 bytesize-1.1.0
 cargo-0.68.0
@@ -57,9 +57,9 @@ git2-curl-0.17.0
 glob-0.3.1
 globset-0.4.10
 hashbrown-0.12.3
-heck-0.4.0
+heck-0.4.1
 hermit-abi-0.1.19
-hermit-abi-0.2.6
+hermit-abi-0.3.0
 hex-0.3.2
 hex-0.4.3
 hmac-0.12.1
@@ -71,8 +71,8 @@ ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
-io-lifetimes-1.0.4
-is-terminal-0.4.2
+io-lifetimes-1.0.5
+is-terminal-0.4.3
 itertools-0.10.5
 itoa-1.0.5
 jobserver-0.1.25
@@ -96,7 +96,7 @@ opener-0.5.2
 openssl-0.10.45
 openssl-macros-0.1.0
 openssl-probe-0.1.5
-openssl-src-111.24.0+1.1.1s
+openssl-src-111.25.0+1.1.1t
 openssl-sys-0.9.80
 ordered-float-2.10.0
 os_info-3.6.0
@@ -106,7 +106,7 @@ percent-encoding-2.2.0
 pkg-config-0.3.26
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.50
+proc-macro2-1.0.51
 quote-1.0.23
 rand_core-0.6.4
 rand_xoshiro-0.6.0
@@ -117,7 +117,7 @@ regex-syntax-0.6.28
 remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.7
+rustix-0.36.8
 ryu-1.0.12
 same-file-1.0.6
 schannel-0.1.21
@@ -126,7 +126,7 @@ serde-1.0.152
 serde-value-0.7.0
 serde_derive-1.0.152
 serde_ignored-0.1.7
-serde_json-1.0.91
+serde_json-1.0.92
 serde_spanned-0.6.1
 sha1-0.10.5
 shell-escape-0.1.5
@@ -143,7 +143,7 @@ termcolor-1.2.0
 textwrap-0.16.0
 thread_local-1.1.4
 tinyvec-1.6.0
-tinyvec_macros-0.1.0
+tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.6.0
 toml_datetime-0.5.1
@@ -167,6 +167,8 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
+windows-sys-0.45.0
+windows-targets-0.42.1
 windows_aarch64_gnullvm-0.42.1
 windows_aarch64_msvc-0.42.1
 windows_i686_gnu-0.42.1

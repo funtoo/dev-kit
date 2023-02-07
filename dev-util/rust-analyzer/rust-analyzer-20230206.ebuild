@@ -144,7 +144,6 @@ tikv-jemalloc-sys-0.5.2+5.3.0-patched
 tikv-jemallocator-0.5.0
 time-0.3.17
 time-core-0.1.0
-time-macros-0.2.6
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 tracing-0.1.37
@@ -183,14 +182,14 @@ xflags-0.3.1
 xflags-macros-0.3.1
 xshell-0.2.3
 xshell-macros-0.2.3
-zip-0.6.3
+zip-0.6.4
 "
 
 inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-01-30 -> rust-analyzer-20230130.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-02-06 -> rust-analyzer-20230206.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -214,6 +213,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-01-30-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-02-06-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
