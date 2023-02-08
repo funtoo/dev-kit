@@ -44,7 +44,7 @@ env_logger-0.10.0
 errno-0.2.8
 errno-dragonfly-0.1.2
 fastrand-1.8.0
-filetime-0.2.19
+filetime-0.2.20
 flate2-1.0.25
 fnv-1.0.7
 foreign-types-0.3.2
@@ -59,7 +59,7 @@ globset-0.4.10
 hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.1.19
-hermit-abi-0.3.0
+hermit-abi-0.3.1
 hex-0.3.2
 hex-0.4.3
 hmac-0.12.1
