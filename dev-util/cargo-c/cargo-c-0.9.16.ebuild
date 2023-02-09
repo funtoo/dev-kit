@@ -126,7 +126,7 @@ serde-1.0.152
 serde-value-0.7.0
 serde_derive-1.0.152
 serde_ignored-0.1.7
-serde_json-1.0.92
+serde_json-1.0.93
 serde_spanned-0.6.1
 sha1-0.10.5
 shell-escape-0.1.5
