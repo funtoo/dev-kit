@@ -8,7 +8,7 @@ inherit cmake python-any-r1
 
 DESCRIPTION="Build EAR generates a compilation database for clang tooling"
 HOMEPAGE="https://github.com/rizsotto/Bear"
-SRC_URI="https://api.github.com/repos/rizsotto/Bear/tarball/3.0.21 -> bear-3.0.21.tar.gz"
+SRC_URI="https://api.github.com/repos/rizsotto/Bear/tarball/3.1.0 -> bear-3.1.0.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -44,7 +44,7 @@ pkg_setup() {
 
 fix_src_dirs() {
 	pushd "${WORKDIR}"
-	mv rizsotto-Bear-* bear-3.0.21
+	mv rizsotto-Bear-* bear-3.1.0
 	popd
 }
 
