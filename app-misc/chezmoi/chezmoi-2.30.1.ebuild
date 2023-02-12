@@ -423,7 +423,7 @@ go-module_set_globals
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://github.com/twpayne/chezmoi"
-SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.30.0 -> chezmoi-v2.30.0.tar.gz
+SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.30.1 -> chezmoi-v2.30.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="MIT"
