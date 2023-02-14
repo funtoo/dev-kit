@@ -43,7 +43,7 @@ either-1.8.1
 env_logger-0.10.0
 errno-0.2.8
 errno-dragonfly-0.1.2
-fastrand-1.8.0
+fastrand-1.9.0
 filetime-0.2.20
 flate2-1.0.25
 fnv-1.0.7
@@ -91,7 +91,7 @@ miniz_oxide-0.6.2
 miow-0.5.0
 nom8-0.2.0
 num-traits-0.2.15
-once_cell-1.17.0
+once_cell-1.17.1
 opener-0.5.2
 openssl-0.10.45
 openssl-macros-0.1.0
