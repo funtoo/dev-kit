@@ -10,5 +10,5 @@ LICENSE=GPL-2 GPL-3 LGPL-2.1-with-linking-exception
 RDEPEND=|| ( dev-libs/efl[X] dev-libs/efl[wayland] ) >=dev-libs/efl-1.22.0[eet] clang? ( dev-util/bear sys-devel/clang:= )
 SLOT=0
 SRC_URI=https://api.github.com/repos/Enlightenment/edi/tarball/refs/tags/v0.8.0 -> edi-0.8.0.tar.gz
-_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	llvm	d6218c82a2f721c6a2c46c7eaf87e13b	meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	32393cac272daca4c136cc44e6005b67	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	llvm	d6218c82a2f721c6a2c46c7eaf87e13b	meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=1827b76c8153562a74f3f494f60952c3
