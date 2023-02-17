@@ -1,6 +1,7 @@
 protobufs:
   generator: github-1
   defaults:
+    version: '21.12'
     github:
       user: protocolbuffers
       repo: protobuf
@@ -18,4 +19,5 @@ protobufs:
 protobuf-c:
   generator: protobuf-c
   packages:
-    - protobuf-c
+    - protobuf-c:
+        version: 1.4.1

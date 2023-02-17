@@ -21,6 +21,7 @@ RESTRICT="!test? ( test )"
 
 DEPEND="
 dev-libs/check
+dev-libs/libbsd
 python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}"
 BDEPEND="
