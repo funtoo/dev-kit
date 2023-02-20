@@ -13,7 +13,7 @@ async def generate(hub, **pkginfo):
     html = await hub.pkgtools.fetch.get_page(url)
     soup = BeautifulSoup(html, "html.parser").find_all("a")
 
-    downloads = [a.get('href') for a in soup if a.get('href').endswith('.tar.bz2') and not a.get('href').startswith('latest')]
+    downloads = [a.get('href') for a in soup if a.get('href').endswith('.tar.bz2') and 'latest' not in a.get('href')]
 
     tarballs = [(Version(re.findall(regex, a)[0]), a) for a in downloads if re.findall(regex, a)]
 
