@@ -37,7 +37,7 @@ crc32fast-1.3.2
 crypto-common-0.1.6
 crypto-hash-0.3.4
 curl-0.4.44
-curl-sys-0.4.59+curl-7.86.0
+curl-sys-0.4.60+curl-7.88.1
 digest-0.10.6
 either-1.8.1
 env_logger-0.10.0
