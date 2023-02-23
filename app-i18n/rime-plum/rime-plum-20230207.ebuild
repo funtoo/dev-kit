@@ -7,7 +7,7 @@ inherit user
 DESCRIPTION="Rime configuration manager and input schema repository"
 HOMEPAGE="https://rime.im/ https://github.com/rime/plum"
 SRC_URI="
-	https://github.com/rime/plum/archive/3d06432dda5fd1738bebda298c574b6ed2d512d8.tar.gz -> rime-plum-20220702.tar.gz
+	https://github.com/rime/plum/archive/6f502ff6fa87789847fa18200415318e705bffa4.tar.gz -> rime-plum-20230207.tar.gz
 	https://github.com/rime/rime-bopomofo/archive/c7618f4f5728e1634417e9d02ea50d82b71956ab.tar.gz -> bopomofo.tar.gz
 	https://github.com/rime/rime-cangjie/archive/8dfad9e537f18821b71ba28773315d9c670ae245.tar.gz -> cangjie.tar.gz
 	https://github.com/rime/rime-essay/archive/e0519d0579722a0871efb68189272cba61a7350b.tar.gz -> essay.tar.gz
