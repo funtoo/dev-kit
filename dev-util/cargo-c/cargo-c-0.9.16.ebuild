@@ -25,7 +25,7 @@ clap-3.2.23
 clap-4.1.6
 clap_derive-4.1.0
 clap_lex-0.2.4
-clap_lex-0.3.1
+clap_lex-0.3.2
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -72,7 +72,7 @@ im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
 io-lifetimes-1.0.5
-is-terminal-0.4.3
+is-terminal-0.4.4
 itertools-0.10.5
 itoa-1.0.5
 jobserver-0.1.25
@@ -136,7 +136,7 @@ static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
-syn-1.0.107
+syn-1.0.108
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.2.0
