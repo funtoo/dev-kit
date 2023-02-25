@@ -14,7 +14,7 @@ bitmaps-2.1.0
 block-buffer-0.10.3
 bstr-1.3.0
 bytes-1.4.0
-bytesize-1.1.0
+bytesize-1.2.0
 cargo-0.68.0
 cargo-platform-0.1.2
 cargo-util-0.2.3
@@ -136,7 +136,7 @@ static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
-syn-1.0.108
+syn-1.0.109
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.2.0
