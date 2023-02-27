@@ -114,7 +114,6 @@ redox_syscall-0.2.16
 regex-1.7.1
 regex-automata-0.1.10
 regex-syntax-0.6.28
-remove_dir_all-0.5.3
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
 rustix-0.36.8
@@ -138,7 +137,7 @@ strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
 tar-0.4.38
-tempfile-3.3.0
+tempfile-3.4.0
 termcolor-1.2.0
 textwrap-0.16.0
 thread_local-1.1.7

@@ -9,7 +9,7 @@ SRC_URI="https://github.com/rime/librime/tarball/08dd95f5d9282346f0d4a3e8fc6b208
 
 LICENSE="BSD"
 SLOT="0/1-${PV}"
-KEYWORDS="amd64 arm64 ppc ppc64 x86"
+KEYWORDS="*"
 IUSE="debug test"
 RESTRICT="!test? ( test )"
 
@@ -34,16 +34,6 @@ src_unpack() {
 	mv "${WORKDIR}"/rime-librime-* "${S}"
 }
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-1.6.0-boost-1.76.patch"
-
-	# Use headers of dev-libs/darts, dev-libs/utfcpp and x11-base/xorg-proto.
-	sed -e "/\${PROJECT_SOURCE_DIR}\/thirdparty/d" -i CMakeLists.txt || die
-	rm -r thirdparty || die
-
-	cmake_src_prepare
-}
-
 src_configure() {
 	local -x CXXFLAGS="${CXXFLAGS} -I${ESYSROOT}/usr/include/utf8cpp"
 
@@ -62,4 +52,9 @@ src_configure() {
 	)
 
 	cmake_src_configure
+}
+
+pkg_postinst() {
+	ewarn "Please update all packages installed using plum by running \"rime-install\"!"
+	ewarn "Out of date packages might not work with an updated backend!"
 }
