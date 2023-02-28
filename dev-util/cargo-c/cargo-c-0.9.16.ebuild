@@ -22,8 +22,8 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.7
-clap_derive-4.1.7
+clap-4.1.8
+clap_derive-4.1.8
 clap_lex-0.2.4
 clap_lex-0.3.2
 combine-4.6.6
@@ -75,7 +75,7 @@ io-lifetimes-1.0.5
 is-terminal-0.4.4
 itertools-0.10.5
 itoa-1.0.5
-jobserver-0.1.25
+jobserver-0.1.26
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -96,7 +96,7 @@ opener-0.5.2
 openssl-0.10.45
 openssl-macros-0.1.0
 openssl-probe-0.1.5
-openssl-src-111.25.0+1.1.1t
+openssl-src-111.25.1+1.1.1t
 openssl-sys-0.9.80
 ordered-float-2.10.0
 os_info-3.6.0
