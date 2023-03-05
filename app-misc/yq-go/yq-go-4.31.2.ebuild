@@ -5,8 +5,8 @@ EAPI=7
 inherit go-module
 
 EGO_SUM=(
-	"github.com/a8m/envsubst v1.4.1"
-	"github.com/a8m/envsubst v1.4.1/go.mod"
+	"github.com/a8m/envsubst v1.4.2"
+	"github.com/a8m/envsubst v1.4.2/go.mod"
 	"github.com/alecthomas/assert/v2 v2.0.3"
 	"github.com/alecthomas/participle/v2 v2.0.0-beta.5"
 	"github.com/alecthomas/participle/v2 v2.0.0-beta.5/go.mod"
@@ -61,20 +61,20 @@ EGO_SUM=(
 	"golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod"
 	"golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod"
 	"golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod"
-	"golang.org/x/net v0.1.1-0.20221104162952-702349b0e862"
-	"golang.org/x/net v0.1.1-0.20221104162952-702349b0e862/go.mod"
+	"golang.org/x/net v0.7.0"
+	"golang.org/x/net v0.7.0/go.mod"
 	"golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod"
 	"golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod"
 	"golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod"
 	"golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod"
 	"golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12/go.mod"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
-	"golang.org/x/sys v0.3.0"
-	"golang.org/x/sys v0.3.0/go.mod"
+	"golang.org/x/sys v0.5.0"
+	"golang.org/x/sys v0.5.0/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.2/go.mod"
-	"golang.org/x/text v0.4.0"
-	"golang.org/x/text v0.4.0/go.mod"
+	"golang.org/x/text v0.7.0"
+	"golang.org/x/text v0.7.0/go.mod"
 	"golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod"
 	"golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1/go.mod"
 	"golang.org/x/xerrors v0.0.0-20220609144429-65e65417b02f"
@@ -93,7 +93,7 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.31.1 -> yq-go-v4.31.1.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.31.2 -> yq-go-v4.31.2.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

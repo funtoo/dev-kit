@@ -74,7 +74,7 @@ instant-0.1.12
 io-lifetimes-1.0.5
 is-terminal-0.4.4
 itertools-0.10.5
-itoa-1.0.5
+itoa-1.0.6
 jobserver-0.1.26
 kstring-2.0.0
 lazy_static-1.4.0
@@ -116,8 +116,8 @@ regex-automata-0.1.10
 regex-syntax-0.6.28
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.8
-ryu-1.0.12
+rustix-0.36.9
+ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
 semver-1.0.16
@@ -125,12 +125,12 @@ serde-1.0.152
 serde-value-0.7.0
 serde_derive-1.0.152
 serde_ignored-0.1.7
-serde_json-1.0.93
+serde_json-1.0.94
 serde_spanned-0.6.1
 sha1-0.10.5
 shell-escape-0.1.5
 sized-chunks-0.6.5
-socket2-0.4.7
+socket2-0.4.9
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
@@ -150,7 +150,7 @@ toml_edit-0.15.0
 toml_edit-0.18.1
 typenum-1.16.0
 unicode-bidi-0.3.10
-unicode-ident-1.0.6
+unicode-ident-1.0.7
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4
