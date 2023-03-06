@@ -71,7 +71,7 @@ ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
-io-lifetimes-1.0.5
+io-lifetimes-1.0.6
 is-terminal-0.4.4
 itertools-0.10.5
 itoa-1.0.6
