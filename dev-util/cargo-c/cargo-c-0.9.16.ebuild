@@ -150,7 +150,7 @@ toml_edit-0.15.0
 toml_edit-0.18.1
 typenum-1.16.0
 unicode-bidi-0.3.10
-unicode-ident-1.0.7
+unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4
