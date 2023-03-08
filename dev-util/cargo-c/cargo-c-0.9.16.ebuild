@@ -121,9 +121,9 @@ ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
 semver-1.0.16
-serde-1.0.153
+serde-1.0.154
 serde-value-0.7.0
-serde_derive-1.0.153
+serde_derive-1.0.154
 serde_ignored-0.1.7
 serde_json-1.0.94
 serde_spanned-0.6.1
@@ -149,7 +149,7 @@ toml_datetime-0.5.1
 toml_edit-0.15.0
 toml_edit-0.18.1
 typenum-1.16.0
-unicode-bidi-0.3.10
+unicode-bidi-0.3.11
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
