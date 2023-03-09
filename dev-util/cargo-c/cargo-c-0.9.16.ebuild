@@ -11,7 +11,7 @@ autocfg-1.1.0
 base64-0.13.1
 bitflags-1.3.2
 bitmaps-2.1.0
-block-buffer-0.10.3
+block-buffer-0.10.4
 bstr-1.3.0
 bytes-1.4.0
 bytesize-1.2.0
@@ -32,7 +32,7 @@ commoncrypto-sys-0.2.0
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
 cpufeatures-0.2.5
-crates-io-0.35.0
+crates-io-0.35.1
 crc32fast-1.3.2
 crypto-common-0.1.6
 crypto-hash-0.3.4
@@ -79,7 +79,7 @@ jobserver-0.1.26
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.139
+libc-0.2.140
 libgit2-sys-0.14.2+1.5.1
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -155,7 +155,7 @@ unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4
 url-2.3.1
-utf8parse-0.2.0
+utf8parse-0.2.1
 vcpkg-0.2.15
 version_check-0.9.4
 vte-0.10.1
