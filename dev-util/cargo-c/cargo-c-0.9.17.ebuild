@@ -177,7 +177,7 @@ toml-0.7.2
 toml_datetime-0.5.1
 toml_datetime-0.6.1
 toml_edit-0.15.0
-toml_edit-0.19.4
+toml_edit-0.19.5
 typenum-1.16.0
 unicode-bidi-0.3.11
 unicode-ident-1.0.8
