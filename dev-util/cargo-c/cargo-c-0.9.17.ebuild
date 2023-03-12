@@ -127,8 +127,8 @@ pkg-config-0.3.26
 primeorder-0.13.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.51
-quote-1.0.23
+proc-macro2-1.0.52
+quote-1.0.24
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
@@ -143,7 +143,7 @@ ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.1
-semver-1.0.16
+semver-1.0.17
 serde-1.0.155
 serde-value-0.7.0
 serde_derive-1.0.155
