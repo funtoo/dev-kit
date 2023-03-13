@@ -128,7 +128,7 @@ primeorder-0.13.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.52
-quote-1.0.24
+quote-1.0.25
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
