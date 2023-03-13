@@ -593,9 +593,10 @@ RDEPEND=">=dev-vcs/git-1.7.3"
 RESTRICT+=" test "
 
 src_unpack() {
-	go-module_src_unpack
-	rm -rf ${S}
+	unpack cli-v2.24.3.tar.gz || die
 	mv ${WORKDIR}/cli-cli-* ${S} || die
+	go-module_src_unpack
+	rm -rf cli-cli-* || die
 }
 
 src_compile() {
