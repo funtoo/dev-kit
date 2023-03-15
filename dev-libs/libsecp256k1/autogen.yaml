@@ -1,0 +1,8 @@
+libsecp256k1_rule:
+  generator: github-1
+  packages:
+    - libsecp256k1:
+        github:
+          user: bitcoin-core
+          repo: secp256k1
+          query: releases
