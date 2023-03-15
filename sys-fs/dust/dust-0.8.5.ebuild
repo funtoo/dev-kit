@@ -102,7 +102,7 @@ inherit cargo
 
 DESCRIPTION="A more intuitive version of du in rust"
 HOMEPAGE="https://github.com/bootandy/dust"
-SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v0.8.4 -> dust-0.8.4.tar.gz
+SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v0.8.5 -> dust-0.8.5.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

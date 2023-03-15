@@ -38,7 +38,7 @@ core-foundation-sys-0.8.3
 cpufeatures-0.2.5
 crates-io-0.35.1
 crc32fast-1.3.2
-crypto-bigint-0.5.0
+crypto-bigint-0.5.1
 crypto-common-0.1.6
 crypto-hash-0.3.4
 ct-codecs-1.1.1
@@ -108,11 +108,11 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
 opener-0.5.2
-openssl-0.10.45
+openssl-0.10.46
 openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.25.1+1.1.1t
-openssl-sys-0.9.80
+openssl-sys-0.9.81
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.6.0
@@ -128,7 +128,7 @@ primeorder-0.13.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.52
-quote-1.0.24
+quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
@@ -144,9 +144,9 @@ same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.1
 semver-1.0.17
-serde-1.0.155
+serde-1.0.156
 serde-value-0.7.0
-serde_derive-1.0.155
+serde_derive-1.0.156
 serde_ignored-0.1.7
 serde_json-1.0.94
 serde_spanned-0.6.1
@@ -173,11 +173,11 @@ time-macros-0.2.8
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.2
+toml-0.7.3
 toml_datetime-0.5.1
 toml_datetime-0.6.1
 toml_edit-0.15.0
-toml_edit-0.19.5
+toml_edit-0.19.7
 typenum-1.16.0
 unicode-bidi-0.3.11
 unicode-ident-1.0.8
@@ -211,7 +211,7 @@ windows_i686_msvc-0.42.2
 windows_x86_64_gnu-0.42.2
 windows_x86_64_gnullvm-0.42.2
 windows_x86_64_msvc-0.42.2
-winnow-0.3.5
+winnow-0.3.6
 zeroize-1.5.7
 "
 
