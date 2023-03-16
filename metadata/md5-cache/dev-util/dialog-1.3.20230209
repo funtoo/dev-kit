@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig !minimal? ( sys-devel/libtool )
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-libs/ncurses nls? ( sys-devel/gettext )
+DESCRIPTION=Tool to display dialog boxes from a shell
+EAPI=7
+HOMEPAGE=https://invisible-island.net/dialog/
+IUSE=examples minimal nls unicode
+KEYWORDS=*
+LICENSE=LGPL-2.1
+RDEPEND=sys-libs/ncurses
+SLOT=0/15
+SRC_URI=https://invisible-mirror.net/archives/dialog/dialog-1.3-20230209.tgz -> dialog-1.3-20230209.tgz
+_md5_=04760fda8263689c6d886860919b8622
