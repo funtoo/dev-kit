@@ -25,10 +25,10 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.8
-clap_derive-4.1.8
+clap-4.1.9
+clap_derive-4.1.9
 clap_lex-0.2.4
-clap_lex-0.3.2
+clap_lex-0.3.3
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -86,7 +86,7 @@ ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
-io-lifetimes-1.0.6
+io-lifetimes-1.0.7
 is-terminal-0.4.4
 itertools-0.10.5
 itoa-1.0.6
@@ -179,7 +179,7 @@ toml_datetime-0.6.1
 toml_edit-0.15.0
 toml_edit-0.19.7
 typenum-1.16.0
-unicode-bidi-0.3.11
+unicode-bidi-0.3.12
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
