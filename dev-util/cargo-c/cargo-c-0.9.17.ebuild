@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
-anyhow-1.0.69
+anyhow-1.0.70
 arrayvec-0.5.2
 atty-0.2.14
 autocfg-1.1.0
@@ -12,9 +12,10 @@ base16ct-0.2.0
 base64-0.13.1
 base64ct-1.6.0
 bitflags-1.3.2
+bitflags-2.0.2
 bitmaps-2.1.0
 block-buffer-0.10.4
-bstr-1.3.0
+bstr-1.4.0
 bumpalo-3.12.0
 bytes-1.4.0
 bytesize-1.2.0
@@ -25,10 +26,10 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.8
-clap_derive-4.1.8
+clap-4.1.11
+clap_derive-4.1.9
 clap_lex-0.2.4
-clap_lex-0.3.2
+clap_lex-0.3.3
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -86,8 +87,8 @@ ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.2
 instant-0.1.12
-io-lifetimes-1.0.6
-is-terminal-0.4.4
+io-lifetimes-1.0.8
+is-terminal-0.4.5
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
@@ -116,7 +117,7 @@ openssl-sys-0.9.81
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.6.0
-os_str_bytes-6.4.1
+os_str_bytes-6.5.0
 p384-0.13.0
 pasetors-0.6.6
 pathdiff-0.2.1
@@ -138,15 +139,15 @@ regex-syntax-0.6.28
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.9
+rustix-0.36.10
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.1
 semver-1.0.17
-serde-1.0.156
+serde-1.0.157
 serde-value-0.7.0
-serde_derive-1.0.156
+serde_derive-1.0.157
 serde_ignored-0.1.7
 serde_json-1.0.94
 serde_spanned-0.6.1
@@ -162,6 +163,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
+syn-2.0.2
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
@@ -179,7 +181,7 @@ toml_datetime-0.6.1
 toml_edit-0.15.0
 toml_edit-0.19.7
 typenum-1.16.0
-unicode-bidi-0.3.11
+unicode-bidi-0.3.12
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
