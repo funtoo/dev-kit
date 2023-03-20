@@ -20,10 +20,10 @@ cargo-platform-0.1.2
 cargo_metadata-0.15.2
 cc-1.0.78
 cfg-if-1.0.0
-chalk-derive-0.88.0
-chalk-ir-0.88.0
-chalk-recursive-0.88.0
-chalk-solve-0.88.0
+chalk-derive-0.89.0
+chalk-ir-0.89.0
+chalk-recursive-0.89.0
+chalk-solve-0.89.0
 command-group-2.0.1
 countme-3.0.1
 cov-mark-2.0.0-pre.1
@@ -189,7 +189,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-03-13 -> rust-analyzer-20230313.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-03-20 -> rust-analyzer-20230320.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -213,6 +213,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-03-13-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-03-20-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
