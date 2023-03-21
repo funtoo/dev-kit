@@ -133,9 +133,9 @@ quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
-regex-1.7.1
+regex-1.7.2
 regex-automata-0.1.10
-regex-syntax-0.6.28
+regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
@@ -163,7 +163,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.3
+syn-2.0.4
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
