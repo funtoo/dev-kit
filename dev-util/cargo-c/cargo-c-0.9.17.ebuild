@@ -128,7 +128,7 @@ pkg-config-0.3.26
 primeorder-0.13.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.52
+proc-macro2-1.0.53
 quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0
@@ -163,7 +163,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.4
+syn-2.0.5
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
