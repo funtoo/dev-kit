@@ -26,8 +26,8 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.11
-clap_derive-4.1.9
+clap-4.1.12
+clap_derive-4.1.12
 clap_lex-0.2.4
 clap_lex-0.3.3
 combine-4.6.6
@@ -126,8 +126,6 @@ percent-encoding-2.2.0
 pkcs8-0.10.1
 pkg-config-0.3.26
 primeorder-0.13.0
-proc-macro-error-1.0.4
-proc-macro-error-attr-1.0.4
 proc-macro2-1.0.53
 quote-1.0.26
 rand_core-0.6.4
@@ -163,7 +161,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.5
+syn-2.0.8
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
@@ -179,7 +177,7 @@ toml-0.7.3
 toml_datetime-0.5.1
 toml_datetime-0.6.1
 toml_edit-0.15.0
-toml_edit-0.19.7
+toml_edit-0.19.8
 typenum-1.16.0
 unicode-bidi-0.3.13
 unicode-ident-1.0.8
@@ -213,7 +211,7 @@ windows_i686_msvc-0.42.2
 windows_x86_64_gnu-0.42.2
 windows_x86_64_gnullvm-0.42.2
 windows_x86_64_msvc-0.42.2
-winnow-0.3.6
+winnow-0.4.0
 zeroize-1.5.7
 "
 

@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install
+DEPEND=sys-libs/ncurses
+DESCRIPTION=A library of curses widgets
+EAPI=7
+HOMEPAGE=https://dickey.his.com/cdk/cdk.html https://github.com/ThomasDickey/cdk-snapshots
+IUSE=examples unicode
+KEYWORDS=*
+LICENSE=MIT
+RDEPEND=sys-libs/ncurses
+SLOT=0/6
+SRC_URI=https://invisible-mirror.net/archives/cdk/cdk-5.0-20230201.tgz -> cdk-5.0-20230201.tgz
+_md5_=80d768ab975abf884076deaab217928e
