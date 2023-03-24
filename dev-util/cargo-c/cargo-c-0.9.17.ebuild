@@ -12,7 +12,6 @@ base16ct-0.2.0
 base64-0.13.1
 base64ct-1.6.0
 bitflags-1.3.2
-bitflags-2.0.2
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.4.0
@@ -26,7 +25,7 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.12
+clap-4.1.13
 clap_derive-4.1.12
 clap_lex-0.2.4
 clap_lex-0.3.3
@@ -109,11 +108,11 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
 opener-0.5.2
-openssl-0.10.47
+openssl-0.10.48
 openssl-macros-0.1.0
 openssl-probe-0.1.5
 openssl-src-111.25.2+1.1.1t
-openssl-sys-0.9.82
+openssl-sys-0.9.83
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
@@ -211,7 +210,7 @@ windows_i686_msvc-0.42.2
 windows_x86_64_gnu-0.42.2
 windows_x86_64_gnullvm-0.42.2
 windows_x86_64_msvc-0.42.2
-winnow-0.4.0
+winnow-0.4.1
 zeroize-1.5.7
 "
 
