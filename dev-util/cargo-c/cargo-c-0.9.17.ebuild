@@ -35,7 +35,7 @@ commoncrypto-sys-0.2.0
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
-cpufeatures-0.2.5
+cpufeatures-0.2.6
 crates-io-0.35.1
 crc32fast-1.3.2
 crypto-bigint-0.5.1
@@ -84,7 +84,7 @@ humantime-2.1.0
 idna-0.3.0
 ignore-0.4.20
 im-rc-15.1.0
-indexmap-1.9.2
+indexmap-1.9.3
 instant-0.1.12
 io-lifetimes-1.0.9
 is-terminal-0.4.5
@@ -130,7 +130,7 @@ quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
-regex-1.7.2
+regex-1.7.3
 regex-automata-0.1.10
 regex-syntax-0.6.29
 rfc6979-0.4.0
@@ -160,7 +160,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.9
+syn-2.0.10
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
