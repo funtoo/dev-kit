@@ -2,7 +2,7 @@
 
 
 async def generate(hub, **pkginfo):
-	github_user = "Peltoche"
+	github_user = "lsd-rs"
 	github_repo = pkginfo["name"]
 	crate_name = pkginfo["name"]
 	json_list = await hub.pkgtools.fetch.get_page(

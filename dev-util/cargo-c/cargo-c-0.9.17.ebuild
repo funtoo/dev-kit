@@ -125,7 +125,7 @@ percent-encoding-2.2.0
 pkcs8-0.10.1
 pkg-config-0.3.26
 primeorder-0.13.0
-proc-macro2-1.0.53
+proc-macro2-1.0.54
 quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0

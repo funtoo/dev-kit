@@ -128,8 +128,8 @@ yaml-rust-0.4.5
 inherit cargo
 
 DESCRIPTION="A modern ls with a lot of pretty colors and awesome icons"
-HOMEPAGE="https://github.com/Peltoche/lsd"
-SRC_URI="https://api.github.com/repos/lsd-rs/lsd/tarball/0.23.1 -> lsd-0.23.1.tar.gz
+HOMEPAGE="https://github.com/lsd-rs/lsd"
+SRC_URI="
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -146,7 +146,7 @@ QA_FLAGS_IGNORED="/usr/bin/lsd"
 src_unpack() {
 	cargo_src_unpack
 	rm -rf ${S}
-	mv ${WORKDIR}/Peltoche-lsd-* ${S} || die
+	mv ${WORKDIR}/lsd-rs-lsd-* ${S} || die
 }
 
 src_install() {
