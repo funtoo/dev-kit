@@ -211,7 +211,7 @@ windows_x86_64_gnu-0.42.2
 windows_x86_64_gnullvm-0.42.2
 windows_x86_64_msvc-0.42.2
 winnow-0.4.1
-zeroize-1.5.7
+zeroize-1.6.0
 "
 
 inherit cargo
