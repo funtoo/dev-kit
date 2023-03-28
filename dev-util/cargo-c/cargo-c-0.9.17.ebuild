@@ -25,10 +25,11 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.13
-clap_derive-4.1.12
+clap-4.1.14
+clap_builder-4.1.14
+clap_derive-4.1.14
 clap_lex-0.2.4
-clap_lex-0.3.3
+clap_lex-0.4.1
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -63,7 +64,7 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.1.0
 fwdansi-1.1.0
-generic-array-0.14.6
+generic-array-0.14.7
 getrandom-0.2.8
 git2-0.16.0
 git2-curl-0.17.0
@@ -142,11 +143,11 @@ same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.1
 semver-1.0.17
-serde-1.0.158
+serde-1.0.159
 serde-value-0.7.0
-serde_derive-1.0.158
+serde_derive-1.0.159
 serde_ignored-0.1.7
-serde_json-1.0.94
+serde_json-1.0.95
 serde_spanned-0.6.1
 sha1-0.10.5
 sha2-0.10.6
@@ -160,7 +161,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.10
+syn-2.0.11
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
