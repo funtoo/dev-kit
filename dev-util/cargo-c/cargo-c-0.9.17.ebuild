@@ -4,6 +4,10 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
+anstream-0.2.6
+anstyle-0.3.5
+anstyle-parse-0.1.1
+anstyle-wincon-0.2.0
 anyhow-1.0.70
 arrayvec-0.5.2
 atty-0.2.14
@@ -25,13 +29,16 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.1.13
-clap_derive-4.1.12
+clap-4.2.0
+clap_builder-4.2.0
+clap_derive-4.2.0
 clap_lex-0.2.4
-clap_lex-0.3.3
+clap_lex-0.4.1
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
+concolor-override-1.0.0
+concolor-query-0.3.3
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
@@ -46,7 +53,7 @@ curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
 der-0.7.1
 digest-0.10.6
-ecdsa-0.16.1
+ecdsa-0.16.2
 ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.2
@@ -63,7 +70,7 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.1.0
 fwdansi-1.1.0
-generic-array-0.14.6
+generic-array-0.14.7
 getrandom-0.2.8
 git2-0.16.0
 git2-curl-0.17.0
@@ -142,11 +149,11 @@ same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.1
 semver-1.0.17
-serde-1.0.158
+serde-1.0.159
 serde-value-0.7.0
-serde_derive-1.0.158
+serde_derive-1.0.159
 serde_ignored-0.1.7
-serde_json-1.0.94
+serde_json-1.0.95
 serde_spanned-0.6.1
 sha1-0.10.5
 sha2-0.10.6
@@ -160,7 +167,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.10
+syn-2.0.11
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
