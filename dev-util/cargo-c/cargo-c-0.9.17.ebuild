@@ -29,8 +29,8 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.2.0
-clap_builder-4.2.0
+clap-4.2.1
+clap_builder-4.2.1
 clap_derive-4.2.0
 clap_lex-0.2.4
 clap_lex-0.4.1
@@ -58,7 +58,7 @@ ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.2
 env_logger-0.10.0
-errno-0.2.8
+errno-0.3.0
 errno-dragonfly-0.1.2
 fastrand-1.9.0
 ff-0.13.0
@@ -94,7 +94,7 @@ im-rc-15.1.0
 indexmap-1.9.3
 instant-0.1.12
 io-lifetimes-1.0.9
-is-terminal-0.4.5
+is-terminal-0.4.6
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
@@ -107,7 +107,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
-linux-raw-sys-0.1.4
+linux-raw-sys-0.3.0
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
@@ -137,13 +137,14 @@ quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
+redox_syscall-0.3.5
 regex-1.7.3
 regex-automata-0.1.10
 regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.36.11
+rustix-0.37.5
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
@@ -169,7 +170,7 @@ subtle-2.4.1
 syn-1.0.109
 syn-2.0.11
 tar-0.4.38
-tempfile-3.4.0
+tempfile-3.5.0
 termcolor-1.2.0
 textwrap-0.16.0
 thread_local-1.1.7
