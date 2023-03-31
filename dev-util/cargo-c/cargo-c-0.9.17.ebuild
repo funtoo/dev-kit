@@ -107,7 +107,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
-linux-raw-sys-0.3.0
+linux-raw-sys-0.3.1
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
@@ -168,7 +168,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.11
+syn-2.0.12
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
