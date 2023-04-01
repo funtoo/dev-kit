@@ -22,7 +22,7 @@ bstr-1.4.0
 bumpalo-3.12.0
 bytes-1.4.0
 bytesize-1.2.0
-cargo-0.69.0
+cargo-0.69.1
 cargo-platform-0.1.2
 cargo-util-0.2.3
 cbindgen-0.24.3
@@ -62,7 +62,7 @@ errno-0.3.0
 errno-dragonfly-0.1.2
 fastrand-1.9.0
 ff-0.13.0
-fiat-crypto-0.1.19
+fiat-crypto-0.1.20
 filetime-0.2.20
 flate2-1.0.25
 fnv-1.0.7
@@ -115,11 +115,11 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
 opener-0.5.2
-openssl-0.10.48
-openssl-macros-0.1.0
+openssl-0.10.49
+openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.25.2+1.1.1t
-openssl-sys-0.9.83
+openssl-sys-0.9.84
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
@@ -132,7 +132,7 @@ percent-encoding-2.2.0
 pkcs8-0.10.1
 pkg-config-0.3.26
 primeorder-0.13.0
-proc-macro2-1.0.54
+proc-macro2-1.0.55
 quote-1.0.26
 rand_core-0.6.4
 rand_xoshiro-0.6.0
@@ -144,7 +144,7 @@ regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.5
+rustix-0.37.6
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
@@ -168,7 +168,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.12
+syn-2.0.13
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0

@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3+ )
 inherit multilib python-r1 toolchain-funcs
 
 DESCRIPTION="A C++ crypto library"
-SRC_URI="https://github.com/randombit/botan/archive/refs/tags/3.0.0-rc1.tar.gz -> botan-3.0.0-rc1.tar.gz"
+SRC_URI="https://github.com/randombit/botan/tarball/15dc32f12d05e99a267f0fc47d88b678b71b8b05 -> botan-2.19.3-15dc32f.tar.gz"
 
 HOMEPAGE="https://botan.randombit.net/"
 
@@ -27,6 +27,12 @@ RDEPEND="${DEPEND}
 "
 BDEPEND="dev-lang/python:*
 	doc? ( dev-python/sphinx )"
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/randombit-botan* "${S}" || die
+	fi
+}
 
 src_configure() {
 	local disable_modules=()

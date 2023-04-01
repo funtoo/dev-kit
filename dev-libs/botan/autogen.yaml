@@ -1,0 +1,8 @@
+botan_rule:
+  generator: github-1
+  packages:
+    - botan:
+        github:
+          user: randombit
+          repo: botan
+          query: tags
