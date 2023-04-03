@@ -28,6 +28,12 @@ RDEPEND="${DEPEND}
 BDEPEND="dev-lang/python:*
 	doc? ( dev-python/sphinx )"
 
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/{{ github_user }}-{{ github_repo }}* "${S}" || die
+	fi
+}
+
 src_configure() {
 	local disable_modules=()
 	use boost || disable_modules+=( "boost" )
