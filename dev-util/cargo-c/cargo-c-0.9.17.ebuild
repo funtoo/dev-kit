@@ -41,7 +41,7 @@ concolor-override-1.0.0
 concolor-query-0.3.3
 const-oid-0.9.2
 core-foundation-0.9.3
-core-foundation-sys-0.8.3
+core-foundation-sys-0.8.4
 cpufeatures-0.2.6
 crates-io-0.35.1
 crc32fast-1.3.2
