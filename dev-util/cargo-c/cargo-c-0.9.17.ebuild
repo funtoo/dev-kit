@@ -102,7 +102,7 @@ js-sys-0.3.61
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.140
+libc-0.2.141
 libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -144,7 +144,7 @@ regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.6
+rustix-0.37.7
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
