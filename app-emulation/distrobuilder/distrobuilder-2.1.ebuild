@@ -1895,12 +1895,13 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://api.github.com/repos/lxc/distrobuilder/tarball/distrobuilder-2.1 -> distrobuilder-2.1.tar.gz
+SRC_URI="https://github.com/lxc/distrobuilder/tarball/ff0c6f52796fce915208147272f107fcd31490bd -> distrobuilder-2.1-ff0c6f5.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
+S="${WORKDIR}/lxc-distrobuilder-ff0c6f5"
 
 RDEPEND="
 	dev-util/debootstrap
