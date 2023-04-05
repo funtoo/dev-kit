@@ -21,7 +21,12 @@ KEYWORDS="*"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.17"
-S="${WORKDIR}/{{github_user}}-{{github_repo}}-{{sha[:7]}}"
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
+}
 
 src_compile() {
 	go build -o "${PN}" || die "compile failed"

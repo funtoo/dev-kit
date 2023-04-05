@@ -1276,7 +1276,7 @@ go-module_set_globals
 
 DESCRIPTION="A tool for creating identical machine images for multiple platforms"
 HOMEPAGE="https://www.packer.io/ https://github.com/hashicorp/packer"
-SRC_URI="https://github.com/hashicorp/packer/tarball/7c133022d2433a94cb0e6023b594120fd69a2679 -> packer-1.8.6-7c13302.tar.gz
+SRC_URI="https://api.github.com/repos/hashicorp/packer/tarball/v1.8.6 -> packer-v1.8.6.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0"
@@ -1286,7 +1286,12 @@ KEYWORDS="*"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.17"
-S="${WORKDIR}/hashicorp-packer-7c13302"
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/hashicorp-packer-* ${S} || die
+}
 
 src_compile() {
 	go build -o "${PN}" || die "compile failed"
