@@ -79,17 +79,22 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://github.com/mikefarah/yq/tarball/d5bbe5bea564beb9c7f30471e63d51cac95d1304 -> yq-4.33.2-d5bbe5b.tar.gz
+SRC_URI="https://api.github.com/repos/mikefarah/yq/tarball/v4.33.2 -> yq-go-v4.33.2.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="*"
-S="${WORKDIR}/mikefarah-yq-d5bbe5b"
 
 DEPEND=""
 RDEPEND=">=dev-vcs/git-1.7.3"
 BDEPEND=">=dev-lang/go-1.16.14"
+
+src_unpack() {
+	go-module_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/mikefarah-yq-* ${S} || die
+}
 
 src_compile() {
 	# The default yq go binary will conflict with python-modules-kit's app-misc/yq, which also has a yq executable installed to /usr/bin/yq

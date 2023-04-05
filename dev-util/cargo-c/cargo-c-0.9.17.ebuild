@@ -53,7 +53,7 @@ curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
 der-0.7.2
 digest-0.10.6
-ecdsa-0.16.3
+ecdsa-0.16.4
 ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.3
@@ -63,7 +63,7 @@ errno-dragonfly-0.1.2
 fastrand-1.9.0
 ff-0.13.0
 fiat-crypto-0.1.20
-filetime-0.2.20
+filetime-0.2.21
 flate2-1.0.25
 fnv-1.0.7
 foreign-types-0.3.2
