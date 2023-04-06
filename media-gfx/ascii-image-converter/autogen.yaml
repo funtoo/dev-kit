@@ -1,0 +1,9 @@
+aic:
+  generator: github-1
+  packages:
+    - ascii-image-converter:
+        extensions:
+          - golang
+        github:
+          user: TheZoraiz
+          query: releases

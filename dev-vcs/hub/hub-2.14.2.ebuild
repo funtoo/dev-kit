@@ -48,8 +48,8 @@ go-module_set_globals
 
 DESCRIPTION="Command-line wrapper for git that makes you better at GitHub"
 HOMEPAGE="https://github.com/github/hub"
-SRC_URI="https://api.github.com/repos/github/hub/tarball/v2.14.2 -> hub-2.14.2.tar.gz
-	${EGO_SUM_SRC_URI}"
+SRC_URI="https://github.com/github/hub/tarball/a1b6bb179a1311738c48a364cde44253c7459a86 -> hub-2.14.2-a1b6bb1.tar.gz
+https://direct.funtoo.org/ce/c4/d5/cec4d53c8637cbc2efe99165292a8defee18b2962d6b4b1c3edf09e36076690964aa26ceeba23caf2ce08c9c2142020a8a912fca2b423edeffd7c414140cc096 -> hub-2.14.2-funtoo-go-bundle-63a3df6b855a85b08d3eecd7d0d902eb3a13157f92811dbcaf0ad4cf65668a3aea34352cea6eb4cdc3bc3a23b7ce4a63bc6548d9f7ebb8586e7698f810da988f.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

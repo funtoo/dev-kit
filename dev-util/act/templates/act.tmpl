@@ -11,8 +11,7 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="{{artifacts[0].src_uri}}
-	${EGO_SUM_SRC_URI}"
+SRC_URI="{{src_uri}}"
 
 RDEPEND="
 	app-emulation/docker

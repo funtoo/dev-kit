@@ -12,7 +12,7 @@ go-module_set_globals
 DESCRIPTION="A zero-config tool to make locally trusted development certificates"
 HOMEPAGE="https://github.com/FiloSottile/mkcert"
 SRC_URI="{{artifacts[0].src_uri}}
-		${EGO_SUM_SRC_URI}"
+{{artifacts[1].src_uri}}"
 
 LICENSE="BSD"
 SLOT="0"
@@ -23,9 +23,7 @@ RDEPEND="
 	dev-libs/nss[utils]
 "
 
-src_unpack() {
-	go-module_src_unpack
-	rm -rf ${S}
+post_src_unpack() {
 	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
 }
 

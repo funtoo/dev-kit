@@ -1,0 +1,15 @@
+scc:
+  generator: github-1
+  packages:
+    - scc:
+        extensions:
+          - golang
+        github:
+          user: boyter
+          query: releases
+          # This project has a release with a large integer name:
+          # '92605' or something. We want '3.1.0.'. Here's the fix:
+          # This match ensures we get a 0-9, followed by '.' and
+          # ignore big numbers that might mistakenly be chosen as
+          # "latest release".
+          match: '([0-9]\..*)'

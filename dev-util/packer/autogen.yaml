@@ -1,0 +1,9 @@
+packer:
+  generator: github-1
+  packages:
+    - packer:
+        extensions:
+          - golang
+        github:
+          user: hashicorp
+          query: releases

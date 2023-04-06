@@ -9,8 +9,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="{{artifacts[0].src_uri}}
-	${EGO_SUM_SRC_URI}"
+SRC_URI="{{src_uri}}"
 
 DESCRIPTION="A tool similar to cloc, sloccount and tokei"
 HOMEPAGE="https://github.com/boyter/scc"
@@ -20,8 +19,8 @@ SLOT="0"
 KEYWORDS="*"
 IUSE=""
 
-src_unpack() {
-	go-module_src_unpack
+post_src_unpack() {
+	mv ${WORKDIR}/{{github_user}}-* ${S} || die
 }
 
 src_compile() {

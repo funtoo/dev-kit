@@ -13,8 +13,7 @@ EGO_PN=github.com/git-lfs/git-lfs
 DESCRIPTION="Git extension for versioning large files"
 HOMEPAGE="https://git-lfs.github.com/"
 
-SRC_URI="{{artifacts[0].src_uri}}
-	${EGO_SUM_SRC_URI}"
+SRC_URI="{{src_uri}}"
 KEYWORDS="*"
 
 LICENSE="Apache-2.0 BSD BSD-2 BSD-4 ISC MIT"
@@ -36,9 +35,7 @@ DOCS=(
 	SECURITY.md
 )
 
-src_unpack() {
-	go-module_src_unpack
-	rm -rf ${S}
+post_src_unpack() {
 	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
 }
 

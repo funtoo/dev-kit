@@ -320,8 +320,8 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="https://api.github.com/repos/nektos/act/tarball/v0.2.44 -> act-0.2.44.tar.gz
-	${EGO_SUM_SRC_URI}"
+SRC_URI="https://github.com/nektos/act/tarball/220d6f1251aea75c378e5a98546f43cd918e1892 -> act-0.2.44-220d6f1.tar.gz
+https://direct.funtoo.org/bb/e9/d8/bbe9d8dace1e28dc7303174c9f2b7fe1ab04fb5eb35ba4c3c1b861e4984d651d970e6b966c591b80247ed2587e90fb8d53ea24a30a41e165e65bd377ee3d0b70 -> act-0.2.44-funtoo-go-bundle-8df64d22a345dc741350b8f981bd9ee72cbccd1a900408e1b4c59732a6a675f17de6346585f7e0b2e877f74f7532612ff9e8695320d3002002ccd99ad5a4175c.tar.gz"
 
 RDEPEND="
 	app-emulation/docker

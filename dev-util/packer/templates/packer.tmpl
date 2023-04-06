@@ -11,8 +11,7 @@ go-module_set_globals
 
 DESCRIPTION="A tool for creating identical machine images for multiple platforms"
 HOMEPAGE="https://www.packer.io/ https://github.com/{{github_user}}/{{github_repo}}"
-SRC_URI="{{artifacts[0].src_uri}}
-	${EGO_SUM_SRC_URI}"
+SRC_URI="{{src_uri}}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -21,12 +20,7 @@ KEYWORDS="*"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.17"
-
-src_unpack() {
-	go-module_src_unpack
-	rm -rf ${S}
-	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-* ${S} || die
-}
+S="${WORKDIR}/{{github_user}}-{{github_repo}}-{{sha[:7]}}"
 
 src_compile() {
 	go build -o "${PN}" || die "compile failed"

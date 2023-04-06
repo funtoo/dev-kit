@@ -253,8 +253,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://api.github.com/repos/jesseduffield/lazygit/tarball/v0.37.0 -> lazygit-0.37.0.tar.gz
-	${EGO_SUM_SRC_URI}"
+SRC_URI="https://github.com/jesseduffield/lazygit/tarball/16802a048e0425182f08cf0e9a2bc31480e9a55d -> lazygit-0.37.0-16802a0.tar.gz
+https://direct.funtoo.org/92/17/b8/9217b8c13d831a76f1bc201d45f5aa91691e87171df30b1d4213670cf107e595c9346d39b97891359ffd68f97ed514e53f5e4534f251432ed62246a4d9cfb02c -> lazygit-0.37.0-funtoo-go-bundle-82a8d529c519ee09f58bea24d23c0b5524bc2611c75bd1e642f205f5dbb05a6977c231df6a99a8f6e4ef8236f3a8aef551049612f2c37543ea41dd75811cfe6d.tar.gz"
 
 DESCRIPTION="A simple terminal UI for git commands"
 HOMEPAGE="http://github.com/jesseduffield/lazygit"

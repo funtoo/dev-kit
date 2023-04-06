@@ -485,8 +485,8 @@ go-module_set_globals
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://github.com/twpayne/chezmoi"
-SRC_URI="https://api.github.com/repos/twpayne/chezmoi/tarball/v2.33.0 -> chezmoi-v2.33.0.tar.gz
-	${EGO_SUM_SRC_URI}"
+SRC_URI="https://github.com/twpayne/chezmoi/tarball/ced12b81b493670520b177dcc62de2c67172858d -> chezmoi-2.33.0-ced12b8.tar.gz
+https://direct.funtoo.org/ea/d8/f0/ead8f015dd91f43bec06724fe223d11ffe6cb7a17cef4a1ba9b2974d0e1c07adae133d7330dbd28862d497949a4c4c7270e238df4cc0cada622a9196103a298a -> chezmoi-2.33.0-funtoo-go-bundle-c7ae43dc68c34eec11f23e3b41084d6a7e654dd2cafe36e734923378e281a928e5bee80b87fbae2dc6a693ed592cd5987b6bc8ad318432ae431cc04eada05b4b.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -496,9 +496,7 @@ DEPEND=""
 RDEPEND=">=dev-vcs/git-1.7.3"
 BDEPEND=">=dev-lang/go-1.17"
 
-src_unpack() {
-	go-module_src_unpack
-	rm -rf ${S}
+post_src_unpack() {
 	mv ${WORKDIR}/twpayne-chezmoi-* ${S} || die
 }
 
