@@ -584,19 +584,16 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://api.github.com/repos/cli/cli/tarball/v2.26.1 -> cli-v2.26.1.tar.gz
-	${EGO_SUM_SRC_URI}"
+SRC_URI="https://github.com/cli/cli/tarball/633ca03b538e4d3a82ed943230686505afd76389 -> cli-2.26.1-633ca03.tar.gz
+https://direct.funtoo.org/e9/50/15/e95015b3fc6e8315b628a3117e9647fbb4208c2ee111d03f4a811b8cc318b7a04b999429e5c68a965fc124547d70887ee280f5e8b4a4d943aee2a2a309542634 -> github-cli-2.26.1-funtoo-go-bundle-37c988a9f88be9cba40278904836b37f62b8567d2bb37f03ee85533aa70daef95ad14f38313a0e1d0217e4ad2e8f4a5beae315d8e374b30659798cd4587adb2f.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
 RDEPEND=">=dev-vcs/git-1.7.3"
 RESTRICT+=" test "
 
-src_unpack() {
-	unpack cli-v2.26.1.tar.gz || die
+post_src_unpack() {
 	mv ${WORKDIR}/cli-cli-* ${S} || die
-	go-module_src_unpack
-	rm -rf cli-cli-* || die
 }
 
 src_compile() {

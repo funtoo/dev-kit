@@ -1,0 +1,8 @@
+git-lfs:
+  generator: github-1
+  packages:
+    - git-lfs:
+        extensions:
+          - golang
+        github:
+          query: releases

@@ -1,0 +1,9 @@
+hub:
+  generator: github-1
+  packages:
+    - hub:
+        extensions:
+          - golang
+        github:
+          user: github
+          query: releases

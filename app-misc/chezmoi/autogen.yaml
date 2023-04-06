@@ -1,0 +1,9 @@
+chezmoi:
+  generator: github-1
+  packages:
+    - chezmoi:
+        extensions:
+          - golang
+        github:
+          user: twpayne
+          query: releases

@@ -11,19 +11,15 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="{{artifacts[0].src_uri}}
-	${EGO_SUM_SRC_URI}"
+SRC_URI="{{src_uri}}"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
 RDEPEND=">=dev-vcs/git-1.7.3"
 RESTRICT+=" test "
 
-src_unpack() {
-	unpack {{ artifacts[0].final_name }} || die
+post_src_unpack() {
 	mv ${WORKDIR}/{{ github_user }}-{{ github_repo }}-* ${S} || die
-	go-module_src_unpack
-	rm -rf {{ github_user }}-{{ github_repo }}-* || die
 }
 
 src_compile() {
