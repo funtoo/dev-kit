@@ -94,7 +94,7 @@ im-rc-15.1.0
 indexmap-1.9.3
 instant-0.1.12
 io-lifetimes-1.0.10
-is-terminal-0.4.6
+is-terminal-0.4.7
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
