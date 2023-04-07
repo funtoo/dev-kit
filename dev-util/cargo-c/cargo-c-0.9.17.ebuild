@@ -51,7 +51,7 @@ crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
-der-0.7.2
+der-0.7.3
 digest-0.10.6
 ecdsa-0.16.4
 ed25519-compact-2.0.4
@@ -71,7 +71,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.1.0
 fwdansi-1.1.0
 generic-array-0.14.7
-getrandom-0.2.8
+getrandom-0.2.9
 git2-0.16.0
 git2-curl-0.17.0
 glob-0.3.1
@@ -94,7 +94,7 @@ im-rc-15.1.0
 indexmap-1.9.3
 instant-0.1.12
 io-lifetimes-1.0.10
-is-terminal-0.4.6
+is-terminal-0.4.7
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
@@ -144,7 +144,7 @@ regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.7
+rustix-0.37.8
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
