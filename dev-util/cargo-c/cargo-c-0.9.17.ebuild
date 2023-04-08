@@ -58,7 +58,7 @@ ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.3
 env_logger-0.10.0
-errno-0.3.0
+errno-0.3.1
 errno-dragonfly-0.1.2
 fastrand-1.9.0
 ff-0.13.0
@@ -144,7 +144,7 @@ regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.8
+rustix-0.37.11
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
