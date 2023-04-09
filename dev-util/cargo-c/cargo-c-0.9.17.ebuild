@@ -53,10 +53,10 @@ curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
 der-0.7.3
 digest-0.10.6
-ecdsa-0.16.4
+ecdsa-0.16.5
 ed25519-compact-2.0.4
 either-1.8.1
-elliptic-curve-0.13.3
+elliptic-curve-0.13.4
 env_logger-0.10.0
 errno-0.3.1
 errno-dragonfly-0.1.2
