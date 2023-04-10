@@ -18,6 +18,7 @@ KEYWORDS="*"
 LICENSE="BSD"
 SLOT="0"
 
+
 PATCHES=(
 	# https://bugs.funtoo.org/browse/FL-10883
 	# Upstream recently added a simple CMakeLists.txt but it does not install pystring header files
@@ -25,8 +26,9 @@ PATCHES=(
 	"${FILESDIR}/cmake.patch"
 )
 
-src_unpack() {
-	default
-	rm -rf "${S}"
-	mv "${WORKDIR}"/pystring-* "${S}" || die
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/pystring-* "${S}" || die
+	fi
 }

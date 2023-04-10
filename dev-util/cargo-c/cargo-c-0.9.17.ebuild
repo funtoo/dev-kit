@@ -53,7 +53,7 @@ curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
 der-0.7.3
 digest-0.10.6
-ecdsa-0.16.5
+ecdsa-0.16.6
 ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.4
@@ -115,11 +115,11 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
 opener-0.5.2
-openssl-0.10.49
+openssl-0.10.50
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.25.2+1.1.1t
-openssl-sys-0.9.84
+openssl-sys-0.9.85
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
@@ -131,7 +131,7 @@ pem-rfc7468-0.7.0
 percent-encoding-2.2.0
 pkcs8-0.10.2
 pkg-config-0.3.26
-primeorder-0.13.0
+primeorder-0.13.1
 proc-macro2-1.0.56
 quote-1.0.26
 rand_core-0.6.4
@@ -148,7 +148,7 @@ rustix-0.37.11
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
-sec1-0.7.1
+sec1-0.7.2
 semver-1.0.17
 serde-1.0.159
 serde-value-0.7.0
