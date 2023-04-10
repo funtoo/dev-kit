@@ -1,0 +1,8 @@
+utfcpp:
+  generator: github-1
+  packages:
+    - utfcpp:
+        github:
+          user: nemtrif
+          repo: utfcpp
+          query: releases
