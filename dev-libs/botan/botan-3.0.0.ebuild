@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3+ )
 inherit multilib python-r1 toolchain-funcs
 
 DESCRIPTION="A C++ crypto library"
-SRC_URI="https://github.com/randombit/botan/tarball/15dc32f12d05e99a267f0fc47d88b678b71b8b05 -> botan-2.19.3-15dc32f.tar.gz"
+SRC_URI="https://github.com/randombit/botan/tarball/51b06ca93d1998d19927699f78b8d67539148dde -> botan-3.0.0-51b06ca.tar.gz"
 
 HOMEPAGE="https://botan.randombit.net/"
 

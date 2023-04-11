@@ -9,7 +9,7 @@ KEYWORDS=*
 LICENSE=BSD
 RDEPEND=python? ( python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_10(-)?,python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,-python_single_target_python3_10(-),-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] ) bzip2? ( >=app-arch/bzip2-1.0.5:= ) zlib? ( >=sys-libs/zlib-1.2.3:= ) boost? ( >=dev-libs/boost-1.48:= ) lzma? ( app-arch/xz-utils:= ) sqlite? ( dev-db/sqlite:3= )
 REQUIRED_USE=python? ( || ( python_targets_python3_10 python_targets_python3_7 python_targets_python3_9 python_targets_python3_8 ) )
-SLOT=2/2.19
-SRC_URI=https://github.com/randombit/botan/tarball/15dc32f12d05e99a267f0fc47d88b678b71b8b05 -> botan-2.19.3-15dc32f.tar.gz
+SLOT=2/3.0
+SRC_URI=https://github.com/randombit/botan/tarball/51b06ca93d1998d19927699f78b8d67539148dde -> botan-3.0.0-51b06ca.tar.gz
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=39d3a69319150e5c42e5cda096853d39
+_md5_=cc032f5da5aa1b361c06bc039c569e68

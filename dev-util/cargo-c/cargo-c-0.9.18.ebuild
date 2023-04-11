@@ -150,9 +150,9 @@ same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.2
 semver-1.0.17
-serde-1.0.159
+serde-1.0.160
 serde-value-0.7.0
-serde_derive-1.0.159
+serde_derive-1.0.160
 serde_ignored-0.1.7
 serde_json-1.0.95
 serde_spanned-0.6.1
@@ -168,7 +168,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.13
+syn-2.0.14
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
@@ -235,7 +235,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.17 -> cargo-c-0.9.17.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.18 -> cargo-c-0.9.18.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
