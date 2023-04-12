@@ -16,11 +16,9 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-libs/nettle:0=
-		>=net-libs/gnutls-3.5.7:=
-			virtual/libcrypt:=
-			"
-			DEPEND="${RDEPEND}
-				test? ( dev-util/cppunit )"
+	>=net-libs/gnutls-3.5.7:="
+DEPEND="${RDEPEND}
+	test? ( dev-util/cppunit )"
 
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
