@@ -6,13 +6,13 @@ PYTHON_COMPAT=( python3+ )
 inherit python-r1 toolchain-funcs
 
 DESCRIPTION="C++ crypto library"
-SRC_URI="{{artifacts[0].src_uri}}"
+SRC_URI="https://github.com/randombit/botan/tarball/15dc32f12d05e99a267f0fc47d88b678b71b8b05 -> botan-2.19.3-15dc32f.tar.gz"
 
 HOMEPAGE="https://botan.randombit.net/"
 
 LICENSE="BSD-2"
 # Major versions are parallel-installable
-SLOT="{{ slot }}"
+SLOT="2/2.19"
 KEYWORDS="*"
 IUSE="boost bzip2 doc lzma python static-libs sqlite test tools zlib"
 RESTRICT="!test? ( test )"
@@ -51,7 +51,7 @@ python_check_deps() {
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv {{ github_user }}-{{ github_repo }}-* "${S}" || die
+		mv randombit-botan-* "${S}" || die
 	fi
 }
 

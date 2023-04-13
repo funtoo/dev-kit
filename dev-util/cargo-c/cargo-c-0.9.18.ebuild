@@ -154,7 +154,7 @@ serde-1.0.160
 serde-value-0.7.0
 serde_derive-1.0.160
 serde_ignored-0.1.7
-serde_json-1.0.95
+serde_json-1.0.96
 serde_spanned-0.6.1
 sha1-0.10.5
 sha2-0.10.6

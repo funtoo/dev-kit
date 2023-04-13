@@ -1,7 +1,11 @@
 botan_rule:
-  generator: github-1
   packages:
     - botan:
+        slots:
+          - 2
+          - 3
+        revision:
+          3.0.0: 1
         github:
           user: randombit
           repo: botan
