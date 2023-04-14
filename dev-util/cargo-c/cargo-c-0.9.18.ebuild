@@ -4,10 +4,11 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
-anstream-0.2.6
-anstyle-0.3.5
-anstyle-parse-0.1.1
-anstyle-wincon-0.2.0
+anstream-0.3.0
+anstyle-1.0.0
+anstyle-parse-0.2.0
+anstyle-query-1.0.0
+anstyle-wincon-1.0.0
 anyhow-1.0.70
 arrayvec-0.5.2
 atty-0.2.14
@@ -29,16 +30,15 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.2.1
-clap_builder-4.2.1
+clap-4.2.2
+clap_builder-4.2.2
 clap_derive-4.2.0
 clap_lex-0.2.4
 clap_lex-0.4.1
+colorchoice-1.0.0
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
-concolor-override-1.0.0
-concolor-query-0.3.3
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
@@ -150,11 +150,11 @@ same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.2
 semver-1.0.17
-serde-1.0.159
+serde-1.0.160
 serde-value-0.7.0
-serde_derive-1.0.159
+serde_derive-1.0.160
 serde_ignored-0.1.7
-serde_json-1.0.95
+serde_json-1.0.96
 serde_spanned-0.6.1
 sha1-0.10.5
 sha2-0.10.6
@@ -168,7 +168,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.13
+syn-2.0.15
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
@@ -235,7 +235,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.17 -> cargo-c-0.9.17.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.18 -> cargo-c-0.9.18.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

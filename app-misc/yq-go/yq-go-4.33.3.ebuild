@@ -24,11 +24,11 @@ EGO_SUM=(
 	"github.com/fatih/color v1.15.0/go.mod"
 	"github.com/goccy/go-json v0.10.2"
 	"github.com/goccy/go-json v0.10.2/go.mod"
-	"github.com/goccy/go-yaml v1.10.1"
-	"github.com/goccy/go-yaml v1.10.1/go.mod"
+	"github.com/goccy/go-yaml v1.11.0"
+	"github.com/goccy/go-yaml v1.11.0/go.mod"
 	"github.com/hexops/gotextdiff v1.0.3"
-	"github.com/inconshreveable/mousetrap v1.0.1"
-	"github.com/inconshreveable/mousetrap v1.0.1/go.mod"
+	"github.com/inconshreveable/mousetrap v1.1.0"
+	"github.com/inconshreveable/mousetrap v1.1.0/go.mod"
 	"github.com/jinzhu/copier v0.3.5"
 	"github.com/jinzhu/copier v0.3.5/go.mod"
 	"github.com/magiconair/properties v1.8.7"
@@ -45,8 +45,8 @@ EGO_SUM=(
 	"github.com/pmezard/go-difflib v1.0.0"
 	"github.com/pmezard/go-difflib v1.0.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
-	"github.com/spf13/cobra v1.6.1"
-	"github.com/spf13/cobra v1.6.1/go.mod"
+	"github.com/spf13/cobra v1.7.0"
+	"github.com/spf13/cobra v1.7.0/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
 	"github.com/stretchr/objx v0.1.0/go.mod"
@@ -79,13 +79,13 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://github.com/mikefarah/yq/tarball/d5bbe5bea564beb9c7f30471e63d51cac95d1304 -> yq-4.33.2-d5bbe5b.tar.gz
-https://direct.funtoo.org/5b/f9/3c/5bf93ca70626d8238a149b72754a060f57af09500a396432450564b1b0339ca1ff89ff152954c61782e8404a4ddff43a075e07390effc96a30bbb758a51e1504 -> yq-go-4.33.2-funtoo-go-bundle-5c7d326f9504a10338a9436d3646aaa3b4320f8fef73df0f5cd5bfbf453f1de7a5e914d614d516292fc7d82233e0b95d177ff33df42e2d6653f1a7bb014dcf2a.tar.gz"
+SRC_URI="https://github.com/mikefarah/yq/tarball/d2f1ae9db722ac6b0702dd7f8a08dd22722d8c2d -> yq-4.33.3-d2f1ae9.tar.gz
+https://direct.funtoo.org/38/84/34/388434fcf00b3aa96ec03b7f55cfe5fa5609abd574321d83b069cc387b43054c9ab4ea77a22ac247031dbdb890fd304d0938a4b64feac976d4cc1689603db56c -> yq-go-4.33.3-funtoo-go-bundle-1792f99160b031da637c9173ab7e68e65a28a346fbfc9dede2df90e6d492f410f5f698b29b16da9ebb8aa41111bac4465facf2e528985e5c343ae49fc5d41062.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="*"
-S="${WORKDIR}/mikefarah-yq-d5bbe5b"
+S="${WORKDIR}/mikefarah-yq-d2f1ae9"
 
 DEPEND=""
 RDEPEND=">=dev-vcs/git-1.7.3"

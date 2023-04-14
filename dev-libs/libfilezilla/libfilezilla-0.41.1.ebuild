@@ -1,19 +1,22 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit flag-o-matic
+inherit autotools flag-o-matic
 
 DESCRIPTION="C++ library offering some basic functionality for platform-independent programs"
 HOMEPAGE="https://lib.filezilla-project.org/"
-SRC_URI="https://download.filezilla-project.org/${PN}/${P}.tar.bz2"
+SRC_URI="https://download.filezilla-project.org/libfilezilla/libfilezilla-0.41.1.tar.bz2 -> libfilezilla-0.41.1.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~x86"
+KEYWORDS="*"
 IUSE="test"
 
-RDEPEND="dev-libs/nettle:0="
+RESTRICT="!test? ( test )"
+
+RDEPEND="
+	dev-libs/nettle:0=
+	>=net-libs/gnutls-3.5.7:="
 DEPEND="${RDEPEND}
 	test? ( dev-util/cppunit )"
 
@@ -26,4 +29,23 @@ pkg_pretend() {
 			die "Currently active compiler does not support -std=c++14"
 		fi
 	fi
+}
+
+src_configure() {
+	# GMP patch
+	perl -0pe 's/PKG_CHECK_MODULES\(\[GMP\].*\n.*\n.*//' "${S}"/configure.ac > ${S}/configure.ac.new
+	mv ${S}/configure.ac.new ${S}/configure.ac
+
+	eautoconf || die
+
+	if use ppc || use arm || use hppa; then
+		# bug 727652
+		append-libs -latomic
+	fi
+	econf --disable-static || die
+}
+
+src_install() {
+	default
+	find "${ED}" -type f -name "*.la" -delete || die
 }
