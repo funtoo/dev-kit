@@ -4,10 +4,11 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
-anstream-0.2.6
-anstyle-0.3.5
-anstyle-parse-0.1.1
-anstyle-wincon-0.2.0
+anstream-0.3.0
+anstyle-1.0.0
+anstyle-parse-0.2.0
+anstyle-query-1.0.0
+anstyle-wincon-1.0.0
 anyhow-1.0.70
 arrayvec-0.5.2
 atty-0.2.14
@@ -29,16 +30,15 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.2.1
-clap_builder-4.2.1
+clap-4.2.2
+clap_builder-4.2.2
 clap_derive-4.2.0
 clap_lex-0.2.4
 clap_lex-0.4.1
+colorchoice-1.0.0
 combine-4.6.6
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
-concolor-override-1.0.0
-concolor-query-0.3.3
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
@@ -168,7 +168,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
 syn-1.0.109
-syn-2.0.14
+syn-2.0.15
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
