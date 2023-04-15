@@ -5,13 +5,6 @@ from packaging import version
 revision = { "2021.3.0" : 1 }
 patches = [
 	{
-		# This patch is not yet in upstream tbb, so we will need to continue to apply it.
-		"name"	   :  "tbb-2021.4.0-cmake-hwloc.patch",
-		"issue"    :  ("FL-8351", "FL-8923"),
-		"desc"	   :  "TODO",
-		"apply"    :   lambda v: True
-	},
-	{
 		# This fix will be in releases > 2021.3.0.
 		"name"	   :  "tbb-2021.3.0-fix-getSmallObjectIndex-macros.patch",
 		"issue"    :  "FL-8621",

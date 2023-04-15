@@ -24,9 +24,6 @@ DEPEND="
 	valgrind? ( dev-util/valgrind )
 "
 RDEPEND="${DEPEND}"
-PATCHES=(
-	"${FILESDIR}/tbb-2021.4.0-cmake-hwloc.patch"
-)
 
 src_unpack() {
 	default
