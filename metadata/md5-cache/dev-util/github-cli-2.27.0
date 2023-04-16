@@ -9,5 +9,5 @@ RDEPEND=>=dev-vcs/git-1.7.3
 RESTRICT=strip test
 SLOT=0
 SRC_URI=https://github.com/cli/cli/tarball/89caedf1817c21e4bdb9b136a46444225ec4c982 -> cli-2.27.0-89caedf.tar.gz https://direct.funtoo.org/27/35/83/273583f7ba91efc92b265b6a3c8697a4303b70de0c0f22bdcdbcf067feaf20c1c75a86df64141abed9b509ec1ef81650655b71936007fee0b2021711aac5edc9 -> github-cli-2.27.0-funtoo-go-bundle-37c988a9f88be9cba40278904836b37f62b8567d2bb37f03ee85533aa70daef95ad14f38313a0e1d0217e4ad2e8f4a5beae315d8e374b30659798cd4587adb2f.tar.gz
-_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	go-module	7aad60675732a578d7eb16e3e26a47e8	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	go-module	cb10a443c46556a15ed035d7a99128e8	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=b10226785f04866db3c8921247951026
