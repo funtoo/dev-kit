@@ -1,0 +1,7 @@
+xerces:
+  generator: github-1
+  packages:
+    - xerces-c:
+        github:
+          user: apache
+          query: tags

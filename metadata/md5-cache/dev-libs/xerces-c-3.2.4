@@ -1,0 +1,14 @@
+BDEPEND=dev-util/ninja >=dev-util/cmake-3.9.6
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=icu? ( dev-libs/icu:0= ) curl? ( net-misc/curl ) virtual/libiconv doc? ( app-doc/doxygen ) test? ( dev-lang/perl )
+DESCRIPTION=A validating XML parser written in a portable subset of C++
+EAPI=7
+HOMEPAGE=https://xerces.apache.org/xerces-c/
+IUSE=cpu_flags_x86_sse2 curl doc elibc_Darwin elibc_FreeBSD examples iconv icu static-libs test threads
+KEYWORDS=*
+LICENSE=Apache-2.0
+RDEPEND=icu? ( dev-libs/icu:0= ) curl? ( net-misc/curl ) virtual/libiconv
+SLOT=0
+SRC_URI=https://github.com/apache/xerces-c/tarball/5052c90b067dcc347d58822b450897d16e2c31e5 -> xerces-c-3.2.4-5052c90.tar.gz
+_eclasses_=cmake-utils	77cd39e6009811bf97a59d91ffd5b54f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	prefix	e51c7882b7b721e54e684f7eb143cbfe	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=7f52b0067cef3127d015c61452161fdb
