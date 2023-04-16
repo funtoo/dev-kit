@@ -1,17 +1,17 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
+: ${CMAKE_MAKEFILE_GENERATOR:=ninja}
 
-inherit autotools prefix
+inherit cmake-utils prefix
 
 DESCRIPTION="A validating XML parser written in a portable subset of C++"
 HOMEPAGE="https://xerces.apache.org/xerces-c/"
-SRC_URI="mirror://apache/xerces/c/3/sources/${P}.tar.gz"
+SRC_URI="https://github.com/apache/xerces-c/tarball/5052c90b067dcc347d58822b450897d16e2c31e5 -> xerces-c-3.2.4-5052c90.tar.gz"
+KEYWORDS="*"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
 
 IUSE="cpu_flags_x86_sse2 curl doc elibc_Darwin elibc_FreeBSD examples iconv icu static-libs test threads"
 
@@ -22,11 +22,11 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-lang/perl )"
 
-DOCS=( CREDITS KEYS NOTICE README version.incl )
-PATCHES=( "${FILESDIR}/${PN}-3.1.4-fix-build-system.patch" )
+DOCS=( CREDITS KEYS NOTICE README )
+PATCHES=( )
 
 pkg_setup() {
-	export ICUROOT="/usr"
+	export ICUROOT="${EPREFIX}/usr"
 
 	if use iconv && use icu; then
 		ewarn "This package can use iconv or icu for loading messages"
@@ -34,12 +34,22 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	default
-	eautoreconf
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv apache-xerces-c-* "${S}" || die
+	fi
 }
 
 src_configure() {
+	# 'cfurl' is only available on OSX and 'socket' isn't supposed to work.
+	# But the docs aren't clear about it, so we would need some testing...
+	local netaccessor
+	if use curl; then
+		netaccessor="curl"
+	else
+		netaccessor="socket"
+	fi
+
 	local msgloader
 	if use icu; then
 		msgloader="icu"
@@ -52,48 +62,29 @@ src_configure() {
 	local transcoder
 	if use icu; then
 		transcoder="icu"
-	elif use elibc_Darwin; then
-		transcoder="macosunicodeconverter"
-	elif use elibc_FreeBSD; then
-		transcoder="iconv"
 	else
 		transcoder="gnuiconv"
 	fi
-	# for interix maybe: transcoder="windows"
 
-	# 'cfurl' is only available on OSX and 'socket' isn't supposed to work.
-	# But the docs aren't clear about it, so we would need some testing...
-	local netaccessor
-	if use curl; then
-		netaccessor="curl"
-	elif use elibc_Darwin; then
-		netaccessor="cfurl"
-	else
-		netaccessor="socket"
-	fi
+	local mycmakeargs=(
+		-Dnetwork-accessor="${netaccessor}"
+		-Dtranscoder="${transcoder}"
+		-Dmessage-loader="${msgloader}"
+		-Dthreads:BOOL="$(usex threads)"
+		-Dsse2:BOOL="$(usex cpu_flags_x86_sse2)"
+	)
 
-	econf \
-		--disable-pretty-make \
-		--enable-msgloader-${msgloader} \
-		--enable-transcoder-${transcoder} \
-		--enable-netaccessor-${netaccessor} \
-		$(use_enable cpu_flags_x86_sse2 sse2) \
-		$(use_enable threads) \
-		$(use_enable static-libs static)
+	cmake-utils_src_configure
 }
 
 src_compile() {
-	default
+	cmake-utils_src_compile
 
-	if use doc; then
-		cd doc || die
-		doxygen || die "making docs failed"
-		HTML_DOCS=( doc/html/. )
-	fi
+	use doc && cmake-utils_src_compile doc-style createapidocs doc-xml
 }
 
 src_install () {
-	default
+	cmake-utils_src_install
 
 	# package provides .pc files
 	find "${D}" -name '*.la' -delete || die
