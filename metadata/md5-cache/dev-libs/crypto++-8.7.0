@@ -1,0 +1,12 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile configure install prepare
+DESCRIPTION=C++ class library of cryptographic schemes
+EAPI=7
+HOMEPAGE=https://cryptopp.com
+IUSE=+asm static-libs
+KEYWORDS=*
+LICENSE=BSL-1.0
+SLOT=0
+SRC_URI=https://github.com/weidai11/cryptopp/tarball/511806c0eba8ba5b5cedd4b4a814e96df92864a6 -> cryptopp-8.7.0-511806c.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=84a20c12ffc1e4ef37c70244b227a9d6

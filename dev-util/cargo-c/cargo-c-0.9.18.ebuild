@@ -30,8 +30,8 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.2.2
-clap_builder-4.2.2
+clap-4.2.3
+clap_builder-4.2.3
 clap_derive-4.2.0
 clap_lex-0.2.4
 clap_lex-0.4.1
@@ -107,7 +107,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
-linux-raw-sys-0.3.1
+linux-raw-sys-0.3.2
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
@@ -144,7 +144,7 @@ regex-syntax-0.6.29
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.11
+rustix-0.37.12
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21

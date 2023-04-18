@@ -90,7 +90,6 @@ src_install() {
 	fperms -R 755 "${dir}"/plugins/android-ndk/resources/lldb/{android,bin,lib,shared}
 	fperms 755 "${dir}"/plugins/c-clangd/bin/clang/linux/{clang-tidy,clangd}
 	fperms -R 755 "${dir}"/plugins/terminal/{,fish}
-	fperms 755 "${dir}"/plugins/textmate/lib/bundles/git/src/{askpass-empty.sh,askpass.sh}
 
 	newicon "bin/studio.png" "${PN}.png"
 	make_wrapper ${PN} ${dir}/bin/studio.sh
