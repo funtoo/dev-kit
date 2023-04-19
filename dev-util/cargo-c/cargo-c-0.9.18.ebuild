@@ -30,8 +30,8 @@ cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
 clap-3.2.23
-clap-4.2.3
-clap_builder-4.2.3
+clap-4.2.4
+clap_builder-4.2.4
 clap_derive-4.2.0
 clap_lex-0.2.4
 clap_lex-0.4.1
