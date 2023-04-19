@@ -51,7 +51,7 @@ crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
-der-0.7.3
+der-0.7.4
 digest-0.10.6
 ecdsa-0.16.6
 ed25519-compact-2.0.4
@@ -107,7 +107,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
-linux-raw-sys-0.3.2
+linux-raw-sys-0.3.3
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
