@@ -4,6 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
+aho-corasick-1.0.1
 anstream-0.3.0
 anstyle-1.0.0
 anstyle-parse-0.2.0
@@ -20,7 +21,7 @@ bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.4.0
-bumpalo-3.12.0
+bumpalo-3.12.1
 bytes-1.4.0
 bytesize-1.2.0
 cargo-0.69.1
@@ -42,7 +43,7 @@ commoncrypto-sys-0.2.0
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
-cpufeatures-0.2.6
+cpufeatures-0.2.7
 crates-io-0.35.1
 crc32fast-1.3.2
 crypto-bigint-0.5.1
@@ -102,12 +103,12 @@ js-sys-0.3.61
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.141
+libc-0.2.142
 libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
-linux-raw-sys-0.3.3
+linux-raw-sys-0.3.4
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
@@ -115,11 +116,11 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
 opener-0.5.2
-openssl-0.10.50
+openssl-0.10.51
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-111.25.2+1.1.1t
-openssl-sys-0.9.85
+openssl-src-111.25.3+1.1.1t
+openssl-sys-0.9.86
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
@@ -138,13 +139,13 @@ rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
-regex-1.7.3
+regex-1.8.1
 regex-automata-0.1.10
-regex-syntax-0.6.29
+regex-syntax-0.7.1
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.12
+rustix-0.37.14
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21

@@ -9,7 +9,7 @@ HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-runner"
 
 # The following list of binaries is provided at the following URL
 # https://gitlab-runner-downloads.s3.amazonaws.com/v13.6.0/index.html
-SRC_URI="https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v15.10.1/downloads/binaries/gitlab-runner-linux-amd64 -> gitlab-runner-bin-15.10.1.tar.gz"
+SRC_URI="https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v15.11.0/downloads/binaries/gitlab-runner-linux-amd64 -> gitlab-runner-bin-15.11.0.bin"
 
 LICENSE="MIT"
 SLOT="0"
@@ -29,26 +29,20 @@ DOC_CONTENTS="Register the runner as root using\\n
 This will save the config in /etc/gitlab-runner/config.toml"
 
 src_unpack() {
-
 	mkdir ${S}
-
 }
 
 src_prepare() {
-
 	default
 	cp ${DISTDIR}/${A} ${S}/gitlab-runner || die
-
 }
 
 pkg_setup() {
-
-        enewuser gitlab-runner
-        enewgroup gitlab
+	enewuser gitlab-runner
+	enewgroup gitlab
 }
 
 src_install() {
-
 	einstalldocs
 
 	exeinto /usr/sbin/
