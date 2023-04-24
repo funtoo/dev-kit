@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.19.0
 adler-1.0.2
-always-assert-0.1.2
+always-assert-0.1.3
 anyhow-1.0.70
 anymap-1.0.0-beta.2
 arbitrary-1.3.0
@@ -14,10 +14,11 @@ atty-0.2.14
 autocfg-1.1.0
 backtrace-0.3.67
 bitflags-1.3.2
+bitflags-2.1.0
 byteorder-1.4.3
 camino-1.1.4
 cargo-platform-0.1.2
-cargo_metadata-0.15.3
+cargo_metadata-0.15.4
 cc-1.0.79
 cfg-if-1.0.0
 chalk-derive-0.89.0
@@ -65,9 +66,9 @@ jod-thread-0.1.2
 kqueue-1.0.7
 kqueue-sys-1.0.3
 lazy_static-1.4.0
-libc-0.2.140
+libc-0.2.141
 libloading-0.7.4
-libmimalloc-sys-0.1.30
+libmimalloc-sys-0.1.32
 lock_api-0.4.9
 log-0.4.17
 lsp-types-0.94.0
@@ -75,7 +76,7 @@ matchers-0.1.0
 memchr-2.5.0
 memmap2-0.5.10
 memoffset-0.8.0
-mimalloc-0.1.34
+mimalloc-0.1.36
 miniz_oxide-0.6.2
 mio-0.8.5
 miow-0.5.0
@@ -97,7 +98,7 @@ perf-event-0.4.7
 perf-event-open-sys-1.0.1
 petgraph-0.5.1
 pin-project-lite-0.2.9
-proc-macro2-1.0.53
+proc-macro2-1.0.56
 protobuf-3.1.0
 protobuf-support-3.1.0
 pulldown-cmark-0.9.2
@@ -123,7 +124,7 @@ scopeguard-1.1.0
 semver-1.0.17
 serde-1.0.156
 serde_derive-1.0.156
-serde_json-1.0.94
+serde_json-1.0.96
 serde_repr-0.1.11
 sharded-slab-0.1.4
 smallvec-1.10.0
@@ -187,7 +188,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-04-17 -> rust-analyzer-20230417.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-04-24 -> rust-analyzer-20230424.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -211,6 +212,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-04-17-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-04-24-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
