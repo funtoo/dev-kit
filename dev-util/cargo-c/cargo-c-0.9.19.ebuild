@@ -109,11 +109,11 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
 opener-0.5.2
-openssl-0.10.51
+openssl-0.10.52
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.25.3+1.1.1t
-openssl-sys-0.9.86
+openssl-sys-0.9.87
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
