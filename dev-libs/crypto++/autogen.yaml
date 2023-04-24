@@ -1,0 +1,16 @@
+crypto++:
+  generator: github-1
+  packages:
+    - crypto++:
+        github:
+          user: weidai11
+          repo: cryptopp
+          query: releases
+          select: '\d+\.\d+\.\d+(\/\d+)?'
+          transform:
+            - kind: string
+              match: CRYPTOPP_
+              replace: ''
+            - kind: string
+              match: '_'
+              replace: '.'

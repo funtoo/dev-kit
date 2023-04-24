@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Small utility to modify the dynamic linker and RPATH of ELF executables"
 HOMEPAGE="https://nixos.org/patchelf.html"
-SRC_URI="https://github.com/NixOS/patchelf/archive/0.17.2.tar.gz -> patchelf-0.17.2.tar.gz"
+SRC_URI="https://github.com/NixOS/patchelf/archive/0.18.0.tar.gz -> patchelf-0.18.0.tar.gz"
 SLOT="0"
 KEYWORDS="*"
 LICENSE="GPL-3"

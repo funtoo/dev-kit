@@ -40,4 +40,3 @@ Copyright
 | Copyright 2014-2023 Roman Kuzmitskii (https://github.com/damex) and GitHub repository contributors.
 | Copyright 2013-2023 Federico Moro (https://github.com/fmoro) and GitHub repository contributors.
 | Copyright 2017-2023 Brenton Horne (https://github.com/fusion809) and GitHub repository contributors.
-| Copyright 2019-2023 PF4Public (https://github.com/PF4Public) and GitHub repository contributors.
