@@ -5,11 +5,11 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
 aho-corasick-1.0.1
-anstream-0.3.0
+anstream-0.3.1
 anstyle-1.0.0
 anstyle-parse-0.2.0
 anstyle-query-1.0.0
-anstyle-wincon-1.0.0
+anstyle-wincon-1.0.1
 anyhow-1.0.70
 arrayvec-0.5.2
 autocfg-1.1.0
