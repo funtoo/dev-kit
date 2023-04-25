@@ -80,7 +80,7 @@ hex-0.3.2
 hex-0.4.3
 hkdf-0.12.3
 hmac-0.12.1
-home-0.5.4
+home-0.5.5
 http-auth-0.1.8
 humantime-2.1.0
 idna-0.3.0
