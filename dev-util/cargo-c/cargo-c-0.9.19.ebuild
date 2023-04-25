@@ -47,7 +47,7 @@ crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
-der-0.7.4
+der-0.7.5
 digest-0.10.6
 ecdsa-0.16.6
 ed25519-compact-2.0.4
@@ -80,7 +80,7 @@ hex-0.3.2
 hex-0.4.3
 hkdf-0.12.3
 hmac-0.12.1
-home-0.5.4
+home-0.5.5
 http-auth-0.1.8
 humantime-2.1.0
 idna-0.3.0
