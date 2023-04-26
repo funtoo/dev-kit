@@ -22,7 +22,7 @@ block-buffer-0.10.4
 bstr-1.4.0
 bumpalo-3.12.1
 bytesize-1.2.0
-cargo-0.70.0
+cargo-0.70.1
 cargo-platform-0.1.2
 cargo-util-0.2.3
 cbindgen-0.24.3
