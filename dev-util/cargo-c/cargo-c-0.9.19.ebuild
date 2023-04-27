@@ -41,7 +41,7 @@ core-foundation-sys-0.8.4
 cpufeatures-0.2.7
 crates-io-0.36.0
 crc32fast-1.3.2
-crypto-bigint-0.5.1
+crypto-bigint-0.5.2
 crypto-common-0.1.6
 crypto-hash-0.3.4
 ct-codecs-1.1.1
