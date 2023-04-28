@@ -28,8 +28,8 @@ cargo-util-0.2.3
 cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.2.4
-clap_builder-4.2.4
+clap-4.2.5
+clap_builder-4.2.5
 clap_derive-4.2.0
 clap_lex-0.4.1
 colorchoice-1.0.0
@@ -101,7 +101,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.8
-linux-raw-sys-0.3.4
+linux-raw-sys-0.3.6
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.6.2
