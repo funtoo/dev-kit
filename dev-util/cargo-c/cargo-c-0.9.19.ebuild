@@ -60,7 +60,7 @@ fastrand-1.9.0
 ff-0.13.0
 fiat-crypto-0.1.20
 filetime-0.2.21
-flate2-1.0.25
+flate2-1.0.26
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -100,11 +100,11 @@ libc-0.2.142
 libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
-libz-sys-1.1.8
+libz-sys-1.1.9
 linux-raw-sys-0.3.6
 log-0.4.17
 memchr-2.5.0
-miniz_oxide-0.6.2
+miniz_oxide-0.7.1
 miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.1
