@@ -10,7 +10,7 @@ anstyle-1.0.0
 anstyle-parse-0.2.0
 anstyle-query-1.0.0
 anstyle-wincon-1.0.1
-anyhow-1.0.70
+anyhow-1.0.71
 arrayvec-0.5.2
 autocfg-1.1.0
 base16ct-0.2.0
