@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="mpi"
 
-SRC_URI="https://sourceware.org/pub/valgrind/valgrind-3.20.0.tar.bz2 -> valgrind-3.20.0.tar.bz2"
+SRC_URI="https://sourceware.org/pub/valgrind/valgrind-3.21.0.tar.bz2 -> valgrind-3.21.0.tar.bz2"
 KEYWORDS="*"
 
 DEPEND="mpi? ( virtual/mpi )"
