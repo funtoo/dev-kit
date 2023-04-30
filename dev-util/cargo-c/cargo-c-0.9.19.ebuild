@@ -137,7 +137,7 @@ regex-syntax-0.7.1
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.17
+rustix-0.37.18
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
