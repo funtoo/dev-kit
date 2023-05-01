@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-0.7.20
 aho-corasick-1.0.1
-anstream-0.3.1
+anstream-0.3.2
 anstyle-1.0.0
 anstyle-parse-0.2.0
 anstyle-query-1.0.0
