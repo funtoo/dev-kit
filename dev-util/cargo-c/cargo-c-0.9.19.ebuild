@@ -28,8 +28,8 @@ cargo-util-0.2.3
 cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.2.5
-clap_builder-4.2.5
+clap-4.2.7
+clap_builder-4.2.7
 clap_derive-4.2.0
 clap_lex-0.4.1
 colorchoice-1.0.0
@@ -216,7 +216,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.5
+winnow-0.4.6
 zeroize-1.6.0
 "
 
