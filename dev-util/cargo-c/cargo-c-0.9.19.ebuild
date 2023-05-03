@@ -123,7 +123,7 @@ pathdiff-0.2.1
 pem-rfc7468-0.7.0
 percent-encoding-2.2.0
 pkcs8-0.10.2
-pkg-config-0.3.26
+pkg-config-0.3.27
 primeorder-0.13.1
 proc-macro2-1.0.56
 quote-1.0.26
