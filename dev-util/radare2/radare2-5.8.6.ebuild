@@ -8,7 +8,7 @@ DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
 SRC_URI=" 
 	test? ( https://github.com/radareorg/radare2-testbins/tarball/5746f74f58d0473472d231c1b522dee17241177f -> radare2-testbins-20230503-5746f74.tar.gz )
-	https://github.com/radareorg/radare2/tarball/ab809417aa6b676922f95cf77861924eb90e7ef2 -> radare2-5.8.4-ab80941.tar.gz
+	https://github.com/radareorg/radare2/tarball/36482082e6991e55a3572d950559f2a67869b9e2 -> radare2-5.8.6-3648208.tar.gz
 	https://github.com/radareorg/vector35-arch-arm64/tarball/c9e7242972837ac11fc94db05fabcb801a8269c9 -> radare2-vector35-arch-arm64-20220609-c9e7242.tar.gz
 	https://github.com/radareorg/vector35-arch-armv7/tarball/f270a6cc99644cb8e76055b6fa632b25abd26024 -> radare2-vector35-arch-armv7-20230120-f270a6c.tar.gz"
 
