@@ -101,7 +101,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.9
-linux-raw-sys-0.3.6
+linux-raw-sys-0.3.7
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.7.1
@@ -123,7 +123,7 @@ pathdiff-0.2.1
 pem-rfc7468-0.7.0
 percent-encoding-2.2.0
 pkcs8-0.10.2
-pkg-config-0.3.26
+pkg-config-0.3.27
 primeorder-0.13.1
 proc-macro2-1.0.56
 quote-1.0.26
@@ -137,15 +137,15 @@ regex-syntax-0.7.1
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.18
+rustix-0.37.19
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.2
 semver-1.0.17
-serde-1.0.160
+serde-1.0.162
 serde-value-0.7.0
-serde_derive-1.0.160
+serde_derive-1.0.162
 serde_ignored-0.1.7
 serde_json-1.0.96
 serde_spanned-0.6.1
@@ -155,7 +155,7 @@ shell-escape-0.1.5
 signature-2.1.0
 sized-chunks-0.6.5
 socket2-0.4.9
-spki-0.7.1
+spki-0.7.2
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.4.1
