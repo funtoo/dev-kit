@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
 archive = ".tar.gz"
-url_g = "https://download.savannah.nongnu.org/releases/m17n/"
+url_g = "https://download-mirror.savannah.nongnu.org/releases/m17n/"
 
 async def get_latest_release(package, hub, **pkginfo):
     # Here we get the site, sorted by latest date on the top

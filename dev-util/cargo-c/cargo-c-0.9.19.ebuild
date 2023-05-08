@@ -96,7 +96,7 @@ jobserver-0.1.26
 js-sys-0.3.61
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.142
+libc-0.2.144
 libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
@@ -165,9 +165,9 @@ tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
 thread_local-1.1.7
-time-0.3.20
-time-core-0.1.0
-time-macros-0.2.8
+time-0.3.21
+time-core-0.1.1
+time-macros-0.2.9
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
