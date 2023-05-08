@@ -81,6 +81,7 @@ miniz_oxide-0.6.2
 mio-0.8.5
 miow-0.5.0
 nix-0.26.2
+nohash-hasher-0.2.0
 notify-5.1.0
 nu-ansi-term-0.46.0
 num_cpus-1.15.0
@@ -151,6 +152,7 @@ tracing-core-0.1.30
 tracing-log-0.1.3
 tracing-subscriber-0.3.16
 tracing-tree-0.2.2
+triomphe-0.1.8
 typed-arena-2.0.2
 ungrammar-1.16.1
 unicase-2.6.0
@@ -188,7 +190,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-05-01 -> rust-analyzer-20230501.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-05-08 -> rust-analyzer-20230508.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -212,6 +214,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-05-01-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-05-08-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }

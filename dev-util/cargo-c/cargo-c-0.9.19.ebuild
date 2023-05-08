@@ -96,7 +96,7 @@ jobserver-0.1.26
 js-sys-0.3.61
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.143
+libc-0.2.144
 libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
