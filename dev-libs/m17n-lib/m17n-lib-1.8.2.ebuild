@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Multilingual Library for Unix/Linux"
 HOMEPAGE="https://savannah.nongnu.org/projects/m17n https://git.savannah.nongnu.org/cgit/m17n/m17n-lib.git"
-SRC_URI="https://download-mirror.savannah.nongnu.org/releases/m17n/m17n-lib-1.8.1.tar.gz -> m17n-lib-1.8.1.tar.gz"
+SRC_URI="https://download-mirror.savannah.nongnu.org/releases/m17n/m17n-lib-1.8.2.tar.gz -> m17n-lib-1.8.2.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

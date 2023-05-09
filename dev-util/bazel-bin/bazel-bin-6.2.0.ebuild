@@ -6,7 +6,7 @@ MY_INSTALL_DIR="/opt/${PN}"
 MY_EXEC="bazel"
 DESCRIPTION="Fast and correct automated build system"
 HOMEPAGE="https://bazel.build/"
-SRC_URI="https://github.com/bazelbuild/bazel/releases/download/4.2.4/bazel_nojdk-4.2.4-linux-x86_64 -> bazel_nojdk-4.2.4-linux-x86_64"
+SRC_URI="https://github.com/bazelbuild/bazel/releases/download/6.2.0/bazel_nojdk-6.2.0-linux-x86_64 -> bazel_nojdk-6.2.0-linux-x86_64"
 
 LICENSE="Apache-2.0"
 SLOT="0"
