@@ -49,7 +49,7 @@ curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
 der-0.7.5
 digest-0.10.6
-ecdsa-0.16.6
+ecdsa-0.16.7
 ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.4
@@ -143,9 +143,9 @@ same-file-1.0.6
 schannel-0.1.21
 sec1-0.7.2
 semver-1.0.17
-serde-1.0.162
+serde-1.0.163
 serde-value-0.7.0
-serde_derive-1.0.162
+serde_derive-1.0.163
 serde_ignored-0.1.7
 serde_json-1.0.96
 serde_spanned-0.6.1
