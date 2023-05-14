@@ -25,7 +25,7 @@ cc-1.0.79
 cfg-if-1.0.0
 clap-4.2.7
 clap_builder-4.2.7
-clap_complete-4.2.2
+clap_complete-4.2.3
 clap_lex-0.4.1
 clap_mangen-0.2.10
 colorchoice-1.0.0
@@ -117,8 +117,8 @@ rustix-0.37.19
 ryu-1.0.13
 same-file-1.0.6
 scopeguard-1.1.0
-serde-1.0.162
-serde_derive-1.0.162
+serde-1.0.163
+serde_derive-1.0.163
 serde_json-1.0.96
 serde_spanned-0.6.1
 signal-hook-0.3.15
@@ -184,7 +184,7 @@ inherit cargo
 
 DESCRIPTION="Yet another cross-platform graphical process/system monitor written in Rust"
 HOMEPAGE="https://github.com/ClementTsang/bottom"
-SRC_URI="https://api.github.com/repos/ClementTsang/bottom/tarball/0.9.0 -> bottom-0.9.0.tar.gz
+SRC_URI="https://api.github.com/repos/ClementTsang/bottom/tarball/0.9.1 -> bottom-0.9.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
