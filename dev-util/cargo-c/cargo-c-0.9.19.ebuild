@@ -47,7 +47,7 @@ crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.61+curl-8.0.1
-der-0.7.5
+der-0.7.6
 digest-0.10.6
 ecdsa-0.16.7
 ed25519-compact-2.0.4
@@ -93,7 +93,7 @@ is-terminal-0.4.7
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
-js-sys-0.3.62
+js-sys-0.3.63
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.144
@@ -125,7 +125,7 @@ percent-encoding-2.2.0
 pkcs8-0.10.2
 pkg-config-0.3.27
 primeorder-0.13.1
-proc-macro2-1.0.56
+proc-macro2-1.0.57
 quote-1.0.27
 rand_core-0.6.4
 rand_xoshiro-0.6.0
@@ -188,11 +188,11 @@ vte-0.10.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.85
-wasm-bindgen-backend-0.2.85
-wasm-bindgen-macro-0.2.85
-wasm-bindgen-macro-support-0.2.85
-wasm-bindgen-shared-0.2.85
+wasm-bindgen-0.2.86
+wasm-bindgen-backend-0.2.86
+wasm-bindgen-macro-0.2.86
+wasm-bindgen-macro-support-0.2.86
+wasm-bindgen-shared-0.2.86
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
