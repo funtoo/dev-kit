@@ -46,7 +46,7 @@ crypto-common-0.1.6
 crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.61+curl-8.0.1
+curl-sys-0.4.62+curl-8.1.0
 der-0.7.6
 digest-0.10.6
 ecdsa-0.16.7
@@ -148,7 +148,7 @@ serde-value-0.7.0
 serde_derive-1.0.163
 serde_ignored-0.1.7
 serde_json-1.0.96
-serde_spanned-0.6.1
+serde_spanned-0.6.2
 sha1-0.10.5
 sha2-0.10.6
 shell-escape-0.1.5
@@ -171,9 +171,9 @@ time-macros-0.2.9
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.3
-toml_datetime-0.6.1
-toml_edit-0.19.8
+toml-0.7.4
+toml_datetime-0.6.2
+toml_edit-0.19.9
 typenum-1.16.0
 unicode-bidi-0.3.13
 unicode-ident-1.0.8
