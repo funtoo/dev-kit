@@ -28,10 +28,10 @@ cargo-util-0.2.3
 cbindgen-0.24.3
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.2.7
-clap_builder-4.2.7
-clap_derive-4.2.0
-clap_lex-0.4.1
+clap-4.3.0
+clap_builder-4.3.0
+clap_derive-4.3.0
+clap_lex-0.5.0
 colorchoice-1.0.0
 commoncrypto-0.2.0
 commoncrypto-sys-0.2.0
@@ -48,11 +48,11 @@ ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.62+curl-8.1.0
 der-0.7.6
-digest-0.10.6
+digest-0.10.7
 ecdsa-0.16.7
 ed25519-compact-2.0.4
 either-1.8.1
-elliptic-curve-0.13.4
+elliptic-curve-0.13.5
 env_logger-0.10.0
 errno-0.3.1
 errno-dragonfly-0.1.2
@@ -101,7 +101,7 @@ libgit2-sys-0.14.1+1.5.0
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.9
-linux-raw-sys-0.3.7
+linux-raw-sys-0.3.8
 log-0.4.17
 memchr-2.5.0
 miniz_oxide-0.7.1
@@ -158,7 +158,7 @@ socket2-0.4.9
 spki-0.7.2
 strip-ansi-escapes-0.1.1
 strsim-0.10.0
-subtle-2.4.1
+subtle-2.5.0
 syn-1.0.109
 syn-2.0.16
 tar-0.4.38
