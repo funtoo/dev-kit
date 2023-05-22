@@ -19,7 +19,7 @@ base64ct-1.6.0
 bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.4
-bstr-1.4.0
+bstr-1.5.0
 bumpalo-3.12.2
 bytesize-1.2.0
 cargo-0.70.1
