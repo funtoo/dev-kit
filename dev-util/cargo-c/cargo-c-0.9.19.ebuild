@@ -88,7 +88,7 @@ ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.3
 instant-0.1.12
-io-lifetimes-1.0.10
+io-lifetimes-1.0.11
 is-terminal-0.4.7
 itertools-0.10.5
 itoa-1.0.6
@@ -176,7 +176,7 @@ toml_datetime-0.6.2
 toml_edit-0.19.10
 typenum-1.16.0
 unicode-bidi-0.3.13
-unicode-ident-1.0.8
+unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4
