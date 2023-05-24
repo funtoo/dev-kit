@@ -20,7 +20,7 @@ bitflags-1.3.2
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.5.0
-bumpalo-3.12.2
+bumpalo-3.13.0
 bytesize-1.2.0
 cargo-0.70.1
 cargo-platform-0.1.2
@@ -131,9 +131,9 @@ rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
-regex-1.8.1
+regex-1.8.2
 regex-automata-0.1.10
-regex-syntax-0.7.1
+regex-syntax-0.7.2
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
@@ -173,7 +173,7 @@ tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.7.4
 toml_datetime-0.6.2
-toml_edit-0.19.9
+toml_edit-0.19.10
 typenum-1.16.0
 unicode-bidi-0.3.13
 unicode-ident-1.0.8
