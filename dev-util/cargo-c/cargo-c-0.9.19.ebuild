@@ -131,7 +131,7 @@ rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
-regex-1.8.2
+regex-1.8.3
 regex-automata-0.1.10
 regex-syntax-0.7.2
 rfc6979-0.4.0
