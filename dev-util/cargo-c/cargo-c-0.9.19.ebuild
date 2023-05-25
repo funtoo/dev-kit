@@ -125,8 +125,8 @@ percent-encoding-2.2.0
 pkcs8-0.10.2
 pkg-config-0.3.27
 primeorder-0.13.1
-proc-macro2-1.0.58
-quote-1.0.27
+proc-macro2-1.0.59
+quote-1.0.28
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
@@ -160,7 +160,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.16
+syn-2.0.17
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
