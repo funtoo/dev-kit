@@ -160,7 +160,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.17
+syn-2.0.18
 tar-0.4.38
 tempfile-3.5.0
 termcolor-1.2.0
