@@ -102,7 +102,7 @@ libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.2.23
 libz-sys-1.1.9
 linux-raw-sys-0.3.8
-log-0.4.17
+log-0.4.18
 memchr-2.5.0
 miniz_oxide-0.7.1
 miow-0.5.0
