@@ -25,7 +25,7 @@ bytesize-1.2.0
 cargo-0.70.1
 cargo-platform-0.1.2
 cargo-util-0.2.3
-cbindgen-0.24.3
+cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
 clap-4.3.0
@@ -107,7 +107,7 @@ memchr-2.5.0
 miniz_oxide-0.7.1
 miow-0.5.0
 num-traits-0.2.15
-once_cell-1.17.1
+once_cell-1.17.2
 opener-0.5.2
 openssl-0.10.52
 openssl-macros-0.1.1
@@ -124,7 +124,7 @@ pem-rfc7468-0.7.0
 percent-encoding-2.2.0
 pkcs8-0.10.2
 pkg-config-0.3.27
-primeorder-0.13.1
+primeorder-0.13.2
 proc-macro2-1.0.59
 quote-1.0.28
 rand_core-0.6.4
