@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/glib:2 dev-libs/libxml2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libxkbfile x11-libs/libxklavier virtual/libintl eekboard? ( dev-libs/eekboard ) introspection? ( dev-libs/gobject-introspection ) xtest? ( x11-libs/libXtst ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
+DESCRIPTION=On-screen input pad to send characters with mouse
+EAPI=6
+HOMEPAGE=https://github.com/fujiwarat/input-pad/wiki
+IUSE=eekboard +introspection static-libs +xtest
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/glib:2 dev-libs/libxml2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libxkbfile x11-libs/libxklavier virtual/libintl eekboard? ( dev-libs/eekboard ) introspection? ( dev-libs/gobject-introspection ) xtest? ( x11-libs/libXtst )
+SLOT=0
+SRC_URI=https://github.com/fujiwarat/input-pad/releases/download/1.0.99.20140916/input-pad-1.0.99.20140916.tar.gz
+_eclasses_=ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=aaa7afde2404917cac3c61e4fba9bbe8
