@@ -25,7 +25,7 @@ bytesize-1.2.0
 cargo-0.70.1
 cargo-platform-0.1.2
 cargo-util-0.2.3
-cbindgen-0.24.6
+cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
 clap-4.3.0
@@ -109,7 +109,7 @@ miow-0.5.0
 num-traits-0.2.15
 once_cell-1.17.2
 opener-0.5.2
-openssl-0.10.53
+openssl-0.10.54
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.26.0+1.1.1u
