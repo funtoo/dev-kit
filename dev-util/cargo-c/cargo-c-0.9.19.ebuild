@@ -46,7 +46,7 @@ crypto-common-0.1.6
 crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.62+curl-8.1.0
+curl-sys-0.4.63+curl-8.1.2
 der-0.7.6
 digest-0.10.7
 ecdsa-0.16.7
