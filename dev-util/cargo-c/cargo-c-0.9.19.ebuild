@@ -24,7 +24,7 @@ bumpalo-3.13.0
 bytesize-1.2.0
 cargo-0.70.1
 cargo-platform-0.1.2
-cargo-util-0.2.3
+cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
@@ -33,8 +33,6 @@ clap_builder-4.3.1
 clap_derive-4.3.1
 clap_lex-0.5.0
 colorchoice-1.0.0
-commoncrypto-0.2.0
-commoncrypto-sys-0.2.0
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
@@ -43,7 +41,6 @@ crates-io-0.36.0
 crc32fast-1.3.2
 crypto-bigint-0.5.2
 crypto-common-0.1.6
-crypto-hash-0.3.4
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.63+curl-8.1.2
@@ -76,7 +73,6 @@ group-0.13.0
 hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.3.1
-hex-0.3.2
 hex-0.4.3
 hkdf-0.12.3
 hmac-0.12.1
