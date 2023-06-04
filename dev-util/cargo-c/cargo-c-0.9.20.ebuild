@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 ahash-0.8.3
 aho-corasick-0.7.20
-aho-corasick-1.0.1
+aho-corasick-1.0.2
 anstream-0.3.2
 anstyle-1.0.0
 anstyle-parse-0.2.0
@@ -142,7 +142,7 @@ jobserver-0.1.26
 js-sys-0.3.63
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.144
+libc-0.2.145
 libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.3.0
@@ -160,7 +160,7 @@ nix-0.26.2
 nom-7.1.3
 num-traits-0.2.15
 num_threads-0.1.6
-once_cell-1.17.2
+once_cell-1.18.0
 opener-0.5.2
 openssl-0.10.54
 openssl-macros-0.1.1
