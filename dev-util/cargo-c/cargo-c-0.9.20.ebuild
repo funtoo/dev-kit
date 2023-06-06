@@ -74,7 +74,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.2.0
 fwdansi-1.1.0
 generic-array-0.14.7
-getrandom-0.2.9
+getrandom-0.2.10
 git2-0.17.2
 git2-curl-0.18.0
 gix-0.39.0
@@ -142,13 +142,13 @@ jobserver-0.1.26
 js-sys-0.3.63
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.145
+libc-0.2.146
 libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.3.0
 libz-sys-1.1.9
 linux-raw-sys-0.3.8
-lock_api-0.4.9
+lock_api-0.4.10
 log-0.4.18
 maybe-async-0.2.7
 memchr-2.5.0
@@ -172,7 +172,7 @@ orion-0.17.4
 os_info-3.7.0
 p384-0.13.0
 parking_lot-0.12.1
-parking_lot_core-0.9.7
+parking_lot_core-0.9.8
 pasetors-0.6.6
 pathdiff-0.2.1
 pem-rfc7468-0.7.0
@@ -189,6 +189,7 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.2.16
+redox_syscall-0.3.5
 redox_users-0.4.3
 regex-1.8.4
 regex-automata-0.1.10
