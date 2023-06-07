@@ -6,13 +6,13 @@ inherit toolchain-funcs
 
 DESCRIPTION="An efficient, principled regular expression library"
 HOMEPAGE="https://github.com/google/re2"
-SRC_URI="https://api.github.com/repos/google/re2/tarball/2023-06-02 -> re2-2023.06.02.tar.gz"
+SRC_URI="https://github.com/google/re2/tarball/4be240789d5b322df9f02b7e19c8651f3ccbf205 -> re2-2022.12.01-4be2407.tar.gz"
 
 LICENSE="BSD"
 # NOTE: Always run libre2 through abi-compliance-checker!
 # https://abi-laboratory.pro/tracker/timeline/re2/
 
-SLOT="0/11"
+SLOT="0/10"
 KEYWORDS="*"
 IUSE="icu"
 
@@ -23,20 +23,13 @@ RDEPEND="${DEPEND}"
 DOCS=( AUTHORS CONTRIBUTORS README doc/syntax.txt )
 HTML_DOCS=( doc/syntax.html )
 
-fix_src_dirs() {
-	pushd "${WORKDIR}"
-	mv google-re2-* re2-2023.06.02
-	popd
-}
-
-src_unpack() {
-	default
-	fix_src_dirs
+post_src_unpack() {
+	mv google-re2-* re2-2022.12.01
 }
 
 src_prepare() {
 	default
-	grep -q "^SONAME=11\$" Makefile || die "SONAME mismatch"
+	grep -q "^SONAME=10\$" Makefile || die "SONAME mismatch"
 	if use icu; then
 		sed -i -e 's:^# \(\(CC\|LD\)ICU=.*\):\1:' Makefile || die
 	fi
@@ -47,9 +40,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake SONAME="11" shared
+	emake SONAME="10" shared
 }
 
 src_install() {
-	emake SONAME="11" DESTDIR="${D}" prefix="${EPREFIX}/usr" libdir="\$(exec_prefix)/$(get_libdir)" shared-install
+	emake SONAME="10" DESTDIR="${D}" prefix="${EPREFIX}/usr" libdir="\$(exec_prefix)/$(get_libdir)" shared-install
 }
