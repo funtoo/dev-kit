@@ -234,7 +234,7 @@ termcolor-1.2.0
 thiserror-1.0.40
 thiserror-impl-1.0.40
 thread_local-1.1.7
-time-0.3.21
+time-0.3.22
 time-core-0.1.1
 time-macros-0.2.9
 tinyvec-1.6.0
