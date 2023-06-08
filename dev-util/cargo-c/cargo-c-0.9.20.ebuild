@@ -181,7 +181,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.59
+proc-macro2-1.0.60
 prodash-23.1.2
 quote-1.0.28
 rand-0.8.5
@@ -205,9 +205,9 @@ schannel-0.1.21
 scopeguard-1.1.0
 sec1-0.7.2
 semver-1.0.17
-serde-1.0.163
+serde-1.0.164
 serde-value-0.7.0
-serde_derive-1.0.163
+serde_derive-1.0.164
 serde_ignored-0.1.7
 serde_json-1.0.96
 serde_spanned-0.6.2
