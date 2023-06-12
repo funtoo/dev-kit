@@ -149,7 +149,7 @@ libssh2-sys-0.3.0
 libz-sys-1.1.9
 linux-raw-sys-0.3.8
 lock_api-0.4.10
-log-0.4.18
+log-0.4.19
 maybe-async-0.2.7
 memchr-2.5.0
 memmap2-0.5.10
@@ -173,7 +173,7 @@ os_info-3.7.0
 p384-0.13.0
 parking_lot-0.12.1
 parking_lot_core-0.9.8
-pasetors-0.6.6
+pasetors-0.6.7
 pathdiff-0.2.1
 pem-rfc7468-0.7.0
 percent-encoding-2.3.0
@@ -198,7 +198,7 @@ remove_dir_all-0.5.3
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.19
+rustix-0.37.20
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
