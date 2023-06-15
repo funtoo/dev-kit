@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.3
-clap_builder-4.3.3
+clap-4.3.4
+clap_builder-4.3.4
 clap_derive-4.3.2
 clap_lex-0.5.0
 clru-0.6.1
@@ -45,7 +45,7 @@ cpufeatures-0.2.7
 crates-io-0.36.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
-crossbeam-utils-0.8.15
+crossbeam-utils-0.8.16
 crypto-bigint-0.5.2
 crypto-common-0.1.6
 ct-codecs-1.1.1
@@ -139,7 +139,7 @@ is-terminal-0.4.7
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
-js-sys-0.3.63
+js-sys-0.3.64
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.146
@@ -258,11 +258,11 @@ vte-0.10.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.86
-wasm-bindgen-backend-0.2.86
-wasm-bindgen-macro-0.2.86
-wasm-bindgen-macro-support-0.2.86
-wasm-bindgen-shared-0.2.86
+wasm-bindgen-0.2.87
+wasm-bindgen-backend-0.2.87
+wasm-bindgen-macro-0.2.87
+wasm-bindgen-macro-support-0.2.87
+wasm-bindgen-shared-0.2.87
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
@@ -287,7 +287,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.6
+winnow-0.4.7
 zeroize-1.6.0
 "
 
