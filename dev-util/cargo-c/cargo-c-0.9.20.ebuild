@@ -41,7 +41,7 @@ colorchoice-1.0.0
 const-oid-0.9.2
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
-cpufeatures-0.2.7
+cpufeatures-0.2.8
 crates-io-0.36.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
@@ -209,11 +209,11 @@ serde-1.0.164
 serde-value-0.7.0
 serde_derive-1.0.164
 serde_ignored-0.1.7
-serde_json-1.0.96
+serde_json-1.0.97
 serde_spanned-0.6.2
 sha1-0.10.5
 sha1_smol-1.0.0
-sha2-0.10.6
+sha2-0.10.7
 shell-escape-0.1.5
 signal-hook-0.3.15
 signal-hook-registry-1.4.1
