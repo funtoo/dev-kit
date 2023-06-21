@@ -7,8 +7,8 @@ ahash-0.8.3
 aho-corasick-0.7.20
 aho-corasick-1.0.2
 anstream-0.3.2
-anstyle-1.0.0
-anstyle-parse-0.2.0
+anstyle-1.0.1
+anstyle-parse-0.2.1
 anstyle-query-1.0.0
 anstyle-wincon-1.0.1
 anyhow-1.0.71
@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.4
-clap_builder-4.3.4
+clap-4.3.5
+clap_builder-4.3.5
 clap_derive-4.3.2
 clap_lex-0.5.0
 clru-0.6.1
@@ -162,11 +162,11 @@ num-traits-0.2.15
 num_threads-0.1.6
 once_cell-1.18.0
 opener-0.5.2
-openssl-0.10.54
+openssl-0.10.55
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.26.0+1.1.1u
-openssl-sys-0.9.88
+openssl-sys-0.9.90
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
