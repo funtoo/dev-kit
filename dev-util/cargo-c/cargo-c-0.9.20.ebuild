@@ -7,8 +7,8 @@ ahash-0.8.3
 aho-corasick-0.7.20
 aho-corasick-1.0.2
 anstream-0.3.2
-anstyle-1.0.0
-anstyle-parse-0.2.0
+anstyle-1.0.1
+anstyle-parse-0.2.1
 anstyle-query-1.0.0
 anstyle-wincon-1.0.1
 anyhow-1.0.71
@@ -80,9 +80,9 @@ git2-curl-0.18.0
 gix-0.39.0
 gix-actor-0.19.0
 gix-attributes-0.10.0
-gix-bitmap-0.2.4
-gix-chunk-0.4.2
-gix-command-0.2.5
+gix-bitmap-0.2.5
+gix-chunk-0.4.3
+gix-command-0.2.6
 gix-config-0.18.0
 gix-config-value-0.10.2
 gix-credentials-0.11.0
@@ -103,7 +103,7 @@ gix-packetline-0.14.3
 gix-path-0.7.3
 gix-prompt-0.3.3
 gix-protocol-0.28.0
-gix-quote-0.4.4
+gix-quote-0.4.5
 gix-ref-0.26.0
 gix-refspec-0.9.0
 gix-revision-0.12.2
@@ -112,7 +112,7 @@ gix-tempfile-4.1.1
 gix-transport-0.27.0
 gix-traverse-0.24.0
 gix-url-0.15.0
-gix-validate-0.7.5
+gix-validate-0.7.6
 gix-worktree-0.14.0
 glob-0.3.1
 globset-0.4.10
@@ -162,11 +162,11 @@ num-traits-0.2.15
 num_threads-0.1.6
 once_cell-1.18.0
 opener-0.5.2
-openssl-0.10.54
+openssl-0.10.55
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.26.0+1.1.1u
-openssl-sys-0.9.88
+openssl-sys-0.9.90
 ordered-float-2.10.0
 orion-0.17.4
 os_info-3.7.0
