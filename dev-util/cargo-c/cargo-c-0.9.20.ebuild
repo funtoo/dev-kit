@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.6
-clap_builder-4.3.5
+clap-4.3.8
+clap_builder-4.3.8
 clap_derive-4.3.2
 clap_lex-0.5.0
 clru-0.6.1
@@ -61,6 +61,7 @@ ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.5
 env_logger-0.10.0
+equivalent-1.0.0
 errno-0.3.1
 errno-dragonfly-0.1.2
 fastrand-1.9.0
@@ -119,6 +120,7 @@ globset-0.4.10
 group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.13.2
+hashbrown-0.14.0
 heck-0.4.1
 hermit-abi-0.3.1
 hex-0.4.3
@@ -132,6 +134,7 @@ ignore-0.4.20
 im-rc-15.1.0
 imara-diff-0.1.5
 indexmap-1.9.3
+indexmap-2.0.0
 instant-0.1.12
 io-close-0.3.7
 io-lifetimes-1.0.11
@@ -181,7 +184,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.60
+proc-macro2-1.0.62
 prodash-23.1.2
 quote-1.0.28
 rand-0.8.5
@@ -209,8 +212,8 @@ serde-1.0.164
 serde-value-0.7.0
 serde_derive-1.0.164
 serde_ignored-0.1.7
-serde_json-1.0.97
-serde_spanned-0.6.2
+serde_json-1.0.99
+serde_spanned-0.6.3
 sha1-0.10.5
 sha1_smol-1.0.0
 sha2-0.10.7
@@ -227,7 +230,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.18
+syn-2.0.22
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.2.0
@@ -240,9 +243,9 @@ time-macros-0.2.9
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.4
-toml_datetime-0.6.2
-toml_edit-0.19.10
+toml-0.7.5
+toml_datetime-0.6.3
+toml_edit-0.19.11
 typenum-1.16.0
 unicode-bidi-0.3.13
 unicode-bom-1.1.4
