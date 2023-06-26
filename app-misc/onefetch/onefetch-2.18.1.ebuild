@@ -414,7 +414,7 @@ inherit cargo
 
 DESCRIPTION="Onefetch is a command-line Git information tool"
 HOMEPAGE="https://github.com/o2sh/onefetch"
-SRC_URI="https://api.github.com/repos/o2sh/onefetch/tarball/2.18.0 -> onefetch-2.18.0.tar.gz
+SRC_URI="https://api.github.com/repos/o2sh/onefetch/tarball/2.18.1 -> onefetch-2.18.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
