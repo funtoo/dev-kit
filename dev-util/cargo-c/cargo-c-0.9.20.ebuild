@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.8
-clap_builder-4.3.8
+clap-4.3.9
+clap_builder-4.3.9
 clap_derive-4.3.2
 clap_lex-0.5.0
 clru-0.6.1
@@ -51,7 +51,7 @@ crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.63+curl-8.1.2
-der-0.7.6
+der-0.7.7
 digest-0.10.7
 dirs-4.0.0
 dirs-sys-0.3.7
@@ -186,7 +186,7 @@ ppv-lite86-0.2.17
 primeorder-0.13.2
 proc-macro2-1.0.63
 prodash-23.1.2
-quote-1.0.28
+quote-1.0.29
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
@@ -275,7 +275,7 @@ windows-sys-0.42.0
 windows-sys-0.45.0
 windows-sys-0.48.0
 windows-targets-0.42.2
-windows-targets-0.48.0
+windows-targets-0.48.1
 windows_aarch64_gnullvm-0.42.2
 windows_aarch64_gnullvm-0.48.0
 windows_aarch64_msvc-0.42.2
