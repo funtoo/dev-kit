@@ -19,6 +19,7 @@ base16ct-0.2.0
 base64-0.21.2
 base64ct-1.6.0
 bitflags-1.3.2
+bitflags-2.3.3
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.5.0
@@ -32,13 +33,13 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.9
-clap_builder-4.3.9
+clap-4.3.10
+clap_builder-4.3.10
 clap_derive-4.3.2
 clap_lex-0.5.0
 clru-0.6.1
 colorchoice-1.0.0
-const-oid-0.9.2
+const-oid-0.9.3
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
 cpufeatures-0.2.8
@@ -137,8 +138,7 @@ indexmap-1.9.3
 indexmap-2.0.0
 instant-0.1.12
 io-close-0.3.7
-io-lifetimes-1.0.11
-is-terminal-0.4.7
+is-terminal-0.4.8
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
@@ -150,7 +150,7 @@ libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.3.0
 libz-sys-1.1.9
-linux-raw-sys-0.3.8
+linux-raw-sys-0.4.3
 lock_api-0.4.10
 log-0.4.19
 maybe-async-0.2.7
@@ -201,7 +201,7 @@ remove_dir_all-0.5.3
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.37.20
+rustix-0.38.1
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
