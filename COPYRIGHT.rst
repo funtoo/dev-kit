@@ -37,6 +37,4 @@ Copyright
 | Copyright 1999-2023 Gentoo Foundation, Gentoo Authors, and
 | many independent contributors/authors as documented in the source code commit history.
 | Copyright 2017-2023 Sony Interactive Entertainment, Inc.
-| Copyright 2014-2023 Roman Kuzmitskii (https://github.com/damex) and GitHub repository contributors.
 | Copyright 2013-2023 Federico Moro (https://github.com/fmoro) and GitHub repository contributors.
-| Copyright 2017-2023 Brenton Horne (https://github.com/fusion809) and GitHub repository contributors.
