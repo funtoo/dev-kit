@@ -201,7 +201,7 @@ remove_dir_all-0.5.3
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.38.1
+rustix-0.38.2
 ryu-1.0.13
 same-file-1.0.6
 schannel-0.1.21
@@ -230,7 +230,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.22
+syn-2.0.23
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.2.0
