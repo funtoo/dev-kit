@@ -194,8 +194,8 @@ rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
 redox_users-0.4.3
-regex-1.9.0
-regex-automata-0.3.0
+regex-1.9.1
+regex-automata-0.3.2
 regex-syntax-0.7.3
 remove_dir_all-0.5.3
 rfc6979-0.4.0
@@ -290,7 +290,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.8
+winnow-0.4.9
 zeroize-1.6.0
 "
 
