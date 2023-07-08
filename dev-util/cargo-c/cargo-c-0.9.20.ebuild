@@ -138,7 +138,7 @@ indexmap-1.9.3
 indexmap-2.0.0
 instant-0.1.12
 io-close-0.3.7
-is-terminal-0.4.8
+is-terminal-0.4.9
 itertools-0.10.5
 itoa-1.0.8
 jobserver-0.1.26
@@ -194,8 +194,8 @@ rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
 redox_users-0.4.3
-regex-1.9.0
-regex-automata-0.3.0
+regex-1.9.1
+regex-automata-0.3.2
 regex-syntax-0.7.3
 remove_dir_all-0.5.3
 rfc6979-0.4.0
@@ -208,9 +208,9 @@ schannel-0.1.22
 scopeguard-1.1.0
 sec1-0.7.2
 semver-1.0.17
-serde-1.0.166
+serde-1.0.167
 serde-value-0.7.0
-serde_derive-1.0.166
+serde_derive-1.0.167
 serde_ignored-0.1.8
 serde_json-1.0.100
 serde_spanned-0.6.3
@@ -234,8 +234,8 @@ syn-2.0.23
 tar-0.4.38
 tempfile-3.3.0
 termcolor-1.2.0
-thiserror-1.0.41
-thiserror-impl-1.0.41
+thiserror-1.0.43
+thiserror-impl-1.0.43
 thread_local-1.1.7
 time-0.3.22
 time-core-0.1.1
@@ -290,7 +290,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.7
+winnow-0.4.9
 zeroize-1.6.0
 "
 
