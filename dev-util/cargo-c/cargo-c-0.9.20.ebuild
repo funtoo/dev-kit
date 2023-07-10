@@ -39,7 +39,7 @@ clap_derive-4.3.2
 clap_lex-0.5.0
 clru-0.6.1
 colorchoice-1.0.0
-const-oid-0.9.3
+const-oid-0.9.4
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
 cpufeatures-0.2.9
@@ -62,7 +62,7 @@ ed25519-compact-2.0.4
 either-1.8.1
 elliptic-curve-0.13.5
 env_logger-0.10.0
-equivalent-1.0.0
+equivalent-1.0.1
 errno-0.3.1
 errno-dragonfly-0.1.2
 fastrand-1.9.0
