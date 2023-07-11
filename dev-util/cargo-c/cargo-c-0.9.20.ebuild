@@ -196,12 +196,12 @@ redox_syscall-0.3.5
 redox_users-0.4.3
 regex-1.9.1
 regex-automata-0.3.2
-regex-syntax-0.7.3
+regex-syntax-0.7.4
 remove_dir_all-0.5.3
 rfc6979-0.4.0
 rustc-workspace-hack-1.0.0
 rustfix-0.6.1
-rustix-0.38.3
+rustix-0.38.4
 ryu-1.0.14
 same-file-1.0.6
 schannel-0.1.22
