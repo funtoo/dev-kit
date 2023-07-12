@@ -12,7 +12,7 @@ async def generate(hub, **pkginfo):
 	)
 
 	download_page_soup = BeautifulSoup(
-		await hub.pkgtools.http.get_page(download_page_url), "lxml"
+		await hub.pkgtools.fetch.get_page(download_page_url), "lxml"
 	)
 
 	downloads_table = download_page_soup.find("table", class_="download")
