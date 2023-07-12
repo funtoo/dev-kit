@@ -195,7 +195,7 @@ redox_syscall-0.2.16
 redox_syscall-0.3.5
 redox_users-0.4.3
 regex-1.9.1
-regex-automata-0.3.2
+regex-automata-0.3.3
 regex-syntax-0.7.4
 remove_dir_all-0.5.3
 rfc6979-0.4.0
@@ -212,7 +212,7 @@ serde-1.0.171
 serde-value-0.7.0
 serde_derive-1.0.171
 serde_ignored-0.1.8
-serde_json-1.0.100
+serde_json-1.0.102
 serde_spanned-0.6.3
 sha1-0.10.5
 sha1_smol-1.0.0
