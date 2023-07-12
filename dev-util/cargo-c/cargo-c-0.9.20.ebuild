@@ -4,7 +4,6 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-0.7.20
 aho-corasick-1.0.2
 anstream-0.3.2
 anstyle-1.0.1
@@ -117,7 +116,7 @@ gix-url-0.15.0
 gix-validate-0.7.6
 gix-worktree-0.14.0
 glob-0.3.1
-globset-0.4.10
+globset-0.4.11
 group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.13.2
@@ -195,7 +194,7 @@ redox_syscall-0.2.16
 redox_syscall-0.3.5
 redox_users-0.4.3
 regex-1.9.1
-regex-automata-0.3.2
+regex-automata-0.3.3
 regex-syntax-0.7.4
 remove_dir_all-0.5.3
 rfc6979-0.4.0
