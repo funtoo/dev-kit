@@ -27,7 +27,7 @@ bumpalo-3.13.0
 bytes-1.4.0
 bytesize-1.2.0
 cargo-0.71.0
-cargo-platform-0.1.2
+cargo-platform-0.1.3
 cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
@@ -42,7 +42,7 @@ const-oid-0.9.4
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
 cpufeatures-0.2.9
-crates-io-0.36.0
+crates-io-0.36.1
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-utils-0.8.16
@@ -230,7 +230,7 @@ strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
 syn-2.0.25
-tar-0.4.38
+tar-0.4.39
 tempfile-3.3.0
 termcolor-1.2.0
 thiserror-1.0.43
