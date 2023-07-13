@@ -42,7 +42,7 @@ const-oid-0.9.4
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
 cpufeatures-0.2.9
-crates-io-0.36.1
+crates-io-0.36.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-utils-0.8.16
@@ -244,7 +244,7 @@ tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.7.6
 toml_datetime-0.6.3
-toml_edit-0.19.12
+toml_edit-0.19.13
 typenum-1.16.0
 unicode-bidi-0.3.13
 unicode-bom-1.1.4
@@ -289,7 +289,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.9
+winnow-0.5.0
 zeroize-1.6.0
 "
 
