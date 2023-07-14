@@ -297,7 +297,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.20 -> cargo-c-0.9.20.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.21 -> cargo-c-0.9.21.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
