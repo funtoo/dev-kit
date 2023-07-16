@@ -183,9 +183,9 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.65
+proc-macro2-1.0.66
 prodash-23.1.2
-quote-1.0.30
+quote-1.0.31
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
