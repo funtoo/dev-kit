@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.12
-clap_builder-4.3.12
+clap-4.3.14
+clap_builder-4.3.14
 clap_derive-4.3.12
 clap_lex-0.5.0
 clru-0.6.1
@@ -183,9 +183,9 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.65
+proc-macro2-1.0.66
 prodash-23.1.2
-quote-1.0.30
+quote-1.0.31
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
@@ -204,8 +204,8 @@ rustix-0.38.4
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
-scopeguard-1.1.0
-sec1-0.7.2
+scopeguard-1.2.0
+sec1-0.7.3
 semver-1.0.18
 serde-1.0.171
 serde-value-0.7.0
