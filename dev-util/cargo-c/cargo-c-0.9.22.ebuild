@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.16
-clap_builder-4.3.16
+clap-4.3.17
+clap_builder-4.3.17
 clap_derive-4.3.12
 clap_lex-0.5.0
 clru-0.6.1
@@ -82,9 +82,9 @@ gix-actor-0.20.0
 gix-attributes-0.12.0
 gix-bitmap-0.2.5
 gix-chunk-0.4.3
-gix-command-0.2.6
+gix-command-0.2.7
 gix-config-0.22.0
-gix-config-value-0.12.3
+gix-config-value-0.12.4
 gix-credentials-0.14.0
 gix-date-0.5.1
 gix-diff-0.29.0
@@ -103,7 +103,7 @@ gix-odb-0.45.0
 gix-pack-0.35.0
 gix-packetline-0.16.3
 gix-path-0.8.3
-gix-prompt-0.5.2
+gix-prompt-0.5.3
 gix-protocol-0.32.0
 gix-quote-0.4.5
 gix-ref-0.29.1
