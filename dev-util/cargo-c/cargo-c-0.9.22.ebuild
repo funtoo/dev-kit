@@ -208,9 +208,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.173
+serde-1.0.174
 serde-value-0.7.0
-serde_derive-1.0.173
+serde_derive-1.0.174
 serde_ignored-0.1.9
 serde_json-1.0.103
 serde_spanned-0.6.3
@@ -235,8 +235,8 @@ tar-0.4.39
 tempfile-3.7.0
 termcolor-1.2.0
 terminal_size-0.2.6
-thiserror-1.0.43
-thiserror-impl-1.0.43
+thiserror-1.0.44
+thiserror-impl-1.0.44
 thread_local-1.1.7
 time-0.3.23
 time-core-0.1.1
