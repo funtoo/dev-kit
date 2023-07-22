@@ -32,8 +32,8 @@ cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.79
 cfg-if-1.0.0
-clap-4.3.17
-clap_builder-4.3.17
+clap-4.3.19
+clap_builder-4.3.19
 clap_derive-4.3.12
 clap_lex-0.5.0
 clru-0.6.1
@@ -56,7 +56,7 @@ digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.8
 ed25519-compact-2.0.4
-either-1.8.1
+either-1.9.0
 elliptic-curve-0.13.5
 env_logger-0.10.0
 equivalent-1.0.1
