@@ -257,8 +257,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/jesseduffield/lazygit/tarball/39c900c7e709c9f18a84d6aa8f3f78f371af5136 -> lazygit-0.39.1-39c900c.tar.gz
-https://direct.funtoo.org/a9/54/96/a954964d6bd7ceb9328b201ecd9cc6017e044137587920ed5c45a6d454ca33f645a7611b339f867ad5ef9d064ab4b62870946b495584cd22f9b171d48e4a0b41 -> lazygit-0.39.1-funtoo-go-bundle-23202a7de0c814110729fe41cafad5f4f6618bbb8b65eaf670949926754471d312103f5b46603bac9688a459c0e77be256295962de8aae7ecaab146f02a4322a.tar.gz"
+SRC_URI="https://github.com/jesseduffield/lazygit/tarball/a7969aef2c0d597ca97f060836233f21b2b68bc6 -> lazygit-0.39.2-a7969ae.tar.gz
+https://direct.funtoo.org/bc/d9/e0/bcd9e08584b2c4a91a8440c4b2f8f504c9f19280f1c86428a61cf7fada9483be38e5adf6ccd652ba1402d2948a9faabaf341ad46d9c4d03da280345e45480146 -> lazygit-0.39.2-funtoo-go-bundle-23202a7de0c814110729fe41cafad5f4f6618bbb8b65eaf670949926754471d312103f5b46603bac9688a459c0e77be256295962de8aae7ecaab146f02a4322a.tar.gz"
 
 DESCRIPTION="A simple terminal UI for git commands"
 HOMEPAGE="http://github.com/jesseduffield/lazygit"
