@@ -151,7 +151,7 @@ libc-0.2.147
 libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.3.0
-libz-sys-1.1.9
+libz-sys-1.1.10
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.3
 lock_api-0.4.10
@@ -188,7 +188,7 @@ ppv-lite86-0.2.17
 primeorder-0.13.2
 proc-macro2-1.0.66
 prodash-23.1.2
-quote-1.0.31
+quote-1.0.32
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
