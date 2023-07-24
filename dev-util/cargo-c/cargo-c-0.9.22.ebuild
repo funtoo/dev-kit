@@ -208,9 +208,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.174
+serde-1.0.175
 serde-value-0.7.0
-serde_derive-1.0.174
+serde_derive-1.0.175
 serde_ignored-0.1.9
 serde_json-1.0.103
 serde_spanned-0.6.3
