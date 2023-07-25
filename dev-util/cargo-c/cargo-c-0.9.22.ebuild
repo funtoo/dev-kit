@@ -291,7 +291,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.0
+winnow-0.5.1
 zeroize-1.6.0
 "
 
