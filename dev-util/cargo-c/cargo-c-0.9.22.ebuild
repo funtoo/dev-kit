@@ -50,7 +50,7 @@ crypto-bigint-0.5.2
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.64+curl-8.2.0
+curl-sys-0.4.65+curl-8.2.1
 der-0.7.7
 digest-0.10.7
 dunce-1.0.4
@@ -151,7 +151,7 @@ libc-0.2.147
 libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.3.0
-libz-sys-1.1.11
+libz-sys-1.1.12
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.3
 lock_api-0.4.10
@@ -208,11 +208,11 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.175
+serde-1.0.176
 serde-value-0.7.0
-serde_derive-1.0.175
+serde_derive-1.0.176
 serde_ignored-0.1.9
-serde_json-1.0.103
+serde_json-1.0.104
 serde_spanned-0.6.3
 sha1-0.10.5
 sha1_smol-1.0.0
