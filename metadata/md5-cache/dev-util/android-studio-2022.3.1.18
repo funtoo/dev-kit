@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.18/android-studio-2022.3.1.18-linux.tar.gz -> android-studio-2022.3.1.18-linux.tar.gz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=23c5ba2fe3e52284a74c1db8a8eb5da6
+_md5_=f1609458284932b34c4476a49712d83d

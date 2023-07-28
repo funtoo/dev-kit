@@ -88,7 +88,13 @@ src_install() {
 	fperms -R 755 "${dir}"/plugins/android/resources/trace_processor_daemon
 	fperms -R 755 "${dir}"/plugins/android/resources/transport/{arm64-v8a,armeabi-v7a,x86,x86_64}
 	fperms -R 755 "${dir}"/plugins/android-ndk/resources/lldb/{android,bin,lib,shared}
-	fperms 755 "${dir}"/plugins/c-clangd/bin/clang/linux/{clang-tidy,clangd}
+	local fn
+	local fn_path
+	# These have been moving around on us:
+	for fn in clang-tidy clangd; do
+		fn_path=$(cd "${D}"; find ."${dir}/plugins/c-clangd/bin/clang/linux" -name $fn)
+		fperms 755 ${fn_path#.}
+	done
 	fperms -R 755 "${dir}"/plugins/terminal/{,fish}
 
 	newicon "bin/studio.png" "${PN}.png"
