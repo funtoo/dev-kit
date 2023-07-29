@@ -196,7 +196,7 @@ rand_xoshiro-0.6.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
 regex-1.9.1
-regex-automata-0.3.3
+regex-automata-0.3.4
 regex-syntax-0.7.4
 rfc6979-0.4.0
 rustfix-0.6.1
@@ -208,9 +208,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.177
+serde-1.0.178
 serde-value-0.7.0
-serde_derive-1.0.177
+serde_derive-1.0.178
 serde_ignored-0.1.9
 serde_json-1.0.104
 serde_spanned-0.6.3
