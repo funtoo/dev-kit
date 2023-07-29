@@ -31,7 +31,7 @@ QA_PREBUILT="
 
 DESCRIPTION="Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/studio"
-SRC_URI="{{ src_uri }}"
+SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.18/android-studio-2022.3.1.18-linux.tar.gz -> android-studio-2022.3.1.18-linux.tar.gz"
 
 LICENSE="Apache-2.0 android-sdk"
 SLOT="0"
@@ -101,4 +101,3 @@ src_install() {
 	make_wrapper ${PN} ${dir}/bin/studio.sh
 	make_desktop_entry ${PN} "Android Studio" ${PN} "Development;IDE" "StartupWMClass=jetbrains-studio"
 }
-
