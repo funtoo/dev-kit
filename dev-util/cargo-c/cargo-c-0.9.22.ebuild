@@ -60,7 +60,7 @@ either-1.9.0
 elliptic-curve-0.13.5
 env_logger-0.10.0
 equivalent-1.0.1
-errno-0.3.1
+errno-0.3.2
 errno-dragonfly-0.1.2
 fastrand-2.0.0
 ff-0.13.0
@@ -291,7 +291,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.1
+winnow-0.5.2
 zeroize-1.6.0
 "
 
