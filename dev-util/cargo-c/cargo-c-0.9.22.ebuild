@@ -52,6 +52,7 @@ ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.65+curl-8.2.1
 der-0.7.7
+deranged-0.3.6
 digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.8
@@ -208,9 +209,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.178
+serde-1.0.179
 serde-value-0.7.0
-serde_derive-1.0.178
+serde_derive-1.0.179
 serde_ignored-0.1.9
 serde_json-1.0.104
 serde_spanned-0.6.3
@@ -230,7 +231,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.27
+syn-2.0.28
 tar-0.4.39
 tempfile-3.7.0
 termcolor-1.2.0
@@ -238,9 +239,9 @@ terminal_size-0.2.6
 thiserror-1.0.44
 thiserror-impl-1.0.44
 thread_local-1.1.7
-time-0.3.23
+time-0.3.24
 time-core-0.1.1
-time-macros-0.2.10
+time-macros-0.2.11
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
