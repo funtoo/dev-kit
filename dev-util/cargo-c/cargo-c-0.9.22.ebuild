@@ -154,7 +154,7 @@ libnghttp2-sys-0.1.7+1.45.0
 libssh2-sys-0.3.0
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.3
+linux-raw-sys-0.4.5
 lock_api-0.4.10
 log-0.4.19
 maybe-async-0.2.7
@@ -209,9 +209,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.179
+serde-1.0.180
 serde-value-0.7.0
-serde_derive-1.0.179
+serde_derive-1.0.180
 serde_ignored-0.1.9
 serde_json-1.0.104
 serde_spanned-0.6.3
