@@ -30,7 +30,7 @@ cargo-0.72.1
 cargo-platform-0.1.3
 cargo-util-0.2.4
 cbindgen-0.24.5
-cc-1.0.79
+cc-1.0.81
 cfg-if-1.0.0
 clap-4.3.19
 clap_builder-4.3.19
@@ -52,7 +52,7 @@ ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.65+curl-8.2.1
 der-0.7.7
-deranged-0.3.6
+deranged-0.3.7
 digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.8
@@ -103,7 +103,7 @@ gix-odb-0.45.0
 gix-pack-0.35.0
 gix-packetline-0.16.4
 gix-path-0.8.4
-gix-prompt-0.5.4
+gix-prompt-0.5.5
 gix-protocol-0.32.0
 gix-quote-0.4.6
 gix-ref-0.29.1
@@ -171,7 +171,7 @@ opener-0.5.2
 openssl-0.10.55
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-111.26.0+1.1.1u
+openssl-src-111.27.0+1.1.1v
 openssl-sys-0.9.90
 ordered-float-2.10.0
 orion-0.17.5
@@ -202,7 +202,7 @@ regex-syntax-0.7.4
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.4
+rustix-0.38.6
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -239,7 +239,7 @@ terminal_size-0.2.6
 thiserror-1.0.44
 thiserror-impl-1.0.44
 thread_local-1.1.7
-time-0.3.24
+time-0.3.25
 time-core-0.1.1
 time-macros-0.2.11
 tinyvec-1.6.0
@@ -292,7 +292,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.2
+winnow-0.5.3
 zeroize-1.6.0
 "
 

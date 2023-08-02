@@ -7,7 +7,7 @@ inherit bash-completion-r1 eutils toolchain-funcs
 DESCRIPTION="unix-like reverse engineering framework and commandline tools"
 HOMEPAGE="http://www.radare.org"
 SRC_URI=" 
-	test? ( https://github.com/radareorg/radare2-testbins/tarball/455ab76e41c23328439cc664db47e35e434ae894 -> radare2-testbins-20230725-455ab76.tar.gz )
+	test? ( https://github.com/radareorg/radare2-testbins/tarball/a197859da99964e2dc823b885f339468464f4549 -> radare2-testbins-20230801-a197859.tar.gz )
 	https://github.com/radareorg/radare2/tarball/ea7f0356519884715cf1d5fba16042bac72b2df5 -> radare2-5.8.8-ea7f035.tar.gz
 	https://github.com/radareorg/vector35-arch-arm64/tarball/c9e7242972837ac11fc94db05fabcb801a8269c9 -> radare2-vector35-arch-arm64-20220609-c9e7242.tar.gz
 	https://github.com/radareorg/vector35-arch-armv7/tarball/f270a6cc99644cb8e76055b6fa632b25abd26024 -> radare2-vector35-arch-armv7-20230120-f270a6c.tar.gz"
