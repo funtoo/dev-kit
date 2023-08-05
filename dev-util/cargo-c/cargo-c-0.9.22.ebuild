@@ -119,7 +119,7 @@ gix-utils-0.1.5
 gix-validate-0.7.7
 gix-worktree-0.17.1
 glob-0.3.1
-globset-0.4.12
+globset-0.4.13
 group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.0
@@ -209,9 +209,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.180
+serde-1.0.181
 serde-value-0.7.0
-serde_derive-1.0.180
+serde_derive-1.0.181
 serde_ignored-0.1.9
 serde_json-1.0.104
 serde_spanned-0.6.3
@@ -292,7 +292,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.3
+winnow-0.5.4
 zeroize-1.6.0
 "
 
