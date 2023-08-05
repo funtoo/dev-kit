@@ -27,12 +27,6 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 #TODO: needs upstream fixes
 #distutils_enable_tests setup.py
 
-S=${WORKDIR}/${P/_rc/-rc}
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-4.0.2-libsuffix.patch
-)
-
 wrap_python() {
 	local phase=$1
 	shift
@@ -43,6 +37,12 @@ wrap_python() {
 		pwd
 		distutils-r1_${phase} "$@"
 		popd >/dev/null
+	fi
+}
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/* "${S}" || die
 	fi
 }
 

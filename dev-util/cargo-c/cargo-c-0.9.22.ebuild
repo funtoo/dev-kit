@@ -66,7 +66,7 @@ errno-dragonfly-0.1.2
 fastrand-2.0.0
 ff-0.13.0
 fiat-crypto-0.1.20
-filetime-0.2.21
+filetime-0.2.22
 flate2-1.0.26
 fnv-1.0.7
 foreign-types-0.3.2
@@ -194,15 +194,14 @@ rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
-redox_syscall-0.2.16
 redox_syscall-0.3.5
-regex-1.9.1
-regex-automata-0.3.4
+regex-1.9.2
+regex-automata-0.3.5
 regex-syntax-0.7.4
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.6
+rustix-0.38.7
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
