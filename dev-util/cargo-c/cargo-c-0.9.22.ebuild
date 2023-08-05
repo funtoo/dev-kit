@@ -119,7 +119,7 @@ gix-utils-0.1.5
 gix-validate-0.7.7
 gix-worktree-0.17.1
 glob-0.3.1
-globset-0.4.12
+globset-0.4.13
 group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.0
@@ -292,7 +292,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.3
+winnow-0.5.4
 zeroize-1.6.0
 "
 
