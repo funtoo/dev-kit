@@ -30,7 +30,7 @@ cargo-0.72.1
 cargo-platform-0.1.3
 cargo-util-0.2.4
 cbindgen-0.24.5
-cc-1.0.81
+cc-1.0.82
 cfg-if-1.0.0
 clap-4.3.19
 clap_builder-4.3.19
@@ -150,7 +150,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.147
 libgit2-sys-0.15.2+1.6.4
-libnghttp2-sys-0.1.7+1.45.0
+libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
@@ -168,11 +168,11 @@ num-traits-0.2.16
 num_threads-0.1.6
 once_cell-1.18.0
 opener-0.5.2
-openssl-0.10.55
+openssl-0.10.56
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.27.0+1.1.1v
-openssl-sys-0.9.90
+openssl-sys-0.9.91
 ordered-float-2.10.0
 orion-0.17.5
 os_info-3.7.0
@@ -195,8 +195,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
-regex-1.9.2
-regex-automata-0.3.5
+regex-1.9.3
+regex-automata-0.3.6
 regex-syntax-0.7.4
 rfc6979-0.4.0
 rustfix-0.6.1
@@ -208,9 +208,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.181
+serde-1.0.183
 serde-value-0.7.0
-serde_derive-1.0.181
+serde_derive-1.0.183
 serde_ignored-0.1.9
 serde_json-1.0.104
 serde_spanned-0.6.3
@@ -231,8 +231,8 @@ strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
 syn-2.0.28
-tar-0.4.39
-tempfile-3.7.0
+tar-0.4.40
+tempfile-3.7.1
 termcolor-1.2.0
 terminal_size-0.2.6
 thiserror-1.0.44

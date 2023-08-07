@@ -30,13 +30,13 @@ src_install() {
 	keepdir /var/log/jenkins ${JENKINS_DIR}/backup ${JENKINS_DIR}/home
 
 	insinto /opt/jenkins
-	newins "${DISTDIR}"/${P}.war ${PN/-bin/}.war
+	newins "${DISTDIR}"/${P/-lts/}.war ${PN/-bin/}.war
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}-r1.logrotate ${PN/-bin/}
+	newins "${REPODIR}"/dev-util/jenkins-bin/files/jenkins-bin-r1.logrotate ${PN/-bin/}
 
-	newinitd "${FILESDIR}"/${PN}.init2 jenkins
-	newconfd "${FILESDIR}"/${PN}.confd jenkins
+	newinitd "${REPODIR}"/dev-util/jenkins-bin/files/jenkins-bin.init2 jenkins
+	newconfd "${REPODIR}"/dev-util/jenkins-bin/files/jenkins-bin.confd jenkins
 
 	fowners jenkins:jenkins /var/log/jenkins ${JENKINS_DIR} ${JENKINS_DIR}/home ${JENKINS_DIR}/backup
 }
