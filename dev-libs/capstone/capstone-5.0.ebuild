@@ -9,7 +9,7 @@ inherit cmake distutils-r1 toolchain-funcs
 
 DESCRIPTION="disassembly/disassembler framework + bindings"
 HOMEPAGE="http://www.capstone-engine.org/"
-SRC_URI="https://github.com/aquynh/capstone/archive/5.0-post1.tar.gz -> capstone-5.0-post1.tar.gz"
+SRC_URI="https://github.com/capstone-engine/capstone/tarball/650e85dcf23b3a3bff69144511533b7339436238 -> capstone-5.0-650e85d.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/5"
@@ -27,12 +27,6 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 #TODO: needs upstream fixes
 #distutils_enable_tests setup.py
 
-S=${WORKDIR}/${P/_rc/-rc}
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-4.0.2-libsuffix.patch
-)
-
 wrap_python() {
 	local phase=$1
 	shift
@@ -43,6 +37,12 @@ wrap_python() {
 		pwd
 		distutils-r1_${phase} "$@"
 		popd >/dev/null
+	fi
+}
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/* "${S}" || die
 	fi
 }
 
