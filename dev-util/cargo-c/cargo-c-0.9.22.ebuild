@@ -12,7 +12,6 @@ anstyle-query-1.0.0
 anstyle-wincon-1.0.1
 anyhow-1.0.72
 arc-swap-1.6.0
-arrayvec-0.5.2
 autocfg-1.1.0
 base16ct-0.2.0
 base64-0.21.2
@@ -26,14 +25,14 @@ btoi-0.4.3
 bumpalo-3.13.0
 bytes-1.4.0
 bytesize-1.2.0
-cargo-0.72.1
+cargo-0.72.2
 cargo-platform-0.1.3
 cargo-util-0.2.4
 cbindgen-0.24.5
 cc-1.0.82
 cfg-if-1.0.0
-clap-4.3.19
-clap_builder-4.3.19
+clap-4.3.21
+clap_builder-4.3.21
 clap_derive-4.3.12
 clap_lex-0.5.0
 clru-0.6.1
@@ -51,7 +50,7 @@ crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.65+curl-8.2.1
-der-0.7.7
+der-0.7.8
 deranged-0.3.7
 digest-0.10.7
 dunce-1.0.4
@@ -226,7 +225,7 @@ smallvec-1.11.0
 socket2-0.4.9
 spki-0.7.2
 static_assertions-1.1.0
-strip-ansi-escapes-0.1.1
+strip-ansi-escapes-0.1.2
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
@@ -258,7 +257,7 @@ url-2.4.0
 utf8parse-0.2.1
 vcpkg-0.2.15
 version_check-0.9.4
-vte-0.10.1
+vte-0.11.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1
