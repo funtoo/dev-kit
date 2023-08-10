@@ -3,7 +3,7 @@
 EAPI=7
 
 CMAKE_ECLASS="cmake"
-inherit cmake-multilib
+inherit cmake
 
 DESCRIPTION="A YAML parser and emitter in C++"
 HOMEPAGE="https://github.com/jbeder/yaml-cpp"
@@ -15,12 +15,7 @@ KEYWORDS="*"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
-DEPEND="test? ( dev-cpp/gtest[${MULTILIB_USEDEP}] )"
-
-PATCHES=(
-	"${FILESDIR}/${PN}-0.7.0-gtest.patch"
-	"${FILESDIR}/${PN}-0.7.0-pkg-config.patch"
-)
+DEPEND="test? ( dev-cpp/gtest )"
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
@@ -30,7 +25,6 @@ post_src_unpack() {
 
 src_prepare() {
 	rm -r test/gtest-* || die
-
 	cmake_src_prepare
 }
 
@@ -40,6 +34,5 @@ src_configure() {
 		-DYAML_CPP_BUILD_TOOLS=OFF # Don't have install rule
 		-DYAML_CPP_BUILD_TESTS=$(usex test)
 	)
-
-	cmake-multilib_src_configure
+	cmake_src_configure
 }
