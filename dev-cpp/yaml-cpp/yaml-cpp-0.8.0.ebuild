@@ -7,7 +7,7 @@ inherit cmake-multilib
 
 DESCRIPTION="A YAML parser and emitter in C++"
 HOMEPAGE="https://github.com/jbeder/yaml-cpp"
-SRC_URI="https://github.com/jbeder/yaml-cpp/tarball/0579ae3d976091d7d664aa9d2527e0d0cff25763 -> yaml-cpp-0.7.0-0579ae3.tar.gz"
+SRC_URI="https://github.com/jbeder/yaml-cpp/tarball/f7320141120f720aecc4c32be25586e7da9eb978 -> yaml-cpp-0.8.0-f732014.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"

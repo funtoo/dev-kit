@@ -4,14 +4,15 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.0.2
+aho-corasick-1.0.3
 anstream-0.3.2
 anstyle-1.0.1
 anstyle-parse-0.2.1
 anstyle-query-1.0.0
-anstyle-wincon-1.0.1
+anstyle-wincon-1.0.2
 anyhow-1.0.72
 arc-swap-1.6.0
+arrayvec-0.5.2
 autocfg-1.1.0
 base16ct-0.2.0
 base64-0.21.2
@@ -37,7 +38,7 @@ clap_derive-4.3.12
 clap_lex-0.5.0
 clru-0.6.1
 colorchoice-1.0.0
-const-oid-0.9.4
+const-oid-0.9.5
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
 cpufeatures-0.2.9
@@ -200,7 +201,7 @@ regex-syntax-0.7.4
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.7
+rustix-0.38.8
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -225,7 +226,7 @@ smallvec-1.11.0
 socket2-0.4.9
 spki-0.7.2
 static_assertions-1.1.0
-strip-ansi-escapes-0.1.2
+strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
@@ -257,7 +258,7 @@ url-2.4.0
 utf8parse-0.2.1
 vcpkg-0.2.15
 version_check-0.9.4
-vte-0.11.1
+vte-0.10.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1
@@ -290,7 +291,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.4
+winnow-0.5.7
 zeroize-1.6.0
 "
 
@@ -298,7 +299,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.22 -> cargo-c-0.9.22.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.23 -> cargo-c-0.9.23.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
