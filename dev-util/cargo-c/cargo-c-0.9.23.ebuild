@@ -18,7 +18,7 @@ base16ct-0.2.0
 base64-0.21.2
 base64ct-1.6.0
 bitflags-1.3.2
-bitflags-2.3.3
+bitflags-2.4.0
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.6.0
@@ -156,7 +156,7 @@ libz-sys-1.1.12
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.5
 lock_api-0.4.10
-log-0.4.19
+log-0.4.20
 maybe-async-0.2.7
 memchr-2.5.0
 memmap2-0.5.10
@@ -291,7 +291,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.5.7
+winnow-0.5.10
 zeroize-1.6.0
 "
 
