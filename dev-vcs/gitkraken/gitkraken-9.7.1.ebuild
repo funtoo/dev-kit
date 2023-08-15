@@ -6,7 +6,7 @@ EAPI=7
 inherit eutils pax-utils xdg-utils
 
 DESCRIPTION="Git GUI client"
-SRC_URI="https://release.gitkraken.com/linux/GitKraken-v9.7.0.tar.gz -> gitkraken-amd64-9.7.0.tar.gz"
+SRC_URI="https://release.gitkraken.com/linux/GitKraken-v9.7.1.tar.gz -> gitkraken-amd64-9.7.1.tar.gz"
 HOMEPAGE="https://www.gitkraken.com/"
 KEYWORDS="*"
 SLOT="0"

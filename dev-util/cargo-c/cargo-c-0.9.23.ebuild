@@ -10,7 +10,7 @@ anstyle-1.0.1
 anstyle-parse-0.2.1
 anstyle-query-1.0.0
 anstyle-wincon-1.0.2
-anyhow-1.0.73
+anyhow-1.0.74
 arc-swap-1.6.0
 arrayvec-0.5.2
 autocfg-1.1.0
@@ -235,8 +235,8 @@ tar-0.4.40
 tempfile-3.7.1
 termcolor-1.2.0
 terminal_size-0.2.6
-thiserror-1.0.45
-thiserror-impl-1.0.45
+thiserror-1.0.46
+thiserror-impl-1.0.46
 thread_local-1.1.7
 time-0.3.25
 time-core-0.1.1
