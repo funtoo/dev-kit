@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.0.3
+aho-corasick-1.0.4
 anstream-0.3.2
 anstyle-1.0.1
 anstyle-parse-0.2.1
@@ -67,7 +67,7 @@ fastrand-2.0.0
 ff-0.13.0
 fiat-crypto-0.1.20
 filetime-0.2.22
-flate2-1.0.26
+flate2-1.0.27
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -276,21 +276,21 @@ windows-sys-0.42.0
 windows-sys-0.45.0
 windows-sys-0.48.0
 windows-targets-0.42.2
-windows-targets-0.48.1
+windows-targets-0.48.2
 windows_aarch64_gnullvm-0.42.2
-windows_aarch64_gnullvm-0.48.0
+windows_aarch64_gnullvm-0.48.2
 windows_aarch64_msvc-0.42.2
-windows_aarch64_msvc-0.48.0
+windows_aarch64_msvc-0.48.2
 windows_i686_gnu-0.42.2
-windows_i686_gnu-0.48.0
+windows_i686_gnu-0.48.2
 windows_i686_msvc-0.42.2
-windows_i686_msvc-0.48.0
+windows_i686_msvc-0.48.2
 windows_x86_64_gnu-0.42.2
-windows_x86_64_gnu-0.48.0
+windows_x86_64_gnu-0.48.2
 windows_x86_64_gnullvm-0.42.2
-windows_x86_64_gnullvm-0.48.0
+windows_x86_64_gnullvm-0.48.2
 windows_x86_64_msvc-0.42.2
-windows_x86_64_msvc-0.48.0
+windows_x86_64_msvc-0.48.2
 winnow-0.5.10
 zeroize-1.6.0
 "
