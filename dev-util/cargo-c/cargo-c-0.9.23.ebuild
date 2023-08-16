@@ -212,7 +212,7 @@ serde-1.0.183
 serde-value-0.7.0
 serde_derive-1.0.183
 serde_ignored-0.1.9
-serde_json-1.0.104
+serde_json-1.0.105
 serde_spanned-0.6.3
 sha1-0.10.5
 sha1_smol-1.0.0
@@ -291,7 +291,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.2
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.2
-winnow-0.5.10
+winnow-0.5.12
 zeroize-1.6.0
 "
 
