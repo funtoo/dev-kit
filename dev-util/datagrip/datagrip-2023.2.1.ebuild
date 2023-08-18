@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="Cross-Platform IDE for Databases & SQL"
 HOMEPAGE="https://www.jetbrains.com/datagrip"
-SRC_URI="https://download.jetbrains.com/datagrip/datagrip-2023.2.tar.gz -> datagrip-2023.2.tar.gz"
+SRC_URI="https://download.jetbrains.com/datagrip/datagrip-2023.2.1.tar.gz -> datagrip-2023.2.1.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
