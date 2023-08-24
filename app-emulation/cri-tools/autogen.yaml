@@ -1,0 +1,9 @@
+cri-tools:
+  generator: github-1
+  packages:
+    - cri-tools:
+        extensions:
+          - golang
+        github:
+          user: kubernetes-sigs
+          query: releases
