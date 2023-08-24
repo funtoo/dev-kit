@@ -98,6 +98,7 @@ EGO_SUM=(
 	"github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51"
 	"github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51/go.mod"
 	"github.com/kr/pretty v0.1.0"
+	"github.com/kr/pretty v0.1.0/go.mod"
 	"github.com/kr/text v0.2.0"
 	"github.com/kr/text v0.2.0/go.mod"
 	"github.com/lucasb-eyer/go-colorful v1.2.0"
@@ -189,6 +190,7 @@ EGO_SUM=(
 	"golang.org/x/net v0.9.0"
 	"golang.org/x/net v0.9.0/go.mod"
 	"golang.org/x/oauth2 v0.4.0"
+	"golang.org/x/oauth2 v0.4.0/go.mod"
 	"golang.org/x/sync v0.0.0-20190423024810-112230192c58/go.mod"
 	"golang.org/x/sync v0.0.0-20210220032951-036812b2e83c/go.mod"
 	"golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4/go.mod"
@@ -228,11 +230,13 @@ EGO_SUM=(
 	"golang.org/x/tools v0.1.10/go.mod"
 	"golang.org/x/tools v0.1.12/go.mod"
 	"golang.org/x/tools v0.6.0"
+	"golang.org/x/tools v0.6.0/go.mod"
 	"golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod"
 	"golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898/go.mod"
 	"golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod"
 	"golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1/go.mod"
 	"google.golang.org/appengine v1.6.7"
+	"google.golang.org/appengine v1.6.7/go.mod"
 	"google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f"
 	"google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f/go.mod"
 	"google.golang.org/grpc v1.53.0"
@@ -255,8 +259,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/8079d18efd2e195456280d9b9742c13d33702e6a -> cli-2.32.1-8079d18.tar.gz
-https://direct.funtoo.org/d3/a6/3c/d3a63c641d6543364bfaaf674557c7696dd1aeb99a3f586213ec4675711f8ecba9b667b37ce33573a97d78c08b02bffacec0a0c2f56aa433bf73f05470b072e6 -> github-cli-2.32.1-funtoo-go-bundle-c3972b765295e0f907ec676c5801a21886bcf3a3ff60f080ca26552f52534b95860a468e8fe3e4efc7f42293074399bb0815fc131f162f9951bec4870b83463a.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/bb42fa07aa7fd6044a875a82061ec3fe073a4962 -> cli-2.33.0-bb42fa0.tar.gz
+https://direct.funtoo.org/c9/b9/e1/c9b9e1bc8f8e908839deb48006c0d69fbf4ef50a0c49849a1bdc383f398c4a5cde11da8109304ed6d896fc759e2997cb37ce600364eac32431176b26438f4300 -> github-cli-2.33.0-funtoo-go-bundle-a2a220af024711d26093e716331b3a9a9a0b3a8f28b245808f5ef5ea94f84e348be1e33b94c76429595fdfdedc2d42b061dbb8686fe51aea2229b613ab985d6a.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -268,7 +272,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.32.1"
+	export GH_VERSION="v2.33.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
