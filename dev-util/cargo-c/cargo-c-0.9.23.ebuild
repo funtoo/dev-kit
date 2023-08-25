@@ -5,11 +5,11 @@ EAPI=7
 CRATES="adler-1.0.2
 ahash-0.8.3
 aho-corasick-1.0.4
-anstream-0.3.2
+anstream-0.5.0
 anstyle-1.0.2
 anstyle-parse-0.2.1
 anstyle-query-1.0.0
-anstyle-wincon-1.0.2
+anstyle-wincon-2.1.0
 anyhow-1.0.75
 arc-swap-1.6.0
 arrayvec-0.5.2
@@ -28,14 +28,14 @@ bytes-1.4.0
 bytesize-1.3.0
 cargo-0.72.2
 cargo-platform-0.1.3
-cargo-util-0.2.4
+cargo-util-0.2.5
 cbindgen-0.24.5
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.3.24
-clap_builder-4.3.24
-clap_derive-4.3.12
-clap_lex-0.5.0
+clap-4.4.0
+clap_builder-4.4.0
+clap_derive-4.4.0
+clap_lex-0.5.1
 clru-0.6.1
 colorchoice-1.0.0
 const-oid-0.9.5
@@ -274,9 +274,7 @@ winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-0.48.0
 windows-sys-0.42.0
-windows-sys-0.45.0
 windows-sys-0.48.0
-windows-targets-0.42.2
 windows-targets-0.48.5
 windows_aarch64_gnullvm-0.42.2
 windows_aarch64_gnullvm-0.48.5
@@ -292,7 +290,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
-winnow-0.5.14
+winnow-0.5.15
 zeroize-1.6.0
 "
 
