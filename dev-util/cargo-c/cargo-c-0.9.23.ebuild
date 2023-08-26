@@ -15,7 +15,7 @@ arc-swap-1.6.0
 arrayvec-0.5.2
 autocfg-1.1.0
 base16ct-0.2.0
-base64-0.21.2
+base64-0.21.3
 base64ct-1.6.0
 bitflags-1.3.2
 bitflags-2.4.0
@@ -196,9 +196,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
-regex-1.9.3
-regex-automata-0.3.6
-regex-syntax-0.7.4
+regex-1.9.4
+regex-automata-0.3.7
+regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
@@ -209,9 +209,9 @@ schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
 semver-1.0.18
-serde-1.0.187
+serde-1.0.188
 serde-value-0.7.0
-serde_derive-1.0.187
+serde_derive-1.0.188
 serde_ignored-0.1.9
 serde_json-1.0.105
 serde_spanned-0.6.3
