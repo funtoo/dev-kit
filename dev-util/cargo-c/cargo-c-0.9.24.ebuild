@@ -26,10 +26,10 @@ btoi-0.4.3
 bumpalo-3.13.0
 bytes-1.4.0
 bytesize-1.3.0
-cargo-0.72.2
+cargo-0.73.1
 cargo-platform-0.1.3
 cargo-util-0.2.5
-cbindgen-0.24.5
+cbindgen-0.25.0
 cc-1.0.83
 cfg-if-1.0.0
 clap-4.4.0
@@ -78,47 +78,50 @@ generic-array-0.14.7
 getrandom-0.2.10
 git2-0.17.2
 git2-curl-0.18.0
-gix-0.44.1
-gix-actor-0.20.0
-gix-attributes-0.12.0
+gix-0.45.1
+gix-actor-0.21.0
+gix-attributes-0.13.1
 gix-bitmap-0.2.7
 gix-chunk-0.4.4
 gix-command-0.2.9
-gix-config-0.22.0
+gix-commitgraph-0.16.0
+gix-config-0.23.0
 gix-config-value-0.12.5
-gix-credentials-0.14.0
+gix-credentials-0.15.0
 gix-date-0.5.1
-gix-diff-0.29.0
-gix-discover-0.18.1
-gix-features-0.29.0
-gix-fs-0.1.1
-gix-glob-0.7.0
+gix-diff-0.30.1
+gix-discover-0.19.0
+gix-features-0.30.0
+gix-fs-0.2.0
+gix-glob-0.8.0
 gix-hash-0.11.4
 gix-hashtable-0.2.4
-gix-ignore-0.2.0
-gix-index-0.16.1
-gix-lock-5.0.1
-gix-mailmap-0.12.0
-gix-object-0.29.2
-gix-odb-0.45.0
-gix-pack-0.35.0
+gix-ignore-0.3.0
+gix-index-0.17.0
+gix-lock-6.0.0
+gix-mailmap-0.13.0
+gix-negotiate-0.2.1
+gix-object-0.30.0
+gix-odb-0.46.0
+gix-pack-0.36.0
 gix-packetline-0.16.5
 gix-path-0.8.4
 gix-prompt-0.5.5
-gix-protocol-0.32.0
+gix-protocol-0.33.2
 gix-quote-0.4.7
-gix-ref-0.29.1
-gix-refspec-0.10.1
-gix-revision-0.13.0
+gix-ref-0.30.0
+gix-refspec-0.11.0
+gix-revision-0.15.2
+gix-revwalk-0.1.0
 gix-sec-0.8.4
-gix-tempfile-5.0.3
+gix-tempfile-6.0.0
 gix-trace-0.1.3
-gix-transport-0.31.0
-gix-traverse-0.25.0
-gix-url-0.18.0
+gix-transport-0.32.0
+gix-traverse-0.26.0
+gix-url-0.19.0
 gix-utils-0.1.5
 gix-validate-0.7.7
-gix-worktree-0.17.1
+gix-worktree-0.18.0
 glob-0.3.1
 globset-0.4.13
 group-0.13.0
@@ -169,11 +172,11 @@ num-traits-0.2.16
 num_threads-0.1.6
 once_cell-1.18.0
 opener-0.5.2
-openssl-0.10.56
+openssl-0.10.57
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-111.27.0+1.1.1v
-openssl-sys-0.9.91
+openssl-sys-0.9.92
 ordered-float-2.10.0
 orion-0.17.5
 os_info-3.7.0
@@ -189,7 +192,8 @@ pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
 proc-macro2-1.0.66
-prodash-23.1.2
+prodash-25.0.2
+pulldown-cmark-0.9.3
 quote-1.0.33
 rand-0.8.5
 rand_chacha-0.3.1
@@ -239,9 +243,9 @@ terminal_size-0.2.6
 thiserror-1.0.47
 thiserror-impl-1.0.47
 thread_local-1.1.7
-time-0.3.27
+time-0.3.28
 time-core-0.1.1
-time-macros-0.2.13
+time-macros-0.2.14
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
@@ -249,6 +253,7 @@ toml-0.7.6
 toml_datetime-0.6.3
 toml_edit-0.19.14
 typenum-1.16.0
+unicase-2.7.0
 unicode-bidi-0.3.13
 unicode-bom-2.0.2
 unicode-ident-1.0.11
@@ -298,7 +303,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.23 -> cargo-c-0.9.23.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.24 -> cargo-c-0.9.24.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

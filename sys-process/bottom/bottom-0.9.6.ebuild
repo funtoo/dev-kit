@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="
-addr2line-0.20.0
+addr2line-0.21.0
 adler-1.0.2
 ahash-0.8.3
 aho-corasick-1.0.4
@@ -16,7 +16,7 @@ anstyle-wincon-1.0.2
 anyhow-1.0.75
 assert_cmd-2.0.12
 autocfg-1.1.0
-backtrace-0.3.68
+backtrace-0.3.69
 bitflags-1.3.2
 bitflags-2.4.0
 bstr-1.6.0
@@ -60,7 +60,7 @@ filedescriptor-0.8.2
 float-cmp-0.9.0
 fnv-1.0.7
 getrandom-0.2.10
-gimli-0.27.3
+gimli-0.28.0
 hashbrown-0.14.0
 heck-0.4.1
 hermit-abi-0.3.2
@@ -93,7 +93,7 @@ num-traits-0.2.16
 num_cpus-1.16.0
 nvml-wrapper-0.9.0
 nvml-wrapper-sys-0.7.0
-object-0.31.1
+object-0.32.0
 once_cell-1.18.0
 option-ext-0.2.0
 parking_lot-0.12.1
@@ -110,18 +110,18 @@ rayon-core-1.11.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
 redox_users-0.4.3
-regex-1.9.3
-regex-automata-0.3.6
-regex-syntax-0.7.4
+regex-1.9.4
+regex-automata-0.3.7
+regex-syntax-0.7.5
 roff-0.2.1
 rustc-demangle-0.1.23
 rustix-0.37.23
-rustix-0.38.8
+rustix-0.38.9
 ryu-1.0.15
 same-file-1.0.6
 scopeguard-1.2.0
-serde-1.0.171
-serde_derive-1.0.171
+serde-1.0.188
+serde_derive-1.0.188
 serde_json-1.0.105
 serde_spanned-0.6.3
 signal-hook-0.3.17
@@ -140,9 +140,9 @@ terminal_size-0.2.6
 termtree-0.4.1
 thiserror-1.0.47
 thiserror-impl-1.0.47
-time-0.3.26
+time-0.3.27
 time-core-0.1.1
-time-macros-0.2.12
+time-macros-0.2.13
 toml_datetime-0.6.3
 toml_edit-0.19.14
 typenum-1.16.0
@@ -178,7 +178,7 @@ inherit cargo
 
 DESCRIPTION="Yet another cross-platform graphical process/system monitor written in Rust"
 HOMEPAGE="https://github.com/ClementTsang/bottom"
-SRC_URI="https://api.github.com/repos/ClementTsang/bottom/tarball/0.9.5 -> bottom-0.9.5.tar.gz
+SRC_URI="https://api.github.com/repos/ClementTsang/bottom/tarball/0.9.6 -> bottom-0.9.6.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
