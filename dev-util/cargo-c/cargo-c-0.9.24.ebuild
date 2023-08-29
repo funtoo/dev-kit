@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.0.4
+aho-corasick-1.0.5
 anstream-0.5.0
 anstyle-1.0.2
 anstyle-parse-0.2.1
@@ -21,7 +21,7 @@ bitflags-1.3.2
 bitflags-2.4.0
 bitmaps-2.1.0
 block-buffer-0.10.4
-bstr-1.6.0
+bstr-1.6.1
 btoi-0.4.3
 bumpalo-3.13.0
 bytes-1.4.0
@@ -32,8 +32,8 @@ cargo-util-0.2.5
 cbindgen-0.25.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.0
-clap_builder-4.4.0
+clap-4.4.1
+clap_builder-4.4.1
 clap_derive-4.4.0
 clap_lex-0.5.1
 clru-0.6.1
@@ -61,7 +61,7 @@ either-1.9.0
 elliptic-curve-0.13.5
 env_logger-0.10.0
 equivalent-1.0.1
-errno-0.3.2
+errno-0.3.3
 errno-dragonfly-0.1.2
 faster-hex-0.8.0
 fastrand-2.0.0
@@ -162,7 +162,7 @@ linux-raw-sys-0.4.5
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
-memchr-2.5.0
+memchr-2.6.1
 memmap2-0.5.10
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
@@ -206,7 +206,7 @@ regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.9
+rustix-0.38.10
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -260,7 +260,7 @@ unicode-ident-1.0.11
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4
-url-2.4.0
+url-2.4.1
 utf8parse-0.2.1
 vcpkg-0.2.15
 version_check-0.9.4
