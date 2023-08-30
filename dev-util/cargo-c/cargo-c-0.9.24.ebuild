@@ -21,7 +21,7 @@ bitflags-1.3.2
 bitflags-2.4.0
 bitmaps-2.1.0
 block-buffer-0.10.4
-bstr-1.6.1
+bstr-1.6.2
 btoi-0.4.3
 bumpalo-3.13.0
 bytes-1.4.0
@@ -162,7 +162,7 @@ linux-raw-sys-0.4.5
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
-memchr-2.6.1
+memchr-2.6.2
 memmap2-0.5.10
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
