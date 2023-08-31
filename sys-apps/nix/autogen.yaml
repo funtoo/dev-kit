@@ -1,0 +1,7 @@
+nix:
+  generator: github-1
+  packages:
+    - nix:
+        github:
+          user: NixOS
+          query: tags
