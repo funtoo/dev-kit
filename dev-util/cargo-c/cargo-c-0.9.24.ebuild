@@ -32,9 +32,9 @@ cargo-util-0.2.5
 cbindgen-0.25.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.1
-clap_builder-4.4.1
-clap_derive-4.4.0
+clap-4.4.2
+clap_builder-4.4.2
+clap_derive-4.4.2
 clap_lex-0.5.1
 clru-0.6.1
 colorchoice-1.0.0
@@ -206,7 +206,7 @@ regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.10
+rustix-0.38.11
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
