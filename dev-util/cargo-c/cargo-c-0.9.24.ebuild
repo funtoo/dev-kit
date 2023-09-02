@@ -200,8 +200,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
-regex-1.9.4
-regex-automata-0.3.7
+regex-1.9.5
+regex-automata-0.3.8
 regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
