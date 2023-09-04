@@ -162,7 +162,7 @@ linux-raw-sys-0.4.5
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
-memchr-2.6.2
+memchr-2.6.3
 memmap2-0.5.10
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
@@ -235,13 +235,13 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.29
+syn-2.0.31
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.2.0
 terminal_size-0.2.6
-thiserror-1.0.47
-thiserror-impl-1.0.47
+thiserror-1.0.48
+thiserror-impl-1.0.48
 thread_local-1.1.7
 time-0.3.28
 time-core-0.1.1
