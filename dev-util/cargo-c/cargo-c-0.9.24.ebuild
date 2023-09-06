@@ -46,7 +46,7 @@ crates-io-0.37.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-utils-0.8.16
-crypto-bigint-0.5.2
+crypto-bigint-0.5.3
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
@@ -63,7 +63,7 @@ env_logger-0.10.0
 equivalent-1.0.1
 errno-0.3.3
 errno-dragonfly-0.1.2
-faster-hex-0.8.0
+faster-hex-0.8.1
 fastrand-2.0.0
 ff-0.13.0
 fiat-crypto-0.1.20
@@ -175,8 +175,8 @@ opener-0.5.2
 openssl-0.10.57
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-111.27.0+1.1.1v
-openssl-sys-0.9.92
+openssl-src-300.1.3+3.1.2
+openssl-sys-0.9.93
 ordered-float-2.10.0
 orion-0.17.5
 os_info-3.7.0
@@ -266,7 +266,7 @@ vcpkg-0.2.15
 version_check-0.9.4
 vte-0.10.1
 vte_generate_state_changes-0.1.1
-walkdir-2.3.3
+walkdir-2.4.0
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.87
 wasm-bindgen-backend-0.2.87
