@@ -24,7 +24,7 @@ block-buffer-0.10.4
 bstr-1.6.2
 btoi-0.4.3
 bumpalo-3.13.0
-bytes-1.4.0
+bytes-1.5.0
 bytesize-1.3.0
 cargo-0.73.1
 cargo-platform-0.1.3
