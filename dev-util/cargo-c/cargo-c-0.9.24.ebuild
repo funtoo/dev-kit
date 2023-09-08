@@ -104,7 +104,7 @@ gix-negotiate-0.2.1
 gix-object-0.30.0
 gix-odb-0.46.0
 gix-pack-0.36.0
-gix-packetline-0.16.5
+gix-packetline-0.16.6
 gix-path-0.8.4
 gix-prompt-0.5.5
 gix-protocol-0.33.2
@@ -249,9 +249,9 @@ time-macros-0.2.14
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.6
+toml-0.7.7
 toml_datetime-0.6.3
-toml_edit-0.19.14
+toml_edit-0.19.15
 typenum-1.16.0
 unicase-2.7.0
 unicode-bidi-0.3.13
