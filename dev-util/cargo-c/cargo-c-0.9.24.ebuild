@@ -206,7 +206,7 @@ regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.11
+rustix-0.38.12
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
