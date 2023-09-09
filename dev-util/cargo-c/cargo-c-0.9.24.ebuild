@@ -249,7 +249,7 @@ time-macros-0.2.14
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.7
+toml-0.7.8
 toml_datetime-0.6.3
 toml_edit-0.19.15
 typenum-1.16.0
