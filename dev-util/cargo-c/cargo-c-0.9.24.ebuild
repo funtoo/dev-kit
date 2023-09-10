@@ -15,7 +15,7 @@ arc-swap-1.6.0
 arrayvec-0.5.2
 autocfg-1.1.0
 base16ct-0.2.0
-base64-0.21.3
+base64-0.21.4
 base64ct-1.6.0
 bitflags-1.3.2
 bitflags-2.4.0
@@ -158,7 +158,7 @@ libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.5
+linux-raw-sys-0.4.7
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
@@ -217,7 +217,7 @@ serde-1.0.188
 serde-value-0.7.0
 serde_derive-1.0.188
 serde_ignored-0.1.9
-serde_json-1.0.105
+serde_json-1.0.106
 serde_spanned-0.6.3
 sha1-0.10.5
 sha1_smol-1.0.0
