@@ -6,7 +6,7 @@ CRATES="adler-1.0.2
 ahash-0.8.3
 aho-corasick-1.0.5
 anstream-0.5.0
-anstyle-1.0.2
+anstyle-1.0.3
 anstyle-parse-0.2.1
 anstyle-query-1.0.0
 anstyle-wincon-2.1.0
@@ -206,7 +206,7 @@ regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.37.23
-rustix-0.38.12
+rustix-0.38.13
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -235,7 +235,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.31
+syn-2.0.32
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.2.0

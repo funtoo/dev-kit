@@ -62,11 +62,12 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=ON # mongoc-stat insecure runpath
 		-DENABLE_BSON=SYSTEM
+		-DUSE_SYSTEM_LIBBSON=TRUE
 		-DENABLE_EXAMPLES=OFF
 		-DENABLE_ICU="$(usex icu ON OFF)"
 		-DENABLE_MAN_PAGES=ON
 		-DENABLE_MONGOC=ON
-		-DENABLE_SNAPPY=SYSTEM
+		-DENABLE_SNAPPY=ON
 		-DENABLE_ZLIB=SYSTEM
 		-DENABLE_SASL="$(usex sasl CYRUS OFF)"
 		-DENABLE_SSL="$(usex ssl $(usex libressl LIBRESSL OPENSSL) OFF)"

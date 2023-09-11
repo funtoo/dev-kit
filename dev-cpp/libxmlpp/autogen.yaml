@@ -1,0 +1,19 @@
+libxmlpp:
+  generator: github-1
+  defaults:
+    github:
+      user: libxmlplusplus
+      repo: libxmlplusplus
+      query: releases
+  packages:
+    - libxmlpp:
+        slot: 2.6
+        github:
+          match: '^(2\.[0-9.]+)$'
+          tarball: 'libxml++-{version}.tar.xz'
+    - libxmlpp:
+        slot: 3.0
+        github:
+          match: '^(3\.[0-9.]+)$'
+          tarball: 'libxml++-{version}.tar.xz'
+ 

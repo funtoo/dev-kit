@@ -22,11 +22,14 @@ src_prepare() {
 
 	# remove doc files
 	sed -i '/^\s*install\s*(FILES COPYING NEWS/,/^\s*)/ {d}' CMakeLists.txt || die
+
+	sed -i -e 's|${PROJECT_SOURCE_DIR}/src/bson/bcon.h|${PROJECT_SOURCE_DIR}/src/bson/bcon.h\n   $\{PROJECT_SOURCE_DIR\}/src/bson/bson-dsl.h|g' \
+	src/libbson/CMakeLists.txt || die
 }
 
 src_configure() {
 	local mycmakeargs=(
-		-DENABLE_BSON=ON
+		-DUSE_SYSTEM_LIBBSON=FALSE
 		-DENABLE_EXAMPLES=OFF
 		-DENABLE_MAN_PAGES=ON
 		-DENABLE_MONGOC=OFF

@@ -1,0 +1,10 @@
+jq:
+  generator: github-1
+  packages:
+    - jq:
+        github:
+          user: jqlang
+          query: releases
+          tarball: jq-{version}.tar.gz
+        revision:
+          "1.6": 4

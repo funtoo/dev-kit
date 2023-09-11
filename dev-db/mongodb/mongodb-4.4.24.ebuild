@@ -101,6 +101,21 @@ src_prepare() {
 
 	# remove compass
 	rm -r src/mongo/installer/compass || die
+
+	# fix for boost-1.80+, which deprecates boost::filesytem::ifstream and ofstream:
+	for x in $(grep -Er boost::filesystem::[io]fstream | cut -f1 -d: | sort -u); do
+		einfo "Removing i/ofstream from $x..."
+		sed -i \
+			-e 's/boost::filesystem::ofstream/std::ofstream/' \
+			-e 's/boost::filesystem::ifstream/std::ifstream/' \
+			-e '1i\#include <fstream>' $x || die
+	done
+
+	for x in src/mongo/util/processinfo_linux.cpp; do
+		einfo "Adding fstream include to $x..."
+		sed -i \
+			-e '1i\#include <fstream>' $x || die
+	done
 }
 
 src_configure() {
