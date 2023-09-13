@@ -152,7 +152,7 @@ js-sys-0.3.64
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.147
+libc-0.2.148
 libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
@@ -191,7 +191,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.66
+proc-macro2-1.0.67
 prodash-25.0.2
 pulldown-cmark-0.9.3
 quote-1.0.33
@@ -235,7 +235,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.32
+syn-2.0.33
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.2.0
@@ -256,7 +256,7 @@ typenum-1.16.0
 unicase-2.7.0
 unicode-bidi-0.3.13
 unicode-bom-2.0.2
-unicode-ident-1.0.11
+unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 unicode-xid-0.2.4

@@ -1,0 +1,34 @@
+ayatana:
+  generator: github-1
+  defaults:
+    cat: dev-libs
+    template: ayatana.tmpl
+    description: Ayatana Application Indicators (Shared Library)
+    common_dependencies:
+      - dev-libs/glib:2
+      - x11-libs/gtk+:3[introspection]
+    dependencies: []
+    options: {}
+    github:
+      user: AyatanaIndicators
+      query: tags
+  packages:
+    - ayatana-ido: {}
+    - libayatana-indicator:
+        dependencies:
+          - dev-libs/ayatana-ido
+          - dev-libs/dbus-glib
+        options:
+          enable_ido: true
+          enable_loader: true
+          flavour_gtk2: false
+          flavour_gtk3: true
+    - libayatana-appindicator:
+        dependencies:
+          - dev-libs/libdbusmenu[gtk3]
+          - dev-libs/libayatana-indicator
+        options:
+          enable_gtkdoc: false
+          enable_bindings_mono: false
+          flavour_gtk2: false
+          flavour_gtk3: true
