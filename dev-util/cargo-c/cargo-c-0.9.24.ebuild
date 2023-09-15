@@ -235,7 +235,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.33
+syn-2.0.34
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.2.0
@@ -252,7 +252,7 @@ toml-0.5.11
 toml-0.7.8
 toml_datetime-0.6.3
 toml_edit-0.19.15
-typenum-1.16.0
+typenum-1.17.0
 unicase-2.7.0
 unicode-bidi-0.3.13
 unicode-bom-2.0.2
