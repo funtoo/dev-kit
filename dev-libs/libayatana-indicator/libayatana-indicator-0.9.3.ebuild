@@ -37,9 +37,9 @@ src_configure() {
 		-DVAPI_GEN="${VAPIGEN}"
 		-DENABLE_TESTS=OFF
 		-DFLAVOUR_GTK2=OFF
+		-DENABLE_IDO=ON
 		-DFLAVOUR_GTK3=ON
 		-DENABLE_LOADER=ON
-		-DENABLE_IDO=ON
 	)
 
 	cmake_src_configure
