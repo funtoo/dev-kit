@@ -35,8 +35,8 @@ src_configure() {
 		-DVALA_COMPILER="${VALAC}"
 		-DVAPI_GEN="${VAPIGEN}"
 		-DENABLE_TESTS=OFF
-		{%- for option, value in options.items() %}
-		-D{{ option | upper }}={{ "ON" if value else "OFF" }}
+		{%- for option in options|sort %}
+		-D{{ option | upper }}={{ "ON" if options[options] else "OFF" }}
 		{%- endfor %}
 	)
 
