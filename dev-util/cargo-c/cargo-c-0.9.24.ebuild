@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.0.5
+aho-corasick-1.1.0
 anstream-0.5.0
 anstyle-1.0.3
 anstyle-parse-0.2.1
@@ -32,8 +32,8 @@ cargo-util-0.2.5
 cbindgen-0.25.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.3
-clap_builder-4.4.2
+clap-4.4.4
+clap_builder-4.4.4
 clap_derive-4.4.2
 clap_lex-0.5.1
 clru-0.6.1
@@ -50,7 +50,7 @@ crypto-bigint-0.5.3
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.65+curl-8.2.1
+curl-sys-0.4.66+curl-8.3.0
 der-0.7.8
 deranged-0.3.8
 digest-0.10.7
@@ -142,7 +142,6 @@ imara-diff-0.1.5
 indexmap-1.9.3
 indexmap-2.0.0
 io-close-0.3.7
-io-lifetimes-1.0.11
 is-terminal-0.4.9
 itertools-0.10.5
 itertools-0.11.0
@@ -157,7 +156,6 @@ libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
-linux-raw-sys-0.3.8
 linux-raw-sys-0.4.7
 lock_api-0.4.10
 log-0.4.20
@@ -175,7 +173,7 @@ opener-0.5.2
 openssl-0.10.57
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.1.3+3.1.2
+openssl-src-300.1.4+3.1.2
 openssl-sys-0.9.93
 ordered-float-2.10.0
 orion-0.17.5
@@ -205,7 +203,6 @@ regex-automata-0.3.8
 regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.37.23
 rustix-0.38.13
 ryu-1.0.15
 same-file-1.0.6
@@ -235,11 +232,11 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.36
+syn-2.0.37
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.2.0
-terminal_size-0.2.6
+terminal_size-0.3.0
 thiserror-1.0.48
 thiserror-impl-1.0.48
 thread_local-1.1.7

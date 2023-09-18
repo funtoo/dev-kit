@@ -136,7 +136,7 @@ EGO_PN=github.com/git-lfs/git-lfs
 DESCRIPTION="Git extension for versioning large files"
 HOMEPAGE="https://git-lfs.github.com/"
 
-SRC_URI="https://github.com/git-lfs/git-lfs/tarball/d06d6e9efd78ff4f958b072146ce167d87f60285 -> git-lfs-3.4.0-d06d6e9.tar.gz
+SRC_URI="https://github.com/git-lfs/git-lfs/tarball/e6572a2ccc0bdc4bbd74340cfaabcb70db8e1dd9 -> git-lfs-3.4.0-e6572a2.tar.gz
 https://direct.funtoo.org/49/1b/c1/491bc147da93f4d88f3d90192d4e5eb88673bb3004330fca98701a6722e603e83212b9335cf20ae70a7f7c4ee8f74cd031a3784f199922c2fc287744c1f72756 -> git-lfs-3.4.0-funtoo-go-bundle-db8355d8619ad55eafe1fdd93a646f7ae34a40bfe5658dcad8a129679dfbedf0596899f3622949d4f8256d7520f84138c037ec13fca76c71b04de586fef87f65.tar.gz"
 KEYWORDS="*"
 
