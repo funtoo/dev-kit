@@ -128,7 +128,7 @@ group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.0
 heck-0.4.1
-hermit-abi-0.3.2
+hermit-abi-0.3.3
 hex-0.4.3
 hkdf-0.12.3
 hmac-0.12.1
@@ -255,7 +255,7 @@ unicode-bidi-0.3.13
 unicode-bom-2.0.2
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
-unicode-width-0.1.10
+unicode-width-0.1.11
 unicode-xid-0.2.4
 url-2.4.1
 utf8parse-0.2.1
