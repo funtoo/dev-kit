@@ -66,7 +66,7 @@ errno-dragonfly-0.1.2
 faster-hex-0.8.1
 fastrand-2.0.0
 ff-0.13.0
-fiat-crypto-0.1.20
+fiat-crypto-0.2.1
 filetime-0.2.22
 flate2-1.0.27
 fnv-1.0.7
@@ -173,10 +173,10 @@ opener-0.5.2
 openssl-0.10.57
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.1.4+3.1.2
+openssl-src-300.1.5+3.1.3
 openssl-sys-0.9.93
 ordered-float-2.10.0
-orion-0.17.5
+orion-0.17.6
 os_info-3.7.0
 p384-0.13.0
 parking_lot-0.12.1

@@ -8,6 +8,6 @@ LICENSE=MIT Apache-2.0 BSD BSD-2 MPL-2.0
 RDEPEND=>=dev-vcs/git-1.7.3
 RESTRICT=strip test
 SLOT=0
-SRC_URI=https://github.com/cli/cli/tarball/e5f499f3012907f2191e85bb1d6fbfc16b71173f -> cli-2.34.0-e5f499f.tar.gz https://direct.funtoo.org/68/8e/6a/688e6a24d2cb0dc28f6ae14f4a89a839c143069748bf5106de3a3a8fe24925569f3c39d59c634fbde64a79eea5c02fc3856b3a42afd09e8f6ce67f9a01200ede -> github-cli-2.34.0-funtoo-go-bundle-5b41031ad661c07ad3df51b5ef0705eae948e09859e65e9f33173765cff0b953f1753e6c16ffeef77459fe564747c47fd467783a3b03635aed584e773097d878.tar.gz
+SRC_URI=https://github.com/cli/cli/tarball/94fbbdf9b5b81a433c8bb60cd16b8d179822d834 -> cli-2.35.0-94fbbdf.tar.gz https://direct.funtoo.org/d4/fb/3b/d4fb3bf72929a82fcb21704ac44ac55dddd31c38386057aa3c52c80c6d485f8d8c4258ce7fa2163de36db7c0b0a386e6e1b99e54557fa91ef9774d44fc0f06fd -> github-cli-2.35.0-funtoo-go-bundle-5b41031ad661c07ad3df51b5ef0705eae948e09859e65e9f33173765cff0b953f1753e6c16ffeef77459fe564747c47fd467783a3b03635aed584e773097d878.tar.gz
 _eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	go-module	cb10a443c46556a15ed035d7a99128e8	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=01a90b7d834f904a73ec6540f6b2a8da
+_md5_=518cadf881b4a77bd0d6cededac1c935
