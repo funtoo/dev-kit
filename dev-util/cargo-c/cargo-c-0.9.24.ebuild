@@ -235,7 +235,7 @@ syn-1.0.109
 syn-2.0.37
 tar-0.4.40
 tempfile-3.8.0
-termcolor-1.2.0
+termcolor-1.3.0
 terminal_size-0.3.0
 thiserror-1.0.48
 thiserror-impl-1.0.48
