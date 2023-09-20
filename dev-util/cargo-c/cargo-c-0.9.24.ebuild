@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.1.0
+aho-corasick-1.1.1
 anstream-0.5.0
 anstyle-1.0.3
 anstyle-parse-0.2.1
@@ -272,7 +272,7 @@ wasm-bindgen-macro-support-0.2.87
 wasm-bindgen-shared-0.2.87
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
-winapi-util-0.1.5
+winapi-util-0.1.6
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-0.48.0
 windows-sys-0.42.0
