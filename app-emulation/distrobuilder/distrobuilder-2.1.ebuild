@@ -1895,13 +1895,13 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/lxc/distrobuilder/tarball/ff0c6f52796fce915208147272f107fcd31490bd -> distrobuilder-2.1-ff0c6f5.tar.gz
+SRC_URI="https://github.com/lxc/distrobuilder/tarball/353048ee7ad2ffade3ac49aec16faef386ceb7bb -> distrobuilder-2.1-353048e.tar.gz
 https://direct.funtoo.org/74/bc/d1/74bcd1f28f2cd5454e57c90fe9163a661cf2bd341cfab76fbf64ba5c67fe8722e66510a5c52aac1c6c380ee92fc54576fd9ff71ae7b823d1a03e112404bfe78a -> distrobuilder-2.1-funtoo-go-bundle-f158613f763a6ecdc746f4b81c005520939b80540147a33a8ef5952f40d59609d9f4226fc535db8ed69cc2f6bcade98242b5abec4b30ffc79666c9ab1d07e25d.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
-S="${WORKDIR}/lxc-distrobuilder-ff0c6f5"
+S="${WORKDIR}/lxc-distrobuilder-353048e"
 
 RDEPEND="
 	dev-util/debootstrap

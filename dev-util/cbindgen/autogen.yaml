@@ -2,6 +2,7 @@ cbindgen:
   generator: github-1
   packages:
     - cbindgen:
+        version: 0.25.0 # FL-11607
         github:
           user: mozilla
           query: releases

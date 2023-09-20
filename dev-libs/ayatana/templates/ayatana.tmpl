@@ -1,0 +1,45 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+VALA_USE_DEPEND="vapigen"
+
+inherit cmake vala
+
+DESCRIPTION="{{ description }}"
+HOMEPAGE="https://github.com/AyatanaIndicators/{{ name }}"
+SRC_URI="{{ src_uri }}"
+
+LICENSE="GPL-3 LGPL-2 LGPL-3"
+SLOT="0"
+KEYWORDS="*"
+
+RDEPEND="
+	{{ common_dependencies | join("\n") }}
+	{{ dependencies | join("\n") -}}
+"
+DEPEND="${RDEPEND}"
+BDEPEND="
+	$(vala_depend)
+"
+S="${WORKDIR}/{{ github_user }}-{{ github_repo }}-{{ sha[:7] }}"
+
+src_prepare() {
+	default
+
+	cmake_src_prepare
+	vala_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs+=(
+		-DVALA_COMPILER="${VALAC}"
+		-DVAPI_GEN="${VAPIGEN}"
+		-DENABLE_TESTS=OFF
+		{%- for option in options|sort %}
+		-D{{ option | upper }}={{ "ON" if options[options] else "OFF" }}
+		{%- endfor %}
+	)
+
+	cmake_src_configure
+}
+

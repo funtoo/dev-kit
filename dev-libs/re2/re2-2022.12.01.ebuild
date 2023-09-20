@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="An efficient, principled regular expression library"
 HOMEPAGE="https://github.com/google/re2"
-SRC_URI="https://github.com/google/re2/tarball/4be240789d5b322df9f02b7e19c8651f3ccbf205 -> re2-2022.12.01-4be2407.tar.gz"
+SRC_URI="https://github.com/google/re2/tarball/1834cd0cb196b1c6f7225df97c0550cf00f7f8e2 -> re2-2022.12.01-1834cd0.tar.gz"
 
 LICENSE="BSD"
 # NOTE: Always run libre2 through abi-compliance-checker!

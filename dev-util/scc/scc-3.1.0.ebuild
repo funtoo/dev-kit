@@ -45,7 +45,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/boyter/scc/tarball/401ff326fc05d0ca4b2caab70881e68f83b7b119 -> scc-3.1.0-401ff32.tar.gz
+SRC_URI="https://github.com/boyter/scc/tarball/1cfa0eb9ea3decbb6d0fd459779477261d64f866 -> scc-3.1.0-1cfa0eb.tar.gz
 https://direct.funtoo.org/66/5a/ac/665aac3b1762cff69f92d6b1a0ca80c67b5a3c57c4cfa33ed9188443a3898a14db4693dfaec06b7ad0097b487b6a1e00d8825a3f094779cb7c9dcc2c1c7e9fce -> scc-3.1.0-funtoo-go-bundle-307790817f633b649604ea48b7921b990ac8daa475b28adc0784be80edd5c756b65cf6105dbded3cfe101aecbc6adad70f60d4e3b18140370a7a9fb52a10067f.tar.gz"
 
 DESCRIPTION="A tool similar to cloc, sloccount and tokei"
