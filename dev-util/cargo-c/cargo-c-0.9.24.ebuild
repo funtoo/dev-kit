@@ -209,7 +209,7 @@ same-file-1.0.6
 schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
-semver-1.0.18
+semver-1.0.19
 serde-1.0.188
 serde-value-0.7.0
 serde_derive-1.0.188
