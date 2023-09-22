@@ -203,7 +203,7 @@ regex-automata-0.3.8
 regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.13
+rustix-0.38.14
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -216,7 +216,7 @@ serde_derive-1.0.188
 serde_ignored-0.1.9
 serde_json-1.0.107
 serde_spanned-0.6.3
-sha1-0.10.5
+sha1-0.10.6
 sha1_smol-1.0.0
 sha2-0.10.7
 shell-escape-0.1.5
@@ -224,7 +224,7 @@ signal-hook-0.3.17
 signal-hook-registry-1.4.1
 signature-2.1.0
 sized-chunks-0.6.5
-smallvec-1.11.0
+smallvec-1.11.1
 socket2-0.4.9
 spki-0.7.2
 static_assertions-1.1.0
