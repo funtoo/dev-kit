@@ -240,9 +240,9 @@ terminal_size-0.3.0
 thiserror-1.0.48
 thiserror-impl-1.0.48
 thread_local-1.1.7
-time-0.3.28
-time-core-0.1.1
-time-macros-0.2.14
+time-0.3.29
+time-core-0.1.2
+time-macros-0.2.15
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11

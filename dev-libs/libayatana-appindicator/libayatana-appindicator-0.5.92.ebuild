@@ -39,7 +39,7 @@ src_configure() {
 		-DENABLE_BINDINGS_MONO=OFF
 		-DENABLE_GTKDOC=OFF
 		-DFLAVOUR_GTK2=OFF
-		-DFLAVOUR_GTK3=OFF
+		-DFLAVOUR_GTK3=ON
 	)
 
 	cmake_src_configure
