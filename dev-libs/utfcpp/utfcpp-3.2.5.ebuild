@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="UTF-8 C++ library"
 HOMEPAGE="https://github.com/nemtrif/utfcpp"
-SRC_URI="https://github.com/nemtrif/utfcpp/tarball/f23474118c5c544c1403883976d78128d17125f9 -> utfcpp-3.2.4-f234741.tar.gz"
+SRC_URI="https://github.com/nemtrif/utfcpp/tarball/6f0e7c7865208f2a6b882a7e138584beb1b6b2fd -> utfcpp-3.2.5-6f0e7c7.tar.gz"
 
 LICENSE="Boost-1.0"
 SLOT="0"
