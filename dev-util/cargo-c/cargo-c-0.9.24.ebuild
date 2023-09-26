@@ -32,8 +32,8 @@ cargo-util-0.2.5
 cbindgen-0.25.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.4
-clap_builder-4.4.4
+clap-4.4.5
+clap_builder-4.4.5
 clap_derive-4.4.2
 clap_lex-0.5.1
 clru-0.6.1
@@ -64,7 +64,7 @@ equivalent-1.0.1
 errno-0.3.3
 errno-dragonfly-0.1.2
 faster-hex-0.8.1
-fastrand-2.0.0
+fastrand-2.0.1
 ff-0.13.0
 fiat-crypto-0.2.1
 filetime-0.2.22
