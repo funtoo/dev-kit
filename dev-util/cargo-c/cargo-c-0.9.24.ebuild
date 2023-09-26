@@ -32,8 +32,8 @@ cargo-util-0.2.5
 cbindgen-0.25.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.4
-clap_builder-4.4.4
+clap-4.4.5
+clap_builder-4.4.5
 clap_derive-4.4.2
 clap_lex-0.5.1
 clru-0.6.1
@@ -64,7 +64,7 @@ equivalent-1.0.1
 errno-0.3.3
 errno-dragonfly-0.1.2
 faster-hex-0.8.1
-fastrand-2.0.0
+fastrand-2.0.1
 ff-0.13.0
 fiat-crypto-0.2.1
 filetime-0.2.22
@@ -218,7 +218,7 @@ serde_json-1.0.107
 serde_spanned-0.6.3
 sha1-0.10.6
 sha1_smol-1.0.0
-sha2-0.10.7
+sha2-0.10.8
 shell-escape-0.1.5
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
@@ -240,9 +240,9 @@ terminal_size-0.3.0
 thiserror-1.0.48
 thiserror-impl-1.0.48
 thread_local-1.1.7
-time-0.3.28
-time-core-0.1.1
-time-macros-0.2.14
+time-0.3.29
+time-core-0.1.2
+time-macros-0.2.15
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11

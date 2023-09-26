@@ -4,7 +4,7 @@ EAPI="7"
 
 DESCRIPTION="Database for the m17n library"
 HOMEPAGE="https://savannah.nongnu.org/projects/m17n"
-SRC_URI="https://download-mirror.savannah.nongnu.org/releases/m17n/m17n-db-1.8.3.tar.gz -> m17n-db-1.8.3.tar.gz"
+SRC_URI="https://download-mirror.savannah.nongnu.org/releases/m17n/m17n-db-1.8.4.tar.gz -> m17n-db-1.8.4.tar.gz"
 
 LICENSE="LGPL-2.1"
 
