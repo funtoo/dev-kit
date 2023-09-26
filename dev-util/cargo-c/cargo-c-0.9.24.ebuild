@@ -218,7 +218,7 @@ serde_json-1.0.107
 serde_spanned-0.6.3
 sha1-0.10.6
 sha1_smol-1.0.0
-sha2-0.10.7
+sha2-0.10.8
 shell-escape-0.1.5
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
