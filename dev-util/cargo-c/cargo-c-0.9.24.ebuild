@@ -140,7 +140,7 @@ ignore-0.4.20
 im-rc-15.1.0
 imara-diff-0.1.5
 indexmap-1.9.3
-indexmap-2.0.0
+indexmap-2.0.1
 io-close-0.3.7
 is-terminal-0.4.9
 itertools-0.10.5
