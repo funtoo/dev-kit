@@ -237,8 +237,8 @@ tar-0.4.40
 tempfile-3.8.0
 termcolor-1.3.0
 terminal_size-0.3.0
-thiserror-1.0.48
-thiserror-impl-1.0.48
+thiserror-1.0.49
+thiserror-impl-1.0.49
 thread_local-1.1.7
 time-0.3.29
 time-core-0.1.2
