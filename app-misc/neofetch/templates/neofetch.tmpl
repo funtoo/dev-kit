@@ -2,7 +2,7 @@
 
 EAPI=7
 
-SRC_URI="{{artifacts[0].src_uri}}"
+SRC_URI="{{src_uri}}"
 KEYWORDS="*"
 
 DESCRIPTION="Simple information system script"
@@ -13,9 +13,6 @@ IUSE="X"
 
 RDEPEND="sys-apps/pciutils
 	X? (
-		media-gfx/imagemagick
-		media-libs/imlib2
-		www-client/w3m[imlib]
 		x11-apps/xprop
 		x11-apps/xrandr
 		x11-apps/xwininfo
