@@ -61,7 +61,7 @@ either-1.9.0
 elliptic-curve-0.13.5
 env_logger-0.10.0
 equivalent-1.0.1
-errno-0.3.3
+errno-0.3.4
 errno-dragonfly-0.1.2
 faster-hex-0.8.1
 fastrand-2.0.1
@@ -160,7 +160,7 @@ linux-raw-sys-0.4.8
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
-memchr-2.6.3
+memchr-2.6.4
 memmap2-0.5.10
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1

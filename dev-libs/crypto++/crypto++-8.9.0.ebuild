@@ -7,13 +7,13 @@ inherit toolchain-funcs
 
 DESCRIPTION="C++ class library of cryptographic schemes"
 HOMEPAGE="https://cryptopp.com"
-SRC_URI="https://github.com/weidai11/cryptopp/tarball/a78121b09739af6303cb9e4547fbd662ef861187 -> cryptopp-8.8.0-a78121b.tar.gz"
+SRC_URI="https://github.com/weidai11/cryptopp/tarball/041cf66ed64f28d89cc50b762cde0353cf85657c -> cryptopp-8.9.0-041cf66.tar.gz"
 LICENSE="BSL-1.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="+asm static-libs"
 
-S=${WORKDIR}/weidai11-cryptopp-a78121b
+S=${WORKDIR}/weidai11-cryptopp-041cf66
 
 BDEPEND="
 	app-arch/unzip
