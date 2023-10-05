@@ -7,7 +7,7 @@ inherit autotools flag-o-matic linux-info readme.gentoo-r1 tmpfiles user
 DESCRIPTION="A purely functional package manager"
 HOMEPAGE="https://nixos.org/nix"
 
-SRC_URI="https://github.com/NixOS/nix/tarball/44fb1192185cdd03343da7faa08a1c605f773419 -> nix-2.18.0-44fb119.tar.gz"
+SRC_URI="https://github.com/NixOS/nix/tarball/f5f4de6a550327b4b1a06123c2e450f1b92c73b6 -> nix-2.18.1-f5f4de6.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="*"
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-S="${WORKDIR}/NixOS-nix-44fb119"
+S="${WORKDIR}/NixOS-nix-f5f4de6"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-libpaths.patch

@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
-HOMEPAGE="https://www.jetbrains.com/python"
-SRC_URI="https://download.jetbrains.com/python/pycharm-professional-2023.2.1.tar.gz -> pycharm-professional-2023.2.1.tar.gz"
+DESCRIPTION="Cross-Platform IDE for Databases & SQL"
+HOMEPAGE="https://www.jetbrains.com/datagrip"
+SRC_URI="https://download.jetbrains.com/datagrip/datagrip-2023.2.2.tar.gz -> datagrip-2023.2.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -28,12 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/pycharm-${PV}"
+S="${WORKDIR}/DataGrip-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "pycharm-${PV}" || die
+		mv $(ls "${WORKDIR}") "DataGrip-${PV}" || die
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "PyCharm Professional" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "DataGrip" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"

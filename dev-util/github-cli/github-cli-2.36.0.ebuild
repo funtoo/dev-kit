@@ -124,6 +124,8 @@ EGO_SUM=(
 	"github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d/go.mod"
 	"github.com/microcosm-cc/bluemonday v1.0.21"
 	"github.com/microcosm-cc/bluemonday v1.0.21/go.mod"
+	"github.com/microsoft/dev-tunnels v0.0.21"
+	"github.com/microsoft/dev-tunnels v0.0.21/go.mod"
 	"github.com/muesli/reflow v0.2.1-0.20210115123740-9e1d0d53df68/go.mod"
 	"github.com/muesli/reflow v0.3.0"
 	"github.com/muesli/reflow v0.3.0/go.mod"
@@ -146,6 +148,8 @@ EGO_SUM=(
 	"github.com/rivo/uniseg v0.2.0/go.mod"
 	"github.com/rivo/uniseg v0.4.4"
 	"github.com/rivo/uniseg v0.4.4/go.mod"
+	"github.com/rodaine/table v1.0.1"
+	"github.com/rodaine/table v1.0.1/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
 	"github.com/shurcoo!l/githubv4 v0.0.0-20230704064427-599ae7bbf278"
@@ -258,8 +262,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/94fbbdf9b5b81a433c8bb60cd16b8d179822d834 -> cli-2.35.0-94fbbdf.tar.gz
-https://direct.funtoo.org/d4/fb/3b/d4fb3bf72929a82fcb21704ac44ac55dddd31c38386057aa3c52c80c6d485f8d8c4258ce7fa2163de36db7c0b0a386e6e1b99e54557fa91ef9774d44fc0f06fd -> github-cli-2.35.0-funtoo-go-bundle-5b41031ad661c07ad3df51b5ef0705eae948e09859e65e9f33173765cff0b953f1753e6c16ffeef77459fe564747c47fd467783a3b03635aed584e773097d878.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/b775a9071f7d67d6b96245474115f7ff92a76b87 -> cli-2.36.0-b775a90.tar.gz
+https://direct.funtoo.org/b5/1c/6e/b51c6e8ea7250816c591242a83414f43b4ba3cbc4290841ba4b9eb49da9c0d59e597f14b72fe3303dc3fd37879385eee8cfec12a49b2950a3bb7629e49adbae5 -> github-cli-2.36.0-funtoo-go-bundle-493725749e64d2f7c3d1fb7f02190f06b37188cd76680dd4f5ed8db1c84840bde17f7147c967b2786d84b4849b970c7de3fbf3e4f77494e891ee8a618413cda7.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -271,7 +275,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.35.0"
+	export GH_VERSION="v2.36.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted

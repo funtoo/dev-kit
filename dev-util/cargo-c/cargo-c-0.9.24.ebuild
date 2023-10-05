@@ -58,7 +58,7 @@ dunce-1.0.4
 ecdsa-0.16.8
 ed25519-compact-2.0.4
 either-1.9.0
-elliptic-curve-0.13.5
+elliptic-curve-0.13.6
 env_logger-0.10.0
 equivalent-1.0.1
 errno-0.3.4
@@ -203,7 +203,7 @@ regex-automata-0.3.9
 regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.15
+rustix-0.38.17
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -232,7 +232,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.37
+syn-2.0.38
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.3.0
