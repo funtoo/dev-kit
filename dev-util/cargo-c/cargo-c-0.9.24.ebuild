@@ -189,7 +189,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.67
+proc-macro2-1.0.68
 prodash-25.0.2
 pulldown-cmark-0.9.3
 quote-1.0.33
@@ -292,7 +292,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
-winnow-0.5.15
+winnow-0.5.16
 zeroize-1.6.0
 "
 
