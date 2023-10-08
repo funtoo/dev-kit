@@ -156,7 +156,7 @@ libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
-linux-raw-sys-0.4.8
+linux-raw-sys-0.4.9
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
