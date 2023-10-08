@@ -13,9 +13,6 @@ IUSE="X"
 
 RDEPEND="sys-apps/pciutils
 	X? (
-		media-gfx/imagemagick
-		media-libs/imlib2
-		www-client/w3m[imlib]
 		x11-apps/xprop
 		x11-apps/xrandr
 		x11-apps/xwininfo
