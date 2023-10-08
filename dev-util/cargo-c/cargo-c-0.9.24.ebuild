@@ -61,8 +61,7 @@ either-1.9.0
 elliptic-curve-0.13.6
 env_logger-0.10.0
 equivalent-1.0.1
-errno-0.3.4
-errno-dragonfly-0.1.2
+errno-0.3.5
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
