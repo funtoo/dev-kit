@@ -7,13 +7,13 @@ PYTHON_COMPAT=( python3+ )
 inherit python-r1 toolchain-funcs
 
 DESCRIPTION="C++ crypto library"
-SRC_URI="https://github.com/randombit/botan/tarball/f60608b8818c7bb8579fe797122ed6116f4134af -> botan-3.1.1-f60608b.tar.gz"
+SRC_URI="https://github.com/randombit/botan/tarball/6f466a2704a31856ebc27451ca861527d3dd00a1 -> botan-3.2.0-6f466a2.tar.gz"
 
 HOMEPAGE="https://botan.randombit.net/"
 
 LICENSE="BSD-2"
 # Major versions are parallel-installable
-SLOT="3/3.1"
+SLOT="3/3.2"
 KEYWORDS="*"
 IUSE="boost bzip2 doc lzma python static-libs sqlite test tools zlib"
 RESTRICT="!test? ( test )"

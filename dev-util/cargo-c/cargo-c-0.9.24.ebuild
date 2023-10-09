@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.1.1
+aho-corasick-1.1.2
 anstream-0.6.4
 anstyle-1.0.4
 anstyle-parse-0.2.2
@@ -50,7 +50,7 @@ crypto-bigint-0.5.3
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.66+curl-8.3.0
+curl-sys-0.4.67+curl-8.3.0
 der-0.7.8
 deranged-0.3.8
 digest-0.10.7
@@ -155,7 +155,7 @@ libgit2-sys-0.15.2+1.6.4
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
-linux-raw-sys-0.4.9
+linux-raw-sys-0.4.10
 lock_api-0.4.10
 log-0.4.20
 maybe-async-0.2.7
@@ -189,7 +189,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 ppv-lite86-0.2.17
 primeorder-0.13.2
-proc-macro2-1.0.68
+proc-macro2-1.0.69
 prodash-25.0.2
 pulldown-cmark-0.9.3
 quote-1.0.33
@@ -203,7 +203,7 @@ regex-automata-0.3.9
 regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.17
+rustix-0.38.18
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
