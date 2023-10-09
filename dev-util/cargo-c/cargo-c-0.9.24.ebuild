@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 ahash-0.8.3
-aho-corasick-1.1.1
+aho-corasick-1.1.2
 anstream-0.6.4
 anstyle-1.0.4
 anstyle-parse-0.2.2
@@ -50,7 +50,7 @@ crypto-bigint-0.5.3
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.66+curl-8.3.0
+curl-sys-0.4.67+curl-8.3.0
 der-0.7.8
 deranged-0.3.8
 digest-0.10.7
@@ -203,7 +203,7 @@ regex-automata-0.3.9
 regex-syntax-0.7.5
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.17
+rustix-0.38.18
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
