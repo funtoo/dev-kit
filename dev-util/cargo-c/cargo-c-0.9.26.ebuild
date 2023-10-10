@@ -21,15 +21,19 @@ bitflags-1.3.2
 bitflags-2.4.0
 bitmaps-2.1.0
 block-buffer-0.10.4
-bstr-1.6.2
+bstr-1.7.0
 btoi-0.4.3
 bumpalo-3.14.0
 bytes-1.5.0
 bytesize-1.3.0
-cargo-0.73.1
+cargo-0.74.0
+cargo-credential-0.3.0
+cargo-credential-libsecret-0.3.1
+cargo-credential-macos-keychain-0.3.0
+cargo-credential-wincred-0.3.0
 cargo-platform-0.1.4
 cargo-util-0.2.6
-cbindgen-0.25.0
+cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
 clap-4.4.6
@@ -42,7 +46,7 @@ const-oid-0.9.5
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
 cpufeatures-0.2.9
-crates-io-0.37.0
+crates-io-0.38.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-utils-0.8.16
@@ -59,7 +63,6 @@ ecdsa-0.16.8
 ed25519-compact-2.0.4
 either-1.9.0
 elliptic-curve-0.13.6
-env_logger-0.10.0
 equivalent-1.0.1
 errno-0.3.5
 faster-hex-0.8.1
@@ -127,7 +130,6 @@ group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.1
 heck-0.4.1
-hermit-abi-0.3.3
 hex-0.4.3
 hkdf-0.12.3
 hmac-0.12.1
@@ -141,23 +143,24 @@ imara-diff-0.1.5
 indexmap-1.9.3
 indexmap-2.0.2
 io-close-0.3.7
-is-terminal-0.4.9
 itertools-0.10.5
 itertools-0.11.0
 itoa-1.0.9
-jobserver-0.1.26
+jobserver-0.1.27
 js-sys-0.3.64
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.149
 libgit2-sys-0.15.2+1.6.4
+libloading-0.8.1
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
 linux-raw-sys-0.4.10
 lock_api-0.4.10
 log-0.4.20
+matchers-0.1.0
 maybe-async-0.2.7
 memchr-2.6.4
 memmap2-0.5.10
@@ -165,10 +168,12 @@ minimal-lexical-0.2.1
 miniz_oxide-0.7.1
 miow-0.6.0
 nom-7.1.3
+normpath-1.1.1
+nu-ansi-term-0.46.0
 num-traits-0.2.17
 num_threads-0.1.6
 once_cell-1.18.0
-opener-0.5.2
+opener-0.6.1
 openssl-0.10.57
 openssl-macros-0.1.1
 openssl-probe-0.1.5
@@ -177,6 +182,7 @@ openssl-sys-0.9.93
 ordered-float-2.10.0
 orion-0.17.6
 os_info-3.7.0
+overload-0.1.1
 p384-0.13.0
 parking_lot-0.12.1
 parking_lot_core-0.9.8
@@ -198,9 +204,11 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
-regex-1.9.6
-regex-automata-0.3.9
-regex-syntax-0.7.5
+regex-1.10.0
+regex-automata-0.1.10
+regex-automata-0.4.1
+regex-syntax-0.6.29
+regex-syntax-0.8.0
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.38.18
@@ -209,7 +217,9 @@ same-file-1.0.6
 schannel-0.1.22
 scopeguard-1.2.0
 sec1-0.7.3
-semver-1.0.19
+security-framework-2.9.2
+security-framework-sys-2.9.1
+semver-1.0.20
 serde-1.0.188
 serde-value-0.7.0
 serde_derive-1.0.188
@@ -219,6 +229,7 @@ serde_spanned-0.6.3
 sha1-0.10.6
 sha1_smol-1.0.0
 sha2-0.10.8
+sharded-slab-0.1.7
 shell-escape-0.1.5
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
@@ -252,6 +263,8 @@ toml_edit-0.19.15
 tracing-0.1.37
 tracing-attributes-0.1.26
 tracing-core-0.1.31
+tracing-log-0.1.3
+tracing-subscriber-0.3.17
 typenum-1.17.0
 unicase-2.7.0
 unicode-bidi-0.3.13
@@ -262,6 +275,7 @@ unicode-width-0.1.11
 unicode-xid-0.2.4
 url-2.4.1
 utf8parse-0.2.1
+valuable-0.1.0
 vcpkg-0.2.15
 version_check-0.9.4
 vte-0.10.1
@@ -295,7 +309,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.24 -> cargo-c-0.9.24.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.26 -> cargo-c-0.9.26.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
