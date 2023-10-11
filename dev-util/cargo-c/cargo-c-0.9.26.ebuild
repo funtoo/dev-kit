@@ -208,7 +208,7 @@ regex-1.10.0
 regex-automata-0.1.10
 regex-automata-0.4.1
 regex-syntax-0.6.29
-regex-syntax-0.8.0
+regex-syntax-0.8.1
 rfc6979-0.4.0
 rustfix-0.6.1
 rustix-0.38.18
