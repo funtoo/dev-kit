@@ -179,7 +179,7 @@ openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-300.1.5+3.1.3
 openssl-sys-0.9.93
-ordered-float-2.10.0
+ordered-float-2.10.1
 orion-0.17.6
 os_info-3.7.0
 overload-0.1.1
