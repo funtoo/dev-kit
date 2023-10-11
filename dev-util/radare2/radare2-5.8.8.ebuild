@@ -38,8 +38,8 @@ post_src_unpack() {
 		mv radareorg-radare2* "${S}" || die
 	fi
 
-	mv radareorg-vector35-arch-arm64-* "${S}/libr/asm/arch/arm/v35arm64/arch-arm64" || die
-	mv radareorg-vector35-arch-armv7-* "${S}/libr/asm/arch/arm/v35arm64/arch-armv7" || die
+	mv radareorg-vector35-arch-arm64-* "${S}/libr/arch/p/arm/v35/arch-arm64" || die
+	mv radareorg-vector35-arch-armv7-* "${S}/libr/arch/p/arm/v35/arch-armv7" || die
 
 	if use test; then
 		cp -r radare2-testbins-* "${S}/test/bins" || die
