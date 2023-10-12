@@ -54,7 +54,7 @@ crypto-bigint-0.5.3
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
-curl-sys-0.4.67+curl-8.3.0
+curl-sys-0.4.68+curl-8.4.0
 der-0.7.8
 deranged-0.3.8
 digest-0.10.7
@@ -309,7 +309,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.26 -> cargo-c-0.9.26.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.27 -> cargo-c-0.9.27.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
