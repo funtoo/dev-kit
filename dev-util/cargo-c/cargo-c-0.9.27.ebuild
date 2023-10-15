@@ -56,7 +56,7 @@ ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.68+curl-8.4.0
 der-0.7.8
-deranged-0.3.8
+deranged-0.3.9
 digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.8
@@ -70,7 +70,7 @@ fastrand-2.0.1
 ff-0.13.0
 fiat-crypto-0.2.1
 filetime-0.2.22
-flate2-1.0.27
+flate2-1.0.28
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -85,7 +85,7 @@ gix-actor-0.21.0
 gix-attributes-0.13.1
 gix-bitmap-0.2.7
 gix-chunk-0.4.4
-gix-command-0.2.9
+gix-command-0.2.10
 gix-commitgraph-0.16.0
 gix-config-0.23.0
 gix-config-value-0.12.5
@@ -106,7 +106,7 @@ gix-negotiate-0.2.1
 gix-object-0.30.0
 gix-odb-0.46.0
 gix-pack-0.36.0
-gix-packetline-0.16.6
+gix-packetline-0.16.7
 gix-path-0.8.4
 gix-prompt-0.5.5
 gix-protocol-0.33.2
@@ -193,6 +193,7 @@ percent-encoding-2.3.0
 pin-project-lite-0.2.13
 pkcs8-0.10.2
 pkg-config-0.3.27
+powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.2
 proc-macro2-1.0.69
@@ -204,14 +205,14 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
-regex-1.10.0
+regex-1.10.1
 regex-automata-0.1.10
-regex-automata-0.4.1
+regex-automata-0.4.2
 regex-syntax-0.6.29
-regex-syntax-0.8.1
+regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.18
+rustix-0.38.19
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -220,9 +221,9 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
-serde-1.0.188
+serde-1.0.189
 serde-value-0.7.0
-serde_derive-1.0.188
+serde_derive-1.0.189
 serde_ignored-0.1.9
 serde_json-1.0.107
 serde_spanned-0.6.3
@@ -251,7 +252,7 @@ terminal_size-0.3.0
 thiserror-1.0.49
 thiserror-impl-1.0.49
 thread_local-1.1.7
-time-0.3.29
+time-0.3.30
 time-core-0.1.2
 time-macros-0.2.15
 tinyvec-1.6.0
@@ -260,9 +261,9 @@ toml-0.5.11
 toml-0.7.8
 toml_datetime-0.6.3
 toml_edit-0.19.15
-tracing-0.1.37
-tracing-attributes-0.1.26
-tracing-core-0.1.31
+tracing-0.1.39
+tracing-attributes-0.1.27
+tracing-core-0.1.32
 tracing-log-0.1.3
 tracing-subscriber-0.3.17
 typenum-1.17.0
@@ -301,7 +302,7 @@ windows_i686_msvc-0.48.5
 windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
-winnow-0.5.16
+winnow-0.5.17
 zeroize-1.6.0
 "
 

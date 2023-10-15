@@ -17,8 +17,8 @@ EGO_SUM=(
 	"filippo.io/edwards25519 v1.0.0/go.mod"
 	"github.com/!azure/azure-sdk-for-go/sdk/azcore v1.8.0"
 	"github.com/!azure/azure-sdk-for-go/sdk/azcore v1.8.0/go.mod"
-	"github.com/!azure/azure-sdk-for-go/sdk/azidentity v1.3.1"
-	"github.com/!azure/azure-sdk-for-go/sdk/azidentity v1.3.1/go.mod"
+	"github.com/!azure/azure-sdk-for-go/sdk/azidentity v1.4.0"
+	"github.com/!azure/azure-sdk-for-go/sdk/azidentity v1.4.0/go.mod"
 	"github.com/!azure/azure-sdk-for-go/sdk/internal v1.3.0"
 	"github.com/!azure/azure-sdk-for-go/sdk/internal v1.3.0/go.mod"
 	"github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets v1.0.1"
@@ -105,8 +105,8 @@ EGO_SUM=(
 	"github.com/charmbracelet/glamour v0.6.0/go.mod"
 	"github.com/charmbracelet/harmonica v0.2.0"
 	"github.com/charmbracelet/harmonica v0.2.0/go.mod"
-	"github.com/charmbracelet/lipgloss v0.8.0"
-	"github.com/charmbracelet/lipgloss v0.8.0/go.mod"
+	"github.com/charmbracelet/lipgloss v0.9.0"
+	"github.com/charmbracelet/lipgloss v0.9.0/go.mod"
 	"github.com/cloudflare/circl v1.3.3"
 	"github.com/cloudflare/circl v1.3.3/go.mod"
 	"github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81"
@@ -391,8 +391,8 @@ EGO_SUM=(
 	"golang.org/x/net v0.2.0/go.mod"
 	"golang.org/x/net v0.6.0/go.mod"
 	"golang.org/x/net v0.8.0/go.mod"
-	"golang.org/x/net v0.16.0"
-	"golang.org/x/net v0.16.0/go.mod"
+	"golang.org/x/net v0.17.0"
+	"golang.org/x/net v0.17.0/go.mod"
 	"golang.org/x/oauth2 v0.13.0"
 	"golang.org/x/oauth2 v0.13.0/go.mod"
 	"golang.org/x/sync v0.0.0-20190423024810-112230192c58/go.mod"
@@ -484,8 +484,8 @@ go-module_set_globals
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://github.com/twpayne/chezmoi"
-SRC_URI="https://github.com/twpayne/chezmoi/tarball/9f20f698cdb6bcdce7c9f5995bc382658eaf923c -> chezmoi-2.40.2-9f20f69.tar.gz
-https://direct.funtoo.org/79/11/76/791176cf68f4e41b16a6589ce73db62b1e86d9e96c874a7de62cd7cabde6a5a071d49f38f6b4b8108eab8b6239d68049990d2259775d2549baabd5bfdab8804e -> chezmoi-2.40.2-funtoo-go-bundle-1d0d2ead059144eed927f1aa5850c49739faf29abcb1205ef823725e71ddf007249db780e138ab0b8a7b3f1704ff97ee2ba037bae31dcffdeee51cb2702116ab.tar.gz"
+SRC_URI="https://github.com/twpayne/chezmoi/tarball/294c2c8bea1d9fda0b14bd029774dc96e066c0cd -> chezmoi-2.40.3-294c2c8.tar.gz
+https://direct.funtoo.org/85/04/a7/8504a72f331b772c6974a46cc798379229281561c4a7cd5b398f72455f0e266063d241eb3ce4fd9f37244e13214c9523ebd1ed4e70bb88196bbd8005931ee492 -> chezmoi-2.40.3-funtoo-go-bundle-846dac9403a9e1003672c6f1c3bcd573608032143e1c22656171dceebed2e2b07dd98af4195bd925833ab16c284aa784b388709735ad4217d6d8e8f79adbde4c.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
