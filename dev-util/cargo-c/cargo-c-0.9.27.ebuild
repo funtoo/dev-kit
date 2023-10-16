@@ -18,7 +18,7 @@ base16ct-0.2.0
 base64-0.21.4
 base64ct-1.6.0
 bitflags-1.3.2
-bitflags-2.4.0
+bitflags-2.4.1
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.7.0
@@ -205,9 +205,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
-regex-1.10.1
+regex-1.10.2
 regex-automata-0.1.10
-regex-automata-0.4.2
+regex-automata-0.4.3
 regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0

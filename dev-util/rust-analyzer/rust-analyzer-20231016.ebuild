@@ -7,7 +7,6 @@ addr2line-0.19.0
 adler-1.0.2
 always-assert-0.1.3
 anyhow-1.0.71
-anymap-1.0.0-beta.2
 arbitrary-1.3.0
 arrayvec-0.7.4
 atty-0.2.14
@@ -54,8 +53,6 @@ hashbrown-0.14.0
 heck-0.3.3
 hermit-abi-0.1.19
 hermit-abi-0.2.6
-hkalbasi-rustc-ap-rustc_abi-0.0.20221221
-hkalbasi-rustc-ap-rustc_index-0.0.20221221
 home-0.5.5
 idna-0.4.0
 indexmap-1.9.3
@@ -113,9 +110,10 @@ protobuf-support-3.1.0
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
 quote-1.0.28
-ra-ap-rustc_index-0.10.0
-ra-ap-rustc_lexer-0.10.0
-ra-ap-rustc_parse_format-0.10.0
+ra-ap-rustc_abi-0.14.0
+ra-ap-rustc_index-0.14.0
+ra-ap-rustc_lexer-0.14.0
+ra-ap-rustc_parse_format-0.14.0
 rayon-1.7.0
 rayon-core-1.11.0
 redox_syscall-0.2.16
@@ -208,7 +206,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-10-09 -> rust-analyzer-20231009.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-10-16 -> rust-analyzer-20231016.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -232,6 +230,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-10-09-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-10-16-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
