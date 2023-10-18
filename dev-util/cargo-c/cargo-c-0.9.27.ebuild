@@ -158,7 +158,7 @@ libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
 linux-raw-sys-0.4.10
-lock_api-0.4.10
+lock_api-0.4.11
 log-0.4.20
 matchers-0.1.0
 maybe-async-0.2.7
@@ -185,7 +185,7 @@ os_info-3.7.0
 overload-0.1.1
 p384-0.13.0
 parking_lot-0.12.1
-parking_lot_core-0.9.8
+parking_lot_core-0.9.9
 pasetors-0.6.7
 pathdiff-0.2.1
 pem-rfc7468-0.7.0
@@ -205,6 +205,7 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.3.5
+redox_syscall-0.4.1
 regex-1.10.2
 regex-automata-0.1.10
 regex-automata-0.4.3
