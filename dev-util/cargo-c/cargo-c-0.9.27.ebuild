@@ -213,7 +213,7 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.19
+rustix-0.38.20
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -262,7 +262,7 @@ toml-0.5.11
 toml-0.7.8
 toml_datetime-0.6.3
 toml_edit-0.19.15
-tracing-0.1.39
+tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
 tracing-log-0.1.3
