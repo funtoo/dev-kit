@@ -128,7 +128,7 @@ glob-0.3.1
 globset-0.4.13
 group-0.13.0
 hashbrown-0.12.3
-hashbrown-0.14.1
+hashbrown-0.14.2
 heck-0.4.1
 hex-0.4.3
 hkdf-0.12.3
