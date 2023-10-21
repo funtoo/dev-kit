@@ -45,7 +45,7 @@ colorchoice-1.0.0
 const-oid-0.9.5
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
-cpufeatures-0.2.9
+cpufeatures-0.2.10
 crates-io-0.38.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
@@ -238,7 +238,7 @@ signal-hook-registry-1.4.1
 signature-2.1.0
 sized-chunks-0.6.5
 smallvec-1.11.1
-socket2-0.4.9
+socket2-0.4.10
 spki-0.7.2
 static_assertions-1.1.0
 strip-ansi-escapes-0.1.1
