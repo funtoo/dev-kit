@@ -1,0 +1,9 @@
+lsd:
+  generator: github-1
+  packages:
+    - lsd:
+        github:
+          user: lsd-rs
+          query: releases
+        extensions:
+          - rust

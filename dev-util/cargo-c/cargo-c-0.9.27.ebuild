@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-ahash-0.8.3
+ahash-0.8.5
 aho-corasick-1.1.2
 anstream-0.6.4
 anstyle-1.0.4
@@ -15,7 +15,7 @@ arc-swap-1.6.0
 arrayvec-0.5.2
 autocfg-1.1.0
 base16ct-0.2.0
-base64-0.21.4
+base64-0.21.5
 base64ct-1.6.0
 bitflags-1.3.2
 bitflags-2.4.1
@@ -227,7 +227,7 @@ serde-value-0.7.0
 serde_derive-1.0.189
 serde_ignored-0.1.9
 serde_json-1.0.107
-serde_spanned-0.6.3
+serde_spanned-0.6.4
 sha1-0.10.6
 sha1_smol-1.0.0
 sha2-0.10.8
@@ -260,12 +260,12 @@ tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.7.8
-toml_datetime-0.6.3
+toml_datetime-0.6.5
 toml_edit-0.19.15
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
-tracing-log-0.1.3
+tracing-log-0.1.4
 tracing-subscriber-0.3.17
 typenum-1.17.0
 unicase-2.7.0
@@ -304,6 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.17
+zerocopy-0.7.11
+zerocopy-derive-0.7.11
 zeroize-1.6.0
 "
 
