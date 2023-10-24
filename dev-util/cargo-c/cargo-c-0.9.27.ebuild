@@ -36,10 +36,10 @@ cargo-util-0.2.6
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.6
-clap_builder-4.4.6
-clap_derive-4.4.2
-clap_lex-0.5.1
+clap-4.4.7
+clap_builder-4.4.7
+clap_derive-4.4.7
+clap_lex-0.6.0
 clru-0.6.1
 colorchoice-1.0.0
 const-oid-0.9.5
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.17
-zerocopy-0.7.11
-zerocopy-derive-0.7.11
+zerocopy-0.7.12
+zerocopy-derive-0.7.12
 zeroize-1.6.0
 "
 
