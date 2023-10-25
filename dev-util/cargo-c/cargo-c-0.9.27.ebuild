@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-ahash-0.8.5
+ahash-0.8.6
 aho-corasick-1.1.2
 anstream-0.6.4
 anstyle-1.0.4
@@ -177,7 +177,7 @@ opener-0.6.1
 openssl-0.10.57
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.1.5+3.1.3
+openssl-src-300.1.6+3.1.4
 openssl-sys-0.9.93
 ordered-float-2.10.1
 orion-0.17.6
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.17
-zerocopy-0.7.12
-zerocopy-derive-0.7.12
+zerocopy-0.7.15
+zerocopy-derive-0.7.15
 zeroize-1.6.0
 "
 
