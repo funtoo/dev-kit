@@ -45,7 +45,7 @@ colorchoice-1.0.0
 const-oid-0.9.5
 core-foundation-0.9.3
 core-foundation-sys-0.8.4
-cpufeatures-0.2.10
+cpufeatures-0.2.11
 crates-io-0.38.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
@@ -213,7 +213,7 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.20
+rustix-0.38.21
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -222,9 +222,9 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
-serde-1.0.189
+serde-1.0.190
 serde-value-0.7.0
-serde_derive-1.0.189
+serde_derive-1.0.190
 serde_ignored-0.1.9
 serde_json-1.0.107
 serde_spanned-0.6.4
@@ -247,7 +247,7 @@ subtle-2.5.0
 syn-1.0.109
 syn-2.0.38
 tar-0.4.40
-tempfile-3.8.0
+tempfile-3.8.1
 termcolor-1.3.0
 terminal_size-0.3.0
 thiserror-1.0.50
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.17
-zerocopy-0.7.15
-zerocopy-derive-0.7.15
+zerocopy-0.7.17
+zerocopy-derive-0.7.17
 zeroize-1.6.0
 "
 
