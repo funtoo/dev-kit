@@ -68,7 +68,7 @@ errno-0.3.5
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
-fiat-crypto-0.2.1
+fiat-crypto-0.2.2
 filetime-0.2.22
 flate2-1.0.28
 fnv-1.0.7
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.17
-zerocopy-0.7.17
-zerocopy-derive-0.7.17
+zerocopy-0.7.18
+zerocopy-derive-0.7.18
 zeroize-1.6.0
 "
 
