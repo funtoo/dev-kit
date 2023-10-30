@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.17
-zerocopy-0.7.18
-zerocopy-derive-0.7.18
+zerocopy-0.7.20
+zerocopy-derive-0.7.20
 zeroize-1.6.0
 "
 

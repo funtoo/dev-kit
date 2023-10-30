@@ -105,8 +105,8 @@ perf-event-open-sys-1.0.1
 petgraph-0.5.1
 pin-project-lite-0.2.9
 proc-macro2-1.0.60
-protobuf-3.1.0
-protobuf-support-3.1.0
+protobuf-3.2.0
+protobuf-support-3.2.0
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
 quote-1.0.28
@@ -125,7 +125,7 @@ ryu-1.0.13
 salsa-0.17.0-pre.2
 salsa-macros-0.17.0-pre.2
 same-file-1.0.6
-scip-0.1.1
+scip-0.3.1
 scoped-tls-1.0.1
 scopeguard-1.1.0
 semver-1.0.17
@@ -206,7 +206,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-10-23 -> rust-analyzer-20231023.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-10-30 -> rust-analyzer-20231030.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -230,6 +230,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-10-23-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-10-30-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
