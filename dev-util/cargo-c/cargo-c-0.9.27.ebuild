@@ -141,13 +141,13 @@ ignore-0.4.20
 im-rc-15.1.0
 imara-diff-0.1.5
 indexmap-1.9.3
-indexmap-2.0.2
+indexmap-2.1.0
 io-close-0.3.7
 itertools-0.10.5
 itertools-0.11.0
 itoa-1.0.9
 jobserver-0.1.27
-js-sys-0.3.64
+js-sys-0.3.65
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -284,11 +284,11 @@ vte-0.10.1
 vte_generate_state_changes-0.1.1
 walkdir-2.4.0
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.87
-wasm-bindgen-backend-0.2.87
-wasm-bindgen-macro-0.2.87
-wasm-bindgen-macro-support-0.2.87
-wasm-bindgen-shared-0.2.87
+wasm-bindgen-0.2.88
+wasm-bindgen-backend-0.2.88
+wasm-bindgen-macro-0.2.88
+wasm-bindgen-macro-support-0.2.88
+wasm-bindgen-shared-0.2.88
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.6
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.18
-zerocopy-0.7.20
-zerocopy-derive-0.7.20
+zerocopy-0.7.21
+zerocopy-derive-0.7.21
 zeroize-1.6.0
 "
 

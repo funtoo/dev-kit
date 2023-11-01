@@ -1,0 +1,8 @@
+libbson:
+  generator: github-1
+  packages:
+    - libbson:
+        github:
+          user: mongodb
+          repo: mongo-c-driver
+          query: releases
