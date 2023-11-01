@@ -1,0 +1,9 @@
+xxhash:
+  generator: github-1
+  packages:
+    - xxhash:
+        github:
+          user: Cyan4973
+          repo: xxHash
+          query: releases
+          select: "^v.*"
