@@ -174,11 +174,11 @@ num-traits-0.2.17
 num_threads-0.1.6
 once_cell-1.18.0
 opener-0.6.1
-openssl-0.10.57
+openssl-0.10.58
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-300.1.6+3.1.4
-openssl-sys-0.9.93
+openssl-sys-0.9.94
 ordered-float-2.10.1
 orion-0.17.6
 os_info-3.7.0
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.18
-zerocopy-0.7.21
-zerocopy-derive-0.7.21
+zerocopy-0.7.23
+zerocopy-derive-0.7.23
 zeroize-1.6.0
 "
 
