@@ -151,7 +151,7 @@ js-sys-0.3.65
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.149
+libc-0.2.150
 libgit2-sys-0.15.2+1.6.4
 libloading-0.8.1
 libnghttp2-sys-0.1.8+1.55.1
