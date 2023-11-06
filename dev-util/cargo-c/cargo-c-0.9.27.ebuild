@@ -222,9 +222,9 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
-serde-1.0.190
+serde-1.0.191
 serde-value-0.7.0
-serde_derive-1.0.190
+serde_derive-1.0.191
 serde_ignored-0.1.9
 serde_json-1.0.108
 serde_spanned-0.6.4
@@ -245,7 +245,7 @@ strip-ansi-escapes-0.1.1
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.38
+syn-2.0.39
 tar-0.4.40
 tempfile-3.8.1
 termcolor-1.3.0
