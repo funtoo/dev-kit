@@ -64,7 +64,7 @@ ed25519-compact-2.0.4
 either-1.9.0
 elliptic-curve-0.13.6
 equivalent-1.0.1
-errno-0.3.5
+errno-0.3.6
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
@@ -222,9 +222,9 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
-serde-1.0.191
+serde-1.0.192
 serde-value-0.7.0
-serde_derive-1.0.191
+serde_derive-1.0.192
 serde_ignored-0.1.9
 serde_json-1.0.108
 serde_spanned-0.6.4
