@@ -77,7 +77,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.2.0
 fwdansi-1.1.0
 generic-array-0.14.7
-getrandom-0.2.10
+getrandom-0.2.11
 git2-0.17.2
 git2-curl-0.18.0
 gix-0.45.1
@@ -157,7 +157,7 @@ libloading-0.8.1
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
-linux-raw-sys-0.4.10
+linux-raw-sys-0.4.11
 lock_api-0.4.11
 log-0.4.20
 matchers-0.1.0
