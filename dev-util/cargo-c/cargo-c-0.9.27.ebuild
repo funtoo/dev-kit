@@ -68,7 +68,7 @@ errno-0.3.6
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
-fiat-crypto-0.2.2
+fiat-crypto-0.2.3
 filetime-0.2.22
 flate2-1.0.28
 fnv-1.0.7
