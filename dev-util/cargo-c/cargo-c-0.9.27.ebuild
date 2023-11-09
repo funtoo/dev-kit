@@ -21,7 +21,7 @@ bitflags-1.3.2
 bitflags-2.4.1
 bitmaps-2.1.0
 block-buffer-0.10.4
-bstr-1.7.0
+bstr-1.8.0
 btoi-0.4.3
 bumpalo-3.14.0
 bytes-1.5.0
