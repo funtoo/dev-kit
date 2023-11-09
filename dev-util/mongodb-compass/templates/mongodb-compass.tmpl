@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit desktop eutils unpacker xdg
+inherit desktop eutils electron unpacker xdg
 
 DESCRIPTION="The GUI for MongoDB"
 HOMEPAGE="https://mongodb.com/compass https://github.com/mongodb-js/compass"
@@ -29,7 +29,6 @@ src_install() {
 	doicon usr/share/pixmaps/mongodb-compass.png
 
 	fperms +x "/usr/lib/mongodb-compass/MongoDB Compass"
-	fperms 4755 /usr/lib/mongodb-compass/chrome-sandbox || die
 
 	# Included binary doesn't work, make a symlink instead
 	rm usr/bin/mongodb-compass

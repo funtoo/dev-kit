@@ -2,6 +2,9 @@
 
 from packaging import version
 
+revision = {"1.40.4": "1"}
+
+
 def find_suitable_release(hub, pkginfo, release_data):
 	# FL-9021: updated this strategy to make sure our desired asset exists in the release we choose:
 	for release in release_data:
@@ -33,6 +36,7 @@ async def generate(hub, **pkginfo):
 	ebuild = hub.pkgtools.ebuild.BreezyBuild(
 		**pkginfo,
 		version=version,
+		revision=revision,
 		artifacts=[artifact],
 		github_user=github_user,
 		github_repo=github_repo,
