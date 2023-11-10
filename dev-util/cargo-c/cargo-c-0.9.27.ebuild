@@ -237,7 +237,7 @@ signal-hook-0.3.17
 signal-hook-registry-1.4.1
 signature-2.1.0
 sized-chunks-0.6.5
-smallvec-1.11.1
+smallvec-1.11.2
 socket2-0.4.10
 spki-0.7.2
 static_assertions-1.1.0
