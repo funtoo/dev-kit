@@ -36,8 +36,8 @@ cargo-util-0.2.6
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.7
-clap_builder-4.4.7
+clap-4.4.8
+clap_builder-4.4.8
 clap_derive-4.4.7
 clap_lex-0.6.0
 clru-0.6.1
