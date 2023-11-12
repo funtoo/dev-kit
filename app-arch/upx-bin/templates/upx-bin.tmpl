@@ -29,7 +29,7 @@ src_install() {
 	dobin upx
 	pax-mark -m "${ED}"/opt/bin/upx
 	doman upx.1
-	dodoc NEWS README* THANKS
+	dodoc NEWS README*
 	if use doc ; then
 		local HTML_DOCS=( upx-doc.html )
 		einstalldocs
