@@ -213,7 +213,7 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.21
+rustix-0.38.22
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
