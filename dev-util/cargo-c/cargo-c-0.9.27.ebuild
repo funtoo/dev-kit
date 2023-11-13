@@ -50,7 +50,7 @@ crates-io-0.38.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-utils-0.8.16
-crypto-bigint-0.5.3
+crypto-bigint-0.5.4
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
@@ -265,12 +265,12 @@ toml_edit-0.19.15
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
-tracing-log-0.1.4
-tracing-subscriber-0.3.17
+tracing-log-0.2.0
+tracing-subscriber-0.3.18
 typenum-1.17.0
 unicase-2.7.0
 unicode-bidi-0.3.13
-unicode-bom-2.0.2
+unicode-bom-2.0.3
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-width-0.1.11

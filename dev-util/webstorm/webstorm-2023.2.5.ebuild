@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="The smartest JavaScript IDE"
 HOMEPAGE="http://www.jetbrains.com/webstorm"
-SRC_URI="https://download.jetbrains.com/webstorm/WebStorm-2023.2.4.tar.gz -> webstorm-2023.2.4.tar.gz"
+SRC_URI="https://download.jetbrains.com/webstorm/WebStorm-2023.2.5.tar.gz -> webstorm-2023.2.5.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
