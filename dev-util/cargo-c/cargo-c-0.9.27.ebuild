@@ -64,7 +64,7 @@ ed25519-compact-2.0.4
 either-1.9.0
 elliptic-curve-0.13.6
 equivalent-1.0.1
-errno-0.3.6
+errno-0.3.7
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
