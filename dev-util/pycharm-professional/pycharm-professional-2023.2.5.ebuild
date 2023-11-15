@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="Golang IDE by JetBrains"
-HOMEPAGE="https://www.jetbrains.com/go"
-SRC_URI="https://download.jetbrains.com/go/goland-2023.2.4.tar.gz -> goland-2023.2.4.tar.gz"
+DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
+HOMEPAGE="https://www.jetbrains.com/python"
+SRC_URI="https://download.jetbrains.com/python/pycharm-professional-2023.2.5.tar.gz -> pycharm-professional-2023.2.5.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -28,12 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/GoLand-${PV}"
+S="${WORKDIR}/pycharm-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "GoLand-${PV}" || die
+		mv $(ls "${WORKDIR}") "pycharm-${PV}" || die
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "GoLand" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "PyCharm Professional" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"

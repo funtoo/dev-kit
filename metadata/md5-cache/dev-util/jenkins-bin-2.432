@@ -5,8 +5,8 @@ EAPI=7
 HOMEPAGE=https://jenkins.io/
 KEYWORDS=*
 LICENSE=MIT
-RDEPEND=media-fonts/dejavu media-libs/freetype !dev-util/jenkins-bin >=virtual/jre-1.8.0
+RDEPEND=media-fonts/dejavu media-libs/freetype !dev-util/jenkins-lts-bin >=virtual/jre-1.8.0
 SLOT=0
-SRC_URI=https://get.jenkins.io/war-stable/2.414.3/jenkins.war -> jenkins-bin-2.414.3.war
+SRC_URI=https://get.jenkins.io/war/2.432/jenkins.war -> jenkins-bin-2.432.war
 _eclasses_=user	875055ddd565382c728563992ae3abf7
-_md5_=0f1ddb49fc857991b5b6e9eea21eff15
+_md5_=cbb7dd8c9f81fb6d729a8abd779837fe

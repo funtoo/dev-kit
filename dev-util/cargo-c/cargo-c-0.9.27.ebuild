@@ -34,7 +34,7 @@ cargo-credential-wincred-0.3.0
 cargo-platform-0.1.4
 cargo-util-0.2.6
 cbindgen-0.26.0
-cc-1.0.84
+cc-1.0.83
 cfg-if-1.0.0
 clap-4.4.8
 clap_builder-4.4.8
@@ -68,7 +68,7 @@ errno-0.3.6
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
-fiat-crypto-0.2.3
+fiat-crypto-0.2.4
 filetime-0.2.22
 flate2-1.0.28
 fnv-1.0.7
@@ -213,7 +213,7 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.22
+rustix-0.38.24
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
@@ -248,7 +248,7 @@ syn-1.0.109
 syn-2.0.39
 tar-0.4.40
 tempfile-3.8.1
-termcolor-1.3.0
+termcolor-1.4.0
 terminal_size-0.3.0
 thiserror-1.0.50
 thiserror-impl-1.0.50
@@ -304,8 +304,8 @@ windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
 winnow-0.5.19
-zerocopy-0.7.25
-zerocopy-derive-0.7.25
+zerocopy-0.7.26
+zerocopy-derive-0.7.26
 zeroize-1.6.0
 "
 

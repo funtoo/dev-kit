@@ -23,9 +23,9 @@ bitflags-2.4.0
 blake2b_simd-1.0.2
 blake3-1.5.0
 block-buffer-0.10.3
-bstr-1.7.0
+bstr-1.8.0
 bumpalo-3.11.1
-bytecount-0.6.4
+bytecount-0.6.7
 byteorder-1.5.0
 cc-1.0.79
 cexpr-0.6.0
@@ -40,8 +40,8 @@ clap_mangen-0.2.9
 colorchoice-1.0.0
 compare-0.1.0
 console-0.15.7
-const-random-0.1.15
-const-random-macro-0.1.15
+const-random-0.1.16
+const-random-macro-0.1.16
 constant_time_eq-0.3.0
 conv-0.3.3
 core-foundation-sys-0.8.3
@@ -68,7 +68,7 @@ data-encoding-macro-internal-0.1.11
 diff-0.1.13
 digest-0.10.7
 dlv-list-0.5.0
-dns-lookup-2.0.3
+dns-lookup-2.0.4
 dunce-1.0.4
 either-1.8.0
 encode_unicode-0.3.6
@@ -119,12 +119,11 @@ kqueue-1.0.7
 kqueue-sys-1.0.3
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.149
+libc-0.2.150
 libloading-0.7.4
 libm-0.2.7
-linux-raw-sys-0.1.4
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.5
+linux-raw-sys-0.4.10
 lock_api-0.4.9
 log-0.4.17
 lscolors-0.15.0
@@ -165,9 +164,9 @@ platform-info-2.0.2
 portable-atomic-0.3.15
 ppv-lite86-0.2.17
 pretty_assertions-1.4.0
-proc-macro-hack-0.5.20+deprecated
 proc-macro2-1.0.63
-procfs-0.15.1
+procfs-0.16.0
+procfs-core-0.16.0
 quick-error-2.0.1
 quickcheck-1.0.3
 quote-1.0.29
@@ -180,8 +179,8 @@ rayon-core-1.12.0
 redox_syscall-0.3.5
 redox_syscall-0.4.0
 reference-counted-singleton-0.1.2
-regex-1.10.1
-regex-automata-0.4.2
+regex-1.10.2
+regex-automata-0.4.3
 regex-syntax-0.8.2
 relative-path-1.8.0
 rlimit-0.10.1
@@ -191,12 +190,11 @@ rstest_macros-0.18.2
 rust-ini-0.19.0
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.15
-rustix-0.37.23
-rustix-0.38.8
+rustix-0.37.26
+rustix-0.38.21
 same-file-1.0.6
 scopeguard-1.1.0
-self_cell-1.0.1
+self_cell-1.0.2
 selinux-0.4.0
 selinux-sys-0.6.2
 semver-1.0.14
@@ -217,7 +215,7 @@ socket2-0.5.3
 strsim-0.10.0
 syn-1.0.109
 syn-2.0.23
-tempfile-3.8.0
+tempfile-3.8.1
 terminal_size-0.2.6
 terminal_size-0.3.0
 textwrap-0.16.0
@@ -279,7 +277,7 @@ inherit cargo
 
 DESCRIPTION="GNU coreutils implemented as universal (cross-platform) utils, written in Rust"
 HOMEPAGE="https://github.com/uutils/coreutils"
-SRC_URI="https://api.github.com/repos/uutils/coreutils/tarball/0.0.22 -> uutils-coreutils-0.0.22.tar.gz
+SRC_URI="https://api.github.com/repos/uutils/coreutils/tarball/0.0.23 -> uutils-coreutils-0.0.23.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
