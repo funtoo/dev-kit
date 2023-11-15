@@ -306,7 +306,7 @@ windows_x86_64_msvc-0.48.5
 winnow-0.5.19
 zerocopy-0.7.26
 zerocopy-derive-0.7.26
-zeroize-1.6.0
+zeroize-1.6.1
 "
 
 inherit cargo
