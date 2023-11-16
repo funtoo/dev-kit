@@ -13,7 +13,7 @@ inherit check-reqs flag-o-matic multiprocessing pax-utils python-any-r1 scons-ut
 
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="https://www.mongodb.com"
-SRC_URI="https://github.com/mongodb/mongo/tarball/3e18c4c56048ddf22a6872edc111b542521ad1d5 -> mongo-4.4.25-3e18c4c.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo/tarball/acdc463fe60bdc85aeced25297041b4051a0fc33 -> mongo-4.4.26-acdc463.tar.gz"
 
 LICENSE="Apache-2.0 SSPL-1"
 SLOT="0"

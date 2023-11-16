@@ -62,7 +62,7 @@ dunce-1.0.4
 ecdsa-0.16.8
 ed25519-compact-2.0.4
 either-1.9.0
-elliptic-curve-0.13.6
+elliptic-curve-0.13.7
 equivalent-1.0.1
 errno-0.3.7
 faster-hex-0.8.1
@@ -195,7 +195,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 powerfmt-0.2.0
 ppv-lite86-0.2.17
-primeorder-0.13.3
+primeorder-0.13.5
 proc-macro2-1.0.69
 prodash-25.0.2
 pulldown-cmark-0.9.3
