@@ -195,7 +195,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 powerfmt-0.2.0
 ppv-lite86-0.2.17
-primeorder-0.13.5
+primeorder-0.13.6
 proc-macro2-1.0.69
 prodash-25.0.2
 pulldown-cmark-0.9.3
