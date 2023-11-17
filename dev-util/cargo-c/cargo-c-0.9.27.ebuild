@@ -59,7 +59,7 @@ der-0.7.8
 deranged-0.3.9
 digest-0.10.7
 dunce-1.0.4
-ecdsa-0.16.8
+ecdsa-0.16.9
 ed25519-compact-2.0.4
 either-1.9.0
 elliptic-curve-0.13.7
@@ -68,7 +68,7 @@ errno-0.3.7
 faster-hex-0.8.1
 fastrand-2.0.1
 ff-0.13.0
-fiat-crypto-0.2.4
+fiat-crypto-0.2.5
 filetime-0.2.22
 flate2-1.0.28
 fnv-1.0.7
@@ -235,7 +235,7 @@ sharded-slab-0.1.7
 shell-escape-0.1.5
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
-signature-2.1.0
+signature-2.2.0
 sized-chunks-0.6.5
 smallvec-1.11.2
 socket2-0.4.10
@@ -306,7 +306,7 @@ windows_x86_64_msvc-0.48.5
 winnow-0.5.19
 zerocopy-0.7.26
 zerocopy-derive-0.7.26
-zeroize-1.6.1
+zeroize-1.7.0
 "
 
 inherit cargo
