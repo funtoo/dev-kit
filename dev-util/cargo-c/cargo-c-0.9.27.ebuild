@@ -28,11 +28,12 @@ bytes-1.5.0
 bytesize-1.3.0
 cargo-0.74.0
 cargo-credential-0.3.0
-cargo-credential-libsecret-0.3.1
-cargo-credential-macos-keychain-0.3.0
-cargo-credential-wincred-0.3.0
-cargo-platform-0.1.4
-cargo-util-0.2.6
+cargo-credential-0.4.1
+cargo-credential-libsecret-0.3.2
+cargo-credential-macos-keychain-0.3.1
+cargo-credential-wincred-0.3.1
+cargo-platform-0.1.5
+cargo-util-0.2.7
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
@@ -50,7 +51,7 @@ crates-io-0.38.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-utils-0.8.16
-crypto-bigint-0.5.4
+crypto-bigint-0.5.5
 crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.44
@@ -62,7 +63,7 @@ dunce-1.0.4
 ecdsa-0.16.9
 ed25519-compact-2.0.4
 either-1.9.0
-elliptic-curve-0.13.7
+elliptic-curve-0.13.8
 equivalent-1.0.1
 errno-0.3.7
 faster-hex-0.8.1
@@ -213,7 +214,7 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.24
+rustix-0.38.25
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
