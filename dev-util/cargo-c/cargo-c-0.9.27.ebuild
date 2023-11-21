@@ -28,10 +28,9 @@ bytes-1.5.0
 bytesize-1.3.0
 cargo-0.74.0
 cargo-credential-0.3.0
-cargo-credential-0.4.1
-cargo-credential-libsecret-0.3.2
-cargo-credential-macos-keychain-0.3.1
-cargo-credential-wincred-0.3.1
+cargo-credential-libsecret-0.3.1
+cargo-credential-macos-keychain-0.3.0
+cargo-credential-wincred-0.3.0
 cargo-platform-0.1.5
 cargo-util-0.2.7
 cbindgen-0.26.0
@@ -223,9 +222,9 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
-serde-1.0.192
+serde-1.0.193
 serde-value-0.7.0
-serde_derive-1.0.192
+serde_derive-1.0.193
 serde_ignored-0.1.9
 serde_json-1.0.108
 serde_spanned-0.6.4
