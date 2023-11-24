@@ -77,7 +77,7 @@ flate2-1.0.28
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
-form_urlencoded-1.2.0
+form_urlencoded-1.2.1
 generic-array-0.14.7
 getrandom-0.2.11
 git2-0.18.1
@@ -142,7 +142,7 @@ hmac-0.12.1
 home-0.5.5
 http-auth-0.1.8
 humantime-2.1.0
-idna-0.4.0
+idna-0.5.0
 ignore-0.4.20
 im-rc-15.1.0
 indexmap-1.9.3
@@ -177,11 +177,11 @@ num-traits-0.2.17
 num_threads-0.1.6
 once_cell-1.18.0
 opener-0.6.1
-openssl-0.10.59
+openssl-0.10.60
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-300.1.6+3.1.4
-openssl-sys-0.9.95
+openssl-sys-0.9.96
 ordered-float-2.10.1
 orion-0.17.6
 os_info-3.7.0
@@ -192,7 +192,7 @@ parking_lot_core-0.9.9
 pasetors-0.6.7
 pathdiff-0.2.1
 pem-rfc7468-0.7.0
-percent-encoding-2.3.0
+percent-encoding-2.3.1
 pin-project-lite-0.2.13
 pkcs8-0.10.2
 pkg-config-0.3.27
@@ -274,7 +274,7 @@ unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-width-0.1.11
 unicode-xid-0.2.4
-url-2.4.1
+url-2.5.0
 utf8parse-0.2.1
 valuable-0.1.0
 vcpkg-0.2.15

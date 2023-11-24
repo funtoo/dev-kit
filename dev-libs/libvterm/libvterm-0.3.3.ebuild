@@ -5,7 +5,7 @@ inherit flag-o-matic
 
 DESCRIPTION="An abstract library implementation of a VT220/xterm/ECMA-48 terminal emulator"
 HOMEPAGE="http://www.leonerd.org.uk/code/libvterm/"
-SRC_URI="http://www.leonerd.org.uk/code/libvterm/libvterm-0.3.2.tar.gz -> libvterm-0.3.2.tar.gz"
+SRC_URI="http://www.leonerd.org.uk/code/libvterm/libvterm-0.3.3.tar.gz -> libvterm-0.3.3.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
