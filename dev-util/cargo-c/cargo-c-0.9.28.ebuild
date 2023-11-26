@@ -50,6 +50,8 @@ cpufeatures-0.2.11
 crates-io-0.39.0
 crc32fast-1.3.2
 crossbeam-channel-0.5.8
+crossbeam-deque-0.8.3
+crossbeam-epoch-0.9.15
 crossbeam-utils-0.8.16
 crypto-bigint-0.5.5
 crypto-common-0.1.6
@@ -74,7 +76,6 @@ ff-0.13.0
 fiat-crypto-0.2.5
 filetime-0.2.22
 flate2-1.0.28
-fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.2.1
@@ -131,7 +132,7 @@ gix-utils-0.1.5
 gix-validate-0.8.0
 gix-worktree-0.26.0
 glob-0.3.1
-globset-0.4.13
+globset-0.4.14
 group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.3
@@ -143,7 +144,7 @@ home-0.5.5
 http-auth-0.1.8
 humantime-2.1.0
 idna-0.5.0
-ignore-0.4.20
+ignore-0.4.21
 im-rc-15.1.0
 indexmap-1.9.3
 indexmap-2.1.0
@@ -167,6 +168,7 @@ matchers-0.1.0
 maybe-async-0.2.7
 memchr-2.6.4
 memmap2-0.7.1
+memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
 miow-0.6.0
