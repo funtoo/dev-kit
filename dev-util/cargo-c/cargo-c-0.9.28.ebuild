@@ -199,7 +199,7 @@ pkg-config-0.3.27
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
-proc-macro2-1.0.69
+proc-macro2-1.0.70
 prodash-26.2.2
 pulldown-cmark-0.9.3
 quote-1.0.33
