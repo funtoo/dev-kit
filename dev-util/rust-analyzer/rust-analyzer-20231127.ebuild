@@ -19,10 +19,10 @@ cargo-platform-0.1.2
 cargo_metadata-0.18.1
 cc-1.0.79
 cfg-if-1.0.0
-chalk-derive-0.94.0
-chalk-ir-0.94.0
-chalk-recursive-0.94.0
-chalk-solve-0.94.0
+chalk-derive-0.95.0
+chalk-ir-0.95.0
+chalk-recursive-0.95.0
+chalk-solve-0.95.0
 command-group-2.1.0
 countme-3.0.1
 cov-mark-2.0.0-pre.1
@@ -31,6 +31,7 @@ crossbeam-channel-0.5.8
 crossbeam-deque-0.8.3
 crossbeam-epoch-0.9.15
 crossbeam-utils-0.8.16
+ctrlc-3.4.1
 dashmap-5.4.0
 derive_arbitrary-1.3.2
 dissimilar-1.0.7
@@ -49,16 +50,13 @@ fst-0.4.7
 gimli-0.27.3
 hashbrown-0.12.3
 hashbrown-0.14.2
-heck-0.3.3
+heck-0.4.1
 hermit-abi-0.2.6
 home-0.5.5
 idna-0.4.0
-indexmap-1.9.3
 indexmap-2.1.0
 inotify-0.9.6
 inotify-sys-0.1.5
-instant-0.1.12
-itertools-0.10.5
 itertools-0.12.0
 itoa-1.0.6
 jod-thread-0.1.2
@@ -84,6 +82,7 @@ miniz_oxide-0.7.1
 mio-0.8.5
 miow-0.5.0
 nix-0.26.2
+nix-0.27.1
 nohash-hasher-0.2.0
 notify-6.1.1
 nu-ansi-term-0.49.0
@@ -92,9 +91,7 @@ object-0.30.4
 object-0.32.0
 once_cell-1.18.0
 oorandom-11.1.3
-parking_lot-0.11.2
 parking_lot-0.12.1
-parking_lot_core-0.8.6
 parking_lot_core-0.9.6
 paste-1.0.12
 percent-encoding-2.3.0
@@ -108,29 +105,28 @@ protobuf-support-3.2.0
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
 quote-1.0.28
-ra-ap-rustc_abi-0.19.0
-ra-ap-rustc_index-0.14.0
-ra-ap-rustc_index-0.19.0
-ra-ap-rustc_lexer-0.14.0
-ra-ap-rustc_lexer-0.19.0
-ra-ap-rustc_parse_format-0.14.0
+ra-ap-rustc_abi-0.20.0
+ra-ap-rustc_index-0.20.0
+ra-ap-rustc_index_macros-0.20.0
+ra-ap-rustc_lexer-0.20.0
+ra-ap-rustc_parse_format-0.20.0
 rayon-1.8.0
 rayon-core-1.12.0
 redox_syscall-0.2.16
 redox_syscall-0.3.5
 rowan-0.15.11
+rust-analyzer-salsa-0.17.0-pre.3
+rust-analyzer-salsa-macros-0.17.0-pre.3
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 ryu-1.0.13
-salsa-0.17.0-pre.2
-salsa-macros-0.17.0-pre.2
 same-file-1.0.6
 scip-0.3.1
 scoped-tls-1.0.1
 scopeguard-1.1.0
 semver-1.0.17
-serde-1.0.192
-serde_derive-1.0.192
+serde-1.0.193
+serde_derive-1.0.193
 serde_json-1.0.108
 serde_repr-0.1.12
 sharded-slab-0.1.4
@@ -138,7 +134,6 @@ smallvec-1.10.0
 smol_str-0.2.0
 snap-1.1.0
 static_assertions-1.1.0
-syn-1.0.109
 syn-2.0.39
 synstructure-0.13.0
 text-size-1.1.1
@@ -166,7 +161,6 @@ unicode-bidi-0.3.13
 unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-properties-0.1.0
-unicode-segmentation-1.10.1
 unicode-xid-0.2.4
 url-2.4.0
 valuable-0.1.0
@@ -206,7 +200,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-11-20 -> rust-analyzer-20231120.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2023-11-27 -> rust-analyzer-20231127.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -230,6 +224,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2023-11-20-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2023-11-27-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
