@@ -44,8 +44,8 @@ color-print-0.3.5
 color-print-proc-macro-0.3.5
 colorchoice-1.0.0
 const-oid-0.9.5
-core-foundation-0.9.3
-core-foundation-sys-0.8.4
+core-foundation-0.9.4
+core-foundation-sys-0.8.6
 cpufeatures-0.2.11
 crates-io-0.39.0
 crc32fast-1.3.2
@@ -161,7 +161,7 @@ libloading-0.8.1
 libnghttp2-sys-0.1.8+1.55.1
 libssh2-sys-0.3.0
 libz-sys-1.1.12
-linux-raw-sys-0.4.11
+linux-raw-sys-0.4.12
 lock_api-0.4.11
 log-0.4.20
 matchers-0.1.0
@@ -218,7 +218,7 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.25
+rustix-0.38.26
 ryu-1.0.15
 same-file-1.0.6
 schannel-0.1.22
