@@ -71,14 +71,14 @@ EGO_SUM=(
 	"github.com/stretchr/testify v1.8.4/go.mod"
 	"github.com/yuin/gopher-lua v1.1.0"
 	"github.com/yuin/gopher-lua v1.1.0/go.mod"
-	"golang.org/x/crypto v0.15.0"
-	"golang.org/x/crypto v0.15.0/go.mod"
-	"golang.org/x/net v0.18.0"
-	"golang.org/x/net v0.18.0/go.mod"
+	"golang.org/x/crypto v0.16.0"
+	"golang.org/x/crypto v0.16.0/go.mod"
+	"golang.org/x/net v0.19.0"
+	"golang.org/x/net v0.19.0/go.mod"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
 	"golang.org/x/sys v0.6.0/go.mod"
-	"golang.org/x/sys v0.14.0"
-	"golang.org/x/sys v0.14.0/go.mod"
+	"golang.org/x/sys v0.15.0"
+	"golang.org/x/sys v0.15.0/go.mod"
 	"golang.org/x/text v0.14.0"
 	"golang.org/x/text v0.14.0/go.mod"
 	"golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2"
@@ -96,13 +96,13 @@ go-module_set_globals
 
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
-SRC_URI="https://github.com/mikefarah/yq/tarball/c11a53322bce866fbfa3032e326f58c89e8c0759 -> yq-4.40.3-c11a533.tar.gz
-https://direct.funtoo.org/6c/83/fc/6c83fc86b621b0136b32137862818f43e5c4cdb1d0466085122afad3ad937aaa14b38c8484fa9d2d10503f5be5aaf75386e2946af0771ae51e8bc8158f18c545 -> yq-go-4.40.3-funtoo-go-bundle-60c78b69f57615993b341c1c5f2e500067c685789ff16378e524bf4887f0d076d958e612022e371c2af643abc499293c96fe4f5840b4ca643cee76dd1146e713.tar.gz"
+SRC_URI="https://github.com/mikefarah/yq/tarball/1c3d55106075bd37df197b4bc03cb4a413fdb903 -> yq-4.40.4-1c3d551.tar.gz
+https://direct.funtoo.org/b3/8c/9d/b38c9d9ea5fcab882265dbe6fa4fd46b4466d69a9c4353a5aa037f154afef1b90301747131d03f4fea5ac43fa58e6832dfea21e3e3ca04db31ac5aec7a6fcac4 -> yq-go-4.40.4-funtoo-go-bundle-c7764103d0112a4fd6129e380f765fdb2dabb59baa3ea3c6dcf7cdcae793577fdcee98407eeda30a45b471391f8c53930c7a1311f6c0267b72cc77fc4d021b4e.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="*"
-S="${WORKDIR}/mikefarah-yq-c11a533"
+S="${WORKDIR}/mikefarah-yq-1c3d551"
 
 DEPEND=""
 RDEPEND=">=dev-vcs/git-1.7.3"

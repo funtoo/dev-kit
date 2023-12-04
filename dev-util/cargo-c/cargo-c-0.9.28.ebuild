@@ -59,7 +59,7 @@ ct-codecs-1.1.1
 curl-0.4.44
 curl-sys-0.4.68+curl-8.4.0
 der-0.7.8
-deranged-0.3.9
+deranged-0.3.10
 digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.9
