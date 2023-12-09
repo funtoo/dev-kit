@@ -4,10 +4,10 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-1.1.2
-anstream-0.6.4
+anstream-0.6.5
 anstyle-1.0.4
 anstyle-parse-0.2.3
-anstyle-query-1.0.1
+anstyle-query-1.0.2
 anstyle-wincon-3.0.2
 anyhow-1.0.75
 arc-swap-1.6.0
@@ -150,7 +150,7 @@ indexmap-1.9.3
 indexmap-2.1.0
 itertools-0.10.5
 itertools-0.11.0
-itoa-1.0.9
+itoa-1.0.10
 jobserver-0.1.27
 js-sys-0.3.66
 lazy_static-1.4.0
@@ -182,7 +182,7 @@ opener-0.6.1
 openssl-0.10.61
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.1.6+3.1.4
+openssl-src-300.2.0+3.2.0
 openssl-sys-0.9.97
 ordered-float-2.10.1
 orion-0.17.6
@@ -217,8 +217,8 @@ regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
 rustfix-0.6.1
-rustix-0.38.26
-ryu-1.0.15
+rustix-0.38.28
+ryu-1.0.16
 same-file-1.0.6
 schannel-0.1.22
 scopeguard-1.2.0
