@@ -49,10 +49,10 @@ core-foundation-sys-0.8.6
 cpufeatures-0.2.11
 crates-io-0.39.0
 crc32fast-1.3.2
-crossbeam-channel-0.5.8
-crossbeam-deque-0.8.3
-crossbeam-epoch-0.9.15
-crossbeam-utils-0.8.16
+crossbeam-channel-0.5.9
+crossbeam-deque-0.8.4
+crossbeam-epoch-0.9.16
+crossbeam-utils-0.8.17
 crypto-bigint-0.5.5
 crypto-common-0.1.6
 ct-codecs-1.1.1
@@ -68,9 +68,10 @@ either-1.9.0
 elliptic-curve-0.13.8
 encoding_rs-0.8.33
 equivalent-1.0.1
-erased-serde-0.3.31
+erased-serde-0.4.0
 errno-0.3.8
 faster-hex-0.8.1
+faster-hex-0.9.0
 fastrand-2.0.1
 ff-0.13.0
 fiat-crypto-0.2.5
@@ -100,7 +101,7 @@ gix-features-0.35.0
 gix-filter-0.5.0
 gix-fs-0.7.0
 gix-glob-0.13.0
-gix-hash-0.13.2
+gix-hash-0.13.3
 gix-hashtable-0.4.1
 gix-ignore-0.8.0
 gix-index-0.25.0
@@ -138,7 +139,7 @@ hashbrown-0.12.3
 hashbrown-0.14.3
 heck-0.4.1
 hex-0.4.3
-hkdf-0.12.3
+hkdf-0.12.4
 hmac-0.12.1
 home-0.5.5
 http-auth-0.1.8
@@ -155,7 +156,7 @@ jobserver-0.1.27
 js-sys-0.3.66
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.150
+libc-0.2.151
 libgit2-sys-0.16.1+1.7.1
 libloading-0.8.1
 libnghttp2-sys-0.1.8+1.55.1
@@ -182,7 +183,7 @@ opener-0.6.1
 openssl-0.10.61
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.2.0+3.2.0
+openssl-src-300.2.1+3.2.0
 openssl-sys-0.9.97
 ordered-float-2.10.1
 orion-0.17.6
@@ -191,7 +192,7 @@ overload-0.1.1
 p384-0.13.0
 parking_lot-0.12.1
 parking_lot_core-0.9.9
-pasetors-0.6.7
+pasetors-0.6.8
 pathdiff-0.2.1
 pem-rfc7468-0.7.0
 percent-encoding-2.3.1
@@ -227,7 +228,7 @@ security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
 serde-1.0.193
-serde-untagged-0.1.1
+serde-untagged-0.1.2
 serde-value-0.7.0
 serde_derive-1.0.193
 serde_ignored-0.1.9
@@ -246,7 +247,7 @@ spki-0.7.3
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.39
+syn-2.0.41
 tar-0.4.40
 tempfile-3.8.1
 terminal_size-0.3.0
@@ -310,7 +311,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.26
+winnow-0.5.28
 zeroize-1.7.0
 "
 
