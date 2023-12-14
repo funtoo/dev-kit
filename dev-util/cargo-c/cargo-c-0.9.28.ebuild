@@ -68,7 +68,7 @@ either-1.9.0
 elliptic-curve-0.13.8
 encoding_rs-0.8.33
 equivalent-1.0.1
-erased-serde-0.4.0
+erased-serde-0.4.1
 errno-0.3.8
 faster-hex-0.8.1
 faster-hex-0.9.0
