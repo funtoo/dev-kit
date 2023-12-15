@@ -43,7 +43,7 @@ clru-0.6.1
 color-print-0.3.5
 color-print-proc-macro-0.3.5
 colorchoice-1.0.0
-const-oid-0.9.5
+const-oid-0.9.6
 core-foundation-0.9.4
 core-foundation-sys-0.8.6
 cpufeatures-0.2.11

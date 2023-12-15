@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst prepare unpack
-DEPEND=>=app-arch/rpm
+DEPEND=app-arch/rpm
 DESCRIPTION=Intel's implementation of the OpenCL standard
 EAPI=5
 HOMEPAGE=http://software.intel.com/en-us/articles/opencl-sdk/
@@ -10,5 +10,5 @@ RDEPEND=app-eselect/eselect-opencl sys-process/numactl system-tbb? ( >=dev-cpp/t
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://registrationcenter.intel.com/irc_nas/4181/intel_sdk_for_ocl_applications_2014_ubuntu_4.4.0.117_x64.tgz
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	rpm	80ca0dafc70029ee0e9938fc3355ffc9	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	rpm	30c5bec2068729a9bcb52ddcc16d88e8	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
 _md5_=777604a290230cbf8682206832c425f0
