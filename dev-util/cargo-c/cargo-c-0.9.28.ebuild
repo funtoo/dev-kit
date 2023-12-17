@@ -63,7 +63,7 @@ deranged-0.3.10
 digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.9
-ed25519-compact-2.0.4
+ed25519-compact-2.0.6
 either-1.9.0
 elliptic-curve-0.13.8
 encoding_rs-0.8.33
@@ -141,7 +141,7 @@ heck-0.4.1
 hex-0.4.3
 hkdf-0.12.4
 hmac-0.12.1
-home-0.5.5
+home-0.5.9
 http-auth-0.1.8
 humantime-2.1.0
 idna-0.5.0
@@ -251,8 +251,8 @@ syn-2.0.41
 tar-0.4.40
 tempfile-3.8.1
 terminal_size-0.3.0
-thiserror-1.0.50
-thiserror-impl-1.0.50
+thiserror-1.0.51
+thiserror-impl-1.0.51
 thread_local-1.1.7
 time-0.3.30
 time-core-0.1.2
