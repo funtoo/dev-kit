@@ -7,7 +7,7 @@ inherit cmake-utils prefix
 
 DESCRIPTION="A validating XML parser written in a portable subset of C++"
 HOMEPAGE="https://xerces.apache.org/xerces-c/"
-SRC_URI="https://github.com/apache/xerces-c/tarball/5052c90b067dcc347d58822b450897d16e2c31e5 -> xerces-c-3.2.4-5052c90.tar.gz"
+SRC_URI="https://github.com/apache/xerces-c/tarball/53c16411466bf90c62617831fe92ed0f41e70882 -> xerces-c-3.2.5-53c1641.tar.gz"
 KEYWORDS="*"
 
 LICENSE="Apache-2.0"
