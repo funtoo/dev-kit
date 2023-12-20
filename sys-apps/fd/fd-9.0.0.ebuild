@@ -21,14 +21,16 @@ bumpalo-3.14.0
 cc-1.0.83
 cfg-if-1.0.0
 chrono-0.4.31
-clap-4.4.6
-clap_builder-4.4.6
-clap_complete-4.4.3
-clap_derive-4.4.2
-clap_lex-0.5.1
+clap-4.4.10
+clap_builder-4.4.9
+clap_complete-4.4.4
+clap_derive-4.4.7
+clap_lex-0.6.0
 colorchoice-1.0.0
 core-foundation-sys-0.8.4
 crossbeam-channel-0.5.8
+crossbeam-deque-0.8.3
+crossbeam-epoch-0.9.15
 crossbeam-utils-0.8.16
 ctrlc-3.4.1
 diff-0.1.13
@@ -37,56 +39,52 @@ etcetera-0.8.0
 faccess-0.2.4
 fastrand-2.0.1
 filetime-0.2.22
-fnv-1.0.7
-globset-0.4.13
+globset-0.4.14
 heck-0.4.1
-hermit-abi-0.3.3
 home-0.5.5
 humantime-2.1.0
 iana-time-zone-0.1.58
 iana-time-zone-haiku-0.1.2
-ignore-0.4.20
+ignore-0.4.21
 jemalloc-sys-0.5.4+5.3.0-patched
 jemallocator-0.5.4
 js-sys-0.3.64
 lazy_static-1.4.0
-libc-0.2.149
+libc-0.2.150
 linux-raw-sys-0.4.10
 log-0.4.20
-lscolors-0.15.0
+lscolors-0.16.0
 memchr-2.6.4
+memoffset-0.9.0
 nix-0.24.3
-nix-0.26.4
 nix-0.27.1
 normpath-1.1.1
 nu-ansi-term-0.49.0
 num-traits-0.2.17
-num_cpus-1.16.0
 once_cell-1.18.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.69
 quote-1.0.33
 redox_syscall-0.3.5
+redox_syscall-0.4.1
 regex-1.10.2
 regex-automata-0.4.3
-regex-syntax-0.7.5
 regex-syntax-0.8.2
-rustix-0.38.19
+rustix-0.38.21
 same-file-1.0.6
+scopeguard-1.2.0
 serde-1.0.189
 serde_derive-1.0.189
 strsim-0.10.0
 syn-1.0.109
 syn-2.0.38
-tempfile-3.8.0
+tempfile-3.8.1
 terminal_size-0.3.0
-test-case-3.2.1
+test-case-3.3.1
 test-case-core-3.2.1
 test-case-macros-3.2.1
-thread_local-1.1.7
 unicode-ident-1.0.12
-users-0.11.0
 utf8parse-0.2.1
 version_check-0.9.4
 walkdir-2.4.0
@@ -115,7 +113,7 @@ inherit cargo
 
 DESCRIPTION="Alternative to find that provides sensible defaults for 80% of the use cases"
 HOMEPAGE="https://github.com/sharkdp/fd"
-SRC_URI="https://api.github.com/repos/sharkdp/fd/tarball/v8.7.1 -> fd-8.7.1.tar.gz
+SRC_URI="https://api.github.com/repos/sharkdp/fd/tarball/v9.0.0 -> fd-9.0.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

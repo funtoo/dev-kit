@@ -233,7 +233,7 @@ serde-value-0.7.0
 serde_derive-1.0.193
 serde_ignored-0.1.9
 serde_json-1.0.108
-serde_spanned-0.6.4
+serde_spanned-0.6.5
 sha1-0.10.6
 sha1_smol-1.0.0
 sha2-0.10.8
@@ -254,9 +254,9 @@ terminal_size-0.3.0
 thiserror-1.0.51
 thiserror-impl-1.0.51
 thread_local-1.1.7
-time-0.3.30
+time-0.3.31
 time-core-0.1.2
-time-macros-0.2.15
+time-macros-0.2.16
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
@@ -311,7 +311,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.28
+winnow-0.5.30
 zeroize-1.7.0
 "
 

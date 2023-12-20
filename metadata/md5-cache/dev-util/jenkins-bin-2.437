@@ -7,6 +7,6 @@ KEYWORDS=*
 LICENSE=MIT
 RDEPEND=media-fonts/dejavu media-libs/freetype !dev-util/jenkins-lts-bin >=virtual/jre-1.8.0
 SLOT=0
-SRC_URI=https://get.jenkins.io/war/2.436/jenkins.war -> jenkins-bin-2.436.war
+SRC_URI=https://get.jenkins.io/war/2.437/jenkins.war -> jenkins-bin-2.437.war
 _eclasses_=user	875055ddd565382c728563992ae3abf7
-_md5_=52202e368e8e46c989bc4e9609b2ae39
+_md5_=a9bc385edc52ba0d7ee1239c11967eac
