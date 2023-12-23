@@ -10,7 +10,7 @@ inherit meson python-any-r1 xdg-utils
 
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 HOMEPAGE="https://www.enlightenment.org"
-SRC_URI="https://download.enlightenment.org/rel/libs/efl/efl-1.26.3.tar.xz -> efl-1.26.3.tar.xz"
+SRC_URI="https://download.enlightenment.org/rel/libs/efl/efl-1.27.0.tar.xz -> efl-1.27.0.tar.xz"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 SLOT="0"

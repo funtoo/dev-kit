@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Optimized C library for EC operations on curve secp256k1"
 HOMEPAGE="https://github.com/bitcoin-core/secp256k1"
-SRC_URI="https://github.com/bitcoin-core/secp256k1/tarball/433d5346eb66367e4815061cc2bea2cf589715d3 -> secp256k1-0.4.0-433d534.tar.gz"
+SRC_URI="https://github.com/bitcoin-core/secp256k1/tarball/0cc9eb5b878005bcb8b9448c39777ade53ce4d0a -> secp256k1-0.4.1-0cc9eb5.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/1"  # subslot is "$((_LIB_VERSION_CURRENT-_LIB_VERSION_AGE))" from configure.ac

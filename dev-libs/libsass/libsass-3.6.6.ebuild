@@ -4,7 +4,7 @@ EAPI=7
 
 inherit autotools multilib-minimal
 
-SRC_URI="https://github.com/sass/libsass/tarball/f6afdbb9288d20d1257122e71d88e53348a53af3 -> libsass-3.6.5-f6afdbb.tar.gz"
+SRC_URI="https://github.com/sass/libsass/tarball/7037f03fabeb2b18b5efa84403f5a6d7a990f460 -> libsass-3.6.6-7037f03.tar.gz"
 
 DESCRIPTION="A C/C++ implementation of a Sass compiler"
 HOMEPAGE="https://github.com/sass/libsass"

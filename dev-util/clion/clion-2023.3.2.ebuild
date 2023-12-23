@@ -4,9 +4,9 @@ EAPI=7
 
 inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
-DESCRIPTION="a PHP IDE by JetBrains"
-HOMEPAGE="https://www.jetbrains.com/phpstorm"
-SRC_URI="https://download.jetbrains.com/webide/PhpStorm-2023.3.1.tar.gz -> phpstorm-2023.3.1.tar.gz"
+DESCRIPTION="Cross-platform IDE for C and C++"
+HOMEPAGE="https://www.jetbrains.com/clion"
+SRC_URI="https://download.jetbrains.com/cpp/CLion-2023.3.2.tar.gz -> clion-2023.3.2.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
@@ -28,12 +28,12 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 	opt/${PN}/bin/libyjpagent-linux64.so"
 
 
-S="${WORKDIR}/PhpStorm-${PV}"
+S="${WORKDIR}/CLion-${PV}"
 
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "PhpStorm-${PV}" || die
+		mv $(ls "${WORKDIR}") "CLion-${PV}" || die
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
 	newicon $pngfile "${PN}.png" || die
 
-	make_desktop_entry ${PN} "PhpStorm" ${PN} "Development;IDE;" || die
+	make_desktop_entry ${PN} "CLion" ${PN} "Development;IDE;" || die
 
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"

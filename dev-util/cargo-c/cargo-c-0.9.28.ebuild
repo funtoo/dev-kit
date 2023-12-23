@@ -9,7 +9,7 @@ anstyle-1.0.4
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
-anyhow-1.0.75
+anyhow-1.0.76
 arc-swap-1.6.0
 autocfg-1.1.0
 base16ct-0.2.0
@@ -180,11 +180,11 @@ num-traits-0.2.17
 num_threads-0.1.6
 once_cell-1.19.0
 opener-0.6.1
-openssl-0.10.61
+openssl-0.10.62
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-300.2.1+3.2.0
-openssl-sys-0.9.97
+openssl-sys-0.9.98
 ordered-float-2.10.1
 orion-0.17.6
 os_info-3.7.0
@@ -202,7 +202,7 @@ pkg-config-0.3.28
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
-proc-macro2-1.0.70
+proc-macro2-1.0.71
 prodash-26.2.2
 pulldown-cmark-0.9.3
 quote-1.0.33
@@ -228,7 +228,7 @@ security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
 serde-1.0.193
-serde-untagged-0.1.2
+serde-untagged-0.1.3
 serde-value-0.7.0
 serde_derive-1.0.193
 serde_ignored-0.1.9
@@ -247,7 +247,7 @@ spki-0.7.3
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.41
+syn-2.0.42
 tar-0.4.40
 tempfile-3.8.1
 terminal_size-0.3.0
