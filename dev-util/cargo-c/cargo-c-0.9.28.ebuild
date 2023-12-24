@@ -49,10 +49,10 @@ core-foundation-sys-0.8.6
 cpufeatures-0.2.11
 crates-io-0.39.0
 crc32fast-1.3.2
-crossbeam-channel-0.5.9
+crossbeam-channel-0.5.10
 crossbeam-deque-0.8.4
-crossbeam-epoch-0.9.16
-crossbeam-utils-0.8.17
+crossbeam-epoch-0.9.17
+crossbeam-utils-0.8.18
 crypto-bigint-0.5.5
 crypto-common-0.1.6
 ct-codecs-1.1.1
@@ -169,7 +169,6 @@ matchers-0.1.0
 maybe-async-0.2.7
 memchr-2.6.4
 memmap2-0.7.1
-memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
 miow-0.6.0
