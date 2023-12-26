@@ -227,7 +227,7 @@ security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.20
 serde-1.0.193
-serde-untagged-0.1.3
+serde-untagged-0.1.4
 serde-value-0.7.0
 serde_derive-1.0.193
 serde_ignored-0.1.9
@@ -246,12 +246,12 @@ spki-0.7.3
 strsim-0.10.0
 subtle-2.5.0
 syn-1.0.109
-syn-2.0.42
+syn-2.0.43
 tar-0.4.40
 tempfile-3.8.1
 terminal_size-0.3.0
-thiserror-1.0.51
-thiserror-impl-1.0.51
+thiserror-1.0.52
+thiserror-impl-1.0.52
 thread_local-1.1.7
 time-0.3.31
 time-core-0.1.2

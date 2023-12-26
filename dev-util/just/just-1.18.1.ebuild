@@ -16,7 +16,7 @@ clap-2.34.0
 cpufeatures-0.2.11
 cradle-0.2.2
 crypto-common-0.1.6
-ctrlc-3.4.1
+ctrlc-3.4.2
 derivative-2.2.0
 diff-0.1.13
 digest-0.10.7
@@ -52,7 +52,7 @@ once_cell-1.19.0
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.70
+proc-macro2-1.0.71
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
 quote-1.0.33
@@ -78,7 +78,7 @@ structopt-derive-0.4.18
 strum-0.25.0
 strum_macros-0.25.3
 syn-1.0.109
-syn-2.0.41
+syn-2.0.42
 target-2.0.0
 tempfile-3.8.1
 temptree-0.2.0
@@ -126,7 +126,7 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://api.github.com/repos/casey/just/tarball/1.17.0 -> just-1.17.0.tar.gz
+SRC_URI="https://api.github.com/repos/casey/just/tarball/1.18.1 -> just-1.18.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
