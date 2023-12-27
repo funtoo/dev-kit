@@ -9,7 +9,7 @@ anstyle-1.0.4
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
-anyhow-1.0.76
+anyhow-1.0.77
 arc-swap-1.6.0
 autocfg-1.1.0
 base16ct-0.2.0
@@ -220,7 +220,7 @@ rustfix-0.6.1
 rustix-0.38.28
 ryu-1.0.16
 same-file-1.0.6
-schannel-0.1.22
+schannel-0.1.23
 scopeguard-1.2.0
 sec1-0.7.3
 security-framework-2.9.2
@@ -310,7 +310,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.30
+winnow-0.5.31
 zeroize-1.7.0
 "
 
