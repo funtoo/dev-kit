@@ -10,6 +10,6 @@ LICENSE=LGPL-2.1+
 RDEPEND=app-arch/xz-utils dev-libs/glib:2 sys-apps/util-linux stemmer? ( dev-libs/snowball-stemmer:= )
 RESTRICT=!test? ( test )
 SLOT=0/2
-SRC_URI=https://github.com/hughsie/libxmlb/tarball/aa577b276adc66564f5777f9a522ca3bf0bfa65e -> libxmlb-0.3.14-aa577b2.tar.gz
+SRC_URI=https://github.com/hughsie/libxmlb/tarball/25a6384ad60f7e8550292e6cb4f262cc5da74be4 -> libxmlb-0.3.15-25a6384.tar.gz
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=03776b3d265b1b36ed0bfa793eb6c3af
+_md5_=519b14872377b55583412c73e7be620e

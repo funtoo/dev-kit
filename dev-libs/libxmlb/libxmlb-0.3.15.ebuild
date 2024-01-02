@@ -8,7 +8,7 @@ inherit meson python-any-r1 xdg
 
 DESCRIPTION="Library to help create and query binary XML blobs"
 HOMEPAGE="https://github.com/hughsie/libxmlb"
-SRC_URI="https://github.com/hughsie/libxmlb/tarball/aa577b276adc66564f5777f9a522ca3bf0bfa65e -> libxmlb-0.3.14-aa577b2.tar.gz"
+SRC_URI="https://github.com/hughsie/libxmlb/tarball/25a6384ad60f7e8550292e6cb4f262cc5da74be4 -> libxmlb-0.3.15-25a6384.tar.gz"
 LICENSE="LGPL-2.1+"
 SLOT="0/2" # libxmlb.so version
 
