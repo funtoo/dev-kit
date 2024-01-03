@@ -67,7 +67,7 @@ either-1.9.0
 elliptic-curve-0.13.8
 encoding_rs-0.8.33
 equivalent-1.0.1
-erased-serde-0.4.1
+erased-serde-0.4.2
 errno-0.3.8
 faster-hex-0.8.1
 faster-hex-0.9.0
@@ -229,12 +229,12 @@ scopeguard-1.2.0
 sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
-semver-1.0.20
+semver-1.0.21
 serde-1.0.194
-serde-untagged-0.1.4
+serde-untagged-0.1.5
 serde-value-0.7.0
 serde_derive-1.0.194
-serde_ignored-0.1.9
+serde_ignored-0.1.10
 serde_json-1.0.110
 serde_spanned-0.6.5
 sha1-0.10.6
@@ -318,7 +318,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.31
+winnow-0.5.32
 zeroize-1.7.0
 "
 
