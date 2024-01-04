@@ -16,22 +16,19 @@ LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 SLOT="0"
 KEYWORDS="*"
 IUSE="+X avif bmp connman cpu_flags_arm_neon dds debug doc drm +eet efl-one elogind examples fbcon
-	+fontconfig fribidi gif gles2-only gnutls glib +gstreamer harfbuzz heif hyphen ibus ico
-	jpeg2k json lua +luajit nls mono opengl +pdf physics pmaps postscript psd pulseaudio raw scim
-	sdl +sound +ssl +svg +system-lz4 tga tgv tiff tslib unwind v4l vnc wayland webp xcf
+	+fontconfig fribidi gif glib +gstreamer harfbuzz heif hyphen ibus ico
+	jpeg2k jpegxl json lua +luajit nls mono opengl +pdf physics pmaps postscript psd pulseaudio raw scim
+	sdl +sound +svg +system-lz4 tga tgv tiff tslib unwind v4l vnc wayland webp xcf
 	xim xpm xpresent zeroconf"
 
 REQUIRED_USE="
-	?? ( gles2-only opengl )
+	?? ( elogind )
 	?? ( fbcon tslib )
 	^^ ( lua luajit )
-	ssl
-	drm? ( gles2-only )
 	examples? ( eet svg )
-	gles2-only? ( || ( wayland X ) )
 	ibus? ( glib )
+	opengl? ( X )
 	pulseaudio? ( sound )
-	wayland? ( gles2-only !opengl )
 	xim? ( X )
 	xpresent? ( X )"
 
@@ -47,10 +44,11 @@ RDEPEND="
 	sys-libs/zlib
 	virtual/jpeg:0=
 	X? (
+		!opengl? ( media-libs/mesa[egl(+),gles2] )
 		dev-libs/libinput
 		media-libs/freetype
-		x11-libs/libxkbcommon
 		x11-libs/libX11
+		x11-libs/libXScrnSaver
 		x11-libs/libXcomposite
 		x11-libs/libXcursor
 		x11-libs/libXdamage
@@ -62,7 +60,7 @@ RDEPEND="
 		x11-libs/libXrandr
 		x11-libs/libXrender
 		x11-libs/libXtst
-		x11-libs/libXScrnSaver
+		x11-libs/libxkbcommon
 		wayland? ( x11-libs/libxkbcommon[X] )
 	)
 	avif? ( media-libs/libavif )
@@ -80,19 +78,17 @@ RDEPEND="
 	)
 	fontconfig? ( media-libs/fontconfig )
 	fribidi? ( dev-libs/fribidi )
-	gles2-only? (
-		media-libs/mesa[egl,gles2]
-		virtual/opengl
-	)
 	glib? ( dev-libs/glib:2 )
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
 	)
+	harfbuzz? ( media-libs/harfbuzz:= )
 	heif? ( media-libs/libheif )
 	hyphen? ( dev-libs/hyphen )
 	ibus? ( app-i18n/ibus )
 	jpeg2k? ( media-libs/openjpeg:= )
+	jpegxl? ( media-libs/libjxl )
 	json? ( >=media-libs/rlottie-0.2 )
 	lua? ( <dev-lang/lua-5.3[deprecated] )
 	luajit? ( dev-lang/luajit:* )
@@ -106,12 +102,6 @@ RDEPEND="
 	scim? ( app-i18n/scim )
 	sdl? ( media-libs/libsdl2 )
 	sound? ( media-libs/libsndfile )
-	ssl? (
-		gnutls? ( net-libs/gnutls:= )
-		!gnutls? (
-			dev-libs/openssl:0=
-		)
-	)
 	svg? ( gnome-base/librsvg )
 	system-lz4? ( app-arch/lz4 )
 	tiff? ( media-libs/tiff:0= )
@@ -128,7 +118,9 @@ RDEPEND="
 	xpm? ( x11-libs/libXpm )
 	xpresent? ( x11-libs/libXpresent )
 	zeroconf? ( net-dns/avahi )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		X? ( x11-base/xorg-proto )
+		wayland? ( dev-libs/wayland-protocols )"
 BDEPEND="${PYTHON_DEPS}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
@@ -182,6 +174,7 @@ src_configure() {
 		--buildtype=release
 
 		-D buffer=false
+		-D build-tests=false
 		-D cocoa=false
 		-D drm-deprecated=false
 		-D g-mainloop=false
@@ -189,15 +182,18 @@ src_configure() {
 		-D dotnet=false
 		-D pixman=false
 		-D wl-deprecated=false
-		-D dotnet-stylecop-severity=Warning
 
 		-D edje-sound-and-video=true
 		-D eeze=true
+		-D input=true
 		-D install-eo-files=true
 		-D libmount=true
 		-D native-arch-optimization=true
 		-D xinput2=true
 		-D xinput22=true
+
+		-D crypto=openssl
+		-D dotnet-stylecop-severity=Warning
 
 		$(meson_use X x11)
 		$(meson_use debug debug-threads)
@@ -232,18 +228,14 @@ src_configure() {
 		emesonargs+=( -D systemd=false )
 	fi
 
-	if use opengl; then
+	if use wayland; then
+		emesonargs+=( -D opengl=es-egl )
+	elif ! use wayland && use opengl; then
 		emesonargs+=( -D opengl=full )
-	elif use gles2-only; then
+	elif ! use wayland && use X && ! use opengl; then
 		emesonargs+=( -D opengl=es-egl )
 	else
 		emesonargs+=( -D opengl=none )
-	fi
-
-	if use gnutls; then
-		emesonargs+=( -D crypto=gnutls )
-	else
-		emesonargs+=( -D crypto=openssl )
 	fi
 
 	if use connman; then
@@ -261,6 +253,7 @@ src_configure() {
 	! use heif && disabledEvasLoaders+="heif,"
 	! use ico && disabledEvasLoaders+="ico,"
 	! use jpeg2k && disabledEvasLoaders+="jp2k,"
+	! use jpegxl && disabledEvasLoaders+="jxl,"
 	! use json && disabledEvasLoaders+="json,"
 	! use pdf && disabledEvasLoaders+="pdf,"
 	! use pmaps && disabledEvasLoaders+="pmaps,"

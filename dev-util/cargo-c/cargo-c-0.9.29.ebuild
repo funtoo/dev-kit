@@ -205,7 +205,7 @@ pkg-config-0.3.28
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
-proc-macro2-1.0.74
+proc-macro2-1.0.75
 prodash-26.2.2
 pulldown-cmark-0.9.3
 quote-1.0.35
@@ -235,7 +235,7 @@ serde-untagged-0.1.5
 serde-value-0.7.0
 serde_derive-1.0.194
 serde_ignored-0.1.10
-serde_json-1.0.110
+serde_json-1.0.111
 serde_spanned-0.6.5
 sha1-0.10.6
 sha1_smol-1.0.0
@@ -252,7 +252,7 @@ strsim-0.10.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.46
+syn-2.0.47
 tar-0.4.40
 tempfile-3.9.0
 terminal_size-0.3.0
