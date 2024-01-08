@@ -13,7 +13,7 @@ anyhow-1.0.79
 arc-swap-1.6.0
 autocfg-1.1.0
 base16ct-0.2.0
-base64-0.21.5
+base64-0.21.6
 base64ct-1.6.0
 bitflags-1.3.2
 bitflags-2.4.1
@@ -34,8 +34,8 @@ cargo-util-0.2.8
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.12
-clap_builder-4.4.12
+clap-4.4.14
+clap_builder-4.4.14
 clap_derive-4.4.7
 clap_lex-0.6.0
 clru-0.6.1
@@ -45,13 +45,13 @@ colorchoice-1.0.0
 const-oid-0.9.6
 core-foundation-0.9.4
 core-foundation-sys-0.8.6
-cpufeatures-0.2.11
+cpufeatures-0.2.12
 crates-io-0.39.1
 crc32fast-1.3.2
-crossbeam-channel-0.5.10
-crossbeam-deque-0.8.4
-crossbeam-epoch-0.9.17
-crossbeam-utils-0.8.18
+crossbeam-channel-0.5.11
+crossbeam-deque-0.8.5
+crossbeam-epoch-0.9.18
+crossbeam-utils-0.8.19
 crypto-bigint-0.5.5
 crypto-common-0.1.6
 ct-codecs-1.1.1
@@ -146,7 +146,7 @@ home-0.5.9
 http-auth-0.1.9
 humantime-2.1.0
 idna-0.5.0
-ignore-0.4.21
+ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
 indexmap-2.1.0
@@ -159,12 +159,12 @@ js-sys-0.3.66
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.151
+libc-0.2.152
 libgit2-sys-0.16.1+1.7.1
 libloading-0.8.1
 libnghttp2-sys-0.1.9+1.58.0
 libssh2-sys-0.3.0
-libz-sys-1.1.12
+libz-sys-1.1.13
 linux-raw-sys-0.4.12
 lock_api-0.4.11
 log-0.4.20
@@ -205,7 +205,7 @@ pkg-config-0.3.28
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
-proc-macro2-1.0.75
+proc-macro2-1.0.76
 prodash-26.2.2
 pulldown-cmark-0.9.3
 quote-1.0.35
@@ -230,10 +230,10 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.21
-serde-1.0.194
+serde-1.0.195
 serde-untagged-0.1.5
 serde-value-0.7.0
-serde_derive-1.0.194
+serde_derive-1.0.195
 serde_ignored-0.1.10
 serde_json-1.0.111
 serde_spanned-0.6.5
@@ -252,7 +252,7 @@ strsim-0.10.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.47
+syn-2.0.48
 tar-0.4.40
 tempfile-3.9.0
 terminal_size-0.3.0
@@ -318,7 +318,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.32
+winnow-0.5.33
 zeroize-1.7.0
 "
 

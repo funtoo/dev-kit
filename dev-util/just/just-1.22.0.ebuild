@@ -56,10 +56,10 @@ option-ext-0.2.0
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.71
+proc-macro2-1.0.72
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
-quote-1.0.33
+quote-1.0.34
 redox_syscall-0.4.1
 redox_users-0.4.4
 regex-1.10.2
@@ -90,8 +90,8 @@ temptree-0.2.0
 term_size-0.3.2
 termcolor-1.4.0
 textwrap-0.11.0
-thiserror-1.0.52
-thiserror-impl-1.0.52
+thiserror-1.0.53
+thiserror-impl-1.0.53
 typed-arena-2.0.2
 typenum-1.17.0
 unicase-2.7.0
@@ -133,7 +133,7 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://api.github.com/repos/casey/just/tarball/1.21.0 -> just-1.21.0.tar.gz
+SRC_URI="https://api.github.com/repos/casey/just/tarball/1.22.0 -> just-1.22.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
