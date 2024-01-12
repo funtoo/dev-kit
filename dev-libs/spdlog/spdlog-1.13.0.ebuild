@@ -7,7 +7,7 @@ inherit cmake
 DESCRIPTION="Very fast, header only, C++ logging library"
 HOMEPAGE="https://github.com/gabime/spdlog"
 
-SRC_URI="https://api.github.com/repos/gabime/spdlog/tarball/v1.12.0 -> spdlog-1.12.0.tar.gz"
+SRC_URI="https://api.github.com/repos/gabime/spdlog/tarball/v1.13.0 -> spdlog-1.13.0.tar.gz"
 KEYWORDS="*"
 
 LICENSE="MIT"

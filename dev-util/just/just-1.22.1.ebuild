@@ -13,7 +13,7 @@ bstr-0.2.17
 camino-1.1.6
 cfg-if-1.0.0
 clap-2.34.0
-cpufeatures-0.2.11
+cpufeatures-0.2.12
 cradle-0.2.2
 crypto-common-0.1.6
 ctrlc-3.4.2
@@ -22,7 +22,6 @@ diff-0.1.13
 digest-0.10.7
 dirs-5.0.1
 dirs-sys-0.4.1
-doc-comment-0.3.3
 dotenvy-0.15.7
 edit-distance-2.1.0
 either-1.9.0
@@ -43,7 +42,7 @@ is-terminal-0.4.10
 itoa-1.0.10
 lazy_static-1.4.0
 lexiclean-0.0.1
-libc-0.2.151
+libc-0.2.152
 libredox-0.0.1
 linked-hash-map-0.5.6
 linux-raw-sys-0.4.12
@@ -56,10 +55,10 @@ option-ext-0.2.0
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.72
+proc-macro2-1.0.76
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
-quote-1.0.34
+quote-1.0.35
 redox_syscall-0.4.1
 redox_users-0.4.4
 regex-1.10.2
@@ -69,29 +68,29 @@ regex-syntax-0.8.2
 rustix-0.38.28
 rustversion-1.0.14
 ryu-1.0.16
-semver-1.0.20
-serde-1.0.193
-serde_derive-1.0.193
-serde_json-1.0.108
+semver-1.0.21
+serde-1.0.195
+serde_derive-1.0.195
+serde_json-1.0.111
 sha2-0.10.8
 similar-2.4.0
-snafu-0.7.5
-snafu-derive-0.7.5
+snafu-0.8.0
+snafu-derive-0.8.0
 strsim-0.8.0
 structopt-0.3.26
 structopt-derive-0.4.18
 strum-0.25.0
 strum_macros-0.25.3
 syn-1.0.109
-syn-2.0.43
+syn-2.0.48
 target-2.0.0
 tempfile-3.9.0
 temptree-0.2.0
 term_size-0.3.2
 termcolor-1.4.0
 textwrap-0.11.0
-thiserror-1.0.53
-thiserror-impl-1.0.53
+thiserror-1.0.56
+thiserror-impl-1.0.56
 typed-arena-2.0.2
 typenum-1.17.0
 unicase-2.7.0
@@ -133,7 +132,7 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://api.github.com/repos/casey/just/tarball/1.22.0 -> just-1.22.0.tar.gz
+SRC_URI="https://api.github.com/repos/casey/just/tarball/1.22.1 -> just-1.22.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
