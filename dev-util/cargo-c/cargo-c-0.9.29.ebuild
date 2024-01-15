@@ -34,8 +34,8 @@ cargo-util-0.2.8
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.16
-clap_builder-4.4.16
+clap-4.4.17
+clap_builder-4.4.17
 clap_derive-4.4.7
 clap_lex-0.6.0
 clru-0.6.1
@@ -125,7 +125,7 @@ gix-revwalk-0.9.0
 gix-sec-0.10.3
 gix-submodule-0.5.0
 gix-tempfile-11.0.1
-gix-trace-0.1.6
+gix-trace-0.1.7
 gix-transport-0.38.0
 gix-traverse-0.34.0
 gix-url-0.25.2
@@ -244,7 +244,7 @@ sharded-slab-0.1.7
 shell-escape-0.1.5
 signature-2.2.0
 sized-chunks-0.6.5
-smallvec-1.11.2
+smallvec-1.12.0
 socket2-0.4.10
 spki-0.7.3
 static_assertions-1.1.0

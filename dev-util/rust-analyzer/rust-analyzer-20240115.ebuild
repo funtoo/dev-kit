@@ -113,8 +113,8 @@ rayon-core-1.12.0
 redox_syscall-0.3.5
 redox_syscall-0.4.1
 rowan-0.15.15
-rust-analyzer-salsa-0.17.0-pre.4
-rust-analyzer-salsa-macros-0.17.0-pre.4
+rust-analyzer-salsa-0.17.0-pre.5
+rust-analyzer-salsa-macros-0.17.0-pre.5
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 ryu-1.0.13
@@ -131,6 +131,7 @@ sharded-slab-0.1.4
 smallvec-1.10.0
 smol_str-0.2.0
 snap-1.1.0
+stable_deref_trait-1.2.0
 static_assertions-1.1.0
 syn-2.0.39
 synstructure-0.13.0
@@ -151,7 +152,7 @@ tracing-core-0.1.32
 tracing-log-0.2.0
 tracing-subscriber-0.3.18
 tracing-tree-0.3.0
-triomphe-0.1.10
+triomphe-0.1.11
 typed-arena-2.0.2
 ungrammar-1.16.1
 unicase-2.6.0
@@ -198,7 +199,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2024-01-08 -> rust-analyzer-20240108.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2024-01-15 -> rust-analyzer-20240115.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -222,6 +223,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2024-01-08-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2024-01-15-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
