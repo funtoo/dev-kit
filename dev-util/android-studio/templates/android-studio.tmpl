@@ -93,7 +93,9 @@ src_install() {
 	# These have been moving around on us:
 	for fn in clang-tidy clangd; do
 		fn_path=$(cd "${D}"; find ."${dir}/plugins/c-clangd/bin/clang/linux" -name $fn)
-		fperms 755 ${fn_path#.}
+		if [[ "${fn_path#.}" != "" ]]; then
+			fperms 755 ${fn_path#.}
+		fi
 	done
 	fperms -R 755 "${dir}"/plugins/terminal/{,fish}
 
