@@ -1,0 +1,10 @@
+patchelf:
+  generator: github-1
+  packages:
+    - patchelf:
+        github:
+          user: NixOS
+          query: tags
+        subslot: True
+        revision:
+          0.18.0: 1

@@ -5,4 +5,3 @@ mongo_c:
         github:
           user: mongodb
           query: releases
-          tarball: 'mongo-c-driver-{version}.tar.gz'

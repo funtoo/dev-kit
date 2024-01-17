@@ -6,14 +6,24 @@ inherit autotools
 
 DESCRIPTION="Small utility to modify the dynamic linker and RPATH of ELF executables"
 HOMEPAGE="https://nixos.org/patchelf.html"
-SRC_URI="{{artifacts[0].src_uri}}"
+SRC_URI="{{src_uri}}"
 SLOT="0"
 KEYWORDS="*"
 LICENSE="GPL-3"
 
+S="${WORKDIR}/{{ github_user }}-{{ github_repo }}-{{ sha[:7] }}"
+
 src_prepare() {
 	default
 	rm src/elf.h || die
+
+	sed -i \
+	-e '/\(Elf_Off.*getPageSize())\)/s@getPageSize())@alignStartPage)@' \
+	src/patchelf.cc || die
+
+	sed -i \
+	-e '/\(auto segEnd.*getPageSize())\)/s@getPageSize())@alignStartPage)@' \
+	src/patchelf.cc || die
 
 	sed -i \
 		-e 's:-Werror::g' \

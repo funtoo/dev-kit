@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-1.1.2
-anstream-0.6.7
+anstream-0.6.8
 anstyle-1.0.4
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
@@ -16,7 +16,7 @@ base16ct-0.2.0
 base64-0.21.7
 base64ct-1.6.0
 bitflags-1.3.2
-bitflags-2.4.1
+bitflags-2.4.2
 bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.9.0
@@ -34,8 +34,8 @@ cargo-util-0.2.8
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.17
-clap_builder-4.4.17
+clap-4.4.18
+clap_builder-4.4.18
 clap_derive-4.4.7
 clap_lex-0.6.0
 clru-0.6.1
@@ -165,7 +165,7 @@ libloading-0.8.1
 libnghttp2-sys-0.1.9+1.58.0
 libssh2-sys-0.3.0
 libz-sys-1.1.14
-linux-raw-sys-0.4.12
+linux-raw-sys-0.4.13
 lock_api-0.4.11
 log-0.4.20
 matchers-0.1.0
@@ -201,7 +201,7 @@ pem-rfc7468-0.7.0
 percent-encoding-2.3.1
 pin-project-lite-0.2.13
 pkcs8-0.10.2
-pkg-config-0.3.28
+pkg-config-0.3.29
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6

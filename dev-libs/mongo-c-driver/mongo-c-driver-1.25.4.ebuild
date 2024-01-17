@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Client library written in C for MongoDB"
 HOMEPAGE="https://github.com/mongodb/mongo-c-driver"
-SRC_URI="https://github.com/mongodb/mongo-c-driver/releases/download/1.24.4/mongo-c-driver-1.24.4.tar.gz -> mongo-c-driver-1.24.4.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-c-driver/tarball/1e2ec7c60c6ae3102a27ed1c5c6bab09136542c9 -> mongo-c-driver-1.25.4-1e2ec7c.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -36,6 +36,12 @@ DEPEND="${RDEPEND}
 		dev-libs/libbson[static-libs]
 	)"
 
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/* "${S}" || die
+	fi
+}
+
 src_prepare() {
 	cmake_src_prepare
 
@@ -56,6 +62,10 @@ src_prepare() {
 	sed -i '/SET (ENABLE_TESTS OFF)/{d}' CMakeLists.txt || die
 	sed -i 's/message (FATAL_ERROR "System libbson built without static library target")/message (STATUS "System libbson built without static library target")/' CMakeLists.txt || die
 	sed -i 's#<bson/bson-private.h>#"bson/bson-private.h"#' src/libbson/tests/test-bson.c || die
+
+	echo "#!/usr/bin/env python
+print('${PV}')
+" > build/calc_release_version.py
 }
 
 src_configure() {
