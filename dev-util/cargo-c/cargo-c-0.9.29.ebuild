@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-1.1.2
-anstream-0.6.8
+anstream-0.6.9
 anstyle-1.0.4
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
@@ -138,7 +138,7 @@ group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.3
 heck-0.4.1
-hermit-abi-0.3.3
+hermit-abi-0.3.4
 hex-0.4.3
 hkdf-0.12.4
 hmac-0.12.1
@@ -276,7 +276,7 @@ tracing-log-0.2.0
 tracing-subscriber-0.3.18
 typenum-1.17.0
 unicase-2.7.0
-unicode-bidi-0.3.14
+unicode-bidi-0.3.15
 unicode-bom-2.0.3
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
