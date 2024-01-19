@@ -4,7 +4,7 @@ EAPI=7
 
 CRATES="adler-1.0.2
 aho-corasick-1.1.2
-anstream-0.6.9
+anstream-0.6.11
 anstyle-1.0.4
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
@@ -244,7 +244,7 @@ sharded-slab-0.1.7
 shell-escape-0.1.5
 signature-2.2.0
 sized-chunks-0.6.5
-smallvec-1.12.0
+smallvec-1.13.1
 socket2-0.4.10
 spki-0.7.3
 static_assertions-1.1.0
