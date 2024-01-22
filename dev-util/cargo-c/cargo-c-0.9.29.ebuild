@@ -205,7 +205,7 @@ pkg-config-0.3.29
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
-proc-macro2-1.0.76
+proc-macro2-1.0.78
 prodash-26.2.2
 pulldown-cmark-0.9.3
 quote-1.0.35
@@ -214,9 +214,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.4.1
-regex-1.10.2
+regex-1.10.3
 regex-automata-0.1.10
-regex-automata-0.4.3
+regex-automata-0.4.4
 regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
