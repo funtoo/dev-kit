@@ -172,7 +172,7 @@ matchers-0.1.0
 maybe-async-0.2.7
 memchr-2.7.1
 memmap2-0.7.1
-memmap2-0.9.3
+memmap2-0.9.4
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
 miow-0.6.0
@@ -216,7 +216,7 @@ rand_xoshiro-0.6.0
 redox_syscall-0.4.1
 regex-1.10.3
 regex-automata-0.1.10
-regex-automata-0.4.4
+regex-automata-0.4.5
 regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
