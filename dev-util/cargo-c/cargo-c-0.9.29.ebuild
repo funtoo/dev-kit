@@ -113,7 +113,7 @@ gix-odb-0.54.0
 gix-pack-0.44.0
 gix-packetline-0.16.7
 gix-packetline-blocking-0.16.6
-gix-path-0.10.4
+gix-path-0.10.5
 gix-pathspec-0.4.1
 gix-prompt-0.7.0
 gix-protocol-0.41.1
@@ -164,7 +164,7 @@ libgit2-sys-0.16.1+1.7.1
 libloading-0.8.1
 libnghttp2-sys-0.1.9+1.58.0
 libssh2-sys-0.3.0
-libz-sys-1.1.14
+libz-sys-1.1.15
 linux-raw-sys-0.4.13
 lock_api-0.4.11
 log-0.4.20
@@ -230,12 +230,12 @@ sec1-0.7.3
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-1.0.21
-serde-1.0.195
+serde-1.0.196
 serde-untagged-0.1.5
 serde-value-0.7.0
-serde_derive-1.0.195
+serde_derive-1.0.196
 serde_ignored-0.1.10
-serde_json-1.0.111
+serde_json-1.0.112
 serde_spanned-0.6.5
 sha1-0.10.6
 sha1_smol-1.0.0
@@ -316,7 +316,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.34
+winnow-0.5.35
 zeroize-1.7.0
 "
 
