@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-1.1.2
 anstream-0.6.11
-anstyle-1.0.4
+anstyle-1.0.5
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
@@ -149,10 +149,10 @@ idna-0.5.0
 ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
-indexmap-2.1.0
+indexmap-2.2.1
 is-terminal-0.4.10
 itertools-0.11.0
-itertools-0.12.0
+itertools-0.12.1
 itoa-1.0.10
 jobserver-0.1.27
 js-sys-0.3.67
@@ -169,7 +169,7 @@ linux-raw-sys-0.4.13
 lock_api-0.4.11
 log-0.4.20
 matchers-0.1.0
-maybe-async-0.2.7
+maybe-async-0.2.8
 memchr-2.7.1
 memmap2-0.7.1
 memmap2-0.9.4
@@ -186,7 +186,7 @@ opener-0.6.1
 openssl-0.10.63
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.2.1+3.2.0
+openssl-src-300.2.2+3.2.1
 openssl-sys-0.9.99
 ordered-float-2.10.1
 orion-0.17.6
@@ -207,7 +207,7 @@ ppv-lite86-0.2.17
 primeorder-0.13.6
 proc-macro2-1.0.78
 prodash-26.2.2
-pulldown-cmark-0.9.3
+pulldown-cmark-0.9.6
 quote-1.0.35
 rand-0.8.5
 rand_chacha-0.3.1
@@ -235,7 +235,7 @@ serde-untagged-0.1.5
 serde-value-0.7.0
 serde_derive-1.0.196
 serde_ignored-0.1.10
-serde_json-1.0.112
+serde_json-1.0.113
 serde_spanned-0.6.5
 sha1-0.10.6
 sha1_smol-1.0.0

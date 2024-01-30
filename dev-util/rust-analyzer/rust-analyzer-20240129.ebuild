@@ -33,6 +33,7 @@ crossbeam-epoch-0.9.15
 crossbeam-utils-0.8.16
 ctrlc-3.4.1
 dashmap-5.5.3
+derivative-2.2.0
 derive_arbitrary-1.3.2
 dissimilar-1.0.7
 dot-0.1.4
@@ -103,11 +104,12 @@ protobuf-support-3.2.0
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
 quote-1.0.28
-ra-ap-rustc_abi-0.21.0
-ra-ap-rustc_index-0.21.0
-ra-ap-rustc_index_macros-0.21.0
-ra-ap-rustc_lexer-0.21.0
-ra-ap-rustc_parse_format-0.21.0
+ra-ap-rustc_abi-0.33.0
+ra-ap-rustc_index-0.33.0
+ra-ap-rustc_index_macros-0.33.0
+ra-ap-rustc_lexer-0.33.0
+ra-ap-rustc_parse_format-0.33.0
+ra-ap-rustc_pattern_analysis-0.33.0
 rayon-1.8.0
 rayon-core-1.12.0
 redox_syscall-0.3.5
@@ -117,6 +119,7 @@ rust-analyzer-salsa-0.17.0-pre.5
 rust-analyzer-salsa-macros-0.17.0-pre.5
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
+rustc_apfloat-0.2.0+llvm-462a31f5a5ab
 ryu-1.0.13
 same-file-1.0.6
 scip-0.3.1
@@ -128,11 +131,12 @@ serde_derive-1.0.193
 serde_json-1.0.108
 serde_repr-0.1.12
 sharded-slab-0.1.4
-smallvec-1.10.0
+smallvec-1.12.0
 smol_str-0.2.1
 snap-1.1.0
 stable_deref_trait-1.2.0
 static_assertions-1.1.0
+syn-1.0.109
 syn-2.0.39
 synstructure-0.13.0
 text-size-1.1.1
@@ -199,7 +203,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2024-01-22 -> rust-analyzer-20240122.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2024-01-29 -> rust-analyzer-20240129.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -223,6 +227,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2024-01-22-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2024-01-29-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }
