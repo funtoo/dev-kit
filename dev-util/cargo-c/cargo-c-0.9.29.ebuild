@@ -169,7 +169,7 @@ linux-raw-sys-0.4.13
 lock_api-0.4.11
 log-0.4.20
 matchers-0.1.0
-maybe-async-0.2.8
+maybe-async-0.2.9
 memchr-2.7.1
 memmap2-0.7.1
 memmap2-0.9.4
@@ -265,10 +265,10 @@ time-macros-0.2.16
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.8.8
+toml-0.8.9
 toml_datetime-0.6.5
 toml_edit-0.20.7
-toml_edit-0.21.0
+toml_edit-0.21.1
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
