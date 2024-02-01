@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare
-DEPEND=>=sys-libs/ncurses-5.2:0= emacs? ( virtual/emacs ) sys-devel/flex virtual/pkgconfig virtual/yacc >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=sys-libs/ncurses-5.2:0= emacs? ( virtual/emacs ) sys-devel/flex virtual/pkgconfig virtual/yacc >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DESCRIPTION=Interactively examine a C program
 EAPI=6
 HOMEPAGE=http://cscope.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2+
 RDEPEND=>=sys-libs/ncurses-5.2:0= emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=mirror://sourceforge/cscope/cscope-15.8a.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	elisp-common	23f47b2e1de7abf387105eddd1318738	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	elisp-common	23f47b2e1de7abf387105eddd1318738	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=814cc947599eeb3066de373f5475d547

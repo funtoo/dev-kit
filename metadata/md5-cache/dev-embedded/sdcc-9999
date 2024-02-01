@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install preinst prepare unpack
-DEPEND=dev-libs/boost:= sys-libs/ncurses:= sys-libs/readline:0= >=dev-embedded/gputils-0.13.7 boehm-gc? ( dev-libs/boehm-gc:= ) !dev-embedded/sdcc-svn dev-util/gperf >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEPEND=dev-libs/boost:= sys-libs/ncurses:= sys-libs/readline:0= >=dev-embedded/gputils-0.13.7 boehm-gc? ( dev-libs/boehm-gc:= ) !dev-embedded/sdcc-svn dev-util/gperf >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Small device C compiler (for various microprocessors)
 EAPI=6
 HOMEPAGE=http://sdcc.sourceforge.net/
@@ -9,5 +9,5 @@ RDEPEND=dev-libs/boost:= sys-libs/ncurses:= sys-libs/readline:0= >=dev-embedded/
 REQUIRED_USE=avr? ( sdbinutils ) ds390? ( sdbinutils ) ds400? ( sdbinutils ) gbz80? ( sdbinutils ) hc08? ( sdbinutils ) mcs51? ( sdbinutils ) pic14? ( sdbinutils ) pic16? ( sdbinutils ) r2k? ( sdbinutils ) r3ka? ( sdbinutils ) s08? ( sdbinutils ) stm8? ( sdbinutils ) tlcs90? ( sdbinutils ) z180? ( sdbinutils ) z80? ( sdbinutils ) || ( avr ds390 ds400 gbz80 hc08 mcs51 pic14 pic16 r2k r3ka s08 stm8 tlcs90 z180 z80 )
 RESTRICT=strip
 SLOT=0
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	subversion	d34e0eb94628326a975c9fb06f5b26f8	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	subversion	d34e0eb94628326a975c9fb06f5b26f8	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=54d426ab5af5b7dffa62c51b4ea4e48a

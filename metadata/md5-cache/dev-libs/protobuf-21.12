@@ -1,4 +1,4 @@
-BDEPEND=emacs? ( app-editors/emacs:* ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=emacs? ( app-editors/emacs:* ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=compile configure install postinst postrm prepare test
 DEPEND=test? ( >=dev-cpp/gtest-1.9[-mgorny(-)] ) zlib? ( sys-libs/zlib[-mgorny(-)] )
 DESCRIPTION=Protocol Buffers - Google's data interchange format
@@ -11,5 +11,5 @@ RDEPEND=emacs? ( app-editors/emacs:* ) zlib? ( sys-libs/zlib[-mgorny(-)] )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/protocolbuffers/protobuf/tarball/f502b8e9c831bda0bea57d9cbeefca3eb76e4254 -> protobuf-21.12-f502b8e.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	elisp-common	23f47b2e1de7abf387105eddd1318738	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	elisp-common	23f47b2e1de7abf387105eddd1318738	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=d9f96dd4ac8c76a13dda0fa4831d8a60

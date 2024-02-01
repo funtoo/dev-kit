@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=sys-libs/ncurses-5.9-r3[static-libs?,-mgorny(-)] !<=sys-freebsd/freebsd-lib-6.2_rc1 >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=sys-libs/ncurses-5.9-r3[static-libs?,-mgorny(-)] !<=sys-freebsd/freebsd-lib-6.2_rc1 >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DESCRIPTION=BSD replacement for libreadline
 EAPI=6
 HOMEPAGE=https://thrysoee.dk/editline/
@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=sys-libs/ncurses-5.9-r3[static-libs?,-mgorny(-)] !<=sys-freebsd/freebsd-lib-6.2_rc1
 SLOT=0
 SRC_URI=https://thrysoee.dk/editline/libedit-20170329-3.1.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=dc0367f3401772b363f1cc217a99cafb

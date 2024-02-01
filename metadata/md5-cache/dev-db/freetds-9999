@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure prepare unpack
-DEPEND=sys-apps/sed sys-apps/grep virtual/awk gnutls? ( net-libs/gnutls ) iconv? ( virtual/libiconv ) iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC ) ssl? ( !libressl? ( dev-libs/openssl:0 ) libressl? ( dev-libs/libressl ) ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DEPEND=sys-apps/sed sys-apps/grep virtual/awk gnutls? ( net-libs/gnutls ) iconv? ( virtual/libiconv ) iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC ) ssl? ( !libressl? ( dev-libs/openssl:0 ) libressl? ( dev-libs/libressl ) ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Tabular Datastream Library
 EAPI=6
 HOMEPAGE=https://www.freetds.org/
@@ -10,5 +10,5 @@ RDEPEND=sys-apps/sed sys-apps/grep virtual/awk gnutls? ( net-libs/gnutls ) iconv
 REQUIRED_USE=?? ( iodbc odbc )
 RESTRICT=test
 SLOT=0
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=b9a7c070bac811fa28b4b83f47fc8230

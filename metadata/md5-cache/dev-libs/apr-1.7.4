@@ -1,0 +1,14 @@
+BDEPEND=>=sys-devel/libtool-2.4.2 doc? ( app-doc/doxygen ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=elibc_glibc? ( >=sys-apps/util-linux-2.16 ) valgrind? ( dev-util/valgrind )
+DESCRIPTION=Apache Portable Runtime Library
+EAPI=7
+HOMEPAGE=https://apr.apache.org/
+IUSE=doc selinux static-libs +urandom valgrind
+KEYWORDS=*
+LICENSE=Apache-2.0
+RDEPEND=elibc_glibc? ( >=sys-apps/util-linux-2.16 ) selinux? ( sec-policy/selinux-base-policy )
+SLOT=1/1.7
+SRC_URI=mirror://apache/apr/apr-1.7.4.tar.bz2
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=d9dfc24dcc6db7f684983845f2986478

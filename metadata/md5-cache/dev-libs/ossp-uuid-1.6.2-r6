@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=perl? ( dev-lang/perl:= ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php? ( php_targets_php5-6? ( dev-lang/php:5.6 ) php_targets_php7-0? ( dev-lang/php:7.0 ) php_targets_php7-1? ( dev-lang/php:7.1 ) )
+DEPEND=perl? ( dev-lang/perl:= ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php? ( php_targets_php5-6? ( dev-lang/php:5.6 ) php_targets_php7-0? ( dev-lang/php:7.0 ) php_targets_php7-1? ( dev-lang/php:7.1 ) )
 DESCRIPTION=An ISO-C:1999 API with CLI for generating DCE, ISO/IEC and RFC compliant UUID
 EAPI=6
 HOMEPAGE=http://www.ossp.org/pkg/lib/uuid/
@@ -10,5 +10,5 @@ RDEPEND=perl? ( dev-lang/perl:= ) php? ( !dev-php/pecl-uuid ) php? ( php_targets
 REQUIRED_USE=php? ( || ( php_targets_php5-6 php_targets_php7-0 php_targets_php7-1 ) )
 SLOT=0
 SRC_URI=ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	perl-module	768f1dfc0a27ff40f1ece5cb8c22714a	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	perl-module	768f1dfc0a27ff40f1ece5cb8c22714a	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=57f2d4bd4f0c7bcf74da084358a7bda4
