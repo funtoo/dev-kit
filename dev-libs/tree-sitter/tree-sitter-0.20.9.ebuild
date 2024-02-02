@@ -11,13 +11,15 @@ KEYWORDS="*"
 LICENSE="MIT"
 SLOT="0"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-no-static-libs.patch"
-)
-
 src_unpack() {
 	unpack "${A}"
 	mv "${WORKDIR}"/tree-sitter-tree-sitter-* "${S}" || die
+}
+
+src_prepare() {
+	sed -i 's@all: libtree-sitter.a libtree-sitter.$(SOEXTVER)@all: libtree-sitter.$(SOEXTVER)@' Makefile  || die
+	sed -i '/install -m\(644\|755\) libtree-sitter\.a '\''\$(DESTDIR)\$(LIBDIR)'\''/d' Makefile  || die
+	default
 }
 
 src_install() {
