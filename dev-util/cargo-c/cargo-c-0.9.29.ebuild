@@ -62,7 +62,7 @@ deranged-0.3.11
 digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.9
-ed25519-compact-2.0.6
+ed25519-compact-2.1.1
 either-1.9.0
 elliptic-curve-0.13.8
 encoding_rs-0.8.33
@@ -174,7 +174,7 @@ memchr-2.7.1
 memmap2-0.7.1
 memmap2-0.9.4
 minimal-lexical-0.2.1
-miniz_oxide-0.7.1
+miniz_oxide-0.7.2
 miow-0.6.0
 nom-7.1.3
 normpath-1.1.1
@@ -260,7 +260,7 @@ terminal_size-0.3.0
 thiserror-1.0.56
 thiserror-impl-1.0.56
 thread_local-1.1.7
-time-0.3.32
+time-0.3.34
 time-core-0.1.2
 time-macros-0.2.17
 tinyvec-1.6.0
@@ -317,7 +317,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.36
+winnow-0.5.37
 zeroize-1.7.0
 "
 

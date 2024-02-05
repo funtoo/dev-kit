@@ -1,0 +1,16 @@
+BDEPEND=doc? ( app-text/openjade ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare setup test
+DEPEND=>=dev-db/libdbi-0.9.0 firebird? ( dev-db/firebird ) mysql? ( dev-db/mysql-connector-c:= ) postgres? ( dev-db/postgresql:* ) sqlite? ( dev-db/sqlite:3 )
+DESCRIPTION=The libdbi-drivers project maintains drivers for libdbi
+EAPI=7
+HOMEPAGE=http://libdbi-drivers.sourceforge.net/
+IUSE=doc firebird mysql oci8 postgres +sqlite static-libs
+KEYWORDS=*
+LICENSE=LGPL-2.1+
+RDEPEND=>=dev-db/libdbi-0.9.0 firebird? ( dev-db/firebird ) mysql? ( dev-db/mysql-connector-c:= ) postgres? ( dev-db/postgresql:* ) sqlite? ( dev-db/sqlite:3 )
+REQUIRED_USE=|| ( mysql postgres sqlite firebird oci8 )
+RESTRICT=firebird? ( bindist )
+SLOT=0
+SRC_URI=https://sourceforge.net/projects/libdbi-drivers/files/libdbi-drivers/libdbi-drivers-0.9.0/libdbi-drivers-0.9.0.tar.gz -> libdbi-drivers-0.9.0.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=82dca4c11707fbe6dd8711b03b41684c

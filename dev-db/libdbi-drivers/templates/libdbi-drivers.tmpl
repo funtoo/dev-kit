@@ -4,9 +4,9 @@ EAPI=7
 
 inherit autotools
 
-DESCRIPTION="The libdbi-drivers project maintains drivers for libdbi"
-HOMEPAGE="http://libdbi-drivers.sourceforge.net/"
-SRC_URI="https://sourceforge.net/projects/libdbi-drivers/files/libdbi-drivers/libdbi-drivers-0.9.0/libdbi-drivers-0.9.0.tar.gz -> libdbi-drivers-0.9.0.tar.gz"
+DESCRIPTION="{{ desc }}"
+HOMEPAGE="{{ homepage }}"
+SRC_URI="{{ src_uri }}"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
@@ -27,10 +27,14 @@ DEPEND="${RDEPEND}"
 BDEPEND="doc? ( app-text/openjade )"
 
 DOCS=( AUTHORS ChangeLog NEWS README README.osx TODO )
+
+{%- if patches %}
 PATCHES=(
-	"${FILESDIR}"/"${PN}-0.9.0-doc-build-fix.patch"
-	"${FILESDIR}"/"${PN}-0.9.0-slibtool-libdir.patch"
+{%- for patch in patches %}
+	"${FILESDIR}"/"${PN}-{{ patch }}"
+{%- endfor %}
 )
+{%- endif %}
 
 pkg_setup() {
 	use oci8 && [[ -z "${ORACLE_HOME}" ]] && die "\$ORACLE_HOME is not set!"

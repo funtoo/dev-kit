@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig doc? ( app-text/openjade ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DESCRIPTION=A database-independent abstraction layer in C
+EAPI=7
+HOMEPAGE=http://libdbi.sourceforge.net/
+IUSE=doc static-libs
+KEYWORDS=*
+LICENSE=LGPL-2.1
+PDEPEND=>=dev-db/libdbi-drivers-0.9.0
+SLOT=0
+SRC_URI=https://sourceforge.net/projects/libdbi/files/libdbi/libdbi-0.9.0/libdbi-0.9.0.tar.gz -> libdbi-0.9.0.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=4729d9f6cd364f0af2ffa76013daf933

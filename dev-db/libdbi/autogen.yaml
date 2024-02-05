@@ -1,0 +1,11 @@
+libdbi_simple_rule:
+  generator: simple
+  packages:
+    - libdbi:
+        cat: dev-db
+        desc: A database-independent abstraction layer in C
+        homepage: http://libdbi.sourceforge.net/
+        src_uri: https://sourceforge.net/projects/libdbi/files/libdbi/libdbi-0.9.0/libdbi-0.9.0.tar.gz
+        patches:
+          - 0.9.0-doc-build-fix.patch
+        version: 0.9.0

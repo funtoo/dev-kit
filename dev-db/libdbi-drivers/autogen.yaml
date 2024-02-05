@@ -1,0 +1,13 @@
+libdbi-drivers_rule:
+  generator: simple
+  packages:
+    - libdbi-drivers:
+        cat: dev-db
+        desc: The libdbi-drivers project maintains drivers for libdbi
+        homepage: http://libdbi-drivers.sourceforge.net/
+        src_uri: https://sourceforge.net/projects/libdbi-drivers/files/libdbi-drivers/libdbi-drivers-0.9.0/libdbi-drivers-0.9.0.tar.gz
+        patches:
+          - 0.9.0-doc-build-fix.patch
+          - 0.9.0-slibtool-libdir.patch
+        version: 0.9.0
+
