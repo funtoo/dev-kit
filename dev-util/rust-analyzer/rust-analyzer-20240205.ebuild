@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.19.0
 adler-1.0.2
-always-assert-0.1.3
+always-assert-0.2.0
 anyhow-1.0.75
 arbitrary-1.3.2
 arrayvec-0.7.4
@@ -104,25 +104,27 @@ protobuf-support-3.2.0
 pulldown-cmark-0.9.3
 pulldown-cmark-to-cmark-10.0.4
 quote-1.0.28
-ra-ap-rustc_abi-0.33.0
+ra-ap-rustc_abi-0.35.0
 ra-ap-rustc_index-0.33.0
+ra-ap-rustc_index-0.35.0
 ra-ap-rustc_index_macros-0.33.0
-ra-ap-rustc_lexer-0.33.0
-ra-ap-rustc_parse_format-0.33.0
+ra-ap-rustc_index_macros-0.35.0
+ra-ap-rustc_lexer-0.35.0
+ra-ap-rustc_parse_format-0.35.0
 ra-ap-rustc_pattern_analysis-0.33.0
 rayon-1.8.0
 rayon-core-1.12.0
 redox_syscall-0.3.5
 redox_syscall-0.4.1
 rowan-0.15.15
-rust-analyzer-salsa-0.17.0-pre.5
-rust-analyzer-salsa-macros-0.17.0-pre.5
+rust-analyzer-salsa-0.17.0-pre.6
+rust-analyzer-salsa-macros-0.17.0-pre.6
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_apfloat-0.2.0+llvm-462a31f5a5ab
 ryu-1.0.13
 same-file-1.0.6
-scip-0.3.1
+scip-0.3.3
 scoped-tls-1.0.1
 scopeguard-1.1.0
 semver-1.0.17
@@ -203,7 +205,7 @@ inherit cargo
 
 DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://github.com/rust-lang/rust-analyzer"
-SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2024-01-29 -> rust-analyzer-20240129.tar.gz
+SRC_URI="https://api.github.com/repos/rust-lang/rust-analyzer/tarball/2024-02-05 -> rust-analyzer-20240205.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
@@ -227,6 +229,6 @@ src_unpack() {
 # Upstream code reference: https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/version.rs
 src_install() {
 	RUST_VERSION="$(rustc --version | awk {'print $2'})"
-	CFG_RELEASE="$RUST_VERSION (2024-01-29-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
+	CFG_RELEASE="$RUST_VERSION (2024-02-05-standalone-funtoo)" cargo_src_install --path "./crates/rust-analyzer"
 	einstalldocs
 }

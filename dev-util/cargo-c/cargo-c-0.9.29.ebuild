@@ -5,7 +5,7 @@ EAPI=7
 CRATES="adler-1.0.2
 aho-corasick-1.1.2
 anstream-0.6.11
-anstyle-1.0.5
+anstyle-1.0.6
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
@@ -73,7 +73,7 @@ faster-hex-0.8.1
 faster-hex-0.9.0
 fastrand-2.0.1
 ff-0.13.0
-fiat-crypto-0.2.5
+fiat-crypto-0.2.6
 filetime-0.2.23
 flate2-1.0.28
 foreign-types-0.3.2
@@ -138,7 +138,7 @@ group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.3
 heck-0.4.1
-hermit-abi-0.3.4
+hermit-abi-0.3.5
 hex-0.4.3
 hkdf-0.12.4
 hmac-0.12.1
@@ -155,7 +155,7 @@ itertools-0.11.0
 itertools-0.12.1
 itoa-1.0.10
 jobserver-0.1.27
-js-sys-0.3.67
+js-sys-0.3.68
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -255,7 +255,7 @@ supports-hyperlinks-2.1.0
 syn-1.0.109
 syn-2.0.48
 tar-0.4.40
-tempfile-3.9.0
+tempfile-3.10.0
 terminal_size-0.3.0
 thiserror-1.0.56
 thiserror-impl-1.0.56
@@ -266,10 +266,10 @@ time-macros-0.2.17
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.8.9
+toml-0.8.10
 toml_datetime-0.6.5
 toml_edit-0.20.7
-toml_edit-0.21.1
+toml_edit-0.22.4
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
@@ -290,11 +290,11 @@ vcpkg-0.2.15
 version_check-0.9.4
 walkdir-2.4.0
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.90
-wasm-bindgen-backend-0.2.90
-wasm-bindgen-macro-0.2.90
-wasm-bindgen-macro-support-0.2.90
-wasm-bindgen-shared-0.2.90
+wasm-bindgen-0.2.91
+wasm-bindgen-backend-0.2.91
+wasm-bindgen-macro-0.2.91
+wasm-bindgen-macro-support-0.2.91
+wasm-bindgen-shared-0.2.91
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.6
@@ -317,7 +317,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.37
+winnow-0.5.39
 zeroize-1.7.0
 "
 
