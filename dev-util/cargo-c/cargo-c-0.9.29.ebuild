@@ -34,10 +34,10 @@ cargo-util-0.2.8
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.4.18
-clap_builder-4.4.18
-clap_derive-4.4.7
-clap_lex-0.6.0
+clap-4.5.0
+clap_builder-4.5.0
+clap_derive-4.5.0
+clap_lex-0.7.0
 clru-0.6.1
 color-print-0.3.5
 color-print-proc-macro-0.3.5
@@ -154,7 +154,7 @@ is-terminal-0.4.10
 itertools-0.11.0
 itertools-0.12.1
 itoa-1.0.10
-jobserver-0.1.27
+jobserver-0.1.28
 js-sys-0.3.68
 kstring-2.0.0
 lazy_static-1.4.0
@@ -180,7 +180,7 @@ nom-7.1.3
 normpath-1.1.1
 nu-ansi-term-0.46.0
 num-conv-0.1.0
-num-traits-0.2.17
+num-traits-0.2.18
 num_threads-0.1.6
 once_cell-1.19.0
 opener-0.6.1
@@ -249,7 +249,7 @@ smallvec-1.13.1
 socket2-0.4.10
 spki-0.7.3
 static_assertions-1.1.0
-strsim-0.10.0
+strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
