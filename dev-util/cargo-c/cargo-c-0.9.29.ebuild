@@ -81,7 +81,7 @@ foreign-types-shared-0.1.1
 form_urlencoded-1.2.1
 generic-array-0.14.7
 getrandom-0.2.12
-git2-0.18.1
+git2-0.18.2
 git2-curl-0.19.0
 gix-0.55.2
 gix-actor-0.28.1
@@ -160,7 +160,7 @@ kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.153
-libgit2-sys-0.16.1+1.7.1
+libgit2-sys-0.16.2+1.7.2
 libloading-0.8.1
 libnghttp2-sys-0.1.9+1.58.0
 libssh2-sys-0.3.0
