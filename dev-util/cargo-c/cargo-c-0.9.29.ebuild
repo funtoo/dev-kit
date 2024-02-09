@@ -25,12 +25,12 @@ bumpalo-3.14.0
 bytes-1.5.0
 bytesize-1.3.0
 cargo-0.76.0
-cargo-credential-0.4.1
-cargo-credential-libsecret-0.4.1
-cargo-credential-macos-keychain-0.4.1
-cargo-credential-wincred-0.4.1
-cargo-platform-0.1.6
-cargo-util-0.2.8
+cargo-credential-0.4.2
+cargo-credential-libsecret-0.4.2
+cargo-credential-macos-keychain-0.4.2
+cargo-credential-wincred-0.4.2
+cargo-platform-0.1.7
+cargo-util-0.2.9
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
@@ -46,7 +46,7 @@ const-oid-0.9.6
 core-foundation-0.9.4
 core-foundation-sys-0.8.6
 cpufeatures-0.2.12
-crates-io-0.39.1
+crates-io-0.39.2
 crc32fast-1.3.2
 crossbeam-channel-0.5.11
 crossbeam-deque-0.8.5
@@ -55,8 +55,8 @@ crossbeam-utils-0.8.19
 crypto-bigint-0.5.5
 crypto-common-0.1.6
 ct-codecs-1.1.1
-curl-0.4.44
-curl-sys-0.4.71+curl-8.6.0
+curl-0.4.45
+curl-sys-0.4.72+curl-8.6.0
 der-0.7.8
 deranged-0.3.11
 digest-0.10.7
@@ -150,7 +150,7 @@ ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
 indexmap-2.2.2
-is-terminal-0.4.10
+is-terminal-0.4.11
 itertools-0.11.0
 itertools-0.12.1
 itoa-1.0.10
@@ -246,7 +246,7 @@ shell-escape-0.1.5
 signature-2.2.0
 sized-chunks-0.6.5
 smallvec-1.13.1
-socket2-0.4.10
+socket2-0.5.5
 spki-0.7.3
 static_assertions-1.1.0
 strsim-0.11.0
