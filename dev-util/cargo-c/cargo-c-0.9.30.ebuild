@@ -3,7 +3,9 @@
 EAPI=7
 
 CRATES="adler-1.0.2
+ahash-0.8.7
 aho-corasick-1.1.2
+allocator-api2-0.2.16
 anstream-0.6.11
 anstyle-1.0.6
 anstyle-parse-0.2.3
@@ -24,7 +26,7 @@ btoi-0.4.3
 bumpalo-3.14.0
 bytes-1.5.0
 bytesize-1.3.0
-cargo-0.76.0
+cargo-0.77.0
 cargo-credential-0.4.2
 cargo-credential-libsecret-0.4.2
 cargo-credential-macos-keychain-0.4.2
@@ -63,13 +65,14 @@ digest-0.10.7
 dunce-1.0.4
 ecdsa-0.16.9
 ed25519-compact-2.1.1
-either-1.9.0
+either-1.10.0
 elliptic-curve-0.13.8
 encoding_rs-0.8.33
 equivalent-1.0.1
 erased-serde-0.4.2
 errno-0.3.8
-faster-hex-0.8.1
+fallible-iterator-0.3.0
+fallible-streaming-iterator-0.1.9
 faster-hex-0.9.0
 fastrand-2.0.1
 ff-0.13.0
@@ -83,60 +86,61 @@ generic-array-0.14.7
 getrandom-0.2.12
 git2-0.18.2
 git2-curl-0.19.0
-gix-0.55.2
+gix-0.56.0
 gix-actor-0.28.1
 gix-attributes-0.20.1
 gix-bitmap-0.2.10
 gix-chunk-0.4.7
-gix-command-0.2.10
+gix-command-0.3.4
 gix-commitgraph-0.22.1
-gix-config-0.31.0
+gix-config-0.32.1
 gix-config-value-0.14.4
-gix-credentials-0.21.0
+gix-credentials-0.22.0
 gix-date-0.8.3
-gix-diff-0.37.0
-gix-discover-0.26.0
+gix-diff-0.38.0
+gix-discover-0.27.0
 gix-features-0.35.0
 gix-features-0.36.1
-gix-filter-0.6.0
+gix-filter-0.7.0
 gix-fs-0.8.1
 gix-glob-0.14.1
 gix-hash-0.13.3
 gix-hashtable-0.4.1
 gix-ignore-0.9.1
-gix-index-0.26.0
+gix-index-0.27.1
 gix-lock-11.0.1
 gix-macros-0.1.3
-gix-negotiate-0.9.0
-gix-object-0.38.0
-gix-odb-0.54.0
-gix-pack-0.44.0
-gix-packetline-0.16.7
-gix-packetline-blocking-0.16.6
+gix-negotiate-0.10.0
+gix-object-0.39.0
+gix-odb-0.55.0
+gix-pack-0.45.0
+gix-packetline-0.17.3
+gix-packetline-blocking-0.17.3
 gix-path-0.10.5
 gix-pathspec-0.4.1
-gix-prompt-0.7.0
-gix-protocol-0.41.1
+gix-prompt-0.8.2
+gix-protocol-0.42.0
 gix-quote-0.4.10
-gix-ref-0.38.0
-gix-refspec-0.19.0
-gix-revision-0.23.0
-gix-revwalk-0.9.0
+gix-ref-0.39.1
+gix-refspec-0.20.0
+gix-revision-0.24.0
+gix-revwalk-0.10.0
 gix-sec-0.10.4
-gix-submodule-0.5.0
+gix-submodule-0.6.0
 gix-tempfile-11.0.1
 gix-trace-0.1.7
-gix-transport-0.38.0
-gix-traverse-0.34.0
+gix-transport-0.39.0
+gix-traverse-0.35.0
 gix-url-0.25.2
 gix-utils-0.1.9
 gix-validate-0.8.3
-gix-worktree-0.27.0
+gix-worktree-0.28.0
 glob-0.3.1
 globset-0.4.14
 group-0.13.0
 hashbrown-0.12.3
 hashbrown-0.14.3
+hashlink-0.8.4
 heck-0.4.1
 hermit-abi-0.3.5
 hex-0.4.3
@@ -150,8 +154,7 @@ ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
 indexmap-2.2.2
-is-terminal-0.4.11
-itertools-0.11.0
+is-terminal-0.4.12
 itertools-0.12.1
 itoa-1.0.10
 jobserver-0.1.28
@@ -163,6 +166,7 @@ libc-0.2.153
 libgit2-sys-0.16.2+1.7.2
 libloading-0.8.1
 libnghttp2-sys-0.1.9+1.58.0
+libsqlite3-sys-0.27.0
 libssh2-sys-0.3.0
 libz-sys-1.1.15
 linux-raw-sys-0.4.13
@@ -171,7 +175,6 @@ log-0.4.20
 matchers-0.1.0
 maybe-async-0.2.9
 memchr-2.7.1
-memmap2-0.7.1
 memmap2-0.9.4
 minimal-lexical-0.2.1
 miniz_oxide-0.7.2
@@ -221,7 +224,8 @@ regex-automata-0.4.5
 regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
-rustfix-0.6.1
+rusqlite-0.30.0
+rustfix-0.7.0
 rustix-0.38.31
 ryu-1.0.16
 same-file-1.0.6
@@ -243,6 +247,7 @@ sha1_smol-1.0.0
 sha2-0.10.8
 sharded-slab-0.1.7
 shell-escape-0.1.5
+shell-words-1.1.0
 signature-2.2.0
 sized-chunks-0.6.5
 smallvec-1.13.1
@@ -268,7 +273,7 @@ tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.8.10
 toml_datetime-0.6.5
-toml_edit-0.20.7
+toml_edit-0.21.1
 toml_edit-0.22.4
 tracing-0.1.40
 tracing-attributes-0.1.27
@@ -318,6 +323,8 @@ windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winnow-0.5.39
+zerocopy-0.7.32
+zerocopy-derive-0.7.32
 zeroize-1.7.0
 "
 
@@ -325,7 +332,7 @@ inherit cargo
 
 DESCRIPTION="Cargo applet to build and install C-ABI compatible dynamic and static libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
-SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.29 -> cargo-c-0.9.29.tar.gz
+SRC_URI="https://api.github.com/repos/lu-zero/cargo-c/tarball/v0.9.30 -> cargo-c-0.9.30.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
