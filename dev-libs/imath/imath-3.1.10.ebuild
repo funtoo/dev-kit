@@ -41,7 +41,7 @@ BDEPEND="
 	python? ( ${PYTHON_DEPS} )
 "
 
-DOCS=( CHANGES.md CONTRIBUTORS.md README.md SECURITY.md docs/PortingGuide2-3.md )
+DOCS=( CHANGES.md CONTRIBUTORS.md README.md SECURITY.md website/PortingGuide.rst )
 
 src_unpack() {
     default

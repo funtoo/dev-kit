@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-ahash-0.8.7
+ahash-0.8.8
 aho-corasick-1.1.2
 allocator-api2-0.2.16
 anstream-0.6.11
@@ -153,7 +153,7 @@ idna-0.5.0
 ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
-indexmap-2.2.2
+indexmap-2.2.3
 is-terminal-0.4.12
 itertools-0.12.1
 itoa-1.0.10
@@ -262,8 +262,8 @@ syn-2.0.48
 tar-0.4.40
 tempfile-3.10.0
 terminal_size-0.3.0
-thiserror-1.0.56
-thiserror-impl-1.0.56
+thiserror-1.0.57
+thiserror-impl-1.0.57
 thread_local-1.1.7
 time-0.3.34
 time-core-0.1.2
