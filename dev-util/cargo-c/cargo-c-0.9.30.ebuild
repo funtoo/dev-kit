@@ -49,7 +49,7 @@ core-foundation-0.9.4
 core-foundation-sys-0.8.6
 cpufeatures-0.2.12
 crates-io-0.39.2
-crc32fast-1.3.2
+crc32fast-1.4.0
 crossbeam-channel-0.5.11
 crossbeam-deque-0.8.5
 crossbeam-epoch-0.9.18
@@ -57,7 +57,7 @@ crossbeam-utils-0.8.19
 crypto-bigint-0.5.5
 crypto-common-0.1.6
 ct-codecs-1.1.1
-curl-0.4.45
+curl-0.4.46
 curl-sys-0.4.72+curl-8.6.0
 der-0.7.8
 deranged-0.3.11
@@ -142,7 +142,7 @@ hashbrown-0.12.3
 hashbrown-0.14.3
 hashlink-0.8.4
 heck-0.4.1
-hermit-abi-0.3.5
+hermit-abi-0.3.6
 hex-0.4.3
 hkdf-0.12.4
 hmac-0.12.1
@@ -190,7 +190,7 @@ opener-0.6.1
 openssl-0.10.63
 openssl-macros-0.1.1
 openssl-probe-0.1.5
-openssl-src-300.2.2+3.2.1
+openssl-src-300.2.3+3.2.1
 openssl-sys-0.9.99
 ordered-float-2.10.1
 orion-0.17.6
@@ -274,7 +274,7 @@ toml-0.5.11
 toml-0.8.10
 toml_datetime-0.6.5
 toml_edit-0.21.1
-toml_edit-0.22.4
+toml_edit-0.22.5
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
@@ -322,7 +322,8 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
-winnow-0.5.39
+winnow-0.5.40
+winnow-0.6.0
 zerocopy-0.7.32
 zerocopy-derive-0.7.32
 zeroize-1.7.0
