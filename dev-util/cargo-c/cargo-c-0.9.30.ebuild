@@ -205,7 +205,7 @@ pem-rfc7468-0.7.0
 percent-encoding-2.3.1
 pin-project-lite-0.2.13
 pkcs8-0.10.2
-pkg-config-0.3.29
+pkg-config-0.3.30
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
