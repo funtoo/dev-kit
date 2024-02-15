@@ -184,7 +184,7 @@ normpath-1.1.1
 nu-ansi-term-0.46.0
 num-conv-0.1.0
 num-traits-0.2.18
-num_threads-0.1.6
+num_threads-0.1.7
 once_cell-1.19.0
 opener-0.6.1
 openssl-0.10.63
@@ -323,7 +323,7 @@ windows_x86_64_gnullvm-0.52.0
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winnow-0.5.40
-winnow-0.6.0
+winnow-0.6.1
 zerocopy-0.7.32
 zerocopy-derive-0.7.32
 zeroize-1.7.0
