@@ -36,8 +36,8 @@ cargo-util-0.2.9
 cbindgen-0.26.0
 cc-1.0.83
 cfg-if-1.0.0
-clap-4.5.0
-clap_builder-4.5.0
+clap-4.5.1
+clap_builder-4.5.1
 clap_derive-4.5.0
 clap_lex-0.7.0
 clru-0.6.1
@@ -258,7 +258,7 @@ strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.48
+syn-2.0.49
 tar-0.4.40
 tempfile-3.10.0
 terminal_size-0.3.0
@@ -274,7 +274,7 @@ toml-0.5.11
 toml-0.8.10
 toml_datetime-0.6.5
 toml_edit-0.21.1
-toml_edit-0.22.5
+toml_edit-0.22.6
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
