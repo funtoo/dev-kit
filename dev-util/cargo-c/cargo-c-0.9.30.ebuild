@@ -180,7 +180,7 @@ minimal-lexical-0.2.1
 miniz_oxide-0.7.2
 miow-0.6.0
 nom-7.1.3
-normpath-1.1.1
+normpath-1.2.0
 nu-ansi-term-0.46.0
 num-conv-0.1.0
 num-traits-0.2.18
