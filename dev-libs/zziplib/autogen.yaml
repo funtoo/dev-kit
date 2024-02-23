@@ -1,0 +1,14 @@
+zziplib_rule:
+  generator: github-1
+  packages:
+    - zziplib:
+        cat: dev-libs
+        desc: Lightweight library for extracting data from files archived in a single zip file
+        homepage: https://github.com/gdraheim/zziplib https://zziplib.sourceforge.net
+        github:
+          user: gdraheim
+          repo: zziplib
+          query: tags
+        patches:
+          - 0.13.72-incompatible-pointer-types.patch
+          - 0.13.72-Wint-conversion.patch

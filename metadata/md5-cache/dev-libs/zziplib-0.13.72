@@ -1,0 +1,14 @@
+BDEPEND=|| ( dev-lang/python:3.8[xml(+)] dev-lang/python:3.9[xml(+)] dev-lang/python:3.7[xml(+)] dev-lang/python:3.10[xml(+)] ) dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sys-libs/zlib sdl? ( >=media-libs/libsdl-1.2.6 )
+DESCRIPTION=Lightweight library for extracting data from files archived in a single zip file
+EAPI=7
+HOMEPAGE=https://github.com/gdraheim/zziplib https://zziplib.sourceforge.net
+IUSE=sdl static-libs
+KEYWORDS=*
+LICENSE=|| ( LGPL-2.1 MPL-1.1 )
+RDEPEND=sys-libs/zlib sdl? ( >=media-libs/libsdl-1.2.6 )
+SLOT=0/13
+SRC_URI=https://github.com/gdraheim/zziplib/tarball/7f8e01b5fa7f076bbe4f026d6a30160272da69fe -> zziplib-0.13.72-7f8e01b.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=c9c294649740b02ceb6f4b05a345ab8a
