@@ -34,7 +34,7 @@ cargo-credential-wincred-0.4.2
 cargo-platform-0.1.7
 cargo-util-0.2.9
 cbindgen-0.26.0
-cc-1.0.86
+cc-1.0.87
 cfg-if-1.0.0
 clap-4.5.1
 clap_builder-4.5.1
@@ -142,7 +142,7 @@ hashbrown-0.12.3
 hashbrown-0.14.3
 hashlink-0.8.4
 heck-0.4.1
-hermit-abi-0.3.6
+hermit-abi-0.3.7
 hex-0.4.3
 hkdf-0.12.4
 hmac-0.12.1

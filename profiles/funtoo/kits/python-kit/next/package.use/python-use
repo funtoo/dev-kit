@@ -9,7 +9,6 @@
 =dev-db/mongodb-4.0.28 python_single_target_python2_7 python_targets_python2_7
 =dev-db/pgxnclient-1.2-r1 python_single_target_python2_7 python_targets_python2_7
 =dev-libs/libreport-2.0.13-r1 python_single_target_python2_7 python_targets_python2_7
-=dev-libs/zziplib-0.13.69 python_single_target_python2_7 python_targets_python2_7
 =dev-util/buildbot-0.8.12-r3 python_single_target_python2_7 python_targets_python2_7
 =dev-util/catalyst-2.0.18-r1 python_single_target_python2_7 python_targets_python2_7
 =dev-util/catalyst-2.0.18-r4 python_single_target_python2_7 python_targets_python2_7

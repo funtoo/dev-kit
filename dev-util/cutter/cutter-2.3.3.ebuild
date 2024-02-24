@@ -8,7 +8,7 @@ inherit qmake-utils xdg-utils python-single-r1
 
 DESCRIPTION="A Qt and C++ GUI for radare2 reverse engineering framework"
 HOMEPAGE="https://cutter.re https://github.com/rizinorg/cutter/"
-SRC_URI="https://github.com/rizinorg/cutter/archive/v2.3.2.tar.gz -> cutter-2.3.2.tar.gz"
+SRC_URI="https://github.com/rizinorg/cutter/archive/v2.3.3.tar.gz -> cutter-2.3.3.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
