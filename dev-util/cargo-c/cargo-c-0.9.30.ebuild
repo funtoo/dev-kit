@@ -258,9 +258,9 @@ strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.50
+syn-2.0.51
 tar-0.4.40
-tempfile-3.10.0
+tempfile-3.10.1
 terminal_size-0.3.0
 thiserror-1.0.57
 thiserror-impl-1.0.57
