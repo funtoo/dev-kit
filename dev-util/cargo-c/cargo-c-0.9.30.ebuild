@@ -50,7 +50,7 @@ core-foundation-sys-0.8.6
 cpufeatures-0.2.12
 crates-io-0.39.2
 crc32fast-1.4.0
-crossbeam-channel-0.5.11
+crossbeam-channel-0.5.12
 crossbeam-deque-0.8.5
 crossbeam-epoch-0.9.18
 crossbeam-utils-0.8.19
@@ -323,7 +323,7 @@ windows_x86_64_gnullvm-0.52.3
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.3
 winnow-0.5.40
-winnow-0.6.2
+winnow-0.6.3
 zerocopy-0.7.32
 zerocopy-derive-0.7.32
 zeroize-1.7.0
