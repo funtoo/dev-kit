@@ -3,10 +3,10 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-ahash-0.8.9
+ahash-0.8.10
 aho-corasick-1.1.2
 allocator-api2-0.2.16
-anstream-0.6.12
+anstream-0.6.13
 anstyle-1.0.6
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
