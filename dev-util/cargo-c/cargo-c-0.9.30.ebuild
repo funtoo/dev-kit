@@ -142,7 +142,7 @@ hashbrown-0.12.3
 hashbrown-0.14.3
 hashlink-0.8.4
 heck-0.4.1
-hermit-abi-0.3.8
+hermit-abi-0.3.9
 hex-0.4.3
 hkdf-0.12.4
 hmac-0.12.1
@@ -153,7 +153,7 @@ idna-0.5.0
 ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
-indexmap-2.2.3
+indexmap-2.2.4
 is-terminal-0.4.12
 itertools-0.12.1
 itoa-1.0.10
@@ -171,7 +171,7 @@ libssh2-sys-0.3.0
 libz-sys-1.1.15
 linux-raw-sys-0.4.13
 lock_api-0.4.11
-log-0.4.20
+log-0.4.21
 matchers-0.1.0
 maybe-async-0.2.10
 memchr-2.7.1
@@ -258,7 +258,7 @@ strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.51
+syn-2.0.52
 tar-0.4.40
 tempfile-3.10.1
 terminal_size-0.3.0
