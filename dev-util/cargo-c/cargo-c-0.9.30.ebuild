@@ -153,7 +153,7 @@ idna-0.5.0
 ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
-indexmap-2.2.4
+indexmap-2.2.5
 is-terminal-0.4.12
 itertools-0.12.1
 itoa-1.0.10
@@ -323,7 +323,7 @@ windows_x86_64_gnullvm-0.52.4
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.4
 winnow-0.5.40
-winnow-0.6.3
+winnow-0.6.5
 zerocopy-0.7.32
 zerocopy-derive-0.7.32
 zeroize-1.7.0
