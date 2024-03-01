@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=|| ( LGPL-2.1 MPL-1.1 )
 RDEPEND=sys-libs/zlib sdl? ( >=media-libs/libsdl-1.2.6 )
 SLOT=0/13
-SRC_URI=https://github.com/gdraheim/zziplib/tarball/1a57d9c7aac3eada93c619a1d3f1f16854197dc3 -> zziplib-0.13.73-1a57d9c.tar.gz
+SRC_URI=https://github.com/gdraheim/zziplib/tarball/df9e9c06634cb0c48bdc42efe9f7ac55847503a5 -> zziplib-0.13.74-df9e9c0.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=eb07c4d3217f59b0a35dcb44f3e55981
+_md5_=962f622b2b6228d20b765d622835d255
