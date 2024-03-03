@@ -12,7 +12,7 @@ anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
 anyhow-1.0.80
-arc-swap-1.6.0
+arc-swap-1.7.0
 autocfg-1.1.0
 base16ct-0.2.0
 base64-0.21.7
