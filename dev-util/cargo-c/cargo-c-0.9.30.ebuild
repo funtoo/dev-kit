@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="adler-1.0.2
-ahash-0.8.10
+ahash-0.8.11
 aho-corasick-1.1.2
 allocator-api2-0.2.16
 anstream-0.6.13
@@ -34,7 +34,7 @@ cargo-credential-wincred-0.4.2
 cargo-platform-0.1.7
 cargo-util-0.2.9
 cbindgen-0.26.0
-cc-1.0.88
+cc-1.0.89
 cfg-if-1.0.0
 clap-4.5.1
 clap_builder-4.5.1
@@ -220,7 +220,7 @@ rand_xoshiro-0.6.0
 redox_syscall-0.4.1
 regex-1.10.3
 regex-automata-0.1.10
-regex-automata-0.4.5
+regex-automata-0.4.6
 regex-syntax-0.6.29
 regex-syntax-0.8.2
 rfc6979-0.4.0
