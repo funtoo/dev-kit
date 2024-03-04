@@ -158,7 +158,7 @@ is-terminal-0.4.12
 itertools-0.12.1
 itoa-1.0.10
 jobserver-0.1.28
-js-sys-0.3.68
+js-sys-0.3.69
 kstring-2.0.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -295,11 +295,11 @@ vcpkg-0.2.15
 version_check-0.9.4
 walkdir-2.5.0
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.91
-wasm-bindgen-backend-0.2.91
-wasm-bindgen-macro-0.2.91
-wasm-bindgen-macro-support-0.2.91
-wasm-bindgen-shared-0.2.91
+wasm-bindgen-0.2.92
+wasm-bindgen-backend-0.2.92
+wasm-bindgen-macro-0.2.92
+wasm-bindgen-macro-support-0.2.92
+wasm-bindgen-shared-0.2.92
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.6
