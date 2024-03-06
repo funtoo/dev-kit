@@ -164,7 +164,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.153
 libgit2-sys-0.16.2+1.7.2
-libloading-0.8.2
+libloading-0.8.3
 libnghttp2-sys-0.1.9+1.58.0
 libsqlite3-sys-0.27.0
 libssh2-sys-0.3.0
