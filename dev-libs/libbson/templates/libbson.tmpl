@@ -32,7 +32,7 @@ src_prepare() {
 
 	# It seems that the docs python script using py3.10 syntax but
 	# the library works with py3.9 too.
-	sed -i -e 's/str | None|str/g' build/sphinx/mongoc_common.py || die
+	sed -i -e 's/str | None/str/g' build/sphinx/mongoc_common.py || die
 
 	# Override upstream script using git to retrieve tag.
 	echo "#!/usr/bin/env python

@@ -34,10 +34,10 @@ cargo-credential-wincred-0.4.2
 cargo-platform-0.1.7
 cargo-util-0.2.9
 cbindgen-0.26.0
-cc-1.0.89
+cc-1.0.90
 cfg-if-1.0.0
-clap-4.5.1
-clap_builder-4.5.1
+clap-4.5.2
+clap_builder-4.5.2
 clap_derive-4.5.0
 clap_lex-0.7.0
 clru-0.6.1

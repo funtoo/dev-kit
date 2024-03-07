@@ -306,8 +306,8 @@ EGO_SUM=(
 	"github.com/hashicorp/hcl v1.0.0/go.mod"
 	"github.com/hashicorp/hcl/v2 v2.19.1"
 	"github.com/hashicorp/hcl/v2 v2.19.1/go.mod"
-	"github.com/hashicorp/hcp-sdk-go v0.82.0"
-	"github.com/hashicorp/hcp-sdk-go v0.82.0/go.mod"
+	"github.com/hashicorp/hcp-sdk-go v0.85.0"
+	"github.com/hashicorp/hcp-sdk-go v0.85.0/go.mod"
 	"github.com/hashicorp/logutils v1.0.0/go.mod"
 	"github.com/hashicorp/mdns v1.0.4/go.mod"
 	"github.com/hashicorp/memberlist v0.5.0"
@@ -749,8 +749,8 @@ EGO_SUM=(
 	"google.golang.org/protobuf v1.25.0/go.mod"
 	"google.golang.org/protobuf v1.26.0-rc.1/go.mod"
 	"google.golang.org/protobuf v1.26.0/go.mod"
-	"google.golang.org/protobuf v1.31.0"
-	"google.golang.org/protobuf v1.31.0/go.mod"
+	"google.golang.org/protobuf v1.33.0"
+	"google.golang.org/protobuf v1.33.0/go.mod"
 	"gopkg.in/alecthomas/kingpin.v2 v2.2.6/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
 	"gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127/go.mod"
@@ -779,8 +779,8 @@ go-module_set_globals
 
 DESCRIPTION="A tool for creating identical machine images for multiple platforms"
 HOMEPAGE="https://www.packer.io/ https://github.com/hashicorp/packer"
-SRC_URI="https://github.com/hashicorp/packer/tarball/fa76e900a36b2e3bd2c80900b970749e98670828 -> packer-1.10.1-fa76e90.tar.gz
-https://direct.funtoo.org/74/d9/eb/74d9ebae9d8d2378e0aae3807fa16107cffd5664c34fea5ac78d96e90e5faea287d05f1729ef4ddbd38de95bb1c3c114abf4fd114dba13752696c9ae83aae619 -> packer-1.10.1-funtoo-go-bundle-59a55f3452ef0e56e432eee777d5265262827b463b9c12ca05fa6278674d2ad7591738a2fdb311b907b68f0799dd7bb9e2203b406fb56bf38605a4c6682169a9.tar.gz"
+SRC_URI="https://github.com/hashicorp/packer/tarball/a33082ad4a029af7de3cd3e4a3530028e5d434be -> packer-1.10.2-a33082a.tar.gz
+https://direct.funtoo.org/de/6c/73/de6c73c9aedb85f72fea4c5f9d8fd729810712788226c032db51303c102588143a652cce1bdef46b9e886759d1fbec0a7cbbb4fea9e04dd36e5e9fe86ee20325 -> packer-1.10.2-funtoo-go-bundle-4315ee4b3a608e2402766dbd9b08b87e85c7d49004067ce1fcdd35b57bbc674aa5ae6ced06d440b2db4ba1702d0fa269c02f25e39b5d7ec39f7f947bd02abeea.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -789,7 +789,7 @@ KEYWORDS="*"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.17"
-S="${WORKDIR}/hashicorp-packer-fa76e90"
+S="${WORKDIR}/hashicorp-packer-a33082a"
 
 src_compile() {
 	go build -o "${PN}" || die "compile failed"
