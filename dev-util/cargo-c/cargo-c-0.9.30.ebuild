@@ -23,7 +23,7 @@ bitmaps-2.1.0
 block-buffer-0.10.4
 bstr-1.9.1
 btoi-0.4.3
-bumpalo-3.15.3
+bumpalo-3.15.4
 bytes-1.5.0
 bytesize-1.3.0
 cargo-0.77.0
