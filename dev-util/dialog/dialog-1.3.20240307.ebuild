@@ -6,7 +6,7 @@ MY_P=${PN}-$(ver_rs 2 -)
 S="${WORKDIR}"/${MY_P}
 DESCRIPTION="Tool to display dialog boxes from a shell"
 HOMEPAGE="https://invisible-island.net/dialog/"
-SRC_URI="https://invisible-mirror.net/archives/dialog/dialog-1.3-20240101.tgz -> dialog-1.3-20240101.tgz"
+SRC_URI="https://invisible-mirror.net/archives/dialog/dialog-1.3-20240307.tgz -> dialog-1.3-20240307.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/15"

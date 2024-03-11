@@ -20,8 +20,8 @@ block-buffer-0.10.4
 bstr-0.2.17
 camino-1.1.6
 cc-1.0.90
-cfg-if-0.1.10
 cfg-if-1.0.0
+cfg_aliases-0.1.1
 clap-2.34.0
 colorchoice-1.0.0
 constant_time_eq-0.3.0
@@ -31,7 +31,7 @@ crossbeam-deque-0.8.5
 crossbeam-epoch-0.9.18
 crossbeam-utils-0.8.19
 crypto-common-0.1.6
-ctrlc-3.1.1
+ctrlc-3.4.4
 derivative-2.2.0
 diff-0.1.13
 digest-0.10.7
@@ -64,7 +64,7 @@ linux-raw-sys-0.4.13
 log-0.4.21
 memchr-2.7.1
 memmap2-0.7.1
-nix-0.11.1
+nix-0.28.0
 num_cpus-1.16.0
 once_cell-1.19.0
 option-ext-0.2.0
@@ -97,8 +97,8 @@ snafu-derive-0.8.1
 strsim-0.8.0
 structopt-0.3.26
 structopt-derive-0.4.18
-strum-0.26.1
-strum_macros-0.26.1
+strum-0.26.2
+strum_macros-0.26.2
 syn-1.0.109
 syn-2.0.52
 target-2.0.0
@@ -118,7 +118,6 @@ utf8parse-0.2.1
 uuid-1.7.0
 vec_map-0.8.2
 version_check-0.9.4
-void-1.0.2
 wasi-0.11.0+wasi-snapshot-preview1
 which-6.0.0
 winapi-0.3.9
@@ -150,7 +149,7 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://api.github.com/repos/casey/just/tarball/1.25.1 -> just-1.25.1.tar.gz
+SRC_URI="https://api.github.com/repos/casey/just/tarball/1.25.2 -> just-1.25.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
