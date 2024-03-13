@@ -7,7 +7,7 @@ inherit user
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="https://jenkins.io/"
 LICENSE="MIT"
-SRC_URI="https://get.jenkins.io/war/2.448/jenkins.war -> jenkins-bin-2.448.war"
+SRC_URI="https://get.jenkins.io/war/2.449/jenkins.war -> jenkins-bin-2.449.war"
 SLOT="0"
 KEYWORDS="*"
 IUSE=""

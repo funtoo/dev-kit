@@ -11,7 +11,7 @@ anstyle-1.0.6
 anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
-anyhow-1.0.80
+anyhow-1.0.81
 arc-swap-1.7.0
 autocfg-1.1.0
 base16ct-0.2.0
@@ -194,7 +194,7 @@ openssl-src-300.2.3+3.2.1
 openssl-sys-0.9.101
 ordered-float-2.10.1
 orion-0.17.6
-os_info-3.7.0
+os_info-3.8.0
 overload-0.1.1
 p384-0.13.0
 parking_lot-0.12.1
@@ -209,7 +209,7 @@ pkg-config-0.3.30
 powerfmt-0.2.0
 ppv-lite86-0.2.17
 primeorder-0.13.6
-proc-macro2-1.0.78
+proc-macro2-1.0.79
 prodash-26.2.2
 pulldown-cmark-0.9.6
 quote-1.0.35
@@ -262,8 +262,8 @@ syn-2.0.52
 tar-0.4.40
 tempfile-3.10.1
 terminal_size-0.3.0
-thiserror-1.0.57
-thiserror-impl-1.0.57
+thiserror-1.0.58
+thiserror-impl-1.0.58
 thread_local-1.1.8
 time-0.3.34
 time-core-0.1.2
