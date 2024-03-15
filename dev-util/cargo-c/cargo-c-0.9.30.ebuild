@@ -36,9 +36,9 @@ cargo-util-0.2.9
 cbindgen-0.26.0
 cc-1.0.90
 cfg-if-1.0.0
-clap-4.5.2
+clap-4.5.3
 clap_builder-4.5.2
-clap_derive-4.5.0
+clap_derive-4.5.3
 clap_lex-0.7.0
 clru-0.6.1
 color-print-0.3.5
@@ -142,6 +142,7 @@ hashbrown-0.12.3
 hashbrown-0.14.3
 hashlink-0.8.4
 heck-0.4.1
+heck-0.5.0
 hermit-abi-0.3.9
 hex-0.4.3
 hkdf-0.12.4
