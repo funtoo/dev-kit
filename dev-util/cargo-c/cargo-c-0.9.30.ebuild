@@ -195,7 +195,7 @@ openssl-src-300.2.3+3.2.1
 openssl-sys-0.9.101
 ordered-float-2.10.1
 orion-0.17.6
-os_info-3.8.0
+os_info-3.8.1
 overload-0.1.1
 p384-0.13.0
 parking_lot-0.12.1
@@ -259,7 +259,7 @@ strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.52
+syn-2.0.53
 tar-0.4.40
 tempfile-3.10.1
 terminal_size-0.3.0
