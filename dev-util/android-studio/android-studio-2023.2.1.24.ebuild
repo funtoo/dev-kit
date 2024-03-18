@@ -31,7 +31,7 @@ QA_PREBUILT="
 
 DESCRIPTION="Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/studio"
-SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.2.1.23/android-studio-2023.2.1.23-linux.tar.gz -> android-studio-2023.2.1.23-linux.tar.gz"
+SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.2.1.24/android-studio-2023.2.1.24-linux.tar.gz -> android-studio-2023.2.1.24-linux.tar.gz"
 
 LICENSE="Apache-2.0 android-sdk"
 SLOT="0"
@@ -92,12 +92,12 @@ src_install() {
 	local fn_path
 	# These have been moving around on us:
 	for fn in clang-tidy clangd; do
-		fn_path=$(cd "${D}"; find ."${dir}/plugins/c-clangd/bin/clang/linux" -name $fn)
+		fn_path=$(cd "${D}"; find ."${dir}/plugins/c-clangd-plugin/bin/clang/linux" -name $fn)
 		if [[ "${fn_path#.}" != "" ]]; then
 			fperms 755 ${fn_path#.}
 		fi
 	done
-	fperms -R 755 "${dir}"/plugins/terminal/{,fish}
+	fperms -R 755 "${dir}"/plugins/terminal/shell-integrations/{,fish}
 
 	newicon "bin/studio.png" "${PN}.png"
 	make_wrapper ${PN} ${dir}/bin/studio.sh
