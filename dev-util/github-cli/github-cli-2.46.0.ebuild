@@ -13,8 +13,8 @@ EGO_SUM=(
 	"github.com/!netflix/go-expect v0.0.0-20220104043353-73e0943537d2/go.mod"
 	"github.com/alecthomas/chroma v0.10.0"
 	"github.com/alecthomas/chroma v0.10.0/go.mod"
-	"github.com/alessio/shellescape v1.4.1"
-	"github.com/alessio/shellescape v1.4.1/go.mod"
+	"github.com/alessio/shellescape v1.4.2"
+	"github.com/alessio/shellescape v1.4.2/go.mod"
 	"github.com/aymanbagabas/go-osc52 v1.0.3"
 	"github.com/aymanbagabas/go-osc52 v1.0.3/go.mod"
 	"github.com/aymerick/douceur v0.2.0"
@@ -40,14 +40,14 @@ EGO_SUM=(
 	"github.com/cli/shurcoo!l-graphql v0.0.4"
 	"github.com/cli/shurcoo!l-graphql v0.0.4/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.3"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.3/go.mod"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.4"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod"
 	"github.com/creack/pty v1.1.9/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
 	"github.com/creack/pty v1.1.21"
 	"github.com/creack/pty v1.1.21/go.mod"
-	"github.com/danieljoos/wincred v1.2.0"
-	"github.com/danieljoos/wincred v1.2.0/go.mod"
+	"github.com/danieljoos/wincred v1.2.1"
+	"github.com/danieljoos/wincred v1.2.1/go.mod"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
 	"github.com/davecgh/go-spew v1.1.1"
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
@@ -177,8 +177,8 @@ EGO_SUM=(
 	"github.com/yuin/goldmark v1.5.2/go.mod"
 	"github.com/yuin/goldmark-emoji v1.0.1"
 	"github.com/yuin/goldmark-emoji v1.0.1/go.mod"
-	"github.com/zalando/go-keyring v0.2.3"
-	"github.com/zalando/go-keyring v0.2.3/go.mod"
+	"github.com/zalando/go-keyring v0.2.4"
+	"github.com/zalando/go-keyring v0.2.4/go.mod"
 	"golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod"
 	"golang.org/x/crypto v0.0.0-20210921155107-089bfa567519/go.mod"
 	"golang.org/x/crypto v0.17.0"
@@ -207,8 +207,8 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10/go.mod"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
 	"golang.org/x/sys v0.6.0/go.mod"
-	"golang.org/x/sys v0.15.0"
-	"golang.org/x/sys v0.15.0/go.mod"
+	"golang.org/x/sys v0.18.0"
+	"golang.org/x/sys v0.18.0/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
 	"golang.org/x/term v0.15.0"
@@ -235,8 +235,8 @@ EGO_SUM=(
 	"google.golang.org/grpc v1.56.3/go.mod"
 	"google.golang.org/protobuf v1.26.0-rc.1/go.mod"
 	"google.golang.org/protobuf v1.26.0/go.mod"
-	"google.golang.org/protobuf v1.30.0"
-	"google.golang.org/protobuf v1.30.0/go.mod"
+	"google.golang.org/protobuf v1.33.0"
+	"google.golang.org/protobuf v1.33.0/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
 	"gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15"
 	"gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15/go.mod"
@@ -251,8 +251,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/3ca179bcdeb46b5e54ddc6cad8feb6addf487d7c -> cli-2.45.0-3ca179b.tar.gz
-https://direct.funtoo.org/6e/23/90/6e239023206c6aaf2b7a98f91c25830a1c91884293ec28d2ed561ce6cd344d39959cadec3f8bb17d10e2eab7d46e40faac182b87eacdd8be6628d5fe4cde1069 -> github-cli-2.45.0-funtoo-go-bundle-d4081a4cd93e5d5a2a41aae4d64e9ef4c301d91080e3144d9ff267ce0fdd4a4cb400ea7cdad0a8c994f0888b75742e87ec2556aaeaf9d5787fdcab9a52b40684.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/b54f7a3bde50df3c31fdd68b638a0c0378a0ad58 -> cli-2.46.0-b54f7a3.tar.gz
+https://direct.funtoo.org/33/7f/62/337f620bac446f4f10b7313566c3044e7890be015ab8b237603cea2f1f80a88b54ae1949834ba220439a089d54b3dda22093e5c158391f461f5e403862f7e909 -> github-cli-2.46.0-funtoo-go-bundle-08d3d23bcaf8575ad5338fcc8b53a3d583b3bdc2d758b55ba0720775f1d59551300ad4569392feb02e0f763804b7eb5e1dd819005efc0faabf9ae33fe4afd90c.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -264,7 +264,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.45.0"
+	export GH_VERSION="v2.46.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
