@@ -76,7 +76,7 @@ fallible-streaming-iterator-0.1.9
 faster-hex-0.9.0
 fastrand-2.0.1
 ff-0.13.0
-fiat-crypto-0.2.6
+fiat-crypto-0.2.7
 filetime-0.2.23
 flate2-1.0.28
 foreign-types-0.3.2
@@ -275,7 +275,7 @@ toml-0.5.11
 toml-0.8.12
 toml_datetime-0.6.5
 toml_edit-0.21.1
-toml_edit-0.22.8
+toml_edit-0.22.9
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
