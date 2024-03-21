@@ -169,7 +169,7 @@ libloading-0.8.3
 libnghttp2-sys-0.1.9+1.58.0
 libsqlite3-sys-0.27.0
 libssh2-sys-0.3.0
-libz-sys-1.1.15
+libz-sys-1.1.16
 linux-raw-sys-0.4.13
 lock_api-0.4.11
 log-0.4.21

@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="a Java IDE by JetBrains (Community Edition)"
 HOMEPAGE="https://www.jetbrains.com/idea"
-SRC_URI="https://download.jetbrains.com/idea/ideaIC-2023.3.5.tar.gz -> idea-community-2023.3.5.tar.gz"
+SRC_URI="https://download.jetbrains.com/idea/ideaIC-2023.3.6.tar.gz -> idea-community-2023.3.6.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
