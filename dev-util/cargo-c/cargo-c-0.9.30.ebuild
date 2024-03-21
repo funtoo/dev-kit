@@ -251,7 +251,7 @@ shell-escape-0.1.5
 shell-words-1.1.0
 signature-2.2.0
 sized-chunks-0.6.5
-smallvec-1.13.1
+smallvec-1.13.2
 socket2-0.5.6
 spki-0.7.3
 static_assertions-1.1.0
