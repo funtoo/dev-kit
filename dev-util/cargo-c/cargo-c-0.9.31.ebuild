@@ -13,7 +13,7 @@ anstyle-parse-0.2.3
 anstyle-query-1.0.2
 anstyle-wincon-3.0.2
 anyhow-1.0.81
-arc-swap-1.7.0
+arc-swap-1.7.1
 autocfg-1.1.0
 base16ct-0.2.0
 base64-0.21.7
@@ -25,7 +25,7 @@ block-buffer-0.10.4
 bstr-1.9.1
 btoi-0.4.3
 bumpalo-3.15.4
-bytes-1.5.0
+bytes-1.6.0
 bytesize-1.3.0
 cargo-0.78.0
 cargo-credential-0.4.4
@@ -76,7 +76,7 @@ errno-0.3.8
 fallible-iterator-0.3.0
 fallible-streaming-iterator-0.1.9
 faster-hex-0.9.0
-fastrand-2.0.1
+fastrand-2.0.2
 ff-0.13.0
 fiat-crypto-0.2.7
 filetime-0.2.23
@@ -155,7 +155,7 @@ idna-0.5.0
 ignore-0.4.22
 im-rc-15.1.0
 indexmap-1.9.3
-indexmap-2.2.5
+indexmap-2.2.6
 is-terminal-0.4.12
 itertools-0.12.1
 itoa-1.0.10
@@ -196,7 +196,7 @@ openssl-src-300.2.3+3.2.1
 openssl-sys-0.9.101
 ordered-float-2.10.1
 orion-0.17.6
-os_info-3.8.1
+os_info-3.8.2
 overload-0.1.1
 p384-0.13.0
 parking_lot-0.12.1
@@ -219,7 +219,7 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rand_xoshiro-0.6.0
 redox_syscall-0.4.1
-regex-1.10.3
+regex-1.10.4
 regex-automata-0.1.10
 regex-automata-0.4.6
 regex-syntax-0.6.29
@@ -259,7 +259,7 @@ strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.53
+syn-2.0.55
 tar-0.4.40
 tempfile-3.10.1
 terminal_size-0.3.0

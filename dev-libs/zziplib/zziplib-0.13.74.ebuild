@@ -27,10 +27,6 @@ DEPEND="
 	sdl? ( >=media-libs/libsdl-1.2.6 )
 "
 RDEPEND="${DEPEND}"
-PATCHES=(
-	"${FILESDIR}"/"${PN}-0.13.72-incompatible-pointer-types.patch"
-	"${FILESDIR}"/"${PN}-0.13.72-Wint-conversion.patch"
-)
 
 S="${WORKDIR}/gdraheim-zziplib-df9e9c0"
 

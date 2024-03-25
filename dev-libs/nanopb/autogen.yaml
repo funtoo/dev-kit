@@ -1,0 +1,8 @@
+nanopb:
+  generator: github-1
+  packages:
+    - nanopb:
+        github:
+          user: nanopb
+          repo: nanopb
+          query: tags

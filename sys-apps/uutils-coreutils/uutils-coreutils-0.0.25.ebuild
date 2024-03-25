@@ -19,18 +19,19 @@ bigdecimal-0.4.0
 binary-heap-plus-0.5.0
 bindgen-0.63.0
 bitflags-1.3.2
-bitflags-2.4.0
+bitflags-2.4.2
 blake2b_simd-1.0.2
-blake3-1.5.0
+blake3-1.5.1
 block-buffer-0.10.3
-bstr-1.9.0
+bstr-1.9.1
 bumpalo-3.11.1
 bytecount-0.6.7
 byteorder-1.5.0
 cc-1.0.79
 cexpr-0.6.0
 cfg-if-1.0.0
-chrono-0.4.32
+cfg_aliases-0.1.1
+chrono-0.4.35
 clang-sys-1.4.0
 clap-4.4.2
 clap_builder-4.4.2
@@ -60,7 +61,7 @@ crossterm-0.27.0
 crossterm_winapi-0.9.1
 crunchy-0.2.2
 crypto-common-0.1.6
-ctrlc-3.4.1
+ctrlc-3.4.4
 custom_derive-0.1.7
 data-encoding-2.5.0
 data-encoding-macro-0.1.14
@@ -74,8 +75,8 @@ either-1.8.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 errno-0.3.8
-exacl-0.11.0
-fastrand-2.0.0
+exacl-0.12.0
+fastrand-2.0.1
 file_diff-1.0.0
 filetime-0.2.23
 flate2-1.0.24
@@ -99,7 +100,7 @@ gcd-2.3.0
 generic-array-0.14.6
 getrandom-0.2.9
 glob-0.3.1
-half-2.3.1
+half-2.4.0
 hashbrown-0.13.2
 hermit-abi-0.3.2
 hex-0.4.3
@@ -111,7 +112,7 @@ indicatif-0.17.3
 inotify-0.9.6
 inotify-sys-0.1.5
 io-lifetimes-1.0.11
-itertools-0.12.0
+itertools-0.12.1
 itoa-1.0.4
 js-sys-0.3.64
 keccak-0.1.4
@@ -119,13 +120,13 @@ kqueue-1.0.7
 kqueue-sys-1.0.3
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.152
+libc-0.2.153
 libloading-0.7.4
 libm-0.2.7
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.12
 lock_api-0.4.9
-log-0.4.17
+log-0.4.20
 lscolors-0.16.0
 match_cfg-0.1.0
 md-5-0.10.6
@@ -133,14 +134,14 @@ memchr-2.7.1
 memmap2-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.5.4
-mio-0.8.10
-nix-0.27.1
+mio-0.8.11
+nix-0.28.0
 nom-7.1.3
 notify-6.0.1
 nu-ansi-term-0.49.0
 num-bigint-0.4.4
 num-integer-0.1.45
-num-traits-0.2.17
+num-traits-0.2.18
 num_threads-0.1.6
 number_prefix-0.4.0
 once_cell-1.19.0
@@ -173,11 +174,12 @@ rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
 rand_pcg-0.3.1
-rayon-1.8.0
-rayon-core-1.12.0
+rayon-1.9.0
+rayon-core-1.12.1
 redox_syscall-0.4.1
+redox_syscall-0.5.0
 reference-counted-singleton-0.1.2
-regex-1.10.3
+regex-1.10.4
 regex-automata-0.4.4
 regex-syntax-0.8.2
 relative-path-1.8.0
@@ -189,34 +191,35 @@ rust-ini-0.19.0
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.26
-rustix-0.38.30
+rustix-0.38.31
 same-file-1.0.6
-scopeguard-1.1.0
+scopeguard-1.2.0
 self_cell-1.0.3
 selinux-0.4.0
 selinux-sys-0.6.2
 semver-1.0.14
-serde-1.0.147
+serde-1.0.193
+serde_derive-1.0.193
 sha1-0.10.6
 sha2-0.10.8
 sha3-0.10.8
-shlex-1.1.0
+shlex-1.3.0
 signal-hook-0.3.17
 signal-hook-mio-0.2.3
 signal-hook-registry-1.4.0
 siphasher-0.3.10
 slab-0.4.7
 sm3-0.4.2
-smallvec-1.13.0
+smallvec-1.13.1
 smawk-0.3.1
 socket2-0.5.3
 strsim-0.10.0
 syn-1.0.109
-syn-2.0.23
-tempfile-3.9.0
+syn-2.0.32
+tempfile-3.10.1
 terminal_size-0.2.6
 terminal_size-0.3.0
-textwrap-0.16.0
+textwrap-0.16.1
 thiserror-1.0.37
 thiserror-impl-1.0.37
 time-0.3.20
@@ -226,15 +229,15 @@ tiny-keccak-2.0.2
 typenum-1.15.0
 unicode-ident-1.0.5
 unicode-linebreak-0.1.5
-unicode-segmentation-1.10.1
+unicode-segmentation-1.11.0
 unicode-width-0.1.11
 unicode-xid-0.2.4
 unindent-0.2.1
 utf8parse-0.2.1
-uuid-1.2.2
+uuid-1.7.0
 uutils_term_grid-0.3.0
 version_check-0.9.4
-walkdir-2.4.0
+walkdir-2.5.0
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.87
 wasm-bindgen-backend-0.2.87
@@ -242,7 +245,7 @@ wasm-bindgen-macro-0.2.87
 wasm-bindgen-macro-support-0.2.87
 wasm-bindgen-shared-0.2.87
 which-4.3.0
-wild-2.2.0
+wild-2.2.1
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.6
@@ -284,7 +287,7 @@ inherit cargo
 
 DESCRIPTION="GNU coreutils implemented as universal (cross-platform) utils, written in Rust"
 HOMEPAGE="https://github.com/uutils/coreutils"
-SRC_URI="https://api.github.com/repos/uutils/coreutils/tarball/0.0.24 -> uutils-coreutils-0.0.24.tar.gz
+SRC_URI="https://api.github.com/repos/uutils/coreutils/tarball/0.0.25 -> uutils-coreutils-0.0.25.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"

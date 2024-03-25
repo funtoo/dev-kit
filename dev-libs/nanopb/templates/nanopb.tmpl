@@ -1,0 +1,32 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit cmake flag-o-matic
+
+DESCRIPTION="plain-C Protocol Buffers for embedded/memory-constrained systems"
+HOMEPAGE="https://jpa.kapsi.fi/nanopb/ https://github.com/nanopb/nanopb"
+SRC_URI="{{ src_uri }}"
+
+LICENSE="ZLIB"
+SLOT="0"
+KEYWORDS="*"
+IUSE="doc examples +pb-malloc"
+
+RDEPEND="
+	dev-libs/protobuf
+"
+DEPEND="
+	dev-build/scons
+	${RDEPEND}
+"
+
+src_unpack() {
+	unpack "${A}"
+	mv "${WORKDIR}"/{{ github_user}}-{{ github_repo }}-* "${S}"
+}
+
+src_configure() {
+	use pb-malloc && append-cppflags "-DPB_ENABLE_MALLOC"
+	cmake_src_configure
+}

@@ -10,5 +10,5 @@ zziplib_rule:
           repo: zziplib
           query: tags
         patches:
-          - 0.13.72-incompatible-pointer-types.patch
-          - 0.13.72-Wint-conversion.patch
+          #- 0.13.72-incompatible-pointer-types.patch
+          #- 0.13.72-Wint-conversion.patch
