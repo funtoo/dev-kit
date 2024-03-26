@@ -14,7 +14,7 @@ anstyle-query-1.0.2
 anstyle-wincon-3.0.2
 anyhow-1.0.81
 arc-swap-1.7.1
-autocfg-1.1.0
+autocfg-1.2.0
 base16ct-0.2.0
 base64-0.21.7
 base64ct-1.6.0
@@ -38,9 +38,9 @@ cargo-util-schemas-0.2.0
 cbindgen-0.26.0
 cc-1.0.90
 cfg-if-1.0.0
-clap-4.5.3
+clap-4.5.4
 clap_builder-4.5.2
-clap_derive-4.5.3
+clap_derive-4.5.4
 clap_lex-0.7.0
 clru-0.6.1
 color-print-0.3.5
@@ -158,7 +158,7 @@ indexmap-1.9.3
 indexmap-2.2.6
 is-terminal-0.4.12
 itertools-0.12.1
-itoa-1.0.10
+itoa-1.0.11
 jobserver-0.1.28
 js-sys-0.3.69
 kstring-2.0.0
@@ -241,7 +241,7 @@ serde-untagged-0.1.5
 serde-value-0.7.0
 serde_derive-1.0.197
 serde_ignored-0.1.10
-serde_json-1.0.114
+serde_json-1.0.115
 serde_spanned-0.6.5
 sha1-0.10.6
 sha1_smol-1.0.0
