@@ -27,7 +27,7 @@ btoi-0.4.3
 bumpalo-3.15.4
 bytes-1.6.0
 bytesize-1.3.0
-cargo-0.78.0
+cargo-0.78.1
 cargo-credential-0.4.4
 cargo-credential-libsecret-0.4.3
 cargo-credential-macos-keychain-0.4.3
@@ -176,7 +176,7 @@ lock_api-0.4.11
 log-0.4.21
 matchers-0.1.0
 maybe-async-0.2.10
-memchr-2.7.1
+memchr-2.7.2
 memmap2-0.9.4
 minimal-lexical-0.2.1
 miniz_oxide-0.7.2
@@ -193,7 +193,7 @@ openssl-0.10.64
 openssl-macros-0.1.1
 openssl-probe-0.1.5
 openssl-src-300.2.3+3.2.1
-openssl-sys-0.9.101
+openssl-sys-0.9.102
 ordered-float-2.10.1
 orion-0.17.6
 os_info-3.8.2
@@ -223,7 +223,7 @@ regex-1.10.4
 regex-automata-0.1.10
 regex-automata-0.4.6
 regex-syntax-0.6.29
-regex-syntax-0.8.2
+regex-syntax-0.8.3
 rfc6979-0.4.0
 rusqlite-0.30.0
 rustfix-0.8.1
