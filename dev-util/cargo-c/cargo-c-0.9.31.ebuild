@@ -205,7 +205,7 @@ pasetors-0.6.8
 pathdiff-0.2.1
 pem-rfc7468-0.7.0
 percent-encoding-2.3.1
-pin-project-lite-0.2.13
+pin-project-lite-0.2.14
 pkcs8-0.10.2
 pkg-config-0.3.30
 powerfmt-0.2.0
