@@ -233,8 +233,8 @@ same-file-1.0.6
 schannel-0.1.23
 scopeguard-1.2.0
 sec1-0.7.3
-security-framework-2.9.2
-security-framework-sys-2.9.1
+security-framework-2.10.0
+security-framework-sys-2.10.0
 semver-1.0.22
 serde-1.0.197
 serde-untagged-0.1.5
@@ -259,7 +259,7 @@ strsim-0.11.0
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.55
+syn-2.0.57
 tar-0.4.40
 tempfile-3.10.1
 terminal_size-0.3.0
