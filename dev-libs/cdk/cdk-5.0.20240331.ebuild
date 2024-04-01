@@ -5,7 +5,7 @@ EAPI=7
 MY_P="${P%.*}-${P##*.}"
 DESCRIPTION="A library of curses widgets"
 HOMEPAGE="https://dickey.his.com/cdk/cdk.html https://github.com/ThomasDickey/cdk-snapshots"
-SRC_URI="https://invisible-mirror.net/archives/cdk/cdk-5.0-20230201.tgz -> cdk-5.0-20230201.tgz"
+SRC_URI="https://invisible-mirror.net/archives/cdk/cdk-5.0-20240331.tgz -> cdk-5.0-20240331.tgz"
 S="${WORKDIR}"/${MY_P}
 
 LICENSE="MIT"
