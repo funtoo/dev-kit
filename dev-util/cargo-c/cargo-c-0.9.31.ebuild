@@ -61,7 +61,7 @@ crypto-common-0.1.6
 ct-codecs-1.1.1
 curl-0.4.46
 curl-sys-0.4.72+curl-8.6.0
-der-0.7.8
+der-0.7.9
 deranged-0.3.11
 digest-0.10.7
 dunce-1.0.4
