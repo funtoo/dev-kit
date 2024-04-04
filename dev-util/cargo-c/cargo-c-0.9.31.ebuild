@@ -255,11 +255,11 @@ smallvec-1.13.2
 socket2-0.5.6
 spki-0.7.3
 static_assertions-1.1.0
-strsim-0.11.0
+strsim-0.11.1
 subtle-2.5.0
 supports-hyperlinks-2.1.0
 syn-1.0.109
-syn-2.0.57
+syn-2.0.58
 tar-0.4.40
 tempfile-3.10.1
 terminal_size-0.3.0
