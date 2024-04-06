@@ -85,7 +85,7 @@ foreign-types-0.3.2
 foreign-types-shared-0.1.1
 form_urlencoded-1.2.1
 generic-array-0.14.7
-getrandom-0.2.12
+getrandom-0.2.13
 git2-0.18.3
 git2-curl-0.19.0
 gix-0.57.1
