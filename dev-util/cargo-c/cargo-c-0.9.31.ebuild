@@ -36,7 +36,7 @@ cargo-platform-0.1.8
 cargo-util-0.2.10
 cargo-util-schemas-0.2.0
 cbindgen-0.26.0
-cc-1.0.90
+cc-1.0.91
 cfg-if-1.0.0
 clap-4.5.4
 clap_builder-4.5.2
