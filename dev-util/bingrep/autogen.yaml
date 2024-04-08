@@ -1,0 +1,10 @@
+bingrep:
+  generator: github-1
+  packages:
+    - bingrep:
+        github:
+          user: m4b
+          repo: bingrep
+          query: tags
+        extensions:
+          - rust

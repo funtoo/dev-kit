@@ -1,0 +1,10 @@
+cargo-c:
+  generator: github-1
+  packages:
+    - cargo-c:
+        github:
+          user: lu-zero
+          repo: cargo-c
+          query: releases
+        extensions:
+          - rust

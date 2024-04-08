@@ -1,0 +1,10 @@
+bottom:
+  generator: github-1
+  packages:
+    - bottom:
+        github:
+          user: ClementTsang
+          repo: bottom
+          query: releases
+        extensions:
+          - rust

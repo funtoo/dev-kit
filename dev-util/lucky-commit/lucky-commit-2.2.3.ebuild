@@ -2,62 +2,20 @@
 
 EAPI=7
 
-CRATES="
-autocfg-1.2.0
-bitflags-1.3.2
-block-buffer-0.10.4
-cc-1.0.90
-cfg-if-1.0.0
-cl-sys-0.4.3
-cpufeatures-0.2.12
-crossbeam-0.8.4
-crossbeam-channel-0.5.12
-crossbeam-deque-0.8.5
-crossbeam-epoch-0.9.18
-crossbeam-queue-0.3.11
-crossbeam-utils-0.8.19
-crypto-common-0.1.6
-digest-0.10.7
-enum_primitive-0.1.1
-futures-0.1.31
-generic-array-0.14.7
-hermit-abi-0.3.9
-libc-0.2.153
-nodrop-0.1.14
-num-complex-0.4.5
-num-traits-0.1.43
-num-traits-0.2.18
-num_cpus-1.16.0
-ocl-0.19.6
-ocl-core-0.11.5
-ocl-core-vector-0.1.1
-proc-macro2-1.0.79
-quote-1.0.35
-qutex-0.2.6
-rustc_version-0.4.0
-semver-1.0.22
-sha-1-0.10.1
-sha1-asm-0.5.2
-sha2-0.10.8
-sha2-asm-0.6.3
-syn-2.0.55
-thiserror-1.0.58
-thiserror-impl-1.0.58
-typenum-1.17.0
-unicode-ident-1.0.12
-version_check-0.9.4
-"
-
 inherit cargo
 
-DESCRIPTION="Make your git commits lucky!"
+DESCRIPTION="Customize your git commit hashes!"
 HOMEPAGE="https://github.com/not-an-aardvark/lucky-commit"
-SRC_URI="https://api.github.com/repos/not-an-aardvark/lucky-commit/tarball/refs/tags/v2.2.3 -> lucky-commit-2.2.3.tar.gz
-	$(cargo_crate_uris ${CRATES})"
+SRC_URI="https://github.com/not-an-aardvark/lucky-commit/tarball/00000002877d35de410890b322e3f76790706390 -> lucky-commit-2.2.3-0000000.tar.gz
+https://direct.funtoo.org/d8/af/c9/d8afc90cf86ad84ca5dd94251ddb3ea456dcaad4d1305c117d9e0e0558fed01c1f6f9ab3ef5148d9b53eddfc3f6d69d4b9ad9930fa24efa07b7a8e2a3fb3268a -> lucky-commit-2.2.3-funtoo-crates-bundle-bb0f63a6cb9b09dbfea55b0fbc0f1d6d8b9a48c0546e8fa9cb2e6a5226cfc320bb4d6770c96e6fcfb042d8a2cd16affe49edab61cc179beadee2c7d4084a78a8.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="*"
+
+BDEPEND="virtual/rust"
+
+QA_FLAGS_IGNORED="/usr/bin/lucky-commit"
 
 src_unpack() {
 	cargo_src_unpack

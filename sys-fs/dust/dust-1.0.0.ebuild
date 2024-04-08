@@ -2,117 +2,12 @@
 
 EAPI=7
 
-CRATES="
-aho-corasick-1.1.3
-ansi_term-0.12.1
-anstream-0.6.13
-anstyle-1.0.6
-anstyle-parse-0.2.3
-anstyle-query-1.0.2
-anstyle-wincon-3.0.2
-assert_cmd-2.0.14
-bitflags-1.3.2
-bitflags-2.5.0
-bstr-1.9.1
-cfg-if-1.0.0
-cfg_aliases-0.1.1
-clap-4.5.4
-clap_builder-4.5.2
-clap_complete-4.5.1
-clap_lex-0.7.0
-clap_mangen-0.2.20
-colorchoice-1.0.0
-config-file-0.2.3
-core-foundation-sys-0.8.6
-crossbeam-deque-0.8.5
-crossbeam-epoch-0.9.18
-crossbeam-utils-0.8.19
-ctrlc-3.4.4
-difflib-0.4.0
-directories-4.0.1
-dirs-sys-0.3.7
-doc-comment-0.3.3
-either-1.10.0
-errno-0.3.8
-fastrand-2.0.2
-filesize-0.2.0
-getrandom-0.2.12
-hermit-abi-0.3.9
-io-lifetimes-1.0.11
-libc-0.2.153
-libredox-0.0.1
-linux-raw-sys-0.3.8
-linux-raw-sys-0.4.13
-lscolors-0.13.0
-memchr-2.7.1
-nix-0.28.0
-ntapi-0.4.1
-nu-ansi-term-0.46.0
-once_cell-1.19.0
-overload-0.1.1
-predicates-3.1.0
-predicates-core-1.0.6
-predicates-tree-1.0.9
-proc-macro2-1.0.79
-quote-1.0.35
-rayon-1.10.0
-rayon-core-1.12.1
-redox_syscall-0.4.1
-redox_users-0.4.4
-regex-1.10.4
-regex-automata-0.4.6
-regex-syntax-0.8.2
-roff-0.2.1
-rustix-0.37.27
-rustix-0.38.32
-serde-1.0.197
-serde_derive-1.0.197
-stfu8-0.2.7
-strsim-0.11.0
-syn-2.0.55
-sysinfo-0.27.8
-tempfile-3.10.1
-terminal_size-0.2.6
-termtree-0.4.1
-thiserror-1.0.58
-thiserror-impl-1.0.58
-thousands-0.2.0
-toml-0.5.11
-unicode-ident-1.0.12
-unicode-width-0.1.11
-utf8parse-0.2.1
-wait-timeout-0.2.0
-wasi-0.11.0+wasi-snapshot-preview1
-winapi-0.3.9
-winapi-i686-pc-windows-gnu-0.4.0
-winapi-util-0.1.6
-winapi-x86_64-pc-windows-gnu-0.4.0
-windows-sys-0.48.0
-windows-sys-0.52.0
-windows-targets-0.48.5
-windows-targets-0.52.4
-windows_aarch64_gnullvm-0.48.5
-windows_aarch64_gnullvm-0.52.4
-windows_aarch64_msvc-0.48.5
-windows_aarch64_msvc-0.52.4
-windows_i686_gnu-0.48.5
-windows_i686_gnu-0.52.4
-windows_i686_msvc-0.48.5
-windows_i686_msvc-0.52.4
-windows_x86_64_gnu-0.48.5
-windows_x86_64_gnu-0.52.4
-windows_x86_64_gnullvm-0.48.5
-windows_x86_64_gnullvm-0.52.4
-windows_x86_64_msvc-0.48.5
-windows_x86_64_msvc-0.52.4
-"
-
-inherit cargo
+inherit bash-completion-r1 cargo
 
 DESCRIPTION="A more intuitive version of du in rust"
 HOMEPAGE="https://github.com/bootandy/dust"
-SRC_URI="https://api.github.com/repos/bootandy/dust/tarball/v1.0.0 -> dust-1.0.0.tar.gz
-	$(cargo_crate_uris ${CRATES})"
+SRC_URI="https://github.com/bootandy/dust/tarball/082f15a0e2a5e8a573a2a42a65f146e755b982ed -> dust-1.0.0-082f15a.tar.gz
+https://direct.funtoo.org/e3/3a/55/e33a55111ff9d0ef86f3c59bd4082411fda55595199a9d3eebe8ee18c74e36e9a0ffce72fd330884130d9731711b546dab2533137aad4d202f0a81960acf1381 -> dust-1.0.0-funtoo-crates-bundle-7179d75c0469a030286fcad3918d3276f677c6e16fe591941423a2f2c6dff792865a6e967ecc4969f08410ddd9210ef23a70cbebc5f9d2266a93d7b7b6752eb8.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
@@ -120,7 +15,9 @@ KEYWORDS="*"
 
 DEPEND=""
 RDEPEND=""
-BDEPEND=">=virtual/rust-1.54.0"
+BDEPEND="virtual/rust"
+
+DOCS=( README.md )
 
 QA_FLAGS_IGNORED="/usr/bin/dust"
 
@@ -133,4 +30,11 @@ src_unpack() {
 src_install() {
 	cargo_src_install
 	einstalldocs
+
+	doman man-page/dust.1
+
+	newbashcomp completions/dust.bash dust
+
+	insinto /usr/share/fish/vendor_completions.d/
+	doins completions/dust.fish
 }

@@ -1,0 +1,10 @@
+eza:
+  generator: github-1
+  packages:
+    - eza:
+        github:
+          user: eza-community
+          repo: eza
+          query: releases
+        extensions:
+          - rust

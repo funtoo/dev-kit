@@ -1,0 +1,10 @@
+onefetch:
+  generator: github-1
+  packages:
+    - onefetch:
+        github:
+          user: o2sh
+          repo: onefetch
+          query: releases
+        extensions:
+          - rust

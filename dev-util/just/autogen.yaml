@@ -1,0 +1,10 @@
+just:
+  generator: github-1
+  packages:
+    - just:
+        github:
+          user: casey
+          repo: just
+          query: releases
+        extensions:
+          - rust

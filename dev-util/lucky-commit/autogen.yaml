@@ -1,0 +1,10 @@
+lucky-commit:
+  generator: github-1
+  packages:
+    - lucky-commit:
+        github:
+          user: not-an-aardvark
+          repo: lucky-commit
+          query: tags
+        extensions:
+          - rust

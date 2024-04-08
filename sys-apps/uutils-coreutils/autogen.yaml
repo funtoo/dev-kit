@@ -1,0 +1,10 @@
+uutils-coreutils:
+  generator: github-1
+  packages:
+    - uutils-coreutils:
+        github:
+          user: uutils
+          repo: coreutils
+          query: releases
+        extensions:
+          - rust

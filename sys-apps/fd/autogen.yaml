@@ -1,0 +1,10 @@
+fd:
+  generator: github-1
+  packages:
+    - fd:
+        github:
+          user: sharkdp
+          repo: fd
+          query: releases
+        extensions:
+          - rust

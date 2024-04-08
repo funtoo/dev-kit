@@ -1,0 +1,10 @@
+tealdeer:
+  generator: github-1
+  packages:
+    - tealdeer:
+        github:
+          user: dbrgn
+          repo: tealdeer
+          query: releases
+        extensions:
+          - rust

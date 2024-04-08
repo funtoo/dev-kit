@@ -1,0 +1,14 @@
+rust-analyzer:
+  generator: github-1
+  packages:
+    - rust-analyzer:
+        github:
+          user: rust-lang
+          repo: rust-analyzer
+          query: releases
+          transform:
+            - kind: string
+              match: '-'
+              replace: ''
+        extensions:
+          - rust

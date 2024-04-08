@@ -1,0 +1,10 @@
+dust:
+  generator: github-1
+  packages:
+    - dust:
+        github:
+          user: bootandy
+          repo: dust
+          query: tags
+        extensions:
+          - rust
