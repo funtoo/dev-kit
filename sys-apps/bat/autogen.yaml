@@ -1,0 +1,10 @@
+bat:
+  generator: github-1
+  packages:
+    - bat:
+        github:
+          user: sharkdp
+          repo: bat
+          query: releases
+        extensions:
+          - rust
