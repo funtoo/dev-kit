@@ -570,8 +570,8 @@ EGO_SUM=(
 	"google.golang.org/genproto/googleapis/api v0.0.0-20240125205218-1f4bbc51befe/go.mod"
 	"google.golang.org/genproto/googleapis/rpc v0.0.0-20240116215550-a9fa1716bcac"
 	"google.golang.org/genproto/googleapis/rpc v0.0.0-20240116215550-a9fa1716bcac/go.mod"
-	"google.golang.org/grpc v1.61.1"
-	"google.golang.org/grpc v1.61.1/go.mod"
+	"google.golang.org/grpc v1.61.2"
+	"google.golang.org/grpc v1.61.2/go.mod"
 	"google.golang.org/protobuf v1.26.0-rc.1/go.mod"
 	"google.golang.org/protobuf v1.26.0/go.mod"
 	"google.golang.org/protobuf v1.33.0"
@@ -603,8 +603,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/9744489510054d021cc06595a0572d15b6135851 -> cli-2.47.0-9744489.tar.gz
-https://direct.funtoo.org/6b/8f/5a/6b8f5ac005dade1f23441813e74ef173692cf496c0dcbb85087e0b063e78c42005bce3645e97d42250ce1c0de4e16ddc1ef12ea7eb27055e7fb833d73ca0606d -> github-cli-2.47.0-funtoo-go-bundle-925b10e4d84cd30946141ebdbde902c97cc4c3bb7058f7e11d5fc3a1b3d16e3b58ac5c58fb283a9d3ea8f7a15f425e04994af811209a84090dca6b4a030572dd.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/fd4f2c9c1f76cd66a26322ce640894a4f2deaff7 -> cli-2.48.0-fd4f2c9.tar.gz
+https://direct.funtoo.org/73/ca/82/73ca820f63aacaf9bfa48c6d8d8c7ec091c9443925b0a857fdc36a986419d168a76a3506971a5eaf103d81e841e9f6b4048e095843672bd7188227fe862a36e3 -> github-cli-2.48.0-funtoo-go-bundle-d16ff5818bcdb2e306a449aa29d0e0b47032a82c457ab4e47099b2beca0d01c16839b3c15a8eaaa2202316269cf1fe1d759071c6fd3199bebb0881fddaa4e70b.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -616,7 +616,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.47.0"
+	export GH_VERSION="v2.48.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
