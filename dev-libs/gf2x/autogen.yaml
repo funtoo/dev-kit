@@ -1,0 +1,12 @@
+gf2x_rule:
+  packages:
+    - gf2x:
+        cat: dev-libs
+        desc: C/C++ routines for fast arithmetic in GF(2)[x]
+        homepage: http://gf2x.gforge.inria.fr/
+        gitlab:
+          project_id: 17662
+          server: "gitlab.inria.fr"
+          user: gf2x
+          repo: gf2x
+          query: releases

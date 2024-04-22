@@ -1,0 +1,13 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=>=sys-apps/sed-4
+DESCRIPTION=Utility to wrap icon resources into C++ code, from the FOX Toolkit
+EAPI=7
+HOMEPAGE=http://www.fox-toolkit.org/
+IUSE=debug doc profile
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=ftp://ftp.fox-toolkit.org/pub/fox-1.7.84.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	fox	0cb3dc657963973a9f0573859ab653d6	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=92907741f10d9e9b62fb28425ab8d258

@@ -1,0 +1,17 @@
+libtecla_simple_rule:
+  generator: simple
+  packages:
+    - libtecla:
+        cat: dev-libs
+        desc: Tecla command-line editing library
+        homepage: http://www.astro.caltech.edu/~mcs/tecla/
+        src_uri: https://sites.astro.caltech.edu/~mcs/tecla/libtecla-1.6.3.tar.gz
+        patches:
+            - 1.6.1-install.patch
+            - 1.6.1-no-strip.patch
+            - 1.6.3-ldflags.patch
+            - 1.6.3-prll-build.patch
+            - 1.6.1-prll-install.patch
+            - 1.6.3-static-libs.patch
+            - 1.6.3-secure-runpath.patch
+        version: 1.6.3

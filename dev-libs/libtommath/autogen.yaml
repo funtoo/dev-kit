@@ -1,0 +1,7 @@
+libtommath_rule:
+  generator: github-1
+  packages:
+    - libtommath:
+        github:
+          user: libtom
+          query: tags

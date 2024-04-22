@@ -1,14 +1,13 @@
 BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
-DEFINED_PHASES=compile configure prepare
-DEPEND=sys-libs/ncurses:=
-DESCRIPTION=Tecla command-line editing library
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-apps/texinfo
+DESCRIPTION=A Debug Malloc Library
 EAPI=7
-HOMEPAGE=http://www.astro.caltech.edu/~mcs/tecla/
-IUSE=static-libs
+HOMEPAGE=http://dmalloc.com
+IUSE=threads
 KEYWORDS=*
-LICENSE=icu
-RDEPEND=sys-libs/ncurses:=
+LICENSE=CC-BY-SA-3.0
 SLOT=0
-SRC_URI=https://sites.astro.caltech.edu/~mcs/tecla/libtecla-1.6.3.tar.gz -> libtecla-1.6.3.tar.gz
+SRC_URI=https://github.com/j256/dmalloc/tarball/cf4f98301a719a12bd39e51ac540d6ead4d970d4 -> dmalloc-5.6.5-cf4f983.tar.gz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=f8cf2777bae9c1aff55f1d7c9625dbbf
+_md5_=034ccc8a2081f930bccb63d5b7b64a91

@@ -1,0 +1,14 @@
+dmalloc_rule:
+  generator: github-1
+  packages:
+    - dmalloc:
+        github:
+          user: j256
+          query: tags
+          transform:
+          - kind: string
+            match: 'dmalloc_release_'
+            replace: ''
+          - kind: string
+            match: '_'
+            replace: '.'

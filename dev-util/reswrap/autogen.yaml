@@ -1,0 +1,10 @@
+reswrap_simple_rule:
+  generator: simple
+  packages:
+    - reswrap:
+        cat: dev-util
+        desc: Utility to wrap icon resources into C++ code, from the FOX Toolkit
+        homepage: http://www.fox-toolkit.org/
+        src_uri: http://fox-toolkit.org/ftp/fox-1.7.84.tar.gz
+        version: 6.0.0
+        foxversion: 1.7.84
