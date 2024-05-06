@@ -76,7 +76,7 @@ src_install() {
 	insinto "${dir}"
 	doins -r *
 
-	fperms 755 "${dir}"/bin/{fsnotifier,format.sh,game-tools.sh,inspect.sh,ltedit.sh,profiler.sh,studio.sh,restart.py}
+	fperms 755 "${dir}"/bin/{fsnotifier,format.sh,game-tools.sh,inspect.sh,ltedit.sh,profiler.sh,studio.sh,restarter}
 	fperms -R 755 "${dir}"/bin/helpers
 	fperms -R 755 "${dir}"/bin/lldb
 	fperms -R 755 "${dir}"/jbr/bin
