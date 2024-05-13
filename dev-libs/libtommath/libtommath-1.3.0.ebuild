@@ -6,12 +6,14 @@ inherit autotools toolchain-funcs
 
 DESCRIPTION="Optimized and portable routines for integer theoretic applications"
 HOMEPAGE="http://www.libtom.net/"
-SRC_URI="https://github.com/libtom/libtommath/releases/download/v${PV}/ltm-${PV}.tar.xz"
+SRC_URI="https://github.com/libtom/libtommath/tarball/95d80fd8229d05dd6cb4ec88bc8d4f5377ff00ef -> libtommath-1.3.0-95d80fd.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="*"
 IUSE="doc examples static-libs"
+
+S="${WORKDIR}/libtom-libtommath-95d80fd"
 
 src_prepare() {
 	default
