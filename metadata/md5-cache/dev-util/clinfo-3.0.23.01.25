@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=dev-util/opencl-headers dev-util/opencl-icd-loader
+DESCRIPTION=A tool to display info about the system's OpenCL capabilities
+EAPI=7
+HOMEPAGE=https://github.com/Oblomov/clinfo
+KEYWORDS=*
+LICENSE=CC0-1.0
+RDEPEND=dev-util/opencl-headers dev-util/opencl-icd-loader
+SLOT=0
+SRC_URI=https://github.com/Oblomov/clinfo/archive/748c3930a9b9cb826e631d77439e2cb8f84f5bcf.zip -> clinfo-3.0.23.01.25-748c393.zip
+_md5_=d5ad31c0084f915f0dc6796bba21963b

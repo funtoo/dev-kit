@@ -1,0 +1,9 @@
+clinfo_rule:
+  generator: github-1
+  packages:
+    - clinfo:
+        version: 3.0.23.01.25
+        github:
+          user: Oblomov
+          query: snapshot
+          snapshot: 748c3930a9b9cb826e631d77439e2cb8f84f5bcf
