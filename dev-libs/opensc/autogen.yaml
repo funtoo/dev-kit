@@ -1,0 +1,9 @@
+opensc:
+  generator: github-1
+  packages:
+    - opensc:
+        github:
+          user: OpenSC
+          repo: OpenSC
+          query: releases
+          tarball: "opensc-{version}.tar.gz"

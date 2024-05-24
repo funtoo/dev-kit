@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install
+DEPEND=zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline:0= ) ssl? ( dev-libs/openssl:0= ) openct? ( >=dev-libs/openct-0.5.0 ) pace? ( dev-libs/openpace:= ) pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 ) notify? ( dev-libs/glib:2 ) app-text/docbook-xsl-stylesheets dev-libs/libxslt
+DESCRIPTION=Libraries and applications to access smartcards
+EAPI=7
+HOMEPAGE=https://github.com/OpenSC/OpenSC/wiki
+IUSE=ctapi doc openct notify pace +pcsc-lite readline secure-messaging ssl zlib
+KEYWORDS=*
+LICENSE=LGPL-2.1
+RDEPEND=zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline:0= ) ssl? ( dev-libs/openssl:0= ) openct? ( >=dev-libs/openct-0.5.0 ) pace? ( dev-libs/openpace:= ) pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 ) notify? ( dev-libs/glib:2 )
+REQUIRED_USE=pcsc-lite? ( !openct !ctapi ) openct? ( !pcsc-lite !ctapi ) ctapi? ( !pcsc-lite !openct ) || ( pcsc-lite openct ctapi )
+SLOT=0/11
+SRC_URI=https://github.com/OpenSC/OpenSC/releases/download/0.25.1/opensc-0.25.1.tar.gz -> opensc-0.25.1.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	bash-completion-r1	47a7402d95930413ce25ba8d857339bb	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=0e7c0bee2f5ed8c2e4819ecdedec8353
