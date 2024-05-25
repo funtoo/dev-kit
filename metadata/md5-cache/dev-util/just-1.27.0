@@ -1,0 +1,12 @@
+BDEPEND=virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=Just a command runner
+EAPI=7
+HOMEPAGE=https://github.com/casey/just
+IUSE=debug
+KEYWORDS=*
+LICENSE=Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB
+SLOT=0
+SRC_URI=https://github.com/casey/just/tarball/663ceca936ebe37a2e5a8d2baafe0d124c7993d4 -> just-1.27.0-663ceca.tar.gz https://direct.funtoo.org/28/f1/f2/28f1f25dd8817da7e7f35778e27405aee8dbd03a62a019657a866e20403852369713795188a2578d0f4a4bd00e4aa2b9c59d78b3e85062b94f50f53930b2bf39 -> just-1.27.0-funtoo-crates-bundle-0d3e35ad3650dec205e29bc2056830d2df35ea260a98cfaebd4c71be219d438917957c9d9c0cba0b9151309279b0fc394fdb6a6f73063fa492f6b7526f5d7dcd.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=4d45b6814e3d4d27b125e75fc637e890
