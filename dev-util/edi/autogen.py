@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from packaging import version
+from metatools.version import generic
 
 
 def get_release(releases_data):
 	releases = list(filter(lambda x: "beta" not in x['name'] and "alpha" not in x['name'], releases_data))
-	return None if not releases else sorted(releases, key=lambda x: version.parse(x['name'])).pop()
+	return None if not releases else sorted(releases, key=lambda x: generic.parse(x['name'])).pop()
 
 
 async def generate(hub, **pkginfo):

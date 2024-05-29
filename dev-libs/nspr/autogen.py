@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from packaging import version
+from metatools.version import generic
 from bs4 import BeautifulSoup
 
 
@@ -13,7 +13,7 @@ async def generate(hub, **pkginfo):
 		href = link.get_text()
 		if href is not None and href.startswith("v"):
 			ver = href.lstrip("v").rstrip("/")
-			if version.parse(latest_version) < version.parse(ver):
+			if generic.parse(latest_version) < generic.parse(ver):
 				latest_version = ver
 				latest_href = href
 	src_url = url+latest_href+"src/"

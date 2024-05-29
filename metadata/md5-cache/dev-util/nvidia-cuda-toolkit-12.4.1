@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare pretend setup unpack
+DESCRIPTION=NVIDIA CUDA Toolkit (compiler and friends)
+EAPI=7
+HOMEPAGE=https://developer.nvidia.com/cuda-zone
+IUSE=debugger nsight profiler vis-profiler sanitizer
+KEYWORDS=-* ~amd64 ~amd64-linux
+LICENSE=NVIDIA-CUDA
+RDEPEND=>=x11-drivers/nvidia-drivers-550.54.15 debugger? ( dev-libs/openssl sys-libs/libtermcap-compat sys-libs/ncurses-compat:5[tinfo] ) vis-profiler? ( dev-libs/openssl >=virtual/jre-1.8:* )
+RESTRICT=bindist
+SLOT=0/12.4.1
+SRC_URI=https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda_12.4.1_550.54.15_linux.run
+_eclasses_=check-reqs	2c6f909675083dce8430b648bf737cb0	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	unpacker	cbd6624f820a4289653f5dcb999bea7a
+_md5_=ea624fc296c27f8bd9a7d5132b16cb50

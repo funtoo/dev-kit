@@ -1,12 +1,12 @@
 DEFINED_PHASES=install prepare
 DEPEND=dev-libs/boost ssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) )
-DESCRIPTION=Asynchronous Network Library
+DESCRIPTION=Asynchronous Network C++ Library
 EAPI=7
-HOMEPAGE=https://think-async.com
+HOMEPAGE=https://think-async.com https://github.com/chriskohlhoff/asio
 IUSE=doc examples libressl ssl test
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=*
 LICENSE=Boost-1.0
 RDEPEND=dev-libs/boost ssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/asio/asio/asio-1.12.2.tar.bz2
-_md5_=3122c29f746d13100a84dc0eccdbfb26
+_md5_=b63338f30210cb27986434530bfb28d3

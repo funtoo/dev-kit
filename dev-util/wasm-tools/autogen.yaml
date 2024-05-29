@@ -1,0 +1,10 @@
+wasm-tools:
+  generator: github-1
+  packages:
+    - wasm-tools:
+        github:
+          user: bytecodealliance
+          repo: wasm-tools
+          query: releases
+        extensions:
+          - rust

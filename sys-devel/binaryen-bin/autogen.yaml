@@ -1,0 +1,15 @@
+binaryen-bin:
+  generator: github-1
+  packages:
+    - binaryen-bin:
+        assets:
+          amd64: binaryen-version_{version}-x86_64-linux.tar.gz
+          arm64: binaryen-version_{version}-aarch64-linux.tar.gz
+        github:
+          user: WebAssembly
+          repo: binaryen
+          query: releases
+          transform:
+            - kind: string
+              match: 'version_'
+              replace: ''

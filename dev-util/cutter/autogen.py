@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from packaging import version
+from metatools.version import generic
 
 
 def get_release(releases_data):
 	releases = list(filter(lambda x: x["prerelease"] is False and x["draft"] is False, releases_data))
-	return None if not releases else sorted(releases, key=lambda x: version.parse(x["tag_name"])).pop()
+	return None if not releases else sorted(releases, key=lambda x: generic.parse(x["tag_name"])).pop()
 
 
 async def generate(hub, **pkginfo):

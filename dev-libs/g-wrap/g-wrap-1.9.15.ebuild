@@ -6,7 +6,8 @@ inherit autotools
 
 DESCRIPTION="A tool for exporting C libraries into Scheme"
 HOMEPAGE="http://www.nongnu.org/g-wrap/"
-SRC_URI="http://download.savannah.gnu.org/releases/g-wrap/g-wrap-1.9.15.tar.gz -> g-wrap-1.9.15.tar.gz"
+SRC_URI="http://download.savannah.gnu.org/releases/g-wrap/g-wrap-1.9.15.tar.gz -> g-wrap-1.9.15.tar.gz
+"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -14,6 +14,6 @@ libxmlpp:
     - libxmlpp:
         slot: 3.0
         github:
-          match: '^(3\.[0-9.]+)$'
+          match: '^(3\.2\.[0-9]+)$'
           tarball: 'libxml++-{version}.tar.xz'
  

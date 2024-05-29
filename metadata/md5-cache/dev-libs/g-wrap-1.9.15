@@ -10,4 +10,4 @@ RDEPEND=dev-libs/glib:2 dev-scheme/guile-lib dev-scheme/guile[deprecated] virtua
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/g-wrap/g-wrap-1.9.15.tar.gz -> g-wrap-1.9.15.tar.gz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=0eaa4c55220480105d063ae7b075158f
+_md5_=fb37e15308a122e6c5cf884d5e68dd85

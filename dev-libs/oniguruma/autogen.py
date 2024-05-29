@@ -1,5 +1,4 @@
 from packaging.specifiers import SpecifierSet
-from packaging.version import Version
 
 async def generate(hub, **pkginfo):
 	github_user = "kkos"

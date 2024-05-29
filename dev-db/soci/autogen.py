@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from packaging import version
+from metatools.version import generic
 
 
 async def generate(hub, **pkginfo):
@@ -15,7 +15,7 @@ async def generate(hub, **pkginfo):
 	try:
 		latest_release = max(
 			release_data,
-			key=lambda release: version.parse(release["name"]),
+			key=lambda release: generic.parse(release["name"]),
 		)
 	except ValueError:
 		raise hub.pkgtools.ebuild.BreezyError(

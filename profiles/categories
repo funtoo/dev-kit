@@ -13,6 +13,7 @@ dev-util
 dev-vcs
 media-gfx
 sys-apps
+sys-devel
 sys-fs
 sys-process
 virtual

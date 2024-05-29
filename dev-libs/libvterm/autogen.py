@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import re
-from packaging import version
+from metatools.version import generic
 from bs4 import BeautifulSoup
 
 async def generate(hub, **pkginfo):
@@ -22,7 +22,7 @@ async def generate(hub, **pkginfo):
     release_matches = (match for match in valid_matches if match[1] == "0.3" or match[1].startswith("0.3."))
 
     target_filename, target_version = max(
-        release_matches, key=lambda match: version.parse(match[1])
+        release_matches, key=lambda match: generic.parse(match[1])
     )
 
     ebuild = hub.pkgtools.ebuild.BreezyBuild(

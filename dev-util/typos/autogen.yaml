@@ -1,0 +1,11 @@
+typos:
+  generator: github-1
+  packages:
+    - typos:
+        extensions:
+          - rust
+        github:
+          user: crate-ci
+          repo: typos
+          query: tags
+          select: '^v\d+\.\d+\.\d+(\/\d+)?'

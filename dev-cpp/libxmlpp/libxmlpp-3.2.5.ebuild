@@ -7,7 +7,7 @@ inherit gnome3 meson
 
 DESCRIPTION="C++ wrapper for the libxml2 XML parser library"
 HOMEPAGE="http://libxmlplusplus.sourceforge.net/"
-
+SRC_URI="https://github.com/libxmlplusplus/libxmlplusplus/releases/download/3.2.5/libxml%2B%2B-3.2.5.tar.xz -> libxml++-3.2.5.tar.xz"
 LICENSE="LGPL-2.1"
 SLOT="3.0"
 KEYWORDS="*"

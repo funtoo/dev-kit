@@ -1,0 +1,10 @@
+wit-bindgen:
+  generator: github-1
+  packages:
+    - wit-bindgen:
+        github:
+          user: bytecodealliance
+          repo: wit-bindgen
+          query: releases
+        extensions:
+          - rust

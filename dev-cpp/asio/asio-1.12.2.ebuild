@@ -1,15 +1,14 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-DESCRIPTION="Asynchronous Network Library"
-HOMEPAGE="https://think-async.com"
+DESCRIPTION="Asynchronous Network C++ Library"
+HOMEPAGE="https://think-async.com https://github.com/chriskohlhoff/asio"
 SRC_URI="mirror://sourceforge/${PN}/${PN}/${P}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="*"
 IUSE="doc examples libressl ssl test"
 
 RDEPEND="dev-libs/boost

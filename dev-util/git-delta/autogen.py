@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from packaging import version
+from metatools.version import generic
 
 
 async def generate(hub, **pkginfo):
@@ -19,7 +19,7 @@ async def generate(hub, **pkginfo):
 				for release in release_data
 				if not release["prerelease"] and not release["draft"]
 			),
-			key=lambda release: version.parse(release["tag_name"]),
+			key=lambda release: generic.parse(release["tag_name"]),
 		)
 	except ValueError:
 		raise hub.pkgtools.ebuild.BreezyError(

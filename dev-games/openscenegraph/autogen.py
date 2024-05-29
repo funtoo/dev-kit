@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from packaging.version import Version
 from os import path
 
 async def generate(hub, **pkginfo):
