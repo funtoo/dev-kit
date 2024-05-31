@@ -6,8 +6,8 @@ inherit cargo
 
 DESCRIPTION="A language binding generator for WebAssembly interface types"
 HOMEPAGE="https://github.com/bytecodealliance/wit-bindgen"
-SRC_URI="https://github.com/bytecodealliance/wit-bindgen/tarball/9b50b8e78940af080ed3b7c0238e11b04a4bd17b -> wit-bindgen-0.25.0-9b50b8e.tar.gz
-https://direct.funtoo.org/73/5a/07/735a070a11a7b402c3a7eb87420081dc9edf74c306ff7ecc90e9b94b36c54dc12e96a531a87c742fc4a336ec5700dd417f4465c2c99516674bfaf65927765cb3 -> wit-bindgen-0.25.0-funtoo-crates-bundle-95803253e64ea8a1d2b84db4dffb88de23a1cbe9375632e9f829a83533d8cf14c6f0c587233d9c7622350f44d9e1cf8179f5ed1d126a154e91db3f99b7a2c650.tar.gz"
+SRC_URI="https://github.com/bytecodealliance/wit-bindgen/tarball/8b4fa41ab7495f79dfa6857fdd52aa39c216c076 -> wit-bindgen-0.26.0-8b4fa41.tar.gz
+https://direct.funtoo.org/77/d0/0f/77d00f9efd700c618f85719e9c5853c5f22ad469ec0c27990437d59309f1d749c3db2ee3019323d842a1553ee76f30c5983d391e2b374d0f3c5ef8001223d482 -> wit-bindgen-0.26.0-funtoo-crates-bundle-f1c4a94320b94a34c364f334f15538b441efedebadd3c9375f9d01eeccd599227666897b5321f33d77571d6137ca698f615b5e2d70424c382c274408d5e91d15.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
