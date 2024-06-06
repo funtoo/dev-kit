@@ -6,8 +6,8 @@ inherit cargo
 
 DESCRIPTION="Just a command runner"
 HOMEPAGE="https://github.com/casey/just"
-SRC_URI="https://github.com/casey/just/tarball/663ceca936ebe37a2e5a8d2baafe0d124c7993d4 -> just-1.27.0-663ceca.tar.gz
-https://direct.funtoo.org/28/f1/f2/28f1f25dd8817da7e7f35778e27405aee8dbd03a62a019657a866e20403852369713795188a2578d0f4a4bd00e4aa2b9c59d78b3e85062b94f50f53930b2bf39 -> just-1.27.0-funtoo-crates-bundle-0d3e35ad3650dec205e29bc2056830d2df35ea260a98cfaebd4c71be219d438917957c9d9c0cba0b9151309279b0fc394fdb6a6f73063fa492f6b7526f5d7dcd.tar.gz"
+SRC_URI="https://github.com/casey/just/tarball/a295ee9d428fc4f46ff9327a320fd0a2144edf34 -> just-1.28.0-a295ee9.tar.gz
+https://direct.funtoo.org/bb/54/97/bb5497f3fe0f5328cc3a2398fb7a7bf5e5f632bcbd179de29d15a6441e857ce537becb78b01ddbfe9daaba1f0030f90c200299225c301f5d3d8216b43654b1e3 -> just-1.28.0-funtoo-crates-bundle-d5e57add869b365b4fbcdbc0b9ea004f121cc331b7144449a34ffdce637abe9188045a4bbf63b894afba66d2c7068c035449872766336c697266952b026e27aa.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
