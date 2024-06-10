@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="C library for the MaxMind DB file format."
 HOMEPAGE="https://maxmind.github.io/libmaxminddb/"
-SRC_URI="https://github.com/maxmind/libmaxminddb/tarball/e26013e1d2b57eff0ed22b7364270358adb72205 -> libmaxminddb-1.9.1-e26013e.tar.gz"
+SRC_URI="https://github.com/maxmind/libmaxminddb/tarball/7acfe43a72a5043d01cc3dd6429005acdf812cb3 -> libmaxminddb-1.10.0-7acfe43.tar.gz"
 
 KEYWORDS="*"
 
