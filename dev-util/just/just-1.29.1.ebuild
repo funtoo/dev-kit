@@ -25,17 +25,12 @@ src_unpack() {
 	mv ${WORKDIR}/casey-just-* ${S} || die
 }
 
-src_configure() {
-	# FL-10339 workaround
-	# upstream man directory for some reason errors with the doman eclass function:
-	# install-xattr: failed to stat /var/tmp/portage/dev-util/just-1.25.2/image/usr/share/man/man2/man: No such file or directory
-	mv ${S}/man ${S}/man.tmp || die
-}
-
 src_install() {
 	cargo_src_install
 
-	doman man.tmp/*
+	mkdir ${S}/man
+	${S}/target/release/just --man > ${S}/man/just.1
+	doman man/just.1
 
 	dodoc README.md
 	einstalldocs
