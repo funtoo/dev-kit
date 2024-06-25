@@ -116,7 +116,6 @@ EGO_SUM=(
 	"github.com/containerd/stargz-snapshotter/estargz v0.14.3"
 	"github.com/containerd/stargz-snapshotter/estargz v0.14.3/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.3/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.4"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
@@ -205,8 +204,8 @@ EGO_SUM=(
 	"github.com/google/certificate-transparency-go v1.1.8/go.mod"
 	"github.com/google/go-cmp v0.6.0"
 	"github.com/google/go-cmp v0.6.0/go.mod"
-	"github.com/google/go-containerregistry v0.19.1"
-	"github.com/google/go-containerregistry v0.19.1/go.mod"
+	"github.com/google/go-containerregistry v0.19.2"
+	"github.com/google/go-containerregistry v0.19.2/go.mod"
 	"github.com/google/gofuzz v1.2.0"
 	"github.com/google/gofuzz v1.2.0/go.mod"
 	"github.com/google/s2a-go v0.1.7"
@@ -225,8 +224,8 @@ EGO_SUM=(
 	"github.com/googleapis/gax-go/v2 v2.12.3/go.mod"
 	"github.com/gorilla/css v1.0.0"
 	"github.com/gorilla/css v1.0.0/go.mod"
-	"github.com/gorilla/websocket v1.5.2"
-	"github.com/gorilla/websocket v1.5.2/go.mod"
+	"github.com/gorilla/websocket v1.5.3"
+	"github.com/gorilla/websocket v1.5.3/go.mod"
 	"github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542"
 	"github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542/go.mod"
 	"github.com/hashicorp/errwrap v1.0.0/go.mod"
@@ -418,8 +417,8 @@ EGO_SUM=(
 	"github.com/spf13/afero v1.11.0/go.mod"
 	"github.com/spf13/cast v1.6.0"
 	"github.com/spf13/cast v1.6.0/go.mod"
-	"github.com/spf13/cobra v1.8.0"
-	"github.com/spf13/cobra v1.8.0/go.mod"
+	"github.com/spf13/cobra v1.8.1"
+	"github.com/spf13/cobra v1.8.1/go.mod"
 	"github.com/spf13/pflag v1.0.5"
 	"github.com/spf13/pflag v1.0.5/go.mod"
 	"github.com/spf13/viper v1.18.2"
@@ -579,8 +578,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/f647131e1d19da4d470cfeb5e936589e12e42960 -> cli-2.51.0-f647131.tar.gz
-https://direct.funtoo.org/2d/20/fd/2d20fdb739c1c05b65df84ffd3af0c6dc2ed27fe43ffbea200d35bb9c9e87392831c8f1ec10fa324d7d68b42db733b613149fd909cc03ce0bc66bc433bcc85b6 -> github-cli-2.51.0-funtoo-go-bundle-6fb06aa47796796bd6a6f9e76d3e19659ced19168f5a21bed0bf3f3661b19611811e402e12467f460b90554ea80d5555f7dc4de0c538b104ce7ec78ccae0c8a4.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/467550a14aa6e26f6872d684279e6604ed6ca7e7 -> cli-2.52.0-467550a.tar.gz
+https://direct.funtoo.org/8d/3c/17/8d3c17beb7edd1cdeb66cc35c8cd9907922f77b84bad97821d62691dbe11fbee6a1b100fe445523e18d2342f473b19826cae95031b45d0b499fd6a169d7badb6 -> github-cli-2.52.0-funtoo-go-bundle-3057b2f70a1606bc8e40de9b292e38c035c8004e9b0c5780968fb0d7ba25ab3960af656ba14e37004b8e675fe8026075646895fc40f6eb5df66f93ef2b75226d.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -592,7 +591,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.51.0"
+	export GH_VERSION="v2.52.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
