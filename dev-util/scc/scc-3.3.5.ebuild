@@ -7,6 +7,8 @@ inherit go-module
 EGO_SUM=(
 	"github.com/boyter/gocodewalker v1.3.2"
 	"github.com/boyter/gocodewalker v1.3.2/go.mod"
+	"github.com/boyter/gocodewalker v1.3.3"
+	"github.com/boyter/gocodewalker v1.3.3/go.mod"
 	"github.com/coreos/go-systemd/v22 v22.5.0/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
 	"github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964"
@@ -73,8 +75,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/boyter/scc/tarball/8737536ca8e80a25082518f4380aee1beda61d8f -> scc-3.3.4-8737536.tar.gz
-https://direct.funtoo.org/78/b4/80/78b4808ab9056a77b895c01674d86715cdb388073e346bdaf464ff08104876e5648e4299ed6db0b872bebff1469ccf0d384b058d54b9eea051b362a7fc7dc1f8 -> scc-3.3.4-funtoo-go-bundle-f1bec46b381cb805c32a07bbb79be251992b244e0d4972a0bf03d0246304e462062fc814a62ae001ca6128c0d6d09217c8f347ec25c0283967791bcfdc7869f2.tar.gz"
+SRC_URI="https://github.com/boyter/scc/tarball/c51ed679eb3b0c99cdaa7e15ed1186fb74dcf6ed -> scc-3.3.5-c51ed67.tar.gz
+https://direct.funtoo.org/2d/18/fa/2d18fadbf6c133415bc11d2b7cb3877c0edb5dca03ec1dfbf58522aec86d2230009de561626cf5e850bfb1dfc9a7840bc119c368f0b1adb00e5d922001456a07 -> scc-3.3.5-funtoo-go-bundle-b76450565d73e2ec5cfc516c21af30aec7a9b4fbc2782e190b8b98ef710d7569cd07dd6c3f75dd9a9ce23ec9be9a8d558d4166576e2c03bce1d8295a9e62946f.tar.gz"
 
 DESCRIPTION="A tool similar to cloc, sloccount and tokei"
 HOMEPAGE="https://github.com/boyter/scc"
