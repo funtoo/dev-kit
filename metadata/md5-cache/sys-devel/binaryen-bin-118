@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Optimizer and compiler/toolchain library for WebAssembly
+EAPI=7
+HOMEPAGE=https://github.com/WebAssembly/binaryen
+IUSE=amd64 arm64
+KEYWORDS=-* amd64 arm64
+LICENSE=Apache License v2.0
+SLOT=0
+SRC_URI=amd64? ( https://github.com/WebAssembly/binaryen/releases/download/version_118/binaryen-version_118-x86_64-linux.tar.gz -> binaryen-version_118-x86_64-linux.tar.gz ) arm64? ( https://github.com/WebAssembly/binaryen/releases/download/version_118/binaryen-version_118-aarch64-linux.tar.gz -> binaryen-version_118-aarch64-linux.tar.gz )
+_md5_=2a4353cf0c92f2ea466c373b379c830a
