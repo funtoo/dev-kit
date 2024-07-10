@@ -7,14 +7,14 @@ inherit user
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="https://jenkins.io/"
 LICENSE="MIT"
-SRC_URI="https://get.jenkins.io/war-stable/2.452.2/jenkins.war -> jenkins-bin-2.452.2.war"
+SRC_URI="https://get.jenkins.io/war/2.467/jenkins.war -> jenkins-bin-2.467.war"
 SLOT="0"
 KEYWORDS="*"
 IUSE=""
 
 RDEPEND="media-fonts/dejavu
 	media-libs/freetype
-	!dev-util/jenkins-bin
+	!dev-util/jenkins-lts-bin
 	>=virtual/jre-1.8.0"
 
 S=${WORKDIR}
@@ -30,13 +30,13 @@ src_install() {
 	keepdir /var/log/jenkins ${JENKINS_DIR}/backup ${JENKINS_DIR}/home
 
 	insinto /opt/jenkins
-	newins "${DISTDIR}"/${P/-lts/}.war ${PN/-bin/}.war
+	newins "${DISTDIR}"/${P}.war ${PN/-bin/}.war
 
 	insinto /etc/logrotate.d
-	newins "${REPODIR}"/dev-util/jenkins-bin/files/jenkins-bin-r1.logrotate ${PN/-bin/}
+	newins "${FILESDIR}"/${PN}-r1.logrotate ${PN/-bin/}
 
-	newinitd "${REPODIR}"/dev-util/jenkins-bin/files/jenkins-bin.init2 jenkins
-	newconfd "${REPODIR}"/dev-util/jenkins-bin/files/jenkins-bin.confd jenkins
+	newinitd "${FILESDIR}"/${PN}.init2 jenkins
+	newconfd "${FILESDIR}"/${PN}.confd jenkins
 
 	fowners jenkins:jenkins /var/log/jenkins ${JENKINS_DIR} ${JENKINS_DIR}/home ${JENKINS_DIR}/backup
 }

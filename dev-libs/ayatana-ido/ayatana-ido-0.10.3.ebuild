@@ -7,7 +7,7 @@ inherit cmake vala
 
 DESCRIPTION="Ayatana Application Indicators (Shared Library)"
 HOMEPAGE="https://github.com/AyatanaIndicators/ayatana-ido"
-SRC_URI="https://github.com/AyatanaIndicators/ayatana-ido/tarball/2bb2f321c64b903b6e4b5c581d79602632c851c5 -> ayatana-ido-0.10.2-2bb2f32.tar.gz"
+SRC_URI="https://github.com/AyatanaIndicators/ayatana-ido/tarball/9906cc1d22f17c3629d32521473b172ae594ddcf -> ayatana-ido-0.10.3-9906cc1.tar.gz"
 
 LICENSE="GPL-3 LGPL-2 LGPL-3"
 SLOT="0"
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	$(vala_depend)
 "
-S="${WORKDIR}/AyatanaIndicators-ayatana-ido-2bb2f32"
+S="${WORKDIR}/AyatanaIndicators-ayatana-ido-9906cc1"
 
 src_prepare() {
 	default
