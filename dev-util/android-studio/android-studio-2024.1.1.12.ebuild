@@ -31,7 +31,7 @@ QA_PREBUILT="
 
 DESCRIPTION="Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/studio"
-SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.1.11/android-studio-2024.1.1.11-linux.tar.gz -> android-studio-2024.1.1.11-linux.tar.gz"
+SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.1.12/android-studio-2024.1.1.12-linux.tar.gz -> android-studio-2024.1.1.12-linux.tar.gz"
 
 LICENSE="Apache-2.0 android-sdk"
 SLOT="0"
