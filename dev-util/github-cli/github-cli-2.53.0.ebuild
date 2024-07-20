@@ -147,8 +147,8 @@ EGO_SUM=(
 	"github.com/docker/docker-credential-helpers v0.7.0"
 	"github.com/docker/docker-credential-helpers v0.7.0/go.mod"
 	"github.com/fatih/color v1.7.0/go.mod"
-	"github.com/fatih/color v1.14.1"
-	"github.com/fatih/color v1.14.1/go.mod"
+	"github.com/fatih/color v1.16.0"
+	"github.com/fatih/color v1.16.0/go.mod"
 	"github.com/felixge/httpsnoop v1.0.4"
 	"github.com/felixge/httpsnoop v1.0.4/go.mod"
 	"github.com/frankban/quicktest v1.14.6"
@@ -233,13 +233,12 @@ EGO_SUM=(
 	"github.com/hashicorp/errwrap v1.1.0/go.mod"
 	"github.com/hashicorp/go-cleanhttp v0.5.2"
 	"github.com/hashicorp/go-cleanhttp v0.5.2/go.mod"
-	"github.com/hashicorp/go-hclog v0.9.2/go.mod"
-	"github.com/hashicorp/go-hclog v1.5.0"
-	"github.com/hashicorp/go-hclog v1.5.0/go.mod"
+	"github.com/hashicorp/go-hclog v1.6.3"
+	"github.com/hashicorp/go-hclog v1.6.3/go.mod"
 	"github.com/hashicorp/go-multierror v1.1.1"
 	"github.com/hashicorp/go-multierror v1.1.1/go.mod"
-	"github.com/hashicorp/go-retryablehttp v0.7.5"
-	"github.com/hashicorp/go-retryablehttp v0.7.5/go.mod"
+	"github.com/hashicorp/go-retryablehttp v0.7.7"
+	"github.com/hashicorp/go-retryablehttp v0.7.7/go.mod"
 	"github.com/hashicorp/go-rootcerts v1.0.2"
 	"github.com/hashicorp/go-rootcerts v1.0.2/go.mod"
 	"github.com/hashicorp/go-secure-stdlib/parseutil v0.1.7"
@@ -386,8 +385,8 @@ EGO_SUM=(
 	"github.com/sergi/go-diff v1.3.1/go.mod"
 	"github.com/shibumi/go-pathspec v1.3.0"
 	"github.com/shibumi/go-pathspec v1.3.0/go.mod"
-	"github.com/shurcoo!l/githubv4 v0.0.0-20230704064427-599ae7bbf278"
-	"github.com/shurcoo!l/githubv4 v0.0.0-20230704064427-599ae7bbf278/go.mod"
+	"github.com/shurcoo!l/githubv4 v0.0.0-20240120211514-18a1ae0e79dc"
+	"github.com/shurcoo!l/githubv4 v0.0.0-20240120211514-18a1ae0e79dc/go.mod"
 	"github.com/shurcoo!l/graphql v0.0.0-20230722043721-ed46e5a46466"
 	"github.com/shurcoo!l/graphql v0.0.0-20230722043721-ed46e5a46466/go.mod"
 	"github.com/sigstore/protobuf-specs v0.3.2"
@@ -428,7 +427,6 @@ EGO_SUM=(
 	"github.com/stretchr/objx v0.5.0/go.mod"
 	"github.com/stretchr/objx v0.5.2"
 	"github.com/stretchr/objx v0.5.2/go.mod"
-	"github.com/stretchr/testify v1.2.2/go.mod"
 	"github.com/stretchr/testify v1.3.0/go.mod"
 	"github.com/stretchr/testify v1.6.1/go.mod"
 	"github.com/stretchr/testify v1.7.0/go.mod"
@@ -578,8 +576,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/467550a14aa6e26f6872d684279e6604ed6ca7e7 -> cli-2.52.0-467550a.tar.gz
-https://direct.funtoo.org/8d/3c/17/8d3c17beb7edd1cdeb66cc35c8cd9907922f77b84bad97821d62691dbe11fbee6a1b100fe445523e18d2342f473b19826cae95031b45d0b499fd6a169d7badb6 -> github-cli-2.52.0-funtoo-go-bundle-3057b2f70a1606bc8e40de9b292e38c035c8004e9b0c5780968fb0d7ba25ab3960af656ba14e37004b8e675fe8026075646895fc40f6eb5df66f93ef2b75226d.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/d3d73d9390bd5403ad8cc4240a9e5cc94bb33ef8 -> cli-2.53.0-d3d73d9.tar.gz
+https://direct.funtoo.org/04/c6/89/04c689b49d1b410f4a0b44ff8db7413215c2a2ac59f41fa832c5259429994ee867578bea990bf600ff8096cf7fd55795e6d0ac3f54e398cf0f4c66c348ea101c -> github-cli-2.53.0-funtoo-go-bundle-173fa6d8145c265edcdf8b30b9b7de74176e0361091f47929423f8590941455069a2e51c96b04a7dac3ff10d5c303ab868375e72ef2069ebf0fe688001b868db.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -591,7 +589,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.52.0"
+	export GH_VERSION="v2.53.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
