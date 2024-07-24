@@ -8,7 +8,7 @@ NSPR_VER="4.35"
 
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
-SRC_URI="https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_102_RTM/src/nss-3.102.tar.gz -> nss-3.102.tar.gz"
+SRC_URI="https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_102_1_RTM/src/nss-3.102.1.tar.gz -> nss-3.102.1.tar.gz"
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
