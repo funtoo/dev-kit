@@ -4,7 +4,7 @@ EAPI=7
 
 inherit bash-completion-r1 cargo
 
-DESCRIPTION="A modern, maintained replacement for ls"
+DESCRIPTION="A modern alternative to ls"
 HOMEPAGE="https://eza.rocks https://github.com/eza-community/eza"
 SRC_URI="https://github.com/eza-community/eza/tarball/9ecbefe20da195579cf9be762997987777768c1b -> eza-0.18.22-9ecbefe.tar.gz
 https://direct.funtoo.org/43/56/eb/4356ebfe9f989112ff19327c322b9a22f5cad2b7b4344c20300d9862d994436d664dde814becca5ee1e4374e990c29c417299664930d1c62d230839e12a3b771 -> eza-0.18.22-funtoo-crates-bundle-2eff573b44fa90e5b0a0d1b7c85a8e1e9b7161e2a4866116e7a895e75aa6ed4b69b50012fc11eaad5db38cfeca27b9f9927a53e5213d25563f77f4d4eb77ab64.tar.gz"
