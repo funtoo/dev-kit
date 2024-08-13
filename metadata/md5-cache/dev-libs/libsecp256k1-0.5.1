@@ -1,0 +1,14 @@
+BDEPEND=sys-devel/autoconf-archive virtual/pkgconfig valgrind? ( dev-util/valgrind ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DESCRIPTION=Optimized C library for EC operations on curve secp256k1
+EAPI=7
+HOMEPAGE=https://github.com/bitcoin-core/secp256k1
+IUSE=+asm +ecdh experimental +extrakeys lowmem +recovery +schnorr test valgrind
+KEYWORDS=*
+LICENSE=MIT
+REQUIRED_USE=asm? ( || ( amd64 arm ) arm? ( experimental ) ) schnorr? ( extrakeys )
+RESTRICT=!test? ( test )
+SLOT=0/1
+SRC_URI=https://github.com/bitcoin-core/secp256k1/tarball/ed4c4ad548e798b8612e01cf80770053f51f15b5 -> secp256k1-0.5.1-ed4c4ad.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=916daa4ed4892fd23c4344bb1c15f8ea

@@ -33,6 +33,10 @@ async def generate(hub, **pkginfo):
 		version=latest_version,
 		nspr_ver=nspr_ver,
 		artifacts=[hub.pkgtools.ebuild.Artifact(url=src_url+final_name)],
+		patches=[
+			'nss-3.103-gentoo-fixes-add-pkgconfig-files.patch',
+			'nss-3.21-gentoo-fixup-warnings.patch'
+		]
 	)
 	ebuild.push()
 

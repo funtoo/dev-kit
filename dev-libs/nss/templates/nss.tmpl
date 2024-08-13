@@ -27,10 +27,13 @@ RESTRICT="test"
 
 S="${WORKDIR}/${P}/${PN}"
 
+{%- if patches %}
 PATCHES=(
-	# Custom changes for gentoo
-	"${FILESDIR}/${PN}-3.53-gentoo-fixups.patch"
+{%- for patch in patches %}
+        "$FILESDIR"/{{ patch }}
+{%- endfor %}
 )
+{%- endif %}
 
 src_prepare() {
 	default
