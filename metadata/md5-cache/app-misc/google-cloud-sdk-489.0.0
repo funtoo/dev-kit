@@ -1,0 +1,13 @@
+DEFINED_PHASES=install setup
+DEPEND=|| ( dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 )
+DESCRIPTION=A set of command-line tools for the Google Cloud Platform.
+EAPI=7
+HOMEPAGE=https://cloud.google.com/sdk/
+IUSE=zsh-completion
+KEYWORDS=*
+LICENSE=Apache-2.0
+RDEPEND=|| ( dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 )
+SLOT=0
+SRC_URI=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-489.0.0-linux-x86_64.tar.gz -> google-cloud-sdk-489.0.0-linux-x86_64.tar.gz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=599d6925860d9b1c71d591752341f1a6
