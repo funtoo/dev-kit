@@ -10,7 +10,7 @@ MY_P="${MY_PN}_$(get_version_component_range 1-2)"
 if [[ $(get_version_component_count) == 3 ]]; then
 	MY_PV="$(replace_all_version_separators _)"
 	SRC_URI_FORMAT="https://%s.dl.visual-paradigm.com/visual-paradigm/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)
-		https://%s.dl.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
+		https://%s-dl.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
 else
 	MY_PV="$(replace_all_version_separators _ $(get_version_component_range 1-2))"
 	MY_PV="${MY_PV}_sp$(get_version_component_range 3)"
@@ -19,7 +19,7 @@ else
 		https://%s.dl.visual-paradigm.com/archives/vp$(get_version_component_range 1-2)/$(get_version_component_range 3)"
 fi
 
-URIS=`printf "${SRC_URI_FORMAT} " eu{1..9} usa{1..6} uk{1..6}`
+URIS=`printf "${SRC_URI_FORMAT} " eu{1..10} usa{1..6} uk{1..6}`
 
 DESCRIPTION="Visual Paradigm for UML"
 HOMEPAGE="http://www.visual-paradigm.com"
