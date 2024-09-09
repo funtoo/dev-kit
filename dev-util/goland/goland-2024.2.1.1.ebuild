@@ -6,7 +6,7 @@ inherit desktop eutils gnome3-utils readme.gentoo-r1 xdg
 
 DESCRIPTION="Golang IDE by JetBrains"
 HOMEPAGE="https://www.jetbrains.com/go"
-SRC_URI="https://download.jetbrains.com/go/goland-2024.2.1.tar.gz -> goland-2024.2.1.tar.gz"
+SRC_URI="https://download.jetbrains.com/go/goland-2024.2.1.1.tar.gz -> goland-2024.2.1.1.tar.gz"
 
 LICENSE="JetBrains"
 SLOT="0"
