@@ -8,7 +8,7 @@ inherit bash-completion-r1 python-any-r1
 
 DESCRIPTION="A set of command-line tools for the Google Cloud Platform."
 HOMEPAGE="https://cloud.google.com/sdk/"
-SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-491.0.0-linux-x86_64.tar.gz -> google-cloud-sdk-491.0.0-linux-x86_64.tar.gz"
+SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-492.0.0-linux-x86_64.tar.gz -> google-cloud-sdk-492.0.0-linux-x86_64.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

@@ -292,15 +292,15 @@ EGO_SUM=(
 	"golang.org/x/sys v0.5.0/go.mod"
 	"golang.org/x/sys v0.6.0/go.mod"
 	"golang.org/x/sys v0.15.0/go.mod"
-	"golang.org/x/sys v0.23.0"
-	"golang.org/x/sys v0.23.0/go.mod"
+	"golang.org/x/sys v0.25.0"
+	"golang.org/x/sys v0.25.0/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
 	"golang.org/x/term v0.2.0/go.mod"
 	"golang.org/x/term v0.5.0/go.mod"
 	"golang.org/x/term v0.6.0/go.mod"
-	"golang.org/x/term v0.23.0"
-	"golang.org/x/term v0.23.0/go.mod"
+	"golang.org/x/term v0.24.0"
+	"golang.org/x/term v0.24.0/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.3/go.mod"
 	"golang.org/x/text v0.3.6/go.mod"
@@ -353,8 +353,8 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="https://github.com/nektos/act/tarball/68d7e70d6da99e5b03cf0d048d4abdf74bd42f72 -> act-0.2.66-68d7e70.tar.gz
-https://direct.funtoo.org/e0/fa/d5/e0fad5d7e0878c5bc6bb9e33ff0ed194cb455ad401fa3dd404638ebeefab5d5e0de55d83499d8a17812f1172d83c6969a5dfbdf162efa797612cdc57b8934d1d -> act-0.2.66-funtoo-go-bundle-76d5f682ca5356f71c75787a515f0a77446f72d911d3cc3aba1ba39a32e81b449994e13c672586ffea87c2e949db27305d466767e00d01d8250ac8120440bdc0.tar.gz"
+SRC_URI="https://github.com/nektos/act/tarball/92b69f0355045985ee2150d4d814868c99ea59dc -> act-0.2.67-92b69f0.tar.gz
+https://direct.funtoo.org/6b/18/43/6b1843493353ccf637f46c8a2218df5fc72c367a8a4173548553a817b2a5e9cff634465b9bbfdd90b2b2f9a0f26124ba85e32cfd35514ce147055fb73ec99547 -> act-0.2.67-funtoo-go-bundle-53b0e07b4ded5a2276052afa1ece3060a0bdf60ac348e7adc910067f08c2b3ddc7315702b648557ebe852235d6d9c8ae1748030357ef07fd3333fa5da9b6607b.tar.gz"
 
 RDEPEND="
 	app-emulation/docker

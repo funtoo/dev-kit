@@ -169,7 +169,7 @@ unicode-bidi-0.3.14
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-segmentation-1.10.1
-unicode-width-0.1.11
+unicode-width-0.1.12
 unsafe-libyaml-0.2.10
 url-2.5.0
 utf8parse-0.2.1
@@ -223,7 +223,7 @@ inherit bash-completion-r1 cargo
 
 DESCRIPTION="A syntax-highlighting pager for git"
 HOMEPAGE="https://github.com/dandavison/delta"
-SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.18.1 -> delta-0.18.1.tar.gz
+SRC_URI="https://api.github.com/repos/dandavison/delta/tarball/0.18.2 -> delta-0.18.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 LGPL-3+ MIT Unlicense ZLIB"
