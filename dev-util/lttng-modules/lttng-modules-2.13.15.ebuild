@@ -9,7 +9,7 @@ MY_SLOT="$(ver_cut 1-2)"
 
 DESCRIPTION="LTTng Kernel Tracer Modules"
 HOMEPAGE="https://lttng.org"
-SRC_URI="https://lttng.org/files/lttng-modules/lttng-modules-2.13.14.tar.bz2 -> lttng-modules-2.13.14.tar.bz2"
+SRC_URI="https://lttng.org/files/lttng-modules/lttng-modules-2.13.15.tar.bz2 -> lttng-modules-2.13.15.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${MY_SLOT}"
