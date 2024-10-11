@@ -1,0 +1,12 @@
+BDEPEND=>=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=A very fast implementation of tldr in Rust.
+EAPI=7
+HOMEPAGE=https://github.com/dbrgn/tealdeer https://dbrgn.github.io/tealdeer/
+IUSE=+bash-completion zsh-completion fish-completion debug
+KEYWORDS=*
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://github.com/dbrgn/tealdeer/tarball/6b2f31ce347d9be2f17286d60d7424fcfbbcae32 -> tealdeer-1.7.0-6b2f31c.tar.gz https://direct.funtoo.org/9a/80/97/9a80976be836efc17af52ad6283cacdf03db4cd9a4351b34c1a1e0b7329397a9437ca59264ed4987f4dda0216d97033f700e9f3864a9c3a70a63aacc83870fc2 -> tealdeer-1.7.0-funtoo-crates-bundle-dcab52f1055a4bd8acf8b5410db9c1e3b2ec9c5c2eff98220446f57aeb3573b18dc90eedb23a162c1877752ca4bf653ad109217884015b25415f87c4306ee747.tar.gz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=c7dae2aad57f572b92252639d55ef58d

@@ -1,0 +1,12 @@
+BDEPEND=virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=Source code spell checker
+EAPI=7
+HOMEPAGE=https://github.com/crate-ci/typos
+IUSE=debug
+KEYWORDS=*
+LICENSE=Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB
+SLOT=0
+SRC_URI=https://github.com/crate-ci/typos/tarball/6802cc60d4e7f78b9d5454f6cf3935c042d5e1e3 -> typos-1.26.0-6802cc6.tar.gz https://direct.funtoo.org/7c/5c/86/7c5c86244c8678064350541806e4581f8a5528fb407d492cc6a3f17fa2be985938995d04ef961ccb596ab8ad929bf25f3a981055fdbcfa6bac43ebd225d04963 -> typos-1.26.0-funtoo-crates-bundle-1b78e0129f38600d694dc9e1aff7bf7b3ecbef9c1c3230cdb783754bd0901d6342d67652388635e52e11c1d0e5077a4eb22a9fbfcaf0ca66e00f5ea21549c60f.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=70fdb55cdbfcd450186f71b90579c7bb
