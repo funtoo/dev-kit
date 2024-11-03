@@ -1,0 +1,14 @@
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare setup unpack
+DESCRIPTION=System container image builder for LXC and LXD
+EAPI=7
+HOMEPAGE=https://linuxcontainers.org/distrobuilder/introduction/
+IUSE=kernel_linux
+KEYWORDS=*
+LICENSE=Apache-2.0
+RDEPEND=dev-util/debootstrap app-crypt/gnupg sys-fs/squashfs-tools dev-vcs/git net-misc/rsync
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/lxc/distrobuilder/tarball/c2231e4ee53402fcbd2877362a8683716fc0e71f -> distrobuilder-3.1-c2231e4.tar.gz https://direct.funtoo.org/66/fc/48/66fc48def76242d91be227379d1656ac3ef75453da9f0a71c4081f8b43e5a3c2129adc6d1db91fbdfeb2bed34ea6872dca06122537c75ff32705a3674abf16d5 -> distrobuilder-3.1-funtoo-go-bundle-823424a3962d55a62de6118b4accb6bcf46c75d49a741a99ffbbd2a0128a2cf9501fb52324c4354c5f145042044661e8538f62071293e6fe050bc54be390f9ff.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=406ba14621e81563780b98911bbb3867
