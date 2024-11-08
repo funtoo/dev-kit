@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="FastCGI Developer's Kit"
 HOMEPAGE="http://www.fastcgi.com/"
-SRC_URI="https://github.com/FastCGI-Archives/fcgi2/tarball/382aa2b0d53a87c27f2f647dfaf670375ba0b85f -> fcgi2-2.4.2-382aa2b.tar.gz"
+SRC_URI="https://github.com/FastCGI-Archives/fcgi2/tarball/738f48419421db9484bf5bce5925482187d71662 -> fcgi2-2.4.3-738f484.tar.gz"
 
 LICENSE="FastCGI"
 SLOT="0"
