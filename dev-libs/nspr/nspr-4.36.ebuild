@@ -16,7 +16,6 @@ KEYWORDS="*"
 IUSE="debug elibc_musl"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-4.23-prtime.patch
 	"${FILESDIR}"/${PN}-4.8.4-darwin-install_name.patch
 	"${FILESDIR}"/${PN}-4.8.9-link-flags.patch
 	# We do not need to pass -L$libdir via nspr-config --libs
