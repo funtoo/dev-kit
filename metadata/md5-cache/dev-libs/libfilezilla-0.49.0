@@ -10,6 +10,6 @@ LICENSE=GPL-2+
 RDEPEND=dev-libs/nettle:0= >=net-libs/gnutls-3.5.7:=
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://dl3.cdn.filezilla-project.org/libfilezilla/libfilezilla-0.49.0.tar.xz?h=h7f-93Z-1u3uWgchsl-Jyg&x=1732308367 -> libfilezilla-0.49.0_src.tar.xz
+SRC_URI=https://dl1.cdn.filezilla-project.org/libfilezilla/libfilezilla-0.49.0.tar.xz?h=ke4dEbXU_jPRrqV7PGFK8w&x=1732310301 -> libfilezilla-0.49.0_src.tar.xz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=1fbadea32fb12ef7f349cd7174445635
+_md5_=873dd0fb5ec48d7cf1db2b10becabf0a
