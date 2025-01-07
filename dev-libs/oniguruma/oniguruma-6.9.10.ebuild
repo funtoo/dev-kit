@@ -9,7 +9,7 @@ MY_P="onig-${PV}"
 
 DESCRIPTION="Regular expression library for different character encodings"
 HOMEPAGE="https://github.com/kkos/oniguruma"
-SRC_URI="https://github.com/kkos/oniguruma/releases/download/v6.9.9/onig-6.9.9.tar.gz -> onig-6.9.9.tar.gz"
+SRC_URI="https://github.com/kkos/oniguruma/releases/download/v6.9.10/onig-6.9.10.tar.gz -> onig-6.9.10.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0/5"
