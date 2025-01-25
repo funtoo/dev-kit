@@ -1,0 +1,14 @@
+BDEPEND=doc? ( app-doc/doxygen dev-python/sphinx ) valgrind? ( dev-util/valgrind ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure prepare test
+DEPEND=dev-libs/boost:=
+DESCRIPTION=A collection of multi-dimensional data structure and indexing algorithm
+EAPI=7
+HOMEPAGE=https://gitlab.com/mdds/mdds
+IUSE=doc valgrind
+KEYWORDS=*
+LICENSE=MIT
+RDEPEND=dev-libs/boost:=
+SLOT=3.0/3.0.0
+SRC_URI=https://github.com/kohei-us/mdds/tarball/595be427b00eb8c29f51392896dcedef20afe249 -> mdds-3.0.0-595be42.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=ee3c628f0d404411c5bdd30717065d72
