@@ -35,8 +35,7 @@ PATCHES=(
 
 src_unpack() {
 	default
-	rm -rf "${S}"
-	mv "${WORKDIR}"/{{github_user}}-{{github_repo}}-* "${S}" || die
+	mv "${WORKDIR}"/* "${S}" || die
 }
 
 src_configure() {

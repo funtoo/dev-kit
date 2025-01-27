@@ -28,7 +28,7 @@ def get_release(release_data):
 
 
 async def generate(hub, **pkginfo):
-	user = "oneapi-src"
+	user = "uxlfoundation"
 	repo = "oneTBB"
 	release_data = await hub.pkgtools.fetch.get_page(f"https://api.github.com/repos/{user}/{repo}/releases", is_json=True)
 	latest_release = get_release(release_data)

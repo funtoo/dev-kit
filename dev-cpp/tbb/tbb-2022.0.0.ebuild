@@ -27,8 +27,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	default
-	rm -rf "${S}"
-	mv "${WORKDIR}"/oneapi-src-oneTBB-* "${S}" || die
+	mv "${WORKDIR}"/* "${S}" || die
 }
 
 src_configure() {
