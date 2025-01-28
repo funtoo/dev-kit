@@ -7,7 +7,7 @@ inherit cargo
 DESCRIPTION="build and install C-compatible libraries"
 HOMEPAGE="https://github.com/lu-zero/cargo-c"
 SRC_URI="https://github.com/lu-zero/cargo-c/tarball/578b4ed8a8baa9faa42a072ca40b7267b125fc15 -> cargo-c-0.10.9-578b4ed.tar.gz
-https://direct.funtoo.org/3f/e2/ee/3fe2eedea79fae1244c4448829f9f36ecf3c1fd5008829d0b728dfcc16e4d06640c51b6cc801b90411d08f0af939e8f28c49b4b6386fccd56aea81bf84404b35 -> cargo-c-0.10.9-funtoo-crates-bundle-068338d4b73652b4de6b20d78a8fc2ff05000e789465a3194b6dd651fff33f938d44cf4c94148d7df1efc825a4ad9f2df8278259814290cabf48b2a5915bf682.tar.gz"
+https://direct.funtoo.org/e2/c3/79/e2c379d6d166e293cbe38ce2b37408eeacf4543eb1b556edd1add4df40a4b3f28baceac7f3703e542f9b0c966df59c87c2669ac47537adf3a25488b3a5602e4a -> cargo-c-0.10.9-funtoo-crates-bundle-b3fbd2cf83e77d4a3c396a46de8c66b058e24e8abcb2e400aa36f39114a5a99130ff8bf89c4ef248f906a2ddd361828a996b5d5c71a7347335821c7c44b66787.tar.gz"
 # https://forums.gentoo.org/viewtopic-t-1131762-start-0.html
 # https://forums.gentoo.org/viewtopic-t-1111448.html
 # This is a confirmed fix, but it doesn't appear related to 32-bit time. Some other sandbox crap:
